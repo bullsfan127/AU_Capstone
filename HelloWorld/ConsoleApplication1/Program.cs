@@ -7,9 +7,24 @@ namespace ConsoleApplication1
 {
     class Program
     {
-        static void Main(string[] args)
+       static void Main(string[] args)
         {
+            //testing
             Console.WriteLine("Hello World");
+            sayHi(7);
         }
+
+        
+       /// <summary>
+       /// Says Hi
+       /// </summary>
+       /// <param name="a">A is concat to the end</param>
+ 
+       public static void sayHi(int a)
+       {
+
+           Console.WriteLine("Hi" + a);
+       
+       }
     }
 }

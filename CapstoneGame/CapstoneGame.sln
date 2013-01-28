@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneGame", "CapstoneGame\CapstoneGame\CapstoneGame.csproj", "{DC16905D-CBE1-4CDB-8DB1-EC4121965D67}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "CapstoneGameContent", "CapstoneGame\CapstoneGameContent\CapstoneGameContent.contentproj", "{E1F07FA2-F091-4281-8C0F-62E729D03174}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneGameContent", "CapstoneGame\CapstoneGameContent\CapstoneGameContent.contentproj", "{E1F07FA2-F091-4281-8C0F-62E729D03174}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileEngine", "TileEngine\TileEngine.csproj", "{E016B204-305C-488F-A21F-D9D0533C458A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{DC16905D-CBE1-4CDB-8DB1-EC4121965D67}.Release|x86.Build.0 = Release|x86
 		{E1F07FA2-F091-4281-8C0F-62E729D03174}.Debug|x86.ActiveCfg = Debug|x86
 		{E1F07FA2-F091-4281-8C0F-62E729D03174}.Release|x86.ActiveCfg = Release|x86
+		{E016B204-305C-488F-A21F-D9D0533C458A}.Debug|x86.ActiveCfg = Debug|x86
+		{E016B204-305C-488F-A21F-D9D0533C458A}.Debug|x86.Build.0 = Debug|x86
+		{E016B204-305C-488F-A21F-D9D0533C458A}.Release|x86.ActiveCfg = Release|x86
+		{E016B204-305C-488F-A21F-D9D0533C458A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
