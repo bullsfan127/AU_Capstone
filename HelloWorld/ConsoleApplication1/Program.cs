@@ -11,6 +11,8 @@ namespace ConsoleApplication1
         {
             //testing
             Console.WriteLine("Hello World");
+           // No idea why it keeps using my other github name for commits
+            Console.WriteLine("Hi, Computer.");
             sayHi(7);
         }
 
