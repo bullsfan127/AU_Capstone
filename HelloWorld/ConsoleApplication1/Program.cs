@@ -11,6 +11,7 @@ namespace ConsoleApplication1
         {
             //testing
             Console.WriteLine("Hello World");
+            Console.WriteLine("Hi, computer");
             sayHi(7);
         }
 
