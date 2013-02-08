@@ -1,6 +1,6 @@
 using System;
 
-namespace CapstoneGame
+namespace CapstoneProject
 {
 #if WINDOWS || XBOX
     static class Program

@@ -8,17 +8,25 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using TileEngine;
 
-namespace CapstoneGame
+namespace CapstoneProject
 {
+
     /// <summary>
     /// This is the main type for your game
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
+        Tile a;
+        Tile b;
+        DrawableLayer<Tile> currentLayer;
+        //#FPS_COUNTER
+        private FPS_Counter counter;
+        
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -33,9 +41,26 @@ namespace CapstoneGame
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
-            base.Initialize();
+            currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
+            
+            //#FPS_COUNTER
+            counter = new FPS_Counter(graphics);
+            a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
+            b = new Tile(new Rectangle(0, 0, 64, 64), Color.ForestGreen, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
+#if DEBUG
+            counter.setVisibility(true);
+#endif
+            for(int x = 0; x < 100; x++)
+            {
+                for (int y = 0; y < 100; y++)
+                {
+                    if (y % 3 == 0)
+                        currentLayer.setItemAt(new Vector2(x, y), a);
+                    else
+                        currentLayer.setItemAt(new Vector2(x, y), b);
+                }
+            }
+             base.Initialize();
         }
 
         /// <summary>
@@ -46,7 +71,10 @@ namespace CapstoneGame
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            //#FPS_COUNTER
+            counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
+            a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
+            b.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
             // TODO: use this.Content to load your game content here
         }
 
@@ -71,7 +99,8 @@ namespace CapstoneGame
                 this.Exit();
 
             // TODO: Add your update logic here
-
+            //#FPS_COUNTER
+            counter.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -81,10 +110,13 @@ namespace CapstoneGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.DarkOrchid);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            //#FPS_COUNTER
+            counter.Draw(spriteBatch, gameTime);
 
+            currentLayer.Draw(spriteBatch, gameTime, Vector2.Zero);
             base.Draw(gameTime);
         }
     }

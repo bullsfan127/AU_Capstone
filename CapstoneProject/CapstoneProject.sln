@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneProject", "CapstoneProject\CapstoneProject\CapstoneProject.csproj", "{35787854-0686-444B-B959-4916861839EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneProjectContent", "CapstoneProject\CapstoneProjectContent\CapstoneProjectContent.contentproj", "{54D5B226-4DF6-4A49-866B-04ECC982987D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileEngine", "TileEngine\TileEngine.csproj", "{3BE29A7A-ACFB-41D5-B317-C21DAEDE3853}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35787854-0686-444B-B959-4916861839EE}.Debug|x86.ActiveCfg = Debug|x86
+		{35787854-0686-444B-B959-4916861839EE}.Debug|x86.Build.0 = Debug|x86
+		{35787854-0686-444B-B959-4916861839EE}.Release|x86.ActiveCfg = Release|x86
+		{35787854-0686-444B-B959-4916861839EE}.Release|x86.Build.0 = Release|x86
+		{54D5B226-4DF6-4A49-866B-04ECC982987D}.Debug|x86.ActiveCfg = Debug|x86
+		{54D5B226-4DF6-4A49-866B-04ECC982987D}.Release|x86.ActiveCfg = Release|x86
+		{3BE29A7A-ACFB-41D5-B317-C21DAEDE3853}.Debug|x86.ActiveCfg = Debug|x86
+		{3BE29A7A-ACFB-41D5-B317-C21DAEDE3853}.Debug|x86.Build.0 = Debug|x86
+		{3BE29A7A-ACFB-41D5-B317-C21DAEDE3853}.Release|x86.ActiveCfg = Release|x86
+		{3BE29A7A-ACFB-41D5-B317-C21DAEDE3853}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
