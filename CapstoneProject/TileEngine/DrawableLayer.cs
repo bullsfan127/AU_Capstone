@@ -13,20 +13,33 @@ using Microsoft.Xna.Framework.Media;
 namespace TileEngine
 {
   
+    /// <summary>
+    /// A layer specifically for drawing.
+    /// </summary>
+    /// <typeparam name="T">Any Object that implements Drawable</typeparam>
     public class DrawableLayer<T> where T : TileEngine.Interfaces.Drawable
     {
 
-      private T[,] layer;
-      private int mapWidth;
-      private int mapHeight;
-      //max pixels
-      private int maxX;
-      private int maxY;
+      private T[,] _layer;
+     
+      //Storage Details for the max map Width and Height
+      //Might want to change to a smaller size maybe a short.
+      private int _mapWidth;
+      private int _mapHeight;
+      
+       
+      //max viewport size
+      private int _maxViewPortWidth;
+      private int _maxViewPortHeight;
+      
       //max tile size for square tiles
-      private int scale;
-      // max tiles for the rows and columns
-      private int rows;
-      private int columns;
+      private float _scale;
+      
+      // The max tiles to be painted onto the screen.  Perfers squares.  
+      //TODO: Move allow these values to be set in the 
+      //Constructor
+      private int _maxRows = 10;
+      private int _maxColumns = 10;
 
        /// <summary>
        /// The Constuctor for a drawable Layer
@@ -35,23 +48,20 @@ namespace TileEngine
        public DrawableLayer(Vector2 size, GraphicsDevice graphics)
        {
            //Probably going to need to populate the Array
-           layer = new T[(int)size.X, (int)size.Y];
+           //Or add a way to swap the layer out entirely.
+           _layer = new T[(int)size.X, (int)size.Y];
 
            //map maxes
-           mapWidth = (int)size.X;
-           mapHeight = (int)size.Y;
+           _mapWidth = (int)size.X;
+           _mapHeight = (int)size.Y;
 
-           maxX = graphics.Viewport.Width;
-           maxY = graphics.Viewport.Height;
+           _maxViewPortWidth = graphics.Viewport.Width;
+           _maxViewPortHeight = graphics.Viewport.Height;
 
-           //find the proper tile size
-           scale = TileEngine.Utility.TileMath.gcd(maxY, maxX);
+           
+           
 
-           if (scale > 64)
-               scale = TileEngine.Utility.TileMath.gcd(scale, 32);
-
-           rows = maxX / scale;
-           columns = maxY / scale;
+           
           
        }
     
@@ -66,7 +76,7 @@ namespace TileEngine
 
            try
            {
-               output = layer[(int)location.X,(int) location.Y];
+               output = _layer[(int)location.X,(int) location.Y];
            }
            catch (IndexOutOfRangeException e)
            {
@@ -85,7 +95,7 @@ namespace TileEngine
        {
            try
            {
-               layer[(int)location.X, (int)location.Y] = newItem;
+               _layer[(int)location.X, (int)location.Y] = newItem;
            }
            catch (IndexOutOfRangeException e)
            {
@@ -93,55 +103,61 @@ namespace TileEngine
            }
 
        }
-
-       public void Draw(SpriteBatch batch, GameTime gameTime, Vector2 location)
+       /// <summary>
+       /// The Draw Method for a Drawable Layer
+       /// </summary>
+       /// <param name="spriteBatch">The spriteBatch that you are drawing with</param>
+       /// <param name="gameTime">GameTime</param>
+       /// <param name="centerLocation">Where the tile map should be centered.</param>
+       public void Draw(SpriteBatch spriteBatch, GameTime gameTime, Vector2 centerLocation)
        {
+           //TODO:  Use the Decimal point of the centerLocation to move the tiles to the right by
+           //a percentage of the tile width allowing for smooth scrolling.  #TODO
 
-           int startPosX;
-           int startPosY;
-
-           if (location.X < columns)
-               startPosX = 0;
-           else//later we'll modify this to add perpixel scrolling
-               startPosX = (int)location.X;
-
-           if (location.Y < rows)
-               startPosY = 0;
-           else
-               startPosY = (int)location.Y;
+           //TODO: Allow the use of jagged screen sizes IE:  9,10  #TODO
+           
+           //TODO: Possibly remove GameTime because its not being used yet.  Mostly used if we wanted to cap he FPS.
+     
 
            //begin the SpriteBatch
-           batch.Begin();
-            int _X = 0; //viewport starting pos
-           //~~~~~~~~~~~~~~~~~DRAW LOGIC~~~~~~~~~~~~~~~~~~~~~
-           for (int x = startPosX; x < (startPosX + columns); x++)
-           {
-            
-               int _Y = 0;
-               for (int y = startPosY; y < (startPosY + rows); y++)
-               {
-                 T currentItem = layer[x, y];
+           spriteBatch.Begin();
 
-                 batch.Draw(currentItem.getTexture(),
-                            new Vector2(_X * scale, _Y * scale),
+           _scale = _maxViewPortWidth / _maxColumns;
+           
+           int startPosX = (int)centerLocation.X;//Where are we starting horizontally
+           
+           //~~~~~~~~~~~~~~~~~DRAW LOGIC~~~~~~~~~~~~~~~~~~~~~
+           for (int x = 0; x < _maxColumns; x++)
+           {
+               int startPosY = (int)centerLocation.Y;//Where are we starting vertically in the map layer
+
+               
+               for (int y = 0; y < _maxRows; y++)
+               {
+                 T currentItem = _layer[startPosX, startPosY];//The current drawable item we are working with.
+                 
+                //TODO:  Space this out so the draw code is easier to understand.  #TODO
+                 spriteBatch.Draw(currentItem.getTexture(),
+                            new Vector2(x * currentItem.getTexture().Width * (_scale / currentItem.getTexture().Width), startPosY * currentItem.getTexture().Height*(_scale / currentItem.getTexture().Width)),
                             currentItem.getSourceRectangle(),
                             currentItem.getTint(),
                             currentItem.getRotation(),
                             currentItem.getOrigin(),
-                            scale, 
+                            _scale / currentItem.getTexture().Width, 
                             currentItem.getSpriteEffect(),
                             currentItem.getDepth());
-                            
-                            
 
 
+              
+                    startPosY++;
+                
                }//inner for
-            _Y++;
-            _X++;
+               
+               startPosX++;
            }//outer for
 
 
-           batch.End();
+           spriteBatch.End();
 
 
        }

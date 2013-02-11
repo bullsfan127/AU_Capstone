@@ -1,3 +1,6 @@
+//TODO:  Needs Auto documentation.
+
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,113 +14,122 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TileEngine
 {
+    /// <summary>
+    /// Stores all information required to render a tile to the screen
+    /// </summary>
     public class Tile : TileEngine.Interfaces.Drawable
     {
-        protected float scale;
-        protected Texture2D texture;
-      
-        protected Rectangle sourceRectangle;
-        protected Color tint;
-        protected float rotation;
-        protected Vector2 origin;
-        protected SpriteEffects effect;
-        protected float depth;
+        //TODO maybe convert these to private
+        protected float _Scale;
+        protected Texture2D _Texture;
+        protected Rectangle _SourceRectangle;
+        protected Color _ColorTint;
+        protected float _Rotation;
+        protected Vector2 _Origin;
+        protected SpriteEffects _Effect;
+        protected float _Depth;
 
+        //TODO:  Add a constuction that creates a default tile based off a source
+        //       Rectangle and a Texture.
         public Tile() { }
 
         public Tile(Rectangle _sourceRectangle, Color _tint, float _rotation, Vector2 _origin, SpriteEffects _effect, float _depth)
         {
            
-            sourceRectangle = _sourceRectangle;
-            tint = _tint;
-            rotation = _rotation;
-            origin = _origin;
-            effect = _effect;
-            depth = _depth;
-
+            _SourceRectangle = _sourceRectangle;
+            _ColorTint = _tint;
+            _Rotation = _rotation;
+            _Origin = _origin;
+            _Effect = _effect;
+            _Depth = _depth;
+            _Scale = 1;//Scale is a scale factor
+                       //so if it says two the tile will be twice as big.
+            
 
         }
         
         
         public void setTexture(Texture2D _texture)
         {
-            texture = _texture;
+            _Texture = _texture;
         }
 
         public Texture2D getTexture()
         {
-            return texture;
+            return _Texture;
         }
 
 
         public Rectangle getSourceRectangle()
         {
-            return sourceRectangle;
+            return _SourceRectangle;
         }
 
         public void setSourceRectangle(Rectangle _sourceRectangle)
         {
-            sourceRectangle = _sourceRectangle;
+            _SourceRectangle = _sourceRectangle;
         }
 
         public Color getTint()
         {
-            return tint;
+            return _ColorTint;
         }
 
         public void setTint(Color color)
         {
-            tint = color;
+            _ColorTint = color;
         }
 
         public float getRotation()
         {
-            return rotation;
+            return _Rotation;
         }
 
         public void setRotation(float _rotation)
         {
-            rotation = _rotation;
+            _Rotation = _rotation;
         }
 
         public Vector2 getOrigin()
         {
-            return origin;
+            return _Origin;
         }
 
         public void setOrigin(Vector2 _origin)
         {
-            origin = _origin;
+            _Origin = _origin;
         }
 
         public SpriteEffects getSpriteEffect()
         {
-            return effect;
+            return _Effect;
         }
 
         public void setSpriteEffect(SpriteEffects spriteEffect)
         {
-            effect = spriteEffect;
+            _Effect = spriteEffect;
         }
 
         public float getDepth()
         {
-            return depth;
+            return _Depth;
         }
 
         public void setDepth(float a)
         {
-            depth = a;
+            _Depth = a;
         }
 
         public float getScale()
         {
-            return scale;
+            return _Scale;
         }
 
+        //TODO:  Add a setScale that takes a target resolution and calculates the scale for that resolution and
+        //       and stores it in scale.
         public void setScale(float _scale)
         {
-            scale = _scale;
+            _Scale = _scale;
         }
     }
 }

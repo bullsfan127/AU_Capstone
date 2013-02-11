@@ -14,7 +14,15 @@ namespace TileEngine
 {
     public class TileSheet
     {
-        public Texture2D tileSheet { get; set; }
+        private Texture2D _tileSheet;
+
+        public Texture2D tileSheet
+        {
+            get { return _tileSheet; }
+            set { _tileSheet = value; }
+        }
+
+        
         
         public TileSheet(Texture2D texture)
         { 

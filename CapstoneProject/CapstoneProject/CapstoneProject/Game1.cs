@@ -31,6 +31,8 @@ namespace CapstoneProject
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 600;
         }
 
         /// <summary>
@@ -46,7 +48,7 @@ namespace CapstoneProject
             //#FPS_COUNTER
             counter = new FPS_Counter(graphics);
             a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
-            b = new Tile(new Rectangle(0, 0, 64, 64), Color.ForestGreen, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
+            b = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
 #if DEBUG
             counter.setVisibility(true);
 #endif
@@ -54,7 +56,7 @@ namespace CapstoneProject
             {
                 for (int y = 0; y < 100; y++)
                 {
-                    if (y % 3 == 0)
+                    if (x % 3 == 0)
                         currentLayer.setItemAt(new Vector2(x, y), a);
                     else
                         currentLayer.setItemAt(new Vector2(x, y), b);
@@ -97,7 +99,9 @@ namespace CapstoneProject
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
+            KeyboardState keystate = Keyboard.GetState();
+            if (keystate.IsKeyDown(Keys.Tab))
+                graphics.ToggleFullScreen();
             // TODO: Add your update logic here
             //#FPS_COUNTER
             counter.Update(gameTime);

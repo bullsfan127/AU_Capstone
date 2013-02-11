@@ -51,7 +51,7 @@ namespace CapstoneProject
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         { 
             
-           //add fram
+           //add frame
            frames++;
             //calc FPS
            fps  =  lastTime /frames;

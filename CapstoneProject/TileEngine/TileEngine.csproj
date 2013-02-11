@@ -92,9 +92,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avatar.cs" />
     <Compile Include="DrawableLayer.cs" />
     <Compile Include="Interfaces\Drawable.cs" />
     <Compile Include="Layer.cs" />
+    <Compile Include="Map.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TileSheet.cs" />
