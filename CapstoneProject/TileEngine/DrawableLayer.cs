@@ -137,6 +137,7 @@ namespace TileEngine
                  T currentItem = _layer[startPosX, startPosY];//The current drawable item we are working with.
                  
                 //TODO:  Space this out so the draw code is easier to understand.  #TODO
+                 if (currentItem != null) 
                  spriteBatch.Draw(currentItem.getTexture(),
                             new Vector2(x * currentItem.getTexture().Width * (_scale / currentItem.getTexture().Width), startPosY * currentItem.getTexture().Height*(_scale / currentItem.getTexture().Width)),
                             currentItem.getSourceRectangle(),
@@ -162,7 +163,17 @@ namespace TileEngine
 
        }
         
+        /// <summary>
+        /// Swaps the layer for another layer through shallow copying
+        /// </summary>
+        /// <param name="newLayer">The new layer to be swapped out with.</param>
+        public void swapLayer(DrawableLayer<T> newLayer)
+        {
+
+            //swap the references
+            _layer = newLayer._layer;
         
+        }
 
     }
 }

@@ -23,7 +23,12 @@ namespace CapstoneProject
         SpriteBatch spriteBatch;
         Tile a;
         Tile b;
+        Tile c;
         DrawableLayer<Tile> currentLayer;
+        DrawableLayer<Tile> currentLayerA;
+        DrawableLayer<Tile> currentLayerB;
+        
+        Map gameMap;
         //#FPS_COUNTER
         private FPS_Counter counter;
         
@@ -44,11 +49,16 @@ namespace CapstoneProject
         protected override void Initialize()
         {
             currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
+            currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
+            currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
+
+            gameMap = new Map();
             
             //#FPS_COUNTER
             counter = new FPS_Counter(graphics);
             a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
             b = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
+            c = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
 #if DEBUG
             counter.setVisibility(true);
 #endif
@@ -56,12 +66,19 @@ namespace CapstoneProject
             {
                 for (int y = 0; y < 100; y++)
                 {
-                    if (x % 3 == 0)
                         currentLayer.setItemAt(new Vector2(x, y), a);
-                    else
-                        currentLayer.setItemAt(new Vector2(x, y), b);
+                        if(x % 3 == 0)
+                        currentLayerA.setItemAt(new Vector2(x, y), b);
+
+                        if(y % 3 == 0)
+                        currentLayerB.setItemAt(new Vector2(x, y), c);
+
                 }
             }
+
+            gameMap.SwapMaskLayer(currentLayerA);
+                    gameMap.SwapGoundLayer(currentLayer);
+                    gameMap.SwapFringeLayer(currentLayerB);
              base.Initialize();
         }
 
@@ -76,7 +93,9 @@ namespace CapstoneProject
             //#FPS_COUNTER
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
             a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
-            b.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
+            b.setTexture(this.Content.Load<Texture2D>("Tiles//tileM"));
+            c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
+           
             // TODO: use this.Content to load your game content here
         }
 
@@ -120,7 +139,10 @@ namespace CapstoneProject
             //#FPS_COUNTER
             counter.Draw(spriteBatch, gameTime);
 
-            currentLayer.Draw(spriteBatch, gameTime, Vector2.Zero);
+          //  currentLayer.Draw(spriteBatch, gameTime, Vector2.Zero);
+            gameMap.Player = new Avatar();
+            gameMap.Player.Position = Vector2.Zero;
+            gameMap.Draw(spriteBatch, gameTime);
             base.Draw(gameTime);
         }
     }

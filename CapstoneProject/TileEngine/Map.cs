@@ -31,13 +31,25 @@ namespace TileEngine
         //Abstract Type for Player
         Avatar _Player;
 
+        public Avatar Player
+        {
+            get { return _Player; }
+            set { _Player = value; }
+        }
+
         /// <summary>
         /// Default Doesn't do anything.
         /// </summary>
         public Map(){}
         
         //TODO:  Probably need to add a constuctor the gets the graphics device and does its "magic"
-
+        public Map(DrawableLayer<Tile> Ground, DrawableLayer<Tile> Mask, DrawableLayer<Tile> Fringe)
+        {
+            _Ground = Ground;
+            _Mask = Mask;
+            _Fringe = Fringe;
+        
+        }
         /// <summary>
         /// Updates all map specific components
         /// </summary>
@@ -60,5 +72,37 @@ namespace TileEngine
             _Fringe.Draw(spriteBatch, gameTime, _Player.Position);
                   
         }
+    
+        /// <summary>
+        /// Swaps out the Ground Layer
+        /// </summary>
+        /// <param name="swapLayer">The layer to be added to the Map</param>
+       public void SwapGoundLayer(DrawableLayer<Tile> swapLayer)
+        {
+            if (_Ground == null)
+                _Ground = swapLayer;
+            else
+           _Ground.swapLayer(swapLayer); 
+        
+       }
+
+       public void SwapMaskLayer(DrawableLayer<Tile> swapLayer)
+       {
+           if (_Mask == null)
+               _Mask = swapLayer;
+           else
+           _Mask.swapLayer(swapLayer);
+
+       }
+
+       public void SwapFringeLayer(DrawableLayer<Tile> swapLayer)
+       {
+           if (_Fringe == null)
+               _Fringe = swapLayer;
+           else
+           _Fringe.swapLayer(swapLayer);
+
+       }
+
     }
 }
