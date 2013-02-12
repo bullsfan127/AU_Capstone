@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneProjectContent", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileEngine", "TileEngine\TileEngine.csproj", "{3BE29A7A-ACFB-41D5-B317-C21DAEDE3853}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization", "Serialization\Serialization\Serialization.csproj", "{2EACC2BD-5297-4040-9E1C-584EB6A0FDF5}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "SerializationContent", "Serialization\SerializationContent\SerializationContent.contentproj", "{1715376C-620B-4569-A402-8940F093F06E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -23,6 +27,12 @@ Global
 		{3BE29A7A-ACFB-41D5-B317-C21DAEDE3853}.Debug|x86.Build.0 = Debug|x86
 		{3BE29A7A-ACFB-41D5-B317-C21DAEDE3853}.Release|x86.ActiveCfg = Release|x86
 		{3BE29A7A-ACFB-41D5-B317-C21DAEDE3853}.Release|x86.Build.0 = Release|x86
+		{2EACC2BD-5297-4040-9E1C-584EB6A0FDF5}.Debug|x86.ActiveCfg = Debug|x86
+		{2EACC2BD-5297-4040-9E1C-584EB6A0FDF5}.Debug|x86.Build.0 = Debug|x86
+		{2EACC2BD-5297-4040-9E1C-584EB6A0FDF5}.Release|x86.ActiveCfg = Release|x86
+		{2EACC2BD-5297-4040-9E1C-584EB6A0FDF5}.Release|x86.Build.0 = Release|x86
+		{1715376C-620B-4569-A402-8940F093F06E}.Debug|x86.ActiveCfg = Debug|x86
+		{1715376C-620B-4569-A402-8940F093F06E}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
