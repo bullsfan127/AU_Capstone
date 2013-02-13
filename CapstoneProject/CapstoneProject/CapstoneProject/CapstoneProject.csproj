@@ -117,6 +117,10 @@
     <Content Include="GameThumbnail.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Serialization\Serialization\Serialization.csproj">
+      <Project>{2EACC2BD-5297-4040-9E1C-584EB6A0FDF5}</Project>
+      <Name>Serialization</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\TileEngine\TileEngine.csproj">
       <Project>{3BE29A7A-ACFB-41D5-B317-C21DAEDE3853}</Project>
       <Name>TileEngine</Name>

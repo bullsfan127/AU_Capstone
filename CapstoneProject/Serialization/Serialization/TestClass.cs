@@ -9,6 +9,8 @@ namespace Serialization
     {
         public string _name = "Jonathan";
         public string _school = "Aurora University";
+        private string test = "private";
+        public string test2 = "public";
 
         public TestClass()
         {

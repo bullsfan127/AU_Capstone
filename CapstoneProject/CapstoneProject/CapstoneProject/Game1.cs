@@ -8,25 +8,25 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using Serialization;
 using TileEngine;
 
 namespace CapstoneProject
 {
-
     /// <summary>
     /// This is the main type for your game
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Tile a;
         Tile b;
         DrawableLayer<Tile> currentLayer;
+
         //#FPS_COUNTER
         private FPS_Counter counter;
-        
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -44,7 +44,7 @@ namespace CapstoneProject
         protected override void Initialize()
         {
             currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
-            
+
             //#FPS_COUNTER
             counter = new FPS_Counter(graphics);
             a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
@@ -52,7 +52,7 @@ namespace CapstoneProject
 #if DEBUG
             counter.setVisibility(true);
 #endif
-            for(int x = 0; x < 100; x++)
+            for (int x = 0; x < 100; x++)
             {
                 for (int y = 0; y < 100; y++)
                 {
@@ -62,7 +62,7 @@ namespace CapstoneProject
                         currentLayer.setItemAt(new Vector2(x, y), b);
                 }
             }
-             base.Initialize();
+            base.Initialize();
         }
 
         /// <summary>
