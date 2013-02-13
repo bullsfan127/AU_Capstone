@@ -37,11 +37,13 @@ namespace Serialization
     ///    new Serialize<TestClass>(TestClassObject, Action.Save);
     ///
     /// How to Load:
-    ///     Serialize<TestClass> s = new Serialize<TestClass>(test, Action.Load);
+    ///     Serialize<TestClass> s = new Serialize<TestClass>(fileName, Action.Load);
     ///     TestClass test = s.ClassType;
     ///
     /// NOTE: Only public class variables are serialized
     ///         Also must have a defualt contructor, i.e one with no parameters
+    ///
+    /// All saved files should be "My documents\SavedGames\Project\Mario_Hack-N-Slash\player1
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class Serialize<T>
@@ -77,12 +79,25 @@ namespace Serialization
         /// Initializes the Serialize object
         /// Then calls SaveLoad()
         /// Step 1.
+        /// used for saving
         /// </summary>
         /// <param name="classType"></param>
         /// <param name="action"></param>
         public Serialize(T classType, Actions action)
         {
             _classType = classType;
+            _action = action;
+            this.SaveLoad();
+        }
+
+        /// <summary>
+        /// used for loading
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="action"></param>
+        public Serialize(string fileName, Actions action)
+        {
+            _fileName = fileName;
             _action = action;
             this.SaveLoad();
         }

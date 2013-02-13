@@ -24,9 +24,10 @@ namespace Serialization
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             TestClass test = new TestClass("jon", "AU");
+            TestClass test2 = new TestClass("jon", "blah");
             new Serialize<TestClass>(test, Actions.Save);
             test._school = "NIU";
-            Serialize<TestClass> s = new Serialize<TestClass>(test, Actions.Load);
+            Serialize<TestClass> s = new Serialize<TestClass>("Savegame.xml", Actions.Load);
             test = s.ClassType;
         }
 
