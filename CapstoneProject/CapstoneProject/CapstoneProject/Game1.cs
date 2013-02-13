@@ -24,14 +24,11 @@ namespace CapstoneProject
         Tile b;
         Tile c;
         DrawableLayer<Tile> currentLayer;
-<<<<<<< HEAD
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
-        
-        Map gameMap;
-=======
 
->>>>>>> Serialization-Jonathan
+        Map gameMap;
+
         //#FPS_COUNTER
         private FPS_Counter counter;
 
@@ -52,15 +49,11 @@ namespace CapstoneProject
         protected override void Initialize()
         {
             currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
-<<<<<<< HEAD
             currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
 
             gameMap = new Map();
-            
-=======
 
->>>>>>> Serialization-Jonathan
             //#FPS_COUNTER
             counter = new FPS_Counter(graphics);
             a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
@@ -73,24 +66,19 @@ namespace CapstoneProject
             {
                 for (int y = 0; y < 100; y++)
                 {
-                        currentLayer.setItemAt(new Vector2(x, y), a);
-                        if(x % 3 == 0)
+                    currentLayer.setItemAt(new Vector2(x, y), a);
+                    if (x % 3 == 0)
                         currentLayerA.setItemAt(new Vector2(x, y), b);
 
-                        if(y % 3 == 0)
+                    if (y % 3 == 0)
                         currentLayerB.setItemAt(new Vector2(x, y), c);
-
                 }
             }
-<<<<<<< HEAD
 
             gameMap.SwapMaskLayer(currentLayerA);
-                    gameMap.SwapGoundLayer(currentLayer);
-                    gameMap.SwapFringeLayer(currentLayerB);
-             base.Initialize();
-=======
+            gameMap.SwapGoundLayer(currentLayer);
+            gameMap.SwapFringeLayer(currentLayerB);
             base.Initialize();
->>>>>>> Serialization-Jonathan
         }
 
         /// <summary>
@@ -106,7 +94,7 @@ namespace CapstoneProject
             a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
             b.setTexture(this.Content.Load<Texture2D>("Tiles//tileM"));
             c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
-           
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -150,7 +138,7 @@ namespace CapstoneProject
             //#FPS_COUNTER
             counter.Draw(spriteBatch, gameTime);
 
-          //  currentLayer.Draw(spriteBatch, gameTime, Vector2.Zero);
+            //  currentLayer.Draw(spriteBatch, gameTime, Vector2.Zero);
             gameMap.Player = new Avatar();
             gameMap.Player.Position = Vector2.Zero;
             gameMap.Draw(spriteBatch, gameTime);
