@@ -25,7 +25,7 @@ namespace Serialization
             Content.RootDirectory = "Content";
             TestClass test = new TestClass("jon", "AU");
             new Serialize<TestClass>(test, Actions.Save);
-            test._school = "AU SUCKS";
+            test._school = "NIU";
             Serialize<TestClass> s = new Serialize<TestClass>(test, Actions.Load);
             test = s.ClassType;
         }

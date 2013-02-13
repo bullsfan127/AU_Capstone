@@ -41,6 +41,7 @@ namespace Serialization
     ///     TestClass test = s.ClassType;
     ///
     /// NOTE: Only public class variables are serialized
+    ///         Also must have a defualt contructor, i.e one with no parameters
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class Serialize<T>
