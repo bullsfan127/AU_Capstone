@@ -24,7 +24,10 @@ namespace Serialization
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             TestClass test = new TestClass("jon", "AU");
-            this.Components.Add(new Serialize<TestClass>(this, test));
+            new Serialize<TestClass>(test, Actions.Save);
+            test._school = "NIU";
+            Serialize<TestClass> s = new Serialize<TestClass>(test, Actions.Load);
+            test = s.ClassType;
         }
 
         /// <summary>

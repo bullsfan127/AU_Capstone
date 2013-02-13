@@ -1,4 +1,8 @@
 Content\FPS.xnb
 Content\Tiles\tile.xnb
+<<<<<<< HEAD
 Content\Tiles\tileM.xnb
 Content\Tiles\tileF.xnb
+=======
+Content\FPS.xnb
+>>>>>>> Serialization-Jonathan
