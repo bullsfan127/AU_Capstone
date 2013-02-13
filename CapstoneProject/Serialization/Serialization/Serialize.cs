@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
-namespace Serialization
+namespace CustomSerialization
 {
-    //Actions that are passed in for the Action parameter
-    public enum Actions { None, Save, Load };
-
     /// <summary>
     /// This class Takes a class, and converts it to an xml file that is saved on the disk. It also has the ability to load from those saved files
     /// to create a class.
@@ -32,13 +25,14 @@ namespace Serialization
     ///
     /// Examples:
     ///
+    /// Serialize<TestClass> serializer = new Serialize<TestClass>();
+    /// TestClass test = new TestClass("jon", "AU");
+    ///
     /// How to save:
-    ///    TestClass test = new TestClass("jon", "AU");
-    ///    new Serialize<TestClass>(TestClassObject, Action.Save);
+    ///    serializer.Save(test);
     ///
     /// How to Load:
-    ///     Serialize<TestClass> s = new Serialize<TestClass>(fileName, Action.Load);
-    ///     TestClass test = s.ClassType;
+    ///     test = serializer.Load("Savegame.xml");
     ///
     /// NOTE: Only public class variables are serialized
     ///         Also must have a defualt contructor, i.e one with no parameters
@@ -51,14 +45,28 @@ namespace Serialization
         //generic class type, stores the object passed in by the constructor
         T _classType;
 
+        StorageContainer _container = null;
+        StorageDevice _device = null;
+
+        //Name of file
+        private string _fileName = "Savegame.xml";
+
+        // Needed variables
+        IAsyncResult _result = null;
+
+        XmlSerializer serializer = new XmlSerializer(typeof(T));
+        Stream stream = null;
+
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
+        public Serialize() { }
+
         public T ClassType
         {
             get { return _classType; }
             set { _classType = value; }
         }
-
-        //Name of file
-        private string _fileName = "Savegame.xml";
 
         public string FileName
         {
@@ -66,46 +74,72 @@ namespace Serialization
             set { _fileName = value; }
         }
 
-        //Holds the action, i.e Load or Save
-        private Actions _action;
-
-        // Needed variables
-        IAsyncResult _result = null;
-
-        StorageDevice _device = null;
-        StorageContainer _container = null;
-
         /// <summary>
-        /// Initializes the Serialize object
-        /// Then calls SaveLoad()
-        /// Step 1.
-        /// used for saving
-        /// </summary>
-        /// <param name="classType"></param>
-        /// <param name="action"></param>
-        public Serialize(T classType, Actions action)
-        {
-            _classType = classType;
-            _action = action;
-            this.SaveLoad();
-        }
-
-        /// <summary>
-        /// used for loading
+        /// Loads from a xml file given the fileName
         /// </summary>
         /// <param name="fileName"></param>
-        /// <param name="action"></param>
-        public Serialize(string fileName, Actions action)
+        /// <returns></returns>
+        public T Load(string fileName)
         {
             _fileName = fileName;
-            _action = action;
-            this.SaveLoad();
+            this.preLoadSave();
+            if (!_container.FileExists(_fileName))
+            {
+                _container.Dispose();
+                return _classType;
+            }
+
+            // Create the file.
+            // Convert the object to XML data
+            // and put it in the stream.
+            stream = _container.OpenFile(_fileName, FileMode.Open);
+            _classType = (T)serializer.Deserialize(stream);
+
+            // Close the file.
+            stream.Close();
+            // Dispose the container, to
+            // commit changes.
+            _container.Dispose();
+
+            return _classType;
         }
 
         /// <summary>
-        /// Function where we do all the saving or loading
+        /// Saves to an XML file from passed in class
         /// </summary>
-        private void SaveLoad()
+        /// <param name="classType"></param>
+        public void Save(T classType)
+        {
+            _classType = classType;
+            this.preLoadSave();
+
+            // Check to see whether
+            // the file exists.
+            if (_container.FileExists(_fileName))
+            {
+                // Delete it so that we
+                // can create one fresh.
+                _container.DeleteFile(_fileName);
+            }
+
+            // Create the file.
+            // Convert the object to XML data
+            // and put it in the stream.
+
+            stream = _container.CreateFile(_fileName);
+            serializer.Serialize(stream, _classType);
+
+            // Close the file.
+            stream.Close();
+            // Dispose the container, to
+            // commit changes.
+            _container.Dispose();
+        }
+
+        /// <summary>
+        /// Common code between Load and save
+        /// </summary>
+        private void preLoadSave()
         {
             // STEP 2.a: Request the device
             _result = StorageDevice.BeginShowSelector(PlayerIndex.One, null, null);
@@ -130,42 +164,6 @@ namespace Serialization
                 _container = _device.EndOpenContainer(_result);
                 _result.AsyncWaitHandle.Close();
             }
-
-            // Check to see whether
-            // the file exists.
-            if (_container.FileExists(_fileName))
-            {
-                // Delete it so that we
-                // can create one fresh.
-                if (_action == Actions.Save)
-                    _container.DeleteFile(_fileName);
-                if (!_container.FileExists(_fileName) && _action == Actions.Load)
-                {
-                    _container.Dispose();
-                    return;
-                }
-            }
-            Stream stream = null;
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
-
-            // Create the file.
-            // Convert the object to XML data
-            // and put it in the stream.
-            if (_action == Actions.Save)
-            {
-                stream = _container.CreateFile(_fileName);
-                serializer.Serialize(stream, _classType);
-            }
-            else if (_action == Actions.Load)
-            {
-                stream = _container.OpenFile(_fileName, FileMode.Open);
-                _classType = (T)serializer.Deserialize(stream);
-            }
-            // Close the file.
-            stream.Close();
-            // Dispose the container, to
-            // commit changes.
-            _container.Dispose();
         }
     }
 }

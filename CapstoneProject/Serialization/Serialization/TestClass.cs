@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Serialization
+﻿namespace CustomSerialization
 {
     public class TestClass
     {
         public string _name = "Jonathan";
         public string _school = "Aurora University";
-        private string test = "private";
         public string test2 = "public";
+        private string test = "private";
 
         public TestClass()
         {
@@ -20,6 +15,12 @@ namespace Serialization
         {
             _name = name;
             _school = school;
+        }
+
+        public string Test
+        {
+            get { return test; }
+            set { test = value; }
         }
     }
 }

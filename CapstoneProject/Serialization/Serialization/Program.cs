@@ -1,6 +1,6 @@
 using System;
 
-namespace Serialization
+namespace CustomSerialization
 {
 #if WINDOWS || XBOX
     static class Program
