@@ -19,11 +19,30 @@ namespace TileEngine
     /// </summary>
     public class Map
     {
-        //For now I'm hard coating the layers eventually we want to move to a list
+        //For now I'm hard coding the layers eventually we want to move to a list
         //based system.
         DrawableLayer<Tile> _Ground;
+
+        public DrawableLayer<Tile> Ground
+        {
+            get { return _Ground; }
+            set { _Ground = value; }
+        }
+
         DrawableLayer<Tile> _Mask;
+
+        public DrawableLayer<Tile> Mask
+        {
+            get { return _Mask; }
+            set { _Mask = value; }
+        }
         DrawableLayer<Tile> _Fringe;
+
+        public DrawableLayer<Tile> Fringe
+        {
+            get { return _Fringe; }
+            set { _Fringe = value; }
+        }
 
         //Layers for collision detection
         Layer<Rectangle> _CollisionLayer;
@@ -104,5 +123,10 @@ namespace TileEngine
 
        }
 
+       public void saveMap(/*string filename*/)
+       {
+           CustomSerialization.Serialize<Map> serializer = new CustomSerialization.Serialize<Map>();
+           serializer.Save(this);
+       }
     }
 }

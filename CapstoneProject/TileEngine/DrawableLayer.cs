@@ -40,7 +40,11 @@ namespace TileEngine
       //Constructor
       private int _maxRows = 10;
       private int _maxColumns = 10;
-
+        
+       /// <summary>
+       /// Default Constructor
+       /// </summary>
+       public DrawableLayer(){}
        /// <summary>
        /// The Constuctor for a drawable Layer
        /// </summary>

@@ -26,7 +26,7 @@ namespace CapstoneProject
         DrawableLayer<Tile> currentLayer;
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
-
+        Serialize<Map> serializer = new Serialize<Map>();
         Map gameMap;
 
         //#FPS_COUNTER
@@ -53,7 +53,7 @@ namespace CapstoneProject
             currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
 
             gameMap = new Map();
-
+        
             //#FPS_COUNTER
             counter = new FPS_Counter(graphics);
             a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
@@ -119,8 +119,14 @@ namespace CapstoneProject
                 this.Exit();
             KeyboardState keystate = Keyboard.GetState();
             if (keystate.IsKeyDown(Keys.Tab))
-                graphics.ToggleFullScreen();
-            // TODO: Add your update logic here
+            {
+              //  graphics.ToggleFullScreen();
+                gameMap.saveMap();
+
+                gameMap = serializer.Load("Savegame.xml");
+               
+            }
+                // TODO: Add your update logic here
             //#FPS_COUNTER
             counter.Update(gameTime);
             base.Update(gameTime);
