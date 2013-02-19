@@ -73,6 +73,9 @@
     <Reference Include="mscorlib">
       <Private>False</Private>
     </Reference>
+    <Reference Include="Polenter.SharpSerializer">
+      <HintPath>..\packages\SharpSerializer.2.18\lib\net20\Polenter.SharpSerializer.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <Private>False</Private>
     </Reference>
@@ -104,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Serialization\Serialization\Serialization.csproj">

@@ -3,6 +3,7 @@ using System.IO;
 using System.Xml.Serialization;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Storage;
+using Polenter.Serialization;
 
 namespace CustomSerialization
 {
@@ -45,6 +46,7 @@ namespace CustomSerialization
         //generic class type, stores the object passed in by the constructor
         T _classType;
 
+        SharpSerializer complexSerializer;
         StorageContainer _container = null;
         StorageDevice _device = null;
 
@@ -54,13 +56,16 @@ namespace CustomSerialization
         // Needed variables
         IAsyncResult _result = null;
 
-        XmlSerializer serializer = new XmlSerializer(typeof(T));
+        XmlSerializer serializer;
         Stream stream = null;
+        bool _complex = false;
 
         /// <summary>
         /// Default Constructor
         /// </summary>
-        public Serialize() { }
+        public Serialize()
+        {
+        }
 
         public T ClassType
         {
@@ -81,6 +86,13 @@ namespace CustomSerialization
         /// <returns></returns>
         public T Load(string fileName)
         {
+            if (_complex)
+            {
+                _classType = (T)complexSerializer.Deserialize(fileName);
+                complexSerializer = null;
+
+                return _classType;
+            }
             _fileName = fileName;
             this.preLoadSave();
             if (!_container.FileExists(_fileName))
@@ -106,34 +118,49 @@ namespace CustomSerialization
 
         /// <summary>
         /// Saves to an XML file from passed in class
+        ///
+        /// Complex parameter is optional : Pass true if serializing does not work correctly without it
         /// </summary>
         /// <param name="classType"></param>
-        public void Save(T classType)
+        /// <param name="complex"></param>
+        public void Save(T classType, bool complex = false)
         {
-            _classType = classType;
-            this.preLoadSave();
+            _complex = complex;
 
-            // Check to see whether
-            // the file exists.
-            if (_container.FileExists(_fileName))
+            if (_complex)
             {
-                // Delete it so that we
-                // can create one fresh.
-                _container.DeleteFile(_fileName);
+                complexSerializer = new SharpSerializer();
+                complexSerializer.Serialize(classType, FileName);
             }
+            else
+            {
+                serializer = new XmlSerializer(typeof(T));
 
-            // Create the file.
-            // Convert the object to XML data
-            // and put it in the stream.
+                _classType = classType;
+                this.preLoadSave();
 
-            stream = _container.CreateFile(_fileName);
-            serializer.Serialize(stream, _classType);
+                // Check to see whether
+                // the file exists.
+                if (_container.FileExists(_fileName))
+                {
+                    // Delete it so that we
+                    // can create one fresh.
+                    _container.DeleteFile(_fileName);
+                }
 
-            // Close the file.
-            stream.Close();
-            // Dispose the container, to
-            // commit changes.
-            _container.Dispose();
+                // Create the file.
+                // Convert the object to XML data
+                // and put it in the stream.
+
+                stream = _container.CreateFile(_fileName);
+                serializer.Serialize(stream, _classType);
+
+                // Close the file.
+                stream.Close();
+                // Dispose the container, to
+                // commit changes.
+                _container.Dispose();
+            }
         }
 
         /// <summary>
