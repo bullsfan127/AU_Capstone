@@ -96,6 +96,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Avatar.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Animation.cs" />
     <Compile Include="DrawableLayer.cs" />
     <Compile Include="Interfaces\Drawable.cs" />
     <Compile Include="Layer.cs" />
