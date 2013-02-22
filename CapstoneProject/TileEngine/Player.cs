@@ -17,8 +17,7 @@ namespace TileEngine
         // Animation representing the player
         public Animation PlayerAnimation;
         
-        // Position of the Player
-        public Vector2 Position;
+        
 
         // State of the player
         public bool Active;
@@ -39,16 +38,21 @@ namespace TileEngine
             Active = true;
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             Vector2 Position = Vector2.Zero;
             PlayerAnimation.Position = Position;
             PlayerAnimation.Update(gameTime);
+            base.Update(gameTime);
         }
 
-        public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime)
+        public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
+            //going to need to check whether the 
             PlayerAnimation.Draw(spriteBatch);
+
+
+            base.Draw(spriteBatch, gameTime);
         }
 
     }

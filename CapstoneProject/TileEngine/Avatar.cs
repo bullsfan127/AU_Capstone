@@ -13,7 +13,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TileEngine
 {
-    public class Avatar
+    public abstract class Avatar
     {
         private Vector2 _Position;
 
@@ -24,7 +24,7 @@ namespace TileEngine
             set { _Position = value; }
         }
 
-        private Texture2D _Sprite;
+       // private Texture2D _Sprite;
 
         public Avatar() { }
 
@@ -33,7 +33,7 @@ namespace TileEngine
         
         }
 
-        public void Update(GameTime gameTime){}
+        public virtual void Update(GameTime gameTime){}
 
         public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
