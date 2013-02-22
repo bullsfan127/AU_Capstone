@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TileEngine
 {
-    class Animation
+   public class Animation
     {
         // The image representing the collection of images used for animation
         Texture2D spriteStrip;
@@ -120,11 +120,13 @@ namespace TileEngine
         // Draw the Animation Strip
         public void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Begin();
             // Only draw the animation when we are active
             if (Active)
             {
                 spriteBatch.Draw(spriteStrip, destinationRect, sourceRect, color);
             }
+            spriteBatch.End();
         }
     }
 }

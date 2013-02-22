@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TileEngine
 {
-    class Player : Avatar
+   public class Player : Avatar
     {
         // Animation representing the player
         public Animation PlayerAnimation;
@@ -22,6 +22,11 @@ namespace TileEngine
 
         // State of the player
         public bool Active;
+
+        public Player()
+        {
+            
+        }
 
         public void Initialize(Animation animation, Vector2 position)
         {
@@ -36,6 +41,7 @@ namespace TileEngine
 
         public void Update(GameTime gameTime)
         {
+            Vector2 Position = Vector2.Zero;
             PlayerAnimation.Position = Position;
             PlayerAnimation.Update(gameTime);
         }
