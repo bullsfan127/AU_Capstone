@@ -101,12 +101,10 @@ namespace CapstoneProject
             b.setTexture(this.Content.Load<Texture2D>("Tiles//tileM"));
             c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
 
-            Animation playerAnimation = new Animation();
             Texture2D playerTexture = Content.Load<Texture2D>("shitty");
 
-            playerAnimation.Initialize(playerTexture, Vector2.Zero, 64, 128, 3, 150, Color.White, 1.0f, true);
 
-            player.Initialize(playerAnimation, Vector2.Zero);
+            player.Initialize(playerTexture,new Vector2(0,0));
             // TODO: use this.Content to load your game content here
         }
 

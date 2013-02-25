@@ -27,20 +27,21 @@ namespace TileEngine
             
         }
 
-        public void Initialize(Animation animation, Vector2 position)
+        public void Initialize(Texture2D spriteStrip, Vector2 position)
         {
-            PlayerAnimation = animation;
+            PlayerAnimation = new Animation();
 
             // Set starting position of the player
             Position = position;
-
+            //player Animation initialize
+            PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 3, 300, Color.White, 1.0f, true);
             // Set the player to be active
             Active = true;
         }
 
         public override void Update(GameTime gameTime)
         {
-            Vector2 Position = Vector2.Zero;
+           // Vector2 Position = Vector2.Zero;
             PlayerAnimation.Position = Position;
             PlayerAnimation.Update(gameTime);
             base.Update(gameTime);
