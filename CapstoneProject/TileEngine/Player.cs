@@ -24,19 +24,44 @@ namespace TileEngine
         public bool Active;
 
         // Current health of the player
-        protected int health;
+        private int _health;
+        public int Health
+        {
+            get { return _health; }
+            set { _health = value; }
+        }
 
         // Maximum health of the player
-        protected int maxHealth = 3;
+        private int _maxHealth = 3;
+        public int MaxHealth
+        {
+            get { return _maxHealth; }
+            set { _maxHealth = value; }
+        }
 
         // ID of the weapon the player is holding
-        protected int weapon;
+        private int _weapon;
+        public int Weapon
+        {
+            get { return _weapon; }
+            set { _weapon = value; }
+        }
 
         // The score for the current level
-        protected int levelScore;
+        private int _levelScore;
+        public int LevelScore
+        {
+            get { return _levelScore; }
+            set { _levelScore = value; }
+        }
 
         // The score for the entire game
-        protected int totalScore = 0;
+        private int _totalScore = 0;
+        public int TotalScore
+        {
+            get { return _totalScore; }
+            set { _totalScore = value; }
+        }
 
 
         public void Initialize(Animation animation, Vector2 position)
@@ -44,7 +69,7 @@ namespace TileEngine
             PlayerAnimation = animation;
 
             // Set the player's health to the maximum
-            health = this.maxHealth;
+            _health = this._maxHealth;
 
             // Set starting position of the player
             Position = position;
@@ -67,16 +92,16 @@ namespace TileEngine
         public void changeHealth(int change)
         {
             // Add/subtract the change to the current health
-            this.health += change;
+            this._health += change;
 
             // More than max? Set to max
-            if (this.health > this.maxHealth)
+            if (this._health > this._maxHealth)
             {
-                this.health = this.maxHealth;
+                this._health = this._maxHealth;
             } // Less than 0? Set to 0.
-            else if (this.health < 0)
+            else if (this._health < 0)
             {
-                this.health = 0;
+                this._health = 0;
             }
         }
 
@@ -84,40 +109,40 @@ namespace TileEngine
         {
             // TODO - Do we need to update the graphic here too
             // or is that done at the next "update" command?
-            this.weapon = weapon;
+            this._weapon = weapon;
         }
 
         public void increaseScore(int amount)
         {
             // Add the amount to the level score
-            this.levelScore += amount;
+            this._levelScore += amount;
         }
 
         public void NextLevelScore()
         {
             // Add level to total, then set level to 0
-            this.totalScore += this.levelScore;
-            this.levelScore = 0;
+            this._totalScore += this._levelScore;
+            this._levelScore = 0;
         }
 
         public int getLevelScore()
         {
-            return this.levelScore;
+            return this._levelScore;
         }
 
         public int getTotalScore()
         {
-            return this.totalScore;
+            return this._totalScore;
         }
 
         public int getHealth()
         {
-            return this.health;
+            return this._health;
         }
 
         public int getWeapon()
         {
-            return this.weapon;
+            return this._weapon;
         }
 
     }
