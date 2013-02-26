@@ -26,6 +26,8 @@ namespace CapstoneProject
         DrawableLayer<Tile> currentLayer;
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
+        // Represents the player
+        Player player;
 
         Serialize<Map> serializer = new Serialize<Map>();
         Map gameMap;
@@ -53,7 +55,10 @@ namespace CapstoneProject
             currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
 
+            player = new Player();
+
             gameMap = new Map();
+            gameMap.Player = player;
 
             //#FPS_COUNTER
             counter = new FPS_Counter(graphics);
@@ -96,6 +101,10 @@ namespace CapstoneProject
             b.setTexture(this.Content.Load<Texture2D>("Tiles//tileM"));
             c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
 
+            Texture2D playerTexture = Content.Load<Texture2D>("shitty");
+
+
+            player.Initialize(playerTexture,new Vector2(0,0));
             // TODO: use this.Content to load your game content here
         }
 
@@ -126,6 +135,8 @@ namespace CapstoneProject
 
                 gameMap.LoadMap("Savegame.xml");
             }
+
+            player.Update(gameTime);
             // TODO: Add your update logic here
             //#FPS_COUNTER
             counter.Update(gameTime);
@@ -145,8 +156,8 @@ namespace CapstoneProject
             counter.Draw(spriteBatch, gameTime);
 
             //  currentLayer.Draw(spriteBatch, gameTime, Vector2.Zero);
-            gameMap.Player = new Avatar();
-            gameMap.Player.Position = Vector2.Zero;
+           // gameMap.Player = new Avatar();
+           // gameMap.Player.Position = Vector2.Zero;
             gameMap.Draw(spriteBatch, gameTime);
             base.Draw(gameTime);
         }

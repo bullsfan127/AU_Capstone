@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace MainMenu
 {
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class MainMenu : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -48,7 +48,7 @@ namespace MainMenu
 
         double frame_time;
 
-        public Game1()
+        public MainMenu()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";

@@ -12,19 +12,17 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TileEngine
 {
-    class Player : Avatar
+    public class Player : Avatar
     {
         // Animation representing the player
         public Animation PlayerAnimation;
-        
-        // Position of the Player
-        public Vector2 Position;
 
         // State of the player
         public bool Active;
 
         // Current health of the player
         private int _health;
+
         public int Health
         {
             get { return _health; }
@@ -33,6 +31,7 @@ namespace TileEngine
 
         // Maximum health of the player
         private int _maxHealth = 3;
+
         public int MaxHealth
         {
             get { return _maxHealth; }
@@ -41,6 +40,7 @@ namespace TileEngine
 
         // ID of the weapon the player is holding
         private int _weapon;
+
         public int Weapon
         {
             get { return _weapon; }
@@ -49,6 +49,7 @@ namespace TileEngine
 
         // The score for the current level
         private int _levelScore;
+
         public int LevelScore
         {
             get { return _levelScore; }
@@ -57,36 +58,46 @@ namespace TileEngine
 
         // The score for the entire game
         private int _totalScore = 0;
+
         public int TotalScore
         {
             get { return _totalScore; }
             set { _totalScore = value; }
         }
 
-
-        public void Initialize(Animation animation, Vector2 position)
+        public Player()
         {
-            PlayerAnimation = animation;
+        }
+
+        public void Initialize(Texture2D spriteStrip, Vector2 position)
+        {
+            PlayerAnimation = new Animation();
 
             // Set the player's health to the maximum
             _health = this._maxHealth;
 
             // Set starting position of the player
             Position = position;
-
+            //player Animation initialize
+            PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 3, 300, Color.White, 1.0f, true);
             // Set the player to be active
             Active = true;
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
+            // Vector2 Position = Vector2.Zero;
             PlayerAnimation.Position = Position;
             PlayerAnimation.Update(gameTime);
+            base.Update(gameTime);
         }
 
-        public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime)
+        public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
+            //going to need to check whether the
             PlayerAnimation.Draw(spriteBatch);
+
+            base.Draw(spriteBatch, gameTime);
         }
 
         public void changeHealth(int change)
@@ -144,6 +155,5 @@ namespace TileEngine
         {
             return this._weapon;
         }
-
     }
 }

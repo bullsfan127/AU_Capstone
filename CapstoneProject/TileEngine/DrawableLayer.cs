@@ -144,7 +144,8 @@ namespace TileEngine
             //~~~~~~~~~~~~~~~~~DRAW LOGIC~~~~~~~~~~~~~~~~~~~~~
             for (int x = 0; x < _maxColumns; x++)
             {
-                int startPosY = (int)centerLocation.Y;//Where are we starting vertically in the map layer
+                int startPosY = 0;
+                    //(int)centerLocation.Y;//Where are we starting vertically in the map layer
 
                 for (int y = 0; y < _maxRows; y++)
                 {

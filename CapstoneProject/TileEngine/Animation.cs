@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TileEngine
 {
-    class Animation
+   public class Animation
     {
         // The image representing the collection of images used for animation
         Texture2D spriteStrip;
@@ -112,19 +112,21 @@ namespace TileEngine
             sourceRect = new Rectangle(currentFrame * FrameWidth, 0, FrameWidth, FrameHeight);
 
             // Grab the correct frame in the image strip by multiplying the currentFrame index by the frame width
-            destinationRect = new Rectangle((int)Position.X - (int)(FrameWidth * scale) / 2,
-            (int)Position.Y - (int)(FrameHeight * scale) / 2,
+            destinationRect = new Rectangle((int)Position.X,
+            (int)Position.Y,
             (int)(FrameWidth * scale),
             (int)(FrameHeight * scale));
         }
         // Draw the Animation Strip
         public void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Begin();
             // Only draw the animation when we are active
             if (Active)
             {
                 spriteBatch.Draw(spriteStrip, destinationRect, sourceRect, color);
             }
+            spriteBatch.End();
         }
     }
 }
