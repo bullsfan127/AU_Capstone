@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using CustomSerialization;
+using DebugTerminal;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -10,6 +11,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using TileEngine;
+
+/**************************************************
+ * Added an XNA debugger, it can debug in real time,
+ * see http://www.protohacks.net/xna_debug_terminal/HowTo%20v2.1.php5 for usuage.
+ * Press the tab key to invole it
+ **************************************************************/
 
 namespace CapstoneProject
 {
@@ -26,6 +33,7 @@ namespace CapstoneProject
         DrawableLayer<Tile> currentLayer;
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
+
         // Represents the player
         Player player;
 
@@ -97,14 +105,15 @@ namespace CapstoneProject
             spriteBatch = new SpriteBatch(GraphicsDevice);
             //#FPS_COUNTER
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
+            Terminal.Init(this, spriteBatch, this.Content.Load<SpriteFont>("FPS"), graphics.GraphicsDevice);
+            Terminal.SetSkin(TerminalThemeType.FIRE);
             a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
             b.setTexture(this.Content.Load<Texture2D>("Tiles//tileM"));
             c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
 
             Texture2D playerTexture = Content.Load<Texture2D>("shitty");
 
-
-            player.Initialize(playerTexture,new Vector2(0,0));
+            player.Initialize(playerTexture, new Vector2(0, 0));
             // TODO: use this.Content to load your game content here
         }
 
@@ -124,6 +133,7 @@ namespace CapstoneProject
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
@@ -156,10 +166,11 @@ namespace CapstoneProject
             counter.Draw(spriteBatch, gameTime);
 
             //  currentLayer.Draw(spriteBatch, gameTime, Vector2.Zero);
-           // gameMap.Player = new Avatar();
-           // gameMap.Player.Position = Vector2.Zero;
+            // gameMap.Player = new Avatar();
+            // gameMap.Player.Position = Vector2.Zero;
             gameMap.Draw(spriteBatch, gameTime);
             base.Draw(gameTime);
+            Terminal.CheckDraw(false);
         }
     }
 }
