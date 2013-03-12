@@ -1,0 +1,125 @@
+\hypertarget{class_custom_serialization_1_1_serialize_3_01_t_01_4}{\section{Custom\-Serialization.\-Serialize$<$ T $>$ Class Template Reference}
+\label{d3/d5e/class_custom_serialization_1_1_serialize_3_01_t_01_4}\index{Custom\-Serialization.\-Serialize$<$ T $>$@{Custom\-Serialization.\-Serialize$<$ T $>$}}
+}
+
+
+This class Takes a class, and converts it to an xml file that is saved on the disk. It also has the ability to load from those saved files to create a class. This is essentially a 6 step process for both loading and saving.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_custom_serialization_1_1_serialize_3_01_t_01_4_a18418aaac4ebc3372de3410626a0ea55}{Serialize} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor \end{DoxyCompactList}\item 
+T \hyperlink{class_custom_serialization_1_1_serialize_3_01_t_01_4_a8e93c80cca07e34d0a30c4bc53ddfb17}{Load} (string file\-Name)
+\begin{DoxyCompactList}\small\item\em Loads from a xml file given the file\-Name \end{DoxyCompactList}\item 
+void \hyperlink{class_custom_serialization_1_1_serialize_3_01_t_01_4_af5669ea71316b3920351b64193d47d79}{Save} (T class\-Type, bool complex=false)
+\begin{DoxyCompactList}\small\item\em Saves to an X\-M\-L file from passed in class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_custom_serialization_1_1_serialize_3_01_t_01_4_a66f70c7605f05b21815016f758632258}{T {\bfseries Class\-Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}}\label{d3/d5e/class_custom_serialization_1_1_serialize_3_01_t_01_4_a66f70c7605f05b21815016f758632258}
+
+\item 
+\hypertarget{class_custom_serialization_1_1_serialize_3_01_t_01_4_ac97ea1c257da237df262554ec94479cf}{string {\bfseries File\-Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}}\label{d3/d5e/class_custom_serialization_1_1_serialize_3_01_t_01_4_ac97ea1c257da237df262554ec94479cf}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class Takes a class, and converts it to an xml file that is saved on the disk. It also has the ability to load from those saved files to create a class. This is essentially a 6 step process for both loading and saving. 
+
+\begin{DoxyVerb}1. User requests to Save / Load
+2. Get the StorageDevice.
+    2a. Request StorageDevice
+    2b. Receive StorageDevice
+3. Get a StorageContainer from the device.
+    3a. Request StorageContainer
+    3b. Receive StorageContainer
+4. Get the Stream of the file we want to use from the container.
+5. Serialize / Deserialize.
+6. Cleanup.
+\end{DoxyVerb}
+
+
+This is a generic class, so it should be able to take any class type and convert and load to and from an xml file
+
+Examples\-:
+
+Serialize$<$\-Test\-Class$>$ serializer = new \hyperlink{class_custom_serialization_1_1_serialize_3_01_t_01_4_a18418aaac4ebc3372de3410626a0ea55}{Serialize$<$\-Test\-Class$>$()}; \hyperlink{class_custom_serialization_1_1_test_class}{Test\-Class} test = new \hyperlink{class_custom_serialization_1_1_test_class}{Test\-Class}(\char`\"{}jon\char`\"{}, \char`\"{}\-A\-U\char`\"{});
+
+How to save\-: serializer.\-Save(test);
+
+How to Load\-: test = serializer.\-Load(\char`\"{}\-Savegame.\-xml\char`\"{});
+
+N\-O\-T\-E\-: Only public class variables are serialized Also must have a defualt contructor, i.\-e one with no parameters
+
+All saved files should be "My documents-\/\-N-\/\-Slash 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_custom_serialization_1_1_serialize_3_01_t_01_4_a18418aaac4ebc3372de3410626a0ea55}{\index{Custom\-Serialization\-::\-Serialize$<$ T $>$@{Custom\-Serialization\-::\-Serialize$<$ T $>$}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!CustomSerialization::Serialize< T >@{Custom\-Serialization\-::\-Serialize$<$ T $>$}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}Custom\-Serialization.\-Serialize$<$ T $>$.Serialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{d3/d5e/class_custom_serialization_1_1_serialize_3_01_t_01_4_a18418aaac4ebc3372de3410626a0ea55}
+
+
+Default Constructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_custom_serialization_1_1_serialize_3_01_t_01_4_a8e93c80cca07e34d0a30c4bc53ddfb17}{\index{Custom\-Serialization\-::\-Serialize$<$ T $>$@{Custom\-Serialization\-::\-Serialize$<$ T $>$}!Load@{Load}}
+\index{Load@{Load}!CustomSerialization::Serialize< T >@{Custom\-Serialization\-::\-Serialize$<$ T $>$}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}T Custom\-Serialization.\-Serialize$<$ T $>$.Load (
+\begin{DoxyParamCaption}
+\item[{string}]{file\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{d3/d5e/class_custom_serialization_1_1_serialize_3_01_t_01_4_a8e93c80cca07e34d0a30c4bc53ddfb17}
+
+
+Loads from a xml file given the file\-Name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_custom_serialization_1_1_serialize_3_01_t_01_4_af5669ea71316b3920351b64193d47d79}{\index{Custom\-Serialization\-::\-Serialize$<$ T $>$@{Custom\-Serialization\-::\-Serialize$<$ T $>$}!Save@{Save}}
+\index{Save@{Save}!CustomSerialization::Serialize< T >@{Custom\-Serialization\-::\-Serialize$<$ T $>$}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void Custom\-Serialization.\-Serialize$<$ T $>$.Save (
+\begin{DoxyParamCaption}
+\item[{T}]{class\-Type, }
+\item[{bool}]{complex = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{d3/d5e/class_custom_serialization_1_1_serialize_3_01_t_01_4_af5669ea71316b3920351b64193d47d79}
+
+
+Saves to an X\-M\-L file from passed in class 
+
+Complex parameter is optional \-: Pass true if serializing does not work correctly without it 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\-Type} & \\
+\hline
+{\em complex} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Serialization/\-Serialization/Serialize.\-cs\end{DoxyCompactItemize}
