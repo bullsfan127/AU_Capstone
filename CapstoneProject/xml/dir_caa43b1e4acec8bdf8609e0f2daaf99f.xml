@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dir_caa43b1e4acec8bdf8609e0f2daaf99f" kind="dir">
+    <compoundname>CapstoneProject</compoundname>
+    <innerdir refid="dir_339590d414b9dc0af4433eb6b7b82807">CapstoneProject/CapstoneProject</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_monster" kind="class" prot="public">
+    <compoundname>TileEngine::Monster</compoundname>
+    <basecompoundref refid="class_tile_engine_1_1_avatar" prot="public" virt="non-virtual">TileEngine.Avatar</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_monster_1a4a7445ca8fcaebf69c34678716110eeb" prot="public" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_animation" kindref="compound">Animation</ref></type>
+        <definition>Animation TileEngine.Monster.MonsterAnimation</definition>
+        <argsstring></argsstring>
+        <name>MonsterAnimation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_monster_1a793d2d9816fc7793bce1c106b0623db0" prot="public" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.Monster.Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_monster_1a02284f88a72e281f261b544f744fdfab" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TileEngine.Monster.Active</definition>
+        <argsstring></argsstring>
+        <name>Active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_monster_1aa86c5bb86f79d337f8fde8aa53125b89" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Monster._health</definition>
+        <argsstring></argsstring>
+        <name>_health</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_tile_engine_1_1_monster_1aab1854412a7509be407e2487ae02eea5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Monster.Health</definition>
+        <argsstring></argsstring>
+        <name>Health</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" line="32" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_monster_1a3e708e301043038c39cb5a392f2a2a6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Monster.Initialize</definition>
+        <argsstring>(Animation animation, Vector2 position)</argsstring>
+        <name>Initialize</name>
+        <param>
+          <type><ref refid="class_tile_engine_1_1_animation" kindref="compound">Animation</ref></type>
+          <declname>animation</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" bodystart="35" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_monster_1a8fe35134525a9abb6c06bf69348de5c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void TileEngine.Monster.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <reimplements refid="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059">Update</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" line="47" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" bodystart="46" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_monster_1a59a438ca1791da6c25a5e849f109c0ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TileEngine.Monster.Draw</definition>
+        <argsstring>(SpriteBatch spriteBatch, GameTime gameTime)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="class_tile_engine_1_1_avatar_1a7d6106cb2e838e335d7b285d51312183">Draw</reimplements>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" line="53" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_monster_1aea7a59b9ba54ddb2571733381955274b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Monster.changeHealth</definition>
+        <argsstring>(int change)</argsstring>
+        <name>changeHealth</name>
+        <param>
+          <type>int</type>
+          <declname>change</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" line="58" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" bodystart="57" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_monster_1ae68b6e0b8425e7ebc5931316b5d17221" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int TileEngine.Monster.getHealth</definition>
+        <argsstring>()</argsstring>
+        <name>getHealth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" line="69" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" bodystart="68" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="25">
+        <label>TileEngine.Monster</label>
+        <link refid="class_tile_engine_1_1_monster"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Avatar</label>
+        <link refid="class_tile_engine_1_1_avatar"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="27">
+        <label>TileEngine.Monster</label>
+        <link refid="class_tile_engine_1_1_monster"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>MonsterAnimation</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>TileEngine.Animation</label>
+        <link refid="class_tile_engine_1_1_animation"/>
+      </node>
+      <node id="28">
+        <label>Avatar</label>
+        <link refid="class_tile_engine_1_1_avatar"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Monster.cs" bodystart="15" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_monster_1aa86c5bb86f79d337f8fde8aa53125b89" prot="private" virt="non-virtual"><scope>TileEngine::Monster</scope><name>_health</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a02284f88a72e281f261b544f744fdfab" prot="public" virt="non-virtual"><scope>TileEngine::Monster</scope><name>Active</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a7c6118c83ba18eeb197f04412130f3b5" prot="public" virt="non-virtual"><scope>TileEngine::Monster</scope><name>Avatar</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a9d97952e8a9e1b347c841cfbe614b60b" prot="public" virt="non-virtual"><scope>TileEngine::Monster</scope><name>Avatar</name></member>
+      <member refid="class_tile_engine_1_1_monster_1aea7a59b9ba54ddb2571733381955274b" prot="public" virt="non-virtual"><scope>TileEngine::Monster</scope><name>changeHealth</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a59a438ca1791da6c25a5e849f109c0ed" prot="public" virt="virtual"><scope>TileEngine::Monster</scope><name>Draw</name></member>
+      <member refid="class_tile_engine_1_1_monster_1ae68b6e0b8425e7ebc5931316b5d17221" prot="public" virt="non-virtual"><scope>TileEngine::Monster</scope><name>getHealth</name></member>
+      <member refid="class_tile_engine_1_1_monster_1aab1854412a7509be407e2487ae02eea5" prot="public" virt="non-virtual"><scope>TileEngine::Monster</scope><name>Health</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a3e708e301043038c39cb5a392f2a2a6c" prot="public" virt="non-virtual"><scope>TileEngine::Monster</scope><name>Initialize</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a4a7445ca8fcaebf69c34678716110eeb" prot="public" virt="non-virtual"><scope>TileEngine::Monster</scope><name>MonsterAnimation</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a793d2d9816fc7793bce1c106b0623db0" prot="public" virt="non-virtual"><scope>TileEngine::Monster</scope><name>Position</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a8fe35134525a9abb6c06bf69348de5c7" prot="public" virt="virtual"><scope>TileEngine::Monster</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

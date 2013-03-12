@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="interface_tile_engine_1_1_interfaces_1_1_drawable" kind="interface" prot="public">
+    <compoundname>TileEngine::Interfaces::Drawable</compoundname>
+    <derivedcompoundref refid="class_tile_engine_1_1_tile" prot="public" virt="non-virtual">TileEngine.Tile</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1a76cc277f0eb55cbb1a5c107a8320f47b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float TileEngine.Interfaces.Drawable.getScale</definition>
+        <argsstring>()</argsstring>
+        <name>getScale</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1adb8ab716f690fd85f35ca86d2317cb2d">getScale</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="18"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1a26df4c915e4a9d1c6787ffa0c7ad5596" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Interfaces.Drawable.setScale</definition>
+        <argsstring>(float scale)</argsstring>
+        <name>setScale</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1af2da0c551f70034307d1d9e9f5cc1301">setScale</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1afb39e791cb98a0f41ed87887887ad31c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Interfaces.Drawable.setTexture</definition>
+        <argsstring>(Texture2D text)</argsstring>
+        <name>setTexture</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1aaf5725a5761dda6ed078ef8825167124">setTexture</reimplementedby>
+        <param>
+          <type>Texture2D</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="22"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1ab20d9642c88ae050c0f19b87dbc72c3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Texture2D</type>
+        <definition>Texture2D TileEngine.Interfaces.Drawable.getTexture</definition>
+        <argsstring>()</argsstring>
+        <name>getTexture</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1a539bc2583deb9ea015d2d9ac39ef6531">getTexture</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="23"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1a9ed91958fd7a38f429ab89e8bdd484da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Rectangle</type>
+        <definition>Rectangle TileEngine.Interfaces.Drawable.getSourceRectangle</definition>
+        <argsstring>()</argsstring>
+        <name>getSourceRectangle</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1a6c32d6adf8a567aee16e30c311f8d7a4">getSourceRectangle</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="25"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1a606231997f3ae0bd62a67208ef06660b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Interfaces.Drawable.setSourceRectangle</definition>
+        <argsstring>(Rectangle sourceRectangle)</argsstring>
+        <name>setSourceRectangle</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1ad4ef504ed53ad6b2f5c7155d765d9d74">setSourceRectangle</reimplementedby>
+        <param>
+          <type>Rectangle</type>
+          <declname>sourceRectangle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="26"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1aa9e7c7ad62d6e48d98d626238f1b3c80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Color</type>
+        <definition>Color TileEngine.Interfaces.Drawable.getTint</definition>
+        <argsstring>()</argsstring>
+        <name>getTint</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1a8a2254bf9d9d822f1ca42d32b9f88b2d">getTint</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="28"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1a262ec54bc4e01df1f853d6de50787630" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Interfaces.Drawable.setTint</definition>
+        <argsstring>(Color color)</argsstring>
+        <name>setTint</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1acd94a9cd2f8641284afd91c8ccd60119">setTint</reimplementedby>
+        <param>
+          <type>Color</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="29"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1a529a9fdf66059e6fd7b0667b24606677" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float TileEngine.Interfaces.Drawable.getRotation</definition>
+        <argsstring>()</argsstring>
+        <name>getRotation</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1a37fd2a1887b7961fec064bd32f7aed94">getRotation</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="31"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1ae6e1519894803f06962fe18dc8ce9eb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Interfaces.Drawable.setRotation</definition>
+        <argsstring>(float rotation)</argsstring>
+        <name>setRotation</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1aaa04418a5a8dcc9bebb87ac53ee278db">setRotation</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="32"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1a7a2b78c94c78d691b33111a145478095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.Interfaces.Drawable.getOrigin</definition>
+        <argsstring>()</argsstring>
+        <name>getOrigin</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1a6bd3dcc3dd10b029cd85088658106014">getOrigin</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1a21ccc11a9d8bcc95114e1d015bcacc9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Interfaces.Drawable.setOrigin</definition>
+        <argsstring>(Vector2 origin)</argsstring>
+        <name>setOrigin</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1ae91093977a19c40af47893a383b21a7b">setOrigin</reimplementedby>
+        <param>
+          <type>Vector2</type>
+          <declname>origin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1aee9136fe00cfa3e331af37f2992ea544" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SpriteEffects</type>
+        <definition>SpriteEffects TileEngine.Interfaces.Drawable.getSpriteEffect</definition>
+        <argsstring>()</argsstring>
+        <name>getSpriteEffect</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1a0c3b54ce1eb5944056e03a50a0a4347b">getSpriteEffect</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1a491bf435b14ebb55027988c79cb661cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Interfaces.Drawable.setSpriteEffect</definition>
+        <argsstring>(SpriteEffects effect)</argsstring>
+        <name>setSpriteEffect</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1a4e99f01cfc6d9d48a588891bd0fd1eaa">setSpriteEffect</reimplementedby>
+        <param>
+          <type>SpriteEffects</type>
+          <declname>effect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1a59e47795fcca97cb79dc15a6945d9275" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float TileEngine.Interfaces.Drawable.getDepth</definition>
+        <argsstring>()</argsstring>
+        <name>getDepth</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1a1a7950d049cdda64f4d6c8d3ea9c6dd9">getDepth</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_tile_engine_1_1_interfaces_1_1_drawable_1ade7e95cd5f7f1d3afce9f0a63c89a052" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Interfaces.Drawable.setDepth</definition>
+        <argsstring>(float a)</argsstring>
+        <name>setDepth</name>
+        <reimplementedby refid="class_tile_engine_1_1_tile_1aa6bd1b1cf9ecacf8a31e77aa924fa46e">setDepth</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6">
+        <label>TileEngine.Interfaces.Drawable</label>
+        <link refid="interface_tile_engine_1_1_interfaces_1_1_drawable"/>
+      </node>
+      <node id="7">
+        <label>TileEngine.Tile</label>
+        <link refid="class_tile_engine_1_1_tile"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Drawable.cs" bodystart="15" bodyend="47"/>
+    <listofallmembers>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a59e47795fcca97cb79dc15a6945d9275" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>getDepth</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a7a2b78c94c78d691b33111a145478095" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>getOrigin</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a529a9fdf66059e6fd7b0667b24606677" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>getRotation</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a76cc277f0eb55cbb1a5c107a8320f47b" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>getScale</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a9ed91958fd7a38f429ab89e8bdd484da" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>getSourceRectangle</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1aee9136fe00cfa3e331af37f2992ea544" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>getSpriteEffect</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1ab20d9642c88ae050c0f19b87dbc72c3a" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>getTexture</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1aa9e7c7ad62d6e48d98d626238f1b3c80" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>getTint</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1ade7e95cd5f7f1d3afce9f0a63c89a052" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>setDepth</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a21ccc11a9d8bcc95114e1d015bcacc9a" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>setOrigin</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1ae6e1519894803f06962fe18dc8ce9eb1" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>setRotation</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a26df4c915e4a9d1c6787ffa0c7ad5596" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>setScale</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a606231997f3ae0bd62a67208ef06660b" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>setSourceRectangle</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a491bf435b14ebb55027988c79cb661cf" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>setSpriteEffect</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1afb39e791cb98a0f41ed87887887ad31c" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>setTexture</name></member>
+      <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a262ec54bc4e01df1f853d6de50787630" prot="public" virt="non-virtual"><scope>TileEngine::Interfaces::Drawable</scope><name>setTint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

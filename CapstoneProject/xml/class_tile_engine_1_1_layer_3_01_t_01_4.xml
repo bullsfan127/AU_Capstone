@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_layer_3_01_t_01_4" kind="class" prot="public">
+    <compoundname>TileEngine::Layer&lt; T &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_layer_3_01_t_01_4_1a0330964c20aef27f056ce6fd6a956d28" prot="private" static="no" mutable="no">
+        <type>T[,]</type>
+        <definition>T [,] TileEngine.Layer&lt; T &gt;.layer</definition>
+        <argsstring></argsstring>
+        <name>layer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="17" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_layer_3_01_t_01_4_1ab2027713dabf92056a4679b2b011deb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.Layer&lt; T &gt;.Layer</definition>
+        <argsstring>(Vector2 size)</argsstring>
+        <name>Layer</name>
+        <param>
+          <type>Vector2</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>The Constuctor for a generic Layer </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Vector for the Size casted when the layer storage is declared</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="23" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_layer_3_01_t_01_4_1ab7bb577b8cba3afa6615d5ce7e517bcb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T TileEngine.Layer&lt; T &gt;.getItemAt</definition>
+        <argsstring>(Vector2 location)</argsstring>
+        <name>getItemAt</name>
+        <param>
+          <type>Vector2</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+<para>Gets the object at a location </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The (X,Y) location of the Item</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the item</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="35" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_layer_3_01_t_01_4_1ae348117cda11530eb1bc3448a772ea03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Layer&lt; T &gt;.setItemAt</definition>
+        <argsstring>(Vector2 location, T newItem)</argsstring>
+        <name>setItemAt</name>
+        <param>
+          <type>Vector2</type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>newItem</declname>
+        </param>
+        <briefdescription>
+<para>Sets the Item at a specific location to a new Item </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The (X,Y) location</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newItem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the New Item</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="57" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="56" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="15" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1ab7bb577b8cba3afa6615d5ce7e517bcb" prot="public" virt="non-virtual"><scope>TileEngine::Layer&lt; T &gt;</scope><name>getItemAt</name></member>
+      <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1ab2027713dabf92056a4679b2b011deb4" prot="public" virt="non-virtual"><scope>TileEngine::Layer&lt; T &gt;</scope><name>Layer</name></member>
+      <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1a0330964c20aef27f056ce6fd6a956d28" prot="private" virt="non-virtual"><scope>TileEngine::Layer&lt; T &gt;</scope><name>layer</name></member>
+      <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1ae348117cda11530eb1bc3448a772ea03" prot="public" virt="non-virtual"><scope>TileEngine::Layer&lt; T &gt;</scope><name>setItemAt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

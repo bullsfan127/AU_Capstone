@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_custom_serialization_1_1_serialization_test" kind="class" prot="public">
+    <compoundname>CustomSerialization::SerializationTest</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Game</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_custom_serialization_1_1_serialization_test_1a36557e2547cfcf6cf2aa5a8186efd139" prot="private" static="no" mutable="no">
+        <type>GraphicsDeviceManager</type>
+        <definition>GraphicsDeviceManager CustomSerialization.SerializationTest.graphics</definition>
+        <argsstring></argsstring>
+        <name>graphics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" line="13" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_serialization_1_1_serialization_test_1a5ac1405c9f3b084accfe8547c7a103eb" prot="private" static="no" mutable="no">
+        <type>SpriteBatch</type>
+        <definition>SpriteBatch CustomSerialization.SerializationTest.spriteBatch</definition>
+        <argsstring></argsstring>
+        <name>spriteBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" line="14" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_custom_serialization_1_1_serialization_test_1a2ca48b24868b552f2f3a343fe0fb8ba6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CustomSerialization.SerializationTest.SerializationTest</definition>
+        <argsstring>()</argsstring>
+        <name>SerializationTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" line="17" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" bodystart="16" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_custom_serialization_1_1_serialization_test_1a1ffb1bad9530353ef97ccf72edc4a0ae" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CustomSerialization.SerializationTest.Draw</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>This is called when the game should draw itself. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provides a snapshot of timing values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" line="46" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" bodystart="45" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_serialization_1_1_serialization_test_1ae7f521341d72d43fc44910dd6c0ee770" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CustomSerialization.SerializationTest.Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+<para>Allows the game to perform any initialization it needs to before starting to run. This is where it can query for any required services and load any non-graphic related content. Calling base.Initialize will enumerate through any components and initialize them as well. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" line="61" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" bodystart="60" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_serialization_1_1_serialization_test_1a59b3bda13e7ed59e2e2c5378e340a13b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CustomSerialization.SerializationTest.LoadContent</definition>
+        <argsstring>()</argsstring>
+        <name>LoadContent</name>
+        <briefdescription>
+<para>LoadContent will be called once per game and is the place to load all of your content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" line="72" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" bodystart="71" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_serialization_1_1_serialization_test_1af238d6bfea14626161c46aab9838ad30" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CustomSerialization.SerializationTest.UnloadContent</definition>
+        <argsstring>()</argsstring>
+        <name>UnloadContent</name>
+        <briefdescription>
+<para>UnloadContent will be called once per game and is the place to unload all content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" line="84" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_serialization_1_1_serialization_test_1a280ebe9766e6cb88c14ae932e3847a1b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CustomSerialization.SerializationTest.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Allows the game to run logic such as updating the world, checking for collisions, gathering input, and playing audio. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provides a snapshot of timing values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" line="94" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" bodystart="93" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the main type for your game </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="35">
+        <label>CustomSerialization.SerializationTest</label>
+        <link refid="class_custom_serialization_1_1_serialization_test"/>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>Microsoft::Xna::Framework::Game</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="37">
+        <label>CustomSerialization.SerializationTest</label>
+        <link refid="class_custom_serialization_1_1_serialization_test"/>
+        <childnode refid="38" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>Microsoft::Xna::Framework::Game</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" line="12" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/SerializationTest.cs" bodystart="11" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_custom_serialization_1_1_serialization_test_1a1ffb1bad9530353ef97ccf72edc4a0ae" prot="protected" virt="non-virtual"><scope>CustomSerialization::SerializationTest</scope><name>Draw</name></member>
+      <member refid="class_custom_serialization_1_1_serialization_test_1a36557e2547cfcf6cf2aa5a8186efd139" prot="private" virt="non-virtual"><scope>CustomSerialization::SerializationTest</scope><name>graphics</name></member>
+      <member refid="class_custom_serialization_1_1_serialization_test_1ae7f521341d72d43fc44910dd6c0ee770" prot="protected" virt="non-virtual"><scope>CustomSerialization::SerializationTest</scope><name>Initialize</name></member>
+      <member refid="class_custom_serialization_1_1_serialization_test_1a59b3bda13e7ed59e2e2c5378e340a13b" prot="protected" virt="non-virtual"><scope>CustomSerialization::SerializationTest</scope><name>LoadContent</name></member>
+      <member refid="class_custom_serialization_1_1_serialization_test_1a2ca48b24868b552f2f3a343fe0fb8ba6" prot="public" virt="non-virtual"><scope>CustomSerialization::SerializationTest</scope><name>SerializationTest</name></member>
+      <member refid="class_custom_serialization_1_1_serialization_test_1a5ac1405c9f3b084accfe8547c7a103eb" prot="private" virt="non-virtual"><scope>CustomSerialization::SerializationTest</scope><name>spriteBatch</name></member>
+      <member refid="class_custom_serialization_1_1_serialization_test_1af238d6bfea14626161c46aab9838ad30" prot="protected" virt="non-virtual"><scope>CustomSerialization::SerializationTest</scope><name>UnloadContent</name></member>
+      <member refid="class_custom_serialization_1_1_serialization_test_1a280ebe9766e6cb88c14ae932e3847a1b" prot="protected" virt="non-virtual"><scope>CustomSerialization::SerializationTest</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

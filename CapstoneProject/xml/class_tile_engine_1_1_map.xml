@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_map" kind="class" prot="public">
+    <compoundname>TileEngine::Map</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_map_1ac89b385f353c85dedd77da2e22242c10" prot="private" static="no" mutable="no">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; TileEngine.Map._Ground</definition>
+        <argsstring></argsstring>
+        <name>_Ground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_map_1ac7e9b384293ba29601a50899006eae69" prot="private" static="no" mutable="no">
+        <type>CustomSerialization.Serialize&lt; <ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref> &gt;</type>
+        <definition>CustomSerialization.Serialize&lt;Map&gt; TileEngine.Map.serializer</definition>
+        <argsstring></argsstring>
+        <name>serializer</name>
+        <initializer>= new CustomSerialization.Serialize&lt;<ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_map_1a983590284bae057f4580eabc69844574" prot="private" static="no" mutable="no">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; TileEngine.Map._Mask</definition>
+        <argsstring></argsstring>
+        <name>_Mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="35" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_map_1a04f959e4ac9ff491b82cbda5e34d98af" prot="private" static="no" mutable="no">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; TileEngine.Map._Fringe</definition>
+        <argsstring></argsstring>
+        <name>_Fringe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="43" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_map_1a7f78c485405c8e885f4701fc6ee2a25e" prot="private" static="no" mutable="no">
+        <type>Layer&lt; Rectangle &gt;</type>
+        <definition>Layer&lt;Rectangle&gt; TileEngine.Map._CollisionLayer</definition>
+        <argsstring></argsstring>
+        <name>_CollisionLayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="52" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_map_1ad1ecd225a6544336ca58fe14e25c6185" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_avatar" kindref="compound">Avatar</ref></type>
+        <definition>Avatar TileEngine.Map._Player</definition>
+        <argsstring></argsstring>
+        <name>_Player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="55" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_tile_engine_1_1_map_1a93d6a67a5388e1ad95245cb459847270" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; TileEngine.Map.Ground</definition>
+        <argsstring></argsstring>
+        <name>Ground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="33" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_map_1a298d145d16f3dc824a0c0875434ffa0b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; TileEngine.Map.Mask</definition>
+        <argsstring></argsstring>
+        <name>Mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_map_1abe95706f37041feb1285be80522abbb3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; TileEngine.Map.Fringe</definition>
+        <argsstring></argsstring>
+        <name>Fringe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_map_1a8cc2e7e3754056565eb5cb9250d62ceb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_tile_engine_1_1_avatar" kindref="compound">Avatar</ref></type>
+        <definition>Avatar TileEngine.Map.Player</definition>
+        <argsstring></argsstring>
+        <name>Player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="61" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_map_1a4eb00a552276ff41866e9ee93bab07b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.Map.Map</definition>
+        <argsstring>()</argsstring>
+        <name>Map</name>
+        <briefdescription>
+<para>Default Doesn&apos;t do anything. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="66" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_map_1aa4df62a4695b5db2cedfd64ddbc91db2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.Map.Map</definition>
+        <argsstring>(DrawableLayer&lt; Tile &gt; Ground, DrawableLayer&lt; Tile &gt; Mask, DrawableLayer&lt; Tile &gt; Fringe)</argsstring>
+        <name>Map</name>
+        <param>
+          <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+          <declname>Ground</declname>
+        </param>
+        <param>
+          <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+          <declname>Mask</declname>
+        </param>
+        <param>
+          <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+          <declname>Fringe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="70" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="69" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_map_1a12ef500e268d17426c0d8514c6dffdb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Map.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Updates all map specific components </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gameTime snapshot</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="81" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_map_1ac3a75d6adf05439945a1630e8dca078c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Map.Draw</definition>
+        <argsstring>(SpriteBatch spriteBatch, GameTime gameTime)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="86" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="85" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_map_1a513c64dbda5b20aa08df5c74c4c93a90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Map.SwapGoundLayer</definition>
+        <argsstring>(DrawableLayer&lt; Tile &gt; swapLayer)</argsstring>
+        <name>SwapGoundLayer</name>
+        <param>
+          <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+          <declname>swapLayer</declname>
+        </param>
+        <briefdescription>
+<para>Swaps out the Ground Layer </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>swapLayer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The layer to be added to the <ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="100" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="99" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_map_1ae59f7b88d73a061a0b02587e63588b9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Map.SwapMaskLayer</definition>
+        <argsstring>(DrawableLayer&lt; Tile &gt; swapLayer)</argsstring>
+        <name>SwapMaskLayer</name>
+        <param>
+          <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+          <declname>swapLayer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="108" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="107" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_map_1a7387df79a406ca23119ce40c2fa6f1d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Map.SwapFringeLayer</definition>
+        <argsstring>(DrawableLayer&lt; Tile &gt; swapLayer)</argsstring>
+        <name>SwapFringeLayer</name>
+        <param>
+          <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+          <declname>swapLayer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="116" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="115" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_map_1afee605561b80396694c1acbaae6d219d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Map.saveMap</definition>
+        <argsstring>()</argsstring>
+        <name>saveMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="124" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_map_1a1ee45c38c5f3b51cdc59b5deb05a5bc2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Map.LoadMap</definition>
+        <argsstring>(string filename)</argsstring>
+        <name>LoadMap</name>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="129" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="128" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref> is the basic structure for storing the tile engine data. That includes tileSheets, Tiles, layers, npcs and anything else the player interacts with. Does practically all the heavy lifting. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" line="22" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Map.cs" bodystart="21" bodyend="132"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_map_1a7f78c485405c8e885f4701fc6ee2a25e" prot="private" virt="non-virtual"><scope>TileEngine::Map</scope><name>_CollisionLayer</name></member>
+      <member refid="class_tile_engine_1_1_map_1a04f959e4ac9ff491b82cbda5e34d98af" prot="private" virt="non-virtual"><scope>TileEngine::Map</scope><name>_Fringe</name></member>
+      <member refid="class_tile_engine_1_1_map_1ac89b385f353c85dedd77da2e22242c10" prot="private" virt="non-virtual"><scope>TileEngine::Map</scope><name>_Ground</name></member>
+      <member refid="class_tile_engine_1_1_map_1a983590284bae057f4580eabc69844574" prot="private" virt="non-virtual"><scope>TileEngine::Map</scope><name>_Mask</name></member>
+      <member refid="class_tile_engine_1_1_map_1ad1ecd225a6544336ca58fe14e25c6185" prot="private" virt="non-virtual"><scope>TileEngine::Map</scope><name>_Player</name></member>
+      <member refid="class_tile_engine_1_1_map_1ac3a75d6adf05439945a1630e8dca078c" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>Draw</name></member>
+      <member refid="class_tile_engine_1_1_map_1abe95706f37041feb1285be80522abbb3" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>Fringe</name></member>
+      <member refid="class_tile_engine_1_1_map_1a93d6a67a5388e1ad95245cb459847270" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>Ground</name></member>
+      <member refid="class_tile_engine_1_1_map_1a1ee45c38c5f3b51cdc59b5deb05a5bc2" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>LoadMap</name></member>
+      <member refid="class_tile_engine_1_1_map_1a4eb00a552276ff41866e9ee93bab07b5" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>Map</name></member>
+      <member refid="class_tile_engine_1_1_map_1aa4df62a4695b5db2cedfd64ddbc91db2" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>Map</name></member>
+      <member refid="class_tile_engine_1_1_map_1a298d145d16f3dc824a0c0875434ffa0b" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>Mask</name></member>
+      <member refid="class_tile_engine_1_1_map_1a8cc2e7e3754056565eb5cb9250d62ceb" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>Player</name></member>
+      <member refid="class_tile_engine_1_1_map_1afee605561b80396694c1acbaae6d219d" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>saveMap</name></member>
+      <member refid="class_tile_engine_1_1_map_1ac7e9b384293ba29601a50899006eae69" prot="private" virt="non-virtual"><scope>TileEngine::Map</scope><name>serializer</name></member>
+      <member refid="class_tile_engine_1_1_map_1a7387df79a406ca23119ce40c2fa6f1d9" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>SwapFringeLayer</name></member>
+      <member refid="class_tile_engine_1_1_map_1a513c64dbda5b20aa08df5c74c4c93a90" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>SwapGoundLayer</name></member>
+      <member refid="class_tile_engine_1_1_map_1ae59f7b88d73a061a0b02587e63588b9d" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>SwapMaskLayer</name></member>
+      <member refid="class_tile_engine_1_1_map_1a12ef500e268d17426c0d8514c6dffdb8" prot="public" virt="non-virtual"><scope>TileEngine::Map</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

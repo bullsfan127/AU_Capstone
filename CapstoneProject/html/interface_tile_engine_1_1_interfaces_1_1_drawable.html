@@ -8,6 +8,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -37,7 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -66,12 +73,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('interface_tile_engine_1_1_interfaces_1_1_drawable.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,11 +102,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespace_tile_engine.html">TileEngine</a></li><li class="navelem"><a class="el" href="namespace_tile_engine_1_1_interfaces.html">Interfaces</a></li><li class="navelem"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">Drawable</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -105,67 +122,336 @@ Inheritance diagram for TileEngine.Interfaces.Drawable:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a76cc277f0eb55cbb1a5c107a8320f47b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76cc277f0eb55cbb1a5c107a8320f47b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getScale</b> ()</td></tr>
+<tr class="memitem:a76cc277f0eb55cbb1a5c107a8320f47b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a76cc277f0eb55cbb1a5c107a8320f47b">getScale</a> ()</td></tr>
 <tr class="separator:a76cc277f0eb55cbb1a5c107a8320f47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26df4c915e4a9d1c6787ffa0c7ad5596"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26df4c915e4a9d1c6787ffa0c7ad5596"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setScale</b> (float scale)</td></tr>
+<tr class="memitem:a26df4c915e4a9d1c6787ffa0c7ad5596"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a26df4c915e4a9d1c6787ffa0c7ad5596">setScale</a> (float scale)</td></tr>
 <tr class="separator:a26df4c915e4a9d1c6787ffa0c7ad5596"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb39e791cb98a0f41ed87887887ad31c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb39e791cb98a0f41ed87887887ad31c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTexture</b> (Texture2D text)</td></tr>
+<tr class="memitem:afb39e791cb98a0f41ed87887887ad31c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#afb39e791cb98a0f41ed87887887ad31c">setTexture</a> (Texture2D text)</td></tr>
 <tr class="separator:afb39e791cb98a0f41ed87887887ad31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab20d9642c88ae050c0f19b87dbc72c3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab20d9642c88ae050c0f19b87dbc72c3a"></a>
-Texture2D&#160;</td><td class="memItemRight" valign="bottom"><b>getTexture</b> ()</td></tr>
+<tr class="memitem:ab20d9642c88ae050c0f19b87dbc72c3a"><td class="memItemLeft" align="right" valign="top">Texture2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#ab20d9642c88ae050c0f19b87dbc72c3a">getTexture</a> ()</td></tr>
 <tr class="separator:ab20d9642c88ae050c0f19b87dbc72c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ed91958fd7a38f429ab89e8bdd484da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ed91958fd7a38f429ab89e8bdd484da"></a>
-Rectangle&#160;</td><td class="memItemRight" valign="bottom"><b>getSourceRectangle</b> ()</td></tr>
+<tr class="memitem:a9ed91958fd7a38f429ab89e8bdd484da"><td class="memItemLeft" align="right" valign="top">Rectangle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a9ed91958fd7a38f429ab89e8bdd484da">getSourceRectangle</a> ()</td></tr>
 <tr class="separator:a9ed91958fd7a38f429ab89e8bdd484da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a606231997f3ae0bd62a67208ef06660b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a606231997f3ae0bd62a67208ef06660b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSourceRectangle</b> (Rectangle sourceRectangle)</td></tr>
+<tr class="memitem:a606231997f3ae0bd62a67208ef06660b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a606231997f3ae0bd62a67208ef06660b">setSourceRectangle</a> (Rectangle sourceRectangle)</td></tr>
 <tr class="separator:a606231997f3ae0bd62a67208ef06660b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9e7c7ad62d6e48d98d626238f1b3c80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9e7c7ad62d6e48d98d626238f1b3c80"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>getTint</b> ()</td></tr>
+<tr class="memitem:aa9e7c7ad62d6e48d98d626238f1b3c80"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#aa9e7c7ad62d6e48d98d626238f1b3c80">getTint</a> ()</td></tr>
 <tr class="separator:aa9e7c7ad62d6e48d98d626238f1b3c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a262ec54bc4e01df1f853d6de50787630"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a262ec54bc4e01df1f853d6de50787630"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTint</b> (Color color)</td></tr>
+<tr class="memitem:a262ec54bc4e01df1f853d6de50787630"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a262ec54bc4e01df1f853d6de50787630">setTint</a> (Color color)</td></tr>
 <tr class="separator:a262ec54bc4e01df1f853d6de50787630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a529a9fdf66059e6fd7b0667b24606677"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a529a9fdf66059e6fd7b0667b24606677"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getRotation</b> ()</td></tr>
+<tr class="memitem:a529a9fdf66059e6fd7b0667b24606677"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a529a9fdf66059e6fd7b0667b24606677">getRotation</a> ()</td></tr>
 <tr class="separator:a529a9fdf66059e6fd7b0667b24606677"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6e1519894803f06962fe18dc8ce9eb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6e1519894803f06962fe18dc8ce9eb1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setRotation</b> (float rotation)</td></tr>
+<tr class="memitem:ae6e1519894803f06962fe18dc8ce9eb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#ae6e1519894803f06962fe18dc8ce9eb1">setRotation</a> (float rotation)</td></tr>
 <tr class="separator:ae6e1519894803f06962fe18dc8ce9eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a2b78c94c78d691b33111a145478095"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a2b78c94c78d691b33111a145478095"></a>
-Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>getOrigin</b> ()</td></tr>
+<tr class="memitem:a7a2b78c94c78d691b33111a145478095"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a7a2b78c94c78d691b33111a145478095">getOrigin</a> ()</td></tr>
 <tr class="separator:a7a2b78c94c78d691b33111a145478095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21ccc11a9d8bcc95114e1d015bcacc9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21ccc11a9d8bcc95114e1d015bcacc9a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setOrigin</b> (Vector2 origin)</td></tr>
+<tr class="memitem:a21ccc11a9d8bcc95114e1d015bcacc9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a21ccc11a9d8bcc95114e1d015bcacc9a">setOrigin</a> (Vector2 origin)</td></tr>
 <tr class="separator:a21ccc11a9d8bcc95114e1d015bcacc9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee9136fe00cfa3e331af37f2992ea544"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee9136fe00cfa3e331af37f2992ea544"></a>
-SpriteEffects&#160;</td><td class="memItemRight" valign="bottom"><b>getSpriteEffect</b> ()</td></tr>
+<tr class="memitem:aee9136fe00cfa3e331af37f2992ea544"><td class="memItemLeft" align="right" valign="top">SpriteEffects&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#aee9136fe00cfa3e331af37f2992ea544">getSpriteEffect</a> ()</td></tr>
 <tr class="separator:aee9136fe00cfa3e331af37f2992ea544"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a491bf435b14ebb55027988c79cb661cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a491bf435b14ebb55027988c79cb661cf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSpriteEffect</b> (SpriteEffects effect)</td></tr>
+<tr class="memitem:a491bf435b14ebb55027988c79cb661cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a491bf435b14ebb55027988c79cb661cf">setSpriteEffect</a> (SpriteEffects effect)</td></tr>
 <tr class="separator:a491bf435b14ebb55027988c79cb661cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e47795fcca97cb79dc15a6945d9275"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59e47795fcca97cb79dc15a6945d9275"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getDepth</b> ()</td></tr>
+<tr class="memitem:a59e47795fcca97cb79dc15a6945d9275"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a59e47795fcca97cb79dc15a6945d9275">getDepth</a> ()</td></tr>
 <tr class="separator:a59e47795fcca97cb79dc15a6945d9275"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade7e95cd5f7f1d3afce9f0a63c89a052"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade7e95cd5f7f1d3afce9f0a63c89a052"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setDepth</b> (float a)</td></tr>
+<tr class="memitem:ade7e95cd5f7f1d3afce9f0a63c89a052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#ade7e95cd5f7f1d3afce9f0a63c89a052">setDepth</a> (float a)</td></tr>
 <tr class="separator:ade7e95cd5f7f1d3afce9f0a63c89a052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_drawable_8cs_source.html#l00015">15</a> of file <a class="el" href="_drawable_8cs_source.html">Drawable.cs</a>.</p>
-</div><hr/>The documentation for this interface was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a59e47795fcca97cb79dc15a6945d9275"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TileEngine.Interfaces.Drawable.getDepth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#a1a7950d049cdda64f4d6c8d3ea9c6dd9">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a2b78c94c78d691b33111a145478095"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 TileEngine.Interfaces.Drawable.getOrigin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#a6bd3dcc3dd10b029cd85088658106014">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a529a9fdf66059e6fd7b0667b24606677"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TileEngine.Interfaces.Drawable.getRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#a37fd2a1887b7961fec064bd32f7aed94">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a76cc277f0eb55cbb1a5c107a8320f47b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TileEngine.Interfaces.Drawable.getScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#adb8ab716f690fd85f35ca86d2317cb2d">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ed91958fd7a38f429ab89e8bdd484da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rectangle TileEngine.Interfaces.Drawable.getSourceRectangle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#a6c32d6adf8a567aee16e30c311f8d7a4">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee9136fe00cfa3e331af37f2992ea544"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SpriteEffects TileEngine.Interfaces.Drawable.getSpriteEffect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#a0c3b54ce1eb5944056e03a50a0a4347b">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab20d9642c88ae050c0f19b87dbc72c3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texture2D TileEngine.Interfaces.Drawable.getTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#a539bc2583deb9ea015d2d9ac39ef6531">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9e7c7ad62d6e48d98d626238f1b3c80"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color TileEngine.Interfaces.Drawable.getTint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#a8a2254bf9d9d822f1ca42d32b9f88b2d">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ade7e95cd5f7f1d3afce9f0a63c89a052"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Interfaces.Drawable.setDepth </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#aa6bd1b1cf9ecacf8a31e77aa924fa46e">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a21ccc11a9d8bcc95114e1d015bcacc9a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Interfaces.Drawable.setOrigin </td>
+          <td>(</td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>origin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#ae91093977a19c40af47893a383b21a7b">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae6e1519894803f06962fe18dc8ce9eb1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Interfaces.Drawable.setRotation </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#aaa04418a5a8dcc9bebb87ac53ee278db">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a26df4c915e4a9d1c6787ffa0c7ad5596"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Interfaces.Drawable.setScale </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#af2da0c551f70034307d1d9e9f5cc1301">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a606231997f3ae0bd62a67208ef06660b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Interfaces.Drawable.setSourceRectangle </td>
+          <td>(</td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>sourceRectangle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#ad4ef504ed53ad6b2f5c7155d765d9d74">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a491bf435b14ebb55027988c79cb661cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Interfaces.Drawable.setSpriteEffect </td>
+          <td>(</td>
+          <td class="paramtype">SpriteEffects&#160;</td>
+          <td class="paramname"><em>effect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#a4e99f01cfc6d9d48a588891bd0fd1eaa">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afb39e791cb98a0f41ed87887887ad31c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Interfaces.Drawable.setTexture </td>
+          <td>(</td>
+          <td class="paramtype">Texture2D&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#aaf5725a5761dda6ed078ef8825167124">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a262ec54bc4e01df1f853d6de50787630"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Interfaces.Drawable.setTint </td>
+          <td>(</td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_tile_engine_1_1_tile.html#acd94a9cd2f8641284afd91c8ccd60119">TileEngine.Tile</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this interface was generated from the following file:<ul>
 <li>TileEngine/Interfaces/<a class="el" href="_drawable_8cs_source.html">Drawable.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 11 2013 20:54:37 for Fat Joe's Nightmare by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.3.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_tile_engine.html">TileEngine</a></li><li class="navelem"><a class="el" href="namespace_tile_engine_1_1_interfaces.html">Interfaces</a></li><li class="navelem"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">Drawable</a></li>
+    <li class="footer">Generated on Mon Mar 11 2013 21:46:40 for Fat Joe's Nightmare by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
 </body>
 </html>

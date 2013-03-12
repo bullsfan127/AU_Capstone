@@ -8,6 +8,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -37,7 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -66,12 +73,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('interface_tile_engine_1_1_interfaces_1_1_drawable.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,11 +102,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespace_tile_engine.html">TileEngine</a></li><li class="navelem"><a class="el" href="namespace_tile_engine_1_1_interfaces.html">Interfaces</a></li><li class="navelem"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">Drawable</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">TileEngine.Interfaces.Drawable Member List</div>  </div>
@@ -93,28 +110,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getDepth</b>() (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getOrigin</b>() (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getRotation</b>() (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getScale</b>() (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getSourceRectangle</b>() (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getSpriteEffect</b>() (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getTexture</b>() (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getTint</b>() (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setDepth</b>(float a) (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setOrigin</b>(Vector2 origin) (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setRotation</b>(float rotation) (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setScale</b>(float scale) (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setSourceRectangle</b>(Rectangle sourceRectangle) (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setSpriteEffect</b>(SpriteEffects effect) (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setTexture</b>(Texture2D text) (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setTint</b>(Color color) (defined in <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a>)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a59e47795fcca97cb79dc15a6945d9275">getDepth</a>()</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a7a2b78c94c78d691b33111a145478095">getOrigin</a>()</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a529a9fdf66059e6fd7b0667b24606677">getRotation</a>()</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a76cc277f0eb55cbb1a5c107a8320f47b">getScale</a>()</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a9ed91958fd7a38f429ab89e8bdd484da">getSourceRectangle</a>()</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#aee9136fe00cfa3e331af37f2992ea544">getSpriteEffect</a>()</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#ab20d9642c88ae050c0f19b87dbc72c3a">getTexture</a>()</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#aa9e7c7ad62d6e48d98d626238f1b3c80">getTint</a>()</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#ade7e95cd5f7f1d3afce9f0a63c89a052">setDepth</a>(float a)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a21ccc11a9d8bcc95114e1d015bcacc9a">setOrigin</a>(Vector2 origin)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#ae6e1519894803f06962fe18dc8ce9eb1">setRotation</a>(float rotation)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a26df4c915e4a9d1c6787ffa0c7ad5596">setScale</a>(float scale)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a606231997f3ae0bd62a67208ef06660b">setSourceRectangle</a>(Rectangle sourceRectangle)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a491bf435b14ebb55027988c79cb661cf">setSpriteEffect</a>(SpriteEffects effect)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#afb39e791cb98a0f41ed87887887ad31c">setTexture</a>(Texture2D text)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a262ec54bc4e01df1f853d6de50787630">setTint</a>(Color color)</td><td class="entry"><a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html">TileEngine.Interfaces.Drawable</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 11 2013 20:54:37 for Fat Joe's Nightmare by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.3.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Mon Mar 11 2013 21:46:40 for Fat Joe's Nightmare by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
 </body>
 </html>

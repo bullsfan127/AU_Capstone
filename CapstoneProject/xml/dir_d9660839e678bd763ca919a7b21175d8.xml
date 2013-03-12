@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dir_d9660839e678bd763ca919a7b21175d8" kind="dir">
+    <compoundname>Serialization</compoundname>
+    <innerdir refid="dir_085f9128ccb02eeb43ae259d33f067c7">Serialization/Serialization</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/"/>
+  </compounddef>
+</doxygen>

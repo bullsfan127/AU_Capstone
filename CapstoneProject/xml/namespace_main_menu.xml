@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="namespace_main_menu" kind="namespace">
+    <compoundname>MainMenu</compoundname>
+    <innerclass refid="class_main_menu_1_1_main_menu" prot="public">MainMenu::MainMenu</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="13"/>
+  </compounddef>
+</doxygen>

@@ -8,6 +8,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -37,7 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -66,12 +73,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_tile_engine_1_1_monster.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,11 +102,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespace_tile_engine.html">TileEngine</a></li><li class="navelem"><a class="el" href="class_tile_engine_1_1_monster.html">Monster</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -107,60 +124,279 @@ Inheritance diagram for TileEngine.Monster:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3e708e301043038c39cb5a392f2a2a6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e708e301043038c39cb5a392f2a2a6c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (<a class="el" href="class_tile_engine_1_1_animation.html">Animation</a> animation, Vector2 position)</td></tr>
+<tr class="memitem:a3e708e301043038c39cb5a392f2a2a6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_monster.html#a3e708e301043038c39cb5a392f2a2a6c">Initialize</a> (<a class="el" href="class_tile_engine_1_1_animation.html">Animation</a> animation, Vector2 position)</td></tr>
 <tr class="separator:a3e708e301043038c39cb5a392f2a2a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fe35134525a9abb6c06bf69348de5c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fe35134525a9abb6c06bf69348de5c7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (GameTime gameTime)</td></tr>
+<tr class="memitem:a8fe35134525a9abb6c06bf69348de5c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_monster.html#a8fe35134525a9abb6c06bf69348de5c7">Update</a> (GameTime gameTime)</td></tr>
 <tr class="separator:a8fe35134525a9abb6c06bf69348de5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59a438ca1791da6c25a5e849f109c0ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59a438ca1791da6c25a5e849f109c0ed"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> (SpriteBatch spriteBatch, GameTime gameTime)</td></tr>
+<tr class="memitem:a59a438ca1791da6c25a5e849f109c0ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_monster.html#a59a438ca1791da6c25a5e849f109c0ed">Draw</a> (SpriteBatch spriteBatch, GameTime gameTime)</td></tr>
 <tr class="separator:a59a438ca1791da6c25a5e849f109c0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea7a59b9ba54ddb2571733381955274b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea7a59b9ba54ddb2571733381955274b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>changeHealth</b> (int change)</td></tr>
+<tr class="memitem:aea7a59b9ba54ddb2571733381955274b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_monster.html#aea7a59b9ba54ddb2571733381955274b">changeHealth</a> (int change)</td></tr>
 <tr class="separator:aea7a59b9ba54ddb2571733381955274b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae68b6e0b8425e7ebc5931316b5d17221"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae68b6e0b8425e7ebc5931316b5d17221"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getHealth</b> ()</td></tr>
+<tr class="memitem:ae68b6e0b8425e7ebc5931316b5d17221"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_monster.html#ae68b6e0b8425e7ebc5931316b5d17221">getHealth</a> ()</td></tr>
 <tr class="separator:ae68b6e0b8425e7ebc5931316b5d17221"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_tile_engine_1_1_avatar"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_tile_engine_1_1_avatar')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_tile_engine_1_1_avatar.html">TileEngine.Avatar</a></td></tr>
-<tr class="memitem:a9d97952e8a9e1b347c841cfbe614b60b inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d97952e8a9e1b347c841cfbe614b60b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Avatar</b> (Vector2 position, Texture2D Texture)</td></tr>
+<tr class="memitem:a7c6118c83ba18eeb197f04412130f3b5 inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a7c6118c83ba18eeb197f04412130f3b5">Avatar</a> ()</td></tr>
+<tr class="separator:a7c6118c83ba18eeb197f04412130f3b5 inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d97952e8a9e1b347c841cfbe614b60b inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a9d97952e8a9e1b347c841cfbe614b60b">Avatar</a> (Vector2 position, Texture2D Texture)</td></tr>
 <tr class="separator:a9d97952e8a9e1b347c841cfbe614b60b inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a4a7445ca8fcaebf69c34678716110eeb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a7445ca8fcaebf69c34678716110eeb"></a>
-<a class="el" href="class_tile_engine_1_1_animation.html">Animation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MonsterAnimation</b></td></tr>
+<tr class="memitem:a4a7445ca8fcaebf69c34678716110eeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tile_engine_1_1_animation.html">Animation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_monster.html#a4a7445ca8fcaebf69c34678716110eeb">MonsterAnimation</a></td></tr>
 <tr class="separator:a4a7445ca8fcaebf69c34678716110eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a793d2d9816fc7793bce1c106b0623db0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a793d2d9816fc7793bce1c106b0623db0"></a>
-Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>Position</b></td></tr>
+<tr class="memitem:a793d2d9816fc7793bce1c106b0623db0"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_monster.html#a793d2d9816fc7793bce1c106b0623db0">Position</a></td></tr>
 <tr class="separator:a793d2d9816fc7793bce1c106b0623db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02284f88a72e281f261b544f744fdfab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02284f88a72e281f261b544f744fdfab"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Active</b></td></tr>
+<tr class="memitem:a02284f88a72e281f261b544f744fdfab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_monster.html#a02284f88a72e281f261b544f744fdfab">Active</a></td></tr>
 <tr class="separator:a02284f88a72e281f261b544f744fdfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:aab1854412a7509be407e2487ae02eea5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab1854412a7509be407e2487ae02eea5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>Health</b><code> [get, set]</code></td></tr>
+<tr class="memitem:aab1854412a7509be407e2487ae02eea5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_monster.html#aab1854412a7509be407e2487ae02eea5">Health</a><code> [get, set]</code></td></tr>
 <tr class="separator:aab1854412a7509be407e2487ae02eea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_tile_engine_1_1_avatar"><td colspan="2" onclick="javascript:toggleInherit('properties_class_tile_engine_1_1_avatar')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_tile_engine_1_1_avatar.html">TileEngine.Avatar</a></td></tr>
-<tr class="memitem:a9c6796fe77c217cfe59d8d1bf96397d1 inherit properties_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c6796fe77c217cfe59d8d1bf96397d1"></a>
-Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>Position</b><code> [get, set]</code></td></tr>
+<tr class="memitem:a9c6796fe77c217cfe59d8d1bf96397d1 inherit properties_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a><code> [get, set]</code></td></tr>
 <tr class="separator:a9c6796fe77c217cfe59d8d1bf96397d1 inherit properties_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_monster_8cs_source.html#l00015">15</a> of file <a class="el" href="_monster_8cs_source.html">Monster.cs</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aea7a59b9ba54ddb2571733381955274b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Monster.changeHealth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>change</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_monster_8cs_source.html#l00057">57</a> of file <a class="el" href="_monster_8cs_source.html">Monster.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="comment">// Add/subtract the change to the current health</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            this._health += change;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">if</span> (this._health &lt; 0)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                this._health = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a59a438ca1791da6c25a5e849f109c0ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void TileEngine.Monster.Draw </td>
+          <td>(</td>
+          <td class="paramtype">SpriteBatch&#160;</td>
+          <td class="paramname"><em>spriteBatch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameTime&#160;</td>
+          <td class="paramname"><em>gameTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_tile_engine_1_1_avatar.html#a7d6106cb2e838e335d7b285d51312183">TileEngine.Avatar</a>.</p>
+
+<p>Definition at line <a class="el" href="_monster_8cs_source.html#l00052">52</a> of file <a class="el" href="_monster_8cs_source.html">Monster.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="class_tile_engine_1_1_monster.html#a4a7445ca8fcaebf69c34678716110eeb">MonsterAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#ab4dd3a8d57cc8de71f8863ff91238eea">Draw</a>(spriteBatch);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae68b6e0b8425e7ebc5931316b5d17221"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileEngine.Monster.getHealth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_monster_8cs_source.html#l00068">68</a> of file <a class="el" href="_monster_8cs_source.html">Monster.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">return</span> this._health;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3e708e301043038c39cb5a392f2a2a6c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Monster.Initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tile_engine_1_1_animation.html">Animation</a>&#160;</td>
+          <td class="paramname"><em>animation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_monster_8cs_source.html#l00035">35</a> of file <a class="el" href="_monster_8cs_source.html">Monster.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="class_tile_engine_1_1_monster.html#a4a7445ca8fcaebf69c34678716110eeb">MonsterAnimation</a> = animation;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="comment">// Set starting position of the player</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <a class="code" href="class_tile_engine_1_1_monster.html#a793d2d9816fc7793bce1c106b0623db0">Position</a> = position;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">// Set the player to be active</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="class_tile_engine_1_1_monster.html#a02284f88a72e281f261b544f744fdfab">Active</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a8fe35134525a9abb6c06bf69348de5c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Monster.Update </td>
+          <td>(</td>
+          <td class="paramtype">GameTime&#160;</td>
+          <td class="paramname"><em>gameTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_tile_engine_1_1_avatar.html#afa46c5a32ad8b677a0f2ce2ace163059">TileEngine.Avatar</a>.</p>
+
+<p>Definition at line <a class="el" href="_monster_8cs_source.html#l00046">46</a> of file <a class="el" href="_monster_8cs_source.html">Monster.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="class_tile_engine_1_1_monster.html#a4a7445ca8fcaebf69c34678716110eeb">MonsterAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a75d52f1bc2b67d0bc012ad6569bfe006">Position</a> = <a class="code" href="class_tile_engine_1_1_monster.html#a793d2d9816fc7793bce1c106b0623db0">Position</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="class_tile_engine_1_1_monster.html#a4a7445ca8fcaebf69c34678716110eeb">MonsterAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a2614c6eff471aecefade8b906a489eeb">Update</a>(gameTime);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a02284f88a72e281f261b544f744fdfab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TileEngine.Monster.Active</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_monster_8cs_source.html#l00024">24</a> of file <a class="el" href="_monster_8cs_source.html">Monster.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a7445ca8fcaebf69c34678716110eeb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tile_engine_1_1_animation.html">Animation</a> TileEngine.Monster.MonsterAnimation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_monster_8cs_source.html#l00018">18</a> of file <a class="el" href="_monster_8cs_source.html">Monster.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a793d2d9816fc7793bce1c106b0623db0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 TileEngine.Monster.Position</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_monster_8cs_source.html#l00021">21</a> of file <a class="el" href="_monster_8cs_source.html">Monster.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="aab1854412a7509be407e2487ae02eea5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileEngine.Monster.Health</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_monster_8cs_source.html#l00029">29</a> of file <a class="el" href="_monster_8cs_source.html">Monster.cs</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>TileEngine/<a class="el" href="_monster_8cs_source.html">Monster.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 11 2013 20:54:36 for Fat Joe's Nightmare by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.3.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_tile_engine.html">TileEngine</a></li><li class="navelem"><a class="el" href="class_tile_engine_1_1_monster.html">Monster</a></li>
+    <li class="footer">Generated on Mon Mar 11 2013 21:46:40 for Fat Joe's Nightmare by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
 </body>
 </html>

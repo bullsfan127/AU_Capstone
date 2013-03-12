@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_tile" kind="class" prot="public">
+    <compoundname>TileEngine::Tile</compoundname>
+    <basecompoundref refid="interface_tile_engine_1_1_interfaces_1_1_drawable" prot="public" virt="non-virtual">TileEngine.Interfaces.Drawable</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_tile_1a3af1f4f1805b8b2bcd76ca550782ae55" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TileEngine.Tile._Scale</definition>
+        <argsstring></argsstring>
+        <name>_Scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="23" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_tile_1a0b1c2c935ededa1553ce38123605a62e" prot="protected" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D TileEngine.Tile._Texture</definition>
+        <argsstring></argsstring>
+        <name>_Texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_tile_1a8f440ad4fabaa0d462678303a7db6899" prot="protected" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle TileEngine.Tile._SourceRectangle</definition>
+        <argsstring></argsstring>
+        <name>_SourceRectangle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_tile_1aadf2ea72c51446dbf3bac276d0f98de7" prot="protected" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color TileEngine.Tile._ColorTint</definition>
+        <argsstring></argsstring>
+        <name>_ColorTint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="26" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_tile_1a42d3f7d694c7a8422da6a9186a8e42a2" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TileEngine.Tile._Rotation</definition>
+        <argsstring></argsstring>
+        <name>_Rotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_tile_1ade1613a00f6d458c497b8ddb3d3afffd" prot="protected" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.Tile._Origin</definition>
+        <argsstring></argsstring>
+        <name>_Origin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_tile_1a8b2ca996f09db53cefd26d7ec7ad83a3" prot="protected" static="no" mutable="no">
+        <type>SpriteEffects</type>
+        <definition>SpriteEffects TileEngine.Tile._Effect</definition>
+        <argsstring></argsstring>
+        <name>_Effect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="29" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_tile_1a0b460d5863d5b52b639d55a70b9ecb3e" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TileEngine.Tile._Depth</definition>
+        <argsstring></argsstring>
+        <name>_Depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1a5dd1f40f587e5af6f9358b3edcf5b3a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.Tile.Tile</definition>
+        <argsstring>()</argsstring>
+        <name>Tile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="34" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1a51f908f77d3210fd3397a844d90dbdb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.Tile.Tile</definition>
+        <argsstring>(Rectangle _sourceRectangle, Color _tint, float _rotation, Vector2 _origin, SpriteEffects _effect, float _depth)</argsstring>
+        <name>Tile</name>
+        <param>
+          <type>Rectangle</type>
+          <declname>_sourceRectangle</declname>
+        </param>
+        <param>
+          <type>Color</type>
+          <declname>_tint</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>_rotation</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>_origin</declname>
+        </param>
+        <param>
+          <type>SpriteEffects</type>
+          <declname>_effect</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>_depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="37" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="36" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1aaf5725a5761dda6ed078ef8825167124" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Tile.setTexture</definition>
+        <argsstring>(Texture2D _texture)</argsstring>
+        <name>setTexture</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1afb39e791cb98a0f41ed87887887ad31c">setTexture</reimplements>
+        <param>
+          <type>Texture2D</type>
+          <declname>_texture</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="53" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1a539bc2583deb9ea015d2d9ac39ef6531" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Texture2D</type>
+        <definition>Texture2D TileEngine.Tile.getTexture</definition>
+        <argsstring>()</argsstring>
+        <name>getTexture</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1ab20d9642c88ae050c0f19b87dbc72c3a">getTexture</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="58" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1a6c32d6adf8a567aee16e30c311f8d7a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Rectangle</type>
+        <definition>Rectangle TileEngine.Tile.getSourceRectangle</definition>
+        <argsstring>()</argsstring>
+        <name>getSourceRectangle</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a9ed91958fd7a38f429ab89e8bdd484da">getSourceRectangle</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="64" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1ad4ef504ed53ad6b2f5c7155d765d9d74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Tile.setSourceRectangle</definition>
+        <argsstring>(Rectangle _sourceRectangle)</argsstring>
+        <name>setSourceRectangle</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a606231997f3ae0bd62a67208ef06660b">setSourceRectangle</reimplements>
+        <param>
+          <type>Rectangle</type>
+          <declname>_sourceRectangle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="69" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1a8a2254bf9d9d822f1ca42d32b9f88b2d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Color</type>
+        <definition>Color TileEngine.Tile.getTint</definition>
+        <argsstring>()</argsstring>
+        <name>getTint</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1aa9e7c7ad62d6e48d98d626238f1b3c80">getTint</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="74" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1acd94a9cd2f8641284afd91c8ccd60119" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Tile.setTint</definition>
+        <argsstring>(Color color)</argsstring>
+        <name>setTint</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a262ec54bc4e01df1f853d6de50787630">setTint</reimplements>
+        <param>
+          <type>Color</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="79" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1a37fd2a1887b7961fec064bd32f7aed94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float TileEngine.Tile.getRotation</definition>
+        <argsstring>()</argsstring>
+        <name>getRotation</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a529a9fdf66059e6fd7b0667b24606677">getRotation</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="84" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1aaa04418a5a8dcc9bebb87ac53ee278db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Tile.setRotation</definition>
+        <argsstring>(float _rotation)</argsstring>
+        <name>setRotation</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1ae6e1519894803f06962fe18dc8ce9eb1">setRotation</reimplements>
+        <param>
+          <type>float</type>
+          <declname>_rotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="89" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1a6bd3dcc3dd10b029cd85088658106014" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.Tile.getOrigin</definition>
+        <argsstring>()</argsstring>
+        <name>getOrigin</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a7a2b78c94c78d691b33111a145478095">getOrigin</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="94" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1ae91093977a19c40af47893a383b21a7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Tile.setOrigin</definition>
+        <argsstring>(Vector2 _origin)</argsstring>
+        <name>setOrigin</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a21ccc11a9d8bcc95114e1d015bcacc9a">setOrigin</reimplements>
+        <param>
+          <type>Vector2</type>
+          <declname>_origin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="99" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1a0c3b54ce1eb5944056e03a50a0a4347b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SpriteEffects</type>
+        <definition>SpriteEffects TileEngine.Tile.getSpriteEffect</definition>
+        <argsstring>()</argsstring>
+        <name>getSpriteEffect</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1aee9136fe00cfa3e331af37f2992ea544">getSpriteEffect</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="104" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1a4e99f01cfc6d9d48a588891bd0fd1eaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Tile.setSpriteEffect</definition>
+        <argsstring>(SpriteEffects spriteEffect)</argsstring>
+        <name>setSpriteEffect</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a491bf435b14ebb55027988c79cb661cf">setSpriteEffect</reimplements>
+        <param>
+          <type>SpriteEffects</type>
+          <declname>spriteEffect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="109" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1a1a7950d049cdda64f4d6c8d3ea9c6dd9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float TileEngine.Tile.getDepth</definition>
+        <argsstring>()</argsstring>
+        <name>getDepth</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a59e47795fcca97cb79dc15a6945d9275">getDepth</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="114" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1aa6bd1b1cf9ecacf8a31e77aa924fa46e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Tile.setDepth</definition>
+        <argsstring>(float a)</argsstring>
+        <name>setDepth</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1ade7e95cd5f7f1d3afce9f0a63c89a052">setDepth</reimplements>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="119" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1adb8ab716f690fd85f35ca86d2317cb2d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float TileEngine.Tile.getScale</definition>
+        <argsstring>()</argsstring>
+        <name>getScale</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a76cc277f0eb55cbb1a5c107a8320f47b">getScale</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="124" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_1af2da0c551f70034307d1d9e9f5cc1301" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Tile.setScale</definition>
+        <argsstring>(float _scale)</argsstring>
+        <name>setScale</name>
+        <reimplements refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a26df4c915e4a9d1c6787ffa0c7ad5596">setScale</reimplements>
+        <param>
+          <type>float</type>
+          <declname>_scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="131" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="130" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Stores all information required to render a tile to the screen </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="44">
+        <label>TileEngine::Interfaces::Drawable</label>
+        <link refid="interface_tile_engine_1_1_interfaces_1_1_drawable"/>
+      </node>
+      <node id="43">
+        <label>TileEngine.Tile</label>
+        <link refid="class_tile_engine_1_1_tile"/>
+        <childnode refid="44" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="46">
+        <label>TileEngine::Interfaces::Drawable</label>
+        <link refid="interface_tile_engine_1_1_interfaces_1_1_drawable"/>
+      </node>
+      <node id="45">
+        <label>TileEngine.Tile</label>
+        <link refid="class_tile_engine_1_1_tile"/>
+        <childnode refid="46" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Tile.cs" bodystart="20" bodyend="134"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_tile_1aadf2ea72c51446dbf3bac276d0f98de7" prot="protected" virt="non-virtual"><scope>TileEngine::Tile</scope><name>_ColorTint</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a0b460d5863d5b52b639d55a70b9ecb3e" prot="protected" virt="non-virtual"><scope>TileEngine::Tile</scope><name>_Depth</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a8b2ca996f09db53cefd26d7ec7ad83a3" prot="protected" virt="non-virtual"><scope>TileEngine::Tile</scope><name>_Effect</name></member>
+      <member refid="class_tile_engine_1_1_tile_1ade1613a00f6d458c497b8ddb3d3afffd" prot="protected" virt="non-virtual"><scope>TileEngine::Tile</scope><name>_Origin</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a42d3f7d694c7a8422da6a9186a8e42a2" prot="protected" virt="non-virtual"><scope>TileEngine::Tile</scope><name>_Rotation</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a3af1f4f1805b8b2bcd76ca550782ae55" prot="protected" virt="non-virtual"><scope>TileEngine::Tile</scope><name>_Scale</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a8f440ad4fabaa0d462678303a7db6899" prot="protected" virt="non-virtual"><scope>TileEngine::Tile</scope><name>_SourceRectangle</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a0b1c2c935ededa1553ce38123605a62e" prot="protected" virt="non-virtual"><scope>TileEngine::Tile</scope><name>_Texture</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a1a7950d049cdda64f4d6c8d3ea9c6dd9" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>getDepth</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a6bd3dcc3dd10b029cd85088658106014" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>getOrigin</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a37fd2a1887b7961fec064bd32f7aed94" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>getRotation</name></member>
+      <member refid="class_tile_engine_1_1_tile_1adb8ab716f690fd85f35ca86d2317cb2d" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>getScale</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a6c32d6adf8a567aee16e30c311f8d7a4" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>getSourceRectangle</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a0c3b54ce1eb5944056e03a50a0a4347b" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>getSpriteEffect</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a539bc2583deb9ea015d2d9ac39ef6531" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>getTexture</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a8a2254bf9d9d822f1ca42d32b9f88b2d" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>getTint</name></member>
+      <member refid="class_tile_engine_1_1_tile_1aa6bd1b1cf9ecacf8a31e77aa924fa46e" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>setDepth</name></member>
+      <member refid="class_tile_engine_1_1_tile_1ae91093977a19c40af47893a383b21a7b" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>setOrigin</name></member>
+      <member refid="class_tile_engine_1_1_tile_1aaa04418a5a8dcc9bebb87ac53ee278db" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>setRotation</name></member>
+      <member refid="class_tile_engine_1_1_tile_1af2da0c551f70034307d1d9e9f5cc1301" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>setScale</name></member>
+      <member refid="class_tile_engine_1_1_tile_1ad4ef504ed53ad6b2f5c7155d765d9d74" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>setSourceRectangle</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a4e99f01cfc6d9d48a588891bd0fd1eaa" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>setSpriteEffect</name></member>
+      <member refid="class_tile_engine_1_1_tile_1aaf5725a5761dda6ed078ef8825167124" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>setTexture</name></member>
+      <member refid="class_tile_engine_1_1_tile_1acd94a9cd2f8641284afd91c8ccd60119" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>setTint</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a5dd1f40f587e5af6f9358b3edcf5b3a7" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>Tile</name></member>
+      <member refid="class_tile_engine_1_1_tile_1a51f908f77d3210fd3397a844d90dbdb2" prot="public" virt="non-virtual"><scope>TileEngine::Tile</scope><name>Tile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

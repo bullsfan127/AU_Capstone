@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dir_b62add12a4123d7687045602466e895a" kind="dir">
+    <compoundname>MainMenu</compoundname>
+    <innerdir refid="dir_af78183ecf8c49d9065c4152db8bba1a">MainMenu/MainMenu</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/"/>
+  </compounddef>
+</doxygen>

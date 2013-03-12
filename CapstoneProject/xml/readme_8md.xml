@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="readme_8md" kind="file">
+    <compoundname>readme.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">Fat<sp/>Joe</highlight><highlight class="stringliteral">&apos;s<sp/>Nightmare</highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral">===========</highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="5"><highlight class="stringliteral">***<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="stringliteral">Our<sp/>wiki<sp/>has<sp/>information<sp/>reguarding<sp/>our<sp/>prooject<sp/>as<sp/>well<sp/>as<sp/>links<sp/>to<sp/>important<sp/>documents<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral"><sp/><sp/><sp/>such<sp/>as<sp/>our<sp/>&lt;b&gt;REQUIREMENTS<sp/>DOCUMENT&lt;/b&gt;<sp/>and<sp/>our<sp/>roles<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="stringliteral">***</highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral">To<sp/>Access<sp/>our<sp/>Wiki</highlight></codeline>
+<codeline lineno="11"><highlight class="stringliteral">------------------</highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral">1.<sp/>Go<sp/>to<sp/>our<sp/>github<sp/>page<sp/>(https://github.com/bullsfan127/AU_Capstone)<sp/>in<sp/>your<sp/>browser<sp/>and<sp/>click<sp/>on<sp/>the<sp/>wiki<sp/>tab</highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral">*OR*</highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral">2.<sp/>Direct<sp/>link:<sp/>https://github.com/bullsfan127/AU_Capstone/wiki</highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral">&lt;br&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral">***</highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral">We<sp/>have<sp/>a<sp/>public<sp/>dropbox<sp/>folder<sp/>that<sp/>contains<sp/>installers,<sp/>files,<sp/>tutorials,</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/><sp/>documents,<sp/>and<sp/>any<sp/>other<sp/>misc.<sp/>things<sp/>we<sp/>would<sp/>like<sp/>to<sp/>share<sp/>with<sp/>eachother<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral">***</highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral">To<sp/>Accces<sp/>our<sp/>Dropbox<sp/>folder</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral">---------------------------</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral">Direct<sp/>Link:<sp/>https://tinyurl.com/AUCapstone</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/readme.md"/>
+  </compounddef>
+</doxygen>

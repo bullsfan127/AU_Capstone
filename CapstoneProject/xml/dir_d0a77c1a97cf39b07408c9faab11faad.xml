@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dir_d0a77c1a97cf39b07408c9faab11faad" kind="dir">
+    <compoundname>TileEngine</compoundname>
+    <innerdir refid="dir_4d899794e4a5bb657f1e737f0032357e">TileEngine/Interfaces</innerdir>
+    <innerdir refid="dir_a60fd27bff144ae9c9cff1f1d8c77990">TileEngine/Properties</innerdir>
+    <innerdir refid="dir_c6a1de31af74083aa6fd97242ab5568e">TileEngine/Utility</innerdir>
+    <innerfile refid="_animation_8cs">Animation.cs</innerfile>
+    <innerfile refid="_avatar_8cs">Avatar.cs</innerfile>
+    <innerfile refid="_drawable_layer_8cs">DrawableLayer.cs</innerfile>
+    <innerfile refid="_layer_8cs">Layer.cs</innerfile>
+    <innerfile refid="_map_8cs">Map.cs</innerfile>
+    <innerfile refid="_monster_8cs">Monster.cs</innerfile>
+    <innerfile refid="_player_8cs">Player.cs</innerfile>
+    <innerfile refid="_tile_8cs">Tile.cs</innerfile>
+    <innerfile refid="_tile_sheet_8cs">TileSheet.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/"/>
+  </compounddef>
+</doxygen>

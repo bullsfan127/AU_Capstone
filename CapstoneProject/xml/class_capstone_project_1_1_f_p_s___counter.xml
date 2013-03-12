@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_capstone_project_1_1_f_p_s___counter" kind="class" prot="public">
+    <compoundname>CapstoneProject::FPS_Counter</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_capstone_project_1_1_f_p_s___counter_1aa617867a943302c0f595536ef3efc5a0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CapstoneProject.FPS_Counter.lastTime</definition>
+        <argsstring></argsstring>
+        <name>lastTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_f_p_s___counter_1a6d0ded9ccc5a778ef61eb01d6bb9cb34" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CapstoneProject.FPS_Counter.frames</definition>
+        <argsstring></argsstring>
+        <name>frames</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_f_p_s___counter_1adfde11ead4c4eea3124b9b7263bfd41b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CapstoneProject.FPS_Counter.fps</definition>
+        <argsstring></argsstring>
+        <name>fps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_f_p_s___counter_1a5d27844e85d50f8044323bc17c69c4e9" prot="private" static="no" mutable="no">
+        <type>SpriteFont</type>
+        <definition>SpriteFont CapstoneProject.FPS_Counter.font</definition>
+        <argsstring></argsstring>
+        <name>font</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" line="22" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_f_p_s___counter_1ad21ae77e3fa2d922d93c3da98a5f6cc9" prot="private" static="no" mutable="no">
+        <type>GraphicsDeviceManager</type>
+        <definition>GraphicsDeviceManager CapstoneProject.FPS_Counter.graphics</definition>
+        <argsstring></argsstring>
+        <name>graphics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" line="23" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_f_p_s___counter_1afca9591ffda1f874b313a245f7eb2fa2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CapstoneProject.FPS_Counter.isVisible</definition>
+        <argsstring></argsstring>
+        <name>isVisible</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_capstone_project_1_1_f_p_s___counter_1aa4b311b83d71702793af770f35665d5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CapstoneProject.FPS_Counter.FPS_Counter</definition>
+        <argsstring>(GraphicsDeviceManager graphic)</argsstring>
+        <name>FPS_Counter</name>
+        <param>
+          <type>GraphicsDeviceManager</type>
+          <declname>graphic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_capstone_project_1_1_f_p_s___counter_1a50971dd7f5656005f2a80707874bc800" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CapstoneProject.FPS_Counter.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" line="34" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" bodystart="33" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_capstone_project_1_1_f_p_s___counter_1af4dcf397acb8bfae9118af5680ef8948" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CapstoneProject.FPS_Counter.loadFont</definition>
+        <argsstring>(SpriteFont a)</argsstring>
+        <name>loadFont</name>
+        <param>
+          <type>SpriteFont</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" line="47" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_capstone_project_1_1_f_p_s___counter_1a42a19fb80b83ed33fbaf92db753d837b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CapstoneProject.FPS_Counter.Draw</definition>
+        <argsstring>(SpriteBatch spriteBatch, GameTime gameTime)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" line="52" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" bodystart="51" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_capstone_project_1_1_f_p_s___counter_1a2efed39113c7db14ed5b9a867b6412bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CapstoneProject.FPS_Counter.setVisibility</definition>
+        <argsstring>(bool Visibility)</argsstring>
+        <name>setVisibility</name>
+        <param>
+          <type>bool</type>
+          <declname>Visibility</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" line="70" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" bodystart="69" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" line="17" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Utility/FPS_Counter.cs" bodystart="16" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_capstone_project_1_1_f_p_s___counter_1a42a19fb80b83ed33fbaf92db753d837b" prot="public" virt="non-virtual"><scope>CapstoneProject::FPS_Counter</scope><name>Draw</name></member>
+      <member refid="class_capstone_project_1_1_f_p_s___counter_1a5d27844e85d50f8044323bc17c69c4e9" prot="private" virt="non-virtual"><scope>CapstoneProject::FPS_Counter</scope><name>font</name></member>
+      <member refid="class_capstone_project_1_1_f_p_s___counter_1adfde11ead4c4eea3124b9b7263bfd41b" prot="private" virt="non-virtual"><scope>CapstoneProject::FPS_Counter</scope><name>fps</name></member>
+      <member refid="class_capstone_project_1_1_f_p_s___counter_1aa4b311b83d71702793af770f35665d5a" prot="public" virt="non-virtual"><scope>CapstoneProject::FPS_Counter</scope><name>FPS_Counter</name></member>
+      <member refid="class_capstone_project_1_1_f_p_s___counter_1a6d0ded9ccc5a778ef61eb01d6bb9cb34" prot="private" virt="non-virtual"><scope>CapstoneProject::FPS_Counter</scope><name>frames</name></member>
+      <member refid="class_capstone_project_1_1_f_p_s___counter_1ad21ae77e3fa2d922d93c3da98a5f6cc9" prot="private" virt="non-virtual"><scope>CapstoneProject::FPS_Counter</scope><name>graphics</name></member>
+      <member refid="class_capstone_project_1_1_f_p_s___counter_1afca9591ffda1f874b313a245f7eb2fa2" prot="private" virt="non-virtual"><scope>CapstoneProject::FPS_Counter</scope><name>isVisible</name></member>
+      <member refid="class_capstone_project_1_1_f_p_s___counter_1aa617867a943302c0f595536ef3efc5a0" prot="private" virt="non-virtual"><scope>CapstoneProject::FPS_Counter</scope><name>lastTime</name></member>
+      <member refid="class_capstone_project_1_1_f_p_s___counter_1af4dcf397acb8bfae9118af5680ef8948" prot="public" virt="non-virtual"><scope>CapstoneProject::FPS_Counter</scope><name>loadFont</name></member>
+      <member refid="class_capstone_project_1_1_f_p_s___counter_1a2efed39113c7db14ed5b9a867b6412bd" prot="public" virt="non-virtual"><scope>CapstoneProject::FPS_Counter</scope><name>setVisibility</name></member>
+      <member refid="class_capstone_project_1_1_f_p_s___counter_1a50971dd7f5656005f2a80707874bc800" prot="public" virt="non-virtual"><scope>CapstoneProject::FPS_Counter</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

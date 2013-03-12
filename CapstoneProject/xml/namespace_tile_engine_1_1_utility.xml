@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="namespace_tile_engine_1_1_utility" kind="namespace">
+    <compoundname>TileEngine::Utility</compoundname>
+    <innerclass refid="class_tile_engine_1_1_utility_1_1_tile_math" prot="public">TileEngine::Utility::TileMath</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Utility/TileMath.cs" line="7"/>
+  </compounddef>
+</doxygen>

@@ -8,6 +8,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -37,7 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -66,12 +73,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,11 +102,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespace_tile_engine.html">TileEngine</a></li><li class="navelem"><a class="el" href="class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html">DrawableLayer< T ></a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -121,14 +138,11 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:aa04b0945dfae8242798a620ab7fb73ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa04b0945dfae8242798a620ab7fb73ec"></a>
-T[,]&#160;</td><td class="memItemRight" valign="bottom"><b>Layer</b><code> [get, set]</code></td></tr>
+<tr class="memitem:aa04b0945dfae8242798a620ab7fb73ec"><td class="memItemLeft" align="right" valign="top">T[,]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html#aa04b0945dfae8242798a620ab7fb73ec">Layer</a><code> [get, set]</code></td></tr>
 <tr class="separator:aa04b0945dfae8242798a620ab7fb73ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61f8c541810f2a3d4e0adfb6ccab9045"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61f8c541810f2a3d4e0adfb6ccab9045"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>MapWidth</b><code> [get, set]</code></td></tr>
+<tr class="memitem:a61f8c541810f2a3d4e0adfb6ccab9045"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html#a61f8c541810f2a3d4e0adfb6ccab9045">MapWidth</a><code> [get, set]</code></td></tr>
 <tr class="separator:a61f8c541810f2a3d4e0adfb6ccab9045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac92a235c150d1dd69bff8154a4f4f12e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac92a235c150d1dd69bff8154a4f4f12e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [get, set]</code></td></tr>
+<tr class="memitem:ac92a235c150d1dd69bff8154a4f4f12e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html#ac92a235c150d1dd69bff8154a4f4f12e">MapHeight</a><code> [get, set]</code></td></tr>
 <tr class="separator:ac92a235c150d1dd69bff8154a4f4f12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -152,9 +166,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
 <a class="anchor" id="a75c68a1120810d78da78deb7e1842d6d"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">TileEngine.DrawableLayer&lt; T &gt;.DrawableLayer </td>
@@ -163,25 +174,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Default Constructor </p>
 
 <p>Definition at line <a class="el" href="_drawable_layer_8cs_source.html#l00064">64</a> of file <a class="el" href="_drawable_layer_8cs_source.html">DrawableLayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{ }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="afc8431acf52a3ccf8f0ba47688a26249"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">TileEngine.DrawableLayer&lt; T &gt;.DrawableLayer </td>
@@ -201,11 +205,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>The Constuctor for a drawable Layer </p>
@@ -217,16 +216,25 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
 </dl>
 
 <p>Definition at line <a class="el" href="_drawable_layer_8cs_source.html#l00070">70</a> of file <a class="el" href="_drawable_layer_8cs_source.html">DrawableLayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="comment">//Probably going to need to populate the Array</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="comment">//Or add a way to swap the layer out entirely.</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            _layer = <span class="keyword">new</span> T[(int)size.X, (<span class="keywordtype">int</span>)size.Y];</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="comment">//map maxes</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            _mapWidth = (int)size.X;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            _mapHeight = (<span class="keywordtype">int</span>)size.Y;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            _maxViewPortWidth = graphics.Viewport.Width;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            _maxViewPortHeight = graphics.Viewport.Height;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a4c1c5d0a76e1b61955e13196efe28e30"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void TileEngine.DrawableLayer&lt; T &gt;.Draw </td>
@@ -252,11 +260,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>The Draw Method for a Drawable Layer </p>
@@ -270,15 +273,57 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
 </dl>
 
 <p>Definition at line <a class="el" href="_drawable_layer_8cs_source.html#l00128">128</a> of file <a class="el" href="_drawable_layer_8cs_source.html">DrawableLayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="comment">//TODO:  Use the Decimal point of the centerLocation to move the tiles to the right by</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="comment">//a percentage of the tile width allowing for smooth scrolling.  #TODO</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="comment">//TODO: Allow the use of jagged screen sizes IE:  9,10  #TODO</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="comment">//TODO: Possibly remove GameTime because its not being used yet.  Mostly used if we wanted to cap he FPS.</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="comment">//begin the SpriteBatch</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            spriteBatch.Begin();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            _scale = _maxViewPortWidth / _maxColumns;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordtype">int</span> startPosX = (int)centerLocation.X;<span class="comment">//Where are we starting horizontally</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="comment">//~~~~~~~~~~~~~~~~~DRAW LOGIC~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            for (<span class="keywordtype">int</span> x = 0; x &lt; _maxColumns; x++)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                <span class="keywordtype">int</span> startPosY = 0;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    <span class="comment">//(int)centerLocation.Y;//Where are we starting vertically in the map layer</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; _maxRows; y++)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    T currentItem = _layer[startPosX, startPosY];<span class="comment">//The current drawable item we are working with.</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                    <span class="comment">//TODO:  Space this out so the draw code is easier to understand.  #TODO</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    <span class="keywordflow">if</span> (currentItem != null)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                        spriteBatch.Draw(currentItem.getTexture(),</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                   <span class="keyword">new</span> Vector2(x * currentItem.getTexture().Width * (_scale / currentItem.getTexture().Width), startPosY * currentItem.getTexture().Height * (_scale / currentItem.getTexture().Width)),</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                                   currentItem.getSourceRectangle(),</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                                   currentItem.getTint(),</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                                   currentItem.getRotation(),</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                                   currentItem.getOrigin(),</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                                   _scale / currentItem.getTexture().Width,</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                                   currentItem.getSpriteEffect(),</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                                   currentItem.getDepth());</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                    startPosY++;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                }<span class="comment">//inner for</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                startPosX++;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            }<span class="comment">//outer for</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            spriteBatch.End();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af6de54987654c082316ef350f02af005"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">T TileEngine.DrawableLayer&lt; T &gt;.getItemAt </td>
@@ -288,11 +333,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Gets the object at a location </p>
@@ -305,15 +345,26 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
 <dl class="section return"><dt>Returns</dt><dd>A reference to the item</dd></dl>
 
 <p>Definition at line <a class="el" href="_drawable_layer_8cs_source.html#l00089">89</a> of file <a class="el" href="_drawable_layer_8cs_source.html">DrawableLayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            T output;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                output = _layer[(int)location.X, (<span class="keywordtype">int</span>)location.Y];</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">catch</span> (IndexOutOfRangeException e)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keywordflow">throw</span> e;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">return</span> (output);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a9743f584942c1445ab21fe4ae131c94e"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void TileEngine.DrawableLayer&lt; T &gt;.setItemAt </td>
@@ -333,11 +384,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Sets the Item at a specific location to a new Item </p>
@@ -350,15 +396,22 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
 </dl>
 
 <p>Definition at line <a class="el" href="_drawable_layer_8cs_source.html#l00110">110</a> of file <a class="el" href="_drawable_layer_8cs_source.html">DrawableLayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                _layer[(int)location.X, (<span class="keywordtype">int</span>)location.Y] = newItem;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">catch</span> (IndexOutOfRangeException e)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="keywordflow">throw</span> e;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a6affc21c4de1bd7e35b7790a1ce7bfea"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void TileEngine.DrawableLayer&lt; T &gt;.swapLayer </td>
@@ -368,11 +421,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Swaps the layer for another layer through shallow copying </p>
@@ -384,6 +432,77 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
 </dl>
 
 <p>Definition at line <a class="el" href="_drawable_layer_8cs_source.html#l00179">179</a> of file <a class="el" href="_drawable_layer_8cs_source.html">DrawableLayer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="comment">//swap the references</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            _layer = newLayer._layer;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="aa04b0945dfae8242798a620ab7fb73ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T [,] TileEngine.DrawableLayer&lt; T &gt;.Layer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_drawable_layer_8cs_source.html#l00023">23</a> of file <a class="el" href="_drawable_layer_8cs_source.html">DrawableLayer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac92a235c150d1dd69bff8154a4f4f12e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileEngine.DrawableLayer&lt; T &gt;.MapHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_drawable_layer_8cs_source.html#l00041">41</a> of file <a class="el" href="_drawable_layer_8cs_source.html">DrawableLayer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a61f8c541810f2a3d4e0adfb6ccab9045"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileEngine.DrawableLayer&lt; T &gt;.MapWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_drawable_layer_8cs_source.html#l00033">33</a> of file <a class="el" href="_drawable_layer_8cs_source.html">DrawableLayer.cs</a>.</p>
 
 </div>
 </div>
@@ -391,11 +510,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MapHeight</b><code> [g
 <li>TileEngine/<a class="el" href="_drawable_layer_8cs_source.html">DrawableLayer.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 11 2013 20:54:36 for Fat Joe's Nightmare by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.3.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_tile_engine.html">TileEngine</a></li><li class="navelem"><a class="el" href="class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html">DrawableLayer< T ></a></li>
+    <li class="footer">Generated on Mon Mar 11 2013 21:46:40 for Fat Joe's Nightmare by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
 </body>
 </html>

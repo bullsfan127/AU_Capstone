@@ -8,6 +8,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -37,7 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -70,26 +77,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
+      <li><a href="functions_prop.html"><span>Properties</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
+      <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
       <li><a href="#index_u"><span>u</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_func.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,35 +131,120 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 &#160;
 
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>Avatar()
+: <a class="el" href="class_tile_engine_1_1_avatar.html#a7c6118c83ba18eeb197f04412130f3b5">TileEngine.Avatar</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>changeHealth()
+: <a class="el" href="class_tile_engine_1_1_monster.html#aea7a59b9ba54ddb2571733381955274b">TileEngine.Monster</a>
+, <a class="el" href="class_tile_engine_1_1_player.html#a1f2e40accd441a1bbd6e213af5fb5314">TileEngine.Player</a>
+</li>
+<li>changeWeapon()
+: <a class="el" href="class_tile_engine_1_1_player.html#abf7f40e5c53bad024c041f21e0a754f2">TileEngine.Player</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
 <li>Draw()
 : <a class="el" href="class_capstone_project_1_1_game1.html#a8f7e138af4e270d66e5a8ba1e8137205">CapstoneProject.Game1</a>
-, <a class="el" href="class_main_menu_1_1_main_menu.html#acceb39fa89ca31f245d1352254ba7a5d">MainMenu.MainMenu</a>
-, <a class="el" href="class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html#a4c1c5d0a76e1b61955e13196efe28e30">TileEngine.DrawableLayer&lt; T &gt;</a>
+, <a class="el" href="class_capstone_project_1_1_f_p_s___counter.html#a42a19fb80b83ed33fbaf92db753d837b">CapstoneProject.FPS_Counter</a>
 , <a class="el" href="class_custom_serialization_1_1_serialization_test.html#a1ffb1bad9530353ef97ccf72edc4a0ae">CustomSerialization.SerializationTest</a>
+, <a class="el" href="class_tile_engine_1_1_player.html#a3150892fc641203e9bfee6b21a202ce5">TileEngine.Player</a>
+, <a class="el" href="class_tile_engine_1_1_map.html#ac3a75d6adf05439945a1630e8dca078c">TileEngine.Map</a>
+, <a class="el" href="class_tile_engine_1_1_monster.html#a59a438ca1791da6c25a5e849f109c0ed">TileEngine.Monster</a>
+, <a class="el" href="class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html#a4c1c5d0a76e1b61955e13196efe28e30">TileEngine.DrawableLayer&lt; T &gt;</a>
+, <a class="el" href="class_tile_engine_1_1_avatar.html#a7d6106cb2e838e335d7b285d51312183">TileEngine.Avatar</a>
+, <a class="el" href="class_tile_engine_1_1_animation.html#ab4dd3a8d57cc8de71f8863ff91238eea">TileEngine.Animation</a>
+, <a class="el" href="class_main_menu_1_1_main_menu.html#acceb39fa89ca31f245d1352254ba7a5d">MainMenu.MainMenu</a>
 </li>
 <li>DrawableLayer()
-: <a class="el" href="class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html#afc8431acf52a3ccf8f0ba47688a26249">TileEngine.DrawableLayer&lt; T &gt;</a>
+: <a class="el" href="class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html#a75c68a1120810d78da78deb7e1842d6d">TileEngine.DrawableLayer&lt; T &gt;</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>FPS_Counter()
+: <a class="el" href="class_capstone_project_1_1_f_p_s___counter.html#aa4b311b83d71702793af770f35665d5a">CapstoneProject.FPS_Counter</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>Game1()
+: <a class="el" href="class_capstone_project_1_1_game1.html#ae7b0491fe249f1a9678beaa428d91ea7">CapstoneProject.Game1</a>
+</li>
 <li>gcd()
 : <a class="el" href="class_tile_engine_1_1_utility_1_1_tile_math.html#a28bafc78c3291c8e65d6603af562410e">TileEngine.Utility.TileMath</a>
+</li>
+<li>getDepth()
+: <a class="el" href="class_tile_engine_1_1_tile.html#a1a7950d049cdda64f4d6c8d3ea9c6dd9">TileEngine.Tile</a>
+, <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a59e47795fcca97cb79dc15a6945d9275">TileEngine.Interfaces.Drawable</a>
+</li>
+<li>getHealth()
+: <a class="el" href="class_tile_engine_1_1_monster.html#ae68b6e0b8425e7ebc5931316b5d17221">TileEngine.Monster</a>
+, <a class="el" href="class_tile_engine_1_1_player.html#a7adaf32e779eefa0bb592412c97e2f18">TileEngine.Player</a>
 </li>
 <li>getItemAt()
 : <a class="el" href="class_tile_engine_1_1_layer_3_01_t_01_4.html#ab7bb577b8cba3afa6615d5ce7e517bcb">TileEngine.Layer&lt; T &gt;</a>
 , <a class="el" href="class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html#af6de54987654c082316ef350f02af005">TileEngine.DrawableLayer&lt; T &gt;</a>
 </li>
+<li>getLevelScore()
+: <a class="el" href="class_tile_engine_1_1_player.html#a343a9468c20e6c140ef23653cd70b942">TileEngine.Player</a>
+</li>
+<li>getOrigin()
+: <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a7a2b78c94c78d691b33111a145478095">TileEngine.Interfaces.Drawable</a>
+, <a class="el" href="class_tile_engine_1_1_tile.html#a6bd3dcc3dd10b029cd85088658106014">TileEngine.Tile</a>
+</li>
+<li>getRotation()
+: <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a529a9fdf66059e6fd7b0667b24606677">TileEngine.Interfaces.Drawable</a>
+, <a class="el" href="class_tile_engine_1_1_tile.html#a37fd2a1887b7961fec064bd32f7aed94">TileEngine.Tile</a>
+</li>
+<li>getScale()
+: <a class="el" href="class_tile_engine_1_1_tile.html#adb8ab716f690fd85f35ca86d2317cb2d">TileEngine.Tile</a>
+, <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a76cc277f0eb55cbb1a5c107a8320f47b">TileEngine.Interfaces.Drawable</a>
+</li>
+<li>getSourceRectangle()
+: <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a9ed91958fd7a38f429ab89e8bdd484da">TileEngine.Interfaces.Drawable</a>
+, <a class="el" href="class_tile_engine_1_1_tile.html#a6c32d6adf8a567aee16e30c311f8d7a4">TileEngine.Tile</a>
+</li>
+<li>getSpriteEffect()
+: <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#aee9136fe00cfa3e331af37f2992ea544">TileEngine.Interfaces.Drawable</a>
+, <a class="el" href="class_tile_engine_1_1_tile.html#a0c3b54ce1eb5944056e03a50a0a4347b">TileEngine.Tile</a>
+</li>
+<li>getTexture()
+: <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#ab20d9642c88ae050c0f19b87dbc72c3a">TileEngine.Interfaces.Drawable</a>
+, <a class="el" href="class_tile_engine_1_1_tile.html#a539bc2583deb9ea015d2d9ac39ef6531">TileEngine.Tile</a>
+</li>
+<li>getTint()
+: <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#aa9e7c7ad62d6e48d98d626238f1b3c80">TileEngine.Interfaces.Drawable</a>
+, <a class="el" href="class_tile_engine_1_1_tile.html#a8a2254bf9d9d822f1ca42d32b9f88b2d">TileEngine.Tile</a>
+</li>
+<li>getTotalScore()
+: <a class="el" href="class_tile_engine_1_1_player.html#a927b46fb75a886e2429ff853261e71a1">TileEngine.Player</a>
+</li>
+<li>getWeapon()
+: <a class="el" href="class_tile_engine_1_1_player.html#a1dad5c87be9ebe2864f0726eb2d65d21">TileEngine.Player</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>increaseScore()
+: <a class="el" href="class_tile_engine_1_1_player.html#aec85e347f9cf381981efb1f9590741df">TileEngine.Player</a>
+</li>
 <li>Initialize()
-: <a class="el" href="class_capstone_project_1_1_game1.html#accbc48beedf472a28ce77034f16114b5">CapstoneProject.Game1</a>
+: <a class="el" href="class_tile_engine_1_1_player.html#a40932b9bf69a88c42467a2fb2a8e5255">TileEngine.Player</a>
+, <a class="el" href="class_tile_engine_1_1_monster.html#a3e708e301043038c39cb5a392f2a2a6c">TileEngine.Monster</a>
+, <a class="el" href="class_tile_engine_1_1_animation.html#a92f73196e610356a0810345fe97b026d">TileEngine.Animation</a>
 , <a class="el" href="class_custom_serialization_1_1_serialization_test.html#ae7f521341d72d43fc44910dd6c0ee770">CustomSerialization.SerializationTest</a>
 , <a class="el" href="class_main_menu_1_1_main_menu.html#abd4cdaf409d28e550484658209d580d1">MainMenu.MainMenu</a>
+, <a class="el" href="class_capstone_project_1_1_game1.html#accbc48beedf472a28ce77034f16114b5">CapstoneProject.Game1</a>
 </li>
 </ul>
 
@@ -143,15 +258,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>LoadContent()
 : <a class="el" href="class_main_menu_1_1_main_menu.html#a5a8c3b1745c41a148093fb7d30ec6b34">MainMenu.MainMenu</a>
-, <a class="el" href="class_capstone_project_1_1_game1.html#a37f67ad402448d603acfcb0f26fdfd4c">CapstoneProject.Game1</a>
 , <a class="el" href="class_custom_serialization_1_1_serialization_test.html#a59b3bda13e7ed59e2e2c5378e340a13b">CustomSerialization.SerializationTest</a>
+, <a class="el" href="class_capstone_project_1_1_game1.html#a37f67ad402448d603acfcb0f26fdfd4c">CapstoneProject.Game1</a>
+</li>
+<li>loadFont()
+: <a class="el" href="class_capstone_project_1_1_f_p_s___counter.html#af4dcf397acb8bfae9118af5680ef8948">CapstoneProject.FPS_Counter</a>
+</li>
+<li>LoadMap()
+: <a class="el" href="class_tile_engine_1_1_map.html#a1ee45c38c5f3b51cdc59b5deb05a5bc2">TileEngine.Map</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>MainMenu()
+: <a class="el" href="class_main_menu_1_1_main_menu.html#a471796ebf352ae7d965a532bbae387f9">MainMenu.MainMenu</a>
+</li>
 <li>Map()
-: <a class="el" href="class_tile_engine_1_1_map.html#a4eb00a552276ff41866e9ee93bab07b5">TileEngine.Map</a>
+: <a class="el" href="class_tile_engine_1_1_map.html#aa4df62a4695b5db2cedfd64ddbc91db2">TileEngine.Map</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>NextLevelScore()
+: <a class="el" href="class_tile_engine_1_1_player.html#ae8bca588776c05e074fb753eeb7e86c9">TileEngine.Player</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>Player()
+: <a class="el" href="class_tile_engine_1_1_player.html#ad3ab4da4b2d965b5c3cea300fe9304ae">TileEngine.Player</a>
 </li>
 </ul>
 
@@ -160,18 +298,78 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Save()
 : <a class="el" href="class_custom_serialization_1_1_serialize_3_01_t_01_4.html#af5669ea71316b3920351b64193d47d79">CustomSerialization.Serialize&lt; T &gt;</a>
 </li>
+<li>saveMap()
+: <a class="el" href="class_tile_engine_1_1_map.html#afee605561b80396694c1acbaae6d219d">TileEngine.Map</a>
+</li>
+<li>SerializationTest()
+: <a class="el" href="class_custom_serialization_1_1_serialization_test.html#a2ca48b24868b552f2f3a343fe0fb8ba6">CustomSerialization.SerializationTest</a>
+</li>
 <li>Serialize()
 : <a class="el" href="class_custom_serialization_1_1_serialize_3_01_t_01_4.html#a18418aaac4ebc3372de3410626a0ea55">CustomSerialization.Serialize&lt; T &gt;</a>
+</li>
+<li>setDepth()
+: <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#ade7e95cd5f7f1d3afce9f0a63c89a052">TileEngine.Interfaces.Drawable</a>
+, <a class="el" href="class_tile_engine_1_1_tile.html#aa6bd1b1cf9ecacf8a31e77aa924fa46e">TileEngine.Tile</a>
 </li>
 <li>setItemAt()
 : <a class="el" href="class_tile_engine_1_1_layer_3_01_t_01_4.html#ae348117cda11530eb1bc3448a772ea03">TileEngine.Layer&lt; T &gt;</a>
 , <a class="el" href="class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html#a9743f584942c1445ab21fe4ae131c94e">TileEngine.DrawableLayer&lt; T &gt;</a>
+</li>
+<li>setOrigin()
+: <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a21ccc11a9d8bcc95114e1d015bcacc9a">TileEngine.Interfaces.Drawable</a>
+, <a class="el" href="class_tile_engine_1_1_tile.html#ae91093977a19c40af47893a383b21a7b">TileEngine.Tile</a>
+</li>
+<li>setRotation()
+: <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#ae6e1519894803f06962fe18dc8ce9eb1">TileEngine.Interfaces.Drawable</a>
+, <a class="el" href="class_tile_engine_1_1_tile.html#aaa04418a5a8dcc9bebb87ac53ee278db">TileEngine.Tile</a>
+</li>
+<li>setScale()
+: <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a26df4c915e4a9d1c6787ffa0c7ad5596">TileEngine.Interfaces.Drawable</a>
+, <a class="el" href="class_tile_engine_1_1_tile.html#af2da0c551f70034307d1d9e9f5cc1301">TileEngine.Tile</a>
+</li>
+<li>setSourceRectangle()
+: <a class="el" href="class_tile_engine_1_1_tile.html#ad4ef504ed53ad6b2f5c7155d765d9d74">TileEngine.Tile</a>
+, <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a606231997f3ae0bd62a67208ef06660b">TileEngine.Interfaces.Drawable</a>
+</li>
+<li>setSpriteEffect()
+: <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a491bf435b14ebb55027988c79cb661cf">TileEngine.Interfaces.Drawable</a>
+, <a class="el" href="class_tile_engine_1_1_tile.html#a4e99f01cfc6d9d48a588891bd0fd1eaa">TileEngine.Tile</a>
+</li>
+<li>setTexture()
+: <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#afb39e791cb98a0f41ed87887887ad31c">TileEngine.Interfaces.Drawable</a>
+, <a class="el" href="class_tile_engine_1_1_tile.html#aaf5725a5761dda6ed078ef8825167124">TileEngine.Tile</a>
+</li>
+<li>setTint()
+: <a class="el" href="class_tile_engine_1_1_tile.html#acd94a9cd2f8641284afd91c8ccd60119">TileEngine.Tile</a>
+, <a class="el" href="interface_tile_engine_1_1_interfaces_1_1_drawable.html#a262ec54bc4e01df1f853d6de50787630">TileEngine.Interfaces.Drawable</a>
+</li>
+<li>setVisibility()
+: <a class="el" href="class_capstone_project_1_1_f_p_s___counter.html#a2efed39113c7db14ed5b9a867b6412bd">CapstoneProject.FPS_Counter</a>
+</li>
+<li>SwapFringeLayer()
+: <a class="el" href="class_tile_engine_1_1_map.html#a7387df79a406ca23119ce40c2fa6f1d9">TileEngine.Map</a>
 </li>
 <li>SwapGoundLayer()
 : <a class="el" href="class_tile_engine_1_1_map.html#a513c64dbda5b20aa08df5c74c4c93a90">TileEngine.Map</a>
 </li>
 <li>swapLayer()
 : <a class="el" href="class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html#a6affc21c4de1bd7e35b7790a1ce7bfea">TileEngine.DrawableLayer&lt; T &gt;</a>
+</li>
+<li>SwapMaskLayer()
+: <a class="el" href="class_tile_engine_1_1_map.html#ae59f7b88d73a061a0b02587e63588b9d">TileEngine.Map</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>TestClass()
+: <a class="el" href="class_custom_serialization_1_1_test_class.html#a58705fe5e04307ae8c50d6128a88ecd0">CustomSerialization.TestClass</a>
+</li>
+<li>Tile()
+: <a class="el" href="class_tile_engine_1_1_tile.html#a51f908f77d3210fd3397a844d90dbdb2">TileEngine.Tile</a>
+</li>
+<li>TileSheet()
+: <a class="el" href="class_tile_engine_1_1_tile_sheet.html#a74fd1ec39c58a55b1494a6f5071c837d">TileEngine.TileSheet</a>
 </li>
 </ul>
 
@@ -183,18 +381,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="class_custom_serialization_1_1_serialization_test.html#af238d6bfea14626161c46aab9838ad30">CustomSerialization.SerializationTest</a>
 </li>
 <li>Update()
-: <a class="el" href="class_main_menu_1_1_main_menu.html#a4ba5e919def22db4f51fd0097ec93bb5">MainMenu.MainMenu</a>
-, <a class="el" href="class_capstone_project_1_1_game1.html#a531433f38f741ed11acb4750bf92d70d">CapstoneProject.Game1</a>
+: <a class="el" href="class_tile_engine_1_1_map.html#a12ef500e268d17426c0d8514c6dffdb8">TileEngine.Map</a>
+, <a class="el" href="class_tile_engine_1_1_avatar.html#afa46c5a32ad8b677a0f2ce2ace163059">TileEngine.Avatar</a>
+, <a class="el" href="class_tile_engine_1_1_animation.html#a2614c6eff471aecefade8b906a489eeb">TileEngine.Animation</a>
 , <a class="el" href="class_custom_serialization_1_1_serialization_test.html#a280ebe9766e6cb88c14ae932e3847a1b">CustomSerialization.SerializationTest</a>
-, <a class="el" href="class_tile_engine_1_1_map.html#a12ef500e268d17426c0d8514c6dffdb8">TileEngine.Map</a>
+, <a class="el" href="class_main_menu_1_1_main_menu.html#a4ba5e919def22db4f51fd0097ec93bb5">MainMenu.MainMenu</a>
+, <a class="el" href="class_capstone_project_1_1_f_p_s___counter.html#a50971dd7f5656005f2a80707874bc800">CapstoneProject.FPS_Counter</a>
+, <a class="el" href="class_capstone_project_1_1_game1.html#a531433f38f741ed11acb4750bf92d70d">CapstoneProject.Game1</a>
+, <a class="el" href="class_tile_engine_1_1_monster.html#a8fe35134525a9abb6c06bf69348de5c7">TileEngine.Monster</a>
+, <a class="el" href="class_tile_engine_1_1_player.html#add7b752fcd9f9cb94302c577f8088528">TileEngine.Player</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 11 2013 20:54:37 for Fat Joe's Nightmare by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.3.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Mon Mar 11 2013 21:46:41 for Fat Joe's Nightmare by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
 </body>
 </html>

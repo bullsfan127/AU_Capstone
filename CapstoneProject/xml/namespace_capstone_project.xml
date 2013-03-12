@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="namespace_capstone_project" kind="namespace">
+    <compoundname>CapstoneProject</compoundname>
+    <innerclass refid="class_capstone_project_1_1_game1" prot="public">CapstoneProject::Game1</innerclass>
+    <innerclass refid="class_capstone_project_1_1_f_p_s___counter" prot="public">CapstoneProject::FPS_Counter</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="22"/>
+  </compounddef>
+</doxygen>

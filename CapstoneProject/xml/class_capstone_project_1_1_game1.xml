@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_capstone_project_1_1_game1" kind="class" prot="public">
+    <compoundname>CapstoneProject::Game1</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Game</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a63d6d0354aaf17fcb3a836c105158004" prot="private" static="no" mutable="no">
+        <type>GraphicsDeviceManager</type>
+        <definition>GraphicsDeviceManager CapstoneProject.Game1.graphics</definition>
+        <argsstring></argsstring>
+        <name>graphics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1ae5be95693e03f9f2e2a0b833addd5a4b" prot="private" static="no" mutable="no">
+        <type>SpriteBatch</type>
+        <definition>SpriteBatch CapstoneProject.Game1.spriteBatch</definition>
+        <argsstring></argsstring>
+        <name>spriteBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="29" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1acd6f60a4d642ffb14886d7ebafab6d21" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref></type>
+        <definition>Tile CapstoneProject.Game1.a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a58b2f088d3e7309061dd55688392ca7a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref></type>
+        <definition>Tile CapstoneProject.Game1.b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="31" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a6931d7baea7cff28c79470f61f3e8c6f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref></type>
+        <definition>Tile CapstoneProject.Game1.c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="32" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a840b2896a22dc746f6b7fe83893a44f2" prot="private" static="no" mutable="no">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; CapstoneProject.Game1.currentLayer</definition>
+        <argsstring></argsstring>
+        <name>currentLayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="33" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a2ee25363ea9adff7c53530a0157af7e6" prot="private" static="no" mutable="no">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; CapstoneProject.Game1.currentLayerA</definition>
+        <argsstring></argsstring>
+        <name>currentLayerA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="34" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a09340193f6302f7e05bfb525f79ef01e" prot="private" static="no" mutable="no">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; CapstoneProject.Game1.currentLayerB</definition>
+        <argsstring></argsstring>
+        <name>currentLayerB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="35" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a0b5852e126019654abc0d861a9326332" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_player" kindref="compound">Player</ref></type>
+        <definition>Player CapstoneProject.Game1.player</definition>
+        <argsstring></argsstring>
+        <name>player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="38" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a1e1a439090de629102b29c5b2ba2bda2" prot="private" static="no" mutable="no">
+        <type>Serialize&lt; <ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref> &gt;</type>
+        <definition>Serialize&lt;Map&gt; CapstoneProject.Game1.serializer</definition>
+        <argsstring></argsstring>
+        <name>serializer</name>
+        <initializer>= new Serialize&lt;<ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1ab47363e3c09ed8c407aa65d35ea28c74" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref></type>
+        <definition>Map CapstoneProject.Game1.gameMap</definition>
+        <argsstring></argsstring>
+        <name>gameMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1ad1031625353f2464e8c96f967548e2e5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_capstone_project_1_1_f_p_s___counter" kindref="compound">FPS_Counter</ref></type>
+        <definition>FPS_Counter CapstoneProject.Game1.counter</definition>
+        <argsstring></argsstring>
+        <name>counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="44" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_capstone_project_1_1_game1_1ae7b0491fe249f1a9678beaa428d91ea7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CapstoneProject.Game1.Game1</definition>
+        <argsstring>()</argsstring>
+        <name>Game1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="47" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="46" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_capstone_project_1_1_game1_1accbc48beedf472a28ce77034f16114b5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CapstoneProject.Game1.Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+<para>Allows the game to perform any initialization it needs to before starting to run. This is where it can query for any required services and load any non-graphic related content. Calling base.Initialize will enumerate through any components and initialize them as well. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="61" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="60" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_capstone_project_1_1_game1_1a37f67ad402448d603acfcb0f26fdfd4c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CapstoneProject.Game1.LoadContent</definition>
+        <argsstring>()</argsstring>
+        <name>LoadContent</name>
+        <briefdescription>
+<para>LoadContent will be called once per game and is the place to load all of your content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="103" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="102" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_capstone_project_1_1_game1_1ac5211c6bd8219e31c91d1ad68ced674c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CapstoneProject.Game1.UnloadContent</definition>
+        <argsstring>()</argsstring>
+        <name>UnloadContent</name>
+        <briefdescription>
+<para>UnloadContent will be called once per game and is the place to unload all content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="125" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_capstone_project_1_1_game1_1a531433f38f741ed11acb4750bf92d70d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CapstoneProject.Game1.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Allows the game to run logic such as updating the world, checking for collisions, gathering input, and playing audio. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provides a snapshot of timing values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="135" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="134" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_capstone_project_1_1_game1_1a8f7e138af4e270d66e5a8ba1e8137205" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CapstoneProject.Game1.Draw</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>This is called when the game should draw itself. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provides a snapshot of timing values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="161" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="160" bodyend="174"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the main type for your game </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="14">
+        <label>Microsoft::Xna::Framework::Game</label>
+      </node>
+      <node id="13">
+        <label>CapstoneProject.Game1</label>
+        <link refid="class_capstone_project_1_1_game1"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="16">
+        <label>Microsoft::Xna::Framework::Game</label>
+      </node>
+      <node id="15">
+        <label>CapstoneProject.Game1</label>
+        <link refid="class_capstone_project_1_1_game1"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="26" bodyend="175"/>
+    <listofallmembers>
+      <member refid="class_capstone_project_1_1_game1_1acd6f60a4d642ffb14886d7ebafab6d21" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>a</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a58b2f088d3e7309061dd55688392ca7a" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>b</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a6931d7baea7cff28c79470f61f3e8c6f" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>c</name></member>
+      <member refid="class_capstone_project_1_1_game1_1ad1031625353f2464e8c96f967548e2e5" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>counter</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a840b2896a22dc746f6b7fe83893a44f2" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>currentLayer</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a2ee25363ea9adff7c53530a0157af7e6" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>currentLayerA</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a09340193f6302f7e05bfb525f79ef01e" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>currentLayerB</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a8f7e138af4e270d66e5a8ba1e8137205" prot="protected" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>Draw</name></member>
+      <member refid="class_capstone_project_1_1_game1_1ae7b0491fe249f1a9678beaa428d91ea7" prot="public" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>Game1</name></member>
+      <member refid="class_capstone_project_1_1_game1_1ab47363e3c09ed8c407aa65d35ea28c74" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>gameMap</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a63d6d0354aaf17fcb3a836c105158004" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>graphics</name></member>
+      <member refid="class_capstone_project_1_1_game1_1accbc48beedf472a28ce77034f16114b5" prot="protected" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>Initialize</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a37f67ad402448d603acfcb0f26fdfd4c" prot="protected" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>LoadContent</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a0b5852e126019654abc0d861a9326332" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>player</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a1e1a439090de629102b29c5b2ba2bda2" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>serializer</name></member>
+      <member refid="class_capstone_project_1_1_game1_1ae5be95693e03f9f2e2a0b833addd5a4b" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>spriteBatch</name></member>
+      <member refid="class_capstone_project_1_1_game1_1ac5211c6bd8219e31c91d1ad68ced674c" prot="protected" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>UnloadContent</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a531433f38f741ed11acb4750bf92d70d" prot="protected" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

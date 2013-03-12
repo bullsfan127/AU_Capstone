@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_tile_sheet" kind="class" prot="public">
+    <compoundname>TileEngine::TileSheet</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_tile_sheet_1aab4747c551f93c3c5f1bcba43276ed5a" prot="private" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D TileEngine.TileSheet._tileSheet</definition>
+        <argsstring></argsstring>
+        <name>_tileSheet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="17" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_tile_engine_1_1_tile_sheet_1a6d1063b12cabd250a4f6a3a286e1e18e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Texture2D</type>
+        <definition>Texture2D TileEngine.TileSheet.tileSheet</definition>
+        <argsstring></argsstring>
+        <name>tileSheet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="23" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_sheet_1a74fd1ec39c58a55b1494a6f5071c837d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.TileSheet.TileSheet</definition>
+        <argsstring>(Texture2D texture)</argsstring>
+        <name>TileSheet</name>
+        <param>
+          <type>Texture2D</type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="27" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="15" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_tile_sheet_1aab4747c551f93c3c5f1bcba43276ed5a" prot="private" virt="non-virtual"><scope>TileEngine::TileSheet</scope><name>_tileSheet</name></member>
+      <member refid="class_tile_engine_1_1_tile_sheet_1a74fd1ec39c58a55b1494a6f5071c837d" prot="public" virt="non-virtual"><scope>TileEngine::TileSheet</scope><name>TileSheet</name></member>
+      <member refid="class_tile_engine_1_1_tile_sheet_1a6d1063b12cabd250a4f6a3a286e1e18e" prot="public" virt="non-virtual"><scope>TileEngine::TileSheet</scope><name>tileSheet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

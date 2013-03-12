@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Fat Joe&apos;s Nightmare</title>
+    <detaileddescription>
+<para><hruler/>
+ Our wiki has information reguarding our prooject as well as links to important documents such as our <bold>REQUIREMENTS DOCUMENT</bold> and our roles <hruler/>
+</para><para><heading level="2">To Access our Wiki</heading>
+</para><para><orderedlist>
+<listitem><para>Go to our github page (<ulink url="https://github.com/bullsfan127/AU_Capstone">https://github.com/bullsfan127/AU_Capstone</ulink>) in your browser and click on the wiki tab</para></listitem></orderedlist>
+</para><para><emphasis>OR</emphasis></para><para><orderedlist>
+<listitem><para>Direct link: <ulink url="https://github.com/bullsfan127/AU_Capstone/wiki">https://github.com/bullsfan127/AU_Capstone/wiki</ulink></para></listitem></orderedlist>
+</para><para><linebreak/>
+ <hruler/>
+ We have a public dropbox folder that contains installers, files, tutorials, documents, and any other misc. things we would like to share with eachother <hruler/>
+</para><para><heading level="2">To Accces our Dropbox folder</heading>
+</para><para>Direct Link: <ulink url="https://tinyurl.com/AUCapstone">https://tinyurl.com/AUCapstone</ulink> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>
