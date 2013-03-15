@@ -42,7 +42,10 @@ namespace CapstoneProject
 
         //#FPS_COUNTER
         private FPS_Counter counter;
-
+        /// <summary>
+        /// Constructor for game, initilaizes the graphics device
+        /// Sets root directory, bufer height and width
+        /// </summary>
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
