@@ -30,16 +30,16 @@ namespace TileEngine
         int frameCount;
 
         // The index of the current frame we are displaying
-        int currentFrame;
+        public int currentFrame;
 
         // The color of the frame we will be displaying
         Color color;
 
         // The area of the image strip we want to display
-        Rectangle sourceRect = new Rectangle();
+        public Rectangle sourceRect = new Rectangle();
 
         // The area where we want to display the image strip in the game
-        Rectangle destinationRect = new Rectangle();
+        public Rectangle destinationRect = new Rectangle();
 
         // Width of a given frame
         public int FrameWidth;
@@ -79,6 +79,7 @@ namespace TileEngine
             // Set the Animation to active by default
             Active = true;
         }
+
         public void Update(GameTime gameTime)
         {
             // Do not update the game if we are not active

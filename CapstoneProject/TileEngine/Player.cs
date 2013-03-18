@@ -21,6 +21,7 @@ namespace TileEngine
 
         // Animation representing the player
         public Animation PlayerAnimation;
+        public Animation WalkAnimation;
 
         // State of the player
         public bool Active;
@@ -77,6 +78,7 @@ namespace TileEngine
         public void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             PlayerAnimation = new Animation();
+            WalkAnimation = new Animation();
 
             // Set the player's health to the maximum
             _health = this._maxHealth;
@@ -85,6 +87,7 @@ namespace TileEngine
             Position = position;
             //player Animation initialize
             PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, true);
+            WalkAnimation.Initialize(spriteStrip, position, 64, 128, 3, 200, Color.White, 1.0f, true);
             // Set the player to be active
             Active = true;
         }
@@ -96,7 +99,7 @@ namespace TileEngine
             PlayerAnimation.Position = Position;
             PlayerAnimation.Update(gameTime);
             base.Update(gameTime);
-            
+           
             //Reset movement to still
             Movement.X = 0;
             
@@ -106,6 +109,11 @@ namespace TileEngine
                 Movement.X = -5;
             }else if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
+                PlayerAnimation.sourceRect = new Rectangle(2 * PlayerAnimation.FrameWidth, 0, PlayerAnimation.FrameWidth, PlayerAnimation.FrameHeight);
+                //PlayerAnimation.currentFrame = 2;
+                //for (int i = 0; i < 2; i++)
+                 //PlayerAnimation.currentFrame++;
+               
                 Movement.X = 5;
             }
             //Keeping track of jumping/falling speed
