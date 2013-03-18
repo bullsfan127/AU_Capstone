@@ -139,10 +139,10 @@ namespace TileEngine
 
             _scale = _maxViewPortWidth / _maxColumns;
 
-            int startPosX = (int)centerLocation.X;//Where are we starting horizontally
-
+            int startPosX = (int)centerLocation.X/64;//Where are we starting horizontally
+         
             //~~~~~~~~~~~~~~~~~DRAW LOGIC~~~~~~~~~~~~~~~~~~~~~
-            for (int x = 0; x < _maxColumns; x++)
+            for (int x = 0; x < _maxColumns+1; x++)
             {
                 int startPosY = 0;
                     //(int)centerLocation.Y;//Where are we starting vertically in the map layer
@@ -154,7 +154,8 @@ namespace TileEngine
                     //TODO:  Space this out so the draw code is easier to understand.  #TODO
                     if (currentItem != null)
                         spriteBatch.Draw(currentItem.getTexture(),
-                                   new Vector2(x * currentItem.getTexture().Width * (_scale / currentItem.getTexture().Width), startPosY * currentItem.getTexture().Height * (_scale / currentItem.getTexture().Width)),
+                                   new Vector2(x * currentItem.getTexture().Width *  (_scale / currentItem.getTexture().Width)-(int)centerLocation.X%64, 
+                                       startPosY * currentItem.getTexture().Height * (_scale / currentItem.getTexture().Width)),
                                    currentItem.getSourceRectangle(),
                                    currentItem.getTint(),
                                    currentItem.getRotation(),

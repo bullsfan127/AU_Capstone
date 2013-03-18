@@ -14,6 +14,11 @@ namespace TileEngine
 {
     public class Player : Avatar
     {
+        //Current movement speeds for player
+        public Vector2 Movement;
+        //current offset for centering map
+        public Vector2 offset;
+
         // Animation representing the player
         public Animation PlayerAnimation;
 
@@ -84,12 +89,60 @@ namespace TileEngine
             Active = true;
         }
 
-        public override void Update(GameTime gameTime)
+        public  void Update(GameTime gameTime, Map map)
         {
+            
             // Vector2 Position = Vector2.Zero;
             PlayerAnimation.Position = Position;
             PlayerAnimation.Update(gameTime);
             base.Update(gameTime);
+            
+            //Reset movement to still
+            Movement.X = 0;
+            
+            // Trying to move Left or Right
+            if (Keyboard.GetState().IsKeyDown(Keys.Left))
+            {
+                Movement.X = -5;
+            }else if (Keyboard.GetState().IsKeyDown(Keys.Right))
+            {
+                Movement.X = 5;
+            }
+            //Keeping track of jumping/falling speed
+            if (Keyboard.GetState().IsKeyDown(Keys.Up)&&Position.Y==372)
+            {
+                Movement.Y += -25;
+            }
+            Movement.Y += 1;
+
+            //establish ceiling and floor
+            if (Position.Y + Movement.Y < 0)
+            {
+                Position = new Vector2(Position.X, 0);
+            }else if (Position.Y + Movement.Y > 372)
+            {
+                Position = new Vector2(Position.X, 372);
+                Movement.Y = 0;
+            }
+            //establish left and right bound for "dead zone"
+            if (Position.X + Movement.X > 500)
+            {
+                offset.X += Position.X + Movement.X - 500;
+                Position = new Vector2(500, Position.Y+Movement.Y);
+
+            }else if(Position.X+Movement.X<100&&offset.X>0)
+            {
+                offset.X += Position.X + Movement.X - 100;
+                Position = new Vector2(100, Position.Y + Movement.Y);
+            }else
+            {
+                Position += Movement;
+            }
+            if (Position.X < 0)
+            {
+                Position = new Vector2(0, Position.Y);
+            }
+            map.Update(gameTime,offset);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)

@@ -148,8 +148,8 @@ namespace CapstoneProject
 
                 gameMap.LoadMap("Savegame.xml");
             }
-
-            player.Update(gameTime);
+            
+            player.Update(gameTime,gameMap);
             // TODO: Add your update logic here
             //#FPS_COUNTER
             counter.Update(gameTime);

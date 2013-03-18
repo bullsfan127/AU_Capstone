@@ -20,6 +20,9 @@ namespace TileEngine
     /// </summary>
     public class Map
     {
+        //offset to determine center of screen.
+        Vector2 offset = Vector2.Zero;
+
         //For now I'm hard coding the layers eventually we want to move to a list
         //based system.
         DrawableLayer<Tile> _Ground;
@@ -77,19 +80,22 @@ namespace TileEngine
         /// Updates all map specific components
         /// </summary>
         /// <param name="gameTime">The gameTime snapshot</param>
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime,Vector2 offset)
         {
-            _Player.Update(gameTime);
+            this.offset = offset;
+            if (this.offset.X < 0)
+            {
+                this.offset.X = 0;
+            }            
         }
 
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             //TODO:  Add a way to calculate the where the center should be based on the player.
-
-            _Ground.Draw(spriteBatch, gameTime, _Player.Position);
-            _Mask.Draw(spriteBatch, gameTime, _Player.Position);
+            _Ground.Draw(spriteBatch, gameTime, offset);
+            _Mask.Draw(spriteBatch, gameTime, offset);
             _Player.Draw(spriteBatch, gameTime);
-            _Fringe.Draw(spriteBatch, gameTime, _Player.Position);
+            _Fringe.Draw(spriteBatch, gameTime, offset);
         }
 
         /// <summary>
