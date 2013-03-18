@@ -111,15 +111,15 @@ namespace TileEngine
             //Keeping track of jumping/falling speed
             if (Keyboard.GetState().IsKeyDown(Keys.Up)&&Position.Y==372)
             {
-                Movement.Y += -25;
+                Movement.Y += -20;
             }
             Movement.Y += 1;
 
             //establish ceiling and floor
-            if (Position.Y + Movement.Y < 0)
+            if (Position.Y + Movement.Y < 0)//ceiling
             {
                 Position = new Vector2(Position.X, 0);
-            }else if (Position.Y + Movement.Y > 372)
+            }else if (Position.Y + Movement.Y > 372)//floor
             {
                 Position = new Vector2(Position.X, 372);
                 Movement.Y = 0;
