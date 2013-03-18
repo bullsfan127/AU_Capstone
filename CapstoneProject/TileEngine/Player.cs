@@ -25,6 +25,15 @@ namespace TileEngine
         // State of the player
         public bool Active;
 
+        // Does player have armor
+        private bool _hasArmor;
+
+        public bool HasArmor
+        {
+            get { return _hasArmor; }
+            set { _hasArmor = value; }
+        }
+
         // Current health of the player
         private int _health;
 
@@ -155,18 +164,31 @@ namespace TileEngine
 
         public void changeHealth(int change)
         {
-            // Add/subtract the change to the current health
-            this._health += change;
-
-            // More than max? Set to max
-            if (this._health > this._maxHealth)
+            // has armor and being hit
+            if (this._hasArmor && change < 0)
             {
-                this._health = this._maxHealth;
-            } // Less than 0? Set to 0.
-            else if (this._health < 0)
-            {
-                this._health = 0;
+                this._hasArmor = false;
             }
+            else
+            {
+                // Add/subtract the change to the current health
+                this._health += change;
+
+                // More than max? Set to max
+                if (this._health > this._maxHealth)
+                {
+                    this._health = this._maxHealth;
+                } // Less than 0? Set to 0.
+                else if (this._health < 0)
+                {
+                    this._health = 0;
+                }
+            }
+        }
+
+        public void addArmor()
+        {
+            this._hasArmor = true;
         }
 
         public void changeWeapon(int weapon)
