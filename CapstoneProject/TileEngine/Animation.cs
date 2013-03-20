@@ -12,8 +12,12 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TileEngine
 {
-   public class Animation
+    public class Animation
     {
+        public enum Animate { IDLE, MOVING };
+
+        public Animate animate;
+
         // The image representing the collection of images used for animation
         Texture2D spriteStrip;
 
@@ -58,7 +62,7 @@ namespace TileEngine
 
         public void Initialize(Texture2D texture, Vector2 position,
         int frameWidth, int frameHeight, int frameCount,
-        int frametime, Color color, float scale, bool looping)
+        int frametime, Color color, float scale, bool looping, Animate animation = Animate.IDLE)
         {
             // Keep a local copy of the values passed in
             this.color = color;
@@ -74,7 +78,20 @@ namespace TileEngine
 
             // Set the time to zero
             elapsedTime = 0;
-            currentFrame = 0;
+            switch (animation)
+            {
+                case Animate.IDLE:
+                    currentFrame = 0;
+                    this.animate = Animate.IDLE;
+                    break;
+                case Animate.MOVING:
+                    currentFrame = 2;
+                    this.animate = Animate.MOVING;
+                    break;
+                default:
+                    currentFrame = 0;
+                    break;
+            }
 
             // Set the Animation to active by default
             Active = true;
@@ -100,6 +117,20 @@ namespace TileEngine
                 if (currentFrame == frameCount)
                 {
                     currentFrame = 0;
+                    switch (this.animate)
+                    {
+                        case Animate.IDLE:
+                            currentFrame = 0;
+                            this.animate = Animate.IDLE;
+                            break;
+                        case Animate.MOVING:
+                            currentFrame = 2;
+                            this.animate = Animate.MOVING;
+                            break;
+                        default:
+                            currentFrame = 0;
+                            break;
+                    }
                     // If we are not looping deactivate the animation
                     if (Looping == false)
                         Active = false;
@@ -118,6 +149,7 @@ namespace TileEngine
             (int)(FrameWidth * scale),
             (int)(FrameHeight * scale));
         }
+
         // Draw the Animation Strip
         public void Draw(SpriteBatch spriteBatch)
         {

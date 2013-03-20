@@ -16,11 +16,13 @@ namespace TileEngine
     {
         //Current movement speeds for player
         public Vector2 Movement;
+
         //current offset for centering map
         public Vector2 offset;
 
         // Animation representing the player
         public Animation PlayerAnimation;
+
         public Animation WalkAnimation;
 
         // State of the player
@@ -56,6 +58,9 @@ namespace TileEngine
         // The score for the current level
         private int _levelScore;
 
+        Texture2D spriteStrip;
+        Vector2 position1;
+
         public int LevelScore
         {
             get { return _levelScore; }
@@ -87,37 +92,42 @@ namespace TileEngine
             Position = position;
             //player Animation initialize
             PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, true);
-            WalkAnimation.Initialize(spriteStrip, position, 64, 128, 3, 200, Color.White, 1.0f, true);
             // Set the player to be active
             Active = true;
         }
 
-        public  void Update(GameTime gameTime, Map map)
+        public void Update(GameTime gameTime, Map map)
         {
-            
             // Vector2 Position = Vector2.Zero;
             PlayerAnimation.Position = Position;
-            PlayerAnimation.Update(gameTime);
+
+            //PlayerAnimation.Update(gameTime);
+
             base.Update(gameTime);
-           
+            bool skip = false;
             //Reset movement to still
             Movement.X = 0;
-            
+
             // Trying to move Left or Right
             if (Keyboard.GetState().IsKeyDown(Keys.Left))
             {
                 Movement.X = -5;
-            }else if (Keyboard.GetState().IsKeyDown(Keys.Right))
+            }
+            else if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
-                PlayerAnimation.sourceRect = new Rectangle(2 * PlayerAnimation.FrameWidth, 0, PlayerAnimation.FrameWidth, PlayerAnimation.FrameHeight);
+                PlayerAnimation.animate = Animation.Animate.MOVING;
+                //   PlayerAnimation.Update(gameTime);
+                skip = true;
+                //  WalkAnimation.Update(gameTime);
+                // PlayerAnimation.sourceRect = new Rectangle(2 * PlayerAnimation.FrameWidth, 0, PlayerAnimation.FrameWidth, PlayerAnimation.FrameHeight);
                 //PlayerAnimation.currentFrame = 2;
                 //for (int i = 0; i < 2; i++)
-                 //PlayerAnimation.currentFrame++;
-               
+                //PlayerAnimation.currentFrame++;
+
                 Movement.X = 5;
             }
             //Keeping track of jumping/falling speed
-            if (Keyboard.GetState().IsKeyDown(Keys.Up)&&Position.Y==372)
+            if (Keyboard.GetState().IsKeyDown(Keys.Up) && Position.Y == 372)
             {
                 Movement.Y += -20;
             }
@@ -127,7 +137,8 @@ namespace TileEngine
             if (Position.Y + Movement.Y < 0)//ceiling
             {
                 Position = new Vector2(Position.X, 0);
-            }else if (Position.Y + Movement.Y > 372)//floor
+            }
+            else if (Position.Y + Movement.Y > 372)//floor
             {
                 Position = new Vector2(Position.X, 372);
                 Movement.Y = 0;
@@ -136,13 +147,14 @@ namespace TileEngine
             if (Position.X + Movement.X > 500)
             {
                 offset.X += Position.X + Movement.X - 500;
-                Position = new Vector2(500, Position.Y+Movement.Y);
-
-            }else if(Position.X+Movement.X<100&&offset.X>0)
+                Position = new Vector2(500, Position.Y + Movement.Y);
+            }
+            else if (Position.X + Movement.X < 100 && offset.X > 0)
             {
                 offset.X += Position.X + Movement.X - 100;
                 Position = new Vector2(100, Position.Y + Movement.Y);
-            }else
+            }
+            else
             {
                 Position += Movement;
             }
@@ -150,7 +162,11 @@ namespace TileEngine
             {
                 Position = new Vector2(0, Position.Y);
             }
-            map.Update(gameTime,offset);
+            // PlayerAnimation.currentFrame = 0;
+            if (!skip)
+                PlayerAnimation.animate = Animation.Animate.IDLE;
+            PlayerAnimation.Update(gameTime);
+            map.Update(gameTime, offset);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
