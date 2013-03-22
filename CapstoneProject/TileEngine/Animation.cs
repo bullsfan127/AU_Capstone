@@ -14,10 +14,13 @@ namespace TileEngine
 {
     public class Animation
     {
+        // Enum for Animation states
         public enum Animate { IDLE, RMOVING, LMOVING };
 
+        // Hold the current state of the Animation
         public Animate state;
 
+        // Holds the last state of the animation
         private Animate lastState;
 
         // The image representing the collection of images used for animation
@@ -62,6 +65,19 @@ namespace TileEngine
         // Width of a given frame
         public Vector2 Position;
 
+        /// <summary>
+        /// Initializes the Animation code
+        /// </summary>
+        /// <param name="texture"></param>
+        /// <param name="position"></param>
+        /// <param name="frameWidth"></param>
+        /// <param name="frameHeight"></param>
+        /// <param name="frameCount"></param>
+        /// <param name="frametime"></param>
+        /// <param name="color"></param>
+        /// <param name="scale"></param>
+        /// <param name="looping"></param>
+        /// <param name="animation"></param>
         public void Initialize(Texture2D texture, Vector2 position,
         int frameWidth, int frameHeight, int frameCount,
         int frametime, Color color, float scale, bool looping, Animate animation = Animate.IDLE)
@@ -80,6 +96,7 @@ namespace TileEngine
 
             // Set the time to zero
             elapsedTime = 0;
+
             switch (animation)
             {
                 case Animate.IDLE:
@@ -111,7 +128,6 @@ namespace TileEngine
 
             if (this.state != lastState)
             {
-
                 elapsedTime = 0;
 
                 switch (this.state)

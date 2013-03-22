@@ -23,8 +23,6 @@ namespace TileEngine
         // Animation representing the player
         public Animation PlayerAnimation;
 
-        public Animation WalkAnimation;
-
         // State of the player
         public bool Active;
 
@@ -76,14 +74,21 @@ namespace TileEngine
             set { _totalScore = value; }
         }
 
+        /// <summary>
+        /// Default constructor for player
+        /// </summary>
         public Player()
         {
         }
 
+        /// <summary>
+        /// Initializes the player
+        /// </summary>
+        /// <param name="spriteStrip"></param>
+        /// <param name="position"></param>
         public void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             PlayerAnimation = new Animation();
-            WalkAnimation = new Animation();
 
             // Set the player's health to the maximum
             _health = this._maxHealth;
@@ -96,6 +101,11 @@ namespace TileEngine
             Active = true;
         }
 
+        /// <summary>
+        /// Update the player
+        /// </summary>
+        /// <param name="gameTime"></param>
+        /// <param name="map"></param>
         public void Update(GameTime gameTime, Map map)
         {
             // Vector2 Position = Vector2.Zero;
@@ -165,6 +175,11 @@ namespace TileEngine
             map.Update(gameTime, offset);
         }
 
+        /// <summary>
+        /// Draw the player
+        /// </summary>
+        /// <param name="spriteBatch"></param>
+        /// <param name="gameTime"></param>
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             //going to need to check whether the
@@ -173,6 +188,10 @@ namespace TileEngine
             base.Draw(spriteBatch, gameTime);
         }
 
+        /// <summary>
+        /// Change the health of the player
+        /// </summary>
+        /// <param name="change"></param>
         public void changeHealth(int change)
         {
             // Add/subtract the change to the current health
@@ -189,6 +208,10 @@ namespace TileEngine
             }
         }
 
+        /// <summary>
+        /// Change weapon
+        /// </summary>
+        /// <param name="weapon"></param>
         public void changeWeapon(int weapon)
         {
             // TODO - Do we need to update the graphic here too
@@ -196,34 +219,56 @@ namespace TileEngine
             this._weapon = weapon;
         }
 
+        /// <summary>
+        /// INcreases the score
+        /// </summary>
+        /// <param name="amount"></param>
         public void increaseScore(int amount)
         {
             // Add the amount to the level score
             this._levelScore += amount;
         }
-
+        
+        /// <summary>
+        /// Add level to total, then set level score to 0
+        /// </summary>
         public void NextLevelScore()
         {
-            // Add level to total, then set level to 0
             this._totalScore += this._levelScore;
             this._levelScore = 0;
         }
 
+        /// <summary>
+        /// Get the current level score
+        /// </summary>
+        /// <returns></returns>
         public int getLevelScore()
         {
             return this._levelScore;
         }
 
+        /// <summary>
+        /// Get the Total Score
+        /// </summary>
+        /// <returns></returns>
         public int getTotalScore()
         {
             return this._totalScore;
         }
 
+        /// <summary>
+        /// Get the current health
+        /// </summary>
+        /// <returns></returns>
         public int getHealth()
         {
             return this._health;
         }
 
+        /// <summary>
+        /// Get the  current weapon
+        /// </summary>
+        /// <returns></returns>
         public int getWeapon()
         {
             return this._weapon;
