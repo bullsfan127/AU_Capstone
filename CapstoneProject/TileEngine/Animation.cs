@@ -14,9 +14,11 @@ namespace TileEngine
 {
     public class Animation
     {
-        public enum Animate { IDLE, MOVING };
+        public enum Animate { IDLE, RMOVING, LMOVING };
 
-        public Animate animate;
+        public Animate state;
+
+        private Animate lastState;
 
         // The image representing the collection of images used for animation
         Texture2D spriteStrip;
@@ -82,11 +84,15 @@ namespace TileEngine
             {
                 case Animate.IDLE:
                     currentFrame = 0;
-                    this.animate = Animate.IDLE;
+                    this.state = Animate.IDLE;
                     break;
-                case Animate.MOVING:
+                case Animate.RMOVING:
                     currentFrame = 2;
-                    this.animate = Animate.MOVING;
+                    this.state = Animate.RMOVING;
+                    break;
+                case Animate.LMOVING:
+                    currentFrame = 5;
+                    this.state = Animate.LMOVING;
                     break;
                 default:
                     currentFrame = 0;
@@ -103,41 +109,75 @@ namespace TileEngine
             if (Active == false)
                 return;
 
+            if (this.state != lastState)
+            {
+
+                elapsedTime = 0;
+
+                switch (this.state)
+                {
+                    case Animate.IDLE:
+                        currentFrame = 0;
+                        frameCount = 2;
+                        this.state = Animate.IDLE;
+                        break;
+                    case Animate.RMOVING:
+                        currentFrame = 2;
+                        frameCount = 5;
+                        this.state = Animate.RMOVING;
+                        break;
+                    case Animate.LMOVING:
+                        currentFrame = 5;
+                        frameCount = 8;
+                        this.state = Animate.LMOVING;
+                        break;
+                    default:
+                        currentFrame = 0;
+                        break;
+                }
+            }
             // Update the elapsed time
             elapsedTime += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
-
             // If the elapsed time is larger than the frame time
             // we need to switch frames
+            
             if (elapsedTime > frameTime)
             {
                 // Move to the next frame
                 currentFrame++;
 
+                elapsedTime = 0;
+
                 // If the currentFrame is equal to frameCount reset currentFrame to zero
                 if (currentFrame == frameCount)
                 {
-                    currentFrame = 0;
-                    switch (this.animate)
+                    switch (this.state)
                     {
                         case Animate.IDLE:
                             currentFrame = 0;
-                            this.animate = Animate.IDLE;
+                            frameCount = 2;
+                            this.state = Animate.IDLE;
                             break;
-                        case Animate.MOVING:
+                        case Animate.RMOVING:
                             currentFrame = 2;
-                            this.animate = Animate.MOVING;
+                            frameCount = 5;
+                            this.state = Animate.RMOVING;
+                            break;
+                        case Animate.LMOVING:
+                            currentFrame = 5;
+                            frameCount = 8;
+                            this.state = Animate.LMOVING;
                             break;
                         default:
                             currentFrame = 0;
                             break;
                     }
+
                     // If we are not looping deactivate the animation
                     if (Looping == false)
                         Active = false;
                 }
 
-                // Reset the elapsed time to zero
-                elapsedTime = 0;
             }
 
             // Grab the correct frame in the image strip by multiplying the currentFrame index by the frame width
@@ -148,6 +188,8 @@ namespace TileEngine
             (int)Position.Y,
             (int)(FrameWidth * scale),
             (int)(FrameHeight * scale));
+
+            lastState = this.state;
         }
 
         // Draw the Animation Strip

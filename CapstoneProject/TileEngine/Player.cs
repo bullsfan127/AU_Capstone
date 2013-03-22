@@ -104,33 +104,31 @@ namespace TileEngine
             //PlayerAnimation.Update(gameTime);
 
             base.Update(gameTime);
-            bool skip = false;
+           
             //Reset movement to still
             Movement.X = 0;
+
+            PlayerAnimation.state = Animation.Animate.IDLE;
 
             // Trying to move Left or Right
             if (Keyboard.GetState().IsKeyDown(Keys.Left))
             {
+                PlayerAnimation.state = Animation.Animate.LMOVING;
                 Movement.X = -5;
             }
+
             else if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
-                PlayerAnimation.animate = Animation.Animate.MOVING;
-                //   PlayerAnimation.Update(gameTime);
-                skip = true;
-                //  WalkAnimation.Update(gameTime);
-                // PlayerAnimation.sourceRect = new Rectangle(2 * PlayerAnimation.FrameWidth, 0, PlayerAnimation.FrameWidth, PlayerAnimation.FrameHeight);
-                //PlayerAnimation.currentFrame = 2;
-                //for (int i = 0; i < 2; i++)
-                //PlayerAnimation.currentFrame++;
-
+                PlayerAnimation.state = Animation.Animate.RMOVING;
                 Movement.X = 5;
             }
+
             //Keeping track of jumping/falling speed
             if (Keyboard.GetState().IsKeyDown(Keys.Up) && Position.Y == 372)
             {
                 Movement.Y += -20;
             }
+
             Movement.Y += 1;
 
             //establish ceiling and floor
@@ -162,9 +160,7 @@ namespace TileEngine
             {
                 Position = new Vector2(0, Position.Y);
             }
-            // PlayerAnimation.currentFrame = 0;
-            if (!skip)
-                PlayerAnimation.animate = Animation.Animate.IDLE;
+
             PlayerAnimation.Update(gameTime);
             map.Update(gameTime, offset);
         }
