@@ -26,6 +26,15 @@ namespace TileEngine
         // State of the player
         public bool Active;
 
+        // Does player have armor
+        private bool _hasArmor;
+
+        public bool HasArmor
+        {
+            get { return _hasArmor; }
+            set { _hasArmor = value; }
+        }
+
         // Current health of the player
         private int _health;
 
@@ -55,9 +64,6 @@ namespace TileEngine
 
         // The score for the current level
         private int _levelScore;
-
-        Texture2D spriteStrip;
-        Vector2 position1;
 
         public int LevelScore
         {
@@ -114,7 +120,7 @@ namespace TileEngine
             //PlayerAnimation.Update(gameTime);
 
             base.Update(gameTime);
-           
+
             //Reset movement to still
             Movement.X = 0;
 
@@ -194,18 +200,31 @@ namespace TileEngine
         /// <param name="change"></param>
         public void changeHealth(int change)
         {
-            // Add/subtract the change to the current health
-            this._health += change;
-
-            // More than max? Set to max
-            if (this._health > this._maxHealth)
+            // has armor and being hit
+            if (this._hasArmor && change < 0)
             {
-                this._health = this._maxHealth;
-            } // Less than 0? Set to 0.
-            else if (this._health < 0)
-            {
-                this._health = 0;
+                this._hasArmor = false;
             }
+            else
+            {
+                // Add/subtract the change to the current health
+                this._health += change;
+
+                // More than max? Set to max
+                if (this._health > this._maxHealth)
+                {
+                    this._health = this._maxHealth;
+                } // Less than 0? Set to 0.
+                else if (this._health < 0)
+                {
+                    this._health = 0;
+                }
+            }
+        }
+
+        public void addArmor()
+        {
+            this._hasArmor = true;
         }
 
         /// <summary>
@@ -228,7 +247,7 @@ namespace TileEngine
             // Add the amount to the level score
             this._levelScore += amount;
         }
-        
+
         /// <summary>
         /// Add level to total, then set level score to 0
         /// </summary>
