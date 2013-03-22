@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Avatar.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Animation.cs" />

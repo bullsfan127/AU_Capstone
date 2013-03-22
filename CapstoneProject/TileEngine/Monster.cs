@@ -12,25 +12,22 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TileEngine
 {
-    class Monster : Avatar
+    internal class Monster : Avatar
     {
         // Animation representing the monster
         public Animation MonsterAnimation;
-
-        // Position of the monster
-        public Vector2 Position;
 
         // State of the monster
         public bool Active;
 
         // Current health of the monster
         private int _health;
+
         public int Health
         {
             get { return _health; }
             set { _health = value; }
         }
-
 
         public void Initialize(Animation animation, Vector2 position)
         {
@@ -43,13 +40,13 @@ namespace TileEngine
             Active = true;
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             MonsterAnimation.Position = Position;
             MonsterAnimation.Update(gameTime);
         }
 
-        public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime)
+        public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             MonsterAnimation.Draw(spriteBatch);
         }
@@ -69,6 +66,5 @@ namespace TileEngine
         {
             return this._health;
         }
-
     }
 }
