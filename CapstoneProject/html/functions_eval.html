@@ -78,6 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li class="current"><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
     </ul>
@@ -102,7 +103,7 @@ $(document).ready(function(){initNavTree('functions_eval.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -119,8 +120,17 @@ $(document).ready(function(){initNavTree('functions_eval.html','');});
 <li>HOVER
 : <a class="el" href="class_main_menu_1_1_main_menu.html#abb6d87950b2b1629d10b8ac3f02516c6ada95feece334f0612031adf21d057ab9">MainMenu.MainMenu</a>
 </li>
+<li>IDLE
+: <a class="el" href="class_tile_engine_1_1_animation.html#a0d36946dfbcde89c1f0d4bc071a5fc1eaa5daf7f2ebbba4975d61dab1c40188c7">TileEngine.Animation</a>
+</li>
 <li>JUST_RELEASED
 : <a class="el" href="class_main_menu_1_1_main_menu.html#abb6d87950b2b1629d10b8ac3f02516c6a7aebac60d8886879d0f930cfafc6bdfa">MainMenu.MainMenu</a>
+</li>
+<li>LMOVING
+: <a class="el" href="class_tile_engine_1_1_animation.html#a0d36946dfbcde89c1f0d4bc071a5fc1eae38549b4afe4b0e04bcac3d0dd33c1c6">TileEngine.Animation</a>
+</li>
+<li>RMOVING
+: <a class="el" href="class_tile_engine_1_1_animation.html#a0d36946dfbcde89c1f0d4bc071a5fc1eabc15bc8f8fddb1a6e37681cd3b55f785">TileEngine.Animation</a>
 </li>
 <li>UP
 : <a class="el" href="class_main_menu_1_1_main_menu.html#abb6d87950b2b1629d10b8ac3f02516c6afbaedde498cdead4f2780217646e9ba1">MainMenu.MainMenu</a>
@@ -131,7 +141,7 @@ $(document).ready(function(){initNavTree('functions_eval.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Mar 11 2013 21:46:41 for Fat Joe's Nightmare by
+    <li class="footer">Generated on Fri Mar 22 2013 21:04:50 for Fat Joe's Nightmare by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

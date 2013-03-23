@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.3.1">
   <compound refid="class_tile_engine_1_1_animation" kind="class"><name>TileEngine::Animation</name>
-    <member refid="class_tile_engine_1_1_animation_1a77ea919bcf737be01b4d9257515dd854" kind="variable"><name>spriteStrip</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a53779ea1f64986d5e5ccca5c4b47ad1e" kind="variable"><name>scale</name></member>
-    <member refid="class_tile_engine_1_1_animation_1ab7882c24dcf7c1b486cb344363d92ecf" kind="variable"><name>elapsedTime</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a32d97e4504028113317d6acc60f1a081" kind="variable"><name>frameTime</name></member>
-    <member refid="class_tile_engine_1_1_animation_1ad531add720bb986e67662aa05c1c849b" kind="variable"><name>frameCount</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1e" kind="enum"><name>Animate</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eaa5daf7f2ebbba4975d61dab1c40188c7" kind="enumvalue"><name>IDLE</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eabc15bc8f8fddb1a6e37681cd3b55f785" kind="enumvalue"><name>RMOVING</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eae38549b4afe4b0e04bcac3d0dd33c1c6" kind="enumvalue"><name>LMOVING</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a2c0d7ff5887ea0684283d7187dd3f817" kind="variable"><name>state</name></member>
     <member refid="class_tile_engine_1_1_animation_1a4166f07632f8a495522be0bca0552acc" kind="variable"><name>currentFrame</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a5e154eeb0eda32263f8cecb88984a76a" kind="variable"><name>color</name></member>
     <member refid="class_tile_engine_1_1_animation_1ad15d57a585f106536a11ca45a4ef24c0" kind="variable"><name>sourceRect</name></member>
     <member refid="class_tile_engine_1_1_animation_1a5f6214ff26f488b0988d32964294981b" kind="variable"><name>destinationRect</name></member>
     <member refid="class_tile_engine_1_1_animation_1a6144d8d5c904bfd318a0f1891f68d31a" kind="variable"><name>FrameWidth</name></member>
@@ -15,7 +14,14 @@
     <member refid="class_tile_engine_1_1_animation_1a428519a2f385fb1eb29ffa3852c5a505" kind="variable"><name>Active</name></member>
     <member refid="class_tile_engine_1_1_animation_1a22b62fda1e3fdb5cc1d20203b72362cb" kind="variable"><name>Looping</name></member>
     <member refid="class_tile_engine_1_1_animation_1a75d52f1bc2b67d0bc012ad6569bfe006" kind="variable"><name>Position</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a92f73196e610356a0810345fe97b026d" kind="function"><name>Initialize</name></member>
+    <member refid="class_tile_engine_1_1_animation_1abc2687680fb5017f74647e1361289e7b" kind="variable"><name>lastState</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a77ea919bcf737be01b4d9257515dd854" kind="variable"><name>spriteStrip</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a53779ea1f64986d5e5ccca5c4b47ad1e" kind="variable"><name>scale</name></member>
+    <member refid="class_tile_engine_1_1_animation_1ab7882c24dcf7c1b486cb344363d92ecf" kind="variable"><name>elapsedTime</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a32d97e4504028113317d6acc60f1a081" kind="variable"><name>frameTime</name></member>
+    <member refid="class_tile_engine_1_1_animation_1ad531add720bb986e67662aa05c1c849b" kind="variable"><name>frameCount</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a5e154eeb0eda32263f8cecb88984a76a" kind="variable"><name>color</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a7a7907093bd3db85bce93c7f901e1426" kind="function"><name>Initialize</name></member>
     <member refid="class_tile_engine_1_1_animation_1a2614c6eff471aecefade8b906a489eeb" kind="function"><name>Update</name></member>
     <member refid="class_tile_engine_1_1_animation_1ab4dd3a8d57cc8de71f8863ff91238eea" kind="function"><name>Draw</name></member>
   </compound>
@@ -97,6 +103,15 @@
     <member refid="class_capstone_project_1_1_game1_1a531433f38f741ed11acb4750bf92d70d" kind="function"><name>Update</name></member>
     <member refid="class_capstone_project_1_1_game1_1a8f7e138af4e270d66e5a8ba1e8137205" kind="function"><name>Draw</name></member>
   </compound>
+  <compound refid="class_tile_engine_1_1_item" kind="class"><name>TileEngine::Item</name>
+    <member refid="class_tile_engine_1_1_item_1a327560f673cd2cd085f60d10dcee0a9e" kind="variable"><name>ItemAnimation</name></member>
+    <member refid="class_tile_engine_1_1_item_1ae34109abc7dbd43b5182bfc16208a844" kind="variable"><name>Active</name></member>
+    <member refid="class_tile_engine_1_1_item_1af758c77c4938c0aea63ad41397eac0e2" kind="function"><name>Item</name></member>
+    <member refid="class_tile_engine_1_1_item_1a16512fae01e1bfb589811d4f05e4f1ca" kind="function"><name>Initialize</name></member>
+    <member refid="class_tile_engine_1_1_item_1a69ec70858dafdad165adb7cbcf55ceb7" kind="function"><name>Update</name></member>
+    <member refid="class_tile_engine_1_1_item_1a8371497aa849c48c146ffe16d10c8e61" kind="function"><name>Draw</name></member>
+    <member refid="class_tile_engine_1_1_item_1a15a97d0bc2d0733ed3ead1cc5dd6bc86" kind="function"><name>doAction</name></member>
+  </compound>
   <compound refid="class_tile_engine_1_1_layer_3_01_t_01_4" kind="class"><name>TileEngine::Layer&lt; T &gt;</name>
     <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1a0330964c20aef27f056ce6fd6a956d28" kind="variable"><name>layer</name></member>
     <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1ab2027713dabf92056a4679b2b011deb4" kind="function"><name>Layer</name></member>
@@ -142,6 +157,7 @@
     <member refid="class_main_menu_1_1_main_menu_1a8e802f6f81c13c549b3d703357edc53a" kind="function"><name>take_action_on_button</name></member>
   </compound>
   <compound refid="class_tile_engine_1_1_map" kind="class"><name>TileEngine::Map</name>
+    <member refid="class_tile_engine_1_1_map_1ab1cce5021bd174e153b9c48dd4e50ed9" kind="variable"><name>offset</name></member>
     <member refid="class_tile_engine_1_1_map_1ac89b385f353c85dedd77da2e22242c10" kind="variable"><name>_Ground</name></member>
     <member refid="class_tile_engine_1_1_map_1ac7e9b384293ba29601a50899006eae69" kind="variable"><name>serializer</name></member>
     <member refid="class_tile_engine_1_1_map_1a983590284bae057f4580eabc69844574" kind="variable"><name>_Mask</name></member>
@@ -154,7 +170,7 @@
     <member refid="class_tile_engine_1_1_map_1a8cc2e7e3754056565eb5cb9250d62ceb" kind="property"><name>Player</name></member>
     <member refid="class_tile_engine_1_1_map_1a4eb00a552276ff41866e9ee93bab07b5" kind="function"><name>Map</name></member>
     <member refid="class_tile_engine_1_1_map_1aa4df62a4695b5db2cedfd64ddbc91db2" kind="function"><name>Map</name></member>
-    <member refid="class_tile_engine_1_1_map_1a12ef500e268d17426c0d8514c6dffdb8" kind="function"><name>Update</name></member>
+    <member refid="class_tile_engine_1_1_map_1ab2ee673668b9dd3a159c7390d58670e3" kind="function"><name>Update</name></member>
     <member refid="class_tile_engine_1_1_map_1ac3a75d6adf05439945a1630e8dca078c" kind="function"><name>Draw</name></member>
     <member refid="class_tile_engine_1_1_map_1a513c64dbda5b20aa08df5c74c4c93a90" kind="function"><name>SwapGoundLayer</name></member>
     <member refid="class_tile_engine_1_1_map_1ae59f7b88d73a061a0b02587e63588b9d" kind="function"><name>SwapMaskLayer</name></member>
@@ -164,24 +180,27 @@
   </compound>
   <compound refid="class_tile_engine_1_1_monster" kind="class"><name>TileEngine::Monster</name>
     <member refid="class_tile_engine_1_1_monster_1a4a7445ca8fcaebf69c34678716110eeb" kind="variable"><name>MonsterAnimation</name></member>
-    <member refid="class_tile_engine_1_1_monster_1a793d2d9816fc7793bce1c106b0623db0" kind="variable"><name>Position</name></member>
     <member refid="class_tile_engine_1_1_monster_1a02284f88a72e281f261b544f744fdfab" kind="variable"><name>Active</name></member>
     <member refid="class_tile_engine_1_1_monster_1aa86c5bb86f79d337f8fde8aa53125b89" kind="variable"><name>_health</name></member>
     <member refid="class_tile_engine_1_1_monster_1aab1854412a7509be407e2487ae02eea5" kind="property"><name>Health</name></member>
     <member refid="class_tile_engine_1_1_monster_1a3e708e301043038c39cb5a392f2a2a6c" kind="function"><name>Initialize</name></member>
-    <member refid="class_tile_engine_1_1_monster_1a8fe35134525a9abb6c06bf69348de5c7" kind="function"><name>Update</name></member>
-    <member refid="class_tile_engine_1_1_monster_1a59a438ca1791da6c25a5e849f109c0ed" kind="function"><name>Draw</name></member>
+    <member refid="class_tile_engine_1_1_monster_1a40941506fd6b0161072946039311b9c7" kind="function"><name>Update</name></member>
+    <member refid="class_tile_engine_1_1_monster_1a34a816dc4b4dc152f209ac3c882e41d9" kind="function"><name>Draw</name></member>
     <member refid="class_tile_engine_1_1_monster_1aea7a59b9ba54ddb2571733381955274b" kind="function"><name>changeHealth</name></member>
     <member refid="class_tile_engine_1_1_monster_1ae68b6e0b8425e7ebc5931316b5d17221" kind="function"><name>getHealth</name></member>
   </compound>
   <compound refid="class_tile_engine_1_1_player" kind="class"><name>TileEngine::Player</name>
+    <member refid="class_tile_engine_1_1_player_1a56c48786ea882059c7ae4b6b44cd50df" kind="variable"><name>Movement</name></member>
+    <member refid="class_tile_engine_1_1_player_1aafa10e2703dad7aec3884558b54ede6e" kind="variable"><name>offset</name></member>
     <member refid="class_tile_engine_1_1_player_1af222a6eda4e9d90845bd2e6002cbcc90" kind="variable"><name>PlayerAnimation</name></member>
     <member refid="class_tile_engine_1_1_player_1a6ddc39cda0fe327af82fa28defcbba29" kind="variable"><name>Active</name></member>
+    <member refid="class_tile_engine_1_1_player_1a5888c14557d1a11f6e69d83e3a420d0c" kind="variable"><name>_hasArmor</name></member>
     <member refid="class_tile_engine_1_1_player_1a53fce7d891ef346ab4b5a30b505906bf" kind="variable"><name>_health</name></member>
     <member refid="class_tile_engine_1_1_player_1a8977df790177606dddeddca7dddbb0c9" kind="variable"><name>_maxHealth</name></member>
     <member refid="class_tile_engine_1_1_player_1a18c97a2f88aea6ea0c20290f52f1b093" kind="variable"><name>_weapon</name></member>
     <member refid="class_tile_engine_1_1_player_1a7ea756c4c19aa367a8bde493641b82cd" kind="variable"><name>_levelScore</name></member>
     <member refid="class_tile_engine_1_1_player_1a257b69029acccdeb28460fe8bc5bad54" kind="variable"><name>_totalScore</name></member>
+    <member refid="class_tile_engine_1_1_player_1a65bb23fbd546a7da8f0eb50d59427cd6" kind="property"><name>HasArmor</name></member>
     <member refid="class_tile_engine_1_1_player_1a5859a9b5810a5078477ca3a2ea47826c" kind="property"><name>Health</name></member>
     <member refid="class_tile_engine_1_1_player_1a1be81bcdf3e53278f55a6f643053ebc6" kind="property"><name>MaxHealth</name></member>
     <member refid="class_tile_engine_1_1_player_1a15aa89534fb0c5c4d0632235f9f56a65" kind="property"><name>Weapon</name></member>
@@ -189,9 +208,10 @@
     <member refid="class_tile_engine_1_1_player_1a7382134b6b274ba1bd4992dbbad52a86" kind="property"><name>TotalScore</name></member>
     <member refid="class_tile_engine_1_1_player_1ad3ab4da4b2d965b5c3cea300fe9304ae" kind="function"><name>Player</name></member>
     <member refid="class_tile_engine_1_1_player_1a40932b9bf69a88c42467a2fb2a8e5255" kind="function"><name>Initialize</name></member>
-    <member refid="class_tile_engine_1_1_player_1add7b752fcd9f9cb94302c577f8088528" kind="function"><name>Update</name></member>
+    <member refid="class_tile_engine_1_1_player_1a29b6d833f145f5ce9fb6e006bf170326" kind="function"><name>Update</name></member>
     <member refid="class_tile_engine_1_1_player_1a3150892fc641203e9bfee6b21a202ce5" kind="function"><name>Draw</name></member>
     <member refid="class_tile_engine_1_1_player_1a1f2e40accd441a1bbd6e213af5fb5314" kind="function"><name>changeHealth</name></member>
+    <member refid="class_tile_engine_1_1_player_1a59476973acb572f4e4e807eb394e094b" kind="function"><name>addArmor</name></member>
     <member refid="class_tile_engine_1_1_player_1abf7f40e5c53bad024c041f21e0a754f2" kind="function"><name>changeWeapon</name></member>
     <member refid="class_tile_engine_1_1_player_1aec85e347f9cf381981efb1f9590741df" kind="function"><name>increaseScore</name></member>
     <member refid="class_tile_engine_1_1_player_1ae8bca588776c05e074fb753eeb7e86c9" kind="function"><name>NextLevelScore</name></member>
@@ -357,6 +377,8 @@
   <compound refid="_drawable_layer_8cs" kind="file"><name>DrawableLayer.cs</name>
   </compound>
   <compound refid="_drawable_8cs" kind="file"><name>Drawable.cs</name>
+  </compound>
+  <compound refid="_item_8cs" kind="file"><name>Item.cs</name>
   </compound>
   <compound refid="_layer_8cs" kind="file"><name>Layer.cs</name>
   </compound>

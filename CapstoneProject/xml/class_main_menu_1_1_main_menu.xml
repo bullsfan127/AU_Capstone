@@ -556,24 +556,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="20">
+      <node id="26">
         <label>Microsoft::Xna::Framework::Game</label>
       </node>
-      <node id="19">
+      <node id="25">
         <label>MainMenu.MainMenu</label>
         <link refid="class_main_menu_1_1_main_menu"/>
-        <childnode refid="20" relation="public-inheritance">
+        <childnode refid="26" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="22">
+      <node id="28">
         <label>Microsoft::Xna::Framework::Game</label>
       </node>
-      <node id="21">
+      <node id="27">
         <label>MainMenu.MainMenu</label>
         <link refid="class_main_menu_1_1_main_menu"/>
-        <childnode refid="22" relation="public-inheritance">
+        <childnode refid="28" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

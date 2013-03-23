@@ -8,6 +8,7 @@
     <innerfile refid="_animation_8cs">Animation.cs</innerfile>
     <innerfile refid="_avatar_8cs">Avatar.cs</innerfile>
     <innerfile refid="_drawable_layer_8cs">DrawableLayer.cs</innerfile>
+    <innerfile refid="_item_8cs">Item.cs</innerfile>
     <innerfile refid="_layer_8cs">Layer.cs</innerfile>
     <innerfile refid="_map_8cs">Map.cs</innerfile>
     <innerfile refid="_monster_8cs">Monster.cs</innerfile>

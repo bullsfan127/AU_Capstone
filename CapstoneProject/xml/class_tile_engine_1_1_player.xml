@@ -4,6 +4,32 @@
     <compoundname>TileEngine::Player</compoundname>
     <basecompoundref refid="class_tile_engine_1_1_avatar" prot="public" virt="non-virtual">TileEngine.Avatar</basecompoundref>
       <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_player_1a56c48786ea882059c7ae4b6b44cd50df" prot="public" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.Player.Movement</definition>
+        <argsstring></argsstring>
+        <name>Movement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_player_1aafa10e2703dad7aec3884558b54ede6e" prot="public" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.Player.offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="class_tile_engine_1_1_player_1af222a6eda4e9d90845bd2e6002cbcc90" prot="public" static="no" mutable="no">
         <type><ref refid="class_tile_engine_1_1_animation" kindref="compound">Animation</ref></type>
         <definition>Animation TileEngine.Player.PlayerAnimation</definition>
@@ -15,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="18" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_tile_engine_1_1_player_1a6ddc39cda0fe327af82fa28defcbba29" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -28,10 +54,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="21" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="27" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_player_1a5888c14557d1a11f6e69d83e3a420d0c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TileEngine.Player._hasArmor</definition>
+        <argsstring></argsstring>
+        <name>_hasArmor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="class_tile_engine_1_1_player_1a53fce7d891ef346ab4b5a30b505906bf" prot="private" static="no" mutable="no">
         <type>int</type>
         <definition>int TileEngine.Player._health</definition>
@@ -43,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="24" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="39" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_tile_engine_1_1_player_1a8977df790177606dddeddca7dddbb0c9" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -57,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="33" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="33" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="48" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_tile_engine_1_1_player_1a18c97a2f88aea6ea0c20290f52f1b093" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -70,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="42" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="42" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="57" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="57" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_tile_engine_1_1_player_1a7ea756c4c19aa367a8bde493641b82cd" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -83,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="51" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="51" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="66" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="66" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_tile_engine_1_1_player_1a257b69029acccdeb28460fe8bc5bad54" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -97,10 +136,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="60" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="60" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="75" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="75" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
+      <memberdef kind="property" id="class_tile_engine_1_1_player_1a65bb23fbd546a7da8f0eb50d59427cd6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool TileEngine.Player.HasArmor</definition>
+        <argsstring></argsstring>
+        <name>HasArmor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="property" id="class_tile_engine_1_1_player_1a5859a9b5810a5078477ca3a2ea47826c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>int</type>
         <definition>int TileEngine.Player.Health</definition>
@@ -112,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="27" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_tile_engine_1_1_player_1a1be81bcdf3e53278f55a6f643053ebc6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>int</type>
@@ -125,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="39" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="36" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="54" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_tile_engine_1_1_player_1a15aa89534fb0c5c4d0632235f9f56a65" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>int</type>
@@ -138,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="48" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="45" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="63" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_tile_engine_1_1_player_1ab02f666ed3f5f6bfd3b05a719de41a31" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>int</type>
@@ -151,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="57" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="54" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="72" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_tile_engine_1_1_player_1a7382134b6b274ba1bd4992dbbad52a86" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>int</type>
@@ -164,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="66" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="63" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="81" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="78" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -174,12 +226,12 @@
         <argsstring>()</argsstring>
         <name>Player</name>
         <briefdescription>
-        </briefdescription>
+<para>Default constructor for player </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="69" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="68" bodyend="70"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="87" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="86" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_player_1a40932b9bf69a88c42467a2fb2a8e5255" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -195,30 +247,63 @@
           <declname>position</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Initializes the player </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spriteStrip</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="73" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="72" bodyend="85"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="96" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="95" bodyend="108"/>
       </memberdef>
-      <memberdef kind="function" id="class_tile_engine_1_1_player_1add7b752fcd9f9cb94302c577f8088528" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
-        <type>override void</type>
-        <definition>override void TileEngine.Player.Update</definition>
-        <argsstring>(GameTime gameTime)</argsstring>
+      <memberdef kind="function" id="class_tile_engine_1_1_player_1a29b6d833f145f5ce9fb6e006bf170326" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Player.Update</definition>
+        <argsstring>(GameTime gameTime, Map map)</argsstring>
         <name>Update</name>
-        <reimplements refid="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059">Update</reimplements>
         <param>
           <type>GameTime</type>
           <declname>gameTime</declname>
         </param>
+        <param>
+          <type><ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
         <briefdescription>
-        </briefdescription>
+<para>Update the player </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="88" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="87" bodyend="93"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="116" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="115" bodyend="182"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_player_1a3150892fc641203e9bfee6b21a202ce5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -235,12 +320,27 @@
           <declname>gameTime</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Draw the player </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spriteBatch</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="96" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="95" bodyend="101"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="190" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="189" bodyend="195"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_player_1a1f2e40accd441a1bbd6e213af5fb5314" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -252,12 +352,33 @@
           <declname>change</declname>
         </param>
         <briefdescription>
+<para>Change the health of the player </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>change</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="202" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="201" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_player_1a59476973acb572f4e4e807eb394e094b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Player.addArmor</definition>
+        <argsstring>()</argsstring>
+        <name>addArmor</name>
+        <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="104" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="103" bodyend="117"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="226" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="225" bodyend="228"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_player_1abf7f40e5c53bad024c041f21e0a754f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -269,12 +390,20 @@
           <declname>weapon</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Change weapon </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weapon</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="120" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="119" bodyend="124"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="235" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="234" bodyend="239"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_player_1aec85e347f9cf381981efb1f9590741df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -286,12 +415,20 @@
           <declname>amount</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>INcreases the score </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="127" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="126" bodyend="130"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="246" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="245" bodyend="249"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_player_1ae8bca588776c05e074fb753eeb7e86c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -299,12 +436,12 @@
         <argsstring>()</argsstring>
         <name>NextLevelScore</name>
         <briefdescription>
-        </briefdescription>
+<para>Add level to total, then set level score to 0 </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="133" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="132" bodyend="137"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="255" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="254" bodyend="258"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_player_1a343a9468c20e6c140ef23653cd70b942" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -312,12 +449,13 @@
         <argsstring>()</argsstring>
         <name>getLevelScore</name>
         <briefdescription>
-        </briefdescription>
+<para>Get the current level score </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="140" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="139" bodyend="142"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="265" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="264" bodyend="267"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_player_1a927b46fb75a886e2429ff853261e71a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -325,12 +463,13 @@
         <argsstring>()</argsstring>
         <name>getTotalScore</name>
         <briefdescription>
-        </briefdescription>
+<para>Get the Total Score </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="145" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="144" bodyend="147"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="274" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="273" bodyend="276"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_player_1a7adaf32e779eefa0bb592412c97e2f18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -338,12 +477,13 @@
         <argsstring>()</argsstring>
         <name>getHealth</name>
         <briefdescription>
-        </briefdescription>
+<para>Get the current health </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="150" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="149" bodyend="152"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="283" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="282" bodyend="285"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_player_1a1dad5c87be9ebe2864f0726eb2d65d21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -351,12 +491,13 @@
         <argsstring>()</argsstring>
         <name>getWeapon</name>
         <briefdescription>
-        </briefdescription>
+<para>Get the current weapon </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="155" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="154" bodyend="157"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="292" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="291" bodyend="294"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -364,44 +505,46 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="31">
+      <node id="37">
         <label>Avatar</label>
         <link refid="class_tile_engine_1_1_avatar"/>
       </node>
-      <node id="30">
+      <node id="36">
         <label>TileEngine.Player</label>
         <link refid="class_tile_engine_1_1_player"/>
-        <childnode refid="31" relation="public-inheritance">
+        <childnode refid="37" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="34">
+      <node id="40">
         <label>TileEngine.Animation</label>
         <link refid="class_tile_engine_1_1_animation"/>
       </node>
-      <node id="33">
+      <node id="39">
         <label>Avatar</label>
         <link refid="class_tile_engine_1_1_avatar"/>
       </node>
-      <node id="32">
+      <node id="38">
         <label>TileEngine.Player</label>
         <link refid="class_tile_engine_1_1_player"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="39" relation="public-inheritance">
         </childnode>
-        <childnode refid="34" relation="usage">
+        <childnode refid="40" relation="usage">
           <edgelabel>PlayerAnimation</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="15" bodyend="158"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player.cs" bodystart="15" bodyend="295"/>
     <listofallmembers>
+      <member refid="class_tile_engine_1_1_player_1a5888c14557d1a11f6e69d83e3a420d0c" prot="private" virt="non-virtual"><scope>TileEngine::Player</scope><name>_hasArmor</name></member>
       <member refid="class_tile_engine_1_1_player_1a53fce7d891ef346ab4b5a30b505906bf" prot="private" virt="non-virtual"><scope>TileEngine::Player</scope><name>_health</name></member>
       <member refid="class_tile_engine_1_1_player_1a7ea756c4c19aa367a8bde493641b82cd" prot="private" virt="non-virtual"><scope>TileEngine::Player</scope><name>_levelScore</name></member>
       <member refid="class_tile_engine_1_1_player_1a8977df790177606dddeddca7dddbb0c9" prot="private" virt="non-virtual"><scope>TileEngine::Player</scope><name>_maxHealth</name></member>
       <member refid="class_tile_engine_1_1_player_1a257b69029acccdeb28460fe8bc5bad54" prot="private" virt="non-virtual"><scope>TileEngine::Player</scope><name>_totalScore</name></member>
       <member refid="class_tile_engine_1_1_player_1a18c97a2f88aea6ea0c20290f52f1b093" prot="private" virt="non-virtual"><scope>TileEngine::Player</scope><name>_weapon</name></member>
       <member refid="class_tile_engine_1_1_player_1a6ddc39cda0fe327af82fa28defcbba29" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>Active</name></member>
+      <member refid="class_tile_engine_1_1_player_1a59476973acb572f4e4e807eb394e094b" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>addArmor</name></member>
       <member refid="class_tile_engine_1_1_avatar_1a7c6118c83ba18eeb197f04412130f3b5" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>Avatar</name></member>
       <member refid="class_tile_engine_1_1_avatar_1a9d97952e8a9e1b347c841cfbe614b60b" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>Avatar</name></member>
       <member refid="class_tile_engine_1_1_player_1a1f2e40accd441a1bbd6e213af5fb5314" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>changeHealth</name></member>
@@ -411,17 +554,21 @@
       <member refid="class_tile_engine_1_1_player_1a343a9468c20e6c140ef23653cd70b942" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>getLevelScore</name></member>
       <member refid="class_tile_engine_1_1_player_1a927b46fb75a886e2429ff853261e71a1" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>getTotalScore</name></member>
       <member refid="class_tile_engine_1_1_player_1a1dad5c87be9ebe2864f0726eb2d65d21" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>getWeapon</name></member>
+      <member refid="class_tile_engine_1_1_player_1a65bb23fbd546a7da8f0eb50d59427cd6" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>HasArmor</name></member>
       <member refid="class_tile_engine_1_1_player_1a5859a9b5810a5078477ca3a2ea47826c" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>Health</name></member>
       <member refid="class_tile_engine_1_1_player_1aec85e347f9cf381981efb1f9590741df" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>increaseScore</name></member>
       <member refid="class_tile_engine_1_1_player_1a40932b9bf69a88c42467a2fb2a8e5255" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>Initialize</name></member>
       <member refid="class_tile_engine_1_1_player_1ab02f666ed3f5f6bfd3b05a719de41a31" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>LevelScore</name></member>
       <member refid="class_tile_engine_1_1_player_1a1be81bcdf3e53278f55a6f643053ebc6" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>MaxHealth</name></member>
+      <member refid="class_tile_engine_1_1_player_1a56c48786ea882059c7ae4b6b44cd50df" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>Movement</name></member>
       <member refid="class_tile_engine_1_1_player_1ae8bca588776c05e074fb753eeb7e86c9" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>NextLevelScore</name></member>
+      <member refid="class_tile_engine_1_1_player_1aafa10e2703dad7aec3884558b54ede6e" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>offset</name></member>
       <member refid="class_tile_engine_1_1_player_1ad3ab4da4b2d965b5c3cea300fe9304ae" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>Player</name></member>
       <member refid="class_tile_engine_1_1_player_1af222a6eda4e9d90845bd2e6002cbcc90" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>PlayerAnimation</name></member>
       <member refid="class_tile_engine_1_1_avatar_1a9c6796fe77c217cfe59d8d1bf96397d1" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>Position</name></member>
       <member refid="class_tile_engine_1_1_player_1a7382134b6b274ba1bd4992dbbad52a86" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>TotalScore</name></member>
-      <member refid="class_tile_engine_1_1_player_1add7b752fcd9f9cb94302c577f8088528" prot="public" virt="virtual"><scope>TileEngine::Player</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_player_1a29b6d833f145f5ce9fb6e006bf170326" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059" prot="public" virt="virtual" ambiguityscope="TileEngine::Avatar."><scope>TileEngine::Player</scope><name>Update</name></member>
       <member refid="class_tile_engine_1_1_player_1a15aa89534fb0c5c4d0632235f9f56a65" prot="public" virt="non-virtual"><scope>TileEngine::Player</scope><name>Weapon</name></member>
     </listofallmembers>
   </compounddef>

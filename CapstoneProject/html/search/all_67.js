@@ -5,7 +5,7 @@ var searchData=
   ['game1_2ecs',['Game1.cs',['../_game1_8cs.html',1,'']]],
   ['gcd',['gcd',['../class_tile_engine_1_1_utility_1_1_tile_math.html#a28bafc78c3291c8e65d6603af562410e',1,'TileEngine::Utility::TileMath']]],
   ['getdepth',['getDepth',['../interface_tile_engine_1_1_interfaces_1_1_drawable.html#a59e47795fcca97cb79dc15a6945d9275',1,'TileEngine.Interfaces.Drawable.getDepth()'],['../class_tile_engine_1_1_tile.html#a1a7950d049cdda64f4d6c8d3ea9c6dd9',1,'TileEngine.Tile.getDepth()']]],
-  ['gethealth',['getHealth',['../class_tile_engine_1_1_monster.html#ae68b6e0b8425e7ebc5931316b5d17221',1,'TileEngine.Monster.getHealth()'],['../class_tile_engine_1_1_player.html#a7adaf32e779eefa0bb592412c97e2f18',1,'TileEngine.Player.getHealth()']]],
+  ['gethealth',['getHealth',['../class_tile_engine_1_1_player.html#a7adaf32e779eefa0bb592412c97e2f18',1,'TileEngine::Player']]],
   ['getitemat',['getItemAt',['../class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html#af6de54987654c082316ef350f02af005',1,'TileEngine.DrawableLayer&lt; T &gt;.getItemAt()'],['../class_tile_engine_1_1_layer_3_01_t_01_4.html#ab7bb577b8cba3afa6615d5ce7e517bcb',1,'TileEngine.Layer&lt; T &gt;.getItemAt()']]],
   ['getlevelscore',['getLevelScore',['../class_tile_engine_1_1_player.html#a343a9468c20e6c140ef23653cd70b942',1,'TileEngine::Player']]],
   ['getorigin',['getOrigin',['../interface_tile_engine_1_1_interfaces_1_1_drawable.html#a7a2b78c94c78d691b33111a145478095',1,'TileEngine.Interfaces.Drawable.getOrigin()'],['../class_tile_engine_1_1_tile.html#a6bd3dcc3dd10b029cd85088658106014',1,'TileEngine.Tile.getOrigin()']]],

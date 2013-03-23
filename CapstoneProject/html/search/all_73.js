@@ -18,6 +18,8 @@ var searchData=
   ['settexture',['setTexture',['../interface_tile_engine_1_1_interfaces_1_1_drawable.html#afb39e791cb98a0f41ed87887887ad31c',1,'TileEngine.Interfaces.Drawable.setTexture()'],['../class_tile_engine_1_1_tile.html#aaf5725a5761dda6ed078ef8825167124',1,'TileEngine.Tile.setTexture()']]],
   ['settint',['setTint',['../interface_tile_engine_1_1_interfaces_1_1_drawable.html#a262ec54bc4e01df1f853d6de50787630',1,'TileEngine.Interfaces.Drawable.setTint()'],['../class_tile_engine_1_1_tile.html#acd94a9cd2f8641284afd91c8ccd60119',1,'TileEngine.Tile.setTint()']]],
   ['setvisibility',['setVisibility',['../class_capstone_project_1_1_f_p_s___counter.html#a2efed39113c7db14ed5b9a867b6412bd',1,'CapstoneProject::FPS_Counter']]],
+  ['sourcerect',['sourceRect',['../class_tile_engine_1_1_animation.html#ad15d57a585f106536a11ca45a4ef24c0',1,'TileEngine::Animation']]],
+  ['state',['state',['../class_tile_engine_1_1_animation.html#a2c0d7ff5887ea0684283d7187dd3f817',1,'TileEngine::Animation']]],
   ['swapfringelayer',['SwapFringeLayer',['../class_tile_engine_1_1_map.html#a7387df79a406ca23119ce40c2fa6f1d9',1,'TileEngine::Map']]],
   ['swapgoundlayer',['SwapGoundLayer',['../class_tile_engine_1_1_map.html#a513c64dbda5b20aa08df5c74c4c93a90',1,'TileEngine::Map']]],
   ['swaplayer',['swapLayer',['../class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html#a6affc21c4de1bd7e35b7790a1ce7bfea',1,'TileEngine::DrawableLayer&lt; T &gt;']]],

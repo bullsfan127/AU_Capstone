@@ -169,12 +169,12 @@
         <argsstring>()</argsstring>
         <name>Game1</name>
         <briefdescription>
-        </briefdescription>
+<para>Constructor for game, initilaizes the graphics device Sets root directory, bufer height and width </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="47" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="46" bodyend="52"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="50" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="49" bodyend="55"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="61" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="60" bodyend="96"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="64" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="63" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="class_capstone_project_1_1_game1_1a37f67ad402448d603acfcb0f26fdfd4c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="103" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="102" bodyend="118"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="106" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="105" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="class_capstone_project_1_1_game1_1ac5211c6bd8219e31c91d1ad68ced674c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="125" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="124" bodyend="127"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="128" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="127" bodyend="130"/>
       </memberdef>
       <memberdef kind="function" id="class_capstone_project_1_1_game1_1a531433f38f741ed11acb4750bf92d70d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -240,7 +240,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="135" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="134" bodyend="154"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="138" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="137" bodyend="157"/>
       </memberdef>
       <memberdef kind="function" id="class_capstone_project_1_1_game1_1a8f7e138af4e270d66e5a8ba1e8137205" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -265,7 +265,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="161" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="160" bodyend="174"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="164" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="163" bodyend="177"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -273,28 +273,28 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="14">
+      <node id="15">
         <label>Microsoft::Xna::Framework::Game</label>
       </node>
-      <node id="13">
+      <node id="14">
         <label>CapstoneProject.Game1</label>
         <link refid="class_capstone_project_1_1_game1"/>
-        <childnode refid="14" relation="public-inheritance">
+        <childnode refid="15" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="16">
+      <node id="17">
         <label>Microsoft::Xna::Framework::Game</label>
       </node>
-      <node id="15">
+      <node id="16">
         <label>CapstoneProject.Game1</label>
         <link refid="class_capstone_project_1_1_game1"/>
-        <childnode refid="16" relation="public-inheritance">
+        <childnode refid="17" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="26" bodyend="175"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="26" bodyend="178"/>
     <listofallmembers>
       <member refid="class_capstone_project_1_1_game1_1acd6f60a4d642ffb14886d7ebafab6d21" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>a</name></member>
       <member refid="class_capstone_project_1_1_game1_1a58b2f088d3e7309061dd55688392ca7a" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>b</name></member>

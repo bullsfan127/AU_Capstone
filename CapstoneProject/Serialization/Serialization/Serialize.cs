@@ -123,7 +123,7 @@ namespace CustomSerialization
         /// </summary>
         /// <param name="classType"></param>
         /// <param name="complex"></param>
-        public void Save(T classType, bool complex = false)
+        public void Save(T classType, bool complex = true)
         {
             _complex = complex;
 

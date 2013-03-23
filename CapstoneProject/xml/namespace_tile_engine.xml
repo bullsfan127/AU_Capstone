@@ -5,9 +5,10 @@
     <innerclass refid="class_tile_engine_1_1_animation" prot="public">TileEngine::Animation</innerclass>
     <innerclass refid="class_tile_engine_1_1_avatar" prot="public">TileEngine::Avatar</innerclass>
     <innerclass refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4" prot="public">TileEngine::DrawableLayer&lt; T &gt;</innerclass>
+    <innerclass refid="class_tile_engine_1_1_item" prot="public">TileEngine::Item</innerclass>
     <innerclass refid="class_tile_engine_1_1_layer_3_01_t_01_4" prot="public">TileEngine::Layer&lt; T &gt;</innerclass>
     <innerclass refid="class_tile_engine_1_1_map" prot="public">TileEngine::Map</innerclass>
-    <innerclass refid="class_tile_engine_1_1_monster" prot="public">TileEngine::Monster</innerclass>
+    <innerclass refid="class_tile_engine_1_1_monster" prot="package">TileEngine::Monster</innerclass>
     <innerclass refid="class_tile_engine_1_1_player" prot="public">TileEngine::Player</innerclass>
     <innerclass refid="class_tile_engine_1_1_tile" prot="public">TileEngine::Tile</innerclass>
     <innerclass refid="class_tile_engine_1_1_tile_sheet" prot="public">TileEngine::TileSheet</innerclass>

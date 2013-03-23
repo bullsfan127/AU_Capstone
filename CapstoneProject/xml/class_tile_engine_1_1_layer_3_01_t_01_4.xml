@@ -65,7 +65,7 @@
 <parametername>location</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The (X,Y) location of the Item</para></parameterdescription>
+<para>The (X,Y) location of the <ref refid="class_tile_engine_1_1_item" kindref="compound">Item</ref></para></parameterdescription>
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>A reference to the item</para></simplesect>
@@ -88,7 +88,7 @@
           <declname>newItem</declname>
         </param>
         <briefdescription>
-<para>Sets the Item at a specific location to a new Item </para>        </briefdescription>
+<para>Sets the <ref refid="class_tile_engine_1_1_item" kindref="compound">Item</ref> at a specific location to a new <ref refid="class_tile_engine_1_1_item" kindref="compound">Item</ref> </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -102,7 +102,7 @@
 <parametername>newItem</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the New Item</para></parameterdescription>
+<para>the New <ref refid="class_tile_engine_1_1_item" kindref="compound">Item</ref></para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>

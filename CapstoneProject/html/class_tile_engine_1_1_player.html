@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('class_tile_engine_1_1_player.html','')
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -125,37 +125,57 @@ Inheritance diagram for TileEngine.Player:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad3ab4da4b2d965b5c3cea300fe9304ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#ad3ab4da4b2d965b5c3cea300fe9304ae">Player</a> ()</td></tr>
+<tr class="memdesc:ad3ab4da4b2d965b5c3cea300fe9304ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for player  <a href="#ad3ab4da4b2d965b5c3cea300fe9304ae">More...</a><br/></td></tr>
 <tr class="separator:ad3ab4da4b2d965b5c3cea300fe9304ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40932b9bf69a88c42467a2fb2a8e5255"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a40932b9bf69a88c42467a2fb2a8e5255">Initialize</a> (Texture2D spriteStrip, Vector2 position)</td></tr>
+<tr class="memdesc:a40932b9bf69a88c42467a2fb2a8e5255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the player  <a href="#a40932b9bf69a88c42467a2fb2a8e5255">More...</a><br/></td></tr>
 <tr class="separator:a40932b9bf69a88c42467a2fb2a8e5255"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add7b752fcd9f9cb94302c577f8088528"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#add7b752fcd9f9cb94302c577f8088528">Update</a> (GameTime gameTime)</td></tr>
-<tr class="separator:add7b752fcd9f9cb94302c577f8088528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29b6d833f145f5ce9fb6e006bf170326"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a29b6d833f145f5ce9fb6e006bf170326">Update</a> (GameTime gameTime, <a class="el" href="class_tile_engine_1_1_map.html">Map</a> map)</td></tr>
+<tr class="memdesc:a29b6d833f145f5ce9fb6e006bf170326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the player  <a href="#a29b6d833f145f5ce9fb6e006bf170326">More...</a><br/></td></tr>
+<tr class="separator:a29b6d833f145f5ce9fb6e006bf170326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3150892fc641203e9bfee6b21a202ce5"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a3150892fc641203e9bfee6b21a202ce5">Draw</a> (SpriteBatch spriteBatch, GameTime gameTime)</td></tr>
+<tr class="memdesc:a3150892fc641203e9bfee6b21a202ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the player  <a href="#a3150892fc641203e9bfee6b21a202ce5">More...</a><br/></td></tr>
 <tr class="separator:a3150892fc641203e9bfee6b21a202ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f2e40accd441a1bbd6e213af5fb5314"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a1f2e40accd441a1bbd6e213af5fb5314">changeHealth</a> (int change)</td></tr>
+<tr class="memdesc:a1f2e40accd441a1bbd6e213af5fb5314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the health of the player  <a href="#a1f2e40accd441a1bbd6e213af5fb5314">More...</a><br/></td></tr>
 <tr class="separator:a1f2e40accd441a1bbd6e213af5fb5314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59476973acb572f4e4e807eb394e094b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a59476973acb572f4e4e807eb394e094b">addArmor</a> ()</td></tr>
+<tr class="separator:a59476973acb572f4e4e807eb394e094b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf7f40e5c53bad024c041f21e0a754f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#abf7f40e5c53bad024c041f21e0a754f2">changeWeapon</a> (int weapon)</td></tr>
+<tr class="memdesc:abf7f40e5c53bad024c041f21e0a754f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change weapon  <a href="#abf7f40e5c53bad024c041f21e0a754f2">More...</a><br/></td></tr>
 <tr class="separator:abf7f40e5c53bad024c041f21e0a754f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec85e347f9cf381981efb1f9590741df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#aec85e347f9cf381981efb1f9590741df">increaseScore</a> (int amount)</td></tr>
+<tr class="memdesc:aec85e347f9cf381981efb1f9590741df"><td class="mdescLeft">&#160;</td><td class="mdescRight">INcreases the score  <a href="#aec85e347f9cf381981efb1f9590741df">More...</a><br/></td></tr>
 <tr class="separator:aec85e347f9cf381981efb1f9590741df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8bca588776c05e074fb753eeb7e86c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#ae8bca588776c05e074fb753eeb7e86c9">NextLevelScore</a> ()</td></tr>
+<tr class="memdesc:ae8bca588776c05e074fb753eeb7e86c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add level to total, then set level score to 0  <a href="#ae8bca588776c05e074fb753eeb7e86c9">More...</a><br/></td></tr>
 <tr class="separator:ae8bca588776c05e074fb753eeb7e86c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a343a9468c20e6c140ef23653cd70b942"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a343a9468c20e6c140ef23653cd70b942">getLevelScore</a> ()</td></tr>
+<tr class="memdesc:a343a9468c20e6c140ef23653cd70b942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current level score  <a href="#a343a9468c20e6c140ef23653cd70b942">More...</a><br/></td></tr>
 <tr class="separator:a343a9468c20e6c140ef23653cd70b942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a927b46fb75a886e2429ff853261e71a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a927b46fb75a886e2429ff853261e71a1">getTotalScore</a> ()</td></tr>
+<tr class="memdesc:a927b46fb75a886e2429ff853261e71a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Total Score  <a href="#a927b46fb75a886e2429ff853261e71a1">More...</a><br/></td></tr>
 <tr class="separator:a927b46fb75a886e2429ff853261e71a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7adaf32e779eefa0bb592412c97e2f18"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a7adaf32e779eefa0bb592412c97e2f18">getHealth</a> ()</td></tr>
+<tr class="memdesc:a7adaf32e779eefa0bb592412c97e2f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current health  <a href="#a7adaf32e779eefa0bb592412c97e2f18">More...</a><br/></td></tr>
 <tr class="separator:a7adaf32e779eefa0bb592412c97e2f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dad5c87be9ebe2864f0726eb2d65d21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a1dad5c87be9ebe2864f0726eb2d65d21">getWeapon</a> ()</td></tr>
+<tr class="memdesc:a1dad5c87be9ebe2864f0726eb2d65d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current weapon  <a href="#a1dad5c87be9ebe2864f0726eb2d65d21">More...</a><br/></td></tr>
 <tr class="separator:a1dad5c87be9ebe2864f0726eb2d65d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_tile_engine_1_1_avatar"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_tile_engine_1_1_avatar')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_tile_engine_1_1_avatar.html">TileEngine.Avatar</a></td></tr>
 <tr class="memitem:a7c6118c83ba18eeb197f04412130f3b5 inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a7c6118c83ba18eeb197f04412130f3b5">Avatar</a> ()</td></tr>
 <tr class="separator:a7c6118c83ba18eeb197f04412130f3b5 inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d97952e8a9e1b347c841cfbe614b60b inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a9d97952e8a9e1b347c841cfbe614b60b">Avatar</a> (Vector2 position, Texture2D Texture)</td></tr>
 <tr class="separator:a9d97952e8a9e1b347c841cfbe614b60b inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa46c5a32ad8b677a0f2ce2ace163059 inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#afa46c5a32ad8b677a0f2ce2ace163059">Update</a> (GameTime gameTime)</td></tr>
+<tr class="separator:afa46c5a32ad8b677a0f2ce2ace163059 inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a56c48786ea882059c7ae4b6b44cd50df"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a></td></tr>
+<tr class="separator:a56c48786ea882059c7ae4b6b44cd50df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa10e2703dad7aec3884558b54ede6e"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#aafa10e2703dad7aec3884558b54ede6e">offset</a></td></tr>
+<tr class="separator:aafa10e2703dad7aec3884558b54ede6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af222a6eda4e9d90845bd2e6002cbcc90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tile_engine_1_1_animation.html">Animation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a></td></tr>
 <tr class="separator:af222a6eda4e9d90845bd2e6002cbcc90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ddc39cda0fe327af82fa28defcbba29"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a6ddc39cda0fe327af82fa28defcbba29">Active</a></td></tr>
@@ -163,6 +183,8 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
+<tr class="memitem:a65bb23fbd546a7da8f0eb50d59427cd6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a65bb23fbd546a7da8f0eb50d59427cd6">HasArmor</a><code> [get, set]</code></td></tr>
+<tr class="separator:a65bb23fbd546a7da8f0eb50d59427cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5859a9b5810a5078477ca3a2ea47826c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a5859a9b5810a5078477ca3a2ea47826c">Health</a><code> [get, set]</code></td></tr>
 <tr class="separator:a5859a9b5810a5078477ca3a2ea47826c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1be81bcdf3e53278f55a6f643053ebc6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_player.html#a1be81bcdf3e53278f55a6f643053ebc6">MaxHealth</a><code> [get, set]</code></td></tr>
@@ -194,13 +216,35 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00068">68</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<p>Default constructor for player </p>
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00086">86</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a59476973acb572f4e4e807eb394e094b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Player.addArmor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00225">225</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            this._hasArmor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a class="anchor" id="a1f2e40accd441a1bbd6e213af5fb5314"></a>
 <div class="memitem">
 <div class="memproto">
@@ -215,21 +259,37 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00103">103</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="comment">// Add/subtract the change to the current health</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            this._health += change;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="comment">// More than max? Set to max</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">if</span> (this._health &gt; this._maxHealth)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                this._health = this._maxHealth;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            } <span class="comment">// Less than 0? Set to 0.</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this._health &lt; 0)</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                this._health = 0;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<p>Change the health of the player </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">change</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00201">201</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="comment">// has armor and being hit</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordflow">if</span> (this._hasArmor &amp;&amp; change &lt; 0)</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                this._hasArmor = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                <span class="comment">// Add/subtract the change to the current health</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                this._health += change;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                <span class="comment">// More than max? Set to max</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="keywordflow">if</span> (this._health &gt; this._maxHealth)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    this._health = this._maxHealth;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                } <span class="comment">// Less than 0? Set to 0.</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this._health &lt; 0)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    this._health = 0;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -247,12 +307,20 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00119">119</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="comment">// TODO - Do we need to update the graphic here too</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="comment">// or is that done at the next &quot;update&quot; command?</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            this._weapon = weapon;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<p>Change weapon </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weapon</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00234">234</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="comment">// TODO - Do we need to update the graphic here too</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="comment">// or is that done at the next &quot;update&quot; command?</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            this._weapon = weapon;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -288,15 +356,24 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Draw the player </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spriteBatch</td><td></td></tr>
+    <tr><td class="paramname">gameTime</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="class_tile_engine_1_1_avatar.html#a7d6106cb2e838e335d7b285d51312183">TileEngine.Avatar</a>.</p>
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00095">95</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">//going to need to check whether the</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#ab4dd3a8d57cc8de71f8863ff91238eea">Draw</a>(spriteBatch);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            base.Draw(spriteBatch, gameTime);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00189">189</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="comment">//going to need to check whether the</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#ab4dd3a8d57cc8de71f8863ff91238eea">Draw</a>(spriteBatch);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            base.Draw(spriteBatch, gameTime);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -313,10 +390,13 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00149">149</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">return</span> this._health;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        }</div>
+<p>Get the current health </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00282">282</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keywordflow">return</span> this._health;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -333,10 +413,13 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00139">139</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">return</span> this._levelScore;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        }</div>
+<p>Get the current level score </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00264">264</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keywordflow">return</span> this._levelScore;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -353,10 +436,13 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00144">144</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">return</span> this._totalScore;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
+<p>Get the Total Score </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00273">273</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="keywordflow">return</span> this._totalScore;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -373,10 +459,13 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00154">154</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">return</span> this._weapon;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
+<p>Get the current weapon </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00291">291</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            <span class="keywordflow">return</span> this._weapon;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -394,11 +483,19 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00126">126</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="comment">// Add the amount to the level score</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            this._levelScore += amount;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
+<p>INcreases the score </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00245">245</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="comment">// Add the amount to the level score</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            this._levelScore += amount;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -426,20 +523,29 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00072">72</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a> = <span class="keyword">new</span> Animation();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="comment">// Set the player&#39;s health to the maximum</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            _health = this._maxHealth;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="comment">// Set starting position of the player</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a> = position;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="comment">//player Animation initialize</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a92f73196e610356a0810345fe97b026d">Initialize</a>(spriteStrip, position, 64, 128, 3, 300, Color.White, 1.0f, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">// Set the player to be active</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#a6ddc39cda0fe327af82fa28defcbba29">Active</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<p>Initializes the player </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spriteStrip</td><td></td></tr>
+    <tr><td class="paramname">position</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00095">95</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a> = <span class="keyword">new</span> Animation();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="comment">// Set the player&#39;s health to the maximum</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            _health = this._maxHealth;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="comment">// Set starting position of the player</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a> = position;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="comment">//player Animation initialize</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a7a7907093bd3db85bce93c7f901e1426" title="Initializes the Animation code ">Initialize</a>(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="comment">// Set the player to be active</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#a6ddc39cda0fe327af82fa28defcbba29">Active</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -456,46 +562,117 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00132">132</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="comment">// Add level to total, then set level to 0</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            this._totalScore += this._levelScore;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            this._levelScore = 0;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
+<p>Add level to total, then set level score to 0 </p>
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00254">254</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            this._totalScore += this._levelScore;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            this._levelScore = 0;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="add7b752fcd9f9cb94302c577f8088528"></a>
+<a class="anchor" id="a29b6d833f145f5ce9fb6e006bf170326"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">override void TileEngine.Player.Update </td>
+          <td class="memname">void TileEngine.Player.Update </td>
           <td>(</td>
           <td class="paramtype">GameTime&#160;</td>
-          <td class="paramname"><em>gameTime</em></td><td>)</td>
+          <td class="paramname"><em>gameTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_tile_engine_1_1_map.html">Map</a>&#160;</td>
+          <td class="paramname"><em>map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_tile_engine_1_1_avatar.html#afa46c5a32ad8b677a0f2ce2ace163059">TileEngine.Avatar</a>.</p>
+<p>Update the player </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gameTime</td><td></td></tr>
+    <tr><td class="paramname">map</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00087">87</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="comment">// Vector2 Position = Vector2.Zero;</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a75d52f1bc2b67d0bc012ad6569bfe006">Position</a> = <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a2614c6eff471aecefade8b906a489eeb">Update</a>(gameTime);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            base.Update(gameTime);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00115">115</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="comment">// Vector2 Position = Vector2.Zero;</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a75d52f1bc2b67d0bc012ad6569bfe006">Position</a> = <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="comment">//PlayerAnimation.Update(gameTime);</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            base.Update(gameTime);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="comment">//Reset movement to still</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.X = 0;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a2c0d7ff5887ea0684283d7187dd3f817">state</a> = Animation.Animate.IDLE;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="comment">// Trying to move Left or Right</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">if</span> (Keyboard.GetState().IsKeyDown(Keys.Left))</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a2c0d7ff5887ea0684283d7187dd3f817">state</a> = Animation.Animate.LMOVING;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.X = -5;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Keyboard.GetState().IsKeyDown(Keys.Right))</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a2c0d7ff5887ea0684283d7187dd3f817">state</a> = Animation.Animate.RMOVING;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.X = 5;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="comment">//Keeping track of jumping/falling speed</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">if</span> (Keyboard.GetState().IsKeyDown(Keys.Up) &amp;&amp; <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.Y == 372)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.Y += -20;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.Y += 1;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="comment">//establish ceiling and floor</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.Y + <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.Y &lt; 0)<span class="comment">//ceiling</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a> = <span class="keyword">new</span> Vector2(<a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.X, 0);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.Y + <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.Y &gt; 372)<span class="comment">//floor</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a> = <span class="keyword">new</span> Vector2(<a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.X, 372);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.Y = 0;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="comment">//establish left and right bound for &quot;dead zone&quot;</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.X + <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.X &gt; 500)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                <a class="code" href="class_tile_engine_1_1_player.html#aafa10e2703dad7aec3884558b54ede6e">offset</a>.X += <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.X + <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.X - 500;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a> = <span class="keyword">new</span> Vector2(500, <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.Y + <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.Y);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.X + <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.X &lt; 100 &amp;&amp; <a class="code" href="class_tile_engine_1_1_player.html#aafa10e2703dad7aec3884558b54ede6e">offset</a>.X &gt; 0)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <a class="code" href="class_tile_engine_1_1_player.html#aafa10e2703dad7aec3884558b54ede6e">offset</a>.X += <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.X + <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.X - 100;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a> = <span class="keyword">new</span> Vector2(100, <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.Y + <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>.Y);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a> += <a class="code" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">Movement</a>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.X &lt; 0)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a> = <span class="keyword">new</span> Vector2(0, <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.Y);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <a class="code" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a2614c6eff471aecefade8b906a489eeb">Update</a>(gameTime);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            map.Update(gameTime, <a class="code" href="class_tile_engine_1_1_player.html#aafa10e2703dad7aec3884558b54ede6e">offset</a>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -506,6 +683,34 @@ Properties</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool TileEngine.Player.Active</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00027">27</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a56c48786ea882059c7ae4b6b44cd50df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 TileEngine.Player.Movement</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00018">18</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aafa10e2703dad7aec3884558b54ede6e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 TileEngine.Player.offset</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -524,11 +729,33 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00018">18</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00024">24</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a65bb23fbd546a7da8f0eb50d59427cd6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TileEngine.Player.HasArmor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00033">33</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a5859a9b5810a5078477ca3a2ea47826c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -547,7 +774,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00027">27</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00042">42</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
 
 </div>
 </div>
@@ -569,7 +796,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00054">54</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00069">69</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
 
 </div>
 </div>
@@ -591,7 +818,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00036">36</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00051">51</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
 
 </div>
 </div>
@@ -613,7 +840,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00063">63</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00078">78</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
 
 </div>
 </div>
@@ -635,7 +862,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_player_8cs_source.html#l00045">45</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>Definition at line <a class="el" href="_player_8cs_source.html#l00060">60</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
 
 </div>
 </div>
@@ -648,7 +875,7 @@ Properties</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_tile_engine.html">TileEngine</a></li><li class="navelem"><a class="el" href="class_tile_engine_1_1_player.html">Player</a></li>
-    <li class="footer">Generated on Mon Mar 11 2013 21:46:40 for Fat Joe's Nightmare by
+    <li class="footer">Generated on Fri Mar 22 2013 21:04:50 for Fat Joe's Nightmare by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

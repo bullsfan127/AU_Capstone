@@ -2,7 +2,7 @@ var hierarchy =
 [
     [ "TileEngine.Animation", "class_tile_engine_1_1_animation.html", null ],
     [ "TileEngine.Avatar", "class_tile_engine_1_1_avatar.html", [
-      [ "TileEngine.Monster", "class_tile_engine_1_1_monster.html", null ],
+      [ "TileEngine.Item", "class_tile_engine_1_1_item.html", null ],
       [ "TileEngine.Player", "class_tile_engine_1_1_player.html", null ]
     ] ],
     [ "TileEngine.Interfaces.Drawable", "interface_tile_engine_1_1_interfaces_1_1_drawable.html", [

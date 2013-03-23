@@ -78,6 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
     </ul>
@@ -102,7 +103,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -146,7 +147,13 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>Active
 : <a class="el" href="class_tile_engine_1_1_animation.html#a428519a2f385fb1eb29ffa3852c5a505">TileEngine.Animation</a>
 , <a class="el" href="class_tile_engine_1_1_player.html#a6ddc39cda0fe327af82fa28defcbba29">TileEngine.Player</a>
-, <a class="el" href="class_tile_engine_1_1_monster.html#a02284f88a72e281f261b544f744fdfab">TileEngine.Monster</a>
+, <a class="el" href="class_tile_engine_1_1_item.html#ae34109abc7dbd43b5182bfc16208a844">TileEngine.Item</a>
+</li>
+<li>currentFrame
+: <a class="el" href="class_tile_engine_1_1_animation.html#a4166f07632f8a495522be0bca0552acc">TileEngine.Animation</a>
+</li>
+<li>destinationRect
+: <a class="el" href="class_tile_engine_1_1_animation.html#a5f6214ff26f488b0988d32964294981b">TileEngine.Animation</a>
 </li>
 <li>FrameHeight
 : <a class="el" href="class_tile_engine_1_1_animation.html#ad6d0570216f225b5965bdf25ae1ff92a">TileEngine.Animation</a>
@@ -154,18 +161,29 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>FrameWidth
 : <a class="el" href="class_tile_engine_1_1_animation.html#a6144d8d5c904bfd318a0f1891f68d31a">TileEngine.Animation</a>
 </li>
+<li>ItemAnimation
+: <a class="el" href="class_tile_engine_1_1_item.html#a327560f673cd2cd085f60d10dcee0a9e">TileEngine.Item</a>
+</li>
 <li>Looping
 : <a class="el" href="class_tile_engine_1_1_animation.html#a22b62fda1e3fdb5cc1d20203b72362cb">TileEngine.Animation</a>
 </li>
-<li>MonsterAnimation
-: <a class="el" href="class_tile_engine_1_1_monster.html#a4a7445ca8fcaebf69c34678716110eeb">TileEngine.Monster</a>
+<li>Movement
+: <a class="el" href="class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df">TileEngine.Player</a>
+</li>
+<li>offset
+: <a class="el" href="class_tile_engine_1_1_player.html#aafa10e2703dad7aec3884558b54ede6e">TileEngine.Player</a>
 </li>
 <li>PlayerAnimation
 : <a class="el" href="class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90">TileEngine.Player</a>
 </li>
 <li>Position
-: <a class="el" href="class_tile_engine_1_1_monster.html#a793d2d9816fc7793bce1c106b0623db0">TileEngine.Monster</a>
-, <a class="el" href="class_tile_engine_1_1_animation.html#a75d52f1bc2b67d0bc012ad6569bfe006">TileEngine.Animation</a>
+: <a class="el" href="class_tile_engine_1_1_animation.html#a75d52f1bc2b67d0bc012ad6569bfe006">TileEngine.Animation</a>
+</li>
+<li>sourceRect
+: <a class="el" href="class_tile_engine_1_1_animation.html#ad15d57a585f106536a11ca45a4ef24c0">TileEngine.Animation</a>
+</li>
+<li>state
+: <a class="el" href="class_tile_engine_1_1_animation.html#a2c0d7ff5887ea0684283d7187dd3f817">TileEngine.Animation</a>
 </li>
 <li>test2
 : <a class="el" href="class_custom_serialization_1_1_test_class.html#a9df1a172a41ddf741020e071dd02bc09">CustomSerialization.TestClass</a>
@@ -176,7 +194,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Mar 11 2013 21:46:41 for Fat Joe's Nightmare by
+    <li class="footer">Generated on Fri Mar 22 2013 21:04:50 for Fat Joe's Nightmare by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

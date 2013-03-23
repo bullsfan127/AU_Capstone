@@ -1,6 +1,7 @@
 var class_tile_engine_1_1_player =
 [
     [ "Player", "class_tile_engine_1_1_player.html#ad3ab4da4b2d965b5c3cea300fe9304ae", null ],
+    [ "addArmor", "class_tile_engine_1_1_player.html#a59476973acb572f4e4e807eb394e094b", null ],
     [ "changeHealth", "class_tile_engine_1_1_player.html#a1f2e40accd441a1bbd6e213af5fb5314", null ],
     [ "changeWeapon", "class_tile_engine_1_1_player.html#abf7f40e5c53bad024c041f21e0a754f2", null ],
     [ "Draw", "class_tile_engine_1_1_player.html#a3150892fc641203e9bfee6b21a202ce5", null ],
@@ -11,9 +12,12 @@ var class_tile_engine_1_1_player =
     [ "increaseScore", "class_tile_engine_1_1_player.html#aec85e347f9cf381981efb1f9590741df", null ],
     [ "Initialize", "class_tile_engine_1_1_player.html#a40932b9bf69a88c42467a2fb2a8e5255", null ],
     [ "NextLevelScore", "class_tile_engine_1_1_player.html#ae8bca588776c05e074fb753eeb7e86c9", null ],
-    [ "Update", "class_tile_engine_1_1_player.html#add7b752fcd9f9cb94302c577f8088528", null ],
+    [ "Update", "class_tile_engine_1_1_player.html#a29b6d833f145f5ce9fb6e006bf170326", null ],
     [ "Active", "class_tile_engine_1_1_player.html#a6ddc39cda0fe327af82fa28defcbba29", null ],
+    [ "Movement", "class_tile_engine_1_1_player.html#a56c48786ea882059c7ae4b6b44cd50df", null ],
+    [ "offset", "class_tile_engine_1_1_player.html#aafa10e2703dad7aec3884558b54ede6e", null ],
     [ "PlayerAnimation", "class_tile_engine_1_1_player.html#af222a6eda4e9d90845bd2e6002cbcc90", null ],
+    [ "HasArmor", "class_tile_engine_1_1_player.html#a65bb23fbd546a7da8f0eb50d59427cd6", null ],
     [ "Health", "class_tile_engine_1_1_player.html#a5859a9b5810a5078477ca3a2ea47826c", null ],
     [ "LevelScore", "class_tile_engine_1_1_player.html#ab02f666ed3f5f6bfd3b05a719de41a31", null ],
     [ "MaxHealth", "class_tile_engine_1_1_player.html#a1be81bcdf3e53278f55a6f643053ebc6", null ],

@@ -422,26 +422,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="44">
+      <node id="50">
         <label>TileEngine::Interfaces::Drawable</label>
         <link refid="interface_tile_engine_1_1_interfaces_1_1_drawable"/>
       </node>
-      <node id="43">
+      <node id="49">
         <label>TileEngine.Tile</label>
         <link refid="class_tile_engine_1_1_tile"/>
-        <childnode refid="44" relation="public-inheritance">
+        <childnode refid="50" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="46">
+      <node id="52">
         <label>TileEngine::Interfaces::Drawable</label>
         <link refid="interface_tile_engine_1_1_interfaces_1_1_drawable"/>
       </node>
-      <node id="45">
+      <node id="51">
         <label>TileEngine.Tile</label>
         <link refid="class_tile_engine_1_1_tile"/>
-        <childnode refid="46" relation="public-inheritance">
+        <childnode refid="52" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

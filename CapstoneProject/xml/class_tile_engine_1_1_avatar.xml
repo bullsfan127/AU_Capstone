@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="class_tile_engine_1_1_avatar" kind="class" prot="public">
     <compoundname>TileEngine::Avatar</compoundname>
+    <derivedcompoundref refid="class_tile_engine_1_1_item" prot="public" virt="non-virtual">TileEngine.Item</derivedcompoundref>
     <derivedcompoundref refid="class_tile_engine_1_1_monster" prot="public" virt="non-virtual">TileEngine.Monster</derivedcompoundref>
     <derivedcompoundref refid="class_tile_engine_1_1_player" prot="public" virt="non-virtual">TileEngine.Player</derivedcompoundref>
       <sectiondef kind="private-attrib">
@@ -74,8 +75,7 @@
         <definition>virtual void TileEngine.Avatar.Update</definition>
         <argsstring>(GameTime gameTime)</argsstring>
         <name>Update</name>
-        <reimplementedby refid="class_tile_engine_1_1_monster_1a8fe35134525a9abb6c06bf69348de5c7">Update</reimplementedby>
-        <reimplementedby refid="class_tile_engine_1_1_player_1add7b752fcd9f9cb94302c577f8088528">Update</reimplementedby>
+        <reimplementedby refid="class_tile_engine_1_1_item_1a69ec70858dafdad165adb7cbcf55ceb7">Update</reimplementedby>
         <param>
           <type>GameTime</type>
           <declname>gameTime</declname>
@@ -93,7 +93,7 @@
         <definition>virtual void TileEngine.Avatar.Draw</definition>
         <argsstring>(SpriteBatch spriteBatch, GameTime gameTime)</argsstring>
         <name>Draw</name>
-        <reimplementedby refid="class_tile_engine_1_1_monster_1a59a438ca1791da6c25a5e849f109c0ed">Draw</reimplementedby>
+        <reimplementedby refid="class_tile_engine_1_1_item_1a8371497aa849c48c146ffe16d10c8e61">Draw</reimplementedby>
         <reimplementedby refid="class_tile_engine_1_1_player_1a3150892fc641203e9bfee6b21a202ce5">Draw</reimplementedby>
         <param>
           <type>SpriteBatch</type>
@@ -121,13 +121,18 @@
         <label>TileEngine.Avatar</label>
         <link refid="class_tile_engine_1_1_avatar"/>
       </node>
-      <node id="3">
+      <node id="4">
         <label>TileEngine.Monster</label>
-        <link refid="class_tile_engine_1_1_monster"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4">
+      <node id="3">
+        <label>TileEngine.Item</label>
+        <link refid="class_tile_engine_1_1_item"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
         <label>TileEngine.Player</label>
         <link refid="class_tile_engine_1_1_player"/>
         <childnode refid="2" relation="public-inheritance">
