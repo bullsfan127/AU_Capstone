@@ -29,26 +29,23 @@ namespace TileEngine
             set { _health = value; }
         }
 
-        public void Initialize(Animation animation, Vector2 position)
+        public void Initialize(Texture2D spriteStrip, Vector2 position)
         {
-            MonsterAnimation = animation;
-
-            // Set starting position of the player
-            Position = position;
-
-            // Set the player to be active
-            Active = true;
         }
 
         public override void Update(GameTime gameTime)
         {
             MonsterAnimation.Position = Position;
+            base.Update(gameTime);
             MonsterAnimation.Update(gameTime);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
+            //going to need to check whether the
             MonsterAnimation.Draw(spriteBatch);
+
+            base.Draw(spriteBatch, gameTime);
         }
 
         public void changeHealth(int change)

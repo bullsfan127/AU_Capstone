@@ -27,12 +27,12 @@ namespace TileEngine
         public bool Active;
 
         // Does player have armor
-        private bool _hasArmor;
+        private bool _armor;
 
-        public bool HasArmor
+        public bool Armor
         {
-            get { return _hasArmor; }
-            set { _hasArmor = value; }
+            get { return _armor; }
+            set { _armor = value; }
         }
 
         // Current health of the player
@@ -201,9 +201,9 @@ namespace TileEngine
         public void changeHealth(int change)
         {
             // has armor and being hit
-            if (this._hasArmor && change < 0)
+            if (this._armor && change < 0)
             {
-                this._hasArmor = false;
+                this._armor = false;
             }
             else
             {
@@ -224,7 +224,7 @@ namespace TileEngine
 
         public void addArmor()
         {
-            this._hasArmor = true;
+            this._armor = true;
         }
 
         /// <summary>
@@ -291,6 +291,15 @@ namespace TileEngine
         public int getWeapon()
         {
             return this._weapon;
+        }
+
+        /// <summary>
+        /// Get whether the player has armor or not
+        /// </summary>
+        /// <returns></returns>
+        public bool hasArmor()
+        {
+            return this._armor;
         }
     }
 }
