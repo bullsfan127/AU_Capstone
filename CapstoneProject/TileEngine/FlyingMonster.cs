@@ -12,13 +12,13 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TileEngine
 {
-    public class GroundMonster : Monster
+    public class FlyingMonster : Monster
     {
 
         /// <summary>
         /// Default constructor for player
         /// </summary>
-        public GroundMonster()
+        public FlyingMonster()
         {
             spriteWidth = 64;
             spriteHeight = 128;
@@ -29,5 +29,17 @@ namespace TileEngine
 
             Active = false;
         }
+
+        /// <summary>
+        /// TODO: Not sure how the collision is working... but generally this
+        /// all that is needed to make the damage happen.
+        /// </summary>
+        public void doDamageToPlayer()
+        {
+            // TODO
+            //player.changeHealth(this._maxDamage);
+        }
+
+
     }
 }

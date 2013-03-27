@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TileEngine
 {
-    internal class Monster : Avatar
+    public class Monster : Avatar
     {
         // Animation representing the monster
         public Animation MonsterAnimation;
@@ -29,8 +29,24 @@ namespace TileEngine
             set { _health = value; }
         }
 
+        public int maxHealth;
+        public int maxDamage;
+        public int spriteWidth;
+        public int spriteHeight;
+        public int spriteFrame;
+
         public void Initialize(Texture2D spriteStrip, Vector2 position)
         {
+            MonsterAnimation = new Animation();
+
+            // Set starting position of the player
+            Position = position;
+
+            // TODO: Need to set correct image/location
+            MonsterAnimation.Initialize(spriteStrip, position, spriteWidth, spriteHeight, spriteFrame, 250, Color.White, 1.0f, true);
+
+            // Set the player to be active
+            Active = true;
         }
 
         public override void Update(GameTime gameTime)
@@ -63,5 +79,12 @@ namespace TileEngine
         {
             return this._health;
         }
+
+        /*
+         * How to do damage from monster->player:
+         * From map class when a collision is detected...
+         * [playervariable].changeHealth([monstervariable].getMaxDamage)
+         */
+
     }
 }
