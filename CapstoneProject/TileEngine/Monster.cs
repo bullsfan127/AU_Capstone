@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TileEngine
 {
-    internal class Monster : Avatar
+    public class Monster : Avatar
     {
         // Animation representing the monster
         public Animation MonsterAnimation;
@@ -21,20 +21,23 @@ namespace TileEngine
         public bool Active;
 
         // Current health of the monster
-        private int _health;
+        public int health;
 
-        public int Health
-        {
-            get { return _health; }
-            set { _health = value; }
-        }
+        public int maxHealth;
+        public int maxDamage;
+        public int spriteWidth;
+        public int spriteHeight;
+        public int spriteFrame;
 
-        public void Initialize(Animation animation, Vector2 position)
+        public void Initialize(Texture2D spriteStrip, Vector2 position)
         {
-            MonsterAnimation = animation;
+            MonsterAnimation = new Animation();
 
             // Set starting position of the player
             Position = position;
+
+            // TODO: Need to set correct image/location
+            MonsterAnimation.Initialize(spriteStrip, position, spriteWidth, spriteHeight, spriteFrame, 250, Color.White, 1.0f, true);
 
             // Set the player to be active
             Active = true;
@@ -43,28 +46,33 @@ namespace TileEngine
         public override void Update(GameTime gameTime)
         {
             MonsterAnimation.Position = Position;
+            base.Update(gameTime);
             MonsterAnimation.Update(gameTime);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
+            //going to need to check whether the
             MonsterAnimation.Draw(spriteBatch);
+
+            base.Draw(spriteBatch, gameTime);
         }
 
         public void changeHealth(int change)
         {
             // Add/subtract the change to the current health
-            this._health += change;
+            this.health += change;
 
-            if (this._health < 0)
+            if (this.health < 0)
             {
-                this._health = 0;
+                this.health = 0;
             }
         }
 
         public int getHealth()
         {
-            return this._health;
+            return this.health;
         }
+
     }
 }
