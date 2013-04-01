@@ -15,7 +15,7 @@ using TileEngine;
 /**************************************************
  * Added an XNA debugger, it can debug in real time,
  * see http://www.protohacks.net/xna_debug_terminal/HowTo%20v2.1.php5 for usuage.
- * Press the tab key to invole it
+ * Press the tab key to invoke it
  **************************************************************/
 
 namespace CapstoneProject
@@ -164,13 +164,11 @@ namespace CapstoneProject
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+           
             //#FPS_COUNTER
             counter.Draw(spriteBatch, gameTime);
 
-            //  currentLayer.Draw(spriteBatch, gameTime, Vector2.Zero);
-            // gameMap.Player = new Avatar();
-            // gameMap.Player.Position = Vector2.Zero;
+            
             gameMap.Draw(spriteBatch, gameTime);
             base.Draw(gameTime);
             Terminal.CheckDraw(false);
