@@ -7,7 +7,6 @@ namespace TileEngine
 {
     public class Coin : Item
     {
-
         /// <summary>
         /// Coin class - Increases score by 1
         /// </summary>
@@ -20,5 +19,6 @@ namespace TileEngine
             score = 1;
 
             Active = false;
+        }
     }
 }
