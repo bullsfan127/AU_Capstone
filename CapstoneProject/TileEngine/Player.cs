@@ -27,58 +27,22 @@ namespace TileEngine
         public bool Active;
 
         // Does player have armor
-        private bool _hasArmor;
-
-        public bool HasArmor
-        {
-            get { return _hasArmor; }
-            set { _hasArmor = value; }
-        }
+        public bool armor;
 
         // Current health of the player
-        private int _health;
-
-        public int Health
-        {
-            get { return _health; }
-            set { _health = value; }
-        }
+        public int health;
 
         // Maximum health of the player
-        private int _maxHealth = 3;
-
-        public int MaxHealth
-        {
-            get { return _maxHealth; }
-            set { _maxHealth = value; }
-        }
+        public int maxHealth = 3;
 
         // ID of the weapon the player is holding
-        private int _weapon;
-
-        public int Weapon
-        {
-            get { return _weapon; }
-            set { _weapon = value; }
-        }
+        private int weapon;
 
         // The score for the current level
-        private int _levelScore;
-
-        public int LevelScore
-        {
-            get { return _levelScore; }
-            set { _levelScore = value; }
-        }
+        public int levelScore;
 
         // The score for the entire game
-        private int _totalScore = 0;
-
-        public int TotalScore
-        {
-            get { return _totalScore; }
-            set { _totalScore = value; }
-        }
+        public int totalScore = 0;
 
         /// <summary>
         /// Default constructor for player
@@ -97,7 +61,7 @@ namespace TileEngine
             PlayerAnimation = new Animation();
 
             // Set the player's health to the maximum
-            _health = this._maxHealth;
+            health = this.maxHealth;
 
             // Set starting position of the player
             Position = position;
@@ -195,36 +159,47 @@ namespace TileEngine
         }
 
         /// <summary>
-        /// Change the health of the player
+        /// Increase the health of the player
         /// </summary>
         /// <param name="change"></param>
-        public void changeHealth(int change)
-        {
-            // has armor and being hit
-            if (this._hasArmor && change < 0)
-            {
-                this._hasArmor = false;
-            }
-            else
-            {
-                // Add/subtract the change to the current health
-                this._health += change;
+        /// 
 
-                // More than max? Set to max
-                if (this._health > this._maxHealth)
-                {
-                    this._health = this._maxHealth;
-                } // Less than 0? Set to 0.
-                else if (this._health < 0)
-                {
-                    this._health = 0;
-                }
+        public void increaseHealth(int change)
+        {
+            if (this.health < this.maxHealth)
+            {
+                this.health += change;
+            }
+        }
+
+        /// <summary>
+        /// Decrease the health or armor of the player
+        /// </summary>
+        /// <param name="change"></param>
+        public void decreaseHealth(int change)
+        {
+            
+            if(hasArmor() && change == 1)
+            {
+                // Has armor and damaged 1
+                this.armor = false;
+            }
+            else if (hasArmor() && change > 1)
+            {
+                // Has armor and damaged > 1
+                this.armor = false;
+                this.health -= (change - 1);
+            }
+            else if (this.health > 0)
+            {
+                // Has no armor
+                this.health -= change;
             }
         }
 
         public void addArmor()
         {
-            this._hasArmor = true;
+            this.armor = true;
         }
 
         /// <summary>
@@ -235,7 +210,7 @@ namespace TileEngine
         {
             // TODO - Do we need to update the graphic here too
             // or is that done at the next "update" command?
-            this._weapon = weapon;
+            this.weapon = weapon;
         }
 
         /// <summary>
@@ -245,7 +220,7 @@ namespace TileEngine
         public void increaseScore(int amount)
         {
             // Add the amount to the level score
-            this._levelScore += amount;
+            this.levelScore += amount;
         }
 
         /// <summary>
@@ -253,8 +228,8 @@ namespace TileEngine
         /// </summary>
         public void NextLevelScore()
         {
-            this._totalScore += this._levelScore;
-            this._levelScore = 0;
+            this.totalScore += this.levelScore;
+            this.levelScore = 0;
         }
 
         /// <summary>
@@ -263,7 +238,7 @@ namespace TileEngine
         /// <returns></returns>
         public int getLevelScore()
         {
-            return this._levelScore;
+            return this.levelScore;
         }
 
         /// <summary>
@@ -272,7 +247,7 @@ namespace TileEngine
         /// <returns></returns>
         public int getTotalScore()
         {
-            return this._totalScore;
+            return this.totalScore;
         }
 
         /// <summary>
@@ -281,7 +256,7 @@ namespace TileEngine
         /// <returns></returns>
         public int getHealth()
         {
-            return this._health;
+            return this.health;
         }
 
         /// <summary>
@@ -290,7 +265,16 @@ namespace TileEngine
         /// <returns></returns>
         public int getWeapon()
         {
-            return this._weapon;
+            return this.weapon;
+        }
+
+        /// <summary>
+        /// Get whether the player has armor or not
+        /// </summary>
+        /// <returns></returns>
+        public bool hasArmor()
+        {
+            return this.armor;
         }
     }
 }
