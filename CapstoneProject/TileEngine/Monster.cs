@@ -21,13 +21,7 @@ namespace TileEngine
         public bool Active;
 
         // Current health of the monster
-        private int _health;
-
-        public int Health
-        {
-            get { return _health; }
-            set { _health = value; }
-        }
+        public int health;
 
         public int maxHealth;
         public int maxDamage;
@@ -67,24 +61,18 @@ namespace TileEngine
         public void changeHealth(int change)
         {
             // Add/subtract the change to the current health
-            this._health += change;
+            this.health += change;
 
-            if (this._health < 0)
+            if (this.health < 0)
             {
-                this._health = 0;
+                this.health = 0;
             }
         }
 
         public int getHealth()
         {
-            return this._health;
+            return this.health;
         }
-
-        /*
-         * How to do damage from monster->player:
-         * From map class when a collision is detected...
-         * [playervariable].changeHealth([monstervariable].getMaxDamage)
-         */
 
     }
 }

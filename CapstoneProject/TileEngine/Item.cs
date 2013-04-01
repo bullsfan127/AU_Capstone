@@ -14,33 +14,38 @@ namespace TileEngine
 {
     public class Item : Avatar
     {
-        // Animation representing the player
+        // Animation representing the monster
         public Animation ItemAnimation;
 
-        // State of the player
+        // State of the monster
         public bool Active;
-
-        public Item()
-        {
-        }
+        public int spriteWidth;
+        public int spriteHeight;
+        public int spriteFrame;
+        public int score = 0;
+        public int health = 0;
+        public int armor = 0;
+        public int weapon = 0;
 
         public void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             ItemAnimation = new Animation();
+
             // Set starting position of the player
             Position = position;
-            //player Animation initialize
-            ItemAnimation.Initialize(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, true);
+
+            // TODO: Need to set correct image/location
+            ItemAnimation.Initialize(spriteStrip, position, spriteWidth, spriteHeight, spriteFrame, 250, Color.White, 1.0f, true);
+
             // Set the player to be active
             Active = true;
         }
 
         public override void Update(GameTime gameTime)
         {
-            // Vector2 Position = Vector2.Zero;
             ItemAnimation.Position = Position;
-            ItemAnimation.Update(gameTime);
             base.Update(gameTime);
+            ItemAnimation.Update(gameTime);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -51,9 +56,19 @@ namespace TileEngine
             base.Draw(spriteBatch, gameTime);
         }
 
-        public virtual void doAction()
+        public int getHealth()
         {
-            // Call an action 
+            return health;
+        }
+
+        public int getScore()
+        {
+            return score;
+        }
+
+        public int getArmor()
+        {
+            return armor;
         }
     }
 }

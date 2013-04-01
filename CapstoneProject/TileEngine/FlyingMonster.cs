@@ -30,16 +30,6 @@ namespace TileEngine
             Active = false;
         }
 
-        /// <summary>
-        /// TODO: Not sure how the collision is working... but generally this
-        /// all that is needed to make the damage happen.
-        /// </summary>
-        public void doDamageToPlayer()
-        {
-            // TODO
-            //player.changeHealth(this._maxDamage);
-        }
-
 
     }
 }
