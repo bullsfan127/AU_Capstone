@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using CustomSerialization;
+
+using CustomSerialization;
+
 using DebugTerminal;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
@@ -42,6 +45,7 @@ namespace CapstoneProject
 
         //#FPS_COUNTER
         private FPS_Counter counter;
+
         /// <summary>
         /// Constructor for game, initilaizes the graphics device
         /// Sets root directory, bufer height and width
@@ -111,8 +115,11 @@ namespace CapstoneProject
             Terminal.Init(this, spriteBatch, this.Content.Load<SpriteFont>("FPS"), graphics.GraphicsDevice);
             Terminal.SetSkin(TerminalThemeType.FIRE);
             a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
+            a.Name = "Tiles//tile";
             b.setTexture(this.Content.Load<Texture2D>("Tiles//tileM"));
+            b.Name = "Tiles//tileM";
             c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
+            c.Name = "Tiles//tileF";
 
             Texture2D playerTexture = Content.Load<Texture2D>("shitty3.0");
 
@@ -141,15 +148,20 @@ namespace CapstoneProject
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
             KeyboardState keystate = Keyboard.GetState();
-            if (keystate.IsKeyDown(Keys.Tab))
+            if (keystate.IsKeyDown(Keys.S))
             {
                 //  graphics.ToggleFullScreen();
                 gameMap.saveMap();
+                Map gameMap2 = gameMap;
+                gameMap = null;
+                gameMap = new Map();
 
-                gameMap.LoadMap("Savegame.xml");
+                gameMap = gameMap.LoadMap("Savegame.xml");
+                gameMap.loadTiles(this.Content);
+                gameMap.Player = player;
             }
-            
-            player.Update(gameTime,gameMap);
+
+            player.Update(gameTime, gameMap);
             // TODO: Add your update logic here
             //#FPS_COUNTER
             counter.Update(gameTime);
@@ -164,11 +176,9 @@ namespace CapstoneProject
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-           
             //#FPS_COUNTER
             counter.Draw(spriteBatch, gameTime);
 
-            
             gameMap.Draw(spriteBatch, gameTime);
             base.Draw(gameTime);
             Terminal.CheckDraw(false);

@@ -58,6 +58,36 @@ namespace TileEngine
 
         private int _maxColumns = 10;
 
+        public int MaxViewPortWidth
+        {
+            get { return _maxViewPortWidth; }
+            set { _maxViewPortWidth = value; }
+        }
+
+        public int MaxViewPortHeight
+        {
+            get { return _maxViewPortHeight; }
+            set { _maxViewPortHeight = value; }
+        }
+
+        public float Scale
+        {
+            get { return _scale; }
+            set { _scale = value; }
+        }
+
+        public int MaxRows
+        {
+            get { return _maxRows; }
+            set { _maxRows = value; }
+        }
+
+        public int MaxColumns
+        {
+            get { return _maxColumns; }
+            set { _maxColumns = value; }
+        }
+
         /// <summary>
         /// Default Constructor
         /// </summary>
@@ -139,13 +169,13 @@ namespace TileEngine
 
             _scale = _maxViewPortWidth / _maxColumns;
 
-            int startPosX = (int)centerLocation.X/64;//Where are we starting horizontally
-         
+            int startPosX = (int)centerLocation.X / 64;//Where are we starting horizontally
+
             //~~~~~~~~~~~~~~~~~DRAW LOGIC~~~~~~~~~~~~~~~~~~~~~
-            for (int x = 0; x < _maxColumns+1; x++)
+            for (int x = 0; x < _maxColumns + 1; x++)
             {
                 int startPosY = 0;
-                    //(int)centerLocation.Y;//Where are we starting vertically in the map layer
+                //(int)centerLocation.Y;//Where are we starting vertically in the map layer
 
                 for (int y = 0; y < _maxRows; y++)
                 {
@@ -154,7 +184,7 @@ namespace TileEngine
                     //TODO:  Space this out so the draw code is easier to understand.  #TODO
                     if (currentItem != null)
                         spriteBatch.Draw(currentItem.getTexture(),
-                                   new Vector2(x * currentItem.getTexture().Width *  (_scale / currentItem.getTexture().Width)-(int)centerLocation.X%64, 
+                                   new Vector2(x * currentItem.getTexture().Width * (_scale / currentItem.getTexture().Width) - (int)centerLocation.X % 64,
                                        startPosY * currentItem.getTexture().Height * (_scale / currentItem.getTexture().Width)),
                                    currentItem.getSourceRectangle(),
                                    currentItem.getTint(),

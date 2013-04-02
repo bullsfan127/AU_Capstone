@@ -15,34 +15,94 @@ namespace TileEngine
     public class Player : Avatar
     {
         //Current movement speeds for player
-        public Vector2 Movement;
+        private Vector2 _Movement;
 
         //current offset for centering map
-        public Vector2 offset;
+        private Vector2 _offset;
 
         // Animation representing the player
-        public Animation PlayerAnimation;
+        private Animation _PlayerAnimation;
 
         // State of the player
-        public bool Active;
+        private bool _Active;
 
         // Does player have armor
-        public bool armor;
+        private bool _armor;
 
         // Current health of the player
-        public int health;
+        private int _health;
 
         // Maximum health of the player
-        public int maxHealth = 3;
+        private int _maxHealth = 3;
 
         // ID of the weapon the player is holding
-        private int weapon;
+        private int _weapon;
 
         // The score for the current level
-        public int levelScore;
+        private int _levelScore;
 
         // The score for the entire game
-        public int totalScore = 0;
+        private int _totalScore = 0;
+
+        public Microsoft.Xna.Framework.Vector2 Movement
+        {
+            get { return _Movement; }
+            set { _Movement = value; }
+        }
+
+        public Microsoft.Xna.Framework.Vector2 Offset
+        {
+            get { return _offset; }
+            set { _offset = value; }
+        }
+
+        public TileEngine.Animation PlayerAnimation
+        {
+            get { return _PlayerAnimation; }
+            set { _PlayerAnimation = value; }
+        }
+
+        public bool Active
+        {
+            get { return _Active; }
+            set { _Active = value; }
+        }
+
+        public bool Armor
+        {
+            get { return _armor; }
+            set { _armor = value; }
+        }
+
+        public int Health
+        {
+            get { return _health; }
+            set { _health = value; }
+        }
+
+        public int MaxHealth
+        {
+            get { return _maxHealth; }
+            set { _maxHealth = value; }
+        }
+
+        public int Weapon
+        {
+            get { return _weapon; }
+            set { _weapon = value; }
+        }
+
+        public int LevelScore
+        {
+            get { return _levelScore; }
+            set { _levelScore = value; }
+        }
+
+        public int TotalScore
+        {
+            get { return _totalScore; }
+            set { _totalScore = value; }
+        }
 
         /// <summary>
         /// Default constructor for player
@@ -61,7 +121,7 @@ namespace TileEngine
             PlayerAnimation = new Animation();
 
             // Set the player's health to the maximum
-            health = this.maxHealth;
+            _health = this._maxHealth;
 
             // Set starting position of the player
             Position = position;
@@ -86,7 +146,7 @@ namespace TileEngine
             base.Update(gameTime);
 
             //Reset movement to still
-            Movement.X = 0;
+            _Movement.X = 0;
 
             PlayerAnimation.state = Animation.Animate.IDLE;
 
@@ -94,22 +154,22 @@ namespace TileEngine
             if (Keyboard.GetState().IsKeyDown(Keys.Left))
             {
                 PlayerAnimation.state = Animation.Animate.LMOVING;
-                Movement.X = -5;
+                _Movement.X = -5;
             }
 
             else if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
                 PlayerAnimation.state = Animation.Animate.RMOVING;
-                Movement.X = 5;
+                _Movement.X = 5;
             }
 
             //Keeping track of jumping/falling speed
             if (Keyboard.GetState().IsKeyDown(Keys.Up) && Position.Y == 372)
             {
-                Movement.Y += -20;
+                _Movement.Y += -20;
             }
 
-            Movement.Y += 1;
+            _Movement.Y += 1;
 
             //establish ceiling and floor
             if (Position.Y + Movement.Y < 0)//ceiling
@@ -119,17 +179,17 @@ namespace TileEngine
             else if (Position.Y + Movement.Y > 372)//floor
             {
                 Position = new Vector2(Position.X, 372);
-                Movement.Y = 0;
+                _Movement.Y = 0;
             }
             //establish left and right bound for "dead zone"
             if (Position.X + Movement.X > 500)
             {
-                offset.X += Position.X + Movement.X - 500;
+                _offset.X += Position.X + Movement.X - 500;
                 Position = new Vector2(500, Position.Y + Movement.Y);
             }
-            else if (Position.X + Movement.X < 100 && offset.X > 0)
+            else if (Position.X + Movement.X < 100 && _offset.X > 0)
             {
-                offset.X += Position.X + Movement.X - 100;
+                _offset.X += Position.X + Movement.X - 100;
                 Position = new Vector2(100, Position.Y + Movement.Y);
             }
             else
@@ -142,7 +202,7 @@ namespace TileEngine
             }
 
             PlayerAnimation.Update(gameTime);
-            map.Update(gameTime, offset);
+            map.Update(gameTime, _offset);
         }
 
         /// <summary>
@@ -162,13 +222,13 @@ namespace TileEngine
         /// Increase the health of the player
         /// </summary>
         /// <param name="change"></param>
-        /// 
+        ///
 
         public void increaseHealth(int change)
         {
-            if (this.health < this.maxHealth)
+            if (this._health < this._maxHealth)
             {
-                this.health += change;
+                this._health += change;
             }
         }
 
@@ -178,28 +238,27 @@ namespace TileEngine
         /// <param name="change"></param>
         public void decreaseHealth(int change)
         {
-            
-            if(hasArmor() && change == 1)
+            if (hasArmor() && change == 1)
             {
                 // Has armor and damaged 1
-                this.armor = false;
+                this._armor = false;
             }
             else if (hasArmor() && change > 1)
             {
                 // Has armor and damaged > 1
-                this.armor = false;
-                this.health -= (change - 1);
+                this._armor = false;
+                this._health -= (change - 1);
             }
-            else if (this.health > 0)
+            else if (this._health > 0)
             {
                 // Has no armor
-                this.health -= change;
+                this._health -= change;
             }
         }
 
         public void addArmor()
         {
-            this.armor = true;
+            this._armor = true;
         }
 
         /// <summary>
@@ -210,7 +269,7 @@ namespace TileEngine
         {
             // TODO - Do we need to update the graphic here too
             // or is that done at the next "update" command?
-            this.weapon = weapon;
+            this._weapon = weapon;
         }
 
         /// <summary>
@@ -220,7 +279,7 @@ namespace TileEngine
         public void increaseScore(int amount)
         {
             // Add the amount to the level score
-            this.levelScore += amount;
+            this._levelScore += amount;
         }
 
         /// <summary>
@@ -228,8 +287,8 @@ namespace TileEngine
         /// </summary>
         public void NextLevelScore()
         {
-            this.totalScore += this.levelScore;
-            this.levelScore = 0;
+            this._totalScore += this._levelScore;
+            this._levelScore = 0;
         }
 
         /// <summary>
@@ -238,7 +297,7 @@ namespace TileEngine
         /// <returns></returns>
         public int getLevelScore()
         {
-            return this.levelScore;
+            return this._levelScore;
         }
 
         /// <summary>
@@ -247,7 +306,7 @@ namespace TileEngine
         /// <returns></returns>
         public int getTotalScore()
         {
-            return this.totalScore;
+            return this._totalScore;
         }
 
         /// <summary>
@@ -256,7 +315,7 @@ namespace TileEngine
         /// <returns></returns>
         public int getHealth()
         {
-            return this.health;
+            return this._health;
         }
 
         /// <summary>
@@ -265,7 +324,7 @@ namespace TileEngine
         /// <returns></returns>
         public int getWeapon()
         {
-            return this.weapon;
+            return this._weapon;
         }
 
         /// <summary>
@@ -274,7 +333,7 @@ namespace TileEngine
         /// <returns></returns>
         public bool hasArmor()
         {
-            return this.armor;
+            return this._armor;
         }
     }
 }
