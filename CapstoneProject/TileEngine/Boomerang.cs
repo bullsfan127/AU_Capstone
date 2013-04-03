@@ -5,21 +5,19 @@ using System.Text;
 
 namespace TileEngine
 {
-    public class Coin : Item
+    public class Boomerang : Weapon
     {
 
         /// <summary>
-        /// Coin class - Increases score by 1
+        /// Boomerang class - Sets damage amount
         /// </summary>
-        public Coin()
+        public Boomerang()
         {
             spriteWidth = 64;
             spriteHeight = 128;
             spriteFrame = 2;
 
-            score = 1;
-
-            Active = false;
+            maxDamage = 1;
         }
     }
 }

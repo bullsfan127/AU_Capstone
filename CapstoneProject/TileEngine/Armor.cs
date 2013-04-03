@@ -20,5 +20,6 @@ namespace TileEngine
             armor = 1;
 
             Active = false;
+        }
     }
 }

@@ -35,8 +35,8 @@ namespace TileEngine
         // Maximum health of the player
         public int maxHealth = 3;
 
-        // ID of the weapon the player is holding
-        private int weapon;
+        // Weapon object of the weapon the player is holding
+        public Weapon weapon;
 
         // The score for the current level
         public int levelScore;
@@ -203,18 +203,7 @@ namespace TileEngine
         }
 
         /// <summary>
-        /// Change weapon
-        /// </summary>
-        /// <param name="weapon"></param>
-        public void changeWeapon(int weapon)
-        {
-            // TODO - Do we need to update the graphic here too
-            // or is that done at the next "update" command?
-            this.weapon = weapon;
-        }
-
-        /// <summary>
-        /// INcreases the score
+        /// Increases the score
         /// </summary>
         /// <param name="amount"></param>
         public void increaseScore(int amount)
@@ -263,9 +252,21 @@ namespace TileEngine
         /// Get the  current weapon
         /// </summary>
         /// <returns></returns>
-        public int getWeapon()
+        public Weapon getWeapon()
         {
             return this.weapon;
+        }
+
+        public void setWeapon(int weaponType)
+        {
+            if (weaponType == 1)
+            {
+                weapon = new Sword();
+            }
+            else if (weaponType == 2)
+            {
+                weapon = new Boomerang();
+            }
         }
 
         /// <summary>

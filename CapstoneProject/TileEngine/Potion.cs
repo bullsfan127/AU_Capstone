@@ -20,5 +20,6 @@ namespace TileEngine
             health = 1;
 
             Active = false;
+        }
     }
 }
