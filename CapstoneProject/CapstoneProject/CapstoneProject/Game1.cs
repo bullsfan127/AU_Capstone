@@ -14,6 +14,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using TileEngine;
+using MainMenu;
 
 /**************************************************
  * Added an XNA debugger, it can debug in real time,
@@ -28,6 +29,7 @@ namespace CapstoneProject
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        MainMenu.MainMenu menu;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Tile a;
@@ -56,6 +58,7 @@ namespace CapstoneProject
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferredBackBufferWidth = 600;
+            menu = new MainMenu.MainMenu(graphics, this.Content);
         }
 
         /// <summary>
@@ -69,7 +72,8 @@ namespace CapstoneProject
             currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
-
+            menu.Initialize(this.Window);
+            IsMouseVisible = true;
             player = new Player();
 
             gameMap = new Map();
@@ -108,6 +112,7 @@ namespace CapstoneProject
         /// </summary>
         protected override void LoadContent()
         {
+            menu.LoadContent();
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             //#FPS_COUNTER
@@ -143,6 +148,7 @@ namespace CapstoneProject
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            menu.Update(gameTime);
             Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
@@ -175,6 +181,7 @@ namespace CapstoneProject
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            menu.Draw(gameTime, spriteBatch);
 
             //#FPS_COUNTER
             counter.Draw(spriteBatch, gameTime);
