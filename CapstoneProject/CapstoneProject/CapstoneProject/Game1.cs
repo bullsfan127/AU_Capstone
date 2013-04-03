@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using CustomSerialization;
 
-using CustomSerialization;
-
 using DebugTerminal;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;

@@ -13,7 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationContent", "Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainMenu", "MainMenu\MainMenu\MainMenu.csproj", "{DABAE3EE-DC30-4D63-9EE0-D316FD42799F}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "MainMenuContent", "MainMenu\MainMenuContent\MainMenuContent.contentproj", "{E50EF684-3569-4924-9AF2-DA8AC186AACE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainMenuContent", "MainMenu\MainMenuContent\MainMenuContent.contentproj", "{E50EF684-3569-4924-9AF2-DA8AC186AACE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapEditor", "MapEditor\MapEditor\MapEditor.csproj", "{215AC7CB-2F9B-4EA2-B632-AFCDE1356CC8}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "MapEditorContent", "MapEditor\MapEditorContent\MapEditorContent.contentproj", "{C1156559-7B38-45FB-AD49-6E7E1A425B49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,12 @@ Global
 		{DABAE3EE-DC30-4D63-9EE0-D316FD42799F}.Release|x86.Build.0 = Release|x86
 		{E50EF684-3569-4924-9AF2-DA8AC186AACE}.Debug|x86.ActiveCfg = Debug|x86
 		{E50EF684-3569-4924-9AF2-DA8AC186AACE}.Release|x86.ActiveCfg = Release|x86
+		{215AC7CB-2F9B-4EA2-B632-AFCDE1356CC8}.Debug|x86.ActiveCfg = Debug|x86
+		{215AC7CB-2F9B-4EA2-B632-AFCDE1356CC8}.Debug|x86.Build.0 = Debug|x86
+		{215AC7CB-2F9B-4EA2-B632-AFCDE1356CC8}.Release|x86.ActiveCfg = Release|x86
+		{215AC7CB-2F9B-4EA2-B632-AFCDE1356CC8}.Release|x86.Build.0 = Release|x86
+		{C1156559-7B38-45FB-AD49-6E7E1A425B49}.Debug|x86.ActiveCfg = Debug|x86
+		{C1156559-7B38-45FB-AD49-6E7E1A425B49}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
