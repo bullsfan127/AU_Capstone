@@ -62,7 +62,7 @@ namespace MapEditor.GUI
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
 
-        FocalPoint _center = new FocalPoint(new Vector2(10, 10), 10, 10, 100, 60);
+        FocalPoint _center = new FocalPoint(new Vector2(10, 10), 10, 100, 50, 50);
        // enum currentLayer { GROUND, MASK, FRINGE }
         /// <summary>
         /// For determining what layer you are laying tiles in.
@@ -77,7 +77,7 @@ namespace MapEditor.GUI
        public MapWindow(SpriteBatch batch, GraphicsDeviceManager graphics, ContentManager Content)
        {
            _spritebatch = batch;
-           _location = new Rectangle(100, 50, 400, 400);
+           _location = new Rectangle(100, 100, 400, 400);
            currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
            currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
            currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
