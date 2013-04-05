@@ -20,50 +20,176 @@ namespace TileEngine
         // Hold the current state of the Animation
         public Animate state;
 
+        private int _sX;
+        private int _sY;
+        private int _sW;
+        private int _sH;
+        private int[] _dRect = new int[4];
+
+        public int[] DRect
+        {
+            get { return _dRect; }
+            set { _dRect = value; }
+        }
+
+        public int SX
+        {
+            get { return _sX; }
+            set { _sX = value; }
+        }
+
+        public int SY
+        {
+            get { return _sY; }
+            set { _sY = value; }
+        }
+
+        public int SW
+        {
+            get { return _sW; }
+            set { _sW = value; }
+        }
+
+        public int SH
+        {
+            get { return _sH; }
+            set { _sH = value; }
+        }
+
+        //public int[] Source
+        //{
+        //    get { return _source; }
+        //    set { _source = value; }
+        //}
+
         // Holds the last state of the animation
-        private Animate lastState;
+        private Animate _lastState;
 
         // The image representing the collection of images used for animation
-        Texture2D spriteStrip;
+        public Texture2D spriteStrip;
 
         // The scale used to display the sprite strip
-        float scale;
+        private float _scale;
 
         // The time since we last updated the frame
-        int elapsedTime;
+        private int _elapsedTime;
 
         // The time we display a frame until the next one
-        int frameTime;
+        private int _frameTime;
 
         // The number of frames that the animation contains
-        int frameCount;
+        private int _frameCount;
 
         // The index of the current frame we are displaying
-        public int currentFrame;
+        private int _currentFrame;
 
         // The color of the frame we will be displaying
-        Color color;
+        private Color _color;
 
         // The area of the image strip we want to display
-        public Rectangle sourceRect = new Rectangle();
+        private Rectangle _sourceRect = new Rectangle();
 
         // The area where we want to display the image strip in the game
-        public Rectangle destinationRect = new Rectangle();
+        private Rectangle _destinationRect = new Rectangle();
+
+        public Microsoft.Xna.Framework.Rectangle sourceRect
+        {
+            get { return _sourceRect; }
+            set { _sourceRect = value; }
+        }
+
+        public Microsoft.Xna.Framework.Rectangle destinationRect
+        {
+            get { return _destinationRect; }
+            set { _destinationRect = value; }
+        }
 
         // Width of a given frame
-        public int FrameWidth;
+        private int _FrameWidth;
 
         // Height of a given frame
-        public int FrameHeight;
+        private int _FrameHeight;
 
         // The state of the Animation
-        public bool Active;
+        private bool _Active;
 
         // Determines if the animation will keep playing or deactivate after one run
-        public bool Looping;
+        private bool _Looping;
 
         // Width of a given frame
-        public Vector2 Position;
+        private Vector2 _Position;
+
+        public TileEngine.Animation.Animate lastState
+        {
+            get { return _lastState; }
+            set { _lastState = value; }
+        }
+
+        public float scale
+        {
+            get { return _scale; }
+            set { _scale = value; }
+        }
+
+        public int elapsedTime
+        {
+            get { return _elapsedTime; }
+            set { _elapsedTime = value; }
+        }
+
+        public int frameTime
+        {
+            get { return _frameTime; }
+            set { _frameTime = value; }
+        }
+
+        public int frameCount
+        {
+            get { return _frameCount; }
+            set { _frameCount = value; }
+        }
+
+        public int currentFrame
+        {
+            get { return _currentFrame; }
+            set { _currentFrame = value; }
+        }
+
+        public Microsoft.Xna.Framework.Color color
+        {
+            get { return _color; }
+            set { _color = value; }
+        }
+
+        public int FrameWidth
+        {
+            get { return _FrameWidth; }
+            set { _FrameWidth = value; }
+        }
+
+        public int FrameHeight
+        {
+            get { return _FrameHeight; }
+            set { _FrameHeight = value; }
+        }
+
+        public bool Active
+        {
+            get { return _Active; }
+            set { _Active = value; }
+        }
+
+        public bool Looping
+        {
+            get { return _Looping; }
+            set { _Looping = value; }
+        }
+
+        public Microsoft.Xna.Framework.Vector2 Position
+        {
+            get { return _Position; }
+            set { _Position = value; }
+        }
 
         /// <summary>
         /// Initializes the Animation code
@@ -156,7 +282,7 @@ namespace TileEngine
             elapsedTime += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
             // If the elapsed time is larger than the frame time
             // we need to switch frames
-            
+
             if (elapsedTime > frameTime)
             {
                 // Move to the next frame
@@ -193,18 +319,23 @@ namespace TileEngine
                     if (Looping == false)
                         Active = false;
                 }
-
             }
 
             // Grab the correct frame in the image strip by multiplying the currentFrame index by the frame width
             sourceRect = new Rectangle(currentFrame * FrameWidth, 0, FrameWidth, FrameHeight);
-
+            SX = sourceRect.X;
+            SY = sourceRect.Y;
+            SH = sourceRect.Height;
+            SW = sourceRect.Width;
             // Grab the correct frame in the image strip by multiplying the currentFrame index by the frame width
             destinationRect = new Rectangle((int)Position.X,
             (int)Position.Y,
             (int)(FrameWidth * scale),
             (int)(FrameHeight * scale));
-
+            DRect[0] = destinationRect.X;
+            DRect[1] = destinationRect.Y;
+            DRect[2] = destinationRect.Width;
+            DRect[3] = destinationRect.Height;
             lastState = this.state;
         }
 

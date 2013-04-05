@@ -161,6 +161,17 @@ namespace TileEngine
                     }
                 }
             }
+
+            Texture2D playerTexture = contentManager.Load<Texture2D>("shitty3.0");
+            Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);
+            // this._Player.Texture = playerTexture;
+            this._Player.Position = playerPosition;
+            Rectangle srect = new Rectangle();
+            srect = new Rectangle(this._Player.PlayerAnimation.SX, this._Player.PlayerAnimation.SY, this._Player.PlayerAnimation.SW, this._Player.PlayerAnimation.SH);
+            this._Player.PlayerAnimation.sourceRect = srect;
+            this._Player.PlayerAnimation.spriteStrip = playerTexture;
+            this._Player.PlayerAnimation.destinationRect = new Rectangle(this._Player.PlayerAnimation.DRect[0], this._Player.PlayerAnimation.DRect[1], this._Player.PlayerAnimation.DRect[2], this._Player.PlayerAnimation.DRect[3]);
+            this._Player.PlayerAnimation.Position = this._Player.Position;
         }
     }
 }

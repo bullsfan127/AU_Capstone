@@ -20,9 +20,6 @@ namespace TileEngine
         //current offset for centering map
         private Vector2 _offset;
 
-        // Animation representing the player
-        private Animation _PlayerAnimation;
-
         // State of the player
         private bool _Active;
 
@@ -54,12 +51,6 @@ namespace TileEngine
         {
             get { return _offset; }
             set { _offset = value; }
-        }
-
-        public TileEngine.Animation PlayerAnimation
-        {
-            get { return _PlayerAnimation; }
-            set { _PlayerAnimation = value; }
         }
 
         public bool Active
@@ -116,7 +107,7 @@ namespace TileEngine
         /// </summary>
         /// <param name="spriteStrip"></param>
         /// <param name="position"></param>
-        public void Initialize(Texture2D spriteStrip, Vector2 position)
+        public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             PlayerAnimation = new Animation();
 
@@ -125,6 +116,7 @@ namespace TileEngine
 
             // Set starting position of the player
             Position = position;
+
             //player Animation initialize
             PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, true);
             // Set the player to be active
@@ -201,6 +193,8 @@ namespace TileEngine
                 Position = new Vector2(0, Position.Y);
             }
 
+            X = Position.X;
+            Y = Position.Y;
             PlayerAnimation.Update(gameTime);
             map.Update(gameTime, _offset);
         }
