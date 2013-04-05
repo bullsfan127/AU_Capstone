@@ -7,7 +7,6 @@ namespace TileEngine
 {
     public class Coin : Item
     {
-
         /// <summary>
         /// Coin class - Increases score by 1
         /// Offset by +19,+19 to center it within a tile
@@ -19,7 +18,6 @@ namespace TileEngine
             SpriteFrame = 2;
 
             Score = 1;
-
         }
     }
 }

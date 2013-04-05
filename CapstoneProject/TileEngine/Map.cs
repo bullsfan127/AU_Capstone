@@ -80,13 +80,13 @@ namespace TileEngine
         /// Updates all map specific components
         /// </summary>
         /// <param name="gameTime">The gameTime snapshot</param>
-        public void Update(GameTime gameTime,Vector2 offset)
+        public void Update(GameTime gameTime, Vector2 offset)
         {
             this.offset = offset;
             if (this.offset.X < 0)
             {
                 this.offset.X = 0;
-            }            
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -131,9 +131,46 @@ namespace TileEngine
             serializer.Save(this, true);
         }
 
-        public void LoadMap(string filename)
+        public Map LoadMap(string filename)
         {
-            serializer.Load("SaveGame.xml");
+            return serializer.Load("SaveGame.xml");
+        }
+
+        public void loadTiles(ContentManager contentManager)
+        {
+            for (int x = 0; x < 100; x++)
+            {
+                for (int y = 0; y < 100; y++)
+                {
+                    if (this._Fringe.Layer[x, y] != null)
+                    {
+                        this._Fringe.Layer[x, y].setTexture(contentManager.Load<Texture2D>(this._Fringe.Layer[x, y].Name));
+                        this._Fringe.Layer[x, y].setSourceRectangle(new Rectangle(0, 0, 64, 64));
+                    }
+
+                    if (this._Ground.Layer[x, y] != null)
+                    {
+                        this._Ground.Layer[x, y].setTexture(contentManager.Load<Texture2D>(this._Ground.Layer[x, y].Name));
+                        this._Ground.Layer[x, y].setSourceRectangle(new Rectangle(0, 0, 64, 64));
+                    }
+
+                    if (this._Mask.Layer[x, y] != null)
+                    {
+                        this._Mask.Layer[x, y].setTexture(contentManager.Load<Texture2D>(this._Mask.Layer[x, y].Name));
+                        this._Mask.Layer[x, y].setSourceRectangle(new Rectangle(0, 0, 64, 64));
+                    }
+                }
+            }
+
+            Texture2D playerTexture = contentManager.Load<Texture2D>("shitty3.0");
+            Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);
+            this._Player.Position = playerPosition;
+            Rectangle srect = new Rectangle();
+            srect = new Rectangle(this._Player.PlayerAnimation.SX, this._Player.PlayerAnimation.SY, this._Player.PlayerAnimation.SW, this._Player.PlayerAnimation.SH);
+            this._Player.PlayerAnimation.sourceRect = srect;
+            this._Player.PlayerAnimation.spriteStrip = playerTexture;
+            this._Player.PlayerAnimation.destinationRect = new Rectangle(this._Player.PlayerAnimation.DRect[0], this._Player.PlayerAnimation.DRect[1], this._Player.PlayerAnimation.DRect[2], this._Player.PlayerAnimation.DRect[3]);
+            this._Player.PlayerAnimation.Position = this._Player.Position;
         }
     }
 }

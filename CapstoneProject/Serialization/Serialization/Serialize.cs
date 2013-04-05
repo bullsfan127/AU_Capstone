@@ -58,7 +58,7 @@ namespace CustomSerialization
 
         XmlSerializer serializer;
         Stream stream = null;
-        bool _complex = false;
+        bool _complex = true;
 
         /// <summary>
         /// Default Constructor
@@ -88,6 +88,7 @@ namespace CustomSerialization
         {
             if (_complex)
             {
+                complexSerializer = new SharpSerializer();
                 _classType = (T)complexSerializer.Deserialize(fileName);
                 complexSerializer = null;
 
@@ -131,6 +132,7 @@ namespace CustomSerialization
             {
                 complexSerializer = new SharpSerializer();
                 complexSerializer.Serialize(classType, FileName);
+                _classType = classType;
             }
             else
             {

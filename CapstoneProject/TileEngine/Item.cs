@@ -16,6 +16,7 @@ namespace TileEngine
     {
         // Width of the full image
         private int _spriteWidth;
+
         public int SpriteWidth
         {
             get { return _spriteWidth; }
@@ -24,6 +25,7 @@ namespace TileEngine
 
         // Height of the full image
         private int _spriteHeight;
+
         public int SpriteHeight
         {
             get { return _spriteHeight; }
@@ -32,14 +34,33 @@ namespace TileEngine
 
         // Total number of frames of the image
         private int _spriteFrame;
+
         public int SpriteFrame
         {
             get { return _spriteFrame; }
             set { _spriteFrame = value; }
         }
 
+        // State of the monster
+        private bool _active;
+
+        private int _weapon = 0;
+
+        public bool Active
+        {
+            get { return _active; }
+            set { _active = value; }
+        }
+
+        public int Weapon
+        {
+            get { return _weapon; }
+            set { _weapon = value; }
+        }
+
         // How much score is increased from this item
         private int _score = 0;
+
         public int Score
         {
             get { return _score; }
@@ -48,6 +69,7 @@ namespace TileEngine
 
         // How much health is increased from this item
         private int _health = 0;
+
         public int Health
         {
             get { return _health; }
@@ -56,6 +78,7 @@ namespace TileEngine
 
         // Does this item give armor or not
         private bool _armor = false;
+
         public bool Armor
         {
             get { return _armor; }
@@ -64,7 +87,6 @@ namespace TileEngine
 
         // The image of the item
         private Texture2D SpriteStrip;
-
 
         public void Initialize(Texture2D spriteStrip, Vector2 position)
         {

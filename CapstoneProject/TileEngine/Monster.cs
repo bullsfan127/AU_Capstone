@@ -65,7 +65,7 @@ namespace TileEngine
             set { _spriteFrame = value; }
         }
 
-        public void Initialize(Texture2D spriteStrip, Vector2 position)
+        public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             _monsterAnimation = new Animation();
 
@@ -108,6 +108,5 @@ namespace TileEngine
         {
             return this._health;
         }
-
     }
 }

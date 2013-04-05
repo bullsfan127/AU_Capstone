@@ -7,7 +7,6 @@ namespace TileEngine
 {
     public class Potion : Item
     {
-
         /// <summary>
         /// Potion class - Increases health by 1
         /// </summary>

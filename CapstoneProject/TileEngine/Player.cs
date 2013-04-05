@@ -14,62 +14,81 @@ namespace TileEngine
 {
     public class Player : Avatar
     {
-        // Current movement speeds for player
+        //Current movement speeds for player
         private Vector2 _movement;
-        public Vector2 Movement
+
+        //current offset for centering map
+        private Vector2 _offset;
+
+        // State of the player
+        private bool _active;
+
+        // Does player have armor
+        private bool _armor;
+
+        // Current health of the player
+        private int _health;
+
+        // Maximum health of the player
+        private int _maxHealth = 3;
+
+        // the weapon the player is holding
+        private Weapon _weapon;
+
+        // The score for the current level
+        private int _levelScore;
+
+        // The score for the entire game
+        private int _totalScore = 0;
+
+        public Microsoft.Xna.Framework.Vector2 Movement
         {
             get { return _movement; }
             set { _movement = value; }
         }
 
-        // Current offset for centering map
-        private Vector2 _offset;
-        public Vector2 Offset
+        public Microsoft.Xna.Framework.Vector2 Offset
         {
             get { return _offset; }
             set { _offset = value; }
         }
 
-        // Animation representing the player
-        public Animation PlayerAnimation;
+        public bool Active
+        {
+            get { return _active; }
+            set { _active = value; }
+        }
 
-        // Does the player have armor
-        private bool _armor;
         public bool Armor
         {
             get { return _armor; }
             set { _armor = value; }
         }
 
-        // Current health of the player
-        private int _health;
         public int Health
         {
             get { return _health; }
             set { _health = value; }
         }
 
-        // Maximum health of the player
-        private int _maxHealth = 3;
         public int MaxHealth
         {
             get { return _maxHealth; }
             set { _maxHealth = value; }
         }
 
-        // Weapon object of the weapon the player is holding
-        private Weapon _weapon;
+        public Weapon Weapon
+        {
+            get { return _weapon; }
+            set { _weapon = value; }
+        }
 
-        // The score for the current level
-        private int _levelScore;
         public int LevelScore
         {
             get { return _levelScore; }
             set { _levelScore = value; }
         }
 
-        // The score for the entire game
-        private int _totalScore = 0;
         public int TotalScore
         {
             get { return _totalScore; }
@@ -88,7 +107,7 @@ namespace TileEngine
         /// </summary>
         /// <param name="spriteStrip"></param>
         /// <param name="position"></param>
-        public void Initialize(Texture2D spriteStrip, Vector2 position)
+        public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             PlayerAnimation = new Animation();
 
@@ -97,6 +116,7 @@ namespace TileEngine
 
             // Set starting position of the player
             Position = position;
+
             //player Animation initialize
             PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, true);
             // Set the player to be active
@@ -118,6 +138,7 @@ namespace TileEngine
             base.Update(gameTime);
 
             //Reset movement to still
+
             _movement.X = 0;
 
             PlayerAnimation.state = Animation.Animate.IDLE;
@@ -126,6 +147,7 @@ namespace TileEngine
             if (Keyboard.GetState().IsKeyDown(Keys.Left))
             {
                 PlayerAnimation.state = Animation.Animate.LMOVING;
+
                 _movement.X = -5;
             }
 
@@ -151,6 +173,9 @@ namespace TileEngine
             else if (Position.Y + _movement.Y > 372)//floor
             {
                 Position = new Vector2(Position.X, 372);
+
+                _movement.Y = 0;
+
                 _movement.Y = 0;
             }
             //establish left and right bound for "dead zone"
@@ -163,6 +188,14 @@ namespace TileEngine
             {
                 _offset.X += Position.X + _movement.X - 100;
                 Position = new Vector2(100, Position.Y + _movement.Y);
+
+                _offset.X += Position.X + Movement.X - 500;
+                Position = new Vector2(500, Position.Y + Movement.Y);
+            }
+            else if (Position.X + Movement.X < 100 && _offset.X > 0)
+            {
+                _offset.X += Position.X + Movement.X - 100;
+                Position = new Vector2(100, Position.Y + Movement.Y);
             }
             else
             {
@@ -173,6 +206,8 @@ namespace TileEngine
                 Position = new Vector2(0, Position.Y);
             }
 
+            X = Position.X;
+            Y = Position.Y;
             PlayerAnimation.Update(gameTime);
             map.Update(gameTime, _offset);
         }
@@ -193,7 +228,9 @@ namespace TileEngine
         /// <summary>
         /// Increase the health of the player
         /// </summary>
+
         /// <param name="change">How much health to add</param>
+
         public void increaseHealth(int change)
         {
             if (this._health < this._maxHealth)
@@ -208,7 +245,7 @@ namespace TileEngine
         /// <param name="change">How much health to remove</param>
         public void decreaseHealth(int change)
         {
-            if(hasArmor() && change == 1)
+            if (hasArmor() && change == 1)
             {
                 // Has armor and damaged 1
                 this._armor = false;
@@ -232,6 +269,9 @@ namespace TileEngine
         public void addArmor()
         {
             this._armor = true;
+
+            // TODO - Do we need to update the graphic here too
+            // or is that done at the next "update" command?
         }
 
         /// <summary>
