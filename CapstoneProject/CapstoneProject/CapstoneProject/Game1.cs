@@ -33,7 +33,7 @@ namespace CapstoneProject
         DrawableLayer<Tile> currentLayer;
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
-
+        Coin coin = new Coin();
         // Represents the player
         Player player;
 
@@ -117,6 +117,9 @@ namespace CapstoneProject
             Texture2D playerTexture = Content.Load<Texture2D>("shitty3.0");
 
             player.Initialize(playerTexture, new Vector2(0, 0));
+
+            Texture2D coinTexture = Content.Load<Texture2D>("Coin");
+            coin.Initialize(coinTexture, new Vector2(19,19));
             // TODO: use this.Content to load your game content here
         }
 
@@ -148,7 +151,6 @@ namespace CapstoneProject
 
                 gameMap.LoadMap("Savegame.xml");
             }
-            
             player.Update(gameTime,gameMap);
             // TODO: Add your update logic here
             //#FPS_COUNTER
@@ -172,6 +174,8 @@ namespace CapstoneProject
             // gameMap.Player = new Avatar();
             // gameMap.Player.Position = Vector2.Zero;
             gameMap.Draw(spriteBatch, gameTime);
+            // TODO: Loop through all items instead of calling each one individually
+            coin.Draw(spriteBatch, gameTime);
             base.Draw(gameTime);
             Terminal.CheckDraw(false);
         }

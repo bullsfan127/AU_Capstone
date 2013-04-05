@@ -13,11 +13,11 @@ namespace TileEngine
         /// </summary>
         public Sword()
         {
-            spriteWidth = 64;
-            spriteHeight = 128;
-            spriteFrame = 2;
+            SpriteWidth = 64;
+            SpriteHeight = 128;
+            SpriteFrame = 2;
 
-            maxDamage = 1;
+            MaxDamage = 1;
         }
     }
 }

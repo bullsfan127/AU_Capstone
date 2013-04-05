@@ -14,61 +14,100 @@ namespace TileEngine
 {
     public class Item : Avatar
     {
-        // Animation representing the monster
-        public Animation ItemAnimation;
+        // Width of the full image
+        private int _spriteWidth;
+        public int SpriteWidth
+        {
+            get { return _spriteWidth; }
+            set { _spriteWidth = value; }
+        }
 
-        // State of the monster
-        public bool Active;
-        public int spriteWidth;
-        public int spriteHeight;
-        public int spriteFrame;
-        public int score = 0;
-        public int health = 0;
-        public int armor = 0;
-        public int weapon = 0;
+        // Height of the full image
+        private int _spriteHeight;
+        public int SpriteHeight
+        {
+            get { return _spriteHeight; }
+            set { _spriteHeight = value; }
+        }
+
+        // Total number of frames of the image
+        private int _spriteFrame;
+        public int SpriteFrame
+        {
+            get { return _spriteFrame; }
+            set { _spriteFrame = value; }
+        }
+
+        // How much score is increased from this item
+        private int _score = 0;
+        public int Score
+        {
+            get { return _score; }
+            set { _score = value; }
+        }
+
+        // How much health is increased from this item
+        private int _health = 0;
+        public int Health
+        {
+            get { return _health; }
+            set { _health = value; }
+        }
+
+        // Does this item give armor or not
+        private bool _armor = false;
+        public bool Armor
+        {
+            get { return _armor; }
+            set { _armor = value; }
+        }
+
+        // The image of the item
+        private Texture2D SpriteStrip;
+
 
         public void Initialize(Texture2D spriteStrip, Vector2 position)
         {
-            ItemAnimation = new Animation();
-
             // Set starting position of the player
             Position = position;
-
-            // TODO: Need to set correct image/location
-            ItemAnimation.Initialize(spriteStrip, position, spriteWidth, spriteHeight, spriteFrame, 250, Color.White, 1.0f, true);
-
-            // Set the player to be active
-            Active = true;
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-            ItemAnimation.Position = Position;
-            base.Update(gameTime);
-            ItemAnimation.Update(gameTime);
+            SpriteStrip = spriteStrip;
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            //going to need to check whether the
-            ItemAnimation.Draw(spriteBatch);
-
-            base.Draw(spriteBatch, gameTime);
+            spriteBatch.Begin();
+            // SpriteStip is image
+            // Position is x,y vector of image location
+            // 0.4f is scaling of image
+            spriteBatch.Draw(SpriteStrip, Position, null, Color.White, 0.0f, Vector2.Zero, 0.4f, SpriteEffects.None, 0.0f);
+            spriteBatch.End();
         }
 
+        /// <summary>
+        /// Get the amount of health this item restores
+        /// </summary>
+        /// <returns>Health increased</returns>
         public int getHealth()
         {
-            return health;
+            return _health;
         }
 
+        /// <summary>
+        /// Get the amount of score this item increases
+        /// </summary>
+        /// <returns>Score increased</returns>
         public int getScore()
         {
-            return score;
+            return _score;
         }
 
-        public int getArmor()
+        /// <summary>
+        /// Get whether this item is armor
+        /// </summary>
+        /// <returns>True for armor</returns>
+        public bool getArmor()
         {
-            return armor;
+            return _armor;
         }
     }
 }
