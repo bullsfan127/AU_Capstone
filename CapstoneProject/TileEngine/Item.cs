@@ -19,6 +19,7 @@ namespace TileEngine
 
         // State of the monster
         public bool Active;
+
         public int spriteWidth;
         public int spriteHeight;
         public int spriteFrame;
@@ -27,7 +28,7 @@ namespace TileEngine
         public int armor = 0;
         public int weapon = 0;
 
-        public void Initialize(Texture2D spriteStrip, Vector2 position)
+        public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             ItemAnimation = new Animation();
 

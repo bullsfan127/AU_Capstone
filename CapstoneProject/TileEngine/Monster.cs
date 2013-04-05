@@ -29,7 +29,7 @@ namespace TileEngine
         public int spriteHeight;
         public int spriteFrame;
 
-        public void Initialize(Texture2D spriteStrip, Vector2 position)
+        public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             MonsterAnimation = new Animation();
 
@@ -73,6 +73,5 @@ namespace TileEngine
         {
             return this.health;
         }
-
     }
 }

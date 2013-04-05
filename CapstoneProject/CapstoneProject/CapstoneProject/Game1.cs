@@ -1,8 +1,11 @@
+#define LOAD_FROM_FILE
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using CustomSerialization;
 using DebugTerminal;
+using MainMenu;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -11,7 +14,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using TileEngine;
-using MainMenu;
 
 /**************************************************
  * Added an XNA debugger, it can debug in real time,
@@ -33,9 +35,11 @@ namespace CapstoneProject
         /// Sets initital sate, if you want to skip the main menu for testing, just set the state to GAMESTATE.PLAY instead
         /// </summary>
         public static GAMESTATE gameState = GAMESTATE.MAINMENU;
+
         MainMenu.MainMenu menu;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+#if !LOAD_FROM_FILE
         Tile a;
         Tile b;
         Tile c;
@@ -43,6 +47,7 @@ namespace CapstoneProject
         DrawableLayer<Tile> currentLayer;
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
+#endif
 
         // Represents the player
         Player player;
@@ -51,9 +56,12 @@ namespace CapstoneProject
         Map gameMap;
 
 #if DEBUG
-       //#FPS_COUNTER
+
+        //#FPS_COUNTER
         private FPS_Counter counter;
-#endif 
+
+#endif
+
         /// <summary>
         /// Constructor for game, initilaizes the graphics device
         /// Sets root directory, bufer height and width
@@ -78,24 +86,25 @@ namespace CapstoneProject
             menu.Initialize(this.Window);
             IsMouseVisible = true;
 
+            player = new Player();
+            gameMap = new Map();
+#if !LOAD_FROM_FILE
             currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
+#else
+            gameMap = gameMap.LoadMap("Savegame.xml");
 
-            player = new Player();
+            gameMap.loadTiles(this.Content);
+            player = (Player)gameMap.Player;
+#endif
 
-            gameMap = new Map();
+#if !LOAD_FROM_FILE
             gameMap.Player = player;
-
-
             a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
             b = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
             c = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
-#if DEBUG            
-            //#FPS_COUNTER
-            counter = new FPS_Counter(graphics);
-            counter.setVisibility(true);
-#endif
+
             for (int x = 0; x < 100; x++)
             {
                 for (int y = 0; y < 100; y++)
@@ -112,6 +121,12 @@ namespace CapstoneProject
             gameMap.SwapMaskLayer(currentLayerA);
             gameMap.SwapGoundLayer(currentLayer);
             gameMap.SwapFringeLayer(currentLayerB);
+#endif
+#if DEBUG
+            //#FPS_COUNTER
+            counter = new FPS_Counter(graphics);
+            counter.setVisibility(true);
+#endif
             base.Initialize();
         }
 
@@ -130,7 +145,7 @@ namespace CapstoneProject
             Terminal.Init(this, spriteBatch, this.Content.Load<SpriteFont>("FPS"), graphics.GraphicsDevice);
             Terminal.SetSkin(TerminalThemeType.FIRE);
 #endif
-
+#if !LOAD_FROM_FILE
             a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
             a.Name = "Tiles//tile";
             b.setTexture(this.Content.Load<Texture2D>("Tiles//tileM"));
@@ -141,6 +156,8 @@ namespace CapstoneProject
             Texture2D playerTexture = Content.Load<Texture2D>("shitty3.0");
 
             player.Initialize(playerTexture, new Vector2(0, 0));
+#endif
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -177,10 +194,8 @@ namespace CapstoneProject
                         Map gameMap2 = gameMap;
                         gameMap = null;
                         gameMap = new Map();
-
                         gameMap = gameMap.LoadMap("Savegame.xml");
                         gameMap.loadTiles(this.Content);
-                        gameMap.Player = player;
                     }
 
                     player.Update(gameTime, gameMap);
@@ -189,8 +204,8 @@ namespace CapstoneProject
                     break;
             }
 #if DEBUG
-                    //#FPS_COUNTER
-                    counter.Update(gameTime);
+            //#FPS_COUNTER
+            counter.Update(gameTime);
             Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
 #endif
 
@@ -224,7 +239,6 @@ namespace CapstoneProject
             counter.Draw(spriteBatch, gameTime);
             Terminal.CheckDraw(false);
 #endif
-            
         }
     }
 }
