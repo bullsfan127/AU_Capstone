@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System.IO;
 
 
 namespace CapstoneProject
@@ -17,21 +18,32 @@ namespace CapstoneProject
     /// </summary>
     public class SoundManagement : Microsoft.Xna.Framework.GameComponent
     {
-        public SoundManagement(Game game)
-            : base(game)
+        private ContentManager _content;
+
+        public ContentManager Content
         {
-            // TODO: Construct any child components here
+            get { return _content; }
+            set { _content = value; }
         }
 
-        /// <summary>
-        /// Allows the game component to perform any initialization it needs to before starting
-        /// to run.  This is where it can query for any required services and load content.
-        /// </summary>
-        public override void Initialize()
-        {
-            // TODO: Add your initialization code here
+        private string[] songs = Directory.GetFiles("Songs", "*.wav")
+                                     .Select(path => Path.GetFileName(path))
+                                     .ToArray();
 
-            base.Initialize();
+        public SoundManagement(Game game, ContentManager content)
+            : base(game)
+        {
+            // Pass in content manager
+            _content = content;
+        }
+
+       
+        public override void LoadSong()
+        {
+
+            // Loading songs
+            _content.Load<Song>(songs[0]);
+            
         }
 
         /// <summary>
