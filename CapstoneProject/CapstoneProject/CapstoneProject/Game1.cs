@@ -2,9 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using CustomSerialization;
-
-using CustomSerialization;
-
 using DebugTerminal;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
@@ -14,6 +11,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using TileEngine;
+using MainMenu;
 
 /**************************************************
  * Added an XNA debugger, it can debug in real time,
@@ -23,16 +21,25 @@ using TileEngine;
 
 namespace CapstoneProject
 {
+    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3 };
+
     /// <summary>
     /// This is the main type for your game
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        /// <summary>
+        /// Keeps track of overall gamestate
+        /// Sets initital sate, if you want to skip the main menu for testing, just set the state to GAMESTATE.PLAY instead
+        /// </summary>
+        public static GAMESTATE gameState = GAMESTATE.MAINMENU;
+        MainMenu.MainMenu menu;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Tile a;
         Tile b;
         Tile c;
+
         DrawableLayer<Tile> currentLayer;
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
@@ -43,9 +50,10 @@ namespace CapstoneProject
         Serialize<Map> serializer = new Serialize<Map>();
         Map gameMap;
 
-        //#FPS_COUNTER
+#if DEBUG
+       //#FPS_COUNTER
         private FPS_Counter counter;
-
+#endif 
         /// <summary>
         /// Constructor for game, initilaizes the graphics device
         /// Sets root directory, bufer height and width
@@ -56,6 +64,7 @@ namespace CapstoneProject
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferredBackBufferWidth = 600;
+            menu = new MainMenu.MainMenu(graphics, this.Content);
         }
 
         /// <summary>
@@ -66,6 +75,9 @@ namespace CapstoneProject
         /// </summary>
         protected override void Initialize()
         {
+            menu.Initialize(this.Window);
+            IsMouseVisible = true;
+
             currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
@@ -75,12 +87,13 @@ namespace CapstoneProject
             gameMap = new Map();
             gameMap.Player = player;
 
-            //#FPS_COUNTER
-            counter = new FPS_Counter(graphics);
+
             a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
             b = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
             c = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
-#if DEBUG
+#if DEBUG            
+            //#FPS_COUNTER
+            counter = new FPS_Counter(graphics);
             counter.setVisibility(true);
 #endif
             for (int x = 0; x < 100; x++)
@@ -108,12 +121,16 @@ namespace CapstoneProject
         /// </summary>
         protected override void LoadContent()
         {
+            menu.LoadContent();
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+#if DEBUG
             //#FPS_COUNTER
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
             Terminal.Init(this, spriteBatch, this.Content.Load<SpriteFont>("FPS"), graphics.GraphicsDevice);
             Terminal.SetSkin(TerminalThemeType.FIRE);
+#endif
+
             a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
             a.Name = "Tiles//tile";
             b.setTexture(this.Content.Load<Texture2D>("Tiles//tileM"));
@@ -143,28 +160,40 @@ namespace CapstoneProject
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
-            KeyboardState keystate = Keyboard.GetState();
-            if (keystate.IsKeyDown(Keys.S))
+            switch (gameState)
             {
-                //  graphics.ToggleFullScreen();
-                gameMap.saveMap();
-                Map gameMap2 = gameMap;
-                gameMap = null;
-                gameMap = new Map();
+                case GAMESTATE.MAINMENU:
+                    menu.Update(gameTime);
+                    break;
+                case GAMESTATE.PLAY:
+                    // Allows the game to exit
+                    if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+                        this.Exit();
+                    KeyboardState keystate = Keyboard.GetState();
+                    if (keystate.IsKeyDown(Keys.S))
+                    {
+                        //  graphics.ToggleFullScreen();
+                        gameMap.saveMap();
+                        Map gameMap2 = gameMap;
+                        gameMap = null;
+                        gameMap = new Map();
 
-                gameMap = gameMap.LoadMap("Savegame.xml");
-                gameMap.loadTiles(this.Content);
-                gameMap.Player = player;
+                        gameMap = gameMap.LoadMap("Savegame.xml");
+                        gameMap.loadTiles(this.Content);
+                        gameMap.Player = player;
+                    }
+
+                    player.Update(gameTime, gameMap);
+                    // TODO: Add your update logic here
+
+                    break;
             }
+#if DEBUG
+                    //#FPS_COUNTER
+                    counter.Update(gameTime);
+            Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
+#endif
 
-            player.Update(gameTime, gameMap);
-            // TODO: Add your update logic here
-            //#FPS_COUNTER
-            counter.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -174,14 +203,28 @@ namespace CapstoneProject
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            switch (gameState)
+            {
+                case GAMESTATE.MAINMENU:
+                    GraphicsDevice.Clear(Color.Black);
+                    menu.Draw(gameTime, spriteBatch);
+                    break;
+                case GAMESTATE.PLAY:
+                    GraphicsDevice.Clear(Color.CornflowerBlue);
+                    gameMap.Draw(spriteBatch, gameTime);
+                    base.Draw(gameTime);
+                    break;
+                case GAMESTATE.EXIT:
+                    this.Exit();
+                    break;
+            }
 
+#if DEBUG
             //#FPS_COUNTER
             counter.Draw(spriteBatch, gameTime);
-
-            gameMap.Draw(spriteBatch, gameTime);
-            base.Draw(gameTime);
             Terminal.CheckDraw(false);
+#endif
+            
         }
     }
 }

@@ -11,10 +11,10 @@ using Microsoft.Xna.Framework.Media;
 
 namespace MainMenu
 {
-    public class MainMenu : Microsoft.Xna.Framework.Game
+    public class MainMenu
     {
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        //  SpriteBatch spriteBatch;
         // Global variables
 
         private enum BState
@@ -39,7 +39,7 @@ namespace MainMenu
         BState[] button_state = new BState[NUMBER_OF_BUTTONS];
         Texture2D[] button_texture = new Texture2D[NUMBER_OF_BUTTONS];
         double[] button_timer = new double[NUMBER_OF_BUTTONS];
-
+        ContentManager Content;
         //mouse pressed and mouse just pressed
         bool mpressed, prev_mpressed = false;
 
@@ -48,10 +48,11 @@ namespace MainMenu
 
         double frame_time;
 
-        public MainMenu()
+        public MainMenu(GraphicsDeviceManager _graphics, ContentManager content)
         {
-            graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
+            Content = content;
+            graphics = _graphics;
+            //  Content.RootDirectory = "Content";
         }
 
         /// <summary>
@@ -60,11 +61,10 @@ namespace MainMenu
         /// related content.  Calling base.Initialize will enumerate through any components
         /// and initialize them as well.
         /// </summary>
-        protected override void Initialize()
+        public void Initialize(GameWindow Window)
         {
             // TODO: Add your initialization logic here
 
-            base.Initialize();
             // starting x and y locations to stack buttons
             // vertically in the middle of the screen
             int x = Window.ClientBounds.Width / 2 - BUTTON_WIDTH / 2;
@@ -79,7 +79,7 @@ namespace MainMenu
                 button_rectangle[i] = new Rectangle(x, y, BUTTON_WIDTH, BUTTON_HEIGHT);
                 y += BUTTON_HEIGHT;
             }
-            IsMouseVisible = true;
+            //  IsMouseVisible = true;
             background_color = Color.Firebrick;
         }
 
@@ -87,10 +87,8 @@ namespace MainMenu
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
-        protected override void LoadContent()
+        public void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
             button_texture[NEWGAME_BUTTON_INDEX] =
@@ -107,7 +105,7 @@ namespace MainMenu
         /// UnloadContent will be called once per game and is the place to unload
         /// all content.
         /// </summary>
-        protected override void UnloadContent()
+        protected void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
         }
@@ -117,15 +115,15 @@ namespace MainMenu
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
+                //this.Exit();
 
-            // TODO: Add your update logic here
-            // get elapsed frame time in seconds
-            frame_time = gameTime.ElapsedGameTime.Milliseconds / 1000.0;
+                // TODO: Add your update logic here
+                // get elapsed frame time in seconds
+                frame_time = gameTime.ElapsedGameTime.Milliseconds / 1000.0;
 
             // update mouse variables
             MouseState mouse_state = Mouse.GetState();
@@ -135,27 +133,23 @@ namespace MainMenu
             mpressed = mouse_state.LeftButton == ButtonState.Pressed;
 
             update_buttons();
-            base.Update(gameTime);
         }
 
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Draw(GameTime gameTime)
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            GraphicsDevice.Clear(Color.Firebrick);
-            GraphicsDevice.Clear(background_color);
+            //  GraphicsDevice.Clear(Color.Firebrick);
+            //  GraphicsDevice.Clear(background_color);
 
             spriteBatch.Begin();
             for (int i = 0; i < NUMBER_OF_BUTTONS; i++)
                 spriteBatch.Draw(button_texture[i], button_rectangle[i], button_color[i]);
             spriteBatch.End();
-            base.Draw(gameTime);
 
-            // TODO: Add your drawing code here
 
-            base.Draw(gameTime);
         }
 
         private Boolean hit_image_alpha(Rectangle rect, Texture2D tex, int x, int y)
@@ -249,7 +243,7 @@ namespace MainMenu
             switch (i)
             {
                 case NEWGAME_BUTTON_INDEX:
-                    background_color = Color.Green;
+                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PLAY;
                     break;
                 case CONTINUE_BUTTON_INDEX:
                     background_color = Color.Yellow;
@@ -258,7 +252,7 @@ namespace MainMenu
                     background_color = Color.Red;
                     break;
                 case EXIT_BUTTON_INDEX:
-                    Exit();
+                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.EXIT;
                     break;
                 default:
                     break;
