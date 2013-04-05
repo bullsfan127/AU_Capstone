@@ -29,6 +29,7 @@ namespace CapstoneProject
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        
         /// <summary>
         /// Keeps track of overall gamestate
         /// Sets initital sate, if you want to skip the main menu for testing, just set the state to GAMESTATE.PLAY instead
@@ -48,6 +49,9 @@ namespace CapstoneProject
 
         // Represents the player
         Player player;
+
+        //Health Bar
+        HealthBar healthBar;
 
         Serialize<Map> serializer = new Serialize<Map>();
         Map gameMap;
@@ -86,10 +90,13 @@ namespace CapstoneProject
             currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
 
             player = new Player();
+      
+
 
             gameMap = new Map();
             gameMap.Player = player;
-
+           
+           
 
             a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
             b = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
@@ -145,6 +152,7 @@ namespace CapstoneProject
             Texture2D playerTexture = Content.Load<Texture2D>("shitty3.0");
 
             player.Initialize(playerTexture, new Vector2(0, 0));
+            
             // TODO: use this.Content to load your game content here
         }
 

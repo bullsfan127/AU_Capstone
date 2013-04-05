@@ -100,6 +100,7 @@
     <Compile Include="Coin.cs" />
     <Compile Include="FlyingMonster.cs" />
     <Compile Include="GroundMonster.cs" />
+    <Compile Include="HealthBar.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="Player.cs" />
