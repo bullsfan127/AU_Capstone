@@ -65,7 +65,7 @@ namespace MapEditor.GUI
            _spriteStrip = intialTilesheet;
        
        }
-
+       
 
        
 
