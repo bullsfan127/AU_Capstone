@@ -5,13 +5,15 @@ Content\Tiles\tileF.xnb
 Content\shitty.xnb
 Content\shitty2.0.xnb
 Content\shitty2.0test.xnb
+Content\Settings.xnb
+Content\Exit.xnb
 Content\shitty3.0.xnb
 Content\Boomerang.xnb
 Content\Coin.xnb
 Content\Tiles\FinalGrid.xnb
 Content\Potion.xnb
 Content\Continue.xnb
-Content\Settings.xnb
-Content\Exit.xnb
 Content\NewGame.xnb
+Content\Resume.xnb
+Content\MainMenu.xnb
 Content\FPS.xnb

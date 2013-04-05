@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using TileEngine;
 using MainMenu;
+using PauseMenu;
 
 /**************************************************
  * Added an XNA debugger, it can debug in real time,
@@ -21,7 +22,7 @@ using MainMenu;
 
 namespace CapstoneProject
 {
-    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3 };
+    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, PAUSEMENU = 4 };
 
     /// <summary>
     /// This is the main type for your game
@@ -34,6 +35,7 @@ namespace CapstoneProject
         /// </summary>
         public static GAMESTATE gameState = GAMESTATE.MAINMENU;
         MainMenu.MainMenu menu;
+        PauseMenu.PauseMenu pauseMenu;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Tile a;
@@ -65,6 +67,7 @@ namespace CapstoneProject
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferredBackBufferWidth = 600;
             menu = new MainMenu.MainMenu(graphics, this.Content);
+            pauseMenu = new PauseMenu.PauseMenu(graphics, this.Content);
         }
 
         /// <summary>
@@ -122,6 +125,7 @@ namespace CapstoneProject
         protected override void LoadContent()
         {
             menu.LoadContent();
+            pauseMenu.LoadContent();
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 #if DEBUG
@@ -160,16 +164,27 @@ namespace CapstoneProject
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+          
+
             switch (gameState)
             {
                 case GAMESTATE.MAINMENU:
                     menu.Update(gameTime);
                     break;
+                case GAMESTATE.PAUSEMENU:
+                    pauseMenu.Update(gameTime);
+                    break;    
                 case GAMESTATE.PLAY:
                     // Allows the game to exit
                     if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                         this.Exit();
+
                     KeyboardState keystate = Keyboard.GetState();
+                    if (keystate.IsKeyDown(Keys.P))
+                    {
+                        CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSEMENU;
+
+                    }
                     if (keystate.IsKeyDown(Keys.S))
                     {
                         //  graphics.ToggleFullScreen();
@@ -213,6 +228,10 @@ namespace CapstoneProject
                     GraphicsDevice.Clear(Color.CornflowerBlue);
                     gameMap.Draw(spriteBatch, gameTime);
                     base.Draw(gameTime);
+                    break;
+                case GAMESTATE.PAUSE:
+                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
+                    pauseMenu.Draw(gameTime, spriteBatch);
                     break;
                 case GAMESTATE.EXIT:
                     this.Exit();

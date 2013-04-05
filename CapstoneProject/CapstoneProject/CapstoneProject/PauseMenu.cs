@@ -9,13 +9,15 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-namespace MainMenu
+
+namespace PauseMenu
 {
-    public class MainMenu
+    /// <summary>
+    /// This is a game component that implements IUpdateable.
+    /// </summary>
+    public class PauseMenu 
     {
         GraphicsDeviceManager graphics;
-        //  SpriteBatch spriteBatch;
-        // Global variables
 
         private enum BState
         {
@@ -27,9 +29,9 @@ namespace MainMenu
 
         const int NUMBER_OF_BUTTONS = 4,
 
-            NEWGAME_BUTTON_INDEX = 0,
-            CONTINUE_BUTTON_INDEX = 1,
-            SETTINGS_BUTTON_INDEX = 2,
+            RESUME_BUTTON_INDEX = 0,
+            SETTINGS_BUTTON_INDEX = 1,
+            MAINMENU_BUTTON_INDEX = 2,
             EXIT_BUTTON_INDEX = 3,
             BUTTON_HEIGHT = 40,
             BUTTON_WIDTH = 88;
@@ -48,23 +50,22 @@ namespace MainMenu
 
         double frame_time;
 
-        public MainMenu(GraphicsDeviceManager _graphics, ContentManager content)
+        public PauseMenu(GraphicsDeviceManager _graphics, ContentManager content)
         {
             Content = content;
             graphics = _graphics;
-            //  Content.RootDirectory = "Content";
+
+
         }
 
         /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
+        /// Allows the game component to perform any initialization it needs to before starting
+        /// to run.  This is where it can query for any required services and load content.
         /// </summary>
         public void Initialize(GameWindow Window)
         {
-            // TODO: Add your initialization logic here
-
+            // TODO: Add your initialization code here
+            
             // starting x and y locations to stack buttons
             // vertically in the middle of the screen
             int x = Window.ClientBounds.Width / 2 - BUTTON_WIDTH / 2;
@@ -79,51 +80,38 @@ namespace MainMenu
                 button_rectangle[i] = new Rectangle(x, y, BUTTON_WIDTH, BUTTON_HEIGHT);
                 y += BUTTON_HEIGHT;
             }
-            //  IsMouseVisible = true;
-            background_color = Color.Firebrick;
+            //IsMouseVisible = true;
+            background_color = Color.Beige;
+
         }
-
-        /// <summary>
-        /// LoadContent will be called once per game and is the place to load
-        /// all of your content.
-        /// </summary>
-        public void LoadContent()
+       public void LoadContent()
         {
-
+        
             // TODO: use this.Content to load your game content here
-            button_texture[NEWGAME_BUTTON_INDEX] =
-               Content.Load<Texture2D>("NewGame");
-            button_texture[CONTINUE_BUTTON_INDEX] =
-                Content.Load<Texture2D>("Resume");
+            button_texture[RESUME_BUTTON_INDEX] =
+               Content.Load<Texture2D>("Resume");
             button_texture[SETTINGS_BUTTON_INDEX] =
-                Content.Load<Texture2D>("Settings");
+           Content.Load<Texture2D>("Settings");
+            button_texture[MAINMENU_BUTTON_INDEX] =
+                Content.Load<Texture2D>("MainMenu");
             button_texture[EXIT_BUTTON_INDEX] =
                Content.Load<Texture2D>("Exit");
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// all content.
-        /// </summary>
-        protected void UnloadContent()
-        {
-            // TODO: Unload any non ContentManager content here
-        }
 
         /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
+        /// Allows the game component to update itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public void Update(GameTime gameTime)
         {
-            // Allows the game to exit
+            // TODO: Add your update code here
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 //this.Exit();
 
-                // TODO: Add your update logic here
-                // get elapsed frame time in seconds
-                frame_time = gameTime.ElapsedGameTime.Milliseconds / 1000.0;
+            // TODO: Add your update logic here
+            // get elapsed frame time in seconds
+            frame_time = gameTime.ElapsedGameTime.Milliseconds / 1000.0;
 
             // update mouse variables
             MouseState mouse_state = Mouse.GetState();
@@ -133,25 +121,17 @@ namespace MainMenu
             mpressed = mouse_state.LeftButton == ButtonState.Pressed;
 
             update_buttons();
+            
         }
-
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            //  GraphicsDevice.Clear(Color.Firebrick);
-            //  GraphicsDevice.Clear(background_color);
-
+           
             spriteBatch.Begin();
             for (int i = 0; i < NUMBER_OF_BUTTONS; i++)
                 spriteBatch.Draw(button_texture[i], button_rectangle[i], button_color[i]);
             spriteBatch.End();
-
-
+            
         }
-
         private Boolean hit_image_alpha(Rectangle rect, Texture2D tex, int x, int y)
         {
             return hit_image_alpha(0, 0, tex, tex.Width * (x - rect.X) /
@@ -242,15 +222,16 @@ namespace MainMenu
             //take action corresponding to which button was clicked
             switch (i)
             {
-                case NEWGAME_BUTTON_INDEX:
+                case RESUME_BUTTON_INDEX:
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PLAY;
                     break;
-                case CONTINUE_BUTTON_INDEX:
-                    background_color = Color.Yellow;
-                    break;
                 case SETTINGS_BUTTON_INDEX:
-                    background_color = Color.Red;
+
                     break;
+                case MAINMENU_BUTTON_INDEX:
+                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.MAINMENU;
+                    break;
+
                 case EXIT_BUTTON_INDEX:
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.EXIT;
                     break;
@@ -260,3 +241,7 @@ namespace MainMenu
         }
     }
 }
+
+
+
+
