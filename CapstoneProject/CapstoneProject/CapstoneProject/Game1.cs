@@ -22,7 +22,7 @@ using PauseMenu;
 
 namespace CapstoneProject
 {
-    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, PAUSEMENU = 4 };
+    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3};
 
     /// <summary>
     /// This is the main type for your game
@@ -83,6 +83,8 @@ namespace CapstoneProject
         protected override void Initialize()
         {
             menu.Initialize(this.Window);
+            pauseMenu.Initialize(this.Window);
+
             IsMouseVisible = true;
 
             currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
@@ -179,7 +181,7 @@ namespace CapstoneProject
                 case GAMESTATE.MAINMENU:
                     menu.Update(gameTime);
                     break;
-                case GAMESTATE.PAUSEMENU:
+                case GAMESTATE.PAUSE:
                     pauseMenu.Update(gameTime);
                     break;    
                 case GAMESTATE.PLAY:
@@ -190,7 +192,7 @@ namespace CapstoneProject
                     KeyboardState keystate = Keyboard.GetState();
                     if (keystate.IsKeyDown(Keys.P))
                     {
-                        CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSEMENU;
+                        CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
 
                     }
                     if (keystate.IsKeyDown(Keys.S))
@@ -235,17 +237,18 @@ namespace CapstoneProject
                 case GAMESTATE.PLAY:
                     GraphicsDevice.Clear(Color.CornflowerBlue);
                     gameMap.Draw(spriteBatch, gameTime);
-                    base.Draw(gameTime);
+                   
                     break;
                 case GAMESTATE.PAUSE:
-                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
+                   // CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
+                    GraphicsDevice.Clear(Color.Beige);
                     pauseMenu.Draw(gameTime, spriteBatch);
                     break;
                 case GAMESTATE.EXIT:
                     this.Exit();
                     break;
             }
-
+ base.Draw(gameTime);
 #if DEBUG
             //#FPS_COUNTER
             counter.Draw(spriteBatch, gameTime);
