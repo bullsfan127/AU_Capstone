@@ -56,12 +56,6 @@ namespace TileEngine
             set { _sH = value; }
         }
 
-        //public int[] Source
-        //{
-        //    get { return _source; }
-        //    set { _source = value; }
-        //}
-
         // Holds the last state of the animation
         private Animate _lastState;
 

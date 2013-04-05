@@ -164,7 +164,6 @@ namespace TileEngine
 
             Texture2D playerTexture = contentManager.Load<Texture2D>("shitty3.0");
             Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);
-            // this._Player.Texture = playerTexture;
             this._Player.Position = playerPosition;
             Rectangle srect = new Rectangle();
             srect = new Rectangle(this._Player.PlayerAnimation.SX, this._Player.PlayerAnimation.SY, this._Player.PlayerAnimation.SW, this._Player.PlayerAnimation.SH);

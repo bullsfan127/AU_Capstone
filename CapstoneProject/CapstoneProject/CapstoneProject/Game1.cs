@@ -1,3 +1,5 @@
+#define LOAD_FROM_FILE
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +39,7 @@ namespace CapstoneProject
         MainMenu.MainMenu menu;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+#if !LOAD_FROM_FILE
         Tile a;
         Tile b;
         Tile c;
@@ -44,6 +47,7 @@ namespace CapstoneProject
         DrawableLayer<Tile> currentLayer;
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
+#endif
 
         // Represents the player
         Player player;
@@ -82,44 +86,47 @@ namespace CapstoneProject
             menu.Initialize(this.Window);
             IsMouseVisible = true;
 
-            //currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
-            //currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
-            //currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
-
             player = new Player();
-
             gameMap = new Map();
+#if !LOAD_FROM_FILE
+            currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
+            currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
+            currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
+#else
             gameMap = gameMap.LoadMap("Savegame.xml");
 
             gameMap.loadTiles(this.Content);
-
             player = (Player)gameMap.Player;
-            //gameMap.Player = player;
+#endif
 
-            //a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
-            //b = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
-            //c = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
+#if !LOAD_FROM_FILE
+            gameMap.Player = player;
+            a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
+            b = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
+            c = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
+
+            for (int x = 0; x < 100; x++)
+            {
+                for (int y = 0; y < 100; y++)
+                {
+                    currentLayer.setItemAt(new Vector2(x, y), a);
+                    if (x % 3 == 0)
+                        currentLayerA.setItemAt(new Vector2(x, y), b);
+
+                    if (y % 3 == 0)
+                        currentLayerB.setItemAt(new Vector2(x, y), c);
+                }
+            }
+
+            gameMap.SwapMaskLayer(currentLayerA);
+            gameMap.SwapGoundLayer(currentLayer);
+            gameMap.SwapFringeLayer(currentLayerB);
+#endif
 #if DEBUG
             //#FPS_COUNTER
             counter = new FPS_Counter(graphics);
             counter.setVisibility(true);
 #endif
-            //for (int x = 0; x < 100; x++)
-            //{
-            //    for (int y = 0; y < 100; y++)
-            //    {
-            //        currentLayer.setItemAt(new Vector2(x, y), a);
-            //        if (x % 3 == 0)
-            //            currentLayerA.setItemAt(new Vector2(x, y), b);
-
-            //        if (y % 3 == 0)
-            //            currentLayerB.setItemAt(new Vector2(x, y), c);
-            //    }
-            //}
-
-            //gameMap.SwapMaskLayer(currentLayerA);
-            //gameMap.SwapGoundLayer(currentLayer);
-            //gameMap.SwapFringeLayer(currentLayerB);
             base.Initialize();
         }
 
@@ -138,17 +145,19 @@ namespace CapstoneProject
             Terminal.Init(this, spriteBatch, this.Content.Load<SpriteFont>("FPS"), graphics.GraphicsDevice);
             Terminal.SetSkin(TerminalThemeType.FIRE);
 #endif
+#if !LOAD_FROM_FILE
+            a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
+            a.Name = "Tiles//tile";
+            b.setTexture(this.Content.Load<Texture2D>("Tiles//tileM"));
+            b.Name = "Tiles//tileM";
+            c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
+            c.Name = "Tiles//tileF";
 
-            //a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
-            //a.Name = "Tiles//tile";
-            //b.setTexture(this.Content.Load<Texture2D>("Tiles//tileM"));
-            //b.Name = "Tiles//tileM";
-            //c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
-            //c.Name = "Tiles//tileF";
+            Texture2D playerTexture = Content.Load<Texture2D>("shitty3.0");
 
-            //Texture2D playerTexture = Content.Load<Texture2D>("shitty3.0");
+            player.Initialize(playerTexture, new Vector2(0, 0));
+#endif
 
-            //player.Initialize(playerTexture, new Vector2(0, 0));
             // TODO: use this.Content to load your game content here
         }
 
@@ -181,7 +190,6 @@ namespace CapstoneProject
                     if (keystate.IsKeyDown(Keys.S))
                     {
                         //  graphics.ToggleFullScreen();
-                        // gameMap.Player = player;
                         gameMap.saveMap();
                         Map gameMap2 = gameMap;
                         gameMap = null;
