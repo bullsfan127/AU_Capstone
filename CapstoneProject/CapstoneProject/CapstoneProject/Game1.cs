@@ -1,4 +1,4 @@
-#define LOAD_FROM_FILE
+//#define LOAD_FROM_FILE
 
 using System;
 using System.Collections.Generic;
