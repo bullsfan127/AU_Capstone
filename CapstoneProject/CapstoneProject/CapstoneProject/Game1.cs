@@ -72,6 +72,8 @@ namespace CapstoneProject
             graphics.PreferredBackBufferWidth = 600;
             menu = new MainMenu.MainMenu(graphics, this.Content);
             pauseMenu = new PauseMenu.PauseMenu(graphics, this.Content);
+            healthBar = new HealthBar(graphics, this.Content);
+
         }
 
         /// <summary>
@@ -135,6 +137,7 @@ namespace CapstoneProject
         {
             menu.LoadContent();
             pauseMenu.LoadContent();
+            healthBar.LoadContent();
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 #if DEBUG
@@ -185,6 +188,7 @@ namespace CapstoneProject
                     pauseMenu.Update(gameTime);
                     break;    
                 case GAMESTATE.PLAY:
+                    healthBar.Update(gameTime);
                     // Allows the game to exit
                     if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                         this.Exit();
@@ -237,7 +241,7 @@ namespace CapstoneProject
                 case GAMESTATE.PLAY:
                     GraphicsDevice.Clear(Color.CornflowerBlue);
                     gameMap.Draw(spriteBatch, gameTime);
-                   
+                    healthBar.Draw(gameTime, spriteBatch);
                     break;
                 case GAMESTATE.PAUSE:
                    // CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;

@@ -44,7 +44,7 @@ namespace TileEngine
         public void LoadContent()
         {
             texture = Content.Load<Texture2D>("AdvHealth");
-            position = new Vector2(600, 30);
+            position = new Vector2(400, 30);
             rectangle = new Rectangle(0, 0, texture.Width, texture.Height);
         }
 
