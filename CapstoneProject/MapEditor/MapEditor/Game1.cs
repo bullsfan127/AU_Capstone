@@ -16,12 +16,24 @@ namespace MapEditor
     /// <summary>
     /// This is the main type for your game
     /// </summary>
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class MapEditorMain : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Map _newMap = new Map();
 
-        public Game1()
+        DrawableLayer<Tile> _ground;
+        DrawableLayer<Tile> _mask;
+        DrawableLayer<Tile> _Fringe;
+
+        FocalPoint _center = new FocalPoint(new Vector2(10, 10), 10, 10, 100, 60);
+
+        enum currentLayer { GROUND, MASK, FRINGE}
+        /// <summary>
+        /// For determining what layer you are laying tiles in.
+        /// </summary>
+        currentLayer _currentLayer = currentLayer.GROUND;
+        public MapEditorMain()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -36,7 +48,9 @@ namespace MapEditor
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            _ground = new DrawableLayer<Tile>();
+            _mask = new DrawableLayer<Tile>();
+            _Fringe = new DrawableLayer<Tile>();
             base.Initialize();
         }
 
@@ -68,11 +82,13 @@ namespace MapEditor
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            _center.Update(gameTime);
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
-            // TODO: Add your update logic here
+            _newMap = new Map(_ground, _mask, _Fringe);
+            _newMap.Player = _center;
+            
 
             base.Update(gameTime);
         }
