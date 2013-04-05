@@ -243,7 +243,7 @@ namespace MainMenu
             switch (i)
             {
                 case NEWGAME_BUTTON_INDEX:
-                    background_color = Color.Green;
+                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PLAY;
                     break;
                 case CONTINUE_BUTTON_INDEX:
                     background_color = Color.Yellow;
@@ -252,7 +252,7 @@ namespace MainMenu
                     background_color = Color.Red;
                     break;
                 case EXIT_BUTTON_INDEX:
-                    // Exit();
+                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.EXIT;
                     break;
                 default:
                     break;
