@@ -9,16 +9,15 @@ namespace TileEngine
     {
         /// <summary>
         /// Coin class - Increases score by 1
+        /// Offset by +19,+19 to center it within a tile
         /// </summary>
         public Coin()
         {
-            spriteWidth = 64;
-            spriteHeight = 128;
-            spriteFrame = 2;
+            SpriteWidth = 64;
+            SpriteHeight = 64;
+            SpriteFrame = 2;
 
-            score = 1;
-
-            Active = false;
+            Score = 1;
         }
     }
 }

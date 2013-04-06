@@ -8,17 +8,15 @@ namespace TileEngine
     public class Armor : Item
     {
         /// <summary>
-        /// Armor class - Adds armor to the player (which increases health by 1)
+        /// Armor class - Adds armor to the player (which increases health by 1 indirectly)
         /// </summary>
         public Armor()
         {
-            spriteWidth = 64;
-            spriteHeight = 128;
-            spriteFrame = 2;
+            SpriteWidth = 64;
+            SpriteHeight = 128;
+            SpriteFrame = 2;
 
-            armor = 1;
-
-            Active = false;
+            Armor = true;
         }
     }
 }
