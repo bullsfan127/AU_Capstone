@@ -107,8 +107,7 @@ namespace CapstoneProject
             currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
 #else
-            gameMap = gameMap.LoadMap("Savegame.xml");
-            gameMap.loadTiles(this.Content);
+            gameMap = gameMap.LoadMap("Savegame.xml", this.Content);
             player = (Player)gameMap.Player;
 #endif
 
@@ -216,19 +215,22 @@ namespace CapstoneProject
                     }
                     if (keystate.IsKeyDown(Keys.S))
                     {
-                        //  graphics.ToggleFullScreen();
+                        //  save maap
                         gameMap.saveMap();
                         Map gameMap2 = gameMap;
                         gameMap = null;
                         gameMap = new Map();
-                        gameMap = gameMap.LoadMap("Savegame.xml");
-                        gameMap.loadTiles(this.Content);
+                        gameMap = gameMap.LoadMap("Savegame.xml", this.Content);
                         player = (Player)gameMap.Player;
+                    }
+
+                    if (keystate.IsKeyDown(Keys.F))
+                    {
+                        graphics.ToggleFullScreen();
                     }
 
                     player.Update(gameTime, gameMap);
                     // TODO: Add your update logic here
-
                     break;
             }
 

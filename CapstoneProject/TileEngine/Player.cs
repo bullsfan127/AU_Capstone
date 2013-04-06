@@ -15,11 +15,7 @@ namespace TileEngine
     public class Player : Avatar
     {
         //Current movement speeds for player
-
         private Vector2 _movement;
-
-        //current offset for centering map
-        private Vector2 _offset;
 
         // State of the player
         private bool _active;
@@ -46,12 +42,6 @@ namespace TileEngine
         {
             get { return _movement; }
             set { _movement = value; }
-        }
-
-        public Microsoft.Xna.Framework.Vector2 Offset
-        {
-            get { return _offset; }
-            set { _offset = value; }
         }
 
         public bool Active
@@ -197,9 +187,15 @@ namespace TileEngine
                 Position = new Vector2(0, Position.Y);
             }
 
+            //save position values
             X = Position.X;
             Y = Position.Y;
             PlayerAnimation.Update(gameTime);
+
+            //Save offset values
+            OX = _offset.X;
+            OY = _offset.Y;
+
             map.Update(gameTime, _offset);
         }
 

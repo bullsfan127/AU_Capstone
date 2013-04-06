@@ -15,15 +15,36 @@ namespace TileEngine
 {
     public abstract class Avatar
     {
-        private Texture2D _Texture;
+        //current offset for centering map
+        public Vector2 _offset;
 
-        public Microsoft.Xna.Framework.Graphics.Texture2D Texture
+        public Microsoft.Xna.Framework.Vector2 Offset
         {
-            get { return _Texture; }
-            set { _Texture = value; }
+            get { return _offset; }
+            set { _offset = value; }
         }
 
-        private Vector2 _Position;
+        /// <summary>
+        /// Save offset values for serialization
+        /// </summary>
+        private float _oX;
+
+        /// <summary>
+        /// Save offset values for serialization
+        /// </summary>
+        private float _oY;
+
+        public float OX
+        {
+            get { return _oX; }
+            set { _oX = value; }
+        }
+
+        public float OY
+        {
+            get { return _oY; }
+            set { _oY = value; }
+        }
 
         // Animation representing the player
         private Animation _PlayerAnimation;
@@ -34,7 +55,23 @@ namespace TileEngine
             set { _PlayerAnimation = value; }
         }
 
+        //Alows for the Postion
+        private Vector2 _Position;
+
+        public Vector2 Position
+        {
+            get { return _Position; }
+            set { _Position = value; }
+        }
+
+        /// <summary>
+        /// save position values for serialization
+        /// </summary>
         private float _x;
+
+        /// <summary>
+        /// save position values for serialization
+        /// </summary>
         private float _y;
 
         public float X
@@ -48,15 +85,6 @@ namespace TileEngine
             get { return _y; }
             set { _y = value; }
         }
-
-        //Alows for the Postion
-        public Vector2 Position
-        {
-            get { return _Position; }
-            set { _Position = value; }
-        }
-
-        // private Texture2D _Sprite;
 
         public Avatar() { }
 

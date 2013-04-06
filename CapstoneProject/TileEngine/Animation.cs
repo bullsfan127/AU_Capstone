@@ -20,40 +20,22 @@ namespace TileEngine
         // Hold the current state of the Animation
         public Animate state;
 
-        private int _sX;
-        private int _sY;
-        private int _sW;
-        private int _sH;
+        //Hold values to recreate Source Rectangle
+        private int[] _sRect = new int[4];
+
+        public int[] SRect
+        {
+            get { return _sRect; }
+            set { _sRect = value; }
+        }
+
+        //Hold values to recreate Destination Rectangle
         private int[] _dRect = new int[4];
 
         public int[] DRect
         {
             get { return _dRect; }
             set { _dRect = value; }
-        }
-
-        public int SX
-        {
-            get { return _sX; }
-            set { _sX = value; }
-        }
-
-        public int SY
-        {
-            get { return _sY; }
-            set { _sY = value; }
-        }
-
-        public int SW
-        {
-            get { return _sW; }
-            set { _sW = value; }
-        }
-
-        public int SH
-        {
-            get { return _sH; }
-            set { _sH = value; }
         }
 
         // Holds the last state of the animation
@@ -317,10 +299,11 @@ namespace TileEngine
 
             // Grab the correct frame in the image strip by multiplying the currentFrame index by the frame width
             sourceRect = new Rectangle(currentFrame * FrameWidth, 0, FrameWidth, FrameHeight);
-            SX = sourceRect.X;
-            SY = sourceRect.Y;
-            SH = sourceRect.Height;
-            SW = sourceRect.Width;
+            _sRect[0] = sourceRect.X;
+            _sRect[1] = sourceRect.Y;
+            _sRect[2] = sourceRect.Width;
+            _sRect[3] = sourceRect.Height;
+
             // Grab the correct frame in the image strip by multiplying the currentFrame index by the frame width
             destinationRect = new Rectangle((int)Position.X,
             (int)Position.Y,
@@ -330,6 +313,7 @@ namespace TileEngine
             DRect[1] = destinationRect.Y;
             DRect[2] = destinationRect.Width;
             DRect[3] = destinationRect.Height;
+
             lastState = this.state;
         }
 
