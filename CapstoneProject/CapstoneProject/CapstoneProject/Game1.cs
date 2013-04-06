@@ -13,8 +13,11 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-using TileEngine;
 using PauseMenu;
+
+using PauseMenu;
+
+using TileEngine;
 
 /**************************************************
  * Added an XNA debugger, it can debug in real time,
@@ -24,14 +27,13 @@ using PauseMenu;
 
 namespace CapstoneProject
 {
-    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3};
+    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3 };
 
     /// <summary>
     /// This is the main type for your game
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        
         /// <summary>
         /// Keeps track of overall gamestate
         /// Sets initital sate, if you want to skip the main menu for testing, just set the state to GAMESTATE.PLAY instead
@@ -42,6 +44,8 @@ namespace CapstoneProject
         PauseMenu.PauseMenu pauseMenu;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Coin coin = new Coin();
+
 #if !LOAD_FROM_FILE
         Tile a;
         Tile b;
@@ -81,7 +85,6 @@ namespace CapstoneProject
             menu = new MainMenu.MainMenu(graphics, this.Content);
             pauseMenu = new PauseMenu.PauseMenu(graphics, this.Content);
             healthBar = new HealthBar(graphics, this.Content);
-
         }
 
         /// <summary>
@@ -108,7 +111,6 @@ namespace CapstoneProject
             gameMap.loadTiles(this.Content);
             player = (Player)gameMap.Player;
 #endif
-      
 
 #if !LOAD_FROM_FILE
             gameMap.Player = player;
@@ -170,6 +172,10 @@ namespace CapstoneProject
             Texture2D playerTexture = Content.Load<Texture2D>("shitty3.0");
 
             player.Initialize(playerTexture, new Vector2(0, 0));
+
+            Texture2D coinTexture = Content.Load<Texture2D>("Coin");
+            coin.Initialize(coinTexture, new Vector2(19, 19));
+            // TODO: use this.Content to load your game content here
 #endif
         }
 
@@ -189,8 +195,6 @@ namespace CapstoneProject
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-          
-
             switch (gameState)
             {
                 case GAMESTATE.MAINMENU:
@@ -198,7 +202,7 @@ namespace CapstoneProject
                     break;
                 case GAMESTATE.PAUSE:
                     pauseMenu.Update(gameTime);
-                    break;    
+                    break;
                 case GAMESTATE.PLAY:
                     healthBar.Update(gameTime);
                     // Allows the game to exit
@@ -209,7 +213,6 @@ namespace CapstoneProject
                     if (keystate.IsKeyDown(Keys.P))
                     {
                         CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
-
                     }
                     if (keystate.IsKeyDown(Keys.S))
                     {
@@ -220,6 +223,7 @@ namespace CapstoneProject
                         gameMap = new Map();
                         gameMap = gameMap.LoadMap("Savegame.xml");
                         gameMap.loadTiles(this.Content);
+                        player = (Player)gameMap.Player;
                     }
 
                     player.Update(gameTime, gameMap);
@@ -227,7 +231,9 @@ namespace CapstoneProject
 
                     break;
             }
+
 #if DEBUG
+
             //#FPS_COUNTER
             counter.Update(gameTime);
             Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
@@ -252,9 +258,11 @@ namespace CapstoneProject
                     GraphicsDevice.Clear(Color.CornflowerBlue);
                     gameMap.Draw(spriteBatch, gameTime);
                     healthBar.Draw(gameTime, spriteBatch);
+                    // TODO: Loop through all items instead of calling each one individually
+                    coin.Draw(spriteBatch, gameTime);
                     break;
                 case GAMESTATE.PAUSE:
-                   // CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
+                    // CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
                     GraphicsDevice.Clear(Color.Beige);
                     pauseMenu.Draw(gameTime, spriteBatch);
                     break;
@@ -262,12 +270,14 @@ namespace CapstoneProject
                     this.Exit();
                     break;
             }
- base.Draw(gameTime);
+
 #if DEBUG
             //#FPS_COUNTER
             counter.Draw(spriteBatch, gameTime);
             Terminal.CheckDraw(false);
 #endif
+
+            base.Draw(gameTime);
         }
     }
 }

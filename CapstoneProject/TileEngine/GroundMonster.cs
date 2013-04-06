@@ -16,18 +16,16 @@ namespace TileEngine
     {
 
         /// <summary>
-        /// Default constructor for player
+        /// GroundMonster class - The monster that cannot fly
         /// </summary>
         public GroundMonster()
         {
-            spriteWidth = 64;
-            spriteHeight = 128;
-            spriteFrame = 2;
+            SpriteWidth = 64;
+            SpriteHeight = 128;
+            SpriteFrame = 2;
 
-            maxDamage = 1;
-            maxHealth = 1;
-
-            Active = false;
+            MaxDamage = 1;
+            MaxHealth = 1;
         }
     }
 }
