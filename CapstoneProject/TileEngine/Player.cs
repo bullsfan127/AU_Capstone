@@ -15,6 +15,7 @@ namespace TileEngine
     public class Player : Avatar
     {
         //Current movement speeds for player
+
         private Vector2 _movement;
 
         //current offset for centering map
@@ -154,6 +155,7 @@ namespace TileEngine
             else if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
                 PlayerAnimation.state = Animation.Animate.RMOVING;
+
                 _movement.X = 5;
             }
 
@@ -173,9 +175,6 @@ namespace TileEngine
             else if (Position.Y + _movement.Y > 372)//floor
             {
                 Position = new Vector2(Position.X, 372);
-
-                _movement.Y = 0;
-
                 _movement.Y = 0;
             }
             //establish left and right bound for "dead zone"
@@ -188,14 +187,6 @@ namespace TileEngine
             {
                 _offset.X += Position.X + _movement.X - 100;
                 Position = new Vector2(100, Position.Y + _movement.Y);
-
-                _offset.X += Position.X + Movement.X - 500;
-                Position = new Vector2(500, Position.Y + Movement.Y);
-            }
-            else if (Position.X + Movement.X < 100 && _offset.X > 0)
-            {
-                _offset.X += Position.X + Movement.X - 100;
-                Position = new Vector2(100, Position.Y + Movement.Y);
             }
             else
             {
@@ -228,9 +219,7 @@ namespace TileEngine
         /// <summary>
         /// Increase the health of the player
         /// </summary>
-
         /// <param name="change">How much health to add</param>
-
         public void increaseHealth(int change)
         {
             if (this._health < this._maxHealth)

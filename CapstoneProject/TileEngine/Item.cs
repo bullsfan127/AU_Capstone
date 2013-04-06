@@ -44,13 +44,13 @@ namespace TileEngine
         // State of the monster
         private bool _active;
 
-        private int _weapon = 0;
-
         public bool Active
         {
             get { return _active; }
             set { _active = value; }
         }
+
+        private int _weapon = 0;
 
         public int Weapon
         {

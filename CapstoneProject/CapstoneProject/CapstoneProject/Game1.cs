@@ -14,6 +14,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using PauseMenu;
+
+using PauseMenu;
+
 using TileEngine;
 
 /**************************************************
@@ -173,7 +176,6 @@ namespace CapstoneProject
             Texture2D coinTexture = Content.Load<Texture2D>("Coin");
             coin.Initialize(coinTexture, new Vector2(19, 19));
             // TODO: use this.Content to load your game content here
-
 #endif
         }
 
@@ -256,7 +258,6 @@ namespace CapstoneProject
                     GraphicsDevice.Clear(Color.CornflowerBlue);
                     gameMap.Draw(spriteBatch, gameTime);
                     healthBar.Draw(gameTime, spriteBatch);
-
                     // TODO: Loop through all items instead of calling each one individually
                     coin.Draw(spriteBatch, gameTime);
                     break;
@@ -269,6 +270,7 @@ namespace CapstoneProject
                     this.Exit();
                     break;
             }
+
 #if DEBUG
             //#FPS_COUNTER
             counter.Draw(spriteBatch, gameTime);
