@@ -5,22 +5,19 @@ using System.Text;
 
 namespace TileEngine
 {
-    public class FlyingMonster : Monster
+    public class Sword : Weapon
     {
 
         /// <summary>
-        /// FlyingMonster class - The monster that can fly
+        /// Sword class - Sets damage amount
         /// </summary>
-        public FlyingMonster()
+        public Sword()
         {
             SpriteWidth = 64;
             SpriteHeight = 128;
             SpriteFrame = 2;
 
             MaxDamage = 1;
-            MaxHealth = 1;
         }
-
-
     }
 }

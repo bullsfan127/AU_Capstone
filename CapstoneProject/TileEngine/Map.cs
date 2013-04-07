@@ -23,11 +23,11 @@ namespace TileEngine
         //offset to determine center of screen.
         Vector2 offset = Vector2.Zero;
 
+        CustomSerialization.Serialize<Map> serializer = new CustomSerialization.Serialize<Map>();
+
         //For now I'm hard coding the layers eventually we want to move to a list
         //based system.
         DrawableLayer<Tile> _Ground;
-
-        CustomSerialization.Serialize<Map> serializer = new CustomSerialization.Serialize<Map>();
 
         public DrawableLayer<Tile> Ground
         {
@@ -134,18 +134,37 @@ namespace TileEngine
                 _Fringe.swapLayer(swapLayer);
         }
 
-        public void saveMap(/*string filename*/)
+        /// <summary>
+        /// Save map to disk
+        /// </summary>
+        /// <param name="filename">The name you want to give the xml file</param>
+        public void saveMap(string filename = "SaveGame.xml")
         {
+            serializer.FileName = filename;
             serializer.Save(this, true);
         }
 
-        public Map LoadMap(string filename)
+        /// <summary>
+        /// Loads map from disk
+        /// </summary>
+        /// <param name="filename">Name of map being loaded</param>
+        /// <param name="contentManager">The contentManager to load textures</param>
+        /// <returns></returns>
+        public Map LoadMap(string filename, ContentManager contentManager)
         {
-            return serializer.Load("SaveGame.xml");
+            Map newMap = new Map();
+            newMap = serializer.Load("SaveGame.xml");
+            newMap.LoadExtraContent(contentManager);
+            return newMap;
         }
 
-        public void loadTiles(ContentManager contentManager)
+        /// <summary>
+        /// Loads extra content, that Serialization doesn't pick up
+        /// </summary>
+        /// <param name="contentManager">The content Manager to load textures</param>
+        public void LoadExtraContent(ContentManager contentManager)
         {
+            //Load layers and tiles
             for (int x = 0; x < 100; x++)
             {
                 for (int y = 0; y < 100; y++)
@@ -169,6 +188,20 @@ namespace TileEngine
                     }
                 }
             }
+
+            //load player
+            Texture2D playerTexture = contentManager.Load<Texture2D>("shitty3.0");
+            Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);
+            this._Player.Position = playerPosition;
+
+            //load playerAnimation
+            Rectangle srect = new Rectangle();
+            srect = new Rectangle(this._Player.PlayerAnimation.SRect[0], this._Player.PlayerAnimation.SRect[1], this._Player.PlayerAnimation.SRect[2], this._Player.PlayerAnimation.SRect[3]);
+            this._Player.PlayerAnimation.sourceRect = srect;
+            this._Player.PlayerAnimation.spriteStrip = playerTexture;
+            this._Player.PlayerAnimation.destinationRect = new Rectangle(this._Player.PlayerAnimation.DRect[0], this._Player.PlayerAnimation.DRect[1], this._Player.PlayerAnimation.DRect[2], this._Player.PlayerAnimation.DRect[3]);
+            this._Player.PlayerAnimation.Position = this._Player.Position;
+            this._Player.Offset = new Vector2(this._Player.OX, this.Player.OY);
         }
     }
 }

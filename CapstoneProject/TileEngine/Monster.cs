@@ -15,64 +15,98 @@ namespace TileEngine
     public class Monster : Avatar
     {
         // Animation representing the monster
-        public Animation MonsterAnimation;
+        private Animation _monsterAnimation;
 
-        // State of the monster
-        public bool Active;
-
-        // Current health of the monster
-        public int health;
-
-        public int maxHealth;
-        public int maxDamage;
-        public int spriteWidth;
-        public int spriteHeight;
-        public int spriteFrame;
-
-        public void Initialize(Texture2D spriteStrip, Vector2 position)
+        // Current health
+        private int _health;
+        public int Health
         {
-            MonsterAnimation = new Animation();
+            get { return _health; }
+            set { _health = value; }
+        }
 
-            // Set starting position of the player
+        // Maximum health
+        private int _maxHealth;
+        public int MaxHealth
+        {
+            get { return _maxHealth; }
+            set { _maxHealth = value; }
+        }
+
+        // Maximum damage
+        private int _maxDamage;
+        public int MaxDamage
+        {
+            get { return _maxDamage; }
+            set { _maxDamage = value; }
+        }
+
+        // Total width of the image
+        private int _spriteWidth;
+        public int SpriteWidth
+        {
+            get { return _spriteWidth; }
+            set { _spriteWidth = value; }
+        }
+
+        // Total height of the image
+        private int _spriteHeight;
+        public int SpriteHeight
+        {
+            get { return _spriteHeight; }
+            set { _spriteHeight = value; }
+        }
+
+        // Number of frames of the image
+        private int _spriteFrame;
+        public int SpriteFrame
+        {
+            get { return _spriteFrame; }
+            set { _spriteFrame = value; }
+        }
+
+        public override void Initialize(Texture2D spriteStrip, Vector2 position)
+        {
+            _monsterAnimation = new Animation();
+
+            // Set starting position of the monster
             Position = position;
 
             // TODO: Need to set correct image/location
-            MonsterAnimation.Initialize(spriteStrip, position, spriteWidth, spriteHeight, spriteFrame, 250, Color.White, 1.0f, true);
+            _monsterAnimation.Initialize(spriteStrip, position, _spriteWidth, _spriteHeight, _spriteFrame, 250, Color.White, 1.0f, true);
 
-            // Set the player to be active
-            Active = true;
+            // Set the monster to be active
+            _monsterAnimation.Active = true;
         }
 
         public override void Update(GameTime gameTime)
         {
-            MonsterAnimation.Position = Position;
-            base.Update(gameTime);
-            MonsterAnimation.Update(gameTime);
+            _monsterAnimation.Position = Position;
+            _monsterAnimation.Update(gameTime);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            //going to need to check whether the
-            MonsterAnimation.Draw(spriteBatch);
-
+            _monsterAnimation.Draw(spriteBatch);
             base.Draw(spriteBatch, gameTime);
         }
 
-        public void changeHealth(int change)
+        /// <summary>
+        /// Decrease the health of the monster
+        /// </summary>
+        /// <param name="change">The number of health to remove</param>
+        public void decreaseHealth(int change)
         {
-            // Add/subtract the change to the current health
-            this.health += change;
-
-            if (this.health < 0)
-            {
-                this.health = 0;
-            }
+            this._health -= change;
         }
 
+        /// <summary>
+        /// Get the health of the monster
+        /// </summary>
+        /// <returns>The current health of the monster</returns>
         public int getHealth()
         {
-            return this.health;
+            return this._health;
         }
-
     }
 }
