@@ -22,11 +22,13 @@ namespace MapEditor
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         MapWindow window;
-   
+        TileSelector tileSelector;
+        TileSheet sheets;
         public MapEditorMain()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            
         }
         
         /// <summary>
@@ -38,7 +40,7 @@ namespace MapEditor
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-           
+            IsMouseVisible = true;
             base.Initialize();
         }
 
@@ -51,6 +53,9 @@ namespace MapEditor
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             window = new MapWindow(spriteBatch, graphics, Content);
+            sheets = new TileSheet(this.Content.Load<Texture2D>("Tiles//FinalGrid"), 64, "Tiles//FinalGrid");
+            tileSelector = new TileSelector(spriteBatch, sheets, graphics.GraphicsDevice);
+            tileSelector._renderTarget = new Rectangle(graphics.GraphicsDevice.Viewport.Width - 320, 0, 320, 320);
             // TODO: use this.Content to load your game content here
         }
 
@@ -76,6 +81,7 @@ namespace MapEditor
                 this.Exit();
 
             window.Update(gameTime);
+            tileSelector.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -90,7 +96,7 @@ namespace MapEditor
 
             // TODO: Add your drawing code here
             window.Draw(gameTime);
-
+            tileSelector.Draw(gameTime);
             base.Draw(gameTime);
         }
     }

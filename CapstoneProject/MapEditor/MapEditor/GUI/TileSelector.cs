@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-
+using TileEngine;
 namespace MapEditor.GUI
 {
    public class TileSelector : IUpdateable, IDrawable
@@ -46,8 +46,8 @@ namespace MapEditor.GUI
         public event EventHandler<EventArgs> UpdateOrderChanged;
 #endregion
 
-       public Texture2D _spriteStrip;
-       public Texture2D _backGround;
+        public TileSheet _tileSheet;
+        public Texture2D _backGround;
        public Rectangle _renderTarget;
        public SpriteBatch _spritebatch;
        public Rectangle sourceRectangle;
@@ -59,10 +59,11 @@ namespace MapEditor.GUI
            set { _isTileSelected = value; }
        }
 
-       public TileSelector(SpriteBatch batch, Texture2D intialTilesheet)
+       public TileSelector(SpriteBatch batch, TileSheet intialTilesheet, GraphicsDevice graphicsDevice)
        {
            _spritebatch = batch;
-           _spriteStrip = intialTilesheet;
+          _tileSheet = intialTilesheet;
+          _backGround = new Texture2D(graphicsDevice, 320, 320, false, SurfaceFormat.Color);
        
        }
        
@@ -78,7 +79,8 @@ namespace MapEditor.GUI
         public void Draw(GameTime gameTime)
         {
             _spritebatch.Begin();
-            _spritebatch.Draw(_spriteStrip, _renderTarget, Color.White);
+            _spritebatch.Draw(_backGround, _renderTarget, Color.Gray);
+            _spritebatch.Draw(_tileSheet.tileSheet, _renderTarget, Color.White);
 
             _spritebatch.End();
         }

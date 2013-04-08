@@ -103,7 +103,7 @@ namespace TileEngine
             _Mask.Draw(spriteBatch, gameTime, offset, Location);
             _Player.Draw(spriteBatch, gameTime);
             _Fringe.Draw(spriteBatch, gameTime, offset, Location);
-        
+     
         }
 
         /// <summary>

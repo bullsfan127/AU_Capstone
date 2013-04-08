@@ -49,6 +49,12 @@ namespace MapEditor.GUI
         /// The location on the screen where we will be rendering the map.
         /// </summary>
         Rectangle _location;
+
+        public Rectangle Location
+        {
+            get { return _location; }
+            set { _location = value; }
+        }
         SpriteBatch _spritebatch;
         Map _map;
         DrawableLayer<Tile> _ground;
@@ -132,7 +138,7 @@ namespace MapEditor.GUI
         {
            //_map.Draw(_spritebatch, gameTime);
             _map.DrawInWindow(_spritebatch, gameTime, _location);
-        
+            
         }
         
     }
