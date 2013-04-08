@@ -63,23 +63,33 @@ namespace MapEditor.GUI
        {
            _spritebatch = batch;
           _tileSheet = intialTilesheet;
-          _backGround = new Texture2D(graphicsDevice, 320, 320, false, SurfaceFormat.Color);
-       
+          //_backGround = new Texture2D(graphicsDevice, 320, 320, false, SurfaceFormat.Color);
+          //Color[] a = new Color[320 * 320];
+          //for (int x = 0; x < 320; x++)
+          //{
+          //    for (int y = 0; y < 320; y++)
+          //    {
+          //        a[x * y] = Color.Gray;
+          //    }
+          //}
+          //_backGround.SetData<Color>(a);
+
+        
        }
-       
-
-       
 
 
-        public void Update(GameTime gameTime)
+
+
+
+       public void Update(GameTime gameTime)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Draw(GameTime gameTime)
         {
             _spritebatch.Begin();
-            _spritebatch.Draw(_backGround, _renderTarget, Color.Gray);
+           /// _spritebatch.Draw(_backGround, _renderTarget, Color.Gray);
             _spritebatch.Draw(_tileSheet.tileSheet, _renderTarget, Color.White);
 
             _spritebatch.End();

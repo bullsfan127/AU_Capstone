@@ -28,7 +28,10 @@ namespace MapEditor
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            
+
+            //I might add the ability to scale the window based on your needs
+             graphics.PreferredBackBufferWidth = 1280;
+             graphics.PreferredBackBufferHeight = 640;
         }
         
         /// <summary>
@@ -41,6 +44,7 @@ namespace MapEditor
         {
             // TODO: Add your initialization logic here
             IsMouseVisible = true;
+           
             base.Initialize();
         }
 
@@ -55,7 +59,7 @@ namespace MapEditor
             window = new MapWindow(spriteBatch, graphics, Content);
             sheets = new TileSheet(this.Content.Load<Texture2D>("Tiles//FinalGrid"), 64, "Tiles//FinalGrid");
             tileSelector = new TileSelector(spriteBatch, sheets, graphics.GraphicsDevice);
-            tileSelector._renderTarget = new Rectangle(graphics.GraphicsDevice.Viewport.Width - 320, 0, 320, 320);
+            tileSelector._renderTarget = new Rectangle(graphics.GraphicsDevice.Viewport.Width - 240, 0, 240, 240);
             // TODO: use this.Content to load your game content here
         }
 
@@ -79,6 +83,7 @@ namespace MapEditor
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+
 
             window.Update(gameTime);
             tileSelector.Update(gameTime);
