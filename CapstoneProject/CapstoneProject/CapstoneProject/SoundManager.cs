@@ -16,7 +16,7 @@ namespace CapstoneProject
     /// <summary>
     /// This is a game component that implements IUpdateable.
     /// </summary>
-    public class SoundManagement : Microsoft.Xna.Framework.GameComponent
+    public class SoundManager : Microsoft.Xna.Framework.GameComponent
     {
         private ContentManager _content;
 
@@ -26,11 +26,12 @@ namespace CapstoneProject
             set { _content = value; }
         }
 
-        private string[] songs = Directory.GetFiles("Songs", "*.wav")
+
+        private string[] songs = Directory.GetFiles(@"C:\Users\Emiliano\Documents\GitHub\AU_Capstone\CapstoneProject\CapstoneProject\CapstoneProjectContent\Songs", "*.wav")
                                      .Select(path => Path.GetFileName(path))
                                      .ToArray();
 
-        public SoundManagement(Game game, ContentManager content)
+        public SoundManager(Game game, ContentManager content)
             : base(game)
         {
             // Pass in content manager
@@ -38,12 +39,29 @@ namespace CapstoneProject
         }
 
        
-        public override void LoadSong()
+
+        public Song LoadSong()
         {
 
             // Loading songs
-            _content.Load<Song>(songs[0]);
+            return _content.Load<Song>("Songs\\" + songs[0]);
             
+        }
+
+        public void PlaySong(Song bgm)
+        {
+
+            // Play song
+            try
+            {
+                MediaPlayer.Play(bgm);
+
+                MediaPlayer.IsRepeating = true;
+            }
+            catch
+            {
+            }
+
         }
 
         /// <summary>

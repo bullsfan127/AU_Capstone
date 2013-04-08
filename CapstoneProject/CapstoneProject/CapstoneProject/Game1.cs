@@ -37,7 +37,8 @@ namespace CapstoneProject
         public static GAMESTATE gameState = GAMESTATE.MAINMENU;
 
         MainMenu.MainMenu menu;
-        SoundManagement soundManager;
+        SoundManager soundManager;
+        Song bgm;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 #if !LOAD_FROM_FILE
@@ -74,7 +75,7 @@ namespace CapstoneProject
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferredBackBufferWidth = 600;
             menu = new MainMenu.MainMenu(graphics, this.Content);
-            soundManager = new SoundManagement(this, this.Content);
+            soundManager = new SoundManager(this, this.Content);
         }
 
         /// <summary>
@@ -146,7 +147,10 @@ namespace CapstoneProject
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
             Terminal.Init(this, spriteBatch, this.Content.Load<SpriteFont>("FPS"), graphics.GraphicsDevice);
             Terminal.SetSkin(TerminalThemeType.FIRE);
-            
+
+            bgm = soundManager.LoadSong();
+
+            soundManager.PlaySong(bgm);
 #endif
 #if !LOAD_FROM_FILE
             a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
