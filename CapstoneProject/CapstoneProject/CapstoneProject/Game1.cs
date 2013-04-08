@@ -147,10 +147,9 @@ namespace CapstoneProject
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
             Terminal.Init(this, spriteBatch, this.Content.Load<SpriteFont>("FPS"), graphics.GraphicsDevice);
             Terminal.SetSkin(TerminalThemeType.FIRE);
+            soundManager.QueueSongs();
+            
 
-            bgm = soundManager.LoadSong();
-
-            soundManager.PlaySong(bgm);
 #endif
 #if !LOAD_FROM_FILE
             a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
@@ -203,11 +202,11 @@ namespace CapstoneProject
                         gameMap = new Map();
                         gameMap = gameMap.LoadMap("Savegame.xml");
                         gameMap.loadTiles(this.Content);
+                        soundManager.SwitchSong();                 
                     }
 
                     player.Update(gameTime, gameMap);
                     // TODO: Add your update logic here
-
                     break;
             }
 #if DEBUG
