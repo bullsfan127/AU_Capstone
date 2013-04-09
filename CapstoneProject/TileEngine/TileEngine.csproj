@@ -99,6 +99,7 @@
     <Compile Include="Avatar.cs" />
     <Compile Include="Boomerang.cs" />
     <Compile Include="Coin.cs" />
+    <Compile Include="Controls.cs" />
     <Compile Include="FlyingMonster.cs" />
     <Compile Include="GroundMonster.cs" />
     <Compile Include="HealthBar.cs" />

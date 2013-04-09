@@ -14,6 +14,15 @@ namespace TileEngine
 {
     public class Player : Avatar
     {
+        //holds the controls
+        private Controls _controls = new Controls();
+
+        public TileEngine.Controls Controls
+        {
+            get { return _controls; }
+            set { _controls = value; }
+        }
+
         //Current movement speeds for player
         private Vector2 _movement;
 
@@ -135,14 +144,14 @@ namespace TileEngine
             PlayerAnimation.state = Animation.Animate.IDLE;
 
             // Trying to move Left or Right
-            if (Keyboard.GetState().IsKeyDown(Keys.Left))
+            if (Keyboard.GetState().IsKeyDown(Controls.Left))
             {
                 PlayerAnimation.state = Animation.Animate.LMOVING;
 
                 _movement.X = -5;
             }
 
-            else if (Keyboard.GetState().IsKeyDown(Keys.Right))
+            else if (Keyboard.GetState().IsKeyDown(Controls.Right))
             {
                 PlayerAnimation.state = Animation.Animate.RMOVING;
 
@@ -150,7 +159,7 @@ namespace TileEngine
             }
 
             //Keeping track of jumping/falling speed
-            if (Keyboard.GetState().IsKeyDown(Keys.Up) && Position.Y == 372)
+            if (Keyboard.GetState().IsKeyDown(Controls.Up) && Position.Y == 372)
             {
                 _movement.Y += -20;
             }
