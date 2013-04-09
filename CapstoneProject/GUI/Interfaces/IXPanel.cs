@@ -21,30 +21,30 @@ namespace GUI.Interfaces
     public interface IXPanel : GComponent, IUpdateable
     {
        
-        Texture2D _BackGroundImage;
+        Texture2D _BackGroundImage{ get; set; }      
         /// <summary>
         /// Texture Drawn below the Child Components;
         /// </summary>
-        public Texture2D BackGroundImage
+         Texture2D BackGroundImage
         {
             get { return _BackGroundImage; }
             set { _BackGroundImage = value; }
         }
-        Vector2 _Position;
+        Vector2 _Position { get; set; }
         /// <summary>
         /// Position on the ViewPort
         /// </summary>
-        public Vector2 Position
+         Vector2 Position
         {
             get { return _Position; }
             set { _Position = value; }
         }
-        List<GComponent> _ChildComponents;
-        bool _Enabled;
+        List<GComponent> _ChildComponents { get; set; }
+        bool _Enabled { get; set; }
         /// <summary>
         /// Is the Component Enabled?
         /// </summary>
-        public bool Enabled
+         bool Enabled
         {
             get { return _Enabled; }
             set { _Enabled = value; }
@@ -54,20 +54,20 @@ namespace GUI.Interfaces
         /// </summary>
         /// <param name="childComponent">The Component you wish to add the Panel</param>
         /// <param name="Position">The Position in relatation to the top-Left of the Panel</param>
-        public void AddChild(GComponent childComponent, Vector2 Position);
+         void AddChild(GComponent childComponent, Vector2 Position);
         
         /// <summary>
         /// Updates all Child Components and its self.
         /// </summary>
         /// <param name="gameTime">GameTime</param>
-        public void Update(GameTime gameTime);
+         void Update(GameTime gameTime);
 
         /// <summary>
         /// Draws all its Children
         /// </summary>
         /// <param name="gameTime">gameTime</param>
         /// <param name="spriteBatch">SpriteBatch for Drawing.</param>
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch);
+         void Draw(GameTime gameTime, SpriteBatch spriteBatch);
         
     }
 }

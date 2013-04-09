@@ -21,33 +21,33 @@ namespace GUI.Interfaces
         /// <summary>
         /// The Button's Texture
         /// </summary>
-        private Texture2D _ButtonImage;
+         Texture2D _ButtonImage { get; set; }
 
-        public Texture2D ButtonImage
+         Texture2D ButtonImage
         {
             get { return _ButtonImage; }
             set { _ButtonImage = value; }
         }
-        private Rectangle _ButtonRep;
+         Rectangle _ButtonRep { get; set; }
 
         /// <summary>
         /// The Representation of the Button in the game world
         /// </summary>
-        public Rectangle ButtonRep
+         Rectangle ButtonRep
         {
             get { return _ButtonRep; }
             set { _ButtonRep = value; }
         }
-        private bool _Clicked;
-        private bool _WasClicked;
-        private bool _Enabled;
+         bool _Clicked { get; set; }
+         bool _WasClicked { get; set; }
+         bool _Enabled { get; set; }
 
-        Vector2 _Position;
+        Vector2 _Position { get; set; }
         
         /// <summary>
         /// Position of the Button on the Screen;
         /// </summary>
-        public Vector2 Position
+         Vector2 Position
         {
             get { return _Position; }
             set { _Position = value; }
@@ -55,7 +55,7 @@ namespace GUI.Interfaces
         /// <summary>
         /// Determines whether the Button is enabled
         /// </summary>
-        public bool Enabled
+         bool Enabled
         {
             get { return _Enabled; }
             set { _Enabled = value; }
@@ -66,18 +66,18 @@ namespace GUI.Interfaces
         /// then fire the event which is the actual action of the Button.
         /// </summary>
         /// <param name="gameTime">supplied for button cooldown.</param>
-        public void Update(GameTime gameTime);
+         void Update(GameTime gameTime);
         /// <summary>
         /// Draw Method for a Button
         /// </summary>
         /// <param name="gameTime">The Game Time</param>
         /// <param name="spriteBatch">SpriteBatch</param>
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch);
+         void Draw(GameTime gameTime, SpriteBatch spriteBatch);
         
         /// <summary>
         /// Does the actual work.  Performs the action that the button is supposed to.
         /// </summary>
-        public void FireEvent();
+         void FireEvent();
 
     }
 }

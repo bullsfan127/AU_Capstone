@@ -19,70 +19,70 @@ namespace GUI.Interfaces
    public interface IXTextField : GComponent
 
     {
-        string _Text;
+       string _Text { get; set; }
 
        /// <summary>
        /// String that you want to present
        /// </summary>
-        public string Text
+        string Text
         {
             get { return _Text; }
             set { _Text = value; }
         }
 
-        SpriteFont _Font;
+        SpriteFont _Font { get; set; }
 
        /// <summary>
        /// Font to be drawn on the Screen.
        /// </summary>
-        public SpriteFont Font
+         SpriteFont Font
         {
             get { return _Font; }
             set { _Font = value; }
         }
-      
-        Vector2 _Position;
+
+        Vector2 _Position { get; set; }
        /// <summary>
        /// Position on the Screen
        /// </summary>
-        public Vector2 Position
+         Vector2 Position
         {
             get { return _Position; }
             set { _Position = value; }
         }
-        float _Scale;
+        float _Scale { get; set; }
 
        /// <summary>
        /// String Scale
        /// </summary>
-        public float Scale
+         float Scale
         {
             get { return _Scale; }
             set { _Scale = value; }
         }
 
-        Color _TextColor;
+        Color _TextColor { get; set; }
        /// <summary>
        /// String Color
        /// </summary>
-        public Color TextColor
+         Color TextColor
         {
             get { return _TextColor; }
             set { _TextColor = value; }
         }
 
 
-        bool _Enabled;
+        bool _Enabled { get; set; }
        /// <summary>
        /// TextField Visiblity
        /// </summary>
-        public bool Enabled
+         bool Enabled
         {
             get { return _Enabled; }
             set { _Enabled = value; }
         }
 
-       public void Draw(GameTime gameTime, SpriteBatch spriteBatch);
+        void Draw(GameTime gameTime, SpriteBatch spriteBatch);
        
 
     }
