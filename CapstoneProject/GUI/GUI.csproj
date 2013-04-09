@@ -92,12 +92,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GComponent.cs" />
+    <Compile Include="Controls\XButton.cs" />
+    <Compile Include="Interfaces\GComponent.cs" />
     <Compile Include="Interfaces\IXButton.cs" />
     <Compile Include="Interfaces\IXPanel.cs" />
     <Compile Include="Interfaces\IXTextField.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
   <!--

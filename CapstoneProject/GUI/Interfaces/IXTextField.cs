@@ -19,69 +19,45 @@ namespace GUI.Interfaces
    public interface IXTextField : GComponent
 
     {
-       string _Text { get; set; }
-
        /// <summary>
        /// String that you want to present
        /// </summary>
-        string Text
-        {
-            get { return _Text; }
-            set { _Text = value; }
-        }
-
-        SpriteFont _Font { get; set; }
+       string _Text { get; set; }
 
        /// <summary>
        /// Font to be drawn on the Screen.
        /// </summary>
-         SpriteFont Font
-        {
-            get { return _Font; }
-            set { _Font = value; }
-        }
+        SpriteFont _Font { get; set; }
 
-        Vector2 _Position { get; set; }
+       
+        
        /// <summary>
        /// Position on the Screen
        /// </summary>
-         Vector2 Position
-        {
-            get { return _Position; }
-            set { _Position = value; }
-        }
-        float _Scale { get; set; }
-
-       /// <summary>
+        Vector2 _Position { get; set; }
+       
+        /// <summary>
        /// String Scale
        /// </summary>
-         float Scale
-        {
-            get { return _Scale; }
-            set { _Scale = value; }
-        }
+        float _Scale { get; set; }
 
+       
+         
+        /// <summary>
+        /// String Color
+        /// </summary>
         Color _TextColor { get; set; }
-       /// <summary>
-       /// String Color
-       /// </summary>
-         Color TextColor
-        {
-            get { return _TextColor; }
-            set { _TextColor = value; }
-        }
-
-
-        bool _Enabled { get; set; }
        /// <summary>
        /// TextField Visiblity
        /// </summary>
-         bool Enabled
-        {
-            get { return _Enabled; }
-            set { _Enabled = value; }
-        }
-
+        bool _Enabled { get; set; }
+       
+        
+       /// <summary>
+       /// Draw Method
+       /// </summary>
+       /// <param name="gameTime"></param>
+       /// <param name="spriteBatch"></param>
         void Draw(GameTime gameTime, SpriteBatch spriteBatch);
        
 

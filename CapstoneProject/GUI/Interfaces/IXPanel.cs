@@ -20,35 +20,27 @@ namespace GUI.Interfaces
     /// </summary>
     public interface IXPanel : GComponent, IUpdateable
     {
-       
-        Texture2D _BackGroundImage{ get; set; }      
-        /// <summary>
+       /// <summary>
         /// Texture Drawn below the Child Components;
         /// </summary>
-         Texture2D BackGroundImage
-        {
-            get { return _BackGroundImage; }
-            set { _BackGroundImage = value; }
-        }
-        Vector2 _Position { get; set; }
-        /// <summary>
+        Texture2D _BackGroundImage{ get; set; }      
+        
+          /// <summary>
         /// Position on the ViewPort
         /// </summary>
-         Vector2 Position
-        {
-            get { return _Position; }
-            set { _Position = value; }
-        }
+        Vector2 _Position { get; set; }
+      
+        /// <summary>
+        /// List for child components.
+        /// </summary>
         List<GComponent> _ChildComponents { get; set; }
-        bool _Enabled { get; set; }
+        
         /// <summary>
         /// Is the Component Enabled?
         /// </summary>
-         bool Enabled
-        {
-            get { return _Enabled; }
-            set { _Enabled = value; }
-        }
+        bool _Enabled { get; set; }
+      
+        
         /// <summary>
         /// Add A child to the Panel
         /// </summary>

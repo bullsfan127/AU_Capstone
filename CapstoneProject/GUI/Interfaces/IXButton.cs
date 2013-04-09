@@ -16,51 +16,40 @@ namespace GUI.Interfaces
     /// <summary>
     /// Interface Defining Button
     /// </summary>
-    public interface IXButton : GComponent, IUpdateable
+    public interface IXButton : GComponent
     {
+
         /// <summary>
         /// The Button's Texture
         /// </summary>
-         Texture2D _ButtonImage { get; set; }
-
-         Texture2D ButtonImage
-        {
-            get { return _ButtonImage; }
-            set { _ButtonImage = value; }
-        }
-         Rectangle _ButtonRep { get; set; }
+         Texture2D ButtonImage { get; set; }
 
         /// <summary>
         /// The Representation of the Button in the game world
         /// </summary>
-         Rectangle ButtonRep
-        {
-            get { return _ButtonRep; }
-            set { _ButtonRep = value; }
-        }
-         bool _Clicked { get; set; }
-         bool _WasClicked { get; set; }
-         bool _Enabled { get; set; }
+         Rectangle ButtonRep { get; set; }
+               
+        /// <summary>
+        /// Is the button Clicked
+        /// </summary>
+         bool Clicked { get; set; }
 
-        Vector2 _Position { get; set; }
+        /// <summary>
+        /// Was the button recently Clicked.
+        /// </summary>
+         bool WasClicked { get; set; }
+        
+        /// <summary>
+        /// Determines whether the Button is enabled
+        /// </summary>
+        bool Enabled { get; set; }
         
         /// <summary>
         /// Position of the Button on the Screen;
         /// </summary>
-         Vector2 Position
-        {
-            get { return _Position; }
-            set { _Position = value; }
-        }
-        /// <summary>
-        /// Determines whether the Button is enabled
-        /// </summary>
-         bool Enabled
-        {
-            get { return _Enabled; }
-            set { _Enabled = value; }
-        }
-
+        Vector2 Position { get; set; }
+        
+        
         /// <summary>
         /// Update Method for a button should check to see if the button was clicked and if it was
         /// then fire the event which is the actual action of the Button.
