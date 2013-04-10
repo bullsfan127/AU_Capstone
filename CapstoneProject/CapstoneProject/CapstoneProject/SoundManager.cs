@@ -26,13 +26,9 @@ namespace CapstoneProject
             set { _content = value; }
         }
 
-        MediaQueue queue;
 
-        Song bgm;
-     
-
-        private string[] songs = Directory.GetFiles(@"..\..\..\..\CapstoneProjectContent\Songs", "*.wav")
-                                     .Select(path => Path.GetFileNameWithoutExtension(path))
+        private string[] songs = Directory.GetFiles(@"C:\Users\Emiliano\Documents\GitHub\AU_Capstone\CapstoneProject\CapstoneProject\CapstoneProjectContent\Songs", "*.wav")
+                                     .Select(path => Path.GetFileName(path))
                                      .ToArray();
 
         public SoundManager(Game game, ContentManager content)
@@ -44,11 +40,17 @@ namespace CapstoneProject
 
        
 
-        public void QueueSongs()
+        public Song LoadSong()
         {
-            for (int i=0; i < songs.Length; i++)
-            {
-            bgm = _content.Load<Song>("Songs\\" + songs[i]);
+
+            // Loading songs
+            return _content.Load<Song>("Songs\\" + songs[0]);
+            
+        }
+
+        public void PlaySong(Song bgm)
+        {
+
             // Play song
             try
             {
@@ -59,29 +61,7 @@ namespace CapstoneProject
             catch
             {
             }
-            }
-        }
 
-        //public void PlaySong(Song bgm)
-        //{
-            
-        //    // Play song
-        //    try
-        //    {
-        //        MediaPlayer.Play(bgm);
-
-        //        MediaPlayer.IsRepeating = true;
-        //    }
-        //    catch
-        //    {
-        //    }
-
-        //}
-
-        public void SwitchSong()
-        {
-            MediaPlayer.Stop();
-            MediaPlayer.MovePrevious();
         }
 
         /// <summary>
