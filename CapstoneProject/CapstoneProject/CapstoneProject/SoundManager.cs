@@ -28,6 +28,7 @@ namespace CapstoneProject
 
         GAMESTATE lastState = GAMESTATE.PAUSE;
         KeyboardState keystate = Keyboard.GetState();
+        SoundEffect sound;
 
 
         private string[] songs = Directory.GetFiles(@"..\..\..\..\CapstoneProjectContent\Songs", "*.wav")
@@ -87,17 +88,19 @@ namespace CapstoneProject
             switch (Game1.gameState)
             {
                 case GAMESTATE.MAINMENU:
+
                     break;
+
                 case GAMESTATE.PLAY:
+                    
                     if (keystate.IsKeyDown(Keys.Up))
                     {
-                       SoundEffect sound = _content.Load<SoundEffect>("Sounds\\" + sounds[0]);
+                       sound = _content.Load<SoundEffect>("Sounds\\" + sounds[0]);
                        sound.Play();
                     }
                     if (keystate.IsKeyDown(Keys.Down))
                     {
-                       SoundEffect sound = _content.Load<SoundEffect>("Sounds\\" + sounds[1]);
-                       sound.Play();
+                       sound = _content.Load<SoundEffect>("Sounds\\" + sounds[1]);
                     }
                     else if (keystate.IsKeyDown(Keys.Right))
                     {

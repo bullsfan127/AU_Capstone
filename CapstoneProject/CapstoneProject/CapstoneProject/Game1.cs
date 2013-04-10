@@ -202,6 +202,11 @@ namespace CapstoneProject
                         gameMap.loadTiles(this.Content);
                     }
 
+                    if (keystate.IsKeyDown(Keys.Up))
+                    {
+                        soundManager.PlaySound();
+                    }
+
                     player.Update(gameTime, gameMap);
                     // TODO: Add your update logic here
 
