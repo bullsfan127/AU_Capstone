@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,28 +28,30 @@ namespace GUI.Controls
                 _Text = value;
             }
         }
+
         public SpriteFont _Font;
         public SpriteFont Font
         {
             get
             {
-                throw new System.NotImplementedException();
+                return (_Font);
             }
             set
             {
-                throw new System.NotImplementedException();
+                _Font = value;
             }
         }
+
         public Vector2 _Position;
         public Vector2 Position
         {
             get
             {
-                throw new System.NotImplementedException();
+                return _Position;
             }
             set
             {
-                throw new System.NotImplementedException();
+                _Position = value;
             }
         }
 
@@ -61,11 +60,11 @@ namespace GUI.Controls
         {
             get
             {
-                throw new System.NotImplementedException();
+                return _Scale;
             }
             set
             {
-                throw new System.NotImplementedException();
+                _Scale = value;
             }
         }
 
@@ -74,11 +73,11 @@ namespace GUI.Controls
         {
             get
             {
-                throw new System.NotImplementedException();
+                return _TextColor;
             }
             set
             {
-                throw new System.NotImplementedException();
+                _TextColor = value;
             }
         }
 
@@ -87,17 +86,19 @@ namespace GUI.Controls
         {
             get
             {
-                throw new System.NotImplementedException();
+                return _Enabled;
             }
             set
             {
-                throw new System.NotImplementedException();
+                _Enabled = value;
             }
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            throw new System.NotImplementedException();
+            spriteBatch.Begin();
+                spriteBatch.DrawString(_Font, _Text, _Position, _TextColor, 0.0f, Vector2.Zero, _Scale, SpriteEffects.None, 0);
+            spriteBatch.End();
         }
     }
 }

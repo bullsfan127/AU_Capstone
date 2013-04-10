@@ -63,7 +63,7 @@ namespace GUI.Controls
             }
         }
 
-        private bool _WasClicked;
+        private bool _WasClicked = false;
         public bool WasClicked
         {
             get
@@ -115,30 +115,32 @@ namespace GUI.Controls
         /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
-            //Get the mouse state
+            //Get the mouse state 
             MouseState mouse = Mouse.GetState();
             //Get the mouse position and convert it into a rectangle
             Rectangle mouseColision = new Rectangle((int)mouse.X, (int)mouse.Y, 1, 1);
+
+            //Cooldown
+            if (gameTime.TotalGameTime.Milliseconds - lastclicked > COOLDOWN)
+                _WasClicked = false;
+
             //Now we check if there is a collision
             if (mouseColision.Intersects(_ButtonRep))
             { 
                 //If the right button is pressed and the button wasn't clicked recently
-                if ((mouse.RightButton == ButtonState.Pressed) && !WasClicked)
+                if ((mouse.LeftButton == ButtonState.Pressed) && !WasClicked)
                     Clicked = true;
-
-            
-            
             }
 
             //If the button was clicked
-            if ((Clicked)&& (mouse.RightButton != ButtonState.Pressed)&& (gameTime.TotalGameTime.Milliseconds - lastclicked > COOLDOWN))
-            {
+           
+               if ((Clicked)&& (mouse.LeftButton != ButtonState.Pressed))
+               {
                 lastclicked = gameTime.TotalGameTime.Milliseconds;
                 WasClicked = true;
                 FireEvent();
                 Clicked = false;
-            
-            }
+               }
 
         }
        /// <summary>
