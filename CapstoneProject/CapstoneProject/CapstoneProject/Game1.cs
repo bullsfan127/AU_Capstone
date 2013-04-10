@@ -38,7 +38,6 @@ namespace CapstoneProject
 
         MainMenu.MainMenu menu;
         SoundManager soundManager;
-        Song bgm;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 #if !LOAD_FROM_FILE
@@ -148,9 +147,6 @@ namespace CapstoneProject
             Terminal.Init(this, spriteBatch, this.Content.Load<SpriteFont>("FPS"), graphics.GraphicsDevice);
             Terminal.SetSkin(TerminalThemeType.FIRE);
 
-            bgm = soundManager.LoadSong();
-
-            soundManager.PlaySong(bgm);
 #endif
 #if !LOAD_FROM_FILE
             a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
@@ -215,7 +211,7 @@ namespace CapstoneProject
             counter.Update(gameTime);
             Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
 #endif
-
+            soundManager.PlaySong();
             base.Update(gameTime);
         }
 

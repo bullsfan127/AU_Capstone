@@ -26,9 +26,15 @@ namespace CapstoneProject
             set { _content = value; }
         }
 
+        GAMESTATE lastState = GAMESTATE.PAUSE;
+        KeyboardState keystate = Keyboard.GetState();
 
-        private string[] songs = Directory.GetFiles(@"C:\Users\Emiliano\Documents\GitHub\AU_Capstone\CapstoneProject\CapstoneProject\CapstoneProjectContent\Songs", "*.wav")
-                                     .Select(path => Path.GetFileName(path))
+
+        private string[] songs = Directory.GetFiles(@"..\..\..\..\CapstoneProjectContent\Songs", "*.wav")
+                                     .Select(path => Path.GetFileNameWithoutExtension(path))
+                                     .ToArray();
+        private string[] sounds = Directory.GetFiles(@"..\..\..\..\CapstoneProjectContent\Sounds", "*.wav")
+                                     .Select(path => Path.GetFileNameWithoutExtension(path))
                                      .ToArray();
 
         public SoundManager(Game game, ContentManager content)
@@ -38,30 +44,57 @@ namespace CapstoneProject
             _content = content;
         }
 
-       
-
-        public Song LoadSong()
+        public void PlaySong()
         {
+            int i;
 
-            // Loading songs
-            return _content.Load<Song>("Songs\\" + songs[0]);
-            
+            if (lastState != Game1.gameState)
+            {
+                switch (Game1.gameState)
+                {
+                    case GAMESTATE.MAINMENU:
+                        i = 1;
+                        break;
+                    case GAMESTATE.PLAY:
+                        i = 0;
+                        break;
+                    default:
+                        i = 1;
+                        break;
+                }
+
+                lastState = Game1.gameState;
+
+                // Load song
+                Song bgm = _content.Load<Song>("Songs\\" + songs[i]);
+
+
+                // Play song
+                try
+                {
+                    MediaPlayer.Play(bgm);
+
+                    MediaPlayer.IsRepeating = true;
+                }
+                catch
+                {
+                }
+            }
         }
 
-        public void PlaySong(Song bgm)
+        public void PlaySound()
         {
+            int i = 0;
 
-            // Play song
-            try
+            if (keystate.IsKeyDown(Keys.Up))
             {
-                MediaPlayer.Play(bgm);
-
-                MediaPlayer.IsRepeating = true;
+               i = 0;
             }
-            catch
-            {
+               // Load sound
+               SoundEffect sound = _content.Load<SoundEffect>("Sounds\\" + sounds[i]);
+               
+                        
             }
-
         }
 
         /// <summary>
@@ -70,7 +103,6 @@ namespace CapstoneProject
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public override void Update(GameTime gameTime)
         {
-            // TODO: Add your update code here
 
             base.Update(gameTime);
         }

@@ -158,6 +158,7 @@ namespace TileEngine
             //Keeping track of jumping/falling speed
             if (Keyboard.GetState().IsKeyDown(Keys.Up) && Position.Y == 372)
             {
+
                 _Movement.Y += -20;
             }
 

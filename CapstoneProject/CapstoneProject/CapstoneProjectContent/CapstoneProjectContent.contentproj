@@ -165,14 +165,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Jump.wav">
+    <Compile Include="Sounds\Jump.wav">
       <Name>Jump</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pickup_Coin.wav">
+    <Compile Include="Sounds\Pickup_Coin.wav">
       <Name>Pickup_Coin</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
