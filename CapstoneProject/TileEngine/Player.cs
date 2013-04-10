@@ -15,13 +15,13 @@ namespace TileEngine
     public class Player : Avatar
     {
         //holds the controls
-        private Controls _controls = new Controls();
+       // private Controls _controls = new Controls();
 
-        public TileEngine.Controls Controls
-        {
-            get { return _controls; }
-            set { _controls = value; }
-        }
+        //public TileEngine.Controls Controls
+        //{
+        //    get { return _controls; }
+        //    set { _controls = value; }
+        //}
 
         //Current movement speeds for player
         private Vector2 _movement;

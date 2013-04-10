@@ -25,12 +25,13 @@ using TileEngine;
 namespace CapstoneProject
 {
     public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3 };
-
+    
     /// <summary>
     /// This is the main type for your game
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        MoveButton move;
         /// <summary>
         /// Keeps track of overall gamestate
         /// Sets initital sate, if you want to skip the main menu for testing, just set the state to GAMESTATE.PLAY instead
@@ -137,6 +138,7 @@ namespace CapstoneProject
             counter = new FPS_Counter(graphics);
             counter.setVisibility(true);
 #endif
+            
             base.Initialize();
         }
 
@@ -171,6 +173,7 @@ namespace CapstoneProject
 
             Texture2D coinTexture = Content.Load<Texture2D>("Coin");
             coin.Initialize(coinTexture, new Vector2(19, 19));
+            move = new MoveButton(new Vector2(15, 15), coinTexture, 0);
             // TODO: use this.Content to load your game content here
 #endif
         }
@@ -195,6 +198,7 @@ namespace CapstoneProject
             {
                 case GAMESTATE.MAINMENU:
                     menu.Update(gameTime);
+                    move.Update(gameTime);
                     break;
                 case GAMESTATE.PAUSE:
                     pauseMenu.Update(gameTime);
@@ -252,6 +256,7 @@ namespace CapstoneProject
                 case GAMESTATE.MAINMENU:
                     GraphicsDevice.Clear(Color.Black);
                     menu.Draw(gameTime, spriteBatch);
+                    move.Draw(gameTime, spriteBatch);
                     break;
                 case GAMESTATE.PLAY:
                     GraphicsDevice.Clear(Color.CornflowerBlue);

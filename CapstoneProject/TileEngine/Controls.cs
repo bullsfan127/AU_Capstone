@@ -12,25 +12,25 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TileEngine
 {
-    public class Controls
+    public static class Controls
     {
-        private Keys _left = Keys.Left;
-        private Keys _right = Keys.Right;
-        private Keys _up = Keys.Up;
+        private static Keys _left = Keys.Left;
+        private static Keys _right = Keys.Right;
+        private static Keys _up = Keys.Up;
 
-        public Microsoft.Xna.Framework.Input.Keys Left
+        public static Microsoft.Xna.Framework.Input.Keys Left
         {
             get { return _left; }
             set { _left = value; }
         }
 
-        public Microsoft.Xna.Framework.Input.Keys Right
+        public static Microsoft.Xna.Framework.Input.Keys Right
         {
             get { return _right; }
             set { _right = value; }
         }
 
-        public Microsoft.Xna.Framework.Input.Keys Up
+        public static Microsoft.Xna.Framework.Input.Keys Up
         {
             get { return _up; }
             set { _up = value; }
