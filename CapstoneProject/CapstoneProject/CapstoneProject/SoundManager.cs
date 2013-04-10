@@ -84,16 +84,30 @@ namespace CapstoneProject
 
         public void PlaySound()
         {
-            int i = 0;
-
-            if (keystate.IsKeyDown(Keys.Up))
+            switch (Game1.gameState)
             {
-               i = 0;
-            }
-               // Load sound
-               SoundEffect sound = _content.Load<SoundEffect>("Sounds\\" + sounds[i]);
-               
-                        
+                case GAMESTATE.MAINMENU:
+                    break;
+                case GAMESTATE.PLAY:
+                    if (keystate.IsKeyDown(Keys.Up))
+                    {
+                       SoundEffect sound = _content.Load<SoundEffect>("Sounds\\" + sounds[0]);
+                       sound.Play();
+                    }
+                    if (keystate.IsKeyDown(Keys.Down))
+                    {
+                       SoundEffect sound = _content.Load<SoundEffect>("Sounds\\" + sounds[1]);
+                       sound.Play();
+                    }
+                    else if (keystate.IsKeyDown(Keys.Right))
+                    {
+                        return;
+                    }
+                    else if (keystate.IsKeyDown(Keys.Left))
+                    {
+                        return;
+                    }
+                    break;
             }
         }
 

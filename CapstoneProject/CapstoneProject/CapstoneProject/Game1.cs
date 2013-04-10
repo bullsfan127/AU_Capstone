@@ -75,6 +75,7 @@ namespace CapstoneProject
             graphics.PreferredBackBufferWidth = 600;
             menu = new MainMenu.MainMenu(graphics, this.Content);
             soundManager = new SoundManager(this, this.Content);
+
         }
 
         /// <summary>
@@ -212,6 +213,7 @@ namespace CapstoneProject
             Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
 #endif
             soundManager.PlaySong();
+            soundManager.PlaySound();
             base.Update(gameTime);
         }
 
