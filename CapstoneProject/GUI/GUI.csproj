@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="Controls\Label.cs" />
     <Compile Include="Controls\XButton.cs" />
+    <Compile Include="Controls\XTextBox.cs" />
     <Compile Include="Interfaces\GComponent.cs" />
     <Compile Include="Interfaces\IXButton.cs" />
     <Compile Include="Interfaces\IXPanel.cs" />

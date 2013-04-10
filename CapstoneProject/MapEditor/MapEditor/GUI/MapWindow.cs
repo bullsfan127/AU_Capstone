@@ -10,9 +10,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using TileEngine;
+using GUI;
 namespace MapEditor.GUI
 {
-   public class MapWindow : IDrawable, IUpdateable
+   public class MapWindow : IDrawable, IUpdateable, GComponent
    {
 
        #region AutoImplements
@@ -83,7 +84,7 @@ namespace MapEditor.GUI
        public MapWindow(SpriteBatch batch, GraphicsDeviceManager graphics, ContentManager Content)
        {
            _spritebatch = batch;
-           _location = new Rectangle(100, 100, 400, 400);
+           _location = new Rectangle(100, 100, 500, 500);
            currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
            currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
            currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);

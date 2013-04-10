@@ -17,6 +17,7 @@ namespace GUI
     /// </summary>
     public interface GComponent
     {
+        void Update(GameTime gameTime);
     }
 
 }

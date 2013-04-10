@@ -55,7 +55,7 @@ namespace GUI.Interfaces
         /// then fire the event which is the actual action of the Button.
         /// </summary>
         /// <param name="gameTime">supplied for button cooldown.</param>
-         void Update(GameTime gameTime);
+       new  void Update(GameTime gameTime);
         /// <summary>
         /// Draw Method for a Button
         /// </summary>

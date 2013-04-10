@@ -58,7 +58,7 @@ namespace MapEditor
             spriteBatch = new SpriteBatch(GraphicsDevice);
             window = new MapWindow(spriteBatch, graphics, Content);
             sheets = new TileSheet(this.Content.Load<Texture2D>("Tiles//FinalGrid"), 64, "Tiles//FinalGrid");
-            tileSelector = new TileSelector(spriteBatch, sheets, graphics.GraphicsDevice);
+            tileSelector = new TileSelector(spriteBatch, sheets, graphics.GraphicsDevice, this.Content.Load<Texture2D>("Tiles//Node"));
             tileSelector._renderTarget = new Rectangle(graphics.GraphicsDevice.Viewport.Width - 240, 0, 240, 240);
             // TODO: use this.Content to load your game content here
         }

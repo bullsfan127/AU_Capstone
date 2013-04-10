@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,8 +13,9 @@ using Microsoft.Xna.Framework.Media;
 
 namespace GUI.Controls
 {
-    public class Label : IXTextField
+    public class XTextBox : IXTextField
     {
+
         public string _Text;
         public string Text
         {
@@ -94,16 +94,35 @@ namespace GUI.Controls
             }
         }
 
+        private bool _TextChanged;
+        public bool TextChanged
+        {
+            get { return _TextChanged; }
+            set { _TextChanged = value; }
+        }
+
+        private bool _IsSelected = false;
+
+        public bool IsSelected
+        {
+            get { return _IsSelected; }
+            set { _IsSelected = value; }
+        }
+
+
+        
+        public void Update(GameTime gameTime)
+        {
+            
+        }
+
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-                spriteBatch.DrawString(_Font, _Text, _Position, _TextColor, 0.0f, Vector2.Zero, _Scale, SpriteEffects.None, 0);
+            spriteBatch.DrawString(_Font, _Text, _Position, _TextColor, 0.0f, Vector2.Zero, _Scale, SpriteEffects.None, 0);
             spriteBatch.End();
         }
 
-        public void Update(GameTime gameTime)
-        {
-            //Do Nothing.  
-        }
+       
     }
 }

@@ -23,22 +23,22 @@ namespace GUI.Interfaces
        /// <summary>
         /// Texture Drawn below the Child Components;
         /// </summary>
-        Texture2D _BackGroundImage{ get; set; }      
+        Texture2D BackGroundImage{ get; set; }      
         
           /// <summary>
         /// Position on the ViewPort
         /// </summary>
-        Vector2 _Position { get; set; }
+        Vector2 Position { get; set; }
       
         /// <summary>
         /// List for child components.
         /// </summary>
-        List<GComponent> _ChildComponents { get; set; }
+        List<GComponent> ChildComponents { get; set; }
         
         /// <summary>
         /// Is the Component Enabled?
         /// </summary>
-        bool _Enabled { get; set; }
+        bool Enabled { get; set; }
       
         
         /// <summary>
@@ -52,7 +52,7 @@ namespace GUI.Interfaces
         /// Updates all Child Components and its self.
         /// </summary>
         /// <param name="gameTime">GameTime</param>
-         void Update(GameTime gameTime);
+       new  void Update(GameTime gameTime);
 
         /// <summary>
         /// Draws all its Children
