@@ -88,7 +88,7 @@ namespace TileEngine
         // The image of the item
         private Texture2D SpriteStrip;
 
-        public void Initialize(Texture2D spriteStrip, Vector2 position)
+        public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             // Set starting position of the player
             Position = position;

@@ -97,6 +97,14 @@ namespace TileEngine
             _Player.Draw(spriteBatch, gameTime);
             _Fringe.Draw(spriteBatch, gameTime, offset);
         }
+        public void DrawInWindow(SpriteBatch spriteBatch, GameTime gameTime, Rectangle Location)
+        {
+            _Ground.Draw(spriteBatch, gameTime, offset, Location);
+            _Mask.Draw(spriteBatch, gameTime, offset, Location);
+            _Player.Draw(spriteBatch, gameTime);
+            _Fringe.Draw(spriteBatch, gameTime, offset, Location);
+     
+        }
 
         /// <summary>
         /// Swaps out the Ground Layer
