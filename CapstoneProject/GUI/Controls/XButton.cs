@@ -93,6 +93,13 @@ namespace GUI.Controls
             }
         }
 
+        public XButton(Vector2 buttonPosition, Texture2D Texture)
+        {
+            Position = buttonPosition;
+            ButtonImage = Texture;
+            _ButtonRep = new Rectangle(Position.X, Position.Y, (int)ButtonImage.Width, (int)ButtonImage.Height);
+        }
+
         public void Update(GameTime gameTime)
         {
             throw new NotImplementedException();

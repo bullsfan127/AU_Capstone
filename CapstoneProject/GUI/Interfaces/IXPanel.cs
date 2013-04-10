@@ -18,7 +18,7 @@ namespace GUI.Interfaces
     /// A Panel Tethers the Position of the child Components to itself so that all components move together.
     /// It also updates its child components.
     /// </summary>
-    public interface IXPanel : GComponent, IUpdateable
+    public interface IXPanel : GComponent
     {
        /// <summary>
         /// Texture Drawn below the Child Components;
