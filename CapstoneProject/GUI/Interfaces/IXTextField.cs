@@ -22,35 +22,35 @@ namespace GUI.Interfaces
        /// <summary>
        /// String that you want to present
        /// </summary>
-       string _Text { get; set; }
+       string Text { get; set; }
 
        /// <summary>
        /// Font to be drawn on the Screen.
        /// </summary>
-        SpriteFont _Font { get; set; }
+        SpriteFont Font { get; set; }
 
        
         
        /// <summary>
        /// Position on the Screen
        /// </summary>
-        Vector2 _Position { get; set; }
+        Vector2 Position { get; set; }
        
         /// <summary>
        /// String Scale
        /// </summary>
-        float _Scale { get; set; }
+        float Scale { get; set; }
 
        
          
         /// <summary>
         /// String Color
         /// </summary>
-        Color _TextColor { get; set; }
+        Color TextColor { get; set; }
        /// <summary>
        /// TextField Visiblity
        /// </summary>
-        bool _Enabled { get; set; }
+        bool Enabled { get; set; }
        
         
        /// <summary>

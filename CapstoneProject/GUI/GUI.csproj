@@ -92,6 +92,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Label.cs" />
     <Compile Include="Controls\XButton.cs" />
     <Compile Include="Interfaces\GComponent.cs" />
     <Compile Include="Interfaces\IXButton.cs" />

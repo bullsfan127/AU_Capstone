@@ -1,4 +1,10 @@
-﻿using System;
+﻿///USAGE:  Just inherit this class and override the FireEvent Method.
+///
+///
+///
+///
+///
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +21,9 @@ namespace GUI.Controls
 {
    public class XButton : IXButton
     {
+        private int lastclicked = 0;
+        public const int COOLDOWN = 300;
+
         private Texture2D _ButtonImage;
         public Texture2D ButtonImage
         {
@@ -97,22 +106,60 @@ namespace GUI.Controls
         {
             Position = buttonPosition;
             ButtonImage = Texture;
-            _ButtonRep = new Rectangle(Position.X, Position.Y, (int)ButtonImage.Width, (int)ButtonImage.Height);
+            _ButtonRep = new Rectangle((int)Position.X,(int) Position.Y, (int)(ButtonImage.Width), (int)(ButtonImage.Height));
         }
-
+        /// <summary>
+        /// Update method does all of the detection handling for the button.  Whether it was clicked or if its on cooldown.
+        /// It will remain the same accross all buttons the only method to be changed is the FireEvent Method.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
-            throw new NotImplementedException();
-        }
+            //Get the mouse state
+            MouseState mouse = Mouse.GetState();
+            //Get the mouse position and convert it into a rectangle
+            Rectangle mouseColision = new Rectangle((int)mouse.X, (int)mouse.Y, 1, 1);
+            //Now we check if there is a collision
+            if (mouseColision.Intersects(_ButtonRep))
+            { 
+                //If the right button is pressed and the button wasn't clicked recently
+                if ((mouse.RightButton == ButtonState.Pressed) && !WasClicked)
+                    Clicked = true;
 
+            
+            
+            }
+
+            //If the button was clicked
+            if ((Clicked)&& (mouse.RightButton != ButtonState.Pressed)&& (gameTime.TotalGameTime.Milliseconds - lastclicked > COOLDOWN))
+            {
+                lastclicked = gameTime.TotalGameTime.Milliseconds;
+                WasClicked = true;
+                FireEvent();
+                Clicked = false;
+            
+            }
+
+        }
+       /// <summary>
+       /// Draw Method just draws the button into the target area.
+       /// </summary>
+       /// <param name="gameTime"></param>
+       /// <param name="spriteBatch"></param>
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            throw new NotImplementedException();
+            spriteBatch.Begin();
+            spriteBatch.Draw(ButtonImage, ButtonRep, Color.White);
+            spriteBatch.End();
+        }
+       /// <summary>
+       /// Fire event is what the button actually does.
+       /// </summary>
+        public virtual void FireEvent()
+        {
+           
         }
 
-        public void FireEvent()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
