@@ -93,7 +93,15 @@ namespace GUI.Controls
                 _Enabled = value;
             }
         }
-
+       
+        public Label(SpriteFont font, string text, Vector2 Position, Color color, float scale)
+        {
+            Font = font;
+            Text = text;
+            _Position = Position;
+            TextColor = color;
+            _Scale = scale;
+        }
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();

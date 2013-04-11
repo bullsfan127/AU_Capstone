@@ -98,6 +98,8 @@ namespace GUI.Controls
             }
             set
             {
+                _ButtonRep.X = (int)value.X;
+                _ButtonRep.Y = (int)value.Y;
                 _Position = value;
             }
         }
@@ -113,7 +115,7 @@ namespace GUI.Controls
         /// It will remain the same accross all buttons the only method to be changed is the FireEvent Method.
         /// </summary>
         /// <param name="gameTime"></param>
-        public void Update(GameTime gameTime)
+        public virtual void Update(GameTime gameTime)
         {
             //Get the mouse state 
             MouseState mouse = Mouse.GetState();
@@ -148,7 +150,7 @@ namespace GUI.Controls
        /// </summary>
        /// <param name="gameTime"></param>
        /// <param name="spriteBatch"></param>
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
             spriteBatch.Draw(ButtonImage, ButtonRep, Color.White);

@@ -61,7 +61,7 @@ namespace GUI.Interfaces
         /// </summary>
         /// <param name="gameTime">The Game Time</param>
         /// <param name="spriteBatch">SpriteBatch</param>
-        new void Draw(GameTime gameTime, SpriteBatch spriteBatch);
+        new  void Draw(GameTime gameTime, SpriteBatch spriteBatch);
         
         /// <summary>
         /// Does the actual work.  Performs the action that the button is supposed to.

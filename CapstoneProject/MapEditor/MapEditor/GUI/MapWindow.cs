@@ -10,7 +10,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using TileEngine;
+using GUI.Controls;
 using GUI;
+
 namespace MapEditor.GUI
 {
    public class MapWindow : IDrawable, IUpdateable, GComponent
@@ -56,8 +58,10 @@ namespace MapEditor.GUI
             get { return _location; }
             set { _location = value; }
         }
+    
         SpriteBatch _spritebatch;
         Map _map;
+        
         DrawableLayer<Tile> _ground;
         DrawableLayer<Tile> _mask;
         DrawableLayer<Tile> _Fringe;
@@ -65,27 +69,32 @@ namespace MapEditor.GUI
         Tile a;
         Tile b;
         Tile c;
-        DrawableLayer<Tile> currentLayer;
+
+        Label layerLabel;
+        
+        DrawableLayer<Tile> currentLayer1;
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
 
         FocalPoint _center = new FocalPoint(new Vector2(10, 10), 10, 100, 50, 50);
-       // enum currentLayer { GROUND, MASK, FRINGE }
+       public enum currentLayer { GROUND, MASK, FRINGE };
         /// <summary>
         /// For determining what layer you are laying tiles in.
         /// </summary>
-       // currentLayer _currentLayer = currentLayer.GROUND;
-       public MapWindow(Rectangle Location, SpriteBatch batch)
+       public currentLayer _currentLayer = currentLayer.FRINGE;
+
+       public MapWindow(Rectangle Location, SpriteBatch batch, SpriteFont Font)
         {
             _location = Location;
             _spritebatch = batch;
+            layerLabel = new Label(Font, "", new Vector2(_location.X + 10, _location.Y + 10), Color.BlanchedAlmond, 1.0f);
         
         }
-       public MapWindow(SpriteBatch batch, GraphicsDeviceManager graphics, ContentManager Content)
+       public MapWindow(SpriteBatch batch, GraphicsDeviceManager graphics, ContentManager Content, SpriteFont Font)
        {
            _spritebatch = batch;
            _location = new Rectangle(100, 100, 500, 500);
-           currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
+           currentLayer1 = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
            currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
            currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
            a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
@@ -96,7 +105,7 @@ namespace MapEditor.GUI
            {
                for (int y = 0; y < 100; y++)
                {
-                   currentLayer.setItemAt(new Vector2(x, y), a);
+                   currentLayer1.setItemAt(new Vector2(x, y), a);
                    if (x % 3 == 0)
                        currentLayerA.setItemAt(new Vector2(x, y), b);
 
@@ -112,9 +121,9 @@ namespace MapEditor.GUI
            c.Name = "Tiles//tileF";
            _map = new Map();
            _map.SwapMaskLayer(currentLayerA);
-           _map.SwapGoundLayer(currentLayer);
+           _map.SwapGoundLayer(currentLayer1);
            _map.SwapFringeLayer(currentLayerB);
-       
+           layerLabel = new Label(Font, "", new Vector2(_location.X + 10, _location.Y + 10), Color.BlanchedAlmond, 1.0f);
        }
         public void Initialize()
         {
@@ -128,7 +137,20 @@ namespace MapEditor.GUI
         public void Update(GameTime gameTime)
         {
             _center.Update(gameTime);
-          
+            layerLabel.Update(gameTime);
+            switch (_currentLayer)
+            { 
+                case(currentLayer.GROUND):
+                    layerLabel.Text = "ground";
+                    break;
+                case (currentLayer.MASK):
+                    layerLabel.Text = "MASK";
+                    break;
+                case (currentLayer.FRINGE):
+                    layerLabel.Text = "FRINGE";
+                    break;
+            
+            }
            /*
             _map = new Map(_ground, _mask, _Fringe);
             */_map.Player = _center;
@@ -141,6 +163,7 @@ namespace MapEditor.GUI
         {
            //_map.Draw(_spritebatch, gameTime);
             _map.DrawInWindow(_spritebatch, gameTime, _location);
+            layerLabel.Draw(gameTime, _spritebatch);
             
         }
 
