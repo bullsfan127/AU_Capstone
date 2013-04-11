@@ -19,17 +19,26 @@ using Microsoft.Xna.Framework.Media;
 
 namespace GUI.Controls
 {
-   public class XButton : IXButton
+    public class XButton : IXButton
     {
+        private bool _fireAgain = false;
+
+        public bool FireAgain
+        {
+            get { return _fireAgain; }
+            set { _fireAgain = value; }
+        }
+
         private int lastclicked = 0;
         public const int COOLDOWN = 300;
 
         private Texture2D _ButtonImage;
+
         public Texture2D ButtonImage
         {
             get
             {
-              return  _ButtonImage;
+                return _ButtonImage;
             }
             set
             {
@@ -38,6 +47,7 @@ namespace GUI.Controls
         }
 
         private Rectangle _ButtonRep;
+
         public Rectangle ButtonRep
         {
             get
@@ -51,6 +61,7 @@ namespace GUI.Controls
         }
 
         private bool _Clicked;
+
         public bool Clicked
         {
             get
@@ -64,6 +75,7 @@ namespace GUI.Controls
         }
 
         private bool _WasClicked = false;
+
         public bool WasClicked
         {
             get
@@ -77,6 +89,7 @@ namespace GUI.Controls
         }
 
         private bool _Enabled;
+
         public bool Enabled
         {
             get
@@ -90,6 +103,7 @@ namespace GUI.Controls
         }
 
         private Vector2 _Position;
+
         public Vector2 Position
         {
             get
@@ -106,8 +120,9 @@ namespace GUI.Controls
         {
             Position = buttonPosition;
             ButtonImage = Texture;
-            _ButtonRep = new Rectangle((int)Position.X,(int) Position.Y, (int)(ButtonImage.Width), (int)(ButtonImage.Height));
+            _ButtonRep = new Rectangle((int)Position.X, (int)Position.Y, (int)(ButtonImage.Width), (int)(ButtonImage.Height));
         }
+
         /// <summary>
         /// Update method does all of the detection handling for the button.  Whether it was clicked or if its on cooldown.
         /// It will remain the same accross all buttons the only method to be changed is the FireEvent Method.
@@ -115,7 +130,7 @@ namespace GUI.Controls
         /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
-            //Get the mouse state 
+            //Get the mouse state
             MouseState mouse = Mouse.GetState();
             //Get the mouse position and convert it into a rectangle
             Rectangle mouseColision = new Rectangle((int)mouse.X, (int)mouse.Y, 1, 1);
@@ -126,42 +141,43 @@ namespace GUI.Controls
 
             //Now we check if there is a collision
             if (mouseColision.Intersects(_ButtonRep))
-            { 
+            {
                 //If the right button is pressed and the button wasn't clicked recently
                 if ((mouse.LeftButton == ButtonState.Pressed) && !WasClicked)
                     Clicked = true;
             }
 
+            if (FireAgain == true)
+                Clicked = true;
+
             //If the button was clicked
-           
-               if ((Clicked)&& (mouse.LeftButton != ButtonState.Pressed))
-               {
+
+            if ((Clicked) && (mouse.LeftButton != ButtonState.Pressed))
+            {
                 lastclicked = gameTime.TotalGameTime.Milliseconds;
                 WasClicked = true;
                 FireEvent();
                 Clicked = false;
-               }
-
+            }
         }
-       /// <summary>
-       /// Draw Method just draws the button into the target area.
-       /// </summary>
-       /// <param name="gameTime"></param>
-       /// <param name="spriteBatch"></param>
+
+        /// <summary>
+        /// Draw Method just draws the button into the target area.
+        /// </summary>
+        /// <param name="gameTime"></param>
+        /// <param name="spriteBatch"></param>
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
             spriteBatch.Draw(ButtonImage, ButtonRep, Color.White);
             spriteBatch.End();
         }
-       /// <summary>
-       /// Fire event is what the button actually does.
-       /// </summary>
+
+        /// <summary>
+        /// Fire event is what the button actually does.
+        /// </summary>
         public virtual void FireEvent()
         {
-           
         }
-
-        
     }
 }
