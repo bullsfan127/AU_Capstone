@@ -38,6 +38,8 @@ namespace CapstoneProject
             }
             else
             {
+                FireAgain = false;
+
                 switch (_button)
                 {
                     case RIGHTBUTTON:
