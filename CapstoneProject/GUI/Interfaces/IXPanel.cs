@@ -28,8 +28,8 @@ namespace GUI.Interfaces
           /// <summary>
         /// Position on the ViewPort
         /// </summary>
-        Vector2 Position { get; set; }
-      
+       // Vector2 Position { get; set; }
+      // moved to parent
         /// <summary>
         /// List for child components.
         /// </summary>
@@ -59,7 +59,7 @@ namespace GUI.Interfaces
         /// </summary>
         /// <param name="gameTime">gameTime</param>
         /// <param name="spriteBatch">SpriteBatch for Drawing.</param>
-         void Draw(GameTime gameTime, SpriteBatch spriteBatch);
+        new void Draw(GameTime gameTime, SpriteBatch spriteBatch);
         
     }
 }

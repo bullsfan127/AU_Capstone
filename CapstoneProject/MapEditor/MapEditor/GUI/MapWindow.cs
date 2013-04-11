@@ -135,12 +135,26 @@ namespace MapEditor.GUI
             
          
         }
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch){_map.DrawInWindow(spriteBatch, gameTime, _location);}
+
         public void Draw(GameTime gameTime)
         {
            //_map.Draw(_spritebatch, gameTime);
             _map.DrawInWindow(_spritebatch, gameTime, _location);
             
         }
-        
-    }
+
+
+        public Vector2 Position
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+   }
 }

@@ -125,5 +125,27 @@ namespace MapEditor.GUI
             }
             _spritebatch.End();
         }
+
+        /// <summary>
+        /// When stored in a panel
+        /// </summary>
+        /// <param name="gameTime"></param>
+        /// <param name="spritebatch"></param>
+        public void Draw(GameTime gameTime, SpriteBatch spritebatch)
+        {
+            Draw(gameTime);
+        }
+
+        public Vector2 Position
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

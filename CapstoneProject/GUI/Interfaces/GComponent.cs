@@ -17,7 +17,10 @@ namespace GUI
     /// </summary>
     public interface GComponent
     {
+        Vector2 Position { get; set; }
+
         void Update(GameTime gameTime);
+        void Draw(GameTime gameTime, SpriteBatch spritebatch);
     }
 
 }
