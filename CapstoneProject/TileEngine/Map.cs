@@ -97,13 +97,13 @@ namespace TileEngine
             _Player.Draw(spriteBatch, gameTime);
             _Fringe.Draw(spriteBatch, gameTime, offset);
         }
+
         public void DrawInWindow(SpriteBatch spriteBatch, GameTime gameTime, Rectangle Location)
         {
             _Ground.Draw(spriteBatch, gameTime, offset, Location);
             _Mask.Draw(spriteBatch, gameTime, offset, Location);
             _Player.Draw(spriteBatch, gameTime);
             _Fringe.Draw(spriteBatch, gameTime, offset, Location);
-     
         }
 
         /// <summary>
@@ -154,6 +154,7 @@ namespace TileEngine
         {
             Map newMap = new Map();
             newMap = serializer.Load("SaveGame.xml");
+
             newMap.LoadExtraContent(contentManager);
             return newMap;
         }

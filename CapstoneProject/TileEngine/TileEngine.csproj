@@ -112,6 +112,7 @@
     <Compile Include="Layer.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Potion.cs" />
+    <Compile Include="SerializeControls.cs" />
     <Compile Include="Sword.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -25,13 +25,14 @@ using TileEngine;
 namespace CapstoneProject
 {
     public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3 };
-    
+
     /// <summary>
     /// This is the main type for your game
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         MoveButton move;
+
         /// <summary>
         /// Keeps track of overall gamestate
         /// Sets initital sate, if you want to skip the main menu for testing, just set the state to GAMESTATE.PLAY instead
@@ -138,7 +139,7 @@ namespace CapstoneProject
             counter = new FPS_Counter(graphics);
             counter.setVisibility(true);
 #endif
-            
+
             base.Initialize();
         }
 
