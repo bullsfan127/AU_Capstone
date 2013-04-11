@@ -140,11 +140,12 @@ namespace MapEditor.GUI
         {
             get
             {
-                throw new NotImplementedException();
+                return new Vector2(_renderTarget.X, _renderTarget.Y);
             }
             set
             {
-                throw new NotImplementedException();
+                _renderTarget.X = (int)value.X;
+                _renderTarget.Y = (int)value.Y;
             }
         }
     }

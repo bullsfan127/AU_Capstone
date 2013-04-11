@@ -25,7 +25,7 @@ namespace MapEditor
         MapWindow window;
         TileSelector tileSelector;
         TileSheet sheets;
-        XPanel layerPanel;
+        XPanel TileSelectorPanel;
 
         public MapEditorMain()
         {
@@ -63,7 +63,8 @@ namespace MapEditor
             sheets = new TileSheet(this.Content.Load<Texture2D>("Tiles//FinalGrid"), 48, "Tiles//FinalGrid");
             tileSelector = new TileSelector(spriteBatch, sheets, graphics.GraphicsDevice, this.Content.Load<Texture2D>("Tiles//Node"));
             tileSelector._renderTarget = new Rectangle(graphics.GraphicsDevice.Viewport.Width - 240, 0, 240, 240);
-            layerPanel = new XPanel(this.Content.Load<Texture2D>("Tiles//Node"), new Vector2(1280 - 400, 240), 400, 400);
+            TileSelectorPanel = new XPanel(this.Content.Load<Texture2D>("Tiles//Node"), new Vector2(1280 - 300, 0), 300, 300);
+            TileSelectorPanel.AddChild(tileSelector, new Vector2(30, 30));
             // TODO: use this.Content to load your game content here
         }
 
@@ -89,7 +90,7 @@ namespace MapEditor
 
             window.Update(gameTime);
             tileSelector.Update(gameTime);
-            layerPanel.Update(gameTime);
+            TileSelectorPanel.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -104,7 +105,7 @@ namespace MapEditor
             // TODO: Add your drawing code here
             window.Draw(gameTime);
             tileSelector.Draw(gameTime);
-            layerPanel.Draw(gameTime, spriteBatch);
+            TileSelectorPanel.Draw(gameTime, spriteBatch);
             base.Draw(gameTime);
         }
     }
