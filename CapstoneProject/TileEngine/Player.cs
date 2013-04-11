@@ -14,6 +14,9 @@ namespace TileEngine
 {
     public class Player : Avatar
     {
+        //Sound Manager
+        //SoundManager soundManager;
+
         //Current movement speeds for player
         private Vector2 _Movement;
 
@@ -158,7 +161,7 @@ namespace TileEngine
             //Keeping track of jumping/falling speed
             if (Keyboard.GetState().IsKeyDown(Keys.Up) && Position.Y == 372)
             {
-
+               // soundManager.PlaySound();
                 _Movement.Y += -20;
             }
 

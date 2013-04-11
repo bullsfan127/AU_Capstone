@@ -40,6 +40,7 @@ namespace CapstoneProject
         SoundManager soundManager;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
 #if !LOAD_FROM_FILE
         Tile a;
         Tile b;
@@ -202,11 +203,6 @@ namespace CapstoneProject
                         gameMap.loadTiles(this.Content);
                     }
 
-                    if (keystate.IsKeyDown(Keys.Up))
-                    {
-                        soundManager.PlaySound();
-                    }
-
                     player.Update(gameTime, gameMap);
                     // TODO: Add your update logic here
 
@@ -218,7 +214,6 @@ namespace CapstoneProject
             Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
 #endif
             soundManager.PlaySong();
-            soundManager.PlaySound();
             base.Update(gameTime);
         }
 
