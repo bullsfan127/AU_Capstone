@@ -104,9 +104,15 @@ namespace MapEditor.GUI
             {
                 if (mouse.LeftButton == ButtonState.Pressed)
                 {
+                    float scale =  (float) _renderTarget.Width/(float)_tileSheet.tileSheet.Width;
                     IsTileSelected = true;
-                    _selectedTile = _tileSheet.getTileAt(new Vector2(mouse.X - _renderTarget.X, mouse.Y - _renderTarget.Y));
-                    _LayOver = _selectedTile.SourceRectangle;
+                    _selectedTile = _tileSheet.getTileAt(new Vector2((mouse.X - _renderTarget.X) * scale, (mouse.Y - _renderTarget.Y)) * scale);
+
+                    _LayOver = new Rectangle(
+                        (int)((_selectedTile.SourceRectangle.X)* scale), 
+                        (int)((_selectedTile.SourceRectangle.Y) * scale), 
+                        (int)(_selectedTile.SourceRectangle.Width * ((float)_tileSheet.TilesWide)/(float)_renderTarget.Width),
+                        (int)(_selectedTile.SourceRectangle.Width * ((float)_tileSheet.TilesHigh)/(float)_renderTarget.Height));
                 }
                 else if (mouse.RightButton == ButtonState.Pressed)
                     _isTileSelected = false;

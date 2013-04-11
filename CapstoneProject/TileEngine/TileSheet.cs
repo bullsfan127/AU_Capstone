@@ -29,13 +29,29 @@ namespace TileEngine
             set { _tileSheet = value; }
         }
 
-        
-        
+        private int _tilesWide;
+
+        public int TilesWide
+        {
+            get { return _tilesWide; }
+            set { _tilesWide = value; }
+        }
+
+        private int _tilesHigh;
+
+        public int TilesHigh
+        {
+            get { return _tilesHigh; }
+            set { _tilesHigh = value; }
+        }
+
         public TileSheet(Texture2D texture, int TileSize, string name)
         {
             tileSheet = texture;
             _tileSize = TileSize;
             _name = name;
+            _tilesWide = tileSheet.Width / TileSize;
+            _tilesHigh = tileSheet.Height / TileSize;
         }
 
         public Tile getTileAt(Vector2 Target)
