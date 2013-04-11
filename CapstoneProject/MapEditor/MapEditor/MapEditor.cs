@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using CustomSerialization;
+using MapEditor.GUI;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -9,8 +11,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using TileEngine;
-using CustomSerialization;
-using MapEditor.GUI;
 
 namespace MapEditor
 {
@@ -24,16 +24,17 @@ namespace MapEditor
         MapWindow window;
         TileSelector tileSelector;
         TileSheet sheets;
+
         public MapEditorMain()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
             //I might add the ability to scale the window based on your needs
-             graphics.PreferredBackBufferWidth = 1280;
-             graphics.PreferredBackBufferHeight = 640;
+            graphics.PreferredBackBufferWidth = 1280;
+            graphics.PreferredBackBufferHeight = 640;
         }
-        
+
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
         /// This is where it can query for any required services and load any non-graphic
@@ -44,7 +45,7 @@ namespace MapEditor
         {
             // TODO: Add your initialization logic here
             IsMouseVisible = true;
-           
+
             base.Initialize();
         }
 
@@ -57,7 +58,7 @@ namespace MapEditor
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             window = new MapWindow(spriteBatch, graphics, Content);
-            sheets = new TileSheet(this.Content.Load<Texture2D>("Tiles//FinalGrid"), 64, "Tiles//FinalGrid");
+            sheets = new TileSheet(this.Content.Load<Texture2D>("Tiles//FinalGrid"), 48, "Tiles//FinalGrid");
             tileSelector = new TileSelector(spriteBatch, sheets, graphics.GraphicsDevice, this.Content.Load<Texture2D>("Tiles//Node"));
             tileSelector._renderTarget = new Rectangle(graphics.GraphicsDevice.Viewport.Width - 240, 0, 240, 240);
             // TODO: use this.Content to load your game content here
@@ -79,11 +80,9 @@ namespace MapEditor
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
 
             window.Update(gameTime);
             tileSelector.Update(gameTime);
