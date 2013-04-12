@@ -127,7 +127,7 @@ namespace MapEditor.GUI
            _map.SwapGoundLayer(currentLayer1);
            _map.SwapFringeLayer(currentLayerB);
            _map.SetCollisionLayer(currentLayer1);
-           layerLabel = new Label(Font, "", new Vector2(_location.X - 10, _location.Y - 10), Color.BlanchedAlmond, 1.0f);
+           layerLabel = new Label(Font, "", new Vector2(_location.X - 10, _location.Y - 10), Color.DarkGreen, 1.0f);
        }
         public void Initialize()
         {
