@@ -54,7 +54,7 @@ namespace CapstoneProject
                 switch (Game1.gameState)
                 {
                     case GAMESTATE.MAINMENU:
-                        i = 1;
+                        i = 4;
                         break;
                     case GAMESTATE.PLAY:
                         i = 0;
