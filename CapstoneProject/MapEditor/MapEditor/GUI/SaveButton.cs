@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using GUI.Controls;
+using GUI.Interfaces;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -11,29 +12,26 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using TileEngine;
-using GUI.Interfaces;
 
 namespace MapEditor.GUI
 {
-  public class SaveButton : XButton
+    public class SaveButton : XButton
     {
         Map saveMap;
         Label buttonLable;
 
-        public SaveButton(Vector2 Position, Texture2D ButtonTexture,Map map, SpriteFont font)
+        public SaveButton(Vector2 Position, Texture2D ButtonTexture, Map map, SpriteFont font)
             : base(Position, ButtonTexture)
         {
             saveMap = map;
-            buttonLable = new Label(font, "Save Map", new Vector2(Position.X + 20, Position.Y +20), Color.Black, 1.0f);
-
+            buttonLable = new Label(font, "Save Map", new Vector2(Position.X + 20, Position.Y + 20), Color.Black, 1.0f);
         }
 
         public override void Update(GameTime gameTime)
         {
-           
             base.Update(gameTime);
-
         }
+
         public override void Draw(GameTime gameTime, SpriteBatch spritebatch)
         {
             buttonLable.Draw(gameTime, spritebatch);
@@ -44,8 +42,7 @@ namespace MapEditor.GUI
         {
             Random random = new Random(42);
             saveMap.MapID = random.Next(999999);
-            saveMap.saveMap(saveMap.MapID + ".xml");
-
+            saveMap.saveMap("../../../SavedMaps/" + saveMap.MapID + ".xml");
 
             base.FireEvent();
         }

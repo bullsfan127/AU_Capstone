@@ -97,11 +97,7 @@
   <ItemGroup>
     <Compile Include="RolePlay\Armor.cs" />
     <Compile Include="Avatar.cs" />
-    <Compile Include="Boomerang.cs" />
-    <Compile Include="Coin.cs" />
     <Compile Include="Controls.cs" />
-    <Compile Include="FlyingMonster.cs" />
-    <Compile Include="GroundMonster.cs" />
     <Compile Include="RolePlay\Boomerang.cs" />
     <Compile Include="RolePlay\Coin.cs" />
     <Compile Include="RolePlay\FlyingMonster.cs" />
