@@ -203,10 +203,21 @@ namespace CapstoneProject
                         gameMap.loadTiles(this.Content);
                     }
 
-                    player.Update(gameTime, gameMap);
-                    // TODO: Add your update logic here
+                    if (keystate.IsKeyDown(Keys.Up) && player.Position.Y == 372)
+                    {
+                        soundManager.PlaySound(5);
+                    }
 
+                    if (keystate.IsKeyDown(Keys.Down))
+                    {
+                        soundManager.PlaySound(1);
+                    }
+
+                    player.Update(gameTime, gameMap);
+                    // TODO: Add your update logic here                    
                     break;
+
+                    
             }
 #if DEBUG
             //#FPS_COUNTER

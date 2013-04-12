@@ -9,9 +9,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using System.IO;
+using TileEngine;
+using CapstoneProject;
 
 
-namespace CapstoneProject
+namespace SoundManager
 {
     /// <summary>
     /// This is a game component that implements IUpdateable.
@@ -39,7 +41,7 @@ namespace CapstoneProject
                                      .ToArray();
 
         public SoundManager(Game game, ContentManager content)
-            
+            : base(game)
         {
             // Pass in content manager
             _content = content;
@@ -93,6 +95,10 @@ namespace CapstoneProject
         /// Allows the game component to update itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-      
+        public override void Update(GameTime gameTime)
+        {
+
+            base.Update(gameTime);
+        }
     }
 }
