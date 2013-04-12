@@ -16,7 +16,7 @@ namespace TileEngine
 {
     public static class Controls
     {
-        private static Keys _left = Keys.X;
+        private static Keys _left = Keys.Left;
         private static Keys _right = Keys.Right;
         private static Keys _up = Keys.Up;
 
@@ -49,5 +49,6 @@ namespace TileEngine
             SerializeControls serializer = new SerializeControls();
             serializer.Load();
         }
+
     }
 }
