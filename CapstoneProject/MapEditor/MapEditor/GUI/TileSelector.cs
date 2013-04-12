@@ -117,7 +117,7 @@ namespace MapEditor.GUI
 
             if (_isTileSelected)
             {
-                int tilesWide = (_tileSheet.tileSheet.Width - 80) / _tileSheet.TileSize;
+                int tilesWide = _tileSheet.tileSheet.Width / _tileSheet.TileSize;
 
                 Rectangle destinationRect = new Rectangle((_renderTarget.X + _LayOver.X), (_renderTarget.Y + _LayOver.Y), _renderTarget.Width / tilesWide, _renderTarget.Height / tilesWide);
 
