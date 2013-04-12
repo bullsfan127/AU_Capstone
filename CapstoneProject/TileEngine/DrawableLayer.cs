@@ -226,7 +226,7 @@ namespace TileEngine
             int startPosX = (int)centerLocation.X / 64;//Where are we starting horizontally
 
             //~~~~~~~~~~~~~~~~~DRAW LOGIC~~~~~~~~~~~~~~~~~~~~~
-            for (int x = 0; x < _maxColumns + 1; x++)
+            for (int x = 0; x < _maxColumns; x++)
             {
                 int startPosY = 0;
                 //(int)centerLocation.Y;//Where are we starting vertically in the map layer
