@@ -209,18 +209,19 @@ namespace MapEditor.GUI
                     {
                         case (currentLayer.GROUND):
                             {
+                                layerLabel.Text = "GROUND";
                                 _map.Ground.setItemAt(new Vector2(mouseX, mouseY),null, _map.Player);
                                 _map.CollisionLayer.setItemAt(new Vector2(mouseX, mouseY), Rectangle.Empty, _map.Player);
                             }
                             break;
                         case (currentLayer.MASK):
                             layerLabel.Text = "MASK";
-                            if (_selector.IsTileSelected)
+                           
                                 _map.Mask.setItemAt(new Vector2(mouseX, mouseY), null, _map.Player);
                             break;
                         case (currentLayer.FRINGE):
                             layerLabel.Text = "FRINGE";
-                            if (_selector.IsTileSelected)
+                           
                                 _map.Fringe.setItemAt(new Vector2(mouseX, mouseY), null, _map.Player);
                             break;
 
@@ -270,6 +271,50 @@ namespace MapEditor.GUI
                 _location.X = (int)value.X;
                 _location.Y = (int)value.Y;
             }
+        }
+
+       /// <summary>
+       /// Resets the Map
+       /// </summary>
+       /// <param name="graphics"></param>
+       /// <param name="Content"></param>
+        public void reset(GraphicsDeviceManager graphics, ContentManager Content)
+        {
+            
+            currentLayer1 = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
+            currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
+            currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
+            a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
+            b = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
+            c = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
+         
+            for (int x = 0; x < 100; x++)
+            {
+                for (int y = 0; y < 100; y++)
+                {
+                    currentLayer1.setItemAt(new Vector2(x, y), a);
+                    if (x % 3 == 0)
+                        currentLayerA.setItemAt(new Vector2(x, y), b);
+
+                    if (y % 3 == 0)
+                        currentLayerB.setItemAt(new Vector2(x, y), c);
+                }
+            }
+            a.setTexture(Content.Load<Texture2D>("Tiles//FinalGrid"));
+            a.Name = "Tiles//tile";
+            b.setTexture(Content.Load<Texture2D>("Tiles//tileM"));
+            b.Name = "Tiles//tileM";
+            c.setTexture(Content.Load<Texture2D>("Tiles//tileF"));
+            c.Name = "Tiles//tileF";
+            Avatar ava = _center;
+            _map = new Map();
+            _map.SwapMaskLayer(currentLayerA);
+            _map.SwapGoundLayer(currentLayer1);
+            _map.SwapFringeLayer(currentLayerB);
+            _map.SetCollisionLayer(currentLayer1);
+            _map.Player = ava;
+          
+           
         }
    }
 }

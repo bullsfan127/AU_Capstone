@@ -46,6 +46,7 @@ namespace MapEditor
         XPanel LayerSelectionPanel;
 
         SaveButton saveButton;
+        ResetButton resetButton;
 
         public MapEditorMain()
         {
@@ -104,6 +105,8 @@ namespace MapEditor
            LayerSelectionPanel.AddChild(window.layerLabel, new Vector2(buttonTexture.Width + 30, 30));
 
            saveButton = new SaveButton(Vector2.Zero, buttonTexture, window.Map, this.Content.Load<SpriteFont>("FPS"));
+           resetButton = new ResetButton(new Vector2(0, 100), buttonTexture, this.Content.Load<SpriteFont>("FPS"), graphics, Content, window);
+           
         }
 
         /// <summary>
@@ -127,11 +130,11 @@ namespace MapEditor
                 this.Exit();
 
             window.Update(gameTime);
-           
+          
             TileSelectorPanel.Update(gameTime);
             LayerSelectionPanel.Update(gameTime);
             saveButton.Update(gameTime);
-
+            resetButton.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -141,14 +144,15 @@ namespace MapEditor
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.RoyalBlue);
 
             // TODO: Add your drawing code here
             window.Draw(gameTime, spriteBatch);
-           
+          
             TileSelectorPanel.Draw(gameTime, spriteBatch);
             LayerSelectionPanel.Draw(gameTime, spriteBatch);
             saveButton.Draw(gameTime, spriteBatch);
+            resetButton.Draw(gameTime, spriteBatch);
             base.Draw(gameTime);
         }
     }
