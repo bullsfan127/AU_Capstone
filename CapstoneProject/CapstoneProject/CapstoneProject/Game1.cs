@@ -43,6 +43,8 @@ namespace CapstoneProject
         SpriteBatch spriteBatch;
         Coin coin = new Coin();
 
+        SoundManager soundManager;
+
 #if !LOAD_FROM_FILE
         Tile a;
         Tile b;
@@ -80,8 +82,11 @@ namespace CapstoneProject
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferredBackBufferWidth = 600;
             menu = new MainMenu.MainMenu(graphics, this.Content);
+
             pauseMenu = new PauseMenu.PauseMenu(graphics, this.Content);
             healthBar = new HealthBar(graphics, this.Content);
+
+            soundManager = new SoundManager(this, this.Content);
         }
 
         /// <summary>
@@ -156,6 +161,7 @@ namespace CapstoneProject
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
             Terminal.Init(this, spriteBatch, this.Content.Load<SpriteFont>("FPS"), graphics.GraphicsDevice);
             Terminal.SetSkin(TerminalThemeType.FIRE);
+
 #endif
 #if !LOAD_FROM_FILE
             a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
@@ -226,8 +232,19 @@ namespace CapstoneProject
                         graphics.ToggleFullScreen();
                     }
 
+                    if (keystate.IsKeyDown(Keys.Up) && player.Position.Y == 372)
+                    {
+                        soundManager.PlaySound(5);
+                    }
+
+                    if (keystate.IsKeyDown(Keys.Down))
+                    {
+                        soundManager.PlaySound(1);
+                    }
+
                     player.Update(gameTime, gameMap);
                     // TODO: Add your update logic here
+
                     break;
             }
 
@@ -237,7 +254,7 @@ namespace CapstoneProject
             counter.Update(gameTime);
             Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
 #endif
-
+            soundManager.PlaySong();
             base.Update(gameTime);
         }
 
