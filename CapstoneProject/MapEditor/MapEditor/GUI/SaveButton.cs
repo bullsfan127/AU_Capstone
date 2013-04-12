@@ -32,6 +32,12 @@ namespace MapEditor.GUI
             base.Update(gameTime);
         }
 
+        public void UpdateM(GameTime gameTime, Map map)
+        {
+            saveMap = map;
+            this.Update(gameTime);
+        }
+
         public override void Draw(GameTime gameTime, SpriteBatch spritebatch)
         {
             buttonLable.Draw(gameTime, spritebatch);

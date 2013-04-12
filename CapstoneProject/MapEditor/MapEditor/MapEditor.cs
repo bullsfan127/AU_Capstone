@@ -22,24 +22,28 @@ namespace MapEditor
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        
+
         /// <summary>
         /// The window the map is contained in.
         /// </summary>
         MapWindow window;
+
         //~~~~~~~~~~Tile Selector~~~~~~~~~~~~~
         /// <summary>
         /// Tile Selector panel
         /// </summary>
         XPanel TileSelectorPanel;
+
         /// <summary>
         /// Object that handles all the tile management
         /// </summary>
         TileSelector tileSelector;
+
         /// <summary>
         /// Tilesheet the tiles are pulled off of.
         /// </summary>
         TileSheet sheets;
+
         /// <summary>
         /// Layer selection
         /// </summary>
@@ -80,10 +84,10 @@ namespace MapEditor
         {
             Texture2D panelTexture = this.Content.Load<Texture2D>("Panel540X540");
             Texture2D buttonTexture = this.Content.Load<Texture2D>("Tiles//Node");
-            
+
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            
+
             sheets = new TileSheet(this.Content.Load<Texture2D>("Tiles//FinalGrid"), 64, "Tiles//FinalGrid");
             //~~~~~~~~~Tile Selector~~~~~~~~~~~~~~
             tileSelector = new TileSelector(spriteBatch, sheets, graphics.GraphicsDevice, panelTexture);
@@ -102,11 +106,10 @@ namespace MapEditor
                     window, this.Content.Load<SpriteFont>("FPS")), new Vector2(30, 30 + buttonTexture.Height));
             LayerSelectionPanel.AddChild(new SetFringeActive(Vector2.Zero, buttonTexture,
                         window, this.Content.Load<SpriteFont>("FPS")), new Vector2(30, 30 + (buttonTexture.Height) * 2));
-           LayerSelectionPanel.AddChild(window.layerLabel, new Vector2(buttonTexture.Width + 30, 30));
+            LayerSelectionPanel.AddChild(window.layerLabel, new Vector2(buttonTexture.Width + 30, 30));
 
-           saveButton = new SaveButton(Vector2.Zero, buttonTexture, window.Map, this.Content.Load<SpriteFont>("FPS"));
-           resetButton = new ResetButton(new Vector2(0, 100), buttonTexture, this.Content.Load<SpriteFont>("FPS"), graphics, Content, window);
-           
+            saveButton = new SaveButton(Vector2.Zero, buttonTexture, window.Map, this.Content.Load<SpriteFont>("FPS"));
+            resetButton = new ResetButton(new Vector2(0, 100), buttonTexture, this.Content.Load<SpriteFont>("FPS"), graphics, Content, window);
         }
 
         /// <summary>
@@ -130,10 +133,10 @@ namespace MapEditor
                 this.Exit();
 
             window.Update(gameTime);
-          
+
             TileSelectorPanel.Update(gameTime);
             LayerSelectionPanel.Update(gameTime);
-            saveButton.Update(gameTime);
+            saveButton.UpdateM(gameTime, window.Map);
             resetButton.Update(gameTime);
             base.Update(gameTime);
         }
@@ -148,7 +151,7 @@ namespace MapEditor
 
             // TODO: Add your drawing code here
             window.Draw(gameTime, spriteBatch);
-          
+
             TileSelectorPanel.Draw(gameTime, spriteBatch);
             LayerSelectionPanel.Draw(gameTime, spriteBatch);
             saveButton.Draw(gameTime, spriteBatch);

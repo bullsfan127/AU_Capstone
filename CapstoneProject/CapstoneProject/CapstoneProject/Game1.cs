@@ -99,13 +99,15 @@ namespace CapstoneProject
 
             player = new Player();
             gameMap = new Map();
+
 #if !LOAD_FROM_FILE
             currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
 #else
-            gameMap = gameMap.LoadMap("Savegame.xml", this.Content);
-            player = (Player)gameMap.Player;
+            gameMap = gameMap.LoadMap("668105.xml", this.Content);
+            // player = (Player)gameMap.Player;
+            gameMap.Player = player;
 #endif
 
 #if !LOAD_FROM_FILE
@@ -165,14 +167,12 @@ namespace CapstoneProject
             c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
             c.Name = "Tiles//tileF";
 
-            Texture2D playerTexture = Content.Load<Texture2D>("shitty3.0");
-
-            player.Initialize(playerTexture, new Vector2(0, 0));
-
-            Texture2D coinTexture = Content.Load<Texture2D>("Coin");
-            coin.Initialize(coinTexture, new Vector2(19, 19));
             // TODO: use this.Content to load your game content here
 #endif
+            Texture2D coinTexture = Content.Load<Texture2D>("Coin");
+            coin.Initialize(coinTexture, new Vector2(19, 19));
+            Texture2D playerTexture = Content.Load<Texture2D>("shitty3.0");
+            player.Initialize(playerTexture, new Vector2(0, 0));
         }
 
         /// <summary>
@@ -210,15 +210,26 @@ namespace CapstoneProject
                     {
                         CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
                     }
-                    if (keystate.IsKeyDown(Keys.S))
+                    //if (keystate.IsKeyDown(Keys.S))
+                    //{
+                    //    //  save maap
+                    //    gameMap.saveMap();
+                    //    Map gameMap2 = gameMap;
+                    //    gameMap = null;
+                    //    gameMap = new Map();
+                    //    gameMap = gameMap.LoadMap("s.xml", this.Content);
+                    //    //player = (Player)gameMap.Player;
+                    //}
+
+                    if (keystate.IsKeyDown(Keys.L))
                     {
-                        //  save maap
-                        gameMap.saveMap();
                         Map gameMap2 = gameMap;
                         gameMap = null;
                         gameMap = new Map();
-                        gameMap = gameMap.LoadMap("Savegame.xml", this.Content);
-                        player = (Player)gameMap.Player;
+                        gameMap = gameMap.LoadMap("s.xml", this.Content);
+
+                        gameMap.Player = null;
+                        gameMap.Player = player;
                     }
 
                     if (keystate.IsKeyDown(Keys.F))

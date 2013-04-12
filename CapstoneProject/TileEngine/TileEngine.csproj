@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FocalPoint.cs" />
     <Compile Include="RolePlay\Armor.cs" />
     <Compile Include="Avatar.cs" />
     <Compile Include="Controls.cs" />
