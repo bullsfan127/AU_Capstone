@@ -35,7 +35,18 @@ namespace TileEngine
         //Base Type for Player
         Avatar _Player;
 
+        int _MapID;
+
+
         #region encapsulatedFields
+        /// <summary>
+        /// MapID FIELD
+        /// </summary>
+        public int MapID
+        {
+            get { return _MapID; }
+            set { _MapID = value; }
+        }
         /// <summary>
         /// Tracking for NPC
         /// </summary>

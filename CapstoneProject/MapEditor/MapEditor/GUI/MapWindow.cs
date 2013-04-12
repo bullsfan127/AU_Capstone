@@ -62,6 +62,12 @@ namespace MapEditor.GUI
         TileSelector _selector;
         SpriteBatch _spritebatch;
         Map _map;
+
+        public Map Map
+        {
+            get { return _map; }
+            set { _map = value; }
+        }
         //These will be removed soon
         DrawableLayer<Tile> _ground;
         DrawableLayer<Tile> _mask;

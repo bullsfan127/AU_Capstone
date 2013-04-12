@@ -44,7 +44,8 @@ namespace MapEditor
         /// Layer selection
         /// </summary>
         XPanel LayerSelectionPanel;
-    
+
+        SaveButton saveButton;
 
         public MapEditorMain()
         {
@@ -101,7 +102,8 @@ namespace MapEditor
             LayerSelectionPanel.AddChild(new SetFringeActive(Vector2.Zero, buttonTexture,
                         window, this.Content.Load<SpriteFont>("FPS")), new Vector2(30, 30 + (buttonTexture.Height) * 2));
            LayerSelectionPanel.AddChild(window.layerLabel, new Vector2(buttonTexture.Width + 30, 30));
-            
+
+           saveButton = new SaveButton(Vector2.Zero, buttonTexture, window.Map, this.Content.Load<SpriteFont>("FPS"));
         }
 
         /// <summary>
@@ -128,6 +130,7 @@ namespace MapEditor
            
             TileSelectorPanel.Update(gameTime);
             LayerSelectionPanel.Update(gameTime);
+            saveButton.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -145,7 +148,7 @@ namespace MapEditor
            
             TileSelectorPanel.Draw(gameTime, spriteBatch);
             LayerSelectionPanel.Draw(gameTime, spriteBatch);
-
+            saveButton.Draw(gameTime, spriteBatch);
             base.Draw(gameTime);
         }
     }

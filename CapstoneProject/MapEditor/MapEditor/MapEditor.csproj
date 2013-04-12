@@ -110,6 +110,7 @@
   <ItemGroup>
     <Compile Include="FocalPoint.cs" />
     <Compile Include="GUI\MapWindow.cs" />
+    <Compile Include="GUI\SaveButton.cs" />
     <Compile Include="GUI\SetFringeActive.cs" />
     <Compile Include="GUI\SetGoundActive.cs" />
     <Compile Include="GUI\SetMaskActive.cs" />
