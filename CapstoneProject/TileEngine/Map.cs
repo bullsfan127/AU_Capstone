@@ -25,61 +25,113 @@ namespace TileEngine
 
         CustomSerialization.Serialize<Map> serializer = new CustomSerialization.Serialize<Map>();
 
-        //For now I'm hard coding the layers eventually we want to move to a list
-        //based system.
         DrawableLayer<Tile> _Ground;
+        List<Item> _mapItems = new List<Item>();
+        List<Avatar> _NpcList = new List<Avatar>();
+        DrawableLayer<Tile> _Mask;
+        //Layers for collision detection
+        Layer<Rectangle> _CollisionLayer;
+        DrawableLayer<Tile> _Fringe;
+        //Base Type for Player
+        Avatar _Player;
 
+        int _MapID;
+
+
+        #region encapsulatedFields
+        /// <summary>
+        /// MapID FIELD
+        /// </summary>
+        public int MapID
+        {
+            get { return _MapID; }
+            set { _MapID = value; }
+        }
+        /// <summary>
+        /// Tracking for NPC
+        /// </summary>
+        public List<Avatar> NpcList
+        {
+            get { return _NpcList; }
+            set { _NpcList = value; }
+        }
+        /// <summary>
+        /// Tracking for MapItems
+        /// </summary>
+        public List<Item> MapItems
+        {
+            get { return _mapItems; }
+            set { _mapItems = value; }
+        }
+        /// <summary>
+        /// The Ground Layer
+        /// </summary>
         public DrawableLayer<Tile> Ground
         {
             get { return _Ground; }
             set { _Ground = value; }
         }
-
-        DrawableLayer<Tile> _Mask;
-
+        /// <summary>
+        /// The Mask Layer
+        /// </summary>
         public DrawableLayer<Tile> Mask
         {
             get { return _Mask; }
             set { _Mask = value; }
         }
-
-        DrawableLayer<Tile> _Fringe;
-
+        /// <summary>
+        /// The Fringe Layer
+        /// </summary>
         public DrawableLayer<Tile> Fringe
         {
             get { return _Fringe; }
             set { _Fringe = value; }
         }
-
-        //Layers for collision detection
-        Layer<Rectangle> _CollisionLayer;
-
-        //Abstract Type for Player
-        Avatar _Player;
-
+        /// <summary>
+        /// The CollisionLayer
+        /// </summary>
+        public Layer<Rectangle> CollisionLayer
+        {
+            get { return _CollisionLayer; }
+            set { _CollisionLayer = value; }
+        }
+        /// <summary>
+        /// The Player
+        /// </summary>
         public Avatar Player
         {
             get { return _Player; }
             set { _Player = value; }
         }
-
+        #endregion
         /// <summary>
         /// Default Doesn't do anything.
         /// </summary>
         public Map() { }
 
-        //TODO:  Probably need to add a constuctor the gets the graphics device and does its "magic"
+       
         public Map(DrawableLayer<Tile> Ground, DrawableLayer<Tile> Mask, DrawableLayer<Tile> Fringe)
         {
             _Ground = Ground;
             _Mask = Mask;
             _Fringe = Fringe;
+           
         }
-
+        /// <summary>
+        /// Sets the CollisionLayer size according to a layer.
+        /// </summary>
+        /// <param name="currentLayer1">the layer whose side you want to replicate</param>
+        public void SetCollisionLayer(DrawableLayer<Tile> currentLayer1)
+        {
+            _CollisionLayer = new Layer<Rectangle>(new Vector2(currentLayer1.MapWidth, currentLayer1.MapHeight));
+        }
+        
+        //#UPDATE
         /// <summary>
         /// Updates all map specific components
         /// </summary>
         /// <param name="gameTime">The gameTime snapshot</param>
+        //@Offset Why do you need this here?  Just add it to the avatar class this is linked to the player class
         public void Update(GameTime gameTime, Vector2 offset)
         {
             this.offset = offset;
@@ -87,22 +139,58 @@ namespace TileEngine
             {
                 this.offset.X = 0;
             }
-        }
 
+            foreach(Item item in _mapItems)
+            {
+                item.Update(gameTime);
+            }
+
+            foreach (Avatar a in _NpcList)
+            { a.Update(gameTime); }
+        
+        }
+        //#DRAW
+        /// <summary>
+        /// Draw the map in the entire screen
+        /// </summary>
+        /// <param name="spriteBatch">spritebatch</param>
+        /// <param name="gameTime">gametime</param>
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            //TODO:  Add a way to calculate the where the center should be based on the player.
+            
             _Ground.Draw(spriteBatch, gameTime, offset);
             _Mask.Draw(spriteBatch, gameTime, offset);
+            
+            foreach (Item item in _mapItems)
+            {
+                //TODO:  Add Logic for drawing based on player Proximity
+                item.Draw(spriteBatch, gameTime);
+            }
+
+            foreach (Avatar ava in _NpcList)
+            {
+                //TODO:  Add Logic for drawing based on player Proximity
+                ava.Draw(spriteBatch, gameTime);
+            
+            
+            }
             _Player.Draw(spriteBatch, gameTime);
             _Fringe.Draw(spriteBatch, gameTime, offset);
+            
         }
+        
+        /// <summary>
+        /// Draws the map in a specific region
+        /// </summary>
+        /// <param name="spriteBatch">Spritebatch</param>
+        /// <param name="gameTime">Gametime</param>
+        /// <param name="Location">Rectancle stating the region</param>
         public void DrawInWindow(SpriteBatch spriteBatch, GameTime gameTime, Rectangle Location)
         {
-            _Ground.Draw(spriteBatch, gameTime, offset, Location);
-            _Mask.Draw(spriteBatch, gameTime, offset, Location);
+            _Ground.Draw(spriteBatch, gameTime, offset, Location, _Player);
+            _Mask.Draw(spriteBatch, gameTime, offset, Location, _Player);
             _Player.Draw(spriteBatch, gameTime);
-            _Fringe.Draw(spriteBatch, gameTime, offset, Location);
+            _Fringe.Draw(spriteBatch, gameTime, offset, Location, _Player);
      
         }
 
@@ -203,5 +291,7 @@ namespace TileEngine
             this._Player.PlayerAnimation.Position = this._Player.Position;
             this._Player.Offset = new Vector2(this._Player.OX, this.Player.OY);
         }
+
+       
     }
 }

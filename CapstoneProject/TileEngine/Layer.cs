@@ -65,6 +65,18 @@ namespace TileEngine
            }
 
        }
+        
+       public void setItemAt(Vector2 location, T newItem, Avatar a)
+       {
+           try
+           {
+               layer[(int)(location.X + a.Position.X), (int)(location.Y + a.Position.Y)] = newItem;
+           }
+           catch (IndexOutOfRangeException e)
+           {
+               //throw e;
+           }
+       }
 
    
    }

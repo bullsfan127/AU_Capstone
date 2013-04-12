@@ -47,21 +47,21 @@ namespace GUI.Interfaces
         /// <summary>
         /// Position of the Button on the Screen;
         /// </summary>
-        Vector2 Position { get; set; }
-        
+        //Vector2 Position { get; set; }
+        //Moved to the parent
         
         /// <summary>
         /// Update Method for a button should check to see if the button was clicked and if it was
         /// then fire the event which is the actual action of the Button.
         /// </summary>
         /// <param name="gameTime">supplied for button cooldown.</param>
-         void Update(GameTime gameTime);
+       new  void Update(GameTime gameTime);
         /// <summary>
         /// Draw Method for a Button
         /// </summary>
         /// <param name="gameTime">The Game Time</param>
         /// <param name="spriteBatch">SpriteBatch</param>
-         void Draw(GameTime gameTime, SpriteBatch spriteBatch);
+        new  void Draw(GameTime gameTime, SpriteBatch spriteBatch);
         
         /// <summary>
         /// Does the actual work.  Performs the action that the button is supposed to.
