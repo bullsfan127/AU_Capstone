@@ -22,12 +22,29 @@ namespace MapEditor
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        
+        /// <summary>
+        /// The window the map is contained in.
+        /// </summary>
         MapWindow window;
-        TileSelector tileSelector;
-        TileSheet sheets;
+        //~~~~~~~~~~Tile Selector~~~~~~~~~~~~~
+        /// <summary>
+        /// Tile Selector panel
+        /// </summary>
         XPanel TileSelectorPanel;
+        /// <summary>
+        /// Object that handles all the tile management
+        /// </summary>
+        TileSelector tileSelector;
+        /// <summary>
+        /// Tilesheet the tiles are pulled off of.
+        /// </summary>
+        TileSheet sheets;
+        /// <summary>
+        /// Layer selection
+        /// </summary>
         XPanel LayerSelectionPanel;
-        SetGoundActiveButton Gbutton;
+    
 
         public MapEditorMain()
         {
@@ -59,25 +76,32 @@ namespace MapEditor
         /// </summary>
         protected override void LoadContent()
         {
+            Texture2D panelTexture = this.Content.Load<Texture2D>("Panel540X540");
+            Texture2D buttonTexture = this.Content.Load<Texture2D>("Tiles//Node");
+            
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            
             sheets = new TileSheet(this.Content.Load<Texture2D>("Tiles//FinalGrid"), 64, "Tiles//FinalGrid");
-            tileSelector = new TileSelector(spriteBatch, sheets, graphics.GraphicsDevice, this.Content.Load<Texture2D>("Tiles//Node"));
+            //~~~~~~~~~Tile Selector~~~~~~~~~~~~~~
+            tileSelector = new TileSelector(spriteBatch, sheets, graphics.GraphicsDevice, panelTexture);
             tileSelector._renderTarget = new Rectangle(graphics.GraphicsDevice.Viewport.Width - 320, 0, 320, 320);
-            window = new MapWindow(spriteBatch, graphics, Content, this.Content.Load<SpriteFont>("FPS"), tileSelector);
-            TileSelectorPanel = new XPanel(this.Content.Load<Texture2D>("Tiles//Node"), new Vector2(1280 - 300, 0), 300, 300);
-            TileSelectorPanel.AddChild(tileSelector, new Vector2(30, 30));
-            LayerSelectionPanel = new XPanel(this.Content.Load<Texture2D>("Tiles//Node"), new Vector2(1280 - 300, 300), 300, 300);
-
-            LayerSelectionPanel.AddChild(new SetGoundActiveButton(Vector2.Zero, this.Content.Load<Texture2D>("Tiles//Node"),
+            TileSelectorPanel = new XPanel(panelTexture, new Vector2(1280 - 360, 0), 360, 360);
+            TileSelectorPanel.AddChild(tileSelector, new Vector2(20, 20));
+            //~~~~~~~~~~window code~~~~~~~~~~~~~~~
+            window = new MapWindow(spriteBatch, graphics, Content, this.Content.Load<SpriteFont>("FPS"), tileSelector, panelTexture);
+            window.Position = new Vector2(200, 50);
+            //~~~~~~~~~Layer selection Panel~~~~~~~~~~~~
+            LayerSelectionPanel = new XPanel(panelTexture, new Vector2(1280 - 360, 360), 360, 360);
+            //Button adds
+            LayerSelectionPanel.AddChild(new SetGoundActiveButton(Vector2.Zero, buttonTexture,
                 window, this.Content.Load<SpriteFont>("FPS")), new Vector2(30, 30));
-            LayerSelectionPanel.AddChild(new SetMaskActive(Vector2.Zero, this.Content.Load<Texture2D>("Tiles//Node"),
-                    window, this.Content.Load<SpriteFont>("FPS")), new Vector2(30, 30 + this.Content.Load<Texture2D>("Tiles//Node").Height));
-            LayerSelectionPanel.AddChild(new SetFringeActive(Vector2.Zero, this.Content.Load<Texture2D>("Tiles//Node"),
-                        window, this.Content.Load<SpriteFont>("FPS")), new Vector2(30, 30 + (this.Content.Load<Texture2D>("Tiles//Node").Height) * 2));
-
-            // TODO: use this.Content to load your game content here
+            LayerSelectionPanel.AddChild(new SetMaskActive(Vector2.Zero, buttonTexture,
+                    window, this.Content.Load<SpriteFont>("FPS")), new Vector2(30, 30 + buttonTexture.Height));
+            LayerSelectionPanel.AddChild(new SetFringeActive(Vector2.Zero, buttonTexture,
+                        window, this.Content.Load<SpriteFont>("FPS")), new Vector2(30, 30 + (buttonTexture.Height) * 2));
+           LayerSelectionPanel.AddChild(window.layerLabel, new Vector2(buttonTexture.Width + 30, 30));
+            
         }
 
         /// <summary>
@@ -101,7 +125,7 @@ namespace MapEditor
                 this.Exit();
 
             window.Update(gameTime);
-            //tileSelector.Update(gameTime);
+           
             TileSelectorPanel.Update(gameTime);
             LayerSelectionPanel.Update(gameTime);
 
@@ -117,8 +141,8 @@ namespace MapEditor
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            window.Draw(gameTime);
-            //tileSelector.Draw(gameTime);
+            window.Draw(gameTime, spriteBatch);
+           
             TileSelectorPanel.Draw(gameTime, spriteBatch);
             LayerSelectionPanel.Draw(gameTime, spriteBatch);
 

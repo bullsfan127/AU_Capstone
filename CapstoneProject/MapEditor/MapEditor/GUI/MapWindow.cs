@@ -62,7 +62,7 @@ namespace MapEditor.GUI
         TileSelector _selector;
         SpriteBatch _spritebatch;
         Map _map;
-        
+        //These will be removed soon
         DrawableLayer<Tile> _ground;
         DrawableLayer<Tile> _mask;
         DrawableLayer<Tile> _Fringe;
@@ -71,28 +71,30 @@ namespace MapEditor.GUI
         Tile b;
         Tile c;
 
-        Label layerLabel;
-        
+        public Label layerLabel;
+        Texture2D UnderPanel;
         DrawableLayer<Tile> currentLayer1;
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
 
-        FocalPoint _center = new FocalPoint(new Vector2(10, 10), 10, 100, 50, 50);
+        FocalPoint _center = new FocalPoint(new Vector2(0, 90), 10, 100, 50, 50);
        public enum currentLayer { GROUND, MASK, FRINGE };
         /// <summary>
         /// For determining what layer you are laying tiles in.
         /// </summary>
        public currentLayer _currentLayer = currentLayer.FRINGE;
 
-       public MapWindow(Rectangle Location, SpriteBatch batch, SpriteFont Font)
+       public MapWindow(Rectangle Location, SpriteBatch batch, SpriteFont Font, Texture2D Underpanel)
         {
+            this.UnderPanel = Underpanel;
             _location = Location;
             _spritebatch = batch;
             layerLabel = new Label(Font, "", new Vector2(_location.X - 10, _location.Y - 10), Color.BlanchedAlmond, 1.0f);
         
         }
-       public MapWindow(SpriteBatch batch, GraphicsDeviceManager graphics, ContentManager Content, SpriteFont Font, TileSelector selector)
+       public MapWindow(SpriteBatch batch, GraphicsDeviceManager graphics, ContentManager Content, SpriteFont Font, TileSelector selector, Texture2D Underpanel)
        {
+           this.UnderPanel = Underpanel;
            _spritebatch = batch;
            _location = new Rectangle(100, 100, 500, 500);
            currentLayer1 = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
@@ -124,6 +126,7 @@ namespace MapEditor.GUI
            _map.SwapMaskLayer(currentLayerA);
            _map.SwapGoundLayer(currentLayer1);
            _map.SwapFringeLayer(currentLayerB);
+           _map.SetCollisionLayer(currentLayer1);
            layerLabel = new Label(Font, "", new Vector2(_location.X - 10, _location.Y - 10), Color.BlanchedAlmond, 1.0f);
        }
         public void Initialize()
@@ -138,6 +141,7 @@ namespace MapEditor.GUI
         public void Update(GameTime gameTime)
         {
             _center.Update(gameTime);
+            _map.Update(gameTime, Vector2.Zero);
             layerLabel.Update(gameTime);
             switch (_currentLayer)
             { 
@@ -167,24 +171,59 @@ namespace MapEditor.GUI
                     switch (_currentLayer)
                     {
                         case (currentLayer.GROUND):
-                            if(_selector.IsTileSelected)
-                            _map.Ground.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile);
-                            break;
+                            if (_selector.IsTileSelected)
+                            {
+                                _map.Ground.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile, _map.Player);
+                                _map.CollisionLayer.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile.SourceRectangle, _map.Player);
+                            }
+                             break;
                         case (currentLayer.MASK):
                             layerLabel.Text = "MASK";
                             if (_selector.IsTileSelected)
-                                _map.Mask.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile);
+                                _map.Mask.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile, _map.Player);
                             break;
                         case (currentLayer.FRINGE):
                             layerLabel.Text = "FRINGE";
                             if (_selector.IsTileSelected)
-                                _map.Fringe.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile);
+                                _map.Fringe.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile, _map.Player);
                             break;
 
-                    }
+                    }//endswitch
 
-                }
+                }//end leftbutton if
+
+                //If the right button is pressed and the button wasn't clicked recently
+                if ((mouse.RightButton == ButtonState.Pressed) /*&& !WasClicked*/)
+                {
+                    ///Mouse location on texture
+                    int mouseX = (mouse.X - _location.X) / 48;
+                    int mouseY = (mouse.Y - _location.Y) / 48;
+
+                    switch (_currentLayer)
+                    {
+                        case (currentLayer.GROUND):
+                            {
+                                _map.Ground.setItemAt(new Vector2(mouseX, mouseY),null, _map.Player);
+                                _map.CollisionLayer.setItemAt(new Vector2(mouseX, mouseY), Rectangle.Empty, _map.Player);
+                            }
+                            break;
+                        case (currentLayer.MASK):
+                            layerLabel.Text = "MASK";
+                            if (_selector.IsTileSelected)
+                                _map.Mask.setItemAt(new Vector2(mouseX, mouseY), null, _map.Player);
+                            break;
+                        case (currentLayer.FRINGE):
+                            layerLabel.Text = "FRINGE";
+                            if (_selector.IsTileSelected)
+                                _map.Fringe.setItemAt(new Vector2(mouseX, mouseY), null, _map.Player);
+                            break;
+
+                    }//endswitch
+
+                }//end rightbutton if
+
             }
+
 
             //If the button was clicked
 
@@ -196,11 +235,18 @@ namespace MapEditor.GUI
             
          
         }
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch){_map.DrawInWindow(spriteBatch, gameTime, _location);}
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            spriteBatch.Begin();
+            spriteBatch.Draw(UnderPanel, new Rectangle(_location.X - 20, _location.Y - 20, 540, 540), Color.LawnGreen);
+            spriteBatch.End();
+            Draw(gameTime);
+        }
 
         public void Draw(GameTime gameTime)
         {
            //_map.Draw(_spritebatch, gameTime);
+            
             _map.DrawInWindow(_spritebatch, gameTime, _location);
             layerLabel.Draw(gameTime, _spritebatch);
             
@@ -215,7 +261,8 @@ namespace MapEditor.GUI
             }
             set
             {
-                throw new NotImplementedException();
+                _location.X = (int)value.X;
+                _location.Y = (int)value.Y;
             }
         }
    }

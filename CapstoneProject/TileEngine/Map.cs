@@ -54,6 +54,12 @@ namespace TileEngine
         //Layers for collision detection
         Layer<Rectangle> _CollisionLayer;
 
+        public Layer<Rectangle> CollisionLayer
+        {
+            get { return _CollisionLayer; }
+            set { _CollisionLayer = value; }
+        }
+
         //Abstract Type for Player
         Avatar _Player;
 
@@ -74,6 +80,7 @@ namespace TileEngine
             _Ground = Ground;
             _Mask = Mask;
             _Fringe = Fringe;
+           
         }
 
         /// <summary>
@@ -99,10 +106,10 @@ namespace TileEngine
         }
         public void DrawInWindow(SpriteBatch spriteBatch, GameTime gameTime, Rectangle Location)
         {
-            _Ground.Draw(spriteBatch, gameTime, offset, Location);
-            _Mask.Draw(spriteBatch, gameTime, offset, Location);
+            _Ground.Draw(spriteBatch, gameTime, offset, Location, _Player);
+            _Mask.Draw(spriteBatch, gameTime, offset, Location, _Player);
             _Player.Draw(spriteBatch, gameTime);
-            _Fringe.Draw(spriteBatch, gameTime, offset, Location);
+            _Fringe.Draw(spriteBatch, gameTime, offset, Location, _Player);
      
         }
 
@@ -202,6 +209,11 @@ namespace TileEngine
             this._Player.PlayerAnimation.destinationRect = new Rectangle(this._Player.PlayerAnimation.DRect[0], this._Player.PlayerAnimation.DRect[1], this._Player.PlayerAnimation.DRect[2], this._Player.PlayerAnimation.DRect[3]);
             this._Player.PlayerAnimation.Position = this._Player.Position;
             this._Player.Offset = new Vector2(this._Player.OX, this.Player.OY);
+        }
+
+        public void SetCollisionLayer(DrawableLayer<Tile> currentLayer1)
+        {
+            _CollisionLayer = new Layer<Rectangle>(new Vector2(currentLayer1.MapWidth, currentLayer1.MapHeight));
         }
     }
 }

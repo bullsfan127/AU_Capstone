@@ -131,6 +131,21 @@ namespace TileEngine
 
             return (output);
         }
+        public T getItemAt(Vector2 location, Avatar a)
+        {
+            T output;
+
+            try
+            {
+                output = _layer[(int)(location.X + a.Position.X), (int)(location.Y + a.Position.Y)];
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                throw e;
+            }
+
+            return (output);
+        }
 
         /// <summary>
         /// Sets the Item at a specific location to a new Item
@@ -146,6 +161,18 @@ namespace TileEngine
             catch (IndexOutOfRangeException e)
             {
                 throw e;
+            }
+        }
+
+        public void setItemAt(Vector2 location, T newItem, Avatar a)
+        {
+            try
+            {
+                _layer[(int)(location.X + a.Position.X), (int)(location.Y + a.Position.Y)] = newItem;
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                //throw e;
             }
         }
 
@@ -209,7 +236,7 @@ namespace TileEngine
         /// <param name="spriteBatch">The spriteBatch that you are drawing with</param>
         /// <param name="gameTime">GameTime</param>
         /// <param name="centerLocation">Where the tile map should be centered.</param>
-        public void Draw(SpriteBatch spriteBatch, GameTime gameTime, Vector2 centerLocation, Rectangle containedWithin)
+        public void Draw(SpriteBatch spriteBatch, GameTime gameTime, Vector2 centerLocation, Rectangle containedWithin, Avatar player)
         {
             //TODO:  Use the Decimal point of the centerLocation to move the tiles to the right by
             //a percentage of the tile width allowing for smooth scrolling.  #TODO
@@ -231,9 +258,9 @@ namespace TileEngine
                 int startPosY = 0;
                 //(int)centerLocation.Y;//Where are we starting vertically in the map layer
 
-                for (int y = 0; y < _maxRows; y++)
+                for (int y = 0;  y < _maxRows; y++)
                 {
-                    T currentItem = _layer[startPosX, startPosY];//The current drawable item we are working with.
+                    T currentItem = _layer[startPosX + (int)player.Position.X, startPosY+ (int)player.Position.Y];//The current drawable item we are working with.
                     int renderTargetX = x;
                     
                     //TODO:  Space this out so the draw code is easier to understand.  #TODO
