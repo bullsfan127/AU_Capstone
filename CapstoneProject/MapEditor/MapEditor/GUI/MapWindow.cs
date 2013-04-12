@@ -58,7 +58,8 @@ namespace MapEditor.GUI
             get { return _location; }
             set { _location = value; }
         }
-    
+
+        TileSelector _selector;
         SpriteBatch _spritebatch;
         Map _map;
         
@@ -87,10 +88,10 @@ namespace MapEditor.GUI
         {
             _location = Location;
             _spritebatch = batch;
-            layerLabel = new Label(Font, "", new Vector2(_location.X + 10, _location.Y + 10), Color.BlanchedAlmond, 1.0f);
+            layerLabel = new Label(Font, "", new Vector2(_location.X - 10, _location.Y - 10), Color.BlanchedAlmond, 1.0f);
         
         }
-       public MapWindow(SpriteBatch batch, GraphicsDeviceManager graphics, ContentManager Content, SpriteFont Font)
+       public MapWindow(SpriteBatch batch, GraphicsDeviceManager graphics, ContentManager Content, SpriteFont Font, TileSelector selector)
        {
            _spritebatch = batch;
            _location = new Rectangle(100, 100, 500, 500);
@@ -100,7 +101,7 @@ namespace MapEditor.GUI
            a = new Tile(new Rectangle(0, 0, 64, 64), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
            b = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
            c = new Tile(new Rectangle(0, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
-
+           _selector = selector;
            for (int x = 0; x < 100; x++)
            {
                for (int y = 0; y < 100; y++)
@@ -113,7 +114,7 @@ namespace MapEditor.GUI
                        currentLayerB.setItemAt(new Vector2(x, y), c);
                }
            }
-           a.setTexture(Content.Load<Texture2D>("Tiles//tile"));
+           a.setTexture(Content.Load<Texture2D>("Tiles//FinalGrid"));
            a.Name = "Tiles//tile";
            b.setTexture(Content.Load<Texture2D>("Tiles//tileM"));
            b.Name = "Tiles//tileM";
@@ -123,7 +124,7 @@ namespace MapEditor.GUI
            _map.SwapMaskLayer(currentLayerA);
            _map.SwapGoundLayer(currentLayer1);
            _map.SwapFringeLayer(currentLayerB);
-           layerLabel = new Label(Font, "", new Vector2(_location.X + 10, _location.Y + 10), Color.BlanchedAlmond, 1.0f);
+           layerLabel = new Label(Font, "", new Vector2(_location.X - 10, _location.Y - 10), Color.BlanchedAlmond, 1.0f);
        }
         public void Initialize()
         {
@@ -151,7 +152,45 @@ namespace MapEditor.GUI
                     break;
             
             }
-           /*
+            MouseState mouse = Mouse.GetState();
+            Rectangle mouseColision = new Rectangle((int)mouse.X, (int)mouse.Y, 1, 1);
+            //Now we check if there is a collision
+            if (mouseColision.Intersects(_location))
+            {
+                //If the right button is pressed and the button wasn't clicked recently
+                if ((mouse.LeftButton == ButtonState.Pressed && _selector.IsTileSelected ) /*&& !WasClicked*/)
+                {
+                    ///Mouse location on texture
+                    int mouseX = (mouse.X - _location.X) / 48;
+                    int mouseY = (mouse.Y - _location.Y) / 48;
+
+                    switch (_currentLayer)
+                    {
+                        case (currentLayer.GROUND):
+                            if(_selector.IsTileSelected)
+                            _map.Ground.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile);
+                            break;
+                        case (currentLayer.MASK):
+                            layerLabel.Text = "MASK";
+                            if (_selector.IsTileSelected)
+                                _map.Mask.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile);
+                            break;
+                        case (currentLayer.FRINGE):
+                            layerLabel.Text = "FRINGE";
+                            if (_selector.IsTileSelected)
+                                _map.Fringe.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile);
+                            break;
+
+                    }
+
+                }
+            }
+
+            //If the button was clicked
+
+           
+            
+            /*
             _map = new Map(_ground, _mask, _Fringe);
             */_map.Player = _center;
             

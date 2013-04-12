@@ -130,7 +130,7 @@ namespace GUI.Controls
             if (mouseColision.Intersects(_ButtonRep))
             { 
                 //If the right button is pressed and the button wasn't clicked recently
-                if ((mouse.LeftButton == ButtonState.Pressed) && !WasClicked)
+                if ((mouse.LeftButton == ButtonState.Pressed) /*&& !WasClicked*/)
                     Clicked = true;
             }
 

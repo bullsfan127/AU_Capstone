@@ -238,18 +238,25 @@ namespace TileEngine
                     
                     //TODO:  Space this out so the draw code is easier to understand.  #TODO
                     if (currentItem != null)
-                        spriteBatch.Draw(currentItem.getTexture(),
-                                   new Vector2(renderTargetX * currentItem.getTexture().Width 
-                                                 * (_scale / currentItem.getTexture().Width) 
-                                                 - (int)centerLocation.X % 64 + containedWithin.X,
-                                       startPosY * currentItem.getTexture().Height * (_scale / currentItem.getTexture().Width)+ containedWithin.Y),
-                                   currentItem.getSourceRectangle(),
-                                   currentItem.getTint(),
-                                   currentItem.getRotation(),
-                                   currentItem.getOrigin(),
-                                   _scale / currentItem.getTexture().Width,
-                                   currentItem.getSpriteEffect(),
-                                   currentItem.getDepth());
+                        //spriteBatch.Draw(currentItem.getTexture(),
+                        //           new Vector2(renderTargetX * currentItem.getTexture().Width 
+                        //                         * (_scale / currentItem.getTexture().Width) 
+                        //                         - (int)centerLocation.X % 64 + containedWithin.X,
+                        //               startPosY * currentItem.getTexture().Height * (_scale / currentItem.getTexture().Width)+ containedWithin.Y),
+                        //           currentItem.getSourceRectangle(),
+                        //           currentItem.getTint(),
+                        //           currentItem.getRotation(),
+                        //           currentItem.getOrigin(),
+                        //           _scale / currentItem.getTexture().Width,
+                        //           currentItem.getSpriteEffect(),
+                        //           currentItem.getDepth());
+                        spriteBatch.Draw(currentItem.getTexture(), new Rectangle((int)(renderTargetX * (containedWithin.Width/10) + containedWithin.X),
+                                                                                 (int)(y * (containedWithin.Height/10) + containedWithin.Y),
+                                                                                 containedWithin.Width/10,
+                                                                                 containedWithin.Height / 10)
+                                                                                 , currentItem.getSourceRectangle(),
+                            currentItem.getTint(), currentItem.getRotation(), currentItem.getOrigin(), currentItem.getSpriteEffect(), currentItem.getDepth());
+
 
                     startPosY++;
                 }//inner for

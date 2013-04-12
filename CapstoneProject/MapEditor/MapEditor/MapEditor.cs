@@ -61,10 +61,11 @@ namespace MapEditor
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            window = new MapWindow(spriteBatch, graphics, Content, this.Content.Load<SpriteFont>("FPS"));
-            sheets = new TileSheet(this.Content.Load<Texture2D>("Tiles//FinalGrid"), 48, "Tiles//FinalGrid");
+            
+            sheets = new TileSheet(this.Content.Load<Texture2D>("Tiles//FinalGrid"), 64, "Tiles//FinalGrid");
             tileSelector = new TileSelector(spriteBatch, sheets, graphics.GraphicsDevice, this.Content.Load<Texture2D>("Tiles//Node"));
-            tileSelector._renderTarget = new Rectangle(graphics.GraphicsDevice.Viewport.Width - 240, 0, 240, 240);
+            tileSelector._renderTarget = new Rectangle(graphics.GraphicsDevice.Viewport.Width - 320, 0, 320, 320);
+            window = new MapWindow(spriteBatch, graphics, Content, this.Content.Load<SpriteFont>("FPS"), tileSelector);
             TileSelectorPanel = new XPanel(this.Content.Load<Texture2D>("Tiles//Node"), new Vector2(1280 - 300, 0), 300, 300);
             TileSelectorPanel.AddChild(tileSelector, new Vector2(30, 30));
             LayerSelectionPanel = new XPanel(this.Content.Load<Texture2D>("Tiles//Node"), new Vector2(1280 - 300, 300), 300, 300);
@@ -100,7 +101,7 @@ namespace MapEditor
                 this.Exit();
 
             window.Update(gameTime);
-            tileSelector.Update(gameTime);
+            //tileSelector.Update(gameTime);
             TileSelectorPanel.Update(gameTime);
             LayerSelectionPanel.Update(gameTime);
             
@@ -117,7 +118,7 @@ namespace MapEditor
 
             // TODO: Add your drawing code here
             window.Draw(gameTime);
-            tileSelector.Draw(gameTime);
+            //tileSelector.Draw(gameTime);
             TileSelectorPanel.Draw(gameTime, spriteBatch);
             LayerSelectionPanel.Draw(gameTime, spriteBatch);
          

@@ -24,7 +24,7 @@ namespace MapEditor.GUI
             : base(Position, ButtonTexture)
         {
             this.window = window;
-            buttonLable = new Label(font, "", Position, Color.Black, 1.0f);
+            buttonLable = new Label(font, "FRINGE Off", Position, Color.Black, 1.0f);
 
         }
 

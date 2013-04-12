@@ -99,7 +99,7 @@ namespace TileEngine
             _Effect = _effect;
             _Depth = _depth;
 
-            _Scale = 1;//Scale is a scale factor
+            _Scale = 0.0f;//Scale is a scale factor
             //so if it says two the tile will be twice as big.
         }
 

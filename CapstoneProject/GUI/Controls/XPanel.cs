@@ -105,7 +105,7 @@ namespace GUI.Controls
         {
             foreach (GComponent a in _ChildComponents)
             {
-                if(a != null)
+               
                 a.Update(gameTime);
             }
         }
