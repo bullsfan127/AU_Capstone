@@ -249,7 +249,7 @@ namespace MainMenu
                     background_color = Color.Yellow;
                     break;
                 case SETTINGS_BUTTON_INDEX:
-                    background_color = Color.Red;
+                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.SETTINGS;
                     break;
                 case EXIT_BUTTON_INDEX:
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.EXIT;

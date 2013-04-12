@@ -6,8 +6,8 @@ Content\shitty.xnb
 Content\shitty2.0.xnb
 Content\shitty2.0test.xnb
 Content\shitty3.0.xnb
-Content\Coin.xnb
 Content\Boomerang.xnb
+Content\Coin.xnb
 Content\Tiles\FinalGrid.xnb
 Content\Potion.xnb
 Content\Continue.xnb
@@ -17,4 +17,8 @@ Content\NewGame.xnb
 Content\Resume.xnb
 Content\MainMenu.xnb
 Content\AdvHealth.xnb
+Content\MoveRight.xnb
+Content\MoveLeft.xnb
+Content\JumpUp.xnb
+Content\SaveKeys.xnb
 Content\FPS.xnb

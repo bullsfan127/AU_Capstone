@@ -24,7 +24,7 @@ using TileEngine;
 
 namespace CapstoneProject
 {
-    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3 };
+    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, SETTINGS = 4};
 
     /// <summary>
     /// This is the main type for your game
@@ -44,6 +44,7 @@ namespace CapstoneProject
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Coin coin = new Coin();
+        Settings settings;
 
 #if !LOAD_FROM_FILE
         Tile a;
@@ -84,6 +85,7 @@ namespace CapstoneProject
             menu = new MainMenu.MainMenu(graphics, this.Content);
             pauseMenu = new PauseMenu.PauseMenu(graphics, this.Content);
             healthBar = new HealthBar(graphics, this.Content);
+            settings = new Settings(graphics, this.Content);
         }
 
         /// <summary>
@@ -96,6 +98,7 @@ namespace CapstoneProject
         {
             menu.Initialize(this.Window);
             pauseMenu.Initialize(this.Window);
+            
 
             IsMouseVisible = true;
 
@@ -152,6 +155,8 @@ namespace CapstoneProject
             menu.LoadContent();
             pauseMenu.LoadContent();
             healthBar.LoadContent();
+            settings.LoadContent();
+
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 #if DEBUG
@@ -203,6 +208,9 @@ namespace CapstoneProject
                     break;
                 case GAMESTATE.PAUSE:
                     pauseMenu.Update(gameTime);
+                    break;
+                case GAMESTATE.SETTINGS:
+                    settings.Update(gameTime);
                     break;
                 case GAMESTATE.PLAY:
                     healthBar.Update(gameTime);
@@ -268,8 +276,12 @@ namespace CapstoneProject
                     break;
                 case GAMESTATE.PAUSE:
                     // CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
-                    GraphicsDevice.Clear(Color.Beige);
+                    GraphicsDevice.Clear(Color.Black);
                     pauseMenu.Draw(gameTime, spriteBatch);
+                    break;
+                case GAMESTATE.SETTINGS:
+                    GraphicsDevice.Clear(Color.Black);
+                    settings.Draw(gameTime, spriteBatch);
                     break;
                 case GAMESTATE.EXIT:
                     this.Exit();

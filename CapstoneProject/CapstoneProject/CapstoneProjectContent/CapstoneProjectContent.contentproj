@@ -106,7 +106,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="Coin.png">
       <Name>Coin</Name>
       <Importer>TextureImporter</Importer>
@@ -168,6 +167,34 @@
   <ItemGroup>
     <Compile Include="AdvHealth.jpg">
       <Name>AdvHealth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MoveRight.png">
+      <Name>MoveRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MoveLeft.png">
+      <Name>MoveLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="JumpUp.png">
+      <Name>JumpUp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SaveKeys.png">
+      <Name>SaveKeys</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
