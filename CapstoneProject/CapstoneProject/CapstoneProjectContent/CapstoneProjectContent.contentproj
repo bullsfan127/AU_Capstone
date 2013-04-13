@@ -71,43 +71,42 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="shitty.png">
+    <Compile Include="shitty\shitty.png">
       <Name>shitty</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="shitty2.0.png">
+    <Compile Include="shitty\shitty2.0.png">
       <Name>shitty2.0</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="shitty2.0test.png">
+    <Compile Include="shitty\shitty2.0test.png">
       <Name>shitty2.0test</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="shitty3.0.png">
+    <Compile Include="shitty\shitty3.0.png">
       <Name>shitty3.0</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Boomerang.png">
+    <Compile Include="Items\Boomerang.png">
       <Name>Boomerang</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-
-    <Compile Include="Coin.png">
+    <Compile Include="Items\Coin.png">
       <Name>Coin</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -117,49 +116,49 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Potion.png">
+    <Compile Include="Items\Potion.png">
       <Name>Potion</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Continue.jpg">
+    <Compile Include="menuButtons\Continue.jpg">
       <Name>Continue</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Settings.jpg">
+    <Compile Include="menuButtons\Settings.jpg">
       <Name>Settings</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exit.jpg">
+    <Compile Include="menuButtons\Exit.jpg">
       <Name>Exit</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NewGame.jpg">
+    <Compile Include="menuButtons\NewGame.jpg">
       <Name>NewGame</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Resume.jpg">
+    <Compile Include="menuButtons\Resume.jpg">
       <Name>Resume</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainMenu.jpg">
+    <Compile Include="menuButtons\MainMenu.jpg">
       <Name>MainMenu</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>

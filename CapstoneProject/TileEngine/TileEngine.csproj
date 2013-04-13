@@ -96,16 +96,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="RolePlay\Armor.cs" />
-    <Compile Include="Avatar.cs" />
-    <Compile Include="Controls.cs" />
+    <Compile Include="Interfaces\Avatar.cs" />
+    <Compile Include="Player\Controls.cs" />
     <Compile Include="RolePlay\Boomerang.cs" />
     <Compile Include="RolePlay\Coin.cs" />
     <Compile Include="RolePlay\FlyingMonster.cs" />
     <Compile Include="RolePlay\GroundMonster.cs" />
-    <Compile Include="HealthBar.cs" />
+    <Compile Include="Player\HealthBar.cs" />
     <Compile Include="RolePlay\Item.cs" />
     <Compile Include="RolePlay\Monster.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Player\Player.cs" />
     <Compile Include="Animation\Animation.cs" />
     <Compile Include="DrawableLayer.cs" />
     <Compile Include="Interfaces\Drawable.cs" />

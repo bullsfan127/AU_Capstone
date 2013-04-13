@@ -9,13 +9,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-
 namespace PauseMenu
 {
     /// <summary>
     /// This is a game component that implements IUpdateable.
     /// </summary>
-    public class PauseMenu 
+    public class PauseMenu
     {
         GraphicsDeviceManager graphics;
 
@@ -42,6 +41,7 @@ namespace PauseMenu
         Texture2D[] button_texture = new Texture2D[NUMBER_OF_BUTTONS];
         double[] button_timer = new double[NUMBER_OF_BUTTONS];
         ContentManager Content;
+
         //mouse pressed and mouse just pressed
         bool mpressed, prev_mpressed = false;
 
@@ -54,8 +54,6 @@ namespace PauseMenu
         {
             Content = content;
             graphics = _graphics;
-
-
         }
 
         /// <summary>
@@ -65,7 +63,7 @@ namespace PauseMenu
         public void Initialize(GameWindow Window)
         {
             // TODO: Add your initialization code here
-            
+
             // starting x and y locations to stack buttons
             // vertically in the middle of the screen
             int x = Window.ClientBounds.Width / 2 - BUTTON_WIDTH / 2;
@@ -82,22 +80,20 @@ namespace PauseMenu
             }
             //IsMouseVisible = true;
             background_color = Color.Beige;
-
         }
-       public void LoadContent()
+
+        public void LoadContent()
         {
-        
             // TODO: use this.Content to load your game content here
             button_texture[RESUME_BUTTON_INDEX] =
-               Content.Load<Texture2D>("Resume");
+               Content.Load<Texture2D>("menuButtons/Resume");
             button_texture[SETTINGS_BUTTON_INDEX] =
-           Content.Load<Texture2D>("Settings");
+           Content.Load<Texture2D>("menuButtons/Settings");
             button_texture[MAINMENU_BUTTON_INDEX] =
-                Content.Load<Texture2D>("MainMenu");
+                Content.Load<Texture2D>("menuButtons/MainMenu");
             button_texture[EXIT_BUTTON_INDEX] =
-               Content.Load<Texture2D>("Exit");
+               Content.Load<Texture2D>("menuButtons/Exit");
         }
-
 
         /// <summary>
         /// Allows the game component to update itself.
@@ -109,9 +105,9 @@ namespace PauseMenu
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 //this.Exit();
 
-            // TODO: Add your update logic here
-            // get elapsed frame time in seconds
-            frame_time = gameTime.ElapsedGameTime.Milliseconds / 1000.0;
+                // TODO: Add your update logic here
+                // get elapsed frame time in seconds
+                frame_time = gameTime.ElapsedGameTime.Milliseconds / 1000.0;
 
             // update mouse variables
             MouseState mouse_state = Mouse.GetState();
@@ -121,17 +117,16 @@ namespace PauseMenu
             mpressed = mouse_state.LeftButton == ButtonState.Pressed;
 
             update_buttons();
-            
         }
+
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-           
             spriteBatch.Begin();
             for (int i = 0; i < NUMBER_OF_BUTTONS; i++)
                 spriteBatch.Draw(button_texture[i], button_rectangle[i], button_color[i]);
             spriteBatch.End();
-            
         }
+
         private Boolean hit_image_alpha(Rectangle rect, Texture2D tex, int x, int y)
         {
             return hit_image_alpha(0, 0, tex, tex.Width * (x - rect.X) /
@@ -241,7 +236,3 @@ namespace PauseMenu
         }
     }
 }
-
-
-
-

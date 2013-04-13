@@ -40,6 +40,7 @@ namespace MainMenu
         Texture2D[] button_texture = new Texture2D[NUMBER_OF_BUTTONS];
         double[] button_timer = new double[NUMBER_OF_BUTTONS];
         ContentManager Content;
+
         //mouse pressed and mouse just pressed
         bool mpressed, prev_mpressed = false;
 
@@ -89,16 +90,15 @@ namespace MainMenu
         /// </summary>
         public void LoadContent()
         {
-
             // TODO: use this.Content to load your game content here
             button_texture[NEWGAME_BUTTON_INDEX] =
-               Content.Load<Texture2D>("NewGame");
+               Content.Load<Texture2D>("menuButtons/NewGame");
             button_texture[CONTINUE_BUTTON_INDEX] =
-                Content.Load<Texture2D>("Resume");
+                Content.Load<Texture2D>("menuButtons/Resume");
             button_texture[SETTINGS_BUTTON_INDEX] =
-                Content.Load<Texture2D>("Settings");
+                Content.Load<Texture2D>("menuButtons/Settings");
             button_texture[EXIT_BUTTON_INDEX] =
-               Content.Load<Texture2D>("Exit");
+               Content.Load<Texture2D>("menuButtons/Exit");
         }
 
         /// <summary>
@@ -148,8 +148,6 @@ namespace MainMenu
             for (int i = 0; i < NUMBER_OF_BUTTONS; i++)
                 spriteBatch.Draw(button_texture[i], button_rectangle[i], button_color[i]);
             spriteBatch.End();
-
-
         }
 
         private Boolean hit_image_alpha(Rectangle rect, Texture2D tex, int x, int y)

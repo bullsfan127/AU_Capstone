@@ -171,11 +171,11 @@ namespace CapstoneProject
             c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
             c.Name = "Tiles//tileF";
 
-            Texture2D playerTexture = Content.Load<Texture2D>("shitty3.0");
+            Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
 
             player.Initialize(playerTexture, new Vector2(0, 0));
 
-            Texture2D coinTexture = Content.Load<Texture2D>("Coin");
+            Texture2D coinTexture = Content.Load<Texture2D>("items/Coin");
             coin.Initialize(coinTexture, new Vector2(19, 19));
             // TODO: use this.Content to load your game content here
 #endif
@@ -206,7 +206,7 @@ namespace CapstoneProject
                     pauseMenu.Update(gameTime);
                     break;
                 case GAMESTATE.PLAY:
-                    healthBar.Update(gameTime);
+
                     // Allows the game to exit
                     if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                         this.Exit();
@@ -243,6 +243,7 @@ namespace CapstoneProject
                     }
 
                     player.Update(gameTime, gameMap);
+                    healthBar.Update(gameTime, player);
                     // TODO: Add your update logic here
 
                     break;

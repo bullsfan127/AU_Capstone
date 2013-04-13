@@ -9,7 +9,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-
 namespace TileEngine
 {
     /// <summary>
@@ -23,13 +22,11 @@ namespace TileEngine
         Rectangle rectangle;
         ContentManager Content;
 
-        public HealthBar(GraphicsDeviceManager _graphics, ContentManager content)  
+        public HealthBar(GraphicsDeviceManager _graphics, ContentManager content)
         {
             Content = content;
             graphics = _graphics;
         }
-
-     
 
         /// <summary>
         /// Allows the game component to perform any initialization it needs to before starting
@@ -38,9 +35,8 @@ namespace TileEngine
         public void Initialize()
         {
             // TODO: Add your initialization code here
-
-            
         }
+
         public void LoadContent()
         {
             texture = Content.Load<Texture2D>("AdvHealth");
@@ -52,20 +48,23 @@ namespace TileEngine
         /// Allows the game component to update itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, Player player)
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Space))
-                rectangle.Width -= 1;
-
-            
+            if (player.getHealth() == 0)
+                rectangle.Width = 0;
+            else if (player.getHealth() == 1)
+                rectangle.Width = (texture.Width / 3);
+            else if (player.getHealth() == 2)
+                rectangle.Width = (texture.Width / 3) * 2;
+            else if (player.getHealth() == 3)
+                rectangle.Width = texture.Width;
         }
+
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
             spriteBatch.Draw(texture, position, rectangle, Color.White);
             spriteBatch.End();
-
-            
         }
     }
 }
