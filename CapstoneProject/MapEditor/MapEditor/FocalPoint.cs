@@ -25,6 +25,7 @@ namespace TileEngine
 
         int MaxXTiles;
         int MaxYTiles;
+        int lastmove = 0;
         public FocalPoint(Vector2 position, int tileWide, int tileHigh, int MaxX, int MaxY)
         {
             Position = position;
@@ -32,34 +33,45 @@ namespace TileEngine
             height = tileHigh;
             MaxXTiles = MaxX;
             MaxYTiles = MaxY;
+           
         }
 
 
 
         public override void Update(GameTime gameTime)
         {
+            
             KeyboardState keyboard = Keyboard.GetState();
+
+            if (lastmove - gameTime.TotalGameTime.Milliseconds > 300) 
             if(keyboard.IsKeyDown(Keys.Up))
             {
-                if (Position.X > height / 2)
-                    Position = new Vector2(Position.X -1, Position.Y);
+                if (Position.X > 0)
+                    Position = new Vector2(Position.X, Position.Y - 10);
+                    lastmove = gameTime.TotalGameTime.Milliseconds;
             }
             else if (keyboard.IsKeyDown(Keys.Down))
             {
-                if (Position.X > MaxYTiles - height / 2)
-                    Position = new Vector2(Position.X + 1, Position.Y);
+                if (Position.Y < MaxYTiles - 10)
+                    Position = new Vector2(Position.X, Position.Y + 10);
+                    lastmove = gameTime.TotalGameTime.Milliseconds;
             }
             else if (keyboard.IsKeyDown(Keys.Left))
             {
-                if (Position.Y > height / 2)
-                    Position = new Vector2(Position.X, Position.Y -1);
+                if (Position.X > 0)
+                    Position = new Vector2(Position.X - 10, Position.Y);
+                    lastmove = gameTime.TotalGameTime.Milliseconds;
             }
             else if (keyboard.IsKeyDown(Keys.Right))
             {
-                if (Position.X > MaxYTiles - width / 2)
-                    Position = new Vector2(Position.X, Position.Y +1);
+                if (Position.X < MaxXTiles - 10)
+                    Position = new Vector2(Position.X + 10, Position.Y);
+                    lastmove = gameTime.TotalGameTime.Milliseconds;
             }
-            
+
+            if (lastmove == 0 || (lastmove - gameTime.TotalGameTime.Milliseconds < 0))
+                lastmove = gameTime.TotalGameTime.Milliseconds;
+
             base.Update(gameTime);
         }
 

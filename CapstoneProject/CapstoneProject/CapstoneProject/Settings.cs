@@ -25,6 +25,8 @@ namespace CapstoneProject
         ContentManager content;
         Label rightLabel;
 
+        XPanel rPanel;
+
         public Settings(GraphicsDeviceManager _graphics, ContentManager _content)
         {
             graphics = _graphics;
@@ -46,22 +48,30 @@ namespace CapstoneProject
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public void Update(GameTime gameTime)
         {
-            // TODO: Add your update code here
+            // update buttons
             rightButton.Update(gameTime);
             leftButton.Update(gameTime);
             upButton.Update(gameTime);
+
+            //update panels
+            rPanel.Update(gameTime);
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            //draw buttons
             rightButton.Draw(gameTime, spriteBatch);
-
             leftButton.Draw(gameTime, spriteBatch);
-
             upButton.Draw(gameTime, spriteBatch);
 
+            //Change Label text
             rightLabel.Text = Controls.Right.ToString();
+
+            //Draw Labels
             rightLabel.Draw(gameTime, spriteBatch);
+
+            //Draw panels
+            rPanel.Draw(gameTime, spriteBatch);
         }
 
         /// <summary>
@@ -70,8 +80,10 @@ namespace CapstoneProject
         /// </summary>
         public void LoadContent()
         {
+            //Load button textures
             Texture2D rightTexture = content.Load<Texture2D>("MoveRight");
             rightButton = new MoveButton(new Vector2(50, 10), rightTexture, 0);
+            //change color when button is clicked
             rightButton.ChangeColor = true;
 
             Texture2D leftTexture = content.Load<Texture2D>("MoveLeft");
@@ -82,8 +94,21 @@ namespace CapstoneProject
             upButton = new MoveButton(new Vector2(50, 200), upTexture, 2);
             upButton.ChangeColor = true;
 
+            //load Panel
+            Texture2D panel = content.Load<Texture2D>("Panel540X540");
+            //create panel
+            rPanel = new XPanel(panel, new Vector2(200, 10), 100, 50);
+            //Change panel color
+            rPanel.Color = Color.Blue;
+
+            //load font
             SpriteFont font = content.Load<SpriteFont>("FPS");
-            rightLabel = new Label(font, Controls.Right.ToString(), new Vector2(200, 10), Color.Blue, 3);
+
+            //create labels
+            rightLabel = new Label(font, Controls.Right.ToString(), new Vector2(200, 10), Color.White, 2);
+
+            //add labels to panels
+            rPanel.AddChild(rightLabel, new Vector2(15, 15));
         }
     }
 }

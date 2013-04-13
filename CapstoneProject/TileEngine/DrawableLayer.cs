@@ -131,6 +131,21 @@ namespace TileEngine
 
             return (output);
         }
+        public T getItemAt(Vector2 location, Avatar a)
+        {
+            T output;
+
+            try
+            {
+                output = _layer[(int)(location.X + a.Position.X), (int)(location.Y + a.Position.Y)];
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                throw e;
+            }
+
+            return (output);
+        }
 
         /// <summary>
         /// Sets the Item at a specific location to a new Item
@@ -146,6 +161,18 @@ namespace TileEngine
             catch (IndexOutOfRangeException e)
             {
                 throw e;
+            }
+        }
+
+        public void setItemAt(Vector2 location, T newItem, Avatar a)
+        {
+            try
+            {
+                _layer[(int)(location.X + a.Position.X), (int)(location.Y + a.Position.Y)] = newItem;
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                //throw e;
             }
         }
 
@@ -209,7 +236,7 @@ namespace TileEngine
         /// <param name="spriteBatch">The spriteBatch that you are drawing with</param>
         /// <param name="gameTime">GameTime</param>
         /// <param name="centerLocation">Where the tile map should be centered.</param>
-        public void Draw(SpriteBatch spriteBatch, GameTime gameTime, Vector2 centerLocation, Rectangle containedWithin)
+        public void Draw(SpriteBatch spriteBatch, GameTime gameTime, Vector2 centerLocation, Rectangle containedWithin, Avatar player)
         {
             //TODO:  Use the Decimal point of the centerLocation to move the tiles to the right by
             //a percentage of the tile width allowing for smooth scrolling.  #TODO
@@ -226,30 +253,37 @@ namespace TileEngine
             int startPosX = (int)centerLocation.X / 64;//Where are we starting horizontally
 
             //~~~~~~~~~~~~~~~~~DRAW LOGIC~~~~~~~~~~~~~~~~~~~~~
-            for (int x = 0; x < _maxColumns + 1; x++)
+            for (int x = 0; x < _maxColumns; x++)
             {
                 int startPosY = 0;
                 //(int)centerLocation.Y;//Where are we starting vertically in the map layer
 
-                for (int y = 0; y < _maxRows; y++)
+                for (int y = 0;  y < _maxRows; y++)
                 {
-                    T currentItem = _layer[startPosX, startPosY];//The current drawable item we are working with.
+                    T currentItem = _layer[startPosX + (int)player.Position.X, startPosY+ (int)player.Position.Y];//The current drawable item we are working with.
                     int renderTargetX = x;
                     
                     //TODO:  Space this out so the draw code is easier to understand.  #TODO
                     if (currentItem != null)
-                        spriteBatch.Draw(currentItem.getTexture(),
-                                   new Vector2(renderTargetX * currentItem.getTexture().Width 
-                                                 * (_scale / currentItem.getTexture().Width) 
-                                                 - (int)centerLocation.X % 64 + containedWithin.X,
-                                       startPosY * currentItem.getTexture().Height * (_scale / currentItem.getTexture().Width)+ containedWithin.Y),
-                                   currentItem.getSourceRectangle(),
-                                   currentItem.getTint(),
-                                   currentItem.getRotation(),
-                                   currentItem.getOrigin(),
-                                   _scale / currentItem.getTexture().Width,
-                                   currentItem.getSpriteEffect(),
-                                   currentItem.getDepth());
+                        //spriteBatch.Draw(currentItem.getTexture(),
+                        //           new Vector2(renderTargetX * currentItem.getTexture().Width 
+                        //                         * (_scale / currentItem.getTexture().Width) 
+                        //                         - (int)centerLocation.X % 64 + containedWithin.X,
+                        //               startPosY * currentItem.getTexture().Height * (_scale / currentItem.getTexture().Width)+ containedWithin.Y),
+                        //           currentItem.getSourceRectangle(),
+                        //           currentItem.getTint(),
+                        //           currentItem.getRotation(),
+                        //           currentItem.getOrigin(),
+                        //           _scale / currentItem.getTexture().Width,
+                        //           currentItem.getSpriteEffect(),
+                        //           currentItem.getDepth());
+                        spriteBatch.Draw(currentItem.getTexture(), new Rectangle((int)(renderTargetX * (containedWithin.Width/10) + containedWithin.X),
+                                                                                 (int)(y * (containedWithin.Height/10) + containedWithin.Y),
+                                                                                 containedWithin.Width/10,
+                                                                                 containedWithin.Height / 10)
+                                                                                 , currentItem.getSourceRectangle(),
+                            currentItem.getTint(), currentItem.getRotation(), currentItem.getOrigin(), currentItem.getSpriteEffect(), currentItem.getDepth());
+
 
                     startPosY++;
                 }//inner for

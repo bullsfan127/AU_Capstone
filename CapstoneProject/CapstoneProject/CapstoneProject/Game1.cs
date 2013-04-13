@@ -31,8 +31,6 @@ namespace CapstoneProject
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        MoveButton move;
-
         /// <summary>
         /// Keeps track of overall gamestate
         /// Sets initital sate, if you want to skip the main menu for testing, just set the state to GAMESTATE.PLAY instead
@@ -45,6 +43,8 @@ namespace CapstoneProject
         SpriteBatch spriteBatch;
         Coin coin = new Coin();
         Settings settings;
+
+        SoundManager soundManager;
 
 #if !LOAD_FROM_FILE
         Tile a;
@@ -83,9 +83,12 @@ namespace CapstoneProject
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferredBackBufferWidth = 600;
             menu = new MainMenu.MainMenu(graphics, this.Content);
+
             pauseMenu = new PauseMenu.PauseMenu(graphics, this.Content);
             healthBar = new HealthBar(graphics, this.Content);
             settings = new Settings(graphics, this.Content);
+
+            soundManager = new SoundManager(this, this.Content);
         }
 
         /// <summary>
@@ -163,6 +166,7 @@ namespace CapstoneProject
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
             Terminal.Init(this, spriteBatch, this.Content.Load<SpriteFont>("FPS"), graphics.GraphicsDevice);
             Terminal.SetSkin(TerminalThemeType.FIRE);
+
 #endif
 #if !LOAD_FROM_FILE
             a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
@@ -177,7 +181,6 @@ namespace CapstoneProject
 
             Texture2D coinTexture = Content.Load<Texture2D>("Coin");
             coin.Initialize(coinTexture, new Vector2(19, 19));
-            move = new MoveButton(new Vector2(15, 15), coinTexture, 0);
             // TODO: use this.Content to load your game content here
 #endif
         }
@@ -202,7 +205,6 @@ namespace CapstoneProject
             {
                 case GAMESTATE.MAINMENU:
                     menu.Update(gameTime);
-                    move.Update(gameTime);
                     break;
                 case GAMESTATE.PAUSE:
                     pauseMenu.Update(gameTime);
@@ -237,8 +239,19 @@ namespace CapstoneProject
                         graphics.ToggleFullScreen();
                     }
 
+                    if (keystate.IsKeyDown(Keys.Up) && player.Position.Y == 372)
+                    {
+                        soundManager.PlaySound(5);
+                    }
+
+                    if (keystate.IsKeyDown(Keys.Down))
+                    {
+                        soundManager.PlaySound(1);
+                    }
+
                     player.Update(gameTime, gameMap);
                     // TODO: Add your update logic here
+
                     break;
             }
 
@@ -248,7 +261,7 @@ namespace CapstoneProject
             counter.Update(gameTime);
             Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
 #endif
-
+            soundManager.PlaySong();
             base.Update(gameTime);
         }
 
@@ -263,7 +276,6 @@ namespace CapstoneProject
                 case GAMESTATE.MAINMENU:
                     GraphicsDevice.Clear(Color.Black);
                     menu.Draw(gameTime, spriteBatch);
-                    move.Draw(gameTime, spriteBatch);
                     break;
                 case GAMESTATE.PLAY:
                     GraphicsDevice.Clear(Color.CornflowerBlue);

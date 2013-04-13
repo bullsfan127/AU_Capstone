@@ -138,6 +138,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="MoveButton.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="SoundManager.cs" />
     <Compile Include="Utility\FPS_Counter.cs" />
   </ItemGroup>
   <ItemGroup>
