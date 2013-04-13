@@ -21,7 +21,7 @@ namespace CapstoneProject
         Keys[] _key;
         const int RIGHTBUTTON = 0;
         const int LEFTBUTTON = 1;
-        const int UPBUTTON = 3;
+        const int UPBUTTON = 2;
 
         public MoveButton(Vector2 buttonPosition, Texture2D Texture, int button)
             : base(buttonPosition, Texture)
@@ -44,12 +44,15 @@ namespace CapstoneProject
                 {
                     case RIGHTBUTTON:
                         Controls.Right = _key[0];
+                        Color = Color.White;
                         break;
                     case LEFTBUTTON:
                         Controls.Left = _key[0];
+                        Color = Color.White;
                         break;
                     case UPBUTTON:
                         Controls.Up = _key[0];
+                        Color = Color.White;
                         break;
                     default:
                         break;

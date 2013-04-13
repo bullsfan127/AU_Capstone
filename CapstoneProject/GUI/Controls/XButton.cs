@@ -21,6 +21,22 @@ namespace GUI.Controls
 {
     public class XButton : IXButton
     {
+        private bool _changeColor = false;
+
+        public bool ChangeColor
+        {
+            get { return _changeColor; }
+            set { _changeColor = value; }
+        }
+
+        private Color _color = Color.White;
+
+        public Microsoft.Xna.Framework.Color Color
+        {
+            get { return _color; }
+            set { _color = value; }
+        }
+
         private bool _fireAgain = false;
 
         public bool FireAgain
@@ -135,15 +151,11 @@ namespace GUI.Controls
             //Get the mouse position and convert it into a rectangle
             Rectangle mouseColision = new Rectangle((int)mouse.X, (int)mouse.Y, 1, 1);
 
-            //Cooldown
-            if (gameTime.TotalGameTime.Milliseconds - lastclicked > COOLDOWN)
-                _WasClicked = false;
-
             //Now we check if there is a collision
             if (mouseColision.Intersects(_ButtonRep))
             {
                 //If the right button is pressed and the button wasn't clicked recently
-                if ((mouse.LeftButton == ButtonState.Pressed) && !WasClicked)
+                if ((mouse.LeftButton == ButtonState.Pressed))
                     Clicked = true;
             }
 
@@ -154,6 +166,9 @@ namespace GUI.Controls
 
             if ((Clicked) && (mouse.LeftButton != ButtonState.Pressed))
             {
+                if (ChangeColor)
+                    _color = Color.Red;
+
                 lastclicked = gameTime.TotalGameTime.Milliseconds;
                 WasClicked = true;
                 FireEvent();
@@ -169,7 +184,7 @@ namespace GUI.Controls
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            spriteBatch.Draw(ButtonImage, ButtonRep, Color.White);
+            spriteBatch.Draw(ButtonImage, ButtonRep, _color);
             spriteBatch.End();
         }
 

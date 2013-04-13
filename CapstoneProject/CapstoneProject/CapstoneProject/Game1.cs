@@ -24,7 +24,7 @@ using TileEngine;
 
 namespace CapstoneProject
 {
-    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, SETTINGS = 4};
+    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, SETTINGS = 4 };
 
     /// <summary>
     /// This is the main type for your game
@@ -98,7 +98,6 @@ namespace CapstoneProject
         {
             menu.Initialize(this.Window);
             pauseMenu.Initialize(this.Window);
-            
 
             IsMouseVisible = true;
 
@@ -174,7 +173,6 @@ namespace CapstoneProject
             c.Name = "Tiles//tileF";
 
             Texture2D playerTexture = Content.Load<Texture2D>("shitty3.0");
-
             player.Initialize(playerTexture, new Vector2(0, 0));
 
             Texture2D coinTexture = Content.Load<Texture2D>("Coin");
