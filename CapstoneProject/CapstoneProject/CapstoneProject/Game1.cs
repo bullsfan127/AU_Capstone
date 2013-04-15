@@ -210,16 +210,11 @@ namespace CapstoneProject
                     {
                         CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
                     }
-                    //if (keystate.IsKeyDown(Keys.S))
-                    //{
-                    //    //  save maap
-                    //    gameMap.saveMap();
-                    //    Map gameMap2 = gameMap;
-                    //    gameMap = null;
-                    //    gameMap = new Map();
-                    //    gameMap = gameMap.LoadMap("s.xml", this.Content);
-                    //    //player = (Player)gameMap.Player;
-                    //}
+                    if (keystate.IsKeyDown(Keys.S))
+                    {
+                        //  save maap
+                        gameMap.saveMap();
+                    }
 
                     if (keystate.IsKeyDown(Keys.L))
                     {
@@ -227,6 +222,7 @@ namespace CapstoneProject
                         gameMap = null;
                         gameMap = new Map();
                         gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/test.xml", this.Content);
+                        // gameMap = gameMap.LoadMap("s.xml", this.Content);
                         gameMap.Fringe.MaxViewPortHeight = gameMap2.Fringe.MaxViewPortHeight;
                         gameMap.Fringe.MaxViewPortWidth = gameMap2.Fringe.MaxViewPortWidth;
                         gameMap.Fringe.MaxRows = gameMap2.Fringe.MaxRows;
@@ -253,6 +249,7 @@ namespace CapstoneProject
                         gameMap.Player = null;
 
                         gameMap.Player = player;
+                        //player = (Player)gameMap.Player;
                     }
 
                     if (keystate.IsKeyDown(Keys.F))
@@ -261,7 +258,6 @@ namespace CapstoneProject
                     }
 
                     player.Update(gameTime, gameMap);
-                    // TODO: Add your update logic here
                     break;
             }
 

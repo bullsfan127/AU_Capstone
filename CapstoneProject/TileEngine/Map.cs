@@ -21,6 +21,7 @@ namespace TileEngine
     public class Map
     {
         public const int TILE_WIDTH = 64;
+
         //offset to determine center of screen.
         Vector2 offset = Vector2.Zero;
 
@@ -286,20 +287,23 @@ namespace TileEngine
                     }
                 }
             }
+        }
 
+        public void LoadPlayer(ContentManager contentManager)
+        {
             //load player
-            //Texture2D playerTexture = contentManager.Load<Texture2D>("shitty3.0");
-            //Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);
-            //this._Player.Position = playerPosition;
+            Texture2D playerTexture = contentManager.Load<Texture2D>("shitty3.0");
+            Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);
+            this._Player.Position = playerPosition;
 
-            ////load playerAnimation
-            //Rectangle srect = new Rectangle();
-            //srect = new Rectangle(this._Player.PlayerAnimation.SRect[0], this._Player.PlayerAnimation.SRect[1], this._Player.PlayerAnimation.SRect[2], this._Player.PlayerAnimation.SRect[3]);
-            //this._Player.PlayerAnimation.sourceRect = srect;
-            //this._Player.PlayerAnimation.spriteStrip = playerTexture;
-            //this._Player.PlayerAnimation.destinationRect = new Rectangle(this._Player.PlayerAnimation.DRect[0], this._Player.PlayerAnimation.DRect[1], this._Player.PlayerAnimation.DRect[2], this._Player.PlayerAnimation.DRect[3]);
-            //this._Player.PlayerAnimation.Position = this._Player.Position;
-            //this._Player.Offset = new Vector2(this._Player.OX, this.Player.OY);
+            //load playerAnimation
+            Rectangle srect = new Rectangle();
+            srect = new Rectangle(this._Player.PlayerAnimation.SRect[0], this._Player.PlayerAnimation.SRect[1], this._Player.PlayerAnimation.SRect[2], this._Player.PlayerAnimation.SRect[3]);
+            this._Player.PlayerAnimation.sourceRect = srect;
+            this._Player.PlayerAnimation.spriteStrip = playerTexture;
+            this._Player.PlayerAnimation.destinationRect = new Rectangle(this._Player.PlayerAnimation.DRect[0], this._Player.PlayerAnimation.DRect[1], this._Player.PlayerAnimation.DRect[2], this._Player.PlayerAnimation.DRect[3]);
+            this._Player.PlayerAnimation.Position = this._Player.Position;
+            this._Player.Offset = new Vector2(this._Player.OX, this.Player.OY);
         }
     }
 }

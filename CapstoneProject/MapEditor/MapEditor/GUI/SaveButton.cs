@@ -48,6 +48,7 @@ namespace MapEditor.GUI
         {
             Random random = new Random(42);
             saveMap.MapID = random.Next(999999);
+
             saveMap.saveMap("../../../SavedMaps/" + saveMap.MapID + ".xml");
 
             base.FireEvent();
