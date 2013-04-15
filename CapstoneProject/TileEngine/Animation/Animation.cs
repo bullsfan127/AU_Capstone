@@ -206,11 +206,11 @@ namespace TileEngine
                     this.state = Animate.IDLE;
                     break;
                 case Animate.RMOVING:
-                    currentFrame = 2;
+                    currentFrame = 1;
                     this.state = Animate.RMOVING;
                     break;
                 case Animate.LMOVING:
-                    currentFrame = 5;
+                    currentFrame = 3;
                     this.state = Animate.LMOVING;
                     break;
                 default:
@@ -236,17 +236,17 @@ namespace TileEngine
                 {
                     case Animate.IDLE:
                         currentFrame = 0;
-                        frameCount = 2;
+                        frameCount = 1;
                         this.state = Animate.IDLE;
                         break;
                     case Animate.RMOVING:
-                        currentFrame = 2;
-                        frameCount = 5;
+                        currentFrame = 1;
+                        frameCount = 3;
                         this.state = Animate.RMOVING;
                         break;
                     case Animate.LMOVING:
-                        currentFrame = 5;
-                        frameCount = 8;
+                        currentFrame = 3;
+                        frameCount = 6;
                         this.state = Animate.LMOVING;
                         break;
                     default:

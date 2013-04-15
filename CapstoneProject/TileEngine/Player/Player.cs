@@ -109,7 +109,7 @@ namespace TileEngine
             Position = position;
 
             //player Animation initialize
-            PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, true);
+            PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 1, 250, Color.White, 1.0f, true);
             // Set the player to be active
             PlayerAnimation.Active = true;
         }

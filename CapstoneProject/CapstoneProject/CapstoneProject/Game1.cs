@@ -177,7 +177,7 @@ namespace CapstoneProject
             c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
             c.Name = "Tiles//tileF";
 
-            Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
+            Texture2D playerTexture = Content.Load<Texture2D>("shitty/FatJoe2");
 
             player.Initialize(playerTexture, new Vector2(0, 0));
 
