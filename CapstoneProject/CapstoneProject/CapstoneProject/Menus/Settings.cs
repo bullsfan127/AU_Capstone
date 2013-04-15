@@ -28,9 +28,16 @@ namespace CapstoneProject
         Label rightLabel;
         Label leftLabel;
         Label upLabel;
+        Label wordLabel;
+        Label wordLabel2;
+        Label wordLabel3;
         XPanel rPanel;
         XPanel lPanel;
         XPanel upPanel;
+        XPanel wordPanel;
+        String text = "In order to change the controls of the game:";
+        String text2 = "Click on the Button that you want to change - Example(MoveRight)";
+        String text3 = "Then press the key on the keyboard that you want your new control to be - Example(D).";
 
         public Settings(GraphicsDeviceManager _graphics, ContentManager _content)
         {
@@ -64,6 +71,7 @@ namespace CapstoneProject
             rPanel.Update(gameTime);
             lPanel.Update(gameTime);
             upPanel.Update(gameTime);
+            wordPanel.Update(gameTime);
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -79,16 +87,24 @@ namespace CapstoneProject
             rightLabel.Text = Controls.Right.ToString();
             leftLabel.Text = Controls.Left.ToString();
             upLabel.Text = Controls.Up.ToString();
+            wordLabel.Text = text;
+            wordLabel2.Text = text2;
+            wordLabel3.Text = text3;
+            
 
             //Draw Labels
             rightLabel.Draw(gameTime, spriteBatch);
             leftLabel.Draw(gameTime, spriteBatch);
             upLabel.Draw(gameTime, spriteBatch);
+            wordLabel.Draw(gameTime, spriteBatch);
+            wordLabel2.Draw(gameTime, spriteBatch);
+            wordLabel3.Draw(gameTime, spriteBatch);
 
             //Draw panels
             rPanel.Draw(gameTime, spriteBatch);
             lPanel.Draw(gameTime, spriteBatch);
             upPanel.Draw(gameTime, spriteBatch);
+            wordPanel.Draw(gameTime, spriteBatch);
         }
 
         /// <summary>
@@ -99,34 +115,37 @@ namespace CapstoneProject
         {
             //Load button textures
             Texture2D mainTexture = content.Load<Texture2D>("menuButtons/MainMenu");
-            mainButton = new MainButton(new Vector2(200, 400), mainTexture, 3);
+            mainButton = new MainButton(new Vector2(200, 500), mainTexture, 3);
 
             Texture2D saveTexture = content.Load<Texture2D>("menuButtons/SaveKeys");
-            saveKeys = new SaveKeys(new Vector2(50, 400), saveTexture, 4);
+            saveKeys = new SaveKeys(new Vector2(50, 500), saveTexture, 4);
 
             Texture2D rightTexture = content.Load<Texture2D>("menuButtons/MoveRight");
-            rightButton = new MoveButton(new Vector2(50, 10), rightTexture, 0);
+            rightButton = new MoveButton(new Vector2(50, 100), rightTexture, 0);
             //change color when button is clicked
             rightButton.ChangeColor = true;
 
             Texture2D leftTexture = content.Load<Texture2D>("menuButtons/MoveLeft");
-            leftButton = new MoveButton(new Vector2(50, 100), leftTexture, 1);
+            leftButton = new MoveButton(new Vector2(50, 200), leftTexture, 1);
             leftButton.ChangeColor = true;
 
             Texture2D upTexture = content.Load<Texture2D>("menuButtons/JumpUp");
-            upButton = new MoveButton(new Vector2(50, 200), upTexture, 2);
+            upButton = new MoveButton(new Vector2(50, 300), upTexture, 2);
             upButton.ChangeColor = true;
 
             //load Panel
             Texture2D panel = content.Load<Texture2D>("Panel540X540");
             //create panel
-            rPanel = new XPanel(panel, new Vector2(200, 10), 100, 50);
-            lPanel = new XPanel(panel, new Vector2(200, 100), 100, 50);
-            upPanel = new XPanel(panel, new Vector2(200, 200), 100, 50);
+            rPanel = new XPanel(panel, new Vector2(200, 100), 100, 50);
+            lPanel = new XPanel(panel, new Vector2(200, 200), 100, 50);
+            upPanel = new XPanel(panel, new Vector2(200, 300), 100, 50);
+            wordPanel = new XPanel(panel, new Vector2(50, 0), 100, 50);
+
             //Change panel color
             rPanel.Color = Color.Blue;
             lPanel.Color = Color.Blue;
             upPanel.Color = Color.Blue;
+            wordPanel.Color = Color.Black;
 
             //load font
             SpriteFont font = content.Load<SpriteFont>("FPS");
@@ -135,10 +154,16 @@ namespace CapstoneProject
             rightLabel = new Label(font, Controls.Right.ToString(), new Vector2(200, 10), Color.White, 2);
             leftLabel = new Label(font, Controls.Left.ToString(), new Vector2(200, 10), Color.White, 2);
             upLabel = new Label(font, Controls.Up.ToString(), new Vector2(200, 10), Color.White, 2);
+            wordLabel = new Label(font, text, new Vector2(50, 10), Color.White, 1);
+            wordLabel2 = new Label(font, text, new Vector2(50, 10), Color.White, 1);
+            wordLabel3 = new Label(font, text, new Vector2(50, 10), Color.White, 1);
             //add labels to panels
             rPanel.AddChild(rightLabel, new Vector2(15, 15));
             lPanel.AddChild(leftLabel, new Vector2(15, 15));
             upPanel.AddChild(upLabel, new Vector2(15, 15));
+            wordPanel.AddChild(wordLabel, new Vector2(15, 15));
+            wordPanel.AddChild(wordLabel2, new Vector2(15, 35));
+            wordPanel.AddChild(wordLabel3, new Vector2(15, 55));
         }
     }
 }

@@ -34,6 +34,7 @@ namespace CapstoneProject
             if (SAVEBUTTON == 0)
             {
                 Controls.Save();
+                CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PLAY;
             }
             base.FireEvent();
         }
