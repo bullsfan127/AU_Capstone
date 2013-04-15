@@ -217,7 +217,7 @@ namespace TileEngine
                                    currentItem.getTint(),
                                    currentItem.getRotation(),
                                    currentItem.getOrigin(),
-                                   _scale / currentItem.getTexture().Width,
+                                   _scale / 64,
                                    currentItem.getSpriteEffect(),
                                    currentItem.getDepth());
 
