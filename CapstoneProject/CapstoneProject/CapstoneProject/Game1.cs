@@ -189,7 +189,7 @@ namespace CapstoneProject
             Map gameMap2 = gameMap;
             gameMap = null;
             gameMap = new Map();
-            gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/668105.xml", this.Content);
+            gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/map.xml", this.Content);
             // gameMap = gameMap.LoadMap("s.xml", this.Content);
             gameMap.Fringe.MaxViewPortHeight = gameMap2.Fringe.MaxViewPortHeight;
             gameMap.Fringe.MaxViewPortWidth = gameMap2.Fringe.MaxViewPortWidth;
@@ -268,7 +268,7 @@ namespace CapstoneProject
                         Map gameMap2 = gameMap;
                         gameMap = null;
                         gameMap = new Map();
-                        gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/668105.xml", this.Content);
+                        gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/map.xml", this.Content);
                         // gameMap = gameMap.LoadMap("s.xml", this.Content);
                         gameMap.Fringe.MaxViewPortHeight = gameMap2.Fringe.MaxViewPortHeight;
                         gameMap.Fringe.MaxViewPortWidth = gameMap2.Fringe.MaxViewPortWidth;
