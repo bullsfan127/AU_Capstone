@@ -106,13 +106,15 @@ namespace CapstoneProject
 
             player = new Player();
             gameMap = new Map();
+
 #if !LOAD_FROM_FILE
             currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
 #else
-            gameMap = gameMap.LoadMap("Savegame.xml", this.Content);
-            player = (Player)gameMap.Player;
+            gameMap = gameMap.LoadMap("668105.xml", this.Content);
+            // player = (Player)gameMap.Player;
+            gameMap.Player = player;
 #endif
 
 #if !LOAD_FROM_FILE
@@ -177,14 +179,12 @@ namespace CapstoneProject
             c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
             c.Name = "Tiles//tileF";
 
-            Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
-
-            player.Initialize(playerTexture, new Vector2(0, 0));
-
-            Texture2D coinTexture = Content.Load<Texture2D>("items/Coin");
-            coin.Initialize(coinTexture, new Vector2(19, 19));
             // TODO: use this.Content to load your game content here
 #endif
+            Texture2D coinTexture = Content.Load<Texture2D>("Items/Coin");
+            coin.Initialize(coinTexture, new Vector2(19, 19));
+            Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
+            player.Initialize(playerTexture, new Vector2(0, 0));
         }
 
         /// <summary>
@@ -229,11 +229,42 @@ namespace CapstoneProject
                     {
                         //  save maap
                         gameMap.saveMap();
+                    }
+
+                    if (keystate.IsKeyDown(Keys.L))
+                    {
                         Map gameMap2 = gameMap;
                         gameMap = null;
                         gameMap = new Map();
-                        gameMap = gameMap.LoadMap("Savegame.xml", this.Content);
-                        player = (Player)gameMap.Player;
+                        gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/668105.xml", this.Content);
+                        // gameMap = gameMap.LoadMap("s.xml", this.Content);
+                        gameMap.Fringe.MaxViewPortHeight = gameMap2.Fringe.MaxViewPortHeight;
+                        gameMap.Fringe.MaxViewPortWidth = gameMap2.Fringe.MaxViewPortWidth;
+                        gameMap.Fringe.MaxRows = gameMap2.Fringe.MaxRows;
+                        gameMap.Fringe.MaxColumns = gameMap2.Fringe.MaxColumns;
+                        gameMap.Fringe.MapWidth = gameMap2.Fringe.MapWidth;
+                        gameMap.Fringe.MapHeight = gameMap2.Fringe.MapHeight;
+                        gameMap.Fringe.Scale = gameMap2.Fringe.Scale;
+
+                        gameMap.Mask.MaxViewPortHeight = gameMap2.Mask.MaxViewPortHeight;
+                        gameMap.Mask.MaxViewPortWidth = gameMap2.Mask.MaxViewPortWidth;
+                        gameMap.Mask.MaxRows = gameMap2.Mask.MaxRows;
+                        gameMap.Mask.MaxColumns = gameMap2.Mask.MaxColumns;
+                        gameMap.Mask.MapWidth = gameMap2.Mask.MapWidth;
+                        gameMap.Mask.MapHeight = gameMap2.Mask.MapHeight;
+                        gameMap.Mask.Scale = gameMap2.Mask.Scale;
+
+                        gameMap.Ground.MaxViewPortHeight = gameMap2.Ground.MaxViewPortHeight;
+                        gameMap.Ground.MaxViewPortWidth = gameMap2.Ground.MaxViewPortWidth;
+                        gameMap.Ground.MaxRows = gameMap2.Ground.MaxRows;
+                        gameMap.Ground.MaxColumns = gameMap2.Ground.MaxColumns;
+                        gameMap.Ground.MapWidth = gameMap2.Ground.MapWidth;
+                        gameMap.Ground.MapHeight = gameMap2.Ground.MapHeight;
+                        gameMap.Ground.Scale = gameMap2.Ground.Scale;
+                        gameMap.Player = null;
+
+                        gameMap.Player = player;
+                        //player = (Player)gameMap.Player;
                     }
 
                     if (keystate.IsKeyDown(Keys.F))
@@ -248,8 +279,6 @@ namespace CapstoneProject
 
                     player.Update(gameTime, gameMap);
                     healthBar.Update(gameTime, player);
-                    // TODO: Add your update logic here
-
                     break;
             }
 

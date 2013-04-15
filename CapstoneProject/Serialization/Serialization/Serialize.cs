@@ -89,7 +89,14 @@ namespace CustomSerialization
             if (_complex)
             {
                 complexSerializer = new SharpSerializer();
-                _classType = (T)complexSerializer.Deserialize(fileName);
+                try
+                {
+                    _classType = (T)complexSerializer.Deserialize(fileName);
+                }
+                catch (Exception e)
+                {
+                    System.Diagnostics.Debug.WriteLine(e);
+                }
                 complexSerializer = null;
 
                 return _classType;
@@ -131,8 +138,15 @@ namespace CustomSerialization
             if (_complex)
             {
                 complexSerializer = new SharpSerializer();
-                complexSerializer.Serialize(classType, FileName);
+                complexSerializer.Serialize(classType, this._fileName);
                 _classType = classType;
+                //try
+                //{
+                //    _classType = (T)complexSerializer.Deserialize("s.xml");
+                //}
+                //catch (Exception e)
+                //{
+                //}
             }
             else
             {

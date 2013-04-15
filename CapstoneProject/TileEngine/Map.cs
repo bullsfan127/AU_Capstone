@@ -20,6 +20,8 @@ namespace TileEngine
     /// </summary>
     public class Map
     {
+        public const int TILE_WIDTH = 64;
+
         //offset to determine center of screen.
         Vector2 offset = Vector2.Zero;
 
@@ -248,8 +250,7 @@ namespace TileEngine
         public Map LoadMap(string filename, ContentManager contentManager)
         {
             Map newMap = new Map();
-            newMap = serializer.Load("SaveGame.xml");
-
+            newMap = serializer.Load(filename);
             newMap.LoadExtraContent(contentManager);
             return newMap;
         }
@@ -268,23 +269,29 @@ namespace TileEngine
                     if (this._Fringe.Layer[x, y] != null)
                     {
                         this._Fringe.Layer[x, y].setTexture(contentManager.Load<Texture2D>(this._Fringe.Layer[x, y].Name));
-                        this._Fringe.Layer[x, y].setSourceRectangle(new Rectangle(0, 0, 64, 64));
+                        this._Fringe.Layer[x, y].setSourceRectangle(new Rectangle(this._Fringe.Layer[x, y].SR[0], this._Fringe.Layer[x, y].SR[1], 64, 64));
+                        this._Fringe.Layer[x, y].Scale = 320;
                     }
 
                     if (this._Ground.Layer[x, y] != null)
                     {
                         this._Ground.Layer[x, y].setTexture(contentManager.Load<Texture2D>(this._Ground.Layer[x, y].Name));
-                        this._Ground.Layer[x, y].setSourceRectangle(new Rectangle(0, 0, 64, 64));
+                        this._Ground.Layer[x, y].setSourceRectangle(new Rectangle(this._Ground.Layer[x, y].SR[0], this._Ground.Layer[x, y].SR[1], 64, 64));
+                        this.Ground.Layer[x, y].Scale = 320;
                     }
 
                     if (this._Mask.Layer[x, y] != null)
                     {
                         this._Mask.Layer[x, y].setTexture(contentManager.Load<Texture2D>(this._Mask.Layer[x, y].Name));
-                        this._Mask.Layer[x, y].setSourceRectangle(new Rectangle(0, 0, 64, 64));
+                        this._Mask.Layer[x, y].setSourceRectangle(new Rectangle(this._Mask.Layer[x, y].SR[0], this._Mask.Layer[x, y].SR[1], 64, 64));
+                        this.Mask.Layer[x, y].Scale = 320;
                     }
                 }
             }
+        }
 
+        public void LoadPlayer(ContentManager contentManager)
+        {
             //load player
             Texture2D playerTexture = contentManager.Load<Texture2D>("shitty3.0");
             Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);

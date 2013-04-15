@@ -108,7 +108,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FocalPoint.cs" />
     <Compile Include="GUI\MapWindow.cs" />
     <Compile Include="GUI\ResetButton.cs" />
     <Compile Include="GUI\SaveButton.cs" />

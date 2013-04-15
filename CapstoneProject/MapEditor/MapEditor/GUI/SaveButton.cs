@@ -17,7 +17,7 @@ namespace MapEditor.GUI
 {
     public class SaveButton : XButton
     {
-        Map saveMap;
+        public Map saveMap;
         Label buttonLable;
 
         public SaveButton(Vector2 Position, Texture2D ButtonTexture, Map map, SpriteFont font)
@@ -32,6 +32,12 @@ namespace MapEditor.GUI
             base.Update(gameTime);
         }
 
+        public void UpdateM(GameTime gameTime, Map map)
+        {
+            saveMap = map;
+            this.Update(gameTime);
+        }
+
         public override void Draw(GameTime gameTime, SpriteBatch spritebatch)
         {
             buttonLable.Draw(gameTime, spritebatch);
@@ -42,6 +48,7 @@ namespace MapEditor.GUI
         {
             Random random = new Random(42);
             saveMap.MapID = random.Next(999999);
+
             saveMap.saveMap("../../../SavedMaps/" + saveMap.MapID + ".xml");
 
             base.FireEvent();

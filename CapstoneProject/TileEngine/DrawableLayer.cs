@@ -131,6 +131,7 @@ namespace TileEngine
 
             return (output);
         }
+
         public T getItemAt(Vector2 location, Avatar a)
         {
             T output;
@@ -193,7 +194,6 @@ namespace TileEngine
 
             //begin the SpriteBatch
             spriteBatch.Begin();
-
             _scale = _maxViewPortWidth / _maxColumns;
 
             int startPosX = (int)centerLocation.X / 64;//Where are we starting horizontally
@@ -211,13 +211,13 @@ namespace TileEngine
                     //TODO:  Space this out so the draw code is easier to understand.  #TODO
                     if (currentItem != null)
                         spriteBatch.Draw(currentItem.getTexture(),
-                                   new Vector2(x * currentItem.getTexture().Width * (_scale / currentItem.getTexture().Width) - (int)centerLocation.X % 64,
+                                   new Vector2(x * currentItem.getTexture().Width * (_scale / currentItem.getTexture().Width) - (int)centerLocation.X % Map.TILE_WIDTH,
                                        startPosY * currentItem.getTexture().Height * (_scale / currentItem.getTexture().Width)),
                                    currentItem.getSourceRectangle(),
                                    currentItem.getTint(),
                                    currentItem.getRotation(),
                                    currentItem.getOrigin(),
-                                   _scale / currentItem.getTexture().Width,
+                                   _scale / Map.TILE_WIDTH,
                                    currentItem.getSpriteEffect(),
                                    currentItem.getDepth());
 
@@ -258,16 +258,16 @@ namespace TileEngine
                 int startPosY = 0;
                 //(int)centerLocation.Y;//Where are we starting vertically in the map layer
 
-                for (int y = 0;  y < _maxRows; y++)
+                for (int y = 0; y < _maxRows; y++)
                 {
-                    T currentItem = _layer[startPosX + (int)player.Position.X, startPosY+ (int)player.Position.Y];//The current drawable item we are working with.
+                    T currentItem = _layer[startPosX + (int)player.Position.X, startPosY + (int)player.Position.Y];//The current drawable item we are working with.
                     int renderTargetX = x;
-                    
+
                     //TODO:  Space this out so the draw code is easier to understand.  #TODO
                     if (currentItem != null)
                         //spriteBatch.Draw(currentItem.getTexture(),
-                        //           new Vector2(renderTargetX * currentItem.getTexture().Width 
-                        //                         * (_scale / currentItem.getTexture().Width) 
+                        //           new Vector2(renderTargetX * currentItem.getTexture().Width
+                        //                         * (_scale / currentItem.getTexture().Width)
                         //                         - (int)centerLocation.X % 64 + containedWithin.X,
                         //               startPosY * currentItem.getTexture().Height * (_scale / currentItem.getTexture().Width)+ containedWithin.Y),
                         //           currentItem.getSourceRectangle(),
@@ -277,13 +277,12 @@ namespace TileEngine
                         //           _scale / currentItem.getTexture().Width,
                         //           currentItem.getSpriteEffect(),
                         //           currentItem.getDepth());
-                        spriteBatch.Draw(currentItem.getTexture(), new Rectangle((int)(renderTargetX * (containedWithin.Width/10) + containedWithin.X),
-                                                                                 (int)(y * (containedWithin.Height/10) + containedWithin.Y),
-                                                                                 containedWithin.Width/10,
+                        spriteBatch.Draw(currentItem.getTexture(), new Rectangle((int)(renderTargetX * (containedWithin.Width / 10) + containedWithin.X),
+                                                                                 (int)(y * (containedWithin.Height / 10) + containedWithin.Y),
+                                                                                 containedWithin.Width / 10,
                                                                                  containedWithin.Height / 10)
                                                                                  , currentItem.getSourceRectangle(),
                             currentItem.getTint(), currentItem.getRotation(), currentItem.getOrigin(), currentItem.getSpriteEffect(), currentItem.getDepth());
-
 
                     startPosY++;
                 }//inner for
@@ -293,6 +292,7 @@ namespace TileEngine
 
             spriteBatch.End();
         }
+
         /// <summary>
         /// Swaps the layer for another layer through shallow copying
         /// </summary>
