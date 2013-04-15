@@ -246,7 +246,7 @@ namespace MainMenu
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PLAY;
                     break;
                 case CONTINUE_BUTTON_INDEX:
-                    background_color = Color.Yellow;
+                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PLAY;
                     break;
                 case SETTINGS_BUTTON_INDEX:
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.SETTINGS;

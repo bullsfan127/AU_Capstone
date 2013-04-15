@@ -6,8 +6,8 @@ Content\shitty.xnb
 Content\shitty2.0.xnb
 Content\shitty2.0test.xnb
 Content\shitty3.0.xnb
-Content\Coin.xnb
 Content\Boomerang.xnb
+Content\Coin.xnb
 Content\Tiles\FinalGrid.xnb
 Content\Potion.xnb
 Content\Continue.xnb
@@ -21,6 +21,7 @@ Content\MoveRight.xnb
 Content\MoveLeft.xnb
 Content\JumpUp.xnb
 Content\SaveKeys.xnb
+Content\Panel540X540.xnb
 Content\Songs\DST-DarkestKnight.xnb
 Content\Songs\DST-TimeToDream.xnb
 Content\Sounds\Jump.xnb
@@ -34,7 +35,6 @@ Content\Sounds\Kill.xnb
 Content\Songs\DST-Aurora.xnb
 Content\Songs\DST-Glory.xnb
 Content\Songs\DST-Serade.xnb
-Content\Panel540X540.xnb
 Content\Songs\DST-DarkestKnight.wma
 Content\Songs\DST-TimeToDream.wma
 Content\Songs\DST-Aurora.wma

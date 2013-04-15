@@ -131,12 +131,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainButton.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="PauseMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="MoveButton.cs" />
+    <Compile Include="SaveKeys.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="SoundManager.cs" />
     <Compile Include="Utility\FPS_Counter.cs" />

@@ -286,7 +286,7 @@ namespace CapstoneProject
                     break;
                 case GAMESTATE.PAUSE:
                     // CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
-                    GraphicsDevice.Clear(Color.Black);
+                    GraphicsDevice.Clear(Color.Gray);
                     pauseMenu.Draw(gameTime, spriteBatch);
                     break;
                 case GAMESTATE.SETTINGS:

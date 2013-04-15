@@ -226,7 +226,7 @@ namespace PauseMenu
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PLAY;
                     break;
                 case SETTINGS_BUTTON_INDEX:
-
+                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.SETTINGS;
                     break;
                 case MAINMENU_BUTTON_INDEX:
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.MAINMENU;

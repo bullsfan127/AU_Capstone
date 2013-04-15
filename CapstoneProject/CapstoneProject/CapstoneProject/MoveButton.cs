@@ -22,6 +22,8 @@ namespace CapstoneProject
         const int RIGHTBUTTON = 0;
         const int LEFTBUTTON = 1;
         const int UPBUTTON = 2;
+        
+       
 
         public MoveButton(Vector2 buttonPosition, Texture2D Texture, int button)
             : base(buttonPosition, Texture)
@@ -32,6 +34,7 @@ namespace CapstoneProject
         public override void FireEvent()
         {
             _key = Keyboard.GetState().GetPressedKeys();
+          
             if (_key.Length == 0)
             {
                 FireAgain = true;

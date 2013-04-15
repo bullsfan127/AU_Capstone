@@ -193,13 +193,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SaveKeys.png">
-      <Name>SaveKeys</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Songs\DST-DarkestKnight.wav">
       <Name>DST-DarkestKnight</Name>
       <Importer>WavImporter</Importer>
@@ -279,6 +272,13 @@
   <ItemGroup>
     <Compile Include="Panel540X540.png">
       <Name>Panel540X540</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SaveKeys.png">
+      <Name>SaveKeys</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
