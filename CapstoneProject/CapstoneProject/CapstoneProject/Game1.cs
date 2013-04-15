@@ -246,11 +246,6 @@ namespace CapstoneProject
                         soundManager.PlaySound(5);
                     }
 
-                    if (keystate.IsKeyDown(Keys.Down))
-                    {
-                        soundManager.PlaySound(1);
-                    }
-
                     player.Update(gameTime, gameMap);
                     healthBar.Update(gameTime, player);
                     // TODO: Add your update logic here

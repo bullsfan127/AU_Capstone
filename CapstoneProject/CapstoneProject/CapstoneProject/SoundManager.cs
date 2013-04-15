@@ -59,6 +59,9 @@ namespace CapstoneProject
                     case GAMESTATE.PLAY:
                         i = 0;
                         break;
+                    case GAMESTATE.PAUSE:
+                        i = 2;
+                        break;
                     default:
                         i = 1;
                         break;

@@ -4,7 +4,6 @@ Content\Tiles\tileM.xnb
 Content\Tiles\tileF.xnb
 Content\Tiles\FinalGrid.xnb
 Content\AdvHealth.xnb
-Content\Panel540X540.xnb
 Content\Songs\DST-DarkestKnight.xnb
 Content\Songs\DST-TimeToDream.xnb
 Content\Sounds\Jump.xnb
@@ -34,6 +33,7 @@ Content\menuButtons\MainMenu.xnb
 Content\menuButtons\MoveRight.xnb
 Content\menuButtons\MoveLeft.xnb
 Content\menuButtons\JumpUp.xnb
+Content\Panel540X540.xnb
 Content\menuButtons\SaveKeys.xnb
 Content\Songs\DST-DarkestKnight.wma
 Content\Songs\DST-TimeToDream.wma

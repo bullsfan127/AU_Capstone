@@ -94,7 +94,7 @@ namespace MainMenu
             button_texture[NEWGAME_BUTTON_INDEX] =
                Content.Load<Texture2D>("menuButtons/NewGame");
             button_texture[CONTINUE_BUTTON_INDEX] =
-                Content.Load<Texture2D>("menuButtons/Resume");
+                Content.Load<Texture2D>("menuButtons/Continue");
             button_texture[SETTINGS_BUTTON_INDEX] =
                 Content.Load<Texture2D>("menuButtons/Settings");
             button_texture[EXIT_BUTTON_INDEX] =
