@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +16,7 @@ namespace GUI.Controls
     public class Label : IXTextField
     {
         public string _Text;
+
         public string Text
         {
             get
@@ -30,6 +30,7 @@ namespace GUI.Controls
         }
 
         public SpriteFont _Font;
+
         public SpriteFont Font
         {
             get
@@ -43,6 +44,7 @@ namespace GUI.Controls
         }
 
         public Vector2 _Position;
+
         public Vector2 Position
         {
             get
@@ -56,6 +58,7 @@ namespace GUI.Controls
         }
 
         public float _Scale;
+
         public float Scale
         {
             get
@@ -69,6 +72,7 @@ namespace GUI.Controls
         }
 
         public Color _TextColor;
+
         public Color TextColor
         {
             get
@@ -82,6 +86,7 @@ namespace GUI.Controls
         }
 
         public bool _Enabled;
+
         public bool Enabled
         {
             get
@@ -93,7 +98,7 @@ namespace GUI.Controls
                 _Enabled = value;
             }
         }
-       
+
         public Label(SpriteFont font, string text, Vector2 Position, Color color, float scale)
         {
             Font = font;
@@ -102,16 +107,17 @@ namespace GUI.Controls
             TextColor = color;
             _Scale = scale;
         }
+
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-                spriteBatch.DrawString(_Font, _Text, _Position, _TextColor, 0.0f, Vector2.Zero, _Scale, SpriteEffects.None, 0);
+            spriteBatch.DrawString(_Font, _Text, _Position, _TextColor, 0.0f, Vector2.Zero, _Scale, SpriteEffects.None, 0);
             spriteBatch.End();
         }
 
         public void Update(GameTime gameTime)
         {
-            //Do Nothing.  
+            //Do Nothing.
         }
     }
 }

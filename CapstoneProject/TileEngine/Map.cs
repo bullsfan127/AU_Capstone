@@ -29,16 +29,19 @@ namespace TileEngine
         List<Item> _mapItems = new List<Item>();
         List<Avatar> _NpcList = new List<Avatar>();
         DrawableLayer<Tile> _Mask;
+
         //Layers for collision detection
         Layer<Rectangle> _CollisionLayer;
+
         DrawableLayer<Tile> _Fringe;
+
         //Base Type for Player
         Avatar _Player;
 
         int _MapID;
 
-
         #region encapsulatedFields
+
         /// <summary>
         /// MapID FIELD
         /// </summary>
@@ -47,6 +50,7 @@ namespace TileEngine
             get { return _MapID; }
             set { _MapID = value; }
         }
+
         /// <summary>
         /// Tracking for NPC
         /// </summary>
@@ -55,6 +59,7 @@ namespace TileEngine
             get { return _NpcList; }
             set { _NpcList = value; }
         }
+
         /// <summary>
         /// Tracking for MapItems
         /// </summary>
@@ -63,6 +68,7 @@ namespace TileEngine
             get { return _mapItems; }
             set { _mapItems = value; }
         }
+
         /// <summary>
         /// The Ground Layer
         /// </summary>
@@ -71,6 +77,7 @@ namespace TileEngine
             get { return _Ground; }
             set { _Ground = value; }
         }
+
         /// <summary>
         /// The Mask Layer
         /// </summary>
@@ -79,6 +86,7 @@ namespace TileEngine
             get { return _Mask; }
             set { _Mask = value; }
         }
+
         /// <summary>
         /// The Fringe Layer
         /// </summary>
@@ -87,6 +95,7 @@ namespace TileEngine
             get { return _Fringe; }
             set { _Fringe = value; }
         }
+
         /// <summary>
         /// The CollisionLayer
         /// </summary>
@@ -95,6 +104,7 @@ namespace TileEngine
             get { return _CollisionLayer; }
             set { _CollisionLayer = value; }
         }
+
         /// <summary>
         /// The Player
         /// </summary>
@@ -103,20 +113,21 @@ namespace TileEngine
             get { return _Player; }
             set { _Player = value; }
         }
-        #endregion
+
+        #endregion encapsulatedFields
+
         /// <summary>
         /// Default Doesn't do anything.
         /// </summary>
         public Map() { }
 
-       
         public Map(DrawableLayer<Tile> Ground, DrawableLayer<Tile> Mask, DrawableLayer<Tile> Fringe)
         {
             _Ground = Ground;
             _Mask = Mask;
             _Fringe = Fringe;
-           
         }
+
         /// <summary>
         /// Sets the CollisionLayer size according to a layer.
         /// </summary>
@@ -125,7 +136,7 @@ namespace TileEngine
         {
             _CollisionLayer = new Layer<Rectangle>(new Vector2(currentLayer1.MapWidth, currentLayer1.MapHeight));
         }
-        
+
         //#UPDATE
         /// <summary>
         /// Updates all map specific components
@@ -140,15 +151,15 @@ namespace TileEngine
                 this.offset.X = 0;
             }
 
-            foreach(Item item in _mapItems)
+            foreach (Item item in _mapItems)
             {
                 item.Update(gameTime);
             }
 
             foreach (Avatar a in _NpcList)
             { a.Update(gameTime); }
-        
         }
+
         //#DRAW
         /// <summary>
         /// Draw the map in the entire screen
@@ -157,10 +168,9 @@ namespace TileEngine
         /// <param name="gameTime">gametime</param>
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            
             _Ground.Draw(spriteBatch, gameTime, offset);
             _Mask.Draw(spriteBatch, gameTime, offset);
-            
+
             foreach (Item item in _mapItems)
             {
                 //TODO:  Add Logic for drawing based on player Proximity
@@ -171,27 +181,24 @@ namespace TileEngine
             {
                 //TODO:  Add Logic for drawing based on player Proximity
                 ava.Draw(spriteBatch, gameTime);
-            
-            
             }
             _Player.Draw(spriteBatch, gameTime);
             _Fringe.Draw(spriteBatch, gameTime, offset);
-            
         }
-        
+
         /// <summary>
         /// Draws the map in a specific region
         /// </summary>
         /// <param name="spriteBatch">Spritebatch</param>
         /// <param name="gameTime">Gametime</param>
         /// <param name="Location">Rectancle stating the region</param>
+
         public void DrawInWindow(SpriteBatch spriteBatch, GameTime gameTime, Rectangle Location)
         {
             _Ground.Draw(spriteBatch, gameTime, offset, Location, _Player);
             _Mask.Draw(spriteBatch, gameTime, offset, Location, _Player);
             _Player.Draw(spriteBatch, gameTime);
             _Fringe.Draw(spriteBatch, gameTime, offset, Location, _Player);
-     
         }
 
         /// <summary>
@@ -242,6 +249,7 @@ namespace TileEngine
         {
             Map newMap = new Map();
             newMap = serializer.Load("SaveGame.xml");
+
             newMap.LoadExtraContent(contentManager);
             return newMap;
         }
@@ -291,7 +299,5 @@ namespace TileEngine
             this._Player.PlayerAnimation.Position = this._Player.Position;
             this._Player.Offset = new Vector2(this._Player.OX, this.Player.OY);
         }
-
-       
     }
 }

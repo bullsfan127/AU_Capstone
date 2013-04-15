@@ -172,6 +172,27 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="menuButtons\MoveRight.png">
+      <Name>MoveRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="menuButtons\MoveLeft.png">
+      <Name>MoveLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="menuButtons\JumpUp.png">
+      <Name>JumpUp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Songs\DST-DarkestKnight.wav">
       <Name>DST-DarkestKnight</Name>
       <Importer>WavImporter</Importer>
@@ -246,6 +267,20 @@
       <Name>DST-Serade</Name>
       <Importer>WavImporter</Importer>
       <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Panel540X540.png">
+      <Name>Panel540X540</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="menuButtons\SaveKeys.png">
+      <Name>SaveKeys</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

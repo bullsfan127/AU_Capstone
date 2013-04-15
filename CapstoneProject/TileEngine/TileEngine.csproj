@@ -111,6 +111,7 @@
     <Compile Include="Interfaces\Drawable.cs" />
     <Compile Include="Layer.cs" />
     <Compile Include="Map.cs" />
+    <Compile Include="SerializeControls.cs" />
     <Compile Include="RolePlay\Potion.cs" />
     <Compile Include="RolePlay\Sword.cs" />
     <Compile Include="Tile.cs" />
