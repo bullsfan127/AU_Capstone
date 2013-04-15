@@ -31,7 +31,6 @@ namespace CapstoneProject
         XPanel rPanel;
         XPanel lPanel;
         XPanel upPanel;
-        
 
         public Settings(GraphicsDeviceManager _graphics, ContentManager _content)
         {
@@ -86,7 +85,6 @@ namespace CapstoneProject
             leftLabel.Draw(gameTime, spriteBatch);
             upLabel.Draw(gameTime, spriteBatch);
 
-
             //Draw panels
             rPanel.Draw(gameTime, spriteBatch);
             lPanel.Draw(gameTime, spriteBatch);
@@ -105,7 +103,6 @@ namespace CapstoneProject
 
             Texture2D saveTexture = content.Load<Texture2D>("SaveKeys");
             saveKeys = new SaveKeys(new Vector2(50, 400), saveTexture, 4);
-            
 
             Texture2D rightTexture = content.Load<Texture2D>("MoveRight");
             rightButton = new MoveButton(new Vector2(50, 10), rightTexture, 0);
@@ -142,7 +139,6 @@ namespace CapstoneProject
             rPanel.AddChild(rightLabel, new Vector2(15, 15));
             lPanel.AddChild(leftLabel, new Vector2(15, 15));
             upPanel.AddChild(upLabel, new Vector2(15, 15));
-
         }
     }
 }

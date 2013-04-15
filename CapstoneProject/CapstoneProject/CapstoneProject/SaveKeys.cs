@@ -13,7 +13,6 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using TileEngine;
 
-
 namespace CapstoneProject
 {
     /// <summary>
@@ -21,29 +20,22 @@ namespace CapstoneProject
     /// </summary>
     public class SaveKeys : XButton
     {
-    
         int _button;
         const int SAVEBUTTON = 0;
 
         public SaveKeys(Vector2 buttonPosition, Texture2D Texture, int button)
             : base(buttonPosition, Texture)
-           
         {
             _button = button;
         }
+
         public override void FireEvent()
         {
-
-
             if (SAVEBUTTON == 0)
             {
-                
-
+                Controls.Save();
             }
             base.FireEvent();
         }
-
-    
-       
     }
 }

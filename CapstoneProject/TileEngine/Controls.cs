@@ -50,5 +50,11 @@ namespace TileEngine
             serializer.Load();
         }
 
+        public static void setDefault()
+        {
+            _left = Keys.Left;
+            _right = Keys.Right;
+            _up = Keys.Up;
+        }
     }
 }

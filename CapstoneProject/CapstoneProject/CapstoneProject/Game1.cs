@@ -158,6 +158,7 @@ namespace CapstoneProject
             pauseMenu.LoadContent();
             healthBar.LoadContent();
             settings.LoadContent();
+            Controls.Load();
 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);

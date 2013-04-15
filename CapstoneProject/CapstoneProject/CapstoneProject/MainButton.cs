@@ -13,7 +13,6 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using TileEngine;
 
-
 namespace CapstoneProject
 {
     /// <summary>
@@ -21,29 +20,23 @@ namespace CapstoneProject
     /// </summary>
     public class MainButton : XButton
     {
-
         int _button;
         const int MAINBUTTON = 0;
 
         public MainButton(Vector2 buttonPosition, Texture2D Texture, int button)
             : base(buttonPosition, Texture)
-           
         {
             _button = button;
         }
+
         public override void FireEvent()
         {
-
-
             if (MAINBUTTON == 0)
             {
                 CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.MAINMENU;
-
+                Controls.Load();
             }
             base.FireEvent();
         }
-
-    
-       
     }
 }
