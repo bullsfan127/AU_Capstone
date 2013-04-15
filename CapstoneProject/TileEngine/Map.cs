@@ -20,6 +20,7 @@ namespace TileEngine
     /// </summary>
     public class Map
     {
+        public const int TILE_WIDTH = 64;
         //offset to determine center of screen.
         Vector2 offset = Vector2.Zero;
 

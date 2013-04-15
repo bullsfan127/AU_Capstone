@@ -211,13 +211,13 @@ namespace TileEngine
                     //TODO:  Space this out so the draw code is easier to understand.  #TODO
                     if (currentItem != null)
                         spriteBatch.Draw(currentItem.getTexture(),
-                                   new Vector2(x * currentItem.getTexture().Width * (_scale / currentItem.getTexture().Width) - (int)centerLocation.X % 64,
+                                   new Vector2(x * currentItem.getTexture().Width * (_scale / currentItem.getTexture().Width) - (int)centerLocation.X % Map.TILE_WIDTH,
                                        startPosY * currentItem.getTexture().Height * (_scale / currentItem.getTexture().Width)),
                                    currentItem.getSourceRectangle(),
                                    currentItem.getTint(),
                                    currentItem.getRotation(),
                                    currentItem.getOrigin(),
-                                   _scale / 64,
+                                   _scale / Map.TILE_WIDTH,
                                    currentItem.getSpriteEffect(),
                                    currentItem.getDepth());
 
