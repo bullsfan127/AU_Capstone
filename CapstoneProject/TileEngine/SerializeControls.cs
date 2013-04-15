@@ -41,14 +41,14 @@ namespace TileEngine
 
         public void save()
         {
-            serializer.FileName = "controls.xml";
+            serializer.FileName = "../../../controls/controls.xml";
             serializer.Save(this, true);
         }
 
         public void Load()
         {
             SerializeControls temp = new SerializeControls();
-            temp = serializer.Load("controls.xml");
+            temp = serializer.Load("../../../controls/controls.xml");
             Controls.Right = temp._right;
             Controls.Left = temp._left;
             Controls.Up = temp._up;
