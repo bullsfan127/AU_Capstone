@@ -89,7 +89,7 @@ namespace MapEditor.GUI
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
 
-        FocalPoint _center = new FocalPoint(new Vector2(0, 90), 10, 100, 50, 50);
+        FocalPoint _center = new FocalPoint(new Vector2(0, 0), 10, 100, 50, 50);
 
         public enum currentLayer { GROUND, MASK, FRINGE };
 
@@ -307,7 +307,7 @@ namespace MapEditor.GUI
             _map.SwapGoundLayer(currentLayer1);
             _map.SwapFringeLayer(currentLayerB);
             _map.SetCollisionLayer(currentLayer1);
-            _map.Player = (Player)ava;
+            _map.Player = ava;
         }
     }
 }

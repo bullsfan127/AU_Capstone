@@ -266,19 +266,22 @@ namespace TileEngine
                     if (this._Fringe.Layer[x, y] != null)
                     {
                         this._Fringe.Layer[x, y].setTexture(contentManager.Load<Texture2D>(this._Fringe.Layer[x, y].Name));
-                        this._Fringe.Layer[x, y].setSourceRectangle(new Rectangle(0, 0, 64, 64));
+                        this._Fringe.Layer[x, y].setSourceRectangle(new Rectangle(this._Fringe.Layer[x, y].SR[0], this._Fringe.Layer[x, y].SR[1], 64, 64));
+                        this._Fringe.Layer[x, y].Scale = 320;
                     }
 
                     if (this._Ground.Layer[x, y] != null)
                     {
                         this._Ground.Layer[x, y].setTexture(contentManager.Load<Texture2D>(this._Ground.Layer[x, y].Name));
-                        this._Ground.Layer[x, y].setSourceRectangle(new Rectangle(0, 0, 64, 64));
+                        this._Ground.Layer[x, y].setSourceRectangle(new Rectangle(this._Ground.Layer[x, y].SR[0], this._Ground.Layer[x, y].SR[1], 64, 64));
+                        this.Ground.Layer[x, y].Scale = 320;
                     }
 
                     if (this._Mask.Layer[x, y] != null)
                     {
                         this._Mask.Layer[x, y].setTexture(contentManager.Load<Texture2D>(this._Mask.Layer[x, y].Name));
-                        this._Mask.Layer[x, y].setSourceRectangle(new Rectangle(0, 0, 64, 64));
+                        this._Mask.Layer[x, y].setSourceRectangle(new Rectangle(this._Mask.Layer[x, y].SR[0], this._Mask.Layer[x, y].SR[1], 64, 64));
+                        this.Mask.Layer[x, y].Scale = 320;
                     }
                 }
             }

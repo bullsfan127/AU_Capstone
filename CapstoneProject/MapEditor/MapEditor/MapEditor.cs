@@ -22,6 +22,7 @@ namespace MapEditor
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        static public ContentManager content;
 
         /// <summary>
         /// The window the map is contained in.
@@ -60,6 +61,7 @@ namespace MapEditor
             //I might add the ability to scale the window based on your needs
             graphics.PreferredBackBufferWidth = 1280;
             graphics.PreferredBackBufferHeight = 640;
+            content = this.Content;
         }
 
         /// <summary>
@@ -137,6 +139,8 @@ namespace MapEditor
             TileSelectorPanel.Update(gameTime);
             LayerSelectionPanel.Update(gameTime);
             saveButton.UpdateM(gameTime, window.Map);
+            window.Map = null;
+            window.Map = saveButton.saveMap;
             resetButton.Update(gameTime);
             base.Update(gameTime);
         }

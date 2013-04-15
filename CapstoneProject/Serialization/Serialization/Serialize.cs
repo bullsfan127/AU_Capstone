@@ -138,7 +138,7 @@ namespace CustomSerialization
             if (_complex)
             {
                 complexSerializer = new SharpSerializer();
-                complexSerializer.Serialize(classType, "s.xml");
+                complexSerializer.Serialize(classType, this._fileName);
                 _classType = classType;
                 //try
                 //{

@@ -226,9 +226,32 @@ namespace CapstoneProject
                         Map gameMap2 = gameMap;
                         gameMap = null;
                         gameMap = new Map();
-                        gameMap = gameMap.LoadMap("s.xml", this.Content);
+                        gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/test.xml", this.Content);
+                        gameMap.Fringe.MaxViewPortHeight = gameMap2.Fringe.MaxViewPortHeight;
+                        gameMap.Fringe.MaxViewPortWidth = gameMap2.Fringe.MaxViewPortWidth;
+                        gameMap.Fringe.MaxRows = gameMap2.Fringe.MaxRows;
+                        gameMap.Fringe.MaxColumns = gameMap2.Fringe.MaxColumns;
+                        gameMap.Fringe.MapWidth = gameMap2.Fringe.MapWidth;
+                        gameMap.Fringe.MapHeight = gameMap2.Fringe.MapHeight;
+                        gameMap.Fringe.Scale = gameMap2.Fringe.Scale;
 
+                        gameMap.Mask.MaxViewPortHeight = gameMap2.Mask.MaxViewPortHeight;
+                        gameMap.Mask.MaxViewPortWidth = gameMap2.Mask.MaxViewPortWidth;
+                        gameMap.Mask.MaxRows = gameMap2.Mask.MaxRows;
+                        gameMap.Mask.MaxColumns = gameMap2.Mask.MaxColumns;
+                        gameMap.Mask.MapWidth = gameMap2.Mask.MapWidth;
+                        gameMap.Mask.MapHeight = gameMap2.Mask.MapHeight;
+                        gameMap.Mask.Scale = gameMap2.Mask.Scale;
+
+                        gameMap.Ground.MaxViewPortHeight = gameMap2.Ground.MaxViewPortHeight;
+                        gameMap.Ground.MaxViewPortWidth = gameMap2.Ground.MaxViewPortWidth;
+                        gameMap.Ground.MaxRows = gameMap2.Ground.MaxRows;
+                        gameMap.Ground.MaxColumns = gameMap2.Ground.MaxColumns;
+                        gameMap.Ground.MapWidth = gameMap2.Ground.MapWidth;
+                        gameMap.Ground.MapHeight = gameMap2.Ground.MapHeight;
+                        gameMap.Ground.Scale = gameMap2.Ground.Scale;
                         gameMap.Player = null;
+
                         gameMap.Player = player;
                     }
 

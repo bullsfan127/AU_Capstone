@@ -17,7 +17,7 @@ namespace MapEditor.GUI
 {
     public class SaveButton : XButton
     {
-        Map saveMap;
+        public Map saveMap;
         Label buttonLable;
 
         public SaveButton(Vector2 Position, Texture2D ButtonTexture, Map map, SpriteFont font)

@@ -37,6 +37,14 @@ namespace TileEngine
 
         private Texture2D _Texture;
 
+        private int[] _sR = new int[4];
+
+        public int[] SR
+        {
+            get { return _sR; }
+            set { _sR = value; }
+        }
+
         private Rectangle _SourceRectangle;
 
         public Rectangle SourceRectangle
@@ -92,6 +100,11 @@ namespace TileEngine
         public Tile(Rectangle _sourceRectangle, Color _tint, float _rotation, Vector2 _origin, SpriteEffects _effect, float _depth)
         {
             _SourceRectangle = _sourceRectangle;
+
+            _sR[0] = _sourceRectangle.X;
+            _sR[1] = _sourceRectangle.Y;
+            _sR[2] = _sourceRectangle.Width;
+            _sR[3] = _sourceRectangle.Height;
 
             _ColorTint = _tint;
             _Rotation = _rotation;
