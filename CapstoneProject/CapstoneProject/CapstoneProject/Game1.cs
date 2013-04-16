@@ -37,6 +37,8 @@ namespace CapstoneProject
         /// </summary>
         public static GAMESTATE gameState = GAMESTATE.MAINMENU;
 
+        Texture2D backgroundTexture;
+
         MainMenu.MainMenu menu;
         PauseMenu.PauseMenu pauseMenu;
         GraphicsDeviceManager graphics;
@@ -58,6 +60,8 @@ namespace CapstoneProject
 
         // Represents the player
         Player player;
+
+        Rectangle mainFrame;
 
         //Health Bar
         HealthBar healthBar;
@@ -162,6 +166,7 @@ namespace CapstoneProject
 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            mainFrame = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
 #if DEBUG
             //#FPS_COUNTER
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
@@ -179,6 +184,8 @@ namespace CapstoneProject
 
             // TODO: use this.Content to load your game content here
 #endif
+
+            backgroundTexture = Content.Load<Texture2D>("background");
             Texture2D coinTexture = Content.Load<Texture2D>("Items/Coin");
             coin.Initialize(coinTexture, new Vector2(19, 275));
             Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
@@ -298,7 +305,8 @@ namespace CapstoneProject
             {
                 case GAMESTATE.MAINMENU:
                     GraphicsDevice.Clear(Color.Black);
-                    menu.Draw(gameTime, spriteBatch);
+
+                    menu.Draw(gameTime, spriteBatch, this.backgroundTexture, mainFrame);
                     break;
                 case GAMESTATE.PLAY:
                     GraphicsDevice.Clear(Color.CornflowerBlue);

@@ -139,12 +139,14 @@ namespace MainMenu
         /// This is called when the game should draw itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch, Texture2D background, Rectangle mainFrame)
         {
             //  GraphicsDevice.Clear(Color.Firebrick);
             //  GraphicsDevice.Clear(background_color);
 
             spriteBatch.Begin();
+            spriteBatch.Draw(background, mainFrame, Color.White);
+
             for (int i = 0; i < NUMBER_OF_BUTTONS; i++)
                 spriteBatch.Draw(button_texture[i], button_rectangle[i], button_color[i]);
             spriteBatch.End();
