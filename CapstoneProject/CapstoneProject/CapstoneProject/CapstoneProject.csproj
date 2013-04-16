@@ -19,7 +19,7 @@
     <ApplicationIcon>Game.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\</PublishUrl>
+    <PublishUrl>C:\fj6\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -28,8 +28,8 @@
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3</ApplicationRevision>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -46,7 +46,7 @@
     <NoStdLib>true</NoStdLib>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <PlatformTarget>x86</PlatformTarget>
-    <XnaCompressContent>false</XnaCompressContent>
+    <XnaCompressContent>True</XnaCompressContent>
     <DocumentationFile>
     </DocumentationFile>
   </PropertyGroup>
