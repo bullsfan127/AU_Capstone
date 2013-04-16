@@ -46,7 +46,7 @@ namespace CapstoneProject
         Coin coin = new Coin();
         Settings settings;
 
-        //  SoundManager soundManager;
+          SoundManager soundManager;
 
 #if !LOAD_FROM_FILE
         Tile a;
@@ -92,7 +92,7 @@ namespace CapstoneProject
             healthBar = new HealthBar(graphics, this.Content);
             settings = new Settings(graphics, this.Content);
 
-            // soundManager = new SoundManager(this, this.Content);
+            soundManager = new SoundManager(this, this.Content);
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace CapstoneProject
             pauseMenu.LoadContent();
             healthBar.LoadContent();
             settings.LoadContent();
-            Controls.Load();
+           // Controls.Load();
 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -291,7 +291,7 @@ namespace CapstoneProject
             counter.Update(gameTime);
             Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
 #endif
-            // soundManager.PlaySong();
+             soundManager.PlaySong();
             base.Update(gameTime);
         }
 
