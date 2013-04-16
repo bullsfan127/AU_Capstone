@@ -249,37 +249,37 @@ namespace TileEngine
         /// <returns></returns>
         public Map LoadMap(string filename, ContentManager contentManager)
         {
+            int HW = 600;
+            int RC = 10;
+            int MWH = 100;
+            int s = 0;
             Map newMap = new Map();
-          //  Map oldMap = this;
             newMap = serializer.Load(filename);
-
-
-
             newMap.LoadExtraContent(contentManager);
 
-            newMap.Fringe.MaxViewPortHeight = this.Fringe.MaxViewPortHeight;
-            newMap.Fringe.MaxViewPortWidth = this.Fringe.MaxViewPortWidth;
-            newMap.Fringe.MaxRows = this.Fringe.MaxRows;
-            newMap.Fringe.MaxColumns = this.Fringe.MaxColumns;
-            newMap.Fringe.MapWidth = this.Fringe.MapWidth;
-            newMap.Fringe.MapHeight = this.Fringe.MapHeight;
-            newMap.Fringe.Scale = this.Fringe.Scale;
+            newMap.Fringe.MaxViewPortHeight = HW;
+            newMap.Fringe.MaxViewPortWidth = HW;
+            newMap.Fringe.MaxRows = RC;
+            newMap.Fringe.MaxColumns = RC;
+            newMap.Fringe.MapWidth = MWH;
+            newMap.Fringe.MapHeight = MWH;
+            newMap.Fringe.Scale = s;
 
-            newMap.Mask.MaxViewPortHeight = this.Mask.MaxViewPortHeight;
-            newMap.Mask.MaxViewPortWidth = this.Mask.MaxViewPortWidth;
-            newMap.Mask.MaxRows = this.Mask.MaxRows;
-            newMap.Mask.MaxColumns = this.Mask.MaxColumns;
-            newMap.Mask.MapWidth = this.Mask.MapWidth;
-            newMap.Mask.MapHeight = this.Mask.MapHeight;
-            newMap.Mask.Scale = this.Mask.Scale;
+            newMap.Mask.MaxViewPortHeight = HW;
+            newMap.Mask.MaxViewPortWidth = HW;
+            newMap.Mask.MaxRows = RC;
+            newMap.Mask.MaxColumns = RC;
+            newMap.Mask.MapWidth = MWH;
+            newMap.Mask.MapHeight = MWH;
+            newMap.Mask.Scale = s;
 
-            newMap.Ground.MaxViewPortHeight = this.Ground.MaxViewPortHeight;
-            newMap.Ground.MaxViewPortWidth = this.Ground.MaxViewPortWidth;
-            newMap.Ground.MaxRows = this.Ground.MaxRows;
-            newMap.Ground.MaxColumns = this.Ground.MaxColumns;
-            newMap.Ground.MapWidth = this.Ground.MapWidth;
-            newMap.Ground.MapHeight = this.Ground.MapHeight;
-            newMap.Ground.Scale = this.Ground.Scale;
+            newMap.Ground.MaxViewPortHeight = HW;
+            newMap.Ground.MaxViewPortWidth = HW;
+            newMap.Ground.MaxRows = RC;
+            newMap.Ground.MaxColumns = RC;
+            newMap.Ground.MapWidth = MWH;
+            newMap.Ground.MapHeight = MWH;
+            newMap.Ground.Scale = s;
 
             return newMap;
         }
@@ -319,6 +319,10 @@ namespace TileEngine
             }
         }
 
+        /// <summary>
+        /// Reconstructs player after reconstruction, should only be called when loading a saved game
+        /// </summary>
+        /// <param name="contentManager"></param>
         public void LoadPlayer(ContentManager contentManager)
         {
             //load player

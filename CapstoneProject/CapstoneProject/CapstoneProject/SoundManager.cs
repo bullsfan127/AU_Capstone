@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
@@ -8,15 +9,13 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-using System.IO;
-
 
 namespace CapstoneProject
 {
     /// <summary>
     /// This is a game component that implements IUpdateable.
     /// </summary>
-    public class SoundManager 
+    public class SoundManager
     {
         private ContentManager _content;
 
@@ -30,16 +29,15 @@ namespace CapstoneProject
         KeyboardState keystate = Keyboard.GetState();
         SoundEffect sound;
 
-
         private string[] songs = Directory.GetFiles(@"..\..\..\..\CapstoneProjectContent\Songs", "*.wav")
                                      .Select(path => Path.GetFileNameWithoutExtension(path))
                                      .ToArray();
+
         private string[] sounds = Directory.GetFiles(@"..\..\..\..\CapstoneProjectContent\Sounds", "*.wav")
                                      .Select(path => Path.GetFileNameWithoutExtension(path))
                                      .ToArray();
 
         public SoundManager(Game game, ContentManager content)
-            
         {
             // Pass in content manager
             _content = content;
@@ -72,7 +70,6 @@ namespace CapstoneProject
                 // Load song
                 Song bgm = _content.Load<Song>("Songs\\" + songs[i]);
 
-
                 // Play song
                 try
                 {
@@ -96,6 +93,5 @@ namespace CapstoneProject
         /// Allows the game component to update itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-      
     }
 }

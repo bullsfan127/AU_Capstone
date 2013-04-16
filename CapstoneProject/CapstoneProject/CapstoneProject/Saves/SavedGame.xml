@@ -36,7 +36,7 @@
                   </SingleArray>
                   <Complex name="SourceRectangle" id="8">
                     <Properties>
-                      <Complex name="Location" />
+                      <Complex name="Location" id="9" />
                     </Properties>
                   </Complex>
                   <Complex name="ColorTint">
@@ -90230,7 +90230,7 @@
           <Properties>
             <SingleArray name="SRect">
               <Items>
-                <Simple value="64" />
+                <Simple value="0" />
                 <Simple value="0" />
                 <Simple value="64" />
                 <Simple value="128" />
@@ -90238,7 +90238,7 @@
             </SingleArray>
             <SingleArray name="DRect">
               <Items>
-                <Simple value="385" />
+                <Simple value="325" />
                 <Simple value="372" />
                 <Simple value="64" />
                 <Simple value="128" />
@@ -90246,7 +90246,7 @@
             </SingleArray>
             <Complex name="sourceRect">
               <Properties>
-                <Complex name="Location" />
+                <Reference name="Location" id="9" />
               </Properties>
             </Complex>
             <Complex name="destinationRect">
@@ -90256,20 +90256,20 @@
             </Complex>
             <Simple name="lastState" value="IDLE" />
             <Simple name="scale" value="1" />
-            <Simple name="elapsedTime" value="64" />
+            <Simple name="elapsedTime" value="80" />
             <Simple name="frameTime" value="250" />
             <Simple name="frameCount" value="2" />
-            <Simple name="currentFrame" value="1" />
+            <Simple name="currentFrame" value="0" />
             <Reference name="color" id="14" />
             <Simple name="FrameWidth" value="64" />
             <Simple name="FrameHeight" value="128" />
             <Simple name="Active" value="True" />
             <Simple name="Looping" value="True" />
-            <Complex name="Position" id="40" />
+            <Complex name="Position" id="39" />
           </Properties>
         </Complex>
-        <Reference name="Position" id="40" />
-        <Simple name="X" value="385" />
+        <Reference name="Position" id="39" />
+        <Simple name="X" value="325" />
         <Simple name="Y" value="372" />
       </Properties>
     </Complex>
