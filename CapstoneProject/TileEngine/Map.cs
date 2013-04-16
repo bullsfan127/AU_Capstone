@@ -250,8 +250,37 @@ namespace TileEngine
         public Map LoadMap(string filename, ContentManager contentManager)
         {
             Map newMap = new Map();
+          //  Map oldMap = this;
             newMap = serializer.Load(filename);
+
+
+
             newMap.LoadExtraContent(contentManager);
+
+            newMap.Fringe.MaxViewPortHeight = this.Fringe.MaxViewPortHeight;
+            newMap.Fringe.MaxViewPortWidth = this.Fringe.MaxViewPortWidth;
+            newMap.Fringe.MaxRows = this.Fringe.MaxRows;
+            newMap.Fringe.MaxColumns = this.Fringe.MaxColumns;
+            newMap.Fringe.MapWidth = this.Fringe.MapWidth;
+            newMap.Fringe.MapHeight = this.Fringe.MapHeight;
+            newMap.Fringe.Scale = this.Fringe.Scale;
+
+            newMap.Mask.MaxViewPortHeight = this.Mask.MaxViewPortHeight;
+            newMap.Mask.MaxViewPortWidth = this.Mask.MaxViewPortWidth;
+            newMap.Mask.MaxRows = this.Mask.MaxRows;
+            newMap.Mask.MaxColumns = this.Mask.MaxColumns;
+            newMap.Mask.MapWidth = this.Mask.MapWidth;
+            newMap.Mask.MapHeight = this.Mask.MapHeight;
+            newMap.Mask.Scale = this.Mask.Scale;
+
+            newMap.Ground.MaxViewPortHeight = this.Ground.MaxViewPortHeight;
+            newMap.Ground.MaxViewPortWidth = this.Ground.MaxViewPortWidth;
+            newMap.Ground.MaxRows = this.Ground.MaxRows;
+            newMap.Ground.MaxColumns = this.Ground.MaxColumns;
+            newMap.Ground.MapWidth = this.Ground.MapWidth;
+            newMap.Ground.MapHeight = this.Ground.MapHeight;
+            newMap.Ground.Scale = this.Ground.Scale;
+
             return newMap;
         }
 
@@ -293,7 +322,7 @@ namespace TileEngine
         public void LoadPlayer(ContentManager contentManager)
         {
             //load player
-            Texture2D playerTexture = contentManager.Load<Texture2D>("shitty3.0");
+            Texture2D playerTexture = contentManager.Load<Texture2D>("shitty/shitty3.0");
             Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);
             this._Player.Position = playerPosition;
 

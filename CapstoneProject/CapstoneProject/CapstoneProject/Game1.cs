@@ -24,7 +24,7 @@ using TileEngine;
 
 namespace CapstoneProject
 {
-    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, SETTINGS = 4 };
+    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, SETTINGS = 4, NEWGAME = 5 , CONTINUE = 6};
 
     /// <summary>
     /// This is the main type for your game
@@ -186,37 +186,37 @@ namespace CapstoneProject
             Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
             player.Initialize(playerTexture, new Vector2(0, 0));
 
-            Map gameMap2 = gameMap;
-            gameMap = null;
-            gameMap = new Map();
-            gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/map.xml", this.Content);
-            // gameMap = gameMap.LoadMap("s.xml", this.Content);
-            gameMap.Fringe.MaxViewPortHeight = gameMap2.Fringe.MaxViewPortHeight;
-            gameMap.Fringe.MaxViewPortWidth = gameMap2.Fringe.MaxViewPortWidth;
-            gameMap.Fringe.MaxRows = gameMap2.Fringe.MaxRows;
-            gameMap.Fringe.MaxColumns = gameMap2.Fringe.MaxColumns;
-            gameMap.Fringe.MapWidth = gameMap2.Fringe.MapWidth;
-            gameMap.Fringe.MapHeight = gameMap2.Fringe.MapHeight;
-            gameMap.Fringe.Scale = gameMap2.Fringe.Scale;
+            //Map gameMap2 = gameMap;
+            //gameMap = null;
+            //gameMap = new Map();
+            //gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/map.xml", this.Content);
+           // gameMap = gameMap.LoadMap("s.xml", this.Content);
+            //gameMap.Fringe.MaxViewPortHeight = gameMap2.Fringe.MaxViewPortHeight;
+            //gameMap.Fringe.MaxViewPortWidth = gameMap2.Fringe.MaxViewPortWidth;
+            //gameMap.Fringe.MaxRows = gameMap2.Fringe.MaxRows;
+            //gameMap.Fringe.MaxColumns = gameMap2.Fringe.MaxColumns;
+            //gameMap.Fringe.MapWidth = gameMap2.Fringe.MapWidth;
+            //gameMap.Fringe.MapHeight = gameMap2.Fringe.MapHeight;
+            //gameMap.Fringe.Scale = gameMap2.Fringe.Scale;
 
-            gameMap.Mask.MaxViewPortHeight = gameMap2.Mask.MaxViewPortHeight;
-            gameMap.Mask.MaxViewPortWidth = gameMap2.Mask.MaxViewPortWidth;
-            gameMap.Mask.MaxRows = gameMap2.Mask.MaxRows;
-            gameMap.Mask.MaxColumns = gameMap2.Mask.MaxColumns;
-            gameMap.Mask.MapWidth = gameMap2.Mask.MapWidth;
-            gameMap.Mask.MapHeight = gameMap2.Mask.MapHeight;
-            gameMap.Mask.Scale = gameMap2.Mask.Scale;
+            //gameMap.Mask.MaxViewPortHeight = gameMap2.Mask.MaxViewPortHeight;
+            //gameMap.Mask.MaxViewPortWidth = gameMap2.Mask.MaxViewPortWidth;
+            //gameMap.Mask.MaxRows = gameMap2.Mask.MaxRows;
+            //gameMap.Mask.MaxColumns = gameMap2.Mask.MaxColumns;
+            //gameMap.Mask.MapWidth = gameMap2.Mask.MapWidth;
+            //gameMap.Mask.MapHeight = gameMap2.Mask.MapHeight;
+            //gameMap.Mask.Scale = gameMap2.Mask.Scale;
 
-            gameMap.Ground.MaxViewPortHeight = gameMap2.Ground.MaxViewPortHeight;
-            gameMap.Ground.MaxViewPortWidth = gameMap2.Ground.MaxViewPortWidth;
-            gameMap.Ground.MaxRows = gameMap2.Ground.MaxRows;
-            gameMap.Ground.MaxColumns = gameMap2.Ground.MaxColumns;
-            gameMap.Ground.MapWidth = gameMap2.Ground.MapWidth;
-            gameMap.Ground.MapHeight = gameMap2.Ground.MapHeight;
-            gameMap.Ground.Scale = gameMap2.Ground.Scale;
-            gameMap.Player = null;
+            //gameMap.Ground.MaxViewPortHeight = gameMap2.Ground.MaxViewPortHeight;
+            //gameMap.Ground.MaxViewPortWidth = gameMap2.Ground.MaxViewPortWidth;
+            //gameMap.Ground.MaxRows = gameMap2.Ground.MaxRows;
+            //gameMap.Ground.MaxColumns = gameMap2.Ground.MaxColumns;
+            //gameMap.Ground.MapWidth = gameMap2.Ground.MapWidth;
+            //gameMap.Ground.MapHeight = gameMap2.Ground.MapHeight;
+            //gameMap.Ground.Scale = gameMap2.Ground.Scale;
+            //gameMap.Player = null;
 
-            gameMap.Player = player;
+           // gameMap.Player = player;
         }
 
         /// <summary>
@@ -246,7 +246,36 @@ namespace CapstoneProject
                 case GAMESTATE.SETTINGS:
                     settings.Update(gameTime);
                     break;
+                case GAMESTATE.NEWGAME:
+
+                    gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/map.xml", this.Content);
+                    player = null;
+                    player = new Player();
+                    Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
+                    player.Initialize(playerTexture, new Vector2(0, 0));
+                    gameMap.Player = player;
+                    gameState = GAMESTATE.PLAY;
+                    break;
+                case GAMESTATE.CONTINUE:
+                    try
+                    {
+                        gameMap.Player = null;
+                        gameMap.Player = new Player();
+                      //  gameMap = null;
+                       // gameMap = new Map();
+                        gameMap.LoadMap("../../../Saves/SavedGame.xml", this.Content);
+                        gameMap.LoadPlayer(this.Content);
+                        player = (Player)gameMap.Player;
+                    }
+                    catch (Exception e)
+                    {
+                        gameMap = gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/map.xml", this.Content);
+                        gameMap.Player = player;
+                    }
+                    gameState = GAMESTATE.PLAY;
+                    break;
                 case GAMESTATE.PLAY:
+
 
                     // Allows the game to exit
                     if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
@@ -260,7 +289,7 @@ namespace CapstoneProject
                     if (keystate.IsKeyDown(Keys.S))
                     {
                         //  save maap
-                        gameMap.saveMap();
+                        gameMap.saveMap("../../../Saves/SavedGame.xml");
                     }
 
                     if (keystate.IsKeyDown(Keys.L))
