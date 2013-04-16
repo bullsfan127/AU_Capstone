@@ -24,7 +24,7 @@ using TileEngine;
 
 namespace CapstoneProject
 {
-    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, SETTINGS = 4 };
+    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, SETTINGS = 4, NEWGAME = 5, CONTINUE = 6 };
 
     /// <summary>
     /// This is the main type for your game
@@ -62,7 +62,7 @@ namespace CapstoneProject
         //Health Bar
         HealthBar healthBar;
 
-        Serialize<Map> serializer = new Serialize<Map>();
+        //Map
         Map gameMap;
 
 #if DEBUG
@@ -111,10 +111,7 @@ namespace CapstoneProject
             currentLayer = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerA = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
             currentLayerB = new DrawableLayer<Tile>(new Vector2(100, 100), graphics.GraphicsDevice);
-#else
-            gameMap = gameMap.LoadMap("668105.xml", this.Content);
-            // player = (Player)gameMap.Player;
-            gameMap.Player = player;
+
 #endif
 
 #if !LOAD_FROM_FILE
@@ -141,6 +138,7 @@ namespace CapstoneProject
             gameMap.SwapGoundLayer(currentLayer);
             gameMap.SwapFringeLayer(currentLayerB);
 #endif
+
 #if DEBUG
             //#FPS_COUNTER
             counter = new FPS_Counter(graphics);
@@ -182,41 +180,9 @@ namespace CapstoneProject
             // TODO: use this.Content to load your game content here
 #endif
             Texture2D coinTexture = Content.Load<Texture2D>("Items/Coin");
-            coin.Initialize(coinTexture, new Vector2(19, 19));
+            coin.Initialize(coinTexture, new Vector2(19, 275));
             Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
             player.Initialize(playerTexture, new Vector2(0, 0));
-
-            Map gameMap2 = gameMap;
-            gameMap = null;
-            gameMap = new Map();
-            gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/map.xml", this.Content);
-            // gameMap = gameMap.LoadMap("s.xml", this.Content);
-            gameMap.Fringe.MaxViewPortHeight = gameMap2.Fringe.MaxViewPortHeight;
-            gameMap.Fringe.MaxViewPortWidth = gameMap2.Fringe.MaxViewPortWidth;
-            gameMap.Fringe.MaxRows = gameMap2.Fringe.MaxRows;
-            gameMap.Fringe.MaxColumns = gameMap2.Fringe.MaxColumns;
-            gameMap.Fringe.MapWidth = gameMap2.Fringe.MapWidth;
-            gameMap.Fringe.MapHeight = gameMap2.Fringe.MapHeight;
-            gameMap.Fringe.Scale = gameMap2.Fringe.Scale;
-
-            gameMap.Mask.MaxViewPortHeight = gameMap2.Mask.MaxViewPortHeight;
-            gameMap.Mask.MaxViewPortWidth = gameMap2.Mask.MaxViewPortWidth;
-            gameMap.Mask.MaxRows = gameMap2.Mask.MaxRows;
-            gameMap.Mask.MaxColumns = gameMap2.Mask.MaxColumns;
-            gameMap.Mask.MapWidth = gameMap2.Mask.MapWidth;
-            gameMap.Mask.MapHeight = gameMap2.Mask.MapHeight;
-            gameMap.Mask.Scale = gameMap2.Mask.Scale;
-
-            gameMap.Ground.MaxViewPortHeight = gameMap2.Ground.MaxViewPortHeight;
-            gameMap.Ground.MaxViewPortWidth = gameMap2.Ground.MaxViewPortWidth;
-            gameMap.Ground.MaxRows = gameMap2.Ground.MaxRows;
-            gameMap.Ground.MaxColumns = gameMap2.Ground.MaxColumns;
-            gameMap.Ground.MapWidth = gameMap2.Ground.MapWidth;
-            gameMap.Ground.MapHeight = gameMap2.Ground.MapHeight;
-            gameMap.Ground.Scale = gameMap2.Ground.Scale;
-            gameMap.Player = null;
-
-            gameMap.Player = player;
         }
 
         /// <summary>
@@ -246,6 +212,31 @@ namespace CapstoneProject
                 case GAMESTATE.SETTINGS:
                     settings.Update(gameTime);
                     break;
+                case GAMESTATE.NEWGAME:
+
+                    gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/map.xml", this.Content);
+                    player = null;
+                    player = new Player();
+                    Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
+                    player.Initialize(playerTexture, new Vector2(0, 0));
+                    gameMap.Player = player;
+                    gameMap.MapItems.Add(coin);
+                    gameState = GAMESTATE.PLAY;
+                    break;
+                case GAMESTATE.CONTINUE:
+                    try
+                    {
+                        gameMap = gameMap.LoadMap("../../../Saves/SavedGame.xml", this.Content);
+                        gameMap.LoadPlayer(this.Content);
+                        player = (Player)gameMap.Player;
+                    }
+                    catch (Exception e)
+                    {
+                        gameMap = gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/map.xml", this.Content);
+                        gameMap.Player = player;
+                    }
+                    gameState = GAMESTATE.PLAY;
+                    break;
                 case GAMESTATE.PLAY:
 
                     // Allows the game to exit
@@ -259,44 +250,17 @@ namespace CapstoneProject
                     }
                     if (keystate.IsKeyDown(Keys.S))
                     {
-                        //  save maap
-                        gameMap.saveMap();
+                        //  save map
+                        gameMap.saveMap("../../../Saves/SavedGame.xml");
                     }
 
                     if (keystate.IsKeyDown(Keys.L))
                     {
-                        Map gameMap2 = gameMap;
                         gameMap = null;
                         gameMap = new Map();
-                        gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/map.xml", this.Content);
-                        // gameMap = gameMap.LoadMap("s.xml", this.Content);
-                        gameMap.Fringe.MaxViewPortHeight = gameMap2.Fringe.MaxViewPortHeight;
-                        gameMap.Fringe.MaxViewPortWidth = gameMap2.Fringe.MaxViewPortWidth;
-                        gameMap.Fringe.MaxRows = gameMap2.Fringe.MaxRows;
-                        gameMap.Fringe.MaxColumns = gameMap2.Fringe.MaxColumns;
-                        gameMap.Fringe.MapWidth = gameMap2.Fringe.MapWidth;
-                        gameMap.Fringe.MapHeight = gameMap2.Fringe.MapHeight;
-                        gameMap.Fringe.Scale = gameMap2.Fringe.Scale;
-
-                        gameMap.Mask.MaxViewPortHeight = gameMap2.Mask.MaxViewPortHeight;
-                        gameMap.Mask.MaxViewPortWidth = gameMap2.Mask.MaxViewPortWidth;
-                        gameMap.Mask.MaxRows = gameMap2.Mask.MaxRows;
-                        gameMap.Mask.MaxColumns = gameMap2.Mask.MaxColumns;
-                        gameMap.Mask.MapWidth = gameMap2.Mask.MapWidth;
-                        gameMap.Mask.MapHeight = gameMap2.Mask.MapHeight;
-                        gameMap.Mask.Scale = gameMap2.Mask.Scale;
-
-                        gameMap.Ground.MaxViewPortHeight = gameMap2.Ground.MaxViewPortHeight;
-                        gameMap.Ground.MaxViewPortWidth = gameMap2.Ground.MaxViewPortWidth;
-                        gameMap.Ground.MaxRows = gameMap2.Ground.MaxRows;
-                        gameMap.Ground.MaxColumns = gameMap2.Ground.MaxColumns;
-                        gameMap.Ground.MapWidth = gameMap2.Ground.MapWidth;
-                        gameMap.Ground.MapHeight = gameMap2.Ground.MapHeight;
-                        gameMap.Ground.Scale = gameMap2.Ground.Scale;
+                        gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/test.xml", this.Content);
                         gameMap.Player = null;
-
                         gameMap.Player = player;
-                        //player = (Player)gameMap.Player;
                     }
 
                     if (keystate.IsKeyDown(Keys.F))
@@ -344,7 +308,6 @@ namespace CapstoneProject
                     coin.Draw(spriteBatch, gameTime);
                     break;
                 case GAMESTATE.PAUSE:
-                    // CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
                     GraphicsDevice.Clear(Color.Gray);
                     pauseMenu.Draw(gameTime, spriteBatch);
                     break;

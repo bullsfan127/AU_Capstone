@@ -249,9 +249,38 @@ namespace TileEngine
         /// <returns></returns>
         public Map LoadMap(string filename, ContentManager contentManager)
         {
+            int HW = 600;
+            int RC = 10;
+            int MWH = 100;
+            int s = 0;
             Map newMap = new Map();
             newMap = serializer.Load(filename);
             newMap.LoadExtraContent(contentManager);
+
+            newMap.Fringe.MaxViewPortHeight = HW;
+            newMap.Fringe.MaxViewPortWidth = HW;
+            newMap.Fringe.MaxRows = RC;
+            newMap.Fringe.MaxColumns = RC;
+            newMap.Fringe.MapWidth = MWH;
+            newMap.Fringe.MapHeight = MWH;
+            newMap.Fringe.Scale = s;
+
+            newMap.Mask.MaxViewPortHeight = HW;
+            newMap.Mask.MaxViewPortWidth = HW;
+            newMap.Mask.MaxRows = RC;
+            newMap.Mask.MaxColumns = RC;
+            newMap.Mask.MapWidth = MWH;
+            newMap.Mask.MapHeight = MWH;
+            newMap.Mask.Scale = s;
+
+            newMap.Ground.MaxViewPortHeight = HW;
+            newMap.Ground.MaxViewPortWidth = HW;
+            newMap.Ground.MaxRows = RC;
+            newMap.Ground.MaxColumns = RC;
+            newMap.Ground.MapWidth = MWH;
+            newMap.Ground.MapHeight = MWH;
+            newMap.Ground.Scale = s;
+
             return newMap;
         }
 
@@ -290,10 +319,14 @@ namespace TileEngine
             }
         }
 
+        /// <summary>
+        /// Reconstructs player after reconstruction, should only be called when loading a saved game
+        /// </summary>
+        /// <param name="contentManager"></param>
         public void LoadPlayer(ContentManager contentManager)
         {
             //load player
-            Texture2D playerTexture = contentManager.Load<Texture2D>("shitty3.0");
+            Texture2D playerTexture = contentManager.Load<Texture2D>("shitty/shitty3.0");
             Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);
             this._Player.Position = playerPosition;
 
