@@ -19,6 +19,13 @@ namespace TileEngine
         private static Keys _left = Keys.Left;
         private static Keys _right = Keys.Right;
         private static Keys _up = Keys.Up;
+        private static Keys _attack = Keys.Space;
+
+        public static Keys Attack
+        {
+            get { return Controls._attack; }
+            set { Controls._attack = value; }
+        }
 
         public static Microsoft.Xna.Framework.Input.Keys Left
         {
