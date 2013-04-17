@@ -18,6 +18,7 @@ namespace TileEngine
             SpriteFrame = 2;
 
             Score = 1;
+            Scale = 0.4f;
         }
     }
 }
