@@ -18,12 +18,13 @@ namespace CapstoneProject
     /// <summary>
     /// This is a game component that implements IUpdateable.
     /// </summary>
-    public class SaveKeys : XButton
+    public class MainSaveKeys : XButton
     {
+      
         int _button;
-        const int SAVEBUTTON = 0;
+        const int MSAVEBUTTON = 0;
 
-        public SaveKeys(Vector2 buttonPosition, Texture2D Texture, int button)
+        public MainSaveKeys(Vector2 buttonPosition, Texture2D Texture, int button)
             : base(buttonPosition, Texture)
         {
             _button = button;
@@ -31,10 +32,10 @@ namespace CapstoneProject
 
         public override void FireEvent()
         {
-            if (SAVEBUTTON == 0)
+            if (MSAVEBUTTON == 0)
             {
                 Controls.Save();
-                CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PLAY;
+                CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.MAINMENU;
             }
             base.FireEvent();
         }

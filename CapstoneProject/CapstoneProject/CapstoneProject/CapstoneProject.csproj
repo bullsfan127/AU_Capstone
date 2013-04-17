@@ -132,6 +132,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Menus\MainMenu.cs" />
+    <Compile Include="Menus\MainSaveKeys.cs" />
+    <Compile Include="MainSettings.cs" />
     <Compile Include="Menus\PauseMenu.cs" />
     <Compile Include="Menus\MainButton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

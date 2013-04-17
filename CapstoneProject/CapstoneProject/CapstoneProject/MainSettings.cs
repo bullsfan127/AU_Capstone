@@ -16,13 +16,14 @@ namespace CapstoneProject
     /// <summary>
     /// This is a game component that implements IUpdateable.
     /// </summary>
-    public class Settings
+    public class MainSettings 
     {
-        MoveButton rightButton;
+
+     MoveButton rightButton;
         MoveButton leftButton;
         MoveButton upButton;
         MainButton mainButton;
-        SaveKeys saveKeys;
+        MainSaveKeys msaveKeys;
         GraphicsDeviceManager graphics;
         ContentManager content;
         Label rightLabel;
@@ -39,7 +40,7 @@ namespace CapstoneProject
         String text2 = "Click on the Button that you want to change - Example(MoveRight)";
         String text3 = "Then press the key on the keyboard that you want your new control to be - Example(D).";
 
-        public Settings(GraphicsDeviceManager _graphics, ContentManager _content)
+       public MainSettings(GraphicsDeviceManager _graphics, ContentManager _content)
         {
             graphics = _graphics;
             content = _content;
@@ -65,7 +66,7 @@ namespace CapstoneProject
             leftButton.Update(gameTime);
             upButton.Update(gameTime);
             mainButton.Update(gameTime);
-            saveKeys.Update(gameTime);
+            msaveKeys.Update(gameTime);
 
             //update panels
             rPanel.Update(gameTime);
@@ -81,7 +82,7 @@ namespace CapstoneProject
             leftButton.Draw(gameTime, spriteBatch);
             upButton.Draw(gameTime, spriteBatch);
             mainButton.Draw(gameTime, spriteBatch);
-            saveKeys.Draw(gameTime, spriteBatch);
+            msaveKeys.Draw(gameTime, spriteBatch);
 
             //Change Label text
             rightLabel.Text = Controls.Right.ToString();
@@ -118,7 +119,7 @@ namespace CapstoneProject
             mainButton = new MainButton(new Vector2(300, 500), mainTexture, 3);
 
             Texture2D saveTexture = content.Load<Texture2D>("menuButtons/SaveKeys");
-            saveKeys = new SaveKeys(new Vector2(150, 500), saveTexture, 4);
+            msaveKeys = new MainSaveKeys(new Vector2(150, 500), saveTexture, 4);
 
             Texture2D rightTexture = content.Load<Texture2D>("menuButtons/MoveRight");
             rightButton = new MoveButton(new Vector2(150, 100), rightTexture, 0);
