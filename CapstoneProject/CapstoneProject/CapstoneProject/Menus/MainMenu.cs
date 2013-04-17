@@ -247,7 +247,7 @@ namespace MainMenu
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PLAY;
                     break;
                 case SETTINGS_BUTTON_INDEX:
-                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.SETTINGS;
+                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.MAINSETTINGS;
                     break;
                 case EXIT_BUTTON_INDEX:
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.EXIT;
