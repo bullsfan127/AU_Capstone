@@ -44,6 +44,9 @@ namespace CapstoneProject
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Coin coin = new Coin();
+        Potion potion = new Potion();
+        GroundMonster groundMonster = new GroundMonster();
+        FlyingMonster flyingMonster = new FlyingMonster();
         Settings settings;
 
         SoundManager soundManager;
@@ -66,7 +69,8 @@ namespace CapstoneProject
         //Health Bar
         HealthBar healthBar;
 
-        //Map
+        ScoreDisplay scoreDisplay;
+
         Map gameMap;
 
 #if DEBUG
@@ -105,10 +109,11 @@ namespace CapstoneProject
         {
             menu.Initialize(this.Window);
             pauseMenu.Initialize(this.Window);
+            scoreDisplay = new ScoreDisplay(graphics);
 
             IsMouseVisible = true;
 
-            player = new Player();
+            player = new Player(this.Content);
             gameMap = new Map();
 
 #if !LOAD_FROM_FILE
@@ -170,6 +175,7 @@ namespace CapstoneProject
 #if DEBUG
             //#FPS_COUNTER
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
+            scoreDisplay.loadFont(this.Content.Load<SpriteFont>("FPS"));
             Terminal.Init(this, spriteBatch, this.Content.Load<SpriteFont>("FPS"), graphics.GraphicsDevice);
             Terminal.SetSkin(TerminalThemeType.FIRE);
 
@@ -182,14 +188,25 @@ namespace CapstoneProject
             c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
             c.Name = "Tiles//tileF";
 
+
             // TODO: use this.Content to load your game content here
 #endif
 
-            backgroundTexture = Content.Load<Texture2D>("background");
-            Texture2D coinTexture = Content.Load<Texture2D>("Items/Coin");
-            coin.Initialize(coinTexture, new Vector2(19, 275));
-            Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
+            // Texture2D playerTexture = Content.Load<Texture2D>("shitty/FatJoe");
+            Texture2D playerTexture = Content.Load<Texture2D>("shitty/FatJoe");
+
             player.Initialize(playerTexture, new Vector2(0, 0));
+            backgroundTexture = Content.Load<Texture2D>("background");
+
+            Texture2D coinTexture = Content.Load<Texture2D>("items/Coin");
+            Texture2D potionTexture = Content.Load<Texture2D>("items/Potion");
+            Texture2D groundMonsterTexture = Content.Load<Texture2D>("Monsters/Zombies");
+            Texture2D flyingMonsterTexture = Content.Load<Texture2D>("Monsters/Birds");
+            coin.Initialize(coinTexture, new Vector2(19, 19));
+            potion.Initialize(potionTexture, new Vector2(83, 83));
+            groundMonster.Initialize(groundMonsterTexture, new Vector2(250, 250));
+            flyingMonster.Initialize(flyingMonsterTexture, new Vector2(150, 150));
+            scoreDisplay.loadFont(this.Content.Load<SpriteFont>("FPS"));
         }
 
         /// <summary>
@@ -220,12 +237,12 @@ namespace CapstoneProject
                     settings.Update(gameTime);
                     break;
                 case GAMESTATE.NEWGAME:
-                    gameMap = gameMap.LoadMap("map.xml", this.Content);
-                    player = null;
-                    player = new Player();
-                    Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
-                    player.Initialize(playerTexture, new Vector2(0, 0));
-                    gameMap.Player = player;
+                    //gameMap = gameMap.LoadMap("map.xml", this.Content);
+                    //player = null;
+                    //player = new Player(this.Content);
+                    //Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
+                    //player.Initialize(playerTexture, new Vector2(0, 0));
+                    //gameMap.Player = player;
                     gameState = GAMESTATE.PLAY;
                     break;
                 case GAMESTATE.CONTINUE:
@@ -279,7 +296,12 @@ namespace CapstoneProject
                     //}
 
                     player.Update(gameTime, gameMap);
+                    groundMonster.Update(gameTime);
+                    flyingMonster.Update(gameTime);
                     healthBar.Update(gameTime, player);
+                    scoreDisplay.Update(player.getLevelScore());
+                    // TODO: Add your update logic here
+
                     break;
             }
 
@@ -312,6 +334,10 @@ namespace CapstoneProject
                     healthBar.Draw(gameTime, spriteBatch);
                     // TODO: Loop through all items instead of calling each one individually
                     coin.Draw(spriteBatch, gameTime);
+                    potion.Draw(spriteBatch, gameTime);
+                    groundMonster.Draw(spriteBatch, gameTime);
+                    flyingMonster.Draw(spriteBatch, gameTime);
+                    scoreDisplay.Draw(spriteBatch, gameTime);
                     break;
                 case GAMESTATE.PAUSE:
                     GraphicsDevice.Clear(Color.Gray);

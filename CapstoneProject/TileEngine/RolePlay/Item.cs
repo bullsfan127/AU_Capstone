@@ -85,6 +85,13 @@ namespace TileEngine
             set { _armor = value; }
         }
 
+        private float _scale;
+        public float Scale
+        {
+            get { return _scale; }
+            set { _scale = value; }
+        }
+
         // The image of the item
         private Texture2D SpriteStrip;
 
@@ -101,7 +108,7 @@ namespace TileEngine
             // SpriteStip is image
             // Position is x,y vector of image location
             // 0.4f is scaling of image
-            spriteBatch.Draw(SpriteStrip, Position, null, Color.White, 0.0f, Vector2.Zero, 0.4f, SpriteEffects.None, 0.0f);
+            spriteBatch.Draw(SpriteStrip, Position, null, Color.White, 0.0f, Vector2.Zero, _scale, SpriteEffects.None, 0.0f);
             spriteBatch.End();
         }
 

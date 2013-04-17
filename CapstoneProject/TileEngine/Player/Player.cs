@@ -38,6 +38,8 @@ namespace TileEngine
         // The score for the entire game
         private int _totalScore = 0;
 
+        
+
         public Microsoft.Xna.Framework.Vector2 Movement
         {
             get { return _movement; }
@@ -86,11 +88,19 @@ namespace TileEngine
             set { _totalScore = value; }
         }
 
+        private Texture2D _swordTexture;
+        private Texture2D _rangedTexture;
+
+        private int _weaponDirection = 1;
+
         /// <summary>
         /// Default constructor for player
         /// </summary>
-        public Player()
+        public Player(ContentManager Content)
         {
+            _swordTexture = Content.Load<Texture2D>("Items/Sword");
+            _rangedTexture = Content.Load<Texture2D>("Items/Boomerang");
+            _weapon = new Sword();
         }
 
         /// <summary>
@@ -112,6 +122,9 @@ namespace TileEngine
             PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, true);
             // Set the player to be active
             PlayerAnimation.Active = true;
+
+            //Texture2D swordTexture = Content.Load<Texture2D>("Items/Sword");
+            _weapon.Initialize(_swordTexture, position);
         }
 
         /// <summary>
@@ -133,6 +146,7 @@ namespace TileEngine
             _movement.X = 0;
 
             PlayerAnimation.state = Animation.Animate.IDLE;
+            _weaponDirection = 1;
 
             // Trying to move Left or Right
             if (Keyboard.GetState().IsKeyDown(Controls.Left) || (GamePad.GetState(PlayerIndex.One).DPad.Left == ButtonState.Pressed))
@@ -140,6 +154,7 @@ namespace TileEngine
                 PlayerAnimation.state = Animation.Animate.LMOVING;
 
                 _movement.X = -5;
+                _weaponDirection = -1;
             }
 
             else if (Keyboard.GetState().IsKeyDown(Controls.Right) || (GamePad.GetState(PlayerIndex.One).DPad.Right == ButtonState.Pressed))
@@ -197,6 +212,8 @@ namespace TileEngine
             OY = _offset.Y;
 
             map.Update(gameTime, _offset);
+            _weapon.setDirection(_weaponDirection);
+            _weapon.Update(gameTime, Position);
         }
 
         /// <summary>
@@ -208,6 +225,7 @@ namespace TileEngine
         {
             //going to need to check whether the
             PlayerAnimation.Draw(spriteBatch);
+            _weapon.Draw(spriteBatch, gameTime);
 
             base.Draw(spriteBatch, gameTime);
         }

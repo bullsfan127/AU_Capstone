@@ -15,7 +15,7 @@ namespace TileEngine
     public class Weapon : Avatar
     {
         // Animation representing the weapon
-        private Animation _weaponAnimation;
+        //private Animation _weaponAnimation;
 
         // Total damage the weapon can do
         private int _maxDamage;
@@ -49,31 +49,58 @@ namespace TileEngine
             set { _spriteFrame = value; }
         }
 
-
-        public void Initialize(Texture2D spriteStrip, Vector2 position)
+        private float _scale;
+        public float Scale
         {
-            _weaponAnimation = new Animation();
+            get { return _scale; }
+            set { _scale = value; }
+        }
+
+        // The image of the item
+        private Texture2D SpriteStrip;
+
+        private int _cropStart = 64;
+        private int _cropPos = 50;
+
+
+        public override void Initialize(Texture2D spriteStrip, Vector2 position)
+        {
+            //_weaponAnimation = new Animation();
 
             // Set starting position of the weapon
             Position = position;
+            SpriteStrip = spriteStrip;
 
             // TODO: Need to set correct image/location
-            _weaponAnimation.Initialize(spriteStrip, position, _spriteWidth, _spriteHeight, _spriteFrame, 250, Color.White, 1.0f, true);
+           // _weaponAnimation.Initialize(spriteStrip, position, _spriteWidth, _spriteHeight, _spriteFrame, 250, Color.White, 1.0f, true);
         }
 
-        public override void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, Vector2 Position)
         {
-            _weaponAnimation.Position = Position;
+            float x = Position.X;
+            float y = Position.Y;
+            Vector2 weaponPosition = new Vector2(x+_cropPos, y+45);
+            this.Position = weaponPosition;
+            //_weaponAnimation.Position = weaponPosition;
             base.Update(gameTime);
-            _weaponAnimation.Update(gameTime);
+            //_weaponAnimation.Update(gameTime);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             //going to need to check whether the
-            _weaponAnimation.Draw(spriteBatch);
+            //_weaponAnimation.Draw(spriteBatch);
 
-            base.Draw(spriteBatch, gameTime);
+            //base.Draw(spriteBatch, gameTime);
+
+
+            spriteBatch.Begin();
+            // SpriteStip is image
+            // Position is x,y vector of image location
+            // 0.4f is scaling of image
+            //spriteBatch.Draw(SpriteStrip, Position, null, Color.White, 0.0f, Vector2.Zero, _scale, SpriteEffects.None, 0.0f);
+            spriteBatch.Draw(SpriteStrip, Position, new Rectangle(_cropStart, 0, 64, 64), Color.White, 0.0f, Vector2.Zero, _scale, SpriteEffects.None, 0.0f);
+            spriteBatch.End();
         }
 
         /// <summary>
@@ -83,6 +110,20 @@ namespace TileEngine
         public int getDamage()
         {
             return _maxDamage;
+        }
+
+        public void setDirection(int d)
+        {
+            if (d == 1)
+            {
+                _cropStart = 64;
+                _cropPos = 50;
+            }
+            else
+            {
+                _cropStart = 0;
+                _cropPos = -50;
+            }
         }
 
     }

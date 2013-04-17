@@ -18,6 +18,7 @@ namespace TileEngine
             SpriteFrame = 2;
 
             MaxDamage = 1;
+            Scale = 1.0f;
         }
     }
 }

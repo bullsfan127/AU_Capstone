@@ -15,9 +15,10 @@ namespace TileEngine
         {
             SpriteWidth = 64;
             SpriteHeight = 128;
-            SpriteFrame = 2;
+            SpriteFrame = 1;
 
             MaxDamage = 1;
+            Scale = 1.0f;
         }
     }
 }
