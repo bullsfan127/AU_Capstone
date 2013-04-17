@@ -220,26 +220,24 @@ namespace CapstoneProject
                     settings.Update(gameTime);
                     break;
                 case GAMESTATE.NEWGAME:
-
-                    gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/map.xml", this.Content);
+                    gameMap = gameMap.LoadMap("map.xml", this.Content);
                     player = null;
                     player = new Player();
                     Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
                     player.Initialize(playerTexture, new Vector2(0, 0));
                     gameMap.Player = player;
-                    gameMap.MapItems.Add(coin);
                     gameState = GAMESTATE.PLAY;
                     break;
                 case GAMESTATE.CONTINUE:
                     try
                     {
-                        gameMap = gameMap.LoadMap("../../../Saves/SavedGame.xml", this.Content);
+                        gameMap = gameMap.LoadMap("SavedGame.xml", this.Content);
                         gameMap.LoadPlayer(this.Content);
                         player = (Player)gameMap.Player;
                     }
                     catch (Exception e)
                     {
-                        gameMap = gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/map.xml", this.Content);
+                        gameMap = gameMap = gameMap.LoadMap("map.xml", this.Content);
                         gameMap.Player = player;
                     }
                     gameState = GAMESTATE.PLAY;
@@ -258,27 +256,27 @@ namespace CapstoneProject
                     if (keystate.IsKeyDown(Keys.S))
                     {
                         //  save map
-                        gameMap.saveMap("../../../Saves/SavedGame.xml");
+                        gameMap.saveMap("SavedGame.xml");
                     }
 
-                    if (keystate.IsKeyDown(Keys.L))
-                    {
-                        gameMap = null;
-                        gameMap = new Map();
-                        gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/test.xml", this.Content);
-                        gameMap.Player = null;
-                        gameMap.Player = player;
-                    }
+                    //if (keystate.IsKeyDown(Keys.L))
+                    //{
+                    //    gameMap = null;
+                    //    gameMap = new Map();
+                    //    gameMap = gameMap.LoadMap("../../../../../MapEditor/MapEditor/SavedMaps/test.xml", this.Content);
+                    //    gameMap.Player = null;
+                    //    gameMap.Player = player;
+                    //}
 
                     if (keystate.IsKeyDown(Keys.F))
                     {
                         graphics.ToggleFullScreen();
                     }
 
-                    if (keystate.IsKeyDown(Keys.Up) && player.Position.Y == 372)
-                    {
-                        soundManager.PlaySound(5);
-                    }
+                    //if (keystate.IsKeyDown(Keys.Up) && player.Position.Y == 372)
+                    //{
+                    //    soundManager.PlaySound(5);
+                    //}
 
                     player.Update(gameTime, gameMap);
                     healthBar.Update(gameTime, player);
