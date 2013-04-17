@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapEditorContent", "MapEdit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{71C13EE1-E00F-46B7-BE5E-0B1C314E1CDA}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FatJoe", "Setup1\Setup1.vdproj", "{A06F5528-18D5-4202-84F9-2A8381237353}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "setup", "Setup1\Setup1.vdproj", "{A06F5528-18D5-4202-84F9-2A8381237353}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

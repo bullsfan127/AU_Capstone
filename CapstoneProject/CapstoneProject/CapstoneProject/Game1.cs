@@ -46,7 +46,7 @@ namespace CapstoneProject
         Coin coin = new Coin();
         Settings settings;
 
-          SoundManager soundManager;
+        SoundManager soundManager;
 
 #if !LOAD_FROM_FILE
         Tile a;
@@ -162,7 +162,7 @@ namespace CapstoneProject
             pauseMenu.LoadContent();
             healthBar.LoadContent();
             settings.LoadContent();
-           // Controls.Load();
+            Controls.Load();
 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -220,14 +220,12 @@ namespace CapstoneProject
                     settings.Update(gameTime);
                     break;
                 case GAMESTATE.NEWGAME:
-
                     gameMap = gameMap.LoadMap("map.xml", this.Content);
                     player = null;
                     player = new Player();
                     Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
                     player.Initialize(playerTexture, new Vector2(0, 0));
                     gameMap.Player = player;
-                    gameMap.MapItems.Add(coin);
                     gameState = GAMESTATE.PLAY;
                     break;
                 case GAMESTATE.CONTINUE:
@@ -291,7 +289,7 @@ namespace CapstoneProject
             counter.Update(gameTime);
             Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
 #endif
-             soundManager.PlaySong();
+            soundManager.PlaySong();
             base.Update(gameTime);
         }
 

@@ -91,7 +91,7 @@ namespace CustomSerialization
                 complexSerializer = new SharpSerializer();
                 try
                 {
-                    _classType = (T)complexSerializer.Deserialize(fileName);
+                    _classType = (T)complexSerializer.Deserialize("XMLfiles/" + fileName);
                 }
                 catch (Exception e)
                 {
@@ -138,7 +138,7 @@ namespace CustomSerialization
             if (_complex)
             {
                 complexSerializer = new SharpSerializer();
-                complexSerializer.Serialize(classType, this._fileName);
+                complexSerializer.Serialize(classType, "XMLfiles/" + this._fileName);
                 _classType = classType;
                 //try
                 //{

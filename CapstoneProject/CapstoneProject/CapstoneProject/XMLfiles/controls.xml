@@ -1,0 +1,7 @@
+﻿<Complex name="Root" type="TileEngine.SerializeControls, TileEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+  <Properties>
+    <Simple name="Right" value="Right" />
+    <Simple name="Left" value="Left" />
+    <Simple name="Up" value="Up" />
+  </Properties>
+</Complex>

@@ -1,3 +1,5 @@
+#define INSTALL
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,19 +30,22 @@ namespace CapstoneProject
         GAMESTATE lastState = GAMESTATE.PAUSE;
         KeyboardState keystate = Keyboard.GetState();
         SoundEffect sound;
-#if DEBUG
+
+#if INSTALL
+
+        private string[] songs = Directory.GetFiles(@"Content\Songs", "*.xnb")
+                                            .Select(path => Path.GetFileNameWithoutExtension(path))
+                                            .ToArray();
+
+        private string[] sounds = Directory.GetFiles(@"Content\Sounds", "*.xnb")
+                                     .Select(path => Path.GetFileNameWithoutExtension(path))
+                                     .ToArray();
+
+#else
         private string[] songs = Directory.GetFiles(@"..\..\..\..\CapstoneProjectContent\Songs", "*.wav")
                                      .Select(path => Path.GetFileNameWithoutExtension(path))
                                      .ToArray();
         private string[] sounds = Directory.GetFiles(@"..\..\..\..\CapstoneProjectContent\Sounds", "*.wav")
-                                     .Select(path => Path.GetFileNameWithoutExtension(path))
-                                     .ToArray();
-#else
-
- private string[] songs = Directory.GetFiles(@"Content\Songs", "*.xnb")
-                                     .Select(path => Path.GetFileNameWithoutExtension(path))
-                                     .ToArray();
-        private string[] sounds = Directory.GetFiles(@"Content\Sounds", "*.xnb")
                                      .Select(path => Path.GetFileNameWithoutExtension(path))
                                      .ToArray();
 #endif
@@ -49,8 +54,6 @@ namespace CapstoneProject
         {
             // Pass in content manager
             _content = content;
-
-     
         }
 
         public void PlaySong()
