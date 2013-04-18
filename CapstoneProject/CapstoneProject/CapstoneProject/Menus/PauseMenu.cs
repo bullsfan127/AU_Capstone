@@ -119,9 +119,11 @@ namespace PauseMenu
             update_buttons();
         }
 
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch,Texture2D pauseBackground, Rectangle pauseMainFrame)
         {
             spriteBatch.Begin();
+            spriteBatch.Draw(pauseBackground, pauseMainFrame, Color.White);
+
             for (int i = 0; i < NUMBER_OF_BUTTONS; i++)
                 spriteBatch.Draw(button_texture[i], button_rectangle[i], button_color[i]);
             spriteBatch.End();

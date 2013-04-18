@@ -39,6 +39,7 @@ namespace CapstoneProject
         public static GAMESTATE gameState = GAMESTATE.MAINMENU;
 
         Texture2D backgroundTexture;
+        Texture2D pauseBackground;
 
         MainMenu.MainMenu menu;
         PauseMenu.PauseMenu pauseMenu;
@@ -68,6 +69,7 @@ namespace CapstoneProject
         Player player;
 
         Rectangle mainFrame;
+        Rectangle pauseMainFrame;
 
         //Health Bar
         HealthBar healthBar;
@@ -90,11 +92,12 @@ namespace CapstoneProject
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferredBackBufferWidth = 600;
             menu = new MainMenu.MainMenu(graphics, this.Content);
-
+            
             pauseMenu = new PauseMenu.PauseMenu(graphics, this.Content);
             healthBar = new HealthBar(graphics, this.Content);
             settings = new Settings(graphics, this.Content);
@@ -177,6 +180,7 @@ namespace CapstoneProject
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             mainFrame = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+            pauseMainFrame = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
 #if DEBUG
             //#FPS_COUNTER
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
@@ -199,10 +203,9 @@ namespace CapstoneProject
 
             // Texture2D playerTexture = Content.Load<Texture2D>("shitty/FatJoe");
             Texture2D playerTexture = Content.Load<Texture2D>("shitty/FatJoe");
-
             player.Initialize(playerTexture, new Vector2(0, 0));
             backgroundTexture = Content.Load<Texture2D>("background");
-
+            pauseBackground = Content.Load<Texture2D>("PauseBackground");
             Texture2D coinTexture = Content.Load<Texture2D>("items/Coin");
             Texture2D potionTexture = Content.Load<Texture2D>("items/Potion");
             Texture2D groundMonsterTexture = Content.Load<Texture2D>("Monsters/Zombies");
@@ -349,7 +352,7 @@ namespace CapstoneProject
                     break;
                 case GAMESTATE.PAUSE:
                     GraphicsDevice.Clear(Color.Gray);
-                    pauseMenu.Draw(gameTime, spriteBatch);
+                    pauseMenu.Draw(gameTime, spriteBatch,this.pauseBackground, pauseMainFrame);
                     break;
                 case GAMESTATE.SETTINGS:
                     GraphicsDevice.Clear(Color.Black);

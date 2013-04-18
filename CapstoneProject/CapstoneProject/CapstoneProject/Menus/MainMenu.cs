@@ -40,6 +40,7 @@ namespace MainMenu
         Texture2D[] button_texture = new Texture2D[NUMBER_OF_BUTTONS];
         double[] button_timer = new double[NUMBER_OF_BUTTONS];
         ContentManager Content;
+        
 
         //mouse pressed and mouse just pressed
         bool mpressed, prev_mpressed = false;
@@ -146,7 +147,7 @@ namespace MainMenu
 
             spriteBatch.Begin();
             spriteBatch.Draw(background, mainFrame, Color.White);
-
+         
             for (int i = 0; i < NUMBER_OF_BUTTONS; i++)
                 spriteBatch.Draw(button_texture[i], button_rectangle[i], button_color[i]);
             spriteBatch.End();

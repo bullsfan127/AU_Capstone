@@ -2,11 +2,6 @@ Content\FPS.xnb
 Content\Tiles\tile.xnb
 Content\Tiles\tileM.xnb
 Content\Tiles\tileF.xnb
-<<<<<<< HEAD
-=======
-Content\Tiles\FinalGrid.xnb
-Content\AdvHealth.xnb
->>>>>>> SteveK
 Content\shitty\shitty.xnb
 Content\shitty\shitty2.0.xnb
 Content\shitty\shitty2.0test.xnb
@@ -27,10 +22,11 @@ Content\menuButtons\MoveLeft.xnb
 Content\menuButtons\JumpUp.xnb
 Content\Panel540X540.xnb
 Content\menuButtons\SaveKeys.xnb
-<<<<<<< HEAD
 Content\background.xnb
-=======
->>>>>>> SteveK
+Content\Monsters\Zombies.xnb
+Content\Monsters\Birds.xnb
+Content\Items\Sword.xnb
+Content\shitty\FatJoe.xnb
 Content\Songs\DST-DarkestKnight.xnb
 Content\Songs\DST-TimeToDream.xnb
 Content\Sounds\Jump.xnb
@@ -44,13 +40,7 @@ Content\Sounds\Kill.xnb
 Content\Songs\DST-Aurora.xnb
 Content\Songs\DST-Glory.xnb
 Content\Songs\DST-Serade.xnb
-<<<<<<< HEAD
-=======
-Content\Monsters\Zombies.xnb
-Content\Monsters\Birds.xnb
-Content\Items\Sword.xnb
-Content\shitty\FatJoe.xnb
->>>>>>> SteveK
+Content\PauseBackground.xnb
 Content\Songs\DST-DarkestKnight.wma
 Content\Songs\DST-TimeToDream.wma
 Content\Songs\DST-Aurora.wma
