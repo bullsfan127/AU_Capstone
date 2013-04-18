@@ -22,6 +22,7 @@ namespace CapstoneProject
         const int RIGHTBUTTON = 0;
         const int LEFTBUTTON = 1;
         const int UPBUTTON = 2;
+        const int ATTACKBUTTON = 3;
         
        
 
@@ -55,6 +56,10 @@ namespace CapstoneProject
                         break;
                     case UPBUTTON:
                         Controls.Up = _key[0];
+                        Color = Color.White;
+                        break;
+                    case ATTACKBUTTON:
+                        Controls.Attack = _key[0];
                         Color = Color.White;
                         break;
                     default:

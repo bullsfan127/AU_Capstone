@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-
+using TileEngine;
 namespace PauseMenu
 {
     /// <summary>
@@ -17,6 +17,7 @@ namespace PauseMenu
     public class PauseMenu
     {
         GraphicsDeviceManager graphics;
+     
 
         private enum BState
         {
@@ -26,12 +27,14 @@ namespace PauseMenu
             DOWN
         }
 
-        const int NUMBER_OF_BUTTONS = 4,
+        const int NUMBER_OF_BUTTONS = 5,
 
             RESUME_BUTTON_INDEX = 0,
             SETTINGS_BUTTON_INDEX = 1,
-            MAINMENU_BUTTON_INDEX = 2,
-            EXIT_BUTTON_INDEX = 3,
+            SAVEGAME_BUTTON_INDEX = 2,
+            MAINMENU_BUTTON_INDEX = 3,
+            EXIT_BUTTON_INDEX = 4,
+            
             BUTTON_HEIGHT = 40,
             BUTTON_WIDTH = 88;
         Color background_color;
@@ -89,6 +92,8 @@ namespace PauseMenu
                Content.Load<Texture2D>("menuButtons/Resume");
             button_texture[SETTINGS_BUTTON_INDEX] =
            Content.Load<Texture2D>("menuButtons/Settings");
+            button_texture[SAVEGAME_BUTTON_INDEX] =
+              Content.Load<Texture2D>("menuButtons/SaveGame");
             button_texture[MAINMENU_BUTTON_INDEX] =
                 Content.Load<Texture2D>("menuButtons/MainMenu");
             button_texture[EXIT_BUTTON_INDEX] =
@@ -224,6 +229,9 @@ namespace PauseMenu
                     break;
                 case SETTINGS_BUTTON_INDEX:
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.SETTINGS;
+                    break;
+                case SAVEGAME_BUTTON_INDEX:
+                   
                     break;
                 case MAINMENU_BUTTON_INDEX:
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.MAINMENU;
