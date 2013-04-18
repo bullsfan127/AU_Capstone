@@ -23,8 +23,16 @@ namespace TileEngine
             set { _controls = value; }
         }
 
+
+        
         //Current movement speeds for player
         private Vector2 _movement;
+
+        //Players collision Rectangle
+        private Rectangle PlayerRect;
+
+        //Player is on the ground and can jump
+        private bool Jump;
 
         // State of the player
         private bool _active;
@@ -116,7 +124,8 @@ namespace TileEngine
 
             // Set starting position of the player
             Position = position;
-
+            //make player rectangle 
+            PlayerRect = new Rectangle((int)position.X, (int)position.Y, 64, 128);
             //player Animation initialize
             PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, true);
             // Set the player to be active
@@ -159,9 +168,10 @@ namespace TileEngine
             }
 
             //Keeping track of jumping/falling speed
-            if (Keyboard.GetState().IsKeyDown(Controls.Up) && Position.Y == 372)
+            if (Keyboard.GetState().IsKeyDown(Controls.Up) && Jump)
             {
                 _movement.Y += -20;
+                Jump = false;
             }
 
             _movement.Y += 1;
@@ -176,11 +186,56 @@ namespace TileEngine
                 Position = new Vector2(Position.X, 372);
                 _movement.Y = 0;
             }
+
+
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Vector2 temp = new Vector2((Position.X + Offset.X + Movement.X) / 64 + i, (Position.Y + Offset.Y + Movement.X) / 64 + j);
+                    if (map.CollisionLayer.getItemAt(temp).Intersects(PlayerRect))
+                    {
+                        if (PlayerRect.Left < map.CollisionLayer.getItemAt(temp).Right && _movement.X < 0 && PlayerRect.Top - map.CollisionLayer.getItemAt(temp).Top < PlayerRect.Height)
+                        {
+                            PlayerRect.X = map.CollisionLayer.getItemAt(temp).Right;
+                            Position = new Vector2(PlayerRect.X, Position.Y);
+
+                            _movement.X = 0;
+                        }
+                        else if (PlayerRect.Right > map.CollisionLayer.getItemAt(temp).Left && _movement.X > 0 && PlayerRect.Top - map.CollisionLayer.getItemAt(temp).Top < PlayerRect.Height)
+                        {
+                            PlayerRect.X = map.CollisionLayer.getItemAt(temp).Right - PlayerRect.Width;
+                            Position = new Vector2(PlayerRect.X, Position.Y);
+
+                            _movement.X = 0;
+                        }
+                        if (PlayerRect.Top > map.CollisionLayer.getItemAt(temp).Bottom && _movement.Y < 0 &&
+                            (PlayerRect.Left - map.CollisionLayer.getItemAt(temp).Right < PlayerRect.Width || PlayerRect.Right - map.CollisionLayer.getItemAt(temp).Left < PlayerRect.Width))
+                        {
+                            PlayerRect.Y = map.CollisionLayer.getItemAt(temp).Bottom;
+                            Position = new Vector2(Position.X, PlayerRect.Y);
+
+                            _movement.Y = 0;
+                        }
+                        else if (PlayerRect.Bottom < map.CollisionLayer.getItemAt(temp).Top && _movement.Y > 0 &&
+                            (PlayerRect.Left - map.CollisionLayer.getItemAt(temp).Right < PlayerRect.Width || PlayerRect.Right - map.CollisionLayer.getItemAt(temp).Left < PlayerRect.Width))
+                        {
+                            PlayerRect.Y = map.CollisionLayer.getItemAt(temp).Top + PlayerRect.Height;
+                            Position = new Vector2(Position.X, PlayerRect.Y);
+
+                            _movement.Y = 0;
+                            Jump = true;
+                        }
+
+                    }
+                }
+            }
             //establish left and right bound for "dead zone"
             if (Position.X + _movement.X > 500)
             {
                 _offset.X += Position.X + _movement.X - 500;
-                Position = new Vector2(500, Position.Y + _movement.Y);
+                Position = new Vector2(500, Position.Y+_movement.Y);
+
             }
             else if (Position.X + _movement.X < 100 && _offset.X > 0)
             {
@@ -188,9 +243,26 @@ namespace TileEngine
                 Position = new Vector2(100, Position.Y + _movement.Y);
             }
             else
+                Position = new Vector2(Position.X + _movement.X, Position.Y);
+
+            //establish upper and lower bound for dead zone
+            if (Position.Y + _movement.Y < 100 && _offset.Y > 0)
             {
-                Position += _movement;
+                _offset.Y += Position.Y + _movement.Y - 100;
+                Position = new Vector2(Position.X, 100);
             }
+            else if (Position.Y + _movement.Y > 500)
+            {
+                _offset.Y += Position.Y + _movement.Y - 500;
+                Position = new Vector2(Position.X, 500);
+            }
+            else
+                Position = new Vector2(Position.X, Position.Y + _movement.Y);
+
+            //update rectangle position based on player position
+            PlayerRect.X = (int)Position.X;
+            PlayerRect.Y = (int)Position.Y;
+
             if (Position.X < 0)
             {
                 Position = new Vector2(0, Position.Y);
