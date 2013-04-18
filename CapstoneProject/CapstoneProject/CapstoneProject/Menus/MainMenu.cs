@@ -243,7 +243,7 @@ namespace MainMenu
             switch (i)
             {
                 case NEWGAME_BUTTON_INDEX:
-                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.NEWGAME;
+                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.STORY;
                     break;
                 case CONTINUE_BUTTON_INDEX:
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.CONTINUE;

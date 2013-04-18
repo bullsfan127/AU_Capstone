@@ -24,7 +24,7 @@ using TileEngine;
 
 namespace CapstoneProject
 {
-    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, SETTINGS = 4, NEWGAME = 5, CONTINUE = 6, MAINSETTINGS = 7 };
+    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, SETTINGS = 4, NEWGAME = 5, CONTINUE = 6, MAINSETTINGS = 7, STORY = 8 };
 
     /// <summary>
     /// This is the main type for your game
@@ -38,7 +38,7 @@ namespace CapstoneProject
         public static GAMESTATE gameState = GAMESTATE.MAINMENU;
 
         Texture2D backgroundTexture;
-
+        Texture2D story;
         MainMenu.MainMenu menu;
         PauseMenu.PauseMenu pauseMenu;
         GraphicsDeviceManager graphics;
@@ -204,6 +204,8 @@ namespace CapstoneProject
             Texture2D potionTexture = Content.Load<Texture2D>("items/Potion");
             Texture2D groundMonsterTexture = Content.Load<Texture2D>("Monsters/Zombies");
             Texture2D flyingMonsterTexture = Content.Load<Texture2D>("Monsters/Birds");
+
+            story = this.Content.Load<Texture2D>("story");
             coin.Initialize(coinTexture, new Vector2(19, 19));
             potion.Initialize(potionTexture, new Vector2(83, 83));
             groundMonster.Initialize(groundMonsterTexture, new Vector2(250, 250));
@@ -338,6 +340,13 @@ namespace CapstoneProject
                     GraphicsDevice.Clear(Color.Black);
 
                     menu.Draw(gameTime, spriteBatch, this.backgroundTexture, mainFrame);
+                    break;
+                case GAMESTATE.STORY:
+                    spriteBatch.Begin();
+                    spriteBatch.Draw(story, mainFrame, Color.White);
+                    if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                        gameState = GAMESTATE.NEWGAME;
+                    spriteBatch.End();
                     break;
                 case GAMESTATE.PLAY:
                     GraphicsDevice.Clear(Color.CornflowerBlue);
