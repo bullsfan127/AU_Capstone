@@ -1,4 +1,4 @@
-#define INSTALL
+//#define INSTALL
 
 using System;
 using System.Collections.Generic;
@@ -42,12 +42,15 @@ namespace CapstoneProject
                                      .ToArray();
 
 #else
+
         private string[] songs = Directory.GetFiles(@"..\..\..\..\CapstoneProjectContent\Songs", "*.wav")
                                      .Select(path => Path.GetFileNameWithoutExtension(path))
                                      .ToArray();
+
         private string[] sounds = Directory.GetFiles(@"..\..\..\..\CapstoneProjectContent\Sounds", "*.wav")
                                      .Select(path => Path.GetFileNameWithoutExtension(path))
                                      .ToArray();
+
 #endif
 
         public SoundManager(Game game, ContentManager content)

@@ -26,7 +26,6 @@ namespace CapstoneProject
 {
     public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, SETTINGS = 4, NEWGAME = 5, CONTINUE = 6, MAINSETTINGS = 7 };
 
-
     /// <summary>
     /// This is the main type for your game
     /// </summary>
@@ -50,7 +49,6 @@ namespace CapstoneProject
         FlyingMonster flyingMonster = new FlyingMonster();
         Settings settings;
         MainSettings msettings;
-       
 
         SoundManager soundManager;
 
@@ -193,7 +191,6 @@ namespace CapstoneProject
             c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
             c.Name = "Tiles//tileF";
 
-
             // TODO: use this.Content to load your game content here
 #endif
 
@@ -242,12 +239,13 @@ namespace CapstoneProject
                     settings.Update(gameTime);
                     break;
                 case GAMESTATE.NEWGAME:
-                    //gameMap = gameMap.LoadMap("map.xml", this.Content);
+                    gameMap = gameMap.LoadMap("map.xml", this.Content);
                     //player = null;
                     //player = new Player(this.Content);
+
                     //Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
                     //player.Initialize(playerTexture, new Vector2(0, 0));
-                    //gameMap.Player = player;
+                    gameMap.Player = player;
                     gameState = GAMESTATE.PLAY;
                     break;
                 case GAMESTATE.CONTINUE:
@@ -284,6 +282,16 @@ namespace CapstoneProject
                         gameMap.saveMap("SavedGame.xml");
                     }
 
+                    #region
+
+                    if (keystate.IsKeyDown(Keys.S) && keystate.IsKeyDown(Keys.H) && keystate.IsKeyDown(Keys.I) && keystate.IsKeyDown(Keys.T))
+                    {
+                        Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
+                        player.Initialize(playerTexture, player.Position);
+                    }
+
+                    #endregion
+
                     //if (keystate.IsKeyDown(Keys.L))
                     //{
                     //    gameMap = null;
@@ -297,11 +305,6 @@ namespace CapstoneProject
                     {
                         graphics.ToggleFullScreen();
                     }
-
-                    //if (keystate.IsKeyDown(Keys.Up) && player.Position.Y == 372)
-                    //{
-                    //    soundManager.PlaySound(5);
-                    //}
 
                     player.Update(gameTime, gameMap);
                     groundMonster.Update(gameTime);
