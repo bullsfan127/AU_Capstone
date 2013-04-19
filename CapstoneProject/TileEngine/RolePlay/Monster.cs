@@ -15,7 +15,7 @@ namespace TileEngine
     public class Monster : Avatar
     {
         // Animation representing the monster
-        public Animation _monsterAnimation;
+        private Animation _monsterAnimation;
 
         // Current health
         private int _health;
@@ -79,7 +79,7 @@ namespace TileEngine
             _monsterAnimation.Active = true;
         }
 
-        public  void Update(GameTime gameTime,Vector2 player,Vector2 offset)
+        public override void Update(GameTime gameTime)
         {
             _monsterAnimation.Position = Position;
             _monsterAnimation.Update(gameTime);

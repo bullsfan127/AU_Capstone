@@ -299,8 +299,8 @@ namespace CapstoneProject
                     }
 
                     player.Update(gameTime, gameMap);
-                    groundMonster.Update(gameTime,player.Position,gameMap.offset);
-                    flyingMonster.Update(gameTime, player.Position, gameMap.offset);
+                    groundMonster.Update(gameTime);
+                    flyingMonster.Update(gameTime);
                     healthBar.Update(gameTime, player);
                     scoreDisplay.Update(player.getLevelScore());
                     #region
