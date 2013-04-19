@@ -19,6 +19,7 @@ namespace TileEngine
 
         // Total damage the weapon can do
         private int _maxDamage;
+
         public int MaxDamage
         {
             get { return _maxDamage; }
@@ -27,6 +28,7 @@ namespace TileEngine
 
         // Width of the full image
         private int _spriteWidth;
+
         public int SpriteWidth
         {
             get { return _spriteWidth; }
@@ -35,6 +37,7 @@ namespace TileEngine
 
         // Height of the full image
         private int _spriteHeight;
+
         public int SpriteHeight
         {
             get { return _spriteHeight; }
@@ -43,6 +46,7 @@ namespace TileEngine
 
         // Total number of frames of the image
         private int _spriteFrame;
+
         public int SpriteFrame
         {
             get { return _spriteFrame; }
@@ -50,6 +54,7 @@ namespace TileEngine
         }
 
         private float _scale;
+
         public float Scale
         {
             get { return _scale; }
@@ -62,7 +67,6 @@ namespace TileEngine
         private int _cropStart = 64;
         private int _cropPos = 50;
 
-
         public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             //_weaponAnimation = new Animation();
@@ -72,14 +76,14 @@ namespace TileEngine
             SpriteStrip = spriteStrip;
 
             // TODO: Need to set correct image/location
-           // _weaponAnimation.Initialize(spriteStrip, position, _spriteWidth, _spriteHeight, _spriteFrame, 250, Color.White, 1.0f, true);
+            // _weaponAnimation.Initialize(spriteStrip, position, _spriteWidth, _spriteHeight, _spriteFrame, 250, Color.White, 1.0f, true);
         }
 
         public void Update(GameTime gameTime, Vector2 Position)
         {
             float x = Position.X;
             float y = Position.Y;
-            Vector2 weaponPosition = new Vector2(x+_cropPos, y+25);
+            Vector2 weaponPosition = new Vector2(x + _cropPos, y + 25);
             this.Position = weaponPosition;
             //_weaponAnimation.Position = weaponPosition;
             base.Update(gameTime);
@@ -92,7 +96,6 @@ namespace TileEngine
             //_weaponAnimation.Draw(spriteBatch);
 
             //base.Draw(spriteBatch, gameTime);
-
 
             spriteBatch.Begin();
             // SpriteStip is image
@@ -125,6 +128,5 @@ namespace TileEngine
                 _cropPos = -47;
             }
         }
-
     }
 }

@@ -15,10 +15,11 @@ namespace TileEngine
     public class Monster : Avatar
     {
         // Animation representing the monster
-        private Animation _monsterAnimation;
+        public Animation _monsterAnimation;
 
         // Current health
         private int _health;
+
         public int Health
         {
             get { return _health; }
@@ -27,6 +28,7 @@ namespace TileEngine
 
         // Maximum health
         private int _maxHealth;
+
         public int MaxHealth
         {
             get { return _maxHealth; }
@@ -35,6 +37,7 @@ namespace TileEngine
 
         // Maximum damage
         private int _maxDamage;
+
         public int MaxDamage
         {
             get { return _maxDamage; }
@@ -43,6 +46,7 @@ namespace TileEngine
 
         // Total width of the image
         private int _spriteWidth;
+
         public int SpriteWidth
         {
             get { return _spriteWidth; }
@@ -51,6 +55,7 @@ namespace TileEngine
 
         // Total height of the image
         private int _spriteHeight;
+
         public int SpriteHeight
         {
             get { return _spriteHeight; }
@@ -59,6 +64,7 @@ namespace TileEngine
 
         // Number of frames of the image
         private int _spriteFrame;
+
         public int SpriteFrame
         {
             get { return _spriteFrame; }
@@ -79,7 +85,7 @@ namespace TileEngine
             _monsterAnimation.Active = true;
         }
 
-        public override void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, Vector2 player, Vector2 offset)
         {
             _monsterAnimation.Position = Position;
             _monsterAnimation.Update(gameTime);

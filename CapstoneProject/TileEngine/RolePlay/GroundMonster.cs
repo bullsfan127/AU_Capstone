@@ -14,6 +14,14 @@ namespace TileEngine
 {
     public class GroundMonster : Monster
     {
+        //position relative to player
+        Vector2 relPosition = new Vector2(0, 0);
+
+        //movement of monster
+        Vector2 movement = new Vector2(0, 0);
+
+        //whether monster is on screen;
+        bool active = false;
 
         /// <summary>
         /// GroundMonster class - The monster that cannot fly
@@ -26,6 +34,45 @@ namespace TileEngine
 
             MaxDamage = 1;
             MaxHealth = 1;
+        }
+
+        public void Update(GameTime gameTime, Vector2 player, Vector2 offset)
+        {
+            //is monster on screen check
+            if (Position.X - offset.X < 600 && Position.X - offset.X > -70 && Position.Y - offset.Y < 600 && Position.Y - offset.Y > 0)
+            {
+                active = true;
+            }
+            else
+                active = false;
+            //if monster is on screen
+            if (active)
+            {
+                //define relative position
+                relPosition = Position - offset;
+                //define animation space
+                _monsterAnimation.Position = relPosition;
+                _monsterAnimation.Update(gameTime);
+                //if monster is to the left of player
+                if (relPosition.X - player.X < 0)
+                {
+                    movement.X = 2;
+                }
+                //if monster is to the right of player
+                else
+                    movement.X = -2;
+                //gravity
+                movement.Y += 1;
+                //floor
+                if (relPosition.Y >= 372)
+                {
+                    movement.Y = 0;
+                    relPosition.Y = 372;
+                }
+                //actually move
+                Position += movement;
+            }
+            base.Update(gameTime);
         }
     }
 }

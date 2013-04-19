@@ -14,8 +14,17 @@ namespace TileEngine
 {
     public class Player : Avatar
     {
+        //unknown
+        private ContentManager Content;
+
         //Current movement speeds for player
         private Vector2 _movement;
+
+        //Players collision Rectangle
+        private Rectangle PlayerRect;
+
+        //Player is on the ground and can jump
+        private bool Jump;
 
         // State of the player
         private bool _active;
@@ -35,10 +44,15 @@ namespace TileEngine
         // The score for the current level
         private int _levelScore;
 
+        private Texture2D _swordTexture;
+        private Texture2D _rangedTexture;
+
+        private int _justAttacked = 0;
+        private bool _attackReleased = true;
+        private int _weaponDirection = 1;
+
         // The score for the entire game
         private int _totalScore = 0;
-
-        
 
         public Microsoft.Xna.Framework.Vector2 Movement
         {
@@ -88,13 +102,6 @@ namespace TileEngine
             set { _totalScore = value; }
         }
 
-        private Texture2D _swordTexture;
-        private Texture2D _rangedTexture;
-
-        private int _weaponDirection = 1;
-        private int _justAttacked = 0;
-        private bool _attackReleased = true;
-
         /// <summary>
         /// Default constructor for player
         /// </summary>
@@ -103,6 +110,7 @@ namespace TileEngine
             _swordTexture = Content.Load<Texture2D>("Items/Sword");
             _rangedTexture = Content.Load<Texture2D>("Items/Boomerang");
             _weapon = new Sword();
+            this.Content = Content;
         }
 
         /// <summary>
@@ -119,14 +127,13 @@ namespace TileEngine
 
             // Set starting position of the player
             Position = position;
-
+            //make player rectangle
+            PlayerRect = new Rectangle((int)position.X, (int)position.Y, 64, 128);
             //player Animation initialize
             PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, true);
+            _weapon.Initialize(_swordTexture, position);
             // Set the player to be active
             PlayerAnimation.Active = true;
-
-            //Texture2D swordTexture = Content.Load<Texture2D>("Items/Sword");
-            _weapon.Initialize(_swordTexture, position);
         }
 
         /// <summary>
@@ -158,10 +165,13 @@ namespace TileEngine
                 _justAttacked--;
                 _attackReleased = false;
             }
-
             //PlayerAnimation.Update(gameTime);
 
             base.Update(gameTime);
+
+            //Reset movement to still
+
+            _movement.X = 0;
 
             //Reset movement to still
             if (_justAttacked <= 0)
@@ -176,11 +186,8 @@ namespace TileEngine
                 }
             }
 
-            _movement.X = 0;
-
-
             // Trying to move Left or Right
-            if (Keyboard.GetState().IsKeyDown(Controls.Left) || (GamePad.GetState(PlayerIndex.One).DPad.Left == ButtonState.Pressed))
+            if (Keyboard.GetState().IsKeyDown(Controls.Left))
             {
                 PlayerAnimation.state = Animation.Animate.LMOVING;
 
@@ -188,7 +195,7 @@ namespace TileEngine
                 _weaponDirection = -1;
             }
 
-            else if (Keyboard.GetState().IsKeyDown(Controls.Right) || (GamePad.GetState(PlayerIndex.One).DPad.Right == ButtonState.Pressed))
+            else if (Keyboard.GetState().IsKeyDown(Controls.Right))
             {
                 PlayerAnimation.state = Animation.Animate.RMOVING;
 
@@ -197,9 +204,10 @@ namespace TileEngine
             }
 
             //Keeping track of jumping/falling speed
-            if (( Keyboard.GetState().IsKeyDown(Controls.Up) || (GamePad.GetState(PlayerIndex.One).DPad.Left == ButtonState.Pressed) ) && Position.Y == 372)
+            if (Keyboard.GetState().IsKeyDown(Controls.Up) && Jump)
             {
                 _movement.Y += -20;
+                Jump = false;
             }
 
             // Attack
@@ -227,7 +235,43 @@ namespace TileEngine
             {
                 Position = new Vector2(Position.X, 372);
                 _movement.Y = 0;
+                Jump = true;
             }
+
+            /*           for (int i = 0; i < 2; i++)
+                       {
+                           for (int j = 0; j < 3; j++)
+                           {
+                               Vector2 temp = new Vector2((Position.X + Offset.X + Movement.X) / 64 + i, (Position.Y + Offset.Y + Movement.X) / 64 + j);
+                               Rectangle ground=new Rectangle(0,0,0,0);
+
+                                   ground = map.CollisionLayer.getItemAt(temp);
+
+                                   if (ground!=default(Rectangle))
+                                   {
+                                       if (PlayerRect.Left < ground.Right  && PlayerRect.Top - ground.Top < PlayerRect.Height)
+                                       {
+                                           _movement.X = 0;
+                                       }
+                                       else if (PlayerRect.Right > ground.Left  && PlayerRect.Top - ground.Top < PlayerRect.Height)
+                                       {
+                                           _movement.X = 0;
+                                       }
+                                       if (PlayerRect.Top > ground.Bottom && _movement.Y < 0 &&
+                                           (PlayerRect.Left - ground.Right < PlayerRect.Width || PlayerRect.Right - ground.Left < PlayerRect.Width))
+                                       {
+                                           _movement.Y = 0;
+                                       }
+                                       else if (PlayerRect.Bottom < ground.Top &&
+                                           (PlayerRect.Left - ground.Right < PlayerRect.Width || PlayerRect.Right - ground.Left < PlayerRect.Width))
+                                       {
+                                           _movement.Y = 0;
+                                           Jump = true;
+                                       }
+                                   }
+                           }
+                       }
+             */
             //establish left and right bound for "dead zone"
             if (Position.X + _movement.X > 500)
             {
@@ -240,14 +284,33 @@ namespace TileEngine
                 Position = new Vector2(100, Position.Y + _movement.Y);
             }
             else
+                Position = new Vector2(Position.X + _movement.X, Position.Y);
+
+            //establish upper and lower bound for dead zone
+            if (Position.Y + _movement.Y < 100 && _offset.Y > 0)
             {
-                Position += _movement;
+                _offset.Y += Position.Y + _movement.Y - 100;
+                Position = new Vector2(Position.X, 100);
             }
+            else if (Position.Y + _movement.Y > 400)
+            {
+                _offset.Y += Position.Y + _movement.Y - 400;
+                Position = new Vector2(Position.X, 400);
+            }
+            else
+                Position = new Vector2(Position.X, Position.Y + _movement.Y);
+
+            //update rectangle position based on player position
+            PlayerRect.X = (int)Position.X;
+            PlayerRect.Y = (int)Position.Y;
+
             if (Position.X < 0)
             {
                 Position = new Vector2(0, Position.Y);
             }
-
+            if (Keyboard.GetState().IsKeyDown(Controls.Attack))
+            {
+            }
             //save position values
             X = Position.X;
             Y = Position.Y;
@@ -270,7 +333,6 @@ namespace TileEngine
             //going to need to check whether the
             PlayerAnimation.Draw(spriteBatch);
             _weapon.Draw(spriteBatch, gameTime);
-
             base.Draw(spriteBatch, gameTime);
         }
 

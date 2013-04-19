@@ -334,13 +334,13 @@ namespace TileEngine
                             currentFrame = 0;
                             frameCount = 2;
                             this.state = Animate.RIDLE;
-                        this.frameTime = this.initialFrameTime;
+                            this.frameTime = this.initialFrameTime;
                             break;
                         case Animate.LATTACK:
                             currentFrame = 8;
                             frameCount = 10;
                             this.state = Animate.LIDLE;
-                        this.frameTime = this.initialFrameTime;
+                            this.frameTime = this.initialFrameTime;
                             break;
                         default:
                             currentFrame = 0;

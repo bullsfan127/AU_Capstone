@@ -53,7 +53,6 @@ namespace CapstoneProject
 
         ImageButton pauseButton;
         Texture2D pauseTexture;
-  
 
         SoundManager soundManager;
 
@@ -94,17 +93,16 @@ namespace CapstoneProject
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            
+
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferredBackBufferWidth = 600;
             menu = new MainMenu.MainMenu(graphics, this.Content);
-            
+
             pauseMenu = new PauseMenu.PauseMenu(graphics, this.Content);
             healthBar = new HealthBar(graphics, this.Content);
             settings = new Settings(graphics, this.Content);
             msettings = new MainSettings(graphics, this.Content);
-           
 
             soundManager = new SoundManager(this, this.Content);
         }
@@ -178,7 +176,7 @@ namespace CapstoneProject
             healthBar.LoadContent();
             settings.LoadContent();
             msettings.LoadContent();
-            
+
             Controls.Load();
 
             // Create a new SpriteBatch, which can be used to draw textures.
@@ -311,10 +309,11 @@ namespace CapstoneProject
 
                     player.Update(gameTime, gameMap);
                     pauseButton.Update(gameTime);
-                    groundMonster.Update(gameTime);
-                    flyingMonster.Update(gameTime);
+                    groundMonster.Update(gameTime, player.Position, gameMap.offset);
+                    flyingMonster.Update(gameTime, player.Position, gameMap.offset);
                     healthBar.Update(gameTime, player);
                     scoreDisplay.Update(player.getLevelScore());
+
                     #region
 
                     if (keystate.IsKeyDown(Keys.S) && keystate.IsKeyDown(Keys.H) && keystate.IsKeyDown(Keys.I) && keystate.IsKeyDown(Keys.T))
@@ -368,11 +367,11 @@ namespace CapstoneProject
                     groundMonster.Draw(spriteBatch, gameTime);
                     flyingMonster.Draw(spriteBatch, gameTime);
                     scoreDisplay.Draw(spriteBatch, gameTime);
-                    pauseButton.Draw( gameTime,spriteBatch);
+                    pauseButton.Draw(gameTime, spriteBatch);
                     break;
                 case GAMESTATE.PAUSE:
                     GraphicsDevice.Clear(Color.Gray);
-                    pauseMenu.Draw(gameTime, spriteBatch,this.pauseBackground, pauseMainFrame);
+                    pauseMenu.Draw(gameTime, spriteBatch, this.pauseBackground, pauseMainFrame);
                     break;
                 case GAMESTATE.SETTINGS:
                     GraphicsDevice.Clear(Color.Black);
