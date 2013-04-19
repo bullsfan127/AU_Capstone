@@ -278,21 +278,11 @@ namespace CapstoneProject
                     {
                         CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.PAUSE;
                     }
-                    if (keystate.IsKeyDown(Keys.S))
-                    {
-                        //  save map
-                        gameMap.saveMap("SavedGame.xml");
-                    }
-
-                    #region
-
-                    if (keystate.IsKeyDown(Keys.S) && keystate.IsKeyDown(Keys.H) && keystate.IsKeyDown(Keys.I) && keystate.IsKeyDown(Keys.T))
-                    {
-                        Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
-                        player.Initialize(playerTexture, player.Position);
-                    }
-
-                    #endregion
+                    //if (keystate.IsKeyDown(Keys.S))
+                    //{
+                    //    //  save map
+                    //    gameMap.saveMap("SavedGame.xml");
+                    //}
 
                     //if (keystate.IsKeyDown(Keys.L))
                     //{
@@ -313,7 +303,15 @@ namespace CapstoneProject
                     flyingMonster.Update(gameTime);
                     healthBar.Update(gameTime, player);
                     scoreDisplay.Update(player.getLevelScore());
-                    // TODO: Add your update logic here
+                    #region
+
+                    if (keystate.IsKeyDown(Keys.S) && keystate.IsKeyDown(Keys.H) && keystate.IsKeyDown(Keys.I) && keystate.IsKeyDown(Keys.T))
+                    {
+                        Texture2D playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
+                        player.Initialize(playerTexture, player.Position);
+                    }
+
+                    #endregion
 
                     break;
             }

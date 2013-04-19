@@ -243,6 +243,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A0B558504F454DDABF7BB4FEE5E7D96F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A5853C2C9B21488DBB902153F6E9DFA7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -394,25 +400,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_14FC7DDB28F66F2B6123ABDF75845115"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8E9A42EADD9EAFF141E84D25760D3CE0"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_02ABFA60855A39F6EBCA7C6C78717591"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_59F24B42190BE936D79C15B14DCA4E0A"
+        "OwnerKey" = "8:_4C413B7131A5BEE17DBE316CAAC8EE43"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -424,7 +412,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4C413B7131A5BEE17DBE316CAAC8EE43"
+        "OwnerKey" = "8:_59F24B42190BE936D79C15B14DCA4E0A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_02ABFA60855A39F6EBCA7C6C78717591"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8E9A42EADD9EAFF141E84D25760D3CE0"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_14FC7DDB28F66F2B6123ABDF75845115"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -1258,6 +1264,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A0B558504F454DDABF7BB4FEE5E7D96F"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\Game.ico"
+            "TargetName" = "8:Game.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_D8EAA9046C9342F9A4E35E685FD0338C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A5853C2C9B21488DBB902153F6E9DFA7"
             {
             "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\Sounds\\Pickup_Coin.xnb"
@@ -2025,7 +2051,7 @@
             "Target" = "8:_FCB5F490315A482B8DDB3A777630FE29"
             "Folder" = "8:_5C9C8EDDC29B4D5AAA484B2E1F55C248"
             "WorkingFolder" = "8:_FCB5F490315A482B8DDB3A777630FE29"
-            "Icon" = "8:"
+            "Icon" = "8:_A0B558504F454DDABF7BB4FEE5E7D96F"
             "Feature" = "8:"
             }
         }
