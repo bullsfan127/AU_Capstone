@@ -159,7 +159,7 @@ namespace TileEngine
             }
 
             foreach (Monster a in _NpcList)
-            { a.Update(gameTime); }
+            { a.Update(gameTime, this.Player.Position, offset); }
         }
 
         //#DRAW
@@ -179,7 +179,7 @@ namespace TileEngine
                 item.Draw(spriteBatch, gameTime);
             }
 
-            foreach (Avatar ava in _NpcList)
+            foreach (Monster ava in _NpcList)
             {
                 //TODO:  Add Logic for drawing based on player Proximity
                 ava.Draw(spriteBatch, gameTime);
@@ -341,6 +341,36 @@ namespace TileEngine
                         this.Mask.Layer[x, y].Scale = 320;
                     }
                 }
+            }
+
+            List<Texture2D> monsters = new List<Texture2D>();
+            Texture2D z = contentManager.Load<Texture2D>("Monsters/Zombies");
+            z.Name = "Monsters/Zombies";
+            Texture2D b = contentManager.Load<Texture2D>("Monsters/Birds");
+            b.Name = "Monsters/Birds";
+            Texture2D spriteStrip;
+            //load monsters
+            foreach (Monster a in _NpcList)
+            {
+                Type type = a.GetType();
+                spriteStrip = type == typeof(GroundMonster) ? z : b;
+                a.Position = new Vector2(a.X, a.Y);
+                a.Initialize(spriteStrip, a.Position);
+            }
+
+            //load items
+            List<Texture2D> items = new List<Texture2D>();
+            Texture2D c = contentManager.Load<Texture2D>("items/Coin");
+            c.Name = "items/Coin";
+            Texture2D p = contentManager.Load<Texture2D>("items/Potion");
+            p.Name = "items/Potion";
+            Texture2D spriteStrip2;
+
+            foreach (Item a in _mapItems)
+            {
+                Type type = a.GetType();
+                spriteStrip2 = type == typeof(Coin) ? c : p;
+                a.Initialize(spriteStrip2, new Vector2(a.X, a.Y));
             }
         }
 

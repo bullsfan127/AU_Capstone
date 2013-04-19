@@ -86,6 +86,7 @@ namespace TileEngine
         }
 
         private float _scale;
+
         public float Scale
         {
             get { return _scale; }
@@ -95,10 +96,14 @@ namespace TileEngine
         // The image of the item
         private Texture2D SpriteStrip;
 
+        public Item() { }
+
         public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             // Set starting position of the player
             Position = position;
+            X = Position.X;
+            Y = Position.Y;
             SpriteStrip = spriteStrip;
         }
 

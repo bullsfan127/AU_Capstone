@@ -156,9 +156,13 @@ namespace CapstoneProject
             backgroundTexture = Content.Load<Texture2D>("background");
             pauseBackground = Content.Load<Texture2D>("PauseBackground");
             Texture2D coinTexture = Content.Load<Texture2D>("items/Coin");
+            coinTexture.Name = "items/Coin";
             Texture2D potionTexture = Content.Load<Texture2D>("items/Potion");
+            potionTexture.Name = "items/Potion";
             Texture2D groundMonsterTexture = Content.Load<Texture2D>("Monsters/Zombies");
+            groundMonsterTexture.Name = "Monsters/Zombies";
             Texture2D flyingMonsterTexture = Content.Load<Texture2D>("Monsters/Birds");
+            flyingMonsterTexture.Name = "Monsters/Birds";
 
             story = this.Content.Load<Texture2D>("story");
             coin.Initialize(coinTexture, new Vector2(19, 19));
@@ -201,6 +205,11 @@ namespace CapstoneProject
                     break;
                 case GAMESTATE.NEWGAME:
                     gameMap = gameMap.LoadMap("map.xml", this.Content);
+                    gameMap.NpcList.Add(flyingMonster);
+                    gameMap.NpcList.Add(groundMonster);
+                    gameMap.MapItems.Add(coin);
+                    gameMap.MapItems.Add(potion);
+
                     player = null;
                     player = new Player(this.Content);
                     player.Initialize(playerTexture, new Vector2(0, 0));
@@ -248,8 +257,6 @@ namespace CapstoneProject
 
                     player.Update(gameTime, gameMap);
                     pauseButton.Update(gameTime);
-                    groundMonster.Update(gameTime, player.Position, gameMap.offset);
-                    flyingMonster.Update(gameTime, player.Position, gameMap.offset);
                     healthBar.Update(gameTime, player);
                     scoreDisplay.Update(player.getLevelScore());
 
@@ -305,10 +312,8 @@ namespace CapstoneProject
                     gameMap.Draw(spriteBatch, gameTime);
                     healthBar.Draw(gameTime, spriteBatch);
                     // TODO: Loop through all items instead of calling each one individually
-                    coin.Draw(spriteBatch, gameTime);
-                    potion.Draw(spriteBatch, gameTime);
-                    groundMonster.Draw(spriteBatch, gameTime);
-                    flyingMonster.Draw(spriteBatch, gameTime);
+                    //  coin.Draw(spriteBatch, gameTime);
+                    //   potion.Draw(spriteBatch, gameTime);
                     scoreDisplay.Draw(spriteBatch, gameTime);
                     pauseButton.Draw(gameTime, spriteBatch);
                     break;
