@@ -71,6 +71,8 @@ namespace TileEngine
             set { _spriteFrame = value; }
         }
 
+        public Monster() { }
+
         public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             _monsterAnimation = new Animation();
@@ -85,7 +87,7 @@ namespace TileEngine
             _monsterAnimation.Active = true;
         }
 
-        public void Update(GameTime gameTime, Vector2 player, Vector2 offset)
+        public virtual void Update(GameTime gameTime, Vector2 player, Vector2 offset)
         {
             _monsterAnimation.Position = Position;
             _monsterAnimation.Update(gameTime);

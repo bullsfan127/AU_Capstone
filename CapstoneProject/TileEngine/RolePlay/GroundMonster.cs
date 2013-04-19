@@ -36,7 +36,7 @@ namespace TileEngine
             MaxHealth = 1;
         }
 
-        public void Update(GameTime gameTime, Vector2 player, Vector2 offset)
+        public override void Update(GameTime gameTime, Vector2 player, Vector2 offset)
         {
             //is monster on screen check
             if (Position.X - offset.X < 600 && Position.X - offset.X > -70 && Position.Y - offset.Y < 600 && Position.Y - offset.Y > 0)
@@ -72,6 +72,9 @@ namespace TileEngine
                 //actually move
                 Position += movement;
             }
+
+            X = Position.X;
+            Y = Position.Y;
             base.Update(gameTime);
         }
     }
