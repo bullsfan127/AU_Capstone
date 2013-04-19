@@ -27,7 +27,10 @@ Content\Monsters\Zombies.xnb
 Content\Monsters\Birds.xnb
 Content\Items\Sword.xnb
 Content\shitty\FatJoe.xnb
+<<<<<<< HEAD
 Content\Story.xnb
+=======
+>>>>>>> Pierre-New-Updated-Menus
 Content\Songs\DST-DarkestKnight.xnb
 Content\Songs\DST-TimeToDream.xnb
 Content\Sounds\Jump.xnb
@@ -41,6 +44,13 @@ Content\Sounds\Kill.xnb
 Content\Songs\DST-Aurora.xnb
 Content\Songs\DST-Glory.xnb
 Content\Songs\DST-Serade.xnb
+<<<<<<< HEAD
+=======
+Content\PauseBackground.xnb
+Content\menuButtons\SaveGame.xnb
+Content\menuButtons\Attack.xnb
+Content\PauseButton.xnb
+>>>>>>> Pierre-New-Updated-Menus
 Content\Songs\DST-DarkestKnight.wma
 Content\Songs\DST-TimeToDream.wma
 Content\Songs\DST-Aurora.wma

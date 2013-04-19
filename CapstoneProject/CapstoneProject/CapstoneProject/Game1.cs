@@ -39,6 +39,7 @@ namespace CapstoneProject
 
         Texture2D backgroundTexture;
         Texture2D story;
+        Texture2D pauseBackground;
         MainMenu.MainMenu menu;
         PauseMenu.PauseMenu pauseMenu;
         GraphicsDeviceManager graphics;
@@ -49,6 +50,10 @@ namespace CapstoneProject
         FlyingMonster flyingMonster = new FlyingMonster();
         Settings settings;
         MainSettings msettings;
+
+        ImageButton pauseButton;
+        Texture2D pauseTexture;
+  
 
         SoundManager soundManager;
 
@@ -66,6 +71,7 @@ namespace CapstoneProject
         Player player;
 
         Rectangle mainFrame;
+        Rectangle pauseMainFrame;
 
         //Health Bar
         HealthBar healthBar;
@@ -88,15 +94,17 @@ namespace CapstoneProject
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferredBackBufferWidth = 600;
             menu = new MainMenu.MainMenu(graphics, this.Content);
-
+            
             pauseMenu = new PauseMenu.PauseMenu(graphics, this.Content);
             healthBar = new HealthBar(graphics, this.Content);
             settings = new Settings(graphics, this.Content);
             msettings = new MainSettings(graphics, this.Content);
+           
 
             soundManager = new SoundManager(this, this.Content);
         }
@@ -170,11 +178,13 @@ namespace CapstoneProject
             healthBar.LoadContent();
             settings.LoadContent();
             msettings.LoadContent();
+            
             Controls.Load();
 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             mainFrame = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+            pauseMainFrame = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
 #if DEBUG
             //#FPS_COUNTER
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
@@ -196,10 +206,11 @@ namespace CapstoneProject
 
             // Texture2D playerTexture = Content.Load<Texture2D>("shitty/FatJoe");
             Texture2D playerTexture = Content.Load<Texture2D>("shitty/FatJoe");
-
             player.Initialize(playerTexture, new Vector2(0, 0));
+            pauseTexture = Content.Load<Texture2D>("PauseButton");
+            pauseButton = new ImageButton(new Vector2(60, 19), pauseTexture, 0);
             backgroundTexture = Content.Load<Texture2D>("background");
-
+            pauseBackground = Content.Load<Texture2D>("PauseBackground");
             Texture2D coinTexture = Content.Load<Texture2D>("items/Coin");
             Texture2D potionTexture = Content.Load<Texture2D>("items/Potion");
             Texture2D groundMonsterTexture = Content.Load<Texture2D>("Monsters/Zombies");
@@ -299,6 +310,7 @@ namespace CapstoneProject
                     }
 
                     player.Update(gameTime, gameMap);
+                    pauseButton.Update(gameTime);
                     groundMonster.Update(gameTime);
                     flyingMonster.Update(gameTime);
                     healthBar.Update(gameTime, player);
@@ -356,10 +368,11 @@ namespace CapstoneProject
                     groundMonster.Draw(spriteBatch, gameTime);
                     flyingMonster.Draw(spriteBatch, gameTime);
                     scoreDisplay.Draw(spriteBatch, gameTime);
+                    pauseButton.Draw( gameTime,spriteBatch);
                     break;
                 case GAMESTATE.PAUSE:
                     GraphicsDevice.Clear(Color.Gray);
-                    pauseMenu.Draw(gameTime, spriteBatch);
+                    pauseMenu.Draw(gameTime, spriteBatch,this.pauseBackground, pauseMainFrame);
                     break;
                 case GAMESTATE.SETTINGS:
                     GraphicsDevice.Clear(Color.Black);
