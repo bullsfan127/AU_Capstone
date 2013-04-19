@@ -41,6 +41,8 @@ namespace TileEngine
         // the weapon the player is holding
         private Weapon _weapon;
 
+        private Boomerang boomerang;
+
         // The score for the current level
         private int _levelScore;
 
@@ -110,6 +112,7 @@ namespace TileEngine
             _swordTexture = Content.Load<Texture2D>("Items/Sword");
             _rangedTexture = Content.Load<Texture2D>("Items/Boomerang");
             _weapon = new Sword();
+            boomerang = new Boomerang();
             this.Content = Content;
         }
 
@@ -132,6 +135,7 @@ namespace TileEngine
             //player Animation initialize
             PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, true);
             _weapon.Initialize(_swordTexture, position);
+            boomerang.Initialize(_rangedTexture, position);
             // Set the player to be active
             PlayerAnimation.Active = true;
         }
@@ -149,6 +153,7 @@ namespace TileEngine
             if (_justAttacked <= 20)
             {
                 _weapon.Update(gameTime, new Vector2(-500, -500));
+                boomerang.Update(new Vector2(Position.X, Position.Y));
                 if (_justAttacked >= 0)
                 {
                     _justAttacked--;
@@ -161,7 +166,9 @@ namespace TileEngine
             else
             {
                 _weapon.setDirection(_weaponDirection);
+                boomerang.setDirection(_weaponDirection);
                 _weapon.Update(gameTime, Position);
+                boomerang.Update(new Vector2(Position.X, Position.Y));
                 _justAttacked--;
                 _attackReleased = false;
             }
@@ -333,6 +340,7 @@ namespace TileEngine
             //going to need to check whether the
             PlayerAnimation.Draw(spriteBatch);
             _weapon.Draw(spriteBatch, gameTime);
+            boomerang.Draw(spriteBatch, gameTime);
             base.Draw(spriteBatch, gameTime);
         }
 
