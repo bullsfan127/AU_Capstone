@@ -131,10 +131,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ImageButton.cs" />
+    <Compile Include="Menus\ImageButton.cs" />
     <Compile Include="Menus\MainMenu.cs" />
     <Compile Include="Menus\MainSaveKeys.cs" />
-    <Compile Include="MainSettings.cs" />
+    <Compile Include="Menus\MainSettings.cs" />
     <Compile Include="Menus\PauseMenu.cs" />
     <Compile Include="Menus\MainButton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

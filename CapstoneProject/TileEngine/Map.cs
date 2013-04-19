@@ -350,19 +350,29 @@ namespace TileEngine
         /// <param name="contentManager"></param>
         public void LoadPlayer(ContentManager contentManager)
         {
+            //convert to player instead of Avatar
+            Player temp = new Player(contentManager);
+            temp = (Player)this.Player;
+
             //load player
             Texture2D playerTexture = contentManager.Load<Texture2D>("shitty/FatJoe");
             Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);
-            this._Player.Position = playerPosition;
+            temp.Position = playerPosition;
 
             //load playerAnimation
             Rectangle srect = new Rectangle();
             srect = new Rectangle(this._Player.PlayerAnimation.SRect[0], this._Player.PlayerAnimation.SRect[1], this._Player.PlayerAnimation.SRect[2], this._Player.PlayerAnimation.SRect[3]);
-            this._Player.PlayerAnimation.sourceRect = srect;
-            this._Player.PlayerAnimation.spriteStrip = playerTexture;
-            this._Player.PlayerAnimation.destinationRect = new Rectangle(this._Player.PlayerAnimation.DRect[0], this._Player.PlayerAnimation.DRect[1], this._Player.PlayerAnimation.DRect[2], this._Player.PlayerAnimation.DRect[3]);
-            this._Player.PlayerAnimation.Position = this._Player.Position;
-            this._Player.Offset = new Vector2(this._Player.OX, this.Player.OY);
+            temp.PlayerAnimation.sourceRect = srect;
+            temp.PlayerAnimation.spriteStrip = playerTexture;
+            temp.PlayerAnimation.destinationRect = new Rectangle(this._Player.PlayerAnimation.DRect[0], this._Player.PlayerAnimation.DRect[1], this._Player.PlayerAnimation.DRect[2], this._Player.PlayerAnimation.DRect[3]);
+            temp.PlayerAnimation.Position = this._Player.Position;
+            temp.Offset = new Vector2(this._Player.OX, this.Player.OY);
+
+            //load weapons
+            temp._rangedTexture = contentManager.Load<Texture2D>("Items//sword");
+            temp._swordTexture = contentManager.Load<Texture2D>("Items//boomerang");
+            temp.Weapon.Initialize(temp._rangedTexture, temp.Position);
+            this.Player = temp;
         }
     }
 }

@@ -44,12 +44,32 @@ namespace TileEngine
         // The score for the current level
         private int _levelScore;
 
-        private Texture2D _swordTexture;
-        private Texture2D _rangedTexture;
+        public Texture2D _swordTexture;
+        public Texture2D _rangedTexture;
 
         private int _justAttacked = 0;
+
+        public int JustAttacked
+        {
+            get { return _justAttacked; }
+            set { _justAttacked = value; }
+        }
+
         private bool _attackReleased = true;
+
+        public bool AttackReleased
+        {
+            get { return _attackReleased; }
+            set { _attackReleased = value; }
+        }
+
         private int _weaponDirection = 1;
+
+        public int WeaponDirection
+        {
+            get { return _weaponDirection; }
+            set { _weaponDirection = value; }
+        }
 
         // The score for the entire game
         private int _totalScore = 0;
@@ -111,6 +131,10 @@ namespace TileEngine
             _rangedTexture = Content.Load<Texture2D>("Items/Boomerang");
             _weapon = new Sword();
             this.Content = Content;
+        }
+
+        public Player()
+        {
         }
 
         /// <summary>

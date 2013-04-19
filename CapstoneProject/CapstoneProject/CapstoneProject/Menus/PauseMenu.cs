@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using TileEngine;
+
 namespace PauseMenu
 {
     /// <summary>
@@ -17,7 +18,6 @@ namespace PauseMenu
     public class PauseMenu
     {
         GraphicsDeviceManager graphics;
-     
 
         private enum BState
         {
@@ -34,7 +34,7 @@ namespace PauseMenu
             SAVEGAME_BUTTON_INDEX = 2,
             MAINMENU_BUTTON_INDEX = 3,
             EXIT_BUTTON_INDEX = 4,
-            
+
             BUTTON_HEIGHT = 40,
             BUTTON_WIDTH = 88;
         Color background_color;
@@ -124,7 +124,7 @@ namespace PauseMenu
             update_buttons();
         }
 
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch,Texture2D pauseBackground, Rectangle pauseMainFrame)
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch, Texture2D pauseBackground, Rectangle pauseMainFrame)
         {
             spriteBatch.Begin();
             spriteBatch.Draw(pauseBackground, pauseMainFrame, Color.White);
@@ -231,7 +231,7 @@ namespace PauseMenu
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.SETTINGS;
                     break;
                 case SAVEGAME_BUTTON_INDEX:
-                   
+                    CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.SAVE;
                     break;
                 case MAINMENU_BUTTON_INDEX:
                     CapstoneProject.Game1.gameState = CapstoneProject.GAMESTATE.MAINMENU;
