@@ -21,6 +21,7 @@ namespace CapstoneProject
         MoveButton rightButton;
         MoveButton leftButton;
         MoveButton upButton;
+        MoveButton attackButton;
         MainButton mainButton;
         SaveKeys saveKeys;
         GraphicsDeviceManager graphics;
@@ -28,12 +29,14 @@ namespace CapstoneProject
         Label rightLabel;
         Label leftLabel;
         Label upLabel;
+        Label attackLabel;
         Label wordLabel;
         Label wordLabel2;
         Label wordLabel3;
         XPanel rPanel;
         XPanel lPanel;
         XPanel upPanel;
+        XPanel attackPanel;
         XPanel wordPanel;
         String text = "In order to change the controls of the game:";
         String text2 = "Click on the Button that you want to change - Example(MoveRight)";
@@ -64,6 +67,7 @@ namespace CapstoneProject
             rightButton.Update(gameTime);
             leftButton.Update(gameTime);
             upButton.Update(gameTime);
+            attackButton.Update(gameTime);
             mainButton.Update(gameTime);
             saveKeys.Update(gameTime);
 
@@ -71,6 +75,7 @@ namespace CapstoneProject
             rPanel.Update(gameTime);
             lPanel.Update(gameTime);
             upPanel.Update(gameTime);
+            attackPanel.Update(gameTime);
             wordPanel.Update(gameTime);
         }
 
@@ -80,6 +85,7 @@ namespace CapstoneProject
             rightButton.Draw(gameTime, spriteBatch);
             leftButton.Draw(gameTime, spriteBatch);
             upButton.Draw(gameTime, spriteBatch);
+            attackButton.Draw(gameTime, spriteBatch);
             mainButton.Draw(gameTime, spriteBatch);
             saveKeys.Draw(gameTime, spriteBatch);
 
@@ -87,6 +93,7 @@ namespace CapstoneProject
             rightLabel.Text = Controls.Right.ToString();
             leftLabel.Text = Controls.Left.ToString();
             upLabel.Text = Controls.Up.ToString();
+            attackLabel.Text = Controls.Attack.ToString();
             wordLabel.Text = text;
             wordLabel2.Text = text2;
             wordLabel3.Text = text3;
@@ -96,6 +103,7 @@ namespace CapstoneProject
             rightLabel.Draw(gameTime, spriteBatch);
             leftLabel.Draw(gameTime, spriteBatch);
             upLabel.Draw(gameTime, spriteBatch);
+            attackLabel.Draw(gameTime, spriteBatch);
             wordLabel.Draw(gameTime, spriteBatch);
             wordLabel2.Draw(gameTime, spriteBatch);
             wordLabel3.Draw(gameTime, spriteBatch);
@@ -104,6 +112,7 @@ namespace CapstoneProject
             rPanel.Draw(gameTime, spriteBatch);
             lPanel.Draw(gameTime, spriteBatch);
             upPanel.Draw(gameTime, spriteBatch);
+            attackPanel.Draw(gameTime, spriteBatch);
             wordPanel.Draw(gameTime, spriteBatch);
         }
 
@@ -133,18 +142,24 @@ namespace CapstoneProject
             upButton = new MoveButton(new Vector2(150, 300), upTexture, 2);
             upButton.ChangeColor = true;
 
+            Texture2D attackTexture = content.Load<Texture2D>("menuButtons/Attack");
+            attackButton = new MoveButton(new Vector2(150, 400), attackTexture, 3);
+            attackButton.ChangeColor = true;
+
             //load Panel
             Texture2D panel = content.Load<Texture2D>("Panel540X540");
             //create panel
             rPanel = new XPanel(panel, new Vector2(300, 100), 100, 50);
             lPanel = new XPanel(panel, new Vector2(300, 200), 100, 50);
             upPanel = new XPanel(panel, new Vector2(300, 300), 100, 50);
+            attackPanel = new XPanel(panel, new Vector2(300, 400), 100, 50);
             wordPanel = new XPanel(panel, new Vector2(50, 0), 100, 50);
 
             //Change panel color
             rPanel.Color = Color.Blue;
             lPanel.Color = Color.Blue;
             upPanel.Color = Color.Blue;
+            attackPanel.Color = Color.Blue;
             wordPanel.Color = Color.Black;
 
             //load font
@@ -154,6 +169,7 @@ namespace CapstoneProject
             rightLabel = new Label(font, Controls.Right.ToString(), new Vector2(350, 10), Color.White, 2);
             leftLabel = new Label(font, Controls.Left.ToString(), new Vector2(350, 10), Color.White, 2);
             upLabel = new Label(font, Controls.Up.ToString(), new Vector2(350, 10), Color.White, 2);
+            attackLabel = new Label(font, Controls.Attack.ToString(), new Vector2(350, 10), Color.White, 2);
             wordLabel = new Label(font, text, new Vector2(50, 10), Color.White, 1);
             wordLabel2 = new Label(font, text, new Vector2(50, 10), Color.White, 1);
             wordLabel3 = new Label(font, text, new Vector2(50, 10), Color.White, 1);
@@ -161,6 +177,7 @@ namespace CapstoneProject
             rPanel.AddChild(rightLabel, new Vector2(15, 15));
             lPanel.AddChild(leftLabel, new Vector2(15, 15));
             upPanel.AddChild(upLabel, new Vector2(15, 15));
+            attackPanel.AddChild(attackLabel, new Vector2(15, 15));
             wordPanel.AddChild(wordLabel, new Vector2(15, 15));
             wordPanel.AddChild(wordLabel2, new Vector2(15, 35));
             wordPanel.AddChild(wordLabel3, new Vector2(15, 55));

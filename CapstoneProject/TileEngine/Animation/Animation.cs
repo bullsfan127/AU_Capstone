@@ -15,7 +15,7 @@ namespace TileEngine
     public class Animation
     {
         // Enum for Animation states
-        public enum Animate { IDLE, RMOVING, LMOVING };
+        public enum Animate { RIDLE, LIDLE, RMOVING, LMOVING, RATTACK, LATTACK };
 
         // Hold the current state of the Animation
         public Animate state;
@@ -52,6 +52,9 @@ namespace TileEngine
 
         // The time we display a frame until the next one
         private int _frameTime;
+
+        // The time we display a frame until the next one
+        private int _initialFrameTime;
 
         // The number of frames that the animation contains
         private int _frameCount;
@@ -119,6 +122,12 @@ namespace TileEngine
             set { _frameTime = value; }
         }
 
+        public int initialFrameTime
+        {
+            get { return _initialFrameTime; }
+            set { _initialFrameTime = value; }
+        }
+
         public int frameCount
         {
             get { return _frameCount; }
@@ -182,7 +191,7 @@ namespace TileEngine
         /// <param name="animation"></param>
         public void Initialize(Texture2D texture, Vector2 position,
         int frameWidth, int frameHeight, int frameCount,
-        int frametime, Color color, float scale, bool looping, Animate animation = Animate.IDLE)
+        int frametime, Color color, float scale, bool looping, Animate animation = Animate.RIDLE)
         {
             // Keep a local copy of the values passed in
             this.color = color;
@@ -190,6 +199,7 @@ namespace TileEngine
             this.FrameHeight = frameHeight;
             this.frameCount = frameCount;
             this.frameTime = frametime;
+            this.initialFrameTime = frametime;
             this.scale = scale;
 
             Looping = looping;
@@ -201,9 +211,13 @@ namespace TileEngine
 
             switch (animation)
             {
-                case Animate.IDLE:
+                case Animate.RIDLE:
                     currentFrame = 0;
-                    this.state = Animate.IDLE;
+                    this.state = Animate.RIDLE;
+                    break;
+                case Animate.LIDLE:
+                    currentFrame = 8;
+                    this.state = Animate.LIDLE;
                     break;
                 case Animate.RMOVING:
                     currentFrame = 2;
@@ -212,6 +226,14 @@ namespace TileEngine
                 case Animate.LMOVING:
                     currentFrame = 5;
                     this.state = Animate.LMOVING;
+                    break;
+                case Animate.RATTACK:
+                    currentFrame = 4;
+                    this.state = Animate.RATTACK;
+                    break;
+                case Animate.LATTACK:
+                    currentFrame = 7;
+                    this.state = Animate.LATTACK;
                     break;
                 default:
                     currentFrame = 0;
@@ -234,20 +256,37 @@ namespace TileEngine
 
                 switch (this.state)
                 {
-                    case Animate.IDLE:
+                    case Animate.RIDLE:
                         currentFrame = 0;
                         frameCount = 2;
-                        this.state = Animate.IDLE;
+                        this.state = Animate.RIDLE;
+                        break;
+                    case Animate.LIDLE:
+                        currentFrame = 8;
+                        frameCount = 10;
+                        this.state = Animate.LIDLE;
                         break;
                     case Animate.RMOVING:
                         currentFrame = 2;
-                        frameCount = 5;
+                        frameCount = 4;
                         this.state = Animate.RMOVING;
                         break;
                     case Animate.LMOVING:
                         currentFrame = 5;
-                        frameCount = 8;
+                        frameCount = 7;
                         this.state = Animate.LMOVING;
+                        break;
+                    case Animate.RATTACK:
+                        currentFrame = 4;
+                        frameCount = 5;
+                        this.state = Animate.RATTACK;
+                        this.frameTime = this.initialFrameTime + 75;
+                        break;
+                    case Animate.LATTACK:
+                        currentFrame = 7;
+                        frameCount = 8;
+                        this.state = Animate.LATTACK;
+                        this.frameTime = this.initialFrameTime + 75;
                         break;
                     default:
                         currentFrame = 0;
@@ -271,20 +310,37 @@ namespace TileEngine
                 {
                     switch (this.state)
                     {
-                        case Animate.IDLE:
+                        case Animate.RIDLE:
                             currentFrame = 0;
                             frameCount = 2;
-                            this.state = Animate.IDLE;
+                            this.state = Animate.RIDLE;
+                            break;
+                        case Animate.LIDLE:
+                            currentFrame = 8;
+                            frameCount = 10;
+                            this.state = Animate.LIDLE;
                             break;
                         case Animate.RMOVING:
                             currentFrame = 2;
-                            frameCount = 5;
+                            frameCount = 4;
                             this.state = Animate.RMOVING;
                             break;
                         case Animate.LMOVING:
                             currentFrame = 5;
-                            frameCount = 8;
+                            frameCount = 7;
                             this.state = Animate.LMOVING;
+                            break;
+                        case Animate.RATTACK:
+                            currentFrame = 0;
+                            frameCount = 2;
+                            this.state = Animate.RIDLE;
+                        this.frameTime = this.initialFrameTime;
+                            break;
+                        case Animate.LATTACK:
+                            currentFrame = 8;
+                            frameCount = 10;
+                            this.state = Animate.LIDLE;
+                        this.frameTime = this.initialFrameTime;
                             break;
                         default:
                             currentFrame = 0;

@@ -321,6 +321,32 @@
   <ItemGroup>
     <Compile Include="Story.png">
       <Name>Story</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PauseBackground.png">
+      <Name>PauseBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="menuButtons\SaveGame.png">
+      <Name>SaveGame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="menuButtons\Attack.png">
+      <Name>Attack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PauseButton.jpg">
+      <Name>PauseButton</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
