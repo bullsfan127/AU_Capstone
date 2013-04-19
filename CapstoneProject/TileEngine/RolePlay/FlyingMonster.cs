@@ -31,7 +31,7 @@ namespace TileEngine
             MaxHealth = 1;
         }
 
-        public void Update(GameTime gameTime, Vector2 player, Vector2 offset)
+        public override void Update(GameTime gameTime, Vector2 player, Vector2 offset)
         {
             relPosition = Position - offset;
             if (Position.X - offset.X < 600 && Position.X - offset.X > -70 && Position.Y - offset.Y < 600 && Position.Y - offset.Y > 0)
@@ -59,6 +59,9 @@ namespace TileEngine
 
                 Position += movement;
             }
+
+            X = Position.X;
+            Y = Position.Y;
             base.Update(gameTime);
         }
     }
