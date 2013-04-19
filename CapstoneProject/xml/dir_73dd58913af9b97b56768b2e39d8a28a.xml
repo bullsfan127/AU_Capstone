@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dir_73dd58913af9b97b56768b2e39d8a28a" kind="dir">
+    <compoundname>GUI/Controls</compoundname>
+    <innerfile refid="_label_8cs">Label.cs</innerfile>
+    <innerfile refid="_x_button_8cs">XButton.cs</innerfile>
+    <innerfile refid="_x_panel_8cs">XPanel.cs</innerfile>
+    <innerfile refid="_x_text_box_8cs">XTextBox.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/"/>
+  </compounddef>
+</doxygen>

@@ -1,19 +1,16 @@
 var dir_d0a77c1a97cf39b07408c9faab11faad =
 [
+    [ "Animation", "dir_e4b3135f824b3ada82f2c7ba7de44745.html", "dir_e4b3135f824b3ada82f2c7ba7de44745" ],
     [ "Interfaces", "dir_4d899794e4a5bb657f1e737f0032357e.html", "dir_4d899794e4a5bb657f1e737f0032357e" ],
+    [ "Player", "dir_61dfaf1237b5107f564e81e656b885b4.html", "dir_61dfaf1237b5107f564e81e656b885b4" ],
     [ "Properties", "dir_a60fd27bff144ae9c9cff1f1d8c77990.html", "dir_a60fd27bff144ae9c9cff1f1d8c77990" ],
+    [ "RolePlay", "dir_db800c13b7c0e6e99ede83d5c9ddcb01.html", "dir_db800c13b7c0e6e99ede83d5c9ddcb01" ],
     [ "Utility", "dir_c6a1de31af74083aa6fd97242ab5568e.html", "dir_c6a1de31af74083aa6fd97242ab5568e" ],
-    [ "Animation.cs", "_animation_8cs.html", [
-      [ "Animation", "class_tile_engine_1_1_animation.html", "class_tile_engine_1_1_animation" ]
-    ] ],
-    [ "Avatar.cs", "_avatar_8cs.html", [
-      [ "Avatar", "class_tile_engine_1_1_avatar.html", "class_tile_engine_1_1_avatar" ]
-    ] ],
     [ "DrawableLayer.cs", "_drawable_layer_8cs.html", [
       [ "DrawableLayer< T >", "class_tile_engine_1_1_drawable_layer_3_01_t_01_4.html", "class_tile_engine_1_1_drawable_layer_3_01_t_01_4" ]
     ] ],
-    [ "Item.cs", "_item_8cs.html", [
-      [ "Item", "class_tile_engine_1_1_item.html", "class_tile_engine_1_1_item" ]
+    [ "FocalPoint.cs", "_focal_point_8cs.html", [
+      [ "FocalPoint", "class_tile_engine_1_1_focal_point.html", "class_tile_engine_1_1_focal_point" ]
     ] ],
     [ "Layer.cs", "_layer_8cs.html", [
       [ "Layer< T >", "class_tile_engine_1_1_layer_3_01_t_01_4.html", "class_tile_engine_1_1_layer_3_01_t_01_4" ]
@@ -21,9 +18,8 @@ var dir_d0a77c1a97cf39b07408c9faab11faad =
     [ "Map.cs", "_map_8cs.html", [
       [ "Map", "class_tile_engine_1_1_map.html", "class_tile_engine_1_1_map" ]
     ] ],
-    [ "Monster.cs", "_monster_8cs.html", null ],
-    [ "Player.cs", "_player_8cs.html", [
-      [ "Player", "class_tile_engine_1_1_player.html", "class_tile_engine_1_1_player" ]
+    [ "SerializeControls.cs", "_serialize_controls_8cs.html", [
+      [ "SerializeControls", "class_tile_engine_1_1_serialize_controls.html", "class_tile_engine_1_1_serialize_controls" ]
     ] ],
     [ "Tile.cs", "_tile_8cs.html", [
       [ "Tile", "class_tile_engine_1_1_tile.html", "class_tile_engine_1_1_tile" ]

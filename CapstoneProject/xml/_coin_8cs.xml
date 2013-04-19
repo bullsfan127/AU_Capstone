@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_coin_8cs" kind="file">
+    <compoundname>Coin.cs</compoundname>
+    <innerclass refid="class_tile_engine_1_1_coin" prot="public">TileEngine::Coin</innerclass>
+    <innernamespace refid="namespace_tile_engine">TileEngine</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">﻿using<sp/>System;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Linq;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Text;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">TileEngine</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="class_tile_engine_1_1_coin" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_tile_engine_1_1_coin" kindref="compound">Coin</ref><sp/>:<sp/><ref refid="class_tile_engine_1_1_item" kindref="compound">Item</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>///<sp/>&lt;summary&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>///<sp/>Coin<sp/>class<sp/>-<sp/>Increases<sp/>score<sp/>by<sp/>1</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>///<sp/>Offset<sp/>by<sp/>+19,+19<sp/>to<sp/>center<sp/>it<sp/>within<sp/>a<sp/>tile</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>///<sp/>&lt;/summary&gt;</highlight></codeline>
+<codeline lineno="14" refid="class_tile_engine_1_1_coin_1a70c6e6e4bbdc6fc483866c055da8cade" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_tile_engine_1_1_coin_1a70c6e6e4bbdc6fc483866c055da8cade" kindref="member" tooltip="Coin class - Increases score by 1 Offset by +19,+19 to center it within a tile ">Coin</ref>()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_tile_engine_1_1_item_1a1c339bc4ed79c704a632a12915953ea3" kindref="member">SpriteWidth</ref><sp/>=<sp/>64;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_tile_engine_1_1_item_1a1b1424c2b05dec840618e3eec516be6c" kindref="member">SpriteHeight</ref><sp/>=<sp/>64;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_tile_engine_1_1_item_1a5dba96ad4193fd83559566237ab88c9e" kindref="member">SpriteFrame</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_tile_engine_1_1_item_1a03b8176fc292277aa82567d18d1aa4c9" kindref="member">Score</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_tile_engine_1_1_item_1a11ab5036a094b10b0d8c279653b6819f" kindref="member">Scale</ref><sp/>=<sp/>0.4f;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Coin.cs"/>
+  </compounddef>
+</doxygen>

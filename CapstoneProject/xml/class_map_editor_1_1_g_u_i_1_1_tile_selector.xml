@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_map_editor_1_1_g_u_i_1_1_tile_selector" kind="class" prot="public">
+    <compoundname>MapEditor::GUI::TileSelector</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IUpdateable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IDrawable</basecompoundref>
+    <basecompoundref refid="interface_g_u_i_1_1_g_component" prot="public" virt="non-virtual">GUI.GComponent</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a4b65676c5f6b914cb8c89880f0bbfe21" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int MapEditor.GUI.TileSelector.DrawOrder</definition>
+        <argsstring></argsstring>
+        <name>DrawOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a37696b1e3c82842d669382f5e0cd7e0f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>bool</type>
+        <definition>bool MapEditor.GUI.TileSelector.Visible</definition>
+        <argsstring></argsstring>
+        <name>Visible</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="31" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a501f03705a1071f95c980cd08e55242b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>bool</type>
+        <definition>bool MapEditor.GUI.TileSelector.Enabled</definition>
+        <argsstring></argsstring>
+        <name>Enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="38" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a2dc391535fbcae03bc0317367ad62a98" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int MapEditor.GUI.TileSelector.UpdateOrder</definition>
+        <argsstring></argsstring>
+        <name>UpdateOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aaa197247d50deab9b6aef605b1a63296" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref></type>
+        <definition>Tile MapEditor.GUI.TileSelector.SelectedTile</definition>
+        <argsstring></argsstring>
+        <name>SelectedTile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="66" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a4f05ceb835f4b38d6ed74a3e5aa0b294" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool MapEditor.GUI.TileSelector.IsTileSelected</definition>
+        <argsstring></argsstring>
+        <name>IsTileSelected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="74" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aa90645bab966f1a19ff673dc8935f66b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Vector2</type>
+        <definition>Vector2 MapEditor.GUI.TileSelector.Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="150" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a2c8ba9accc9c6d5f4d7983d6fe360968" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; EventArgs &gt;</type>
+        <definition>EventHandler&lt;EventArgs&gt; MapEditor.GUI.TileSelector.DrawOrderChanged</definition>
+        <argsstring></argsstring>
+        <name>DrawOrderChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="26" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aff96dd6c7b42275a1793ba608c45e485" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; EventArgs &gt;</type>
+        <definition>EventHandler&lt;EventArgs&gt; MapEditor.GUI.TileSelector.VisibleChanged</definition>
+        <argsstring></argsstring>
+        <name>VisibleChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="33" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a090a7315319d618219b5bdc9ade5749d" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; EventArgs &gt;</type>
+        <definition>EventHandler&lt;EventArgs&gt; MapEditor.GUI.TileSelector.EnabledChanged</definition>
+        <argsstring></argsstring>
+        <name>EnabledChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1afb66c0d6fa97efc4c15ccb7769688a4e" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; EventArgs &gt;</type>
+        <definition>EventHandler&lt;EventArgs&gt; MapEditor.GUI.TileSelector.UpdateOrderChanged</definition>
+        <argsstring></argsstring>
+        <name>UpdateOrderChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="47" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1acd1a7ac71b3503411be09d1429bd8ba1" prot="public" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_tile_sheet" kindref="compound">TileSheet</ref></type>
+        <definition>TileSheet MapEditor.GUI.TileSelector._tileSheet</definition>
+        <argsstring></argsstring>
+        <name>_tileSheet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="51" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a02dfddab459efac96c8f08319a7983fe" prot="public" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D MapEditor.GUI.TileSelector._backGround</definition>
+        <argsstring></argsstring>
+        <name>_backGround</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="52" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a594cf3bf078d8ae1e0b671d1dc0e82e2" prot="public" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle MapEditor.GUI.TileSelector._renderTarget</definition>
+        <argsstring></argsstring>
+        <name>_renderTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="53" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1af28b9bf648c86f7dd1e1d64e65360668" prot="public" static="no" mutable="no">
+        <type>SpriteBatch</type>
+        <definition>SpriteBatch MapEditor.GUI.TileSelector._spritebatch</definition>
+        <argsstring></argsstring>
+        <name>_spritebatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="54" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a7d6ea5328200291b7bf380e22596db8e" prot="public" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle MapEditor.GUI.TileSelector.sourceRectangle</definition>
+        <argsstring></argsstring>
+        <name>sourceRectangle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="55" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aa73f3552a8ee35f8b242f7748872383f" prot="public" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle MapEditor.GUI.TileSelector._LayOver</definition>
+        <argsstring></argsstring>
+        <name>_LayOver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="57" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a8ea2ec2420277e6aa8b233e5c0927a66" prot="public" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D MapEditor.GUI.TileSelector._LayOverText</definition>
+        <argsstring></argsstring>
+        <name>_LayOverText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="58" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a43c04604a545772cc8a12fa3a363de7c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref></type>
+        <definition>Tile MapEditor.GUI.TileSelector._selectedTile</definition>
+        <argsstring></argsstring>
+        <name>_selectedTile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="60" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a132df3dc404223bead6c3af9217bea44" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MapEditor.GUI.TileSelector._isTileSelected</definition>
+        <argsstring></argsstring>
+        <name>_isTileSelected</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="68" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a3c6a81c3e1a8b8e1adecdb0c3501288f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MapEditor.GUI.TileSelector.TileSelector</definition>
+        <argsstring>(SpriteBatch batch, TileSheet intialTilesheet, GraphicsDevice graphicsDevice, Texture2D Layover)</argsstring>
+        <name>TileSelector</name>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>batch</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tile_engine_1_1_tile_sheet" kindref="compound">TileSheet</ref></type>
+          <declname>intialTilesheet</declname>
+        </param>
+        <param>
+          <type>GraphicsDevice</type>
+          <declname>graphicsDevice</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>Layover</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="77" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="76" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1af50ea155fe017bdc1fc2dd0440164d9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapEditor.GUI.TileSelector.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_g_u_i_1_1_g_component_1a885a92b191148424d13210766f8b52fa">Update</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="94" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="93" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a00cebbbdd78141026e2c87b2ff8d3778" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapEditor.GUI.TileSelector.Draw</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>_spritebatch.Draw(_backGround, _renderTarget, Color.Gray); </para>        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="113" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="112" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aa54d664792eea0c34aaabda16894d3fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapEditor.GUI.TileSelector.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spritebatch)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="interface_g_u_i_1_1_g_component_1acf033aabe5063b034712f879b7908432">Draw</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spritebatch</declname>
+        </param>
+        <briefdescription>
+<para>When stored in a panel </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spritebatch</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="135" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="134" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="278">
+        <label>IUpdateable</label>
+      </node>
+      <node id="280">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="279">
+        <label>IDrawable</label>
+      </node>
+      <node id="277">
+        <label>MapEditor.GUI.TileSelector</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_tile_selector"/>
+        <childnode refid="278" relation="public-inheritance">
+        </childnode>
+        <childnode refid="279" relation="public-inheritance">
+        </childnode>
+        <childnode refid="280" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="282">
+        <label>IUpdateable</label>
+      </node>
+      <node id="284">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="283">
+        <label>IDrawable</label>
+      </node>
+      <node id="285">
+        <label>TileEngine.TileSheet</label>
+        <link refid="class_tile_engine_1_1_tile_sheet"/>
+      </node>
+      <node id="281">
+        <label>MapEditor.GUI.TileSelector</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_tile_selector"/>
+        <childnode refid="282" relation="public-inheritance">
+        </childnode>
+        <childnode refid="283" relation="public-inheritance">
+        </childnode>
+        <childnode refid="284" relation="public-inheritance">
+        </childnode>
+        <childnode refid="285" relation="usage">
+          <edgelabel>_tileSheet</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TileSelector.cs" bodystart="17" bodyend="151"/>
+    <listofallmembers>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a02dfddab459efac96c8f08319a7983fe" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>_backGround</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a132df3dc404223bead6c3af9217bea44" prot="private" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>_isTileSelected</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aa73f3552a8ee35f8b242f7748872383f" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>_LayOver</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a8ea2ec2420277e6aa8b233e5c0927a66" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>_LayOverText</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a594cf3bf078d8ae1e0b671d1dc0e82e2" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>_renderTarget</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a43c04604a545772cc8a12fa3a363de7c" prot="private" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>_selectedTile</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1af28b9bf648c86f7dd1e1d64e65360668" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>_spritebatch</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1acd1a7ac71b3503411be09d1429bd8ba1" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>_tileSheet</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a00cebbbdd78141026e2c87b2ff8d3778" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>Draw</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aa54d664792eea0c34aaabda16894d3fe" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>Draw</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a4b65676c5f6b914cb8c89880f0bbfe21" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>DrawOrder</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a2c8ba9accc9c6d5f4d7983d6fe360968" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>DrawOrderChanged</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a501f03705a1071f95c980cd08e55242b" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>Enabled</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a090a7315319d618219b5bdc9ade5749d" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>EnabledChanged</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a4f05ceb835f4b38d6ed74a3e5aa0b294" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>IsTileSelected</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aa90645bab966f1a19ff673dc8935f66b" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>Position</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aaa197247d50deab9b6aef605b1a63296" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>SelectedTile</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a7d6ea5328200291b7bf380e22596db8e" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>sourceRectangle</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a3c6a81c3e1a8b8e1adecdb0c3501288f" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>TileSelector</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1af50ea155fe017bdc1fc2dd0440164d9d" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>Update</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a2dc391535fbcae03bc0317367ad62a98" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>UpdateOrder</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1afb66c0d6fa97efc4c15ccb7769688a4e" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>UpdateOrderChanged</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a37696b1e3c82842d669382f5e0cd7e0f" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>Visible</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aff96dd6c7b42275a1793ba608c45e485" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TileSelector</scope><name>VisibleChanged</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

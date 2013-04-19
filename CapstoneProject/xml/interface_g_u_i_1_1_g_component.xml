@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="interface_g_u_i_1_1_g_component" kind="interface" prot="public">
+    <compoundname>GUI::GComponent</compoundname>
+    <derivedcompoundref refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button" prot="public" virt="non-virtual">GUI.Interfaces.IXButton</derivedcompoundref>
+    <derivedcompoundref refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel" prot="public" virt="non-virtual">GUI.Interfaces.IXPanel</derivedcompoundref>
+    <derivedcompoundref refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field" prot="public" virt="non-virtual">GUI.Interfaces.IXTextField</derivedcompoundref>
+    <derivedcompoundref refid="class_map_editor_1_1_g_u_i_1_1_map_window" prot="public" virt="non-virtual">MapEditor.GUI.MapWindow</derivedcompoundref>
+    <derivedcompoundref refid="class_map_editor_1_1_g_u_i_1_1_tile_selector" prot="public" virt="non-virtual">MapEditor.GUI.TileSelector</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_g_u_i_1_1_g_component_1aef3f78634fe0e377be97f0504f708b54" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Vector2</type>
+        <definition>Vector2 GUI.GComponent.Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/GComponent.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/GComponent.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_g_u_i_1_1_g_component_1a885a92b191148424d13210766f8b52fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI.GComponent.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1a2ef2e1a3cf1d90ed677f73c1f26abedd">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_save_button_1ac713d895627befc5d0be8d95001d1ba2">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1abbf682b8f211c5fb6605ef93c70a2139">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1a2b992051938bfced70c0ad40af1bb9c8">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1aac2172d3c8a07d11285fbe90d3067b00">Update</reimplementedby>
+        <reimplementedby refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1a79d9fc7b6b217678aca68d456f301b0a">Update</reimplementedby>
+        <reimplementedby refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a7013ec4e4249ac8c8cd1736987c9eab2">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1af50ea155fe017bdc1fc2dd0440164d9d">Update</reimplementedby>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_text_box_1ad6137db1bdbf3c34bcb1a235e2cfcabc">Update</reimplementedby>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_panel_1a77b78045ec592b8444b2bdcc8c0fd621">Update</reimplementedby>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_label_1af3d4d654583c643690189b385acd1b0f">Update</reimplementedby>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_button_1abb788f22518aa2bb6e4756c886e4893d">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a31121883b3bd1eacf6df05796d8395ea">Update</reimplementedby>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/GComponent.cs" line="22"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_u_i_1_1_g_component_1acf033aabe5063b034712f879b7908432" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI.GComponent.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spritebatch)</argsstring>
+        <name>Draw</name>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1a29083b46eec489374be52c03576da0d8">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1aad52d8c750a34b0d00083b4551e2dbb9">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1acca4d0cbe0521abe9227ebbda8856fc3">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a525bdeece9435acb94bdc6bd801df459">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1aa75b906694fbcae954e47fe5692bb567">Draw</reimplementedby>
+        <reimplementedby refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a94684fe585448d89eaa285f31f30c29a">Draw</reimplementedby>
+        <reimplementedby refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1a82594f4f1250e07597e0dfe892d2532f">Draw</reimplementedby>
+        <reimplementedby refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a7651357f1129294083713533861948bc">Draw</reimplementedby>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_label_1a4f262aa1bbfe0267b0ffa4a9e51a1c37">Draw</reimplementedby>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_text_box_1a16565a1a289a21e3e644d883eb2d4397">Draw</reimplementedby>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_panel_1ade6a14d34431af3acc2825f39bd480a3">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aa54d664792eea0c34aaabda16894d3fe">Draw</reimplementedby>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_button_1ac5106591eb34dc1edc9b4d468d2bcae5">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a19a07ab1384b0cde42fc394e213ec54b">Draw</reimplementedby>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spritebatch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/GComponent.cs" line="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Super Class for all <ref refid="namespace_g_u_i" kindref="compound">GUI</ref> components. This will allow you to use all the Components in a polymorphic way. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="75">
+        <label>GUI.Controls.XTextBox</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_text_box"/>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>GUI.GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="59">
+        <label>GUI.Interfaces.IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="58" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>MapEditor.GUI.SetGoundActiveButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>GUI.Controls.XPanel</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_panel"/>
+        <childnode refid="71" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>GUI.Interfaces.IXTextField</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field"/>
+        <childnode refid="58" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>GUI.Controls.Label</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_label"/>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>CapstoneProject.MoveButton</label>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>GUI.Interfaces.IXPanel</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel"/>
+        <childnode refid="58" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>MapEditor.GUI.SetFringeActive</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>MapEditor.GUI.ResetButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_reset_button"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>GUI.Controls.XButton</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_button"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>CapstoneProject.SaveKeys</label>
+        <link refid="class_capstone_project_1_1_save_keys"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>MapEditor.GUI.MapWindow</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_map_window"/>
+        <childnode refid="58" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>MapEditor.GUI.SaveButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_save_button"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>MapEditor.GUI.SetMaskActive</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>CapstoneProject.ImageButton</label>
+        <link refid="class_capstone_project_1_1_image_button"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>MapEditor.GUI.TileSelector</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_tile_selector"/>
+        <childnode refid="58" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>CapstoneProject.MainButton</label>
+        <link refid="class_capstone_project_1_1_main_button"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>CapstoneProject.MainSaveKeys</label>
+        <link refid="class_capstone_project_1_1_main_save_keys"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/GComponent.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/GComponent.cs" bodystart="18" bodyend="24"/>
+    <listofallmembers>
+      <member refid="interface_g_u_i_1_1_g_component_1acf033aabe5063b034712f879b7908432" prot="public" virt="non-virtual"><scope>GUI::GComponent</scope><name>Draw</name></member>
+      <member refid="interface_g_u_i_1_1_g_component_1aef3f78634fe0e377be97f0504f708b54" prot="public" virt="non-virtual"><scope>GUI::GComponent</scope><name>Position</name></member>
+      <member refid="interface_g_u_i_1_1_g_component_1a885a92b191148424d13210766f8b52fa" prot="public" virt="non-virtual"><scope>GUI::GComponent</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

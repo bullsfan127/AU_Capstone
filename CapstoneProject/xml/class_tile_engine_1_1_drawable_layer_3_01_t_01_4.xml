@@ -155,6 +155,71 @@
         </inbodydescription>
         <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="44" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="41" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a7d0fdc2aae39dada28c62d8f3fd0c7d5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.DrawableLayer&lt; T &gt;.MaxViewPortWidth</definition>
+        <argsstring></argsstring>
+        <name>MaxViewPortWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="65" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a841b718fa38fd09b377ea29de53070cf" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.DrawableLayer&lt; T &gt;.MaxViewPortHeight</definition>
+        <argsstring></argsstring>
+        <name>MaxViewPortHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="71" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a4e5cc41aa0e4d23057a5283300a579de" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>float</type>
+        <definition>float TileEngine.DrawableLayer&lt; T &gt;.Scale</definition>
+        <argsstring></argsstring>
+        <name>Scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="77" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1ac48d8a0f8376d63f424516ded2583f62" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.DrawableLayer&lt; T &gt;.MaxRows</definition>
+        <argsstring></argsstring>
+        <name>MaxRows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="83" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a0d81fc9d1e8cca2bbedb2048d3a12405" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.DrawableLayer&lt; T &gt;.MaxColumns</definition>
+        <argsstring></argsstring>
+        <name>MaxColumns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="89" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a75c68a1120810d78da78deb7e1842d6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -168,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="64" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="64" bodyend="64"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="94" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="94" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1afc8431acf52a3ccf8f0ba47688a26249" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -197,7 +262,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="71" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="70" bodyend="82"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="101" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="100" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1af6de54987654c082316ef350f02af005" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T</type>
@@ -223,7 +288,28 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="90" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="89" bodyend="103"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="120" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="119" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a8f46596a76dd8ff909d23a2502be5ee7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T TileEngine.DrawableLayer&lt; T &gt;.getItemAt</definition>
+        <argsstring>(Vector2 location, Avatar a)</argsstring>
+        <name>getItemAt</name>
+        <param>
+          <type>Vector2</type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tile_engine_1_1_avatar" kindref="compound">Avatar</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="136" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="135" bodyend="149"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a9743f584942c1445ab21fe4ae131c94e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -259,7 +345,32 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="111" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="110" bodyend="120"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="157" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="156" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a72395c623d7225528ad272426b7c2a00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.DrawableLayer&lt; T &gt;.setItemAt</definition>
+        <argsstring>(Vector2 location, T newItem, Avatar a)</argsstring>
+        <name>setItemAt</name>
+        <param>
+          <type>Vector2</type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>newItem</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tile_engine_1_1_avatar" kindref="compound">Avatar</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="169" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="168" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a4c1c5d0a76e1b61955e13196efe28e30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -306,7 +417,62 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="129" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="128" bodyend="174"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="187" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="186" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1acf8229012bcfc5b96ec3eef3015a92b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.DrawableLayer&lt; T &gt;.Draw</definition>
+        <argsstring>(SpriteBatch spriteBatch, GameTime gameTime, Vector2 centerLocation, Rectangle containedWithin, Avatar player)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>centerLocation</declname>
+        </param>
+        <param>
+          <type>Rectangle</type>
+          <declname>containedWithin</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tile_engine_1_1_avatar" kindref="compound">Avatar</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+<para>The Draw Method for a Drawable Layer </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spriteBatch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The spriteBatch that you are drawing with</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GameTime</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>centerLocation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Where the tile map should be centered.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="240" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="239" bodyend="294"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a6affc21c4de1bd7e35b7790a1ce7bfea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -331,7 +497,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="181" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="180" bodyend="184"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="301" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="300" bodyend="304"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -346,7 +512,7 @@
 </parameteritem>
 </parameterlist>
 </para>    </detaileddescription>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="18" bodyend="185"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/DrawableLayer.cs" bodystart="18" bodyend="305"/>
     <listofallmembers>
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a94a5e8638e8ab3ca8ead5a52ea149d35" prot="private" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>_layer</name></member>
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1af62046b130426c299d6761e4b4ad78a7" prot="private" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>_mapHeight</name></member>
@@ -357,13 +523,21 @@
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a1436226adde25a58dedd032d993112d3" prot="private" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>_maxViewPortWidth</name></member>
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a816a3a38820c675c94e701dbe3a68716" prot="private" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>_scale</name></member>
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a4c1c5d0a76e1b61955e13196efe28e30" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>Draw</name></member>
+      <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1acf8229012bcfc5b96ec3eef3015a92b0" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>Draw</name></member>
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a75c68a1120810d78da78deb7e1842d6d" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>DrawableLayer</name></member>
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1afc8431acf52a3ccf8f0ba47688a26249" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>DrawableLayer</name></member>
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1af6de54987654c082316ef350f02af005" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>getItemAt</name></member>
+      <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a8f46596a76dd8ff909d23a2502be5ee7" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>getItemAt</name></member>
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1aa04b0945dfae8242798a620ab7fb73ec" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>Layer</name></member>
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1ac92a235c150d1dd69bff8154a4f4f12e" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>MapHeight</name></member>
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a61f8c541810f2a3d4e0adfb6ccab9045" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>MapWidth</name></member>
+      <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a0d81fc9d1e8cca2bbedb2048d3a12405" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>MaxColumns</name></member>
+      <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1ac48d8a0f8376d63f424516ded2583f62" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>MaxRows</name></member>
+      <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a841b718fa38fd09b377ea29de53070cf" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>MaxViewPortHeight</name></member>
+      <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a7d0fdc2aae39dada28c62d8f3fd0c7d5" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>MaxViewPortWidth</name></member>
+      <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a4e5cc41aa0e4d23057a5283300a579de" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>Scale</name></member>
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a9743f584942c1445ab21fe4ae131c94e" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>setItemAt</name></member>
+      <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a72395c623d7225528ad272426b7c2a00" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>setItemAt</name></member>
       <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a6affc21c4de1bd7e35b7790a1ce7bfea" prot="public" virt="non-virtual"><scope>TileEngine::DrawableLayer&lt; T &gt;</scope><name>swapLayer</name></member>
     </listofallmembers>
   </compounddef>

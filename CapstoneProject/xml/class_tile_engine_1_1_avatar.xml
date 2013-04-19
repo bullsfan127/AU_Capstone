@@ -2,25 +2,79 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="class_tile_engine_1_1_avatar" kind="class" prot="public">
     <compoundname>TileEngine::Avatar</compoundname>
+    <derivedcompoundref refid="class_tile_engine_1_1_focal_point" prot="public" virt="non-virtual">TileEngine.FocalPoint</derivedcompoundref>
     <derivedcompoundref refid="class_tile_engine_1_1_item" prot="public" virt="non-virtual">TileEngine.Item</derivedcompoundref>
     <derivedcompoundref refid="class_tile_engine_1_1_monster" prot="public" virt="non-virtual">TileEngine.Monster</derivedcompoundref>
     <derivedcompoundref refid="class_tile_engine_1_1_player" prot="public" virt="non-virtual">TileEngine.Player</derivedcompoundref>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_tile_engine_1_1_avatar_1acaf90ade8532cc6e24a2ba769fd2ffec" prot="private" static="no" mutable="no">
+    <derivedcompoundref refid="class_tile_engine_1_1_weapon" prot="public" virt="non-virtual">TileEngine.Weapon</derivedcompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_avatar_1ac438acf71aa12a4ab41e4e473033b967" prot="public" static="no" mutable="no">
         <type>Vector2</type>
-        <definition>Vector2 TileEngine.Avatar._Position</definition>
+        <definition>Vector2 TileEngine.Avatar._offset</definition>
         <argsstring></argsstring>
-        <name>_Position</name>
+        <name>_offset</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" bodystart="18" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="19" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
+      <memberdef kind="property" id="class_tile_engine_1_1_avatar_1a88d7ebb026fba691d674379c3dd55b67" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Vector2</type>
+        <definition>Microsoft.Xna.Framework.Vector2 TileEngine.Avatar.Offset</definition>
+        <argsstring></argsstring>
+        <name>Offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_avatar_1ad57bccaabfea9a571f45e923c8f8fcea" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>float</type>
+        <definition>float TileEngine.Avatar.OX</definition>
+        <argsstring></argsstring>
+        <name>OX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_avatar_1ae93d9e869211bd685e335aadf0dc5f77" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>float</type>
+        <definition>float TileEngine.Avatar.OY</definition>
+        <argsstring></argsstring>
+        <name>OY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="47" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_avatar_1a0eef17049780a5aa303977444d0b5e9d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_tile_engine_1_1_animation" kindref="compound">TileEngine.Animation</ref></type>
+        <definition>TileEngine.Animation TileEngine.Avatar.PlayerAnimation</definition>
+        <argsstring></argsstring>
+        <name>PlayerAnimation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="56" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="property" id="class_tile_engine_1_1_avatar_1a9c6796fe77c217cfe59d8d1bf96397d1" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>Vector2</type>
         <definition>Vector2 TileEngine.Avatar.Position</definition>
@@ -32,7 +86,113 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" bodystart="22" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="65" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_avatar_1afb369b75dc84f09d4c98e6f02dcb1cbe" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>float</type>
+        <definition>float TileEngine.Avatar.X</definition>
+        <argsstring></argsstring>
+        <name>X</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="81" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_avatar_1a5780c90b61ef36f0fce907fb8ec1c396" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>float</type>
+        <definition>float TileEngine.Avatar.Y</definition>
+        <argsstring></argsstring>
+        <name>Y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="87" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_avatar_1a1b2b414ca47289ac2d68eeea89b6cd20" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TileEngine.Avatar._oX</definition>
+        <argsstring></argsstring>
+        <name>_oX</name>
+        <briefdescription>
+<para>Save offset values for serialization </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_avatar_1a8bb118d745aa282b3de62b226d9d8480" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TileEngine.Avatar._oY</definition>
+        <argsstring></argsstring>
+        <name>_oY</name>
+        <briefdescription>
+<para>Save offset values for serialization </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="35" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_avatar_1a3fb04fc51ab9c83dee60980ac733dc93" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_animation" kindref="compound">Animation</ref></type>
+        <definition>Animation TileEngine.Avatar._PlayerAnimation</definition>
+        <argsstring></argsstring>
+        <name>_PlayerAnimation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="50" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_avatar_1acaf90ade8532cc6e24a2ba769fd2ffec" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.Avatar._Position</definition>
+        <argsstring></argsstring>
+        <name>_Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="59" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_avatar_1a85fbb75fcb512bdfe4cc00a639053353" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TileEngine.Avatar._x</definition>
+        <argsstring></argsstring>
+        <name>_x</name>
+        <briefdescription>
+<para>save position values for serialization </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="70" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_avatar_1a9d13e83cee505a44bb3d6a47f0870311" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TileEngine.Avatar._y</definition>
+        <argsstring></argsstring>
+        <name>_y</name>
+        <briefdescription>
+<para>save position values for serialization </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="75" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="75" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -47,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" line="29" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" bodystart="29" bodyend="29"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="89" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="89" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_avatar_1a9d97952e8a9e1b347c841cfbe614b60b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -68,14 +228,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" line="32" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" bodystart="31" bodyend="34"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="92" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="91" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
         <definition>virtual void TileEngine.Avatar.Update</definition>
         <argsstring>(GameTime gameTime)</argsstring>
         <name>Update</name>
-        <reimplementedby refid="class_tile_engine_1_1_item_1a69ec70858dafdad165adb7cbcf55ceb7">Update</reimplementedby>
+        <reimplementedby refid="class_tile_engine_1_1_focal_point_1ae4cbab2ec4f622ddfb2804f3e07cae4c">Update</reimplementedby>
         <param>
           <type>GameTime</type>
           <declname>gameTime</declname>
@@ -86,13 +246,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" bodystart="36" bodyend="36"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="95" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="95" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_avatar_1a7d6106cb2e838e335d7b285d51312183" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
         <definition>virtual void TileEngine.Avatar.Draw</definition>
         <argsstring>(SpriteBatch spriteBatch, GameTime gameTime)</argsstring>
         <name>Draw</name>
+        <reimplementedby refid="class_tile_engine_1_1_focal_point_1af837293a4d8023834a9cd8188377a480">Draw</reimplementedby>
+        <reimplementedby refid="class_tile_engine_1_1_weapon_1a43797e71ed10bb9f6f87b49373328b61">Draw</reimplementedby>
+        <reimplementedby refid="class_tile_engine_1_1_monster_1a34a816dc4b4dc152f209ac3c882e41d9">Draw</reimplementedby>
         <reimplementedby refid="class_tile_engine_1_1_item_1a8371497aa849c48c146ffe16d10c8e61">Draw</reimplementedby>
         <reimplementedby refid="class_tile_engine_1_1_player_1a3150892fc641203e9bfee6b21a202ce5">Draw</reimplementedby>
         <param>
@@ -109,7 +272,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" line="39" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" bodystart="38" bodyend="42"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="98" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="97" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_avatar_1a565a17aa3aae06ca72673956919ebb97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TileEngine.Avatar.Initialize</definition>
+        <argsstring>(Texture2D spriteStrip, Vector2 position)</argsstring>
+        <name>Initialize</name>
+        <reimplementedby refid="class_tile_engine_1_1_boomerang_1a79dbb98047888493b6546d1903489386">Initialize</reimplementedby>
+        <reimplementedby refid="class_tile_engine_1_1_weapon_1a2c10ddf032fbfc2b42e06db57afc4314">Initialize</reimplementedby>
+        <reimplementedby refid="class_tile_engine_1_1_monster_1a667e1b992bc63e10adcf435039bfe38f">Initialize</reimplementedby>
+        <reimplementedby refid="class_tile_engine_1_1_item_1afce5a6dff00666aa8fd425a431562403">Initialize</reimplementedby>
+        <reimplementedby refid="class_tile_engine_1_1_player_1ae69cd25ae2416785bbdd7296b97eaf7b">Initialize</reimplementedby>
+        <param>
+          <type>Texture2D</type>
+          <declname>spriteStrip</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="102" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="101" bodyend="103"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -117,36 +306,104 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="2">
+      <node id="16">
+        <label>TileEngine.GroundMonster</label>
+        <link refid="class_tile_engine_1_1_ground_monster"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
         <label>TileEngine.Avatar</label>
         <link refid="class_tile_engine_1_1_avatar"/>
       </node>
-      <node id="4">
+      <node id="14">
         <label>TileEngine.Monster</label>
-        <childnode refid="2" relation="public-inheritance">
+        <link refid="class_tile_engine_1_1_monster"/>
+        <childnode refid="8" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="3">
+      <node id="11">
+        <label>TileEngine.Armor</label>
+        <link refid="class_tile_engine_1_1_armor"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>TileEngine.FocalPoint</label>
+        <link refid="class_tile_engine_1_1_focal_point"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>TileEngine.FlyingMonster</label>
+        <link refid="class_tile_engine_1_1_flying_monster"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>TileEngine.Coin</label>
+        <link refid="class_tile_engine_1_1_coin"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>TileEngine.Boomerang</label>
+        <link refid="class_tile_engine_1_1_boomerang"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>TileEngine.Weapon</label>
+        <link refid="class_tile_engine_1_1_weapon"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>TileEngine.Potion</label>
+        <link refid="class_tile_engine_1_1_potion"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
         <label>TileEngine.Item</label>
         <link refid="class_tile_engine_1_1_item"/>
-        <childnode refid="2" relation="public-inheritance">
+        <childnode refid="8" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5">
+      <node id="20">
+        <label>TileEngine.Sword</label>
+        <link refid="class_tile_engine_1_1_sword"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
         <label>TileEngine.Player</label>
         <link refid="class_tile_engine_1_1_player"/>
-        <childnode refid="2" relation="public-inheritance">
+        <childnode refid="8" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" line="17" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Avatar.cs" bodystart="16" bodyend="45"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" line="17" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Interfaces/Avatar.cs" bodystart="16" bodyend="104"/>
     <listofallmembers>
+      <member refid="class_tile_engine_1_1_avatar_1ac438acf71aa12a4ab41e4e473033b967" prot="public" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>_offset</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a1b2b414ca47289ac2d68eeea89b6cd20" prot="private" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>_oX</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a8bb118d745aa282b3de62b226d9d8480" prot="private" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>_oY</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a3fb04fc51ab9c83dee60980ac733dc93" prot="private" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>_PlayerAnimation</name></member>
       <member refid="class_tile_engine_1_1_avatar_1acaf90ade8532cc6e24a2ba769fd2ffec" prot="private" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>_Position</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a85fbb75fcb512bdfe4cc00a639053353" prot="private" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>_x</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a9d13e83cee505a44bb3d6a47f0870311" prot="private" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>_y</name></member>
       <member refid="class_tile_engine_1_1_avatar_1a7c6118c83ba18eeb197f04412130f3b5" prot="public" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>Avatar</name></member>
       <member refid="class_tile_engine_1_1_avatar_1a9d97952e8a9e1b347c841cfbe614b60b" prot="public" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>Avatar</name></member>
       <member refid="class_tile_engine_1_1_avatar_1a7d6106cb2e838e335d7b285d51312183" prot="public" virt="virtual"><scope>TileEngine::Avatar</scope><name>Draw</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a565a17aa3aae06ca72673956919ebb97" prot="public" virt="virtual"><scope>TileEngine::Avatar</scope><name>Initialize</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a88d7ebb026fba691d674379c3dd55b67" prot="public" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>Offset</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ad57bccaabfea9a571f45e923c8f8fcea" prot="public" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>OX</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ae93d9e869211bd685e335aadf0dc5f77" prot="public" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>OY</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a0eef17049780a5aa303977444d0b5e9d" prot="public" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>PlayerAnimation</name></member>
       <member refid="class_tile_engine_1_1_avatar_1a9c6796fe77c217cfe59d8d1bf96397d1" prot="public" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>Position</name></member>
       <member refid="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059" prot="public" virt="virtual"><scope>TileEngine::Avatar</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afb369b75dc84f09d4c98e6f02dcb1cbe" prot="public" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>X</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a5780c90b61ef36f0fce907fb8ec1c396" prot="public" virt="non-virtual"><scope>TileEngine::Avatar</scope><name>Y</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

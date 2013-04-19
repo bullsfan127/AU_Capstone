@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dir_61dfaf1237b5107f564e81e656b885b4" kind="dir">
+    <compoundname>TileEngine/Player</compoundname>
+    <innerfile refid="_controls_8cs">Controls.cs</innerfile>
+    <innerfile refid="_health_bar_8cs">HealthBar.cs</innerfile>
+    <innerfile refid="_player_8cs">Player.cs</innerfile>
+    <innerfile refid="_score_display_8cs">ScoreDisplay.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/"/>
+  </compounddef>
+</doxygen>

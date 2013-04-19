@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_focal_point" kind="class" prot="public">
+    <compoundname>TileEngine::FocalPoint</compoundname>
+    <basecompoundref refid="class_tile_engine_1_1_avatar" prot="public" virt="non-virtual">TileEngine.Avatar</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_focal_point_1af943b54080af4bb9ababb5bfba655f9d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.FocalPoint.width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+<para>viewport width </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_focal_point_1ab7e4cb6ce2967c009b9cf0133a8b05c4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.FocalPoint.height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+<para>viewport height </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_focal_point_1adafe13771154cbce6b59dd6aab258d1a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.FocalPoint.MaxXTiles</definition>
+        <argsstring></argsstring>
+        <name>MaxXTiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_focal_point_1a44cf7ae94c4fc415fc47f03c5b45cfb7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.FocalPoint.MaxYTiles</definition>
+        <argsstring></argsstring>
+        <name>MaxYTiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_focal_point_1a3da65ab61b944f5c7ee3d177a283d5a3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.FocalPoint.lastmove</definition>
+        <argsstring></argsstring>
+        <name>lastmove</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" line="29" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_focal_point_1ac752a9d33b7501fcb6f41972dc122dcb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.FocalPoint.FocalPoint</definition>
+        <argsstring>(Vector2 position, int tileWide, int tileHigh, int MaxX, int MaxY)</argsstring>
+        <name>FocalPoint</name>
+        <param>
+          <type>Vector2</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tileWide</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tileHigh</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>MaxX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>MaxY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" line="32" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" bodystart="31" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_focal_point_1a5383f757d39e6294e93fe9c3c97c7323" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.FocalPoint.FocalPoint</definition>
+        <argsstring>()</argsstring>
+        <name>FocalPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_focal_point_1ae4cbab2ec4f622ddfb2804f3e07cae4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TileEngine.FocalPoint.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <reimplements refid="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059">Update</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" bodystart="44" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_focal_point_1af837293a4d8023834a9cd8188377a480" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TileEngine.FocalPoint.Draw</definition>
+        <argsstring>(SpriteBatch spriteBatch, GameTime gameTime)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="class_tile_engine_1_1_avatar_1a7d6106cb2e838e335d7b285d51312183">Draw</reimplements>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" line="81" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" bodystart="80" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="48">
+        <label>TileEngine.FocalPoint</label>
+        <link refid="class_tile_engine_1_1_focal_point"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>Avatar</label>
+        <link refid="class_tile_engine_1_1_avatar"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="50">
+        <label>TileEngine.FocalPoint</label>
+        <link refid="class_tile_engine_1_1_focal_point"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>Avatar</label>
+        <link refid="class_tile_engine_1_1_avatar"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/FocalPoint.cs" bodystart="15" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_avatar_1ac438acf71aa12a4ab41e4e473033b967" prot="public" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>_offset</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a7c6118c83ba18eeb197f04412130f3b5" prot="public" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>Avatar</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a9d97952e8a9e1b347c841cfbe614b60b" prot="public" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>Avatar</name></member>
+      <member refid="class_tile_engine_1_1_focal_point_1af837293a4d8023834a9cd8188377a480" prot="public" virt="virtual"><scope>TileEngine::FocalPoint</scope><name>Draw</name></member>
+      <member refid="class_tile_engine_1_1_focal_point_1ac752a9d33b7501fcb6f41972dc122dcb" prot="public" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>FocalPoint</name></member>
+      <member refid="class_tile_engine_1_1_focal_point_1a5383f757d39e6294e93fe9c3c97c7323" prot="public" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>FocalPoint</name></member>
+      <member refid="class_tile_engine_1_1_focal_point_1ab7e4cb6ce2967c009b9cf0133a8b05c4" prot="private" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>height</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a565a17aa3aae06ca72673956919ebb97" prot="public" virt="virtual"><scope>TileEngine::FocalPoint</scope><name>Initialize</name></member>
+      <member refid="class_tile_engine_1_1_focal_point_1a3da65ab61b944f5c7ee3d177a283d5a3" prot="private" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>lastmove</name></member>
+      <member refid="class_tile_engine_1_1_focal_point_1adafe13771154cbce6b59dd6aab258d1a" prot="private" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>MaxXTiles</name></member>
+      <member refid="class_tile_engine_1_1_focal_point_1a44cf7ae94c4fc415fc47f03c5b45cfb7" prot="private" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>MaxYTiles</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a88d7ebb026fba691d674379c3dd55b67" prot="public" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>Offset</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ad57bccaabfea9a571f45e923c8f8fcea" prot="public" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>OX</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ae93d9e869211bd685e335aadf0dc5f77" prot="public" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>OY</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a0eef17049780a5aa303977444d0b5e9d" prot="public" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>PlayerAnimation</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a9c6796fe77c217cfe59d8d1bf96397d1" prot="public" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>Position</name></member>
+      <member refid="class_tile_engine_1_1_focal_point_1ae4cbab2ec4f622ddfb2804f3e07cae4c" prot="public" virt="virtual"><scope>TileEngine::FocalPoint</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_focal_point_1af943b54080af4bb9ababb5bfba655f9d" prot="private" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>width</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afb369b75dc84f09d4c98e6f02dcb1cbe" prot="public" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>X</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a5780c90b61ef36f0fce907fb8ec1c396" prot="public" virt="non-virtual"><scope>TileEngine::FocalPoint</scope><name>Y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

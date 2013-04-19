@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('class_tile_engine_1_1_item.html','');}
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Events</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('class_tile_engine_1_1_item.html','');}
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="class_tile_engine_1_1_item-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TileEngine.Item Class Reference</div>  </div>
@@ -117,7 +117,10 @@ Inheritance diagram for TileEngine.Item:</div>
  <div class="center">
   <img src="class_tile_engine_1_1_item.png" usemap="#TileEngine.Item_map" alt=""/>
   <map id="TileEngine.Item_map" name="TileEngine.Item_map">
-<area href="class_tile_engine_1_1_avatar.html" alt="TileEngine.Avatar" shape="rect" coords="0,0,113,24"/>
+<area href="class_tile_engine_1_1_avatar.html" alt="TileEngine.Avatar" shape="rect" coords="123,0,236,24"/>
+<area href="class_tile_engine_1_1_armor.html" alt="TileEngine.Armor" shape="rect" coords="0,112,113,136"/>
+<area href="class_tile_engine_1_1_coin.html" alt="TileEngine.Coin" shape="rect" coords="123,112,236,136"/>
+<area href="class_tile_engine_1_1_potion.html" alt="TileEngine.Potion" shape="rect" coords="246,112,359,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -125,32 +128,68 @@ Inheritance diagram for TileEngine.Item:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af758c77c4938c0aea63ad41397eac0e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#af758c77c4938c0aea63ad41397eac0e2">Item</a> ()</td></tr>
 <tr class="separator:af758c77c4938c0aea63ad41397eac0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16512fae01e1bfb589811d4f05e4f1ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a16512fae01e1bfb589811d4f05e4f1ca">Initialize</a> (Texture2D spriteStrip, Vector2 position)</td></tr>
-<tr class="separator:a16512fae01e1bfb589811d4f05e4f1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69ec70858dafdad165adb7cbcf55ceb7"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a69ec70858dafdad165adb7cbcf55ceb7">Update</a> (GameTime gameTime)</td></tr>
-<tr class="separator:a69ec70858dafdad165adb7cbcf55ceb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce5a6dff00666aa8fd425a431562403"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#afce5a6dff00666aa8fd425a431562403">Initialize</a> (Texture2D spriteStrip, Vector2 position)</td></tr>
+<tr class="separator:afce5a6dff00666aa8fd425a431562403"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8371497aa849c48c146ffe16d10c8e61"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a8371497aa849c48c146ffe16d10c8e61">Draw</a> (SpriteBatch spriteBatch, GameTime gameTime)</td></tr>
 <tr class="separator:a8371497aa849c48c146ffe16d10c8e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15a97d0bc2d0733ed3ead1cc5dd6bc86"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a15a97d0bc2d0733ed3ead1cc5dd6bc86">doAction</a> ()</td></tr>
-<tr class="separator:a15a97d0bc2d0733ed3ead1cc5dd6bc86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8aafecc151b7ee3db4857855125eb87"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#aa8aafecc151b7ee3db4857855125eb87">getHealth</a> ()</td></tr>
+<tr class="memdesc:aa8aafecc151b7ee3db4857855125eb87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the amount of health this item restores  <a href="#aa8aafecc151b7ee3db4857855125eb87">More...</a><br/></td></tr>
+<tr class="separator:aa8aafecc151b7ee3db4857855125eb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a504b5c1e8302e1bedad84a0d5ad406b6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a504b5c1e8302e1bedad84a0d5ad406b6">getScore</a> ()</td></tr>
+<tr class="memdesc:a504b5c1e8302e1bedad84a0d5ad406b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the amount of score this item increases  <a href="#a504b5c1e8302e1bedad84a0d5ad406b6">More...</a><br/></td></tr>
+<tr class="separator:a504b5c1e8302e1bedad84a0d5ad406b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b45cf501d1b3eb0b5f35d6619b8ed4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#ad4b45cf501d1b3eb0b5f35d6619b8ed4">getArmor</a> ()</td></tr>
+<tr class="memdesc:ad4b45cf501d1b3eb0b5f35d6619b8ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether this item is armor  <a href="#ad4b45cf501d1b3eb0b5f35d6619b8ed4">More...</a><br/></td></tr>
+<tr class="separator:ad4b45cf501d1b3eb0b5f35d6619b8ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_tile_engine_1_1_avatar"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_tile_engine_1_1_avatar')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_tile_engine_1_1_avatar.html">TileEngine.Avatar</a></td></tr>
 <tr class="memitem:a7c6118c83ba18eeb197f04412130f3b5 inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a7c6118c83ba18eeb197f04412130f3b5">Avatar</a> ()</td></tr>
 <tr class="separator:a7c6118c83ba18eeb197f04412130f3b5 inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d97952e8a9e1b347c841cfbe614b60b inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a9d97952e8a9e1b347c841cfbe614b60b">Avatar</a> (Vector2 position, Texture2D Texture)</td></tr>
 <tr class="separator:a9d97952e8a9e1b347c841cfbe614b60b inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa46c5a32ad8b677a0f2ce2ace163059 inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#afa46c5a32ad8b677a0f2ce2ace163059">Update</a> (GameTime gameTime)</td></tr>
+<tr class="separator:afa46c5a32ad8b677a0f2ce2ace163059 inherit pub_methods_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a327560f673cd2cd085f60d10dcee0a9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tile_engine_1_1_animation.html">Animation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a327560f673cd2cd085f60d10dcee0a9e">ItemAnimation</a></td></tr>
-<tr class="separator:a327560f673cd2cd085f60d10dcee0a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae34109abc7dbd43b5182bfc16208a844"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#ae34109abc7dbd43b5182bfc16208a844">Active</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a1c339bc4ed79c704a632a12915953ea3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a1c339bc4ed79c704a632a12915953ea3">SpriteWidth</a><code> [get, set]</code></td></tr>
+<tr class="separator:a1c339bc4ed79c704a632a12915953ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b1424c2b05dec840618e3eec516be6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a1b1424c2b05dec840618e3eec516be6c">SpriteHeight</a><code> [get, set]</code></td></tr>
+<tr class="separator:a1b1424c2b05dec840618e3eec516be6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dba96ad4193fd83559566237ab88c9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a5dba96ad4193fd83559566237ab88c9e">SpriteFrame</a><code> [get, set]</code></td></tr>
+<tr class="separator:a5dba96ad4193fd83559566237ab88c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae34109abc7dbd43b5182bfc16208a844"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#ae34109abc7dbd43b5182bfc16208a844">Active</a><code> [get, set]</code></td></tr>
 <tr class="separator:ae34109abc7dbd43b5182bfc16208a844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3823ba82a75de5a06bd1ccce7d59edbb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a3823ba82a75de5a06bd1ccce7d59edbb">Weapon</a><code> [get, set]</code></td></tr>
+<tr class="separator:a3823ba82a75de5a06bd1ccce7d59edbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b8176fc292277aa82567d18d1aa4c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a03b8176fc292277aa82567d18d1aa4c9">Score</a><code> [get, set]</code></td></tr>
+<tr class="separator:a03b8176fc292277aa82567d18d1aa4c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7b51679c509cb597525fb158dbcbdbf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#ac7b51679c509cb597525fb158dbcbdbf">Health</a><code> [get, set]</code></td></tr>
+<tr class="separator:ac7b51679c509cb597525fb158dbcbdbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a319f4895769341dac9c70bbc4e8a60a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a319f4895769341dac9c70bbc4e8a60a6">Armor</a><code> [get, set]</code></td></tr>
+<tr class="separator:a319f4895769341dac9c70bbc4e8a60a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11ab5036a094b10b0d8c279653b6819f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_item.html#a11ab5036a094b10b0d8c279653b6819f">Scale</a><code> [get, set]</code></td></tr>
+<tr class="separator:a11ab5036a094b10b0d8c279653b6819f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_class_tile_engine_1_1_avatar"><td colspan="2" onclick="javascript:toggleInherit('properties_class_tile_engine_1_1_avatar')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_tile_engine_1_1_avatar.html">TileEngine.Avatar</a></td></tr>
+<tr class="memitem:a88d7ebb026fba691d674379c3dd55b67 inherit properties_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">Microsoft.Xna.Framework.Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a88d7ebb026fba691d674379c3dd55b67">Offset</a><code> [get, set]</code></td></tr>
+<tr class="separator:a88d7ebb026fba691d674379c3dd55b67 inherit properties_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad57bccaabfea9a571f45e923c8f8fcea inherit properties_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#ad57bccaabfea9a571f45e923c8f8fcea">OX</a><code> [get, set]</code></td></tr>
+<tr class="separator:ad57bccaabfea9a571f45e923c8f8fcea inherit properties_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae93d9e869211bd685e335aadf0dc5f77 inherit properties_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#ae93d9e869211bd685e335aadf0dc5f77">OY</a><code> [get, set]</code></td></tr>
+<tr class="separator:ae93d9e869211bd685e335aadf0dc5f77 inherit properties_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eef17049780a5aa303977444d0b5e9d inherit properties_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tile_engine_1_1_animation.html">TileEngine.Animation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a0eef17049780a5aa303977444d0b5e9d">PlayerAnimation</a><code> [get, set]</code></td></tr>
+<tr class="separator:a0eef17049780a5aa303977444d0b5e9d inherit properties_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6796fe77c217cfe59d8d1bf96397d1 inherit properties_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a><code> [get, set]</code></td></tr>
+<tr class="separator:a9c6796fe77c217cfe59d8d1bf96397d1 inherit properties_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb369b75dc84f09d4c98e6f02dcb1cbe inherit properties_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#afb369b75dc84f09d4c98e6f02dcb1cbe">X</a><code> [get, set]</code></td></tr>
+<tr class="separator:afb369b75dc84f09d4c98e6f02dcb1cbe inherit properties_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5780c90b61ef36f0fce907fb8ec1c396 inherit properties_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a5780c90b61ef36f0fce907fb8ec1c396">Y</a><code> [get, set]</code></td></tr>
+<tr class="separator:a5780c90b61ef36f0fce907fb8ec1c396 inherit properties_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header properties_class_tile_engine_1_1_avatar"><td colspan="2" onclick="javascript:toggleInherit('properties_class_tile_engine_1_1_avatar')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_tile_engine_1_1_avatar.html">TileEngine.Avatar</a></td></tr>
-<tr class="memitem:a9c6796fe77c217cfe59d8d1bf96397d1 inherit properties_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a><code> [get, set]</code></td></tr>
-<tr class="separator:a9c6796fe77c217cfe59d8d1bf96397d1 inherit properties_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_tile_engine_1_1_avatar"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_tile_engine_1_1_avatar')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_tile_engine_1_1_avatar.html">TileEngine.Avatar</a></td></tr>
+<tr class="memitem:ac438acf71aa12a4ab41e4e473033b967 inherit pub_attribs_class_tile_engine_1_1_avatar"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#ac438acf71aa12a4ab41e4e473033b967">_offset</a></td></tr>
+<tr class="separator:ac438acf71aa12a4ab41e4e473033b967 inherit pub_attribs_class_tile_engine_1_1_avatar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -169,41 +208,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_item_8cs_source.html#l00023">23</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00099">99</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{ }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a15a97d0bc2d0733ed3ead1cc5dd6bc86"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void TileEngine.Item.doAction </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_item_8cs_source.html#l00054">54</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="comment">// Call an action </span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a class="anchor" id="a8371497aa849c48c146ffe16d10c8e61"></a>
 <div class="memitem">
 <div class="memproto">
@@ -238,22 +248,96 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_tile_engine_1_1_avatar.html#a7d6106cb2e838e335d7b285d51312183">TileEngine.Avatar</a>.</p>
 
-<p>Definition at line <a class="el" href="_item_8cs_source.html#l00046">46</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="comment">//going to need to check whether the</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="class_tile_engine_1_1_item.html#a327560f673cd2cd085f60d10dcee0a9e">ItemAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#ab4dd3a8d57cc8de71f8863ff91238eea">Draw</a>(spriteBatch);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            base.Draw(spriteBatch, gameTime);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00110">110</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            spriteBatch.Begin();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="comment">// SpriteStip is image</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="comment">// Position is x,y vector of image location</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="comment">// 0.4f is scaling of image</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            spriteBatch.Draw(SpriteStrip, <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>, null, Color.White, 0.0f, Vector2.Zero, _scale, SpriteEffects.None, 0.0f);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            spriteBatch.End();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a16512fae01e1bfb589811d4f05e4f1ca"></a>
+<a class="anchor" id="ad4b45cf501d1b3eb0b5f35d6619b8ed4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void TileEngine.Item.Initialize </td>
+          <td class="memname">bool TileEngine.Item.getArmor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get whether this item is armor </p>
+<dl class="section return"><dt>Returns</dt><dd>True for armor</dd></dl>
+
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00142">142</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">return</span> _armor;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aa8aafecc151b7ee3db4857855125eb87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileEngine.Item.getHealth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the amount of health this item restores </p>
+<dl class="section return"><dt>Returns</dt><dd>Health increased</dd></dl>
+
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00124">124</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordflow">return</span> _health;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a504b5c1e8302e1bedad84a0d5ad406b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileEngine.Item.getScore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the amount of score this item increases </p>
+<dl class="section return"><dt>Returns</dt><dd>Score increased</dd></dl>
+
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00133">133</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">return</span> _score;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="afce5a6dff00666aa8fd425a431562403"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void TileEngine.Item.Initialize </td>
           <td>(</td>
           <td class="paramtype">Texture2D&#160;</td>
           <td class="paramname"><em>spriteStrip</em>, </td>
@@ -270,36 +354,6 @@ Additional Inherited Members</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_item_8cs_source.html#l00027">27</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <a class="code" href="class_tile_engine_1_1_item.html#a327560f673cd2cd085f60d10dcee0a9e">ItemAnimation</a> = <span class="keyword">new</span> Animation();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="comment">// Set starting position of the player</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a> = position;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="comment">//player Animation initialize</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="class_tile_engine_1_1_item.html#a327560f673cd2cd085f60d10dcee0a9e">ItemAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a7a7907093bd3db85bce93c7f901e1426" title="Initializes the Animation code ">Initialize</a>(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="comment">// Set the player to be active</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="class_tile_engine_1_1_item.html#ae34109abc7dbd43b5182bfc16208a844">Active</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a class="anchor" id="a69ec70858dafdad165adb7cbcf55ceb7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">override void TileEngine.Item.Update </td>
-          <td>(</td>
-          <td class="paramtype">GameTime&#160;</td>
-          <td class="paramname"><em>gameTime</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
@@ -307,49 +361,220 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_tile_engine_1_1_avatar.html#afa46c5a32ad8b677a0f2ce2ace163059">TileEngine.Avatar</a>.</p>
+<p>Reimplemented from <a class="el" href="class_tile_engine_1_1_avatar.html#a565a17aa3aae06ca72673956919ebb97">TileEngine.Avatar</a>.</p>
 
-<p>Definition at line <a class="el" href="_item_8cs_source.html#l00038">38</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">// Vector2 Position = Vector2.Zero;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <a class="code" href="class_tile_engine_1_1_item.html#a327560f673cd2cd085f60d10dcee0a9e">ItemAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a75d52f1bc2b67d0bc012ad6569bfe006">Position</a> = <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="class_tile_engine_1_1_item.html#a327560f673cd2cd085f60d10dcee0a9e">ItemAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a2614c6eff471aecefade8b906a489eeb">Update</a>(gameTime);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            base.Update(gameTime);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00101">101</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="comment">// Set starting position of the player</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a> = position;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <a class="code" href="class_tile_engine_1_1_avatar.html#afb369b75dc84f09d4c98e6f02dcb1cbe">X</a> = <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.X;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <a class="code" href="class_tile_engine_1_1_avatar.html#a5780c90b61ef36f0fce907fb8ec1c396">Y</a> = <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>.Y;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            SpriteStrip = spriteStrip;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
+<h2 class="groupheader">Property Documentation</h2>
 <a class="anchor" id="ae34109abc7dbd43b5182bfc16208a844"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool TileEngine.Item.Active</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00048">48</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a319f4895769341dac9c70bbc4e8a60a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TileEngine.Item.Armor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00083">83</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7b51679c509cb597525fb158dbcbdbf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileEngine.Item.Health</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00074">74</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a11ab5036a094b10b0d8c279653b6819f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TileEngine.Item.Scale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00091">91</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03b8176fc292277aa82567d18d1aa4c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileEngine.Item.Score</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00065">65</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5dba96ad4193fd83559566237ab88c9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileEngine.Item.SpriteFrame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00039">39</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1b1424c2b05dec840618e3eec516be6c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileEngine.Item.SpriteHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00030">30</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c339bc4ed79c704a632a12915953ea3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileEngine.Item.SpriteWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_item_8cs_source.html#l00021">21</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a327560f673cd2cd085f60d10dcee0a9e"></a>
+<a class="anchor" id="a3823ba82a75de5a06bd1ccce7d59edbb"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tile_engine_1_1_animation.html">Animation</a> TileEngine.Item.ItemAnimation</td>
+          <td class="memname">int TileEngine.Item.Weapon</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_item_8cs_source.html#l00018">18</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
+<p>Definition at line <a class="el" href="_item_8cs_source.html#l00056">56</a> of file <a class="el" href="_item_8cs_source.html">Item.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>TileEngine/<a class="el" href="_item_8cs_source.html">Item.cs</a></li>
+<li>TileEngine/RolePlay/<a class="el" href="_item_8cs_source.html">Item.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -357,7 +582,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_tile_engine.html">TileEngine</a></li><li class="navelem"><a class="el" href="class_tile_engine_1_1_item.html">Item</a></li>
-    <li class="footer">Generated on Fri Mar 22 2013 21:04:50 for Fat Joe's Nightmare by
+    <li class="footer">Generated on Fri Apr 19 2013 18:14:45 for Fat Joe's Nightmare by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

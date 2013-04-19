@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('_tile_sheet_8cs_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Events</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -121,31 +121,61 @@ $(document).ready(function(){initNavTree('_tile_sheet_8cs_source.html','');});
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_tile_sheet.html">   15</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_tile_engine_1_1_tile_sheet.html">TileSheet</a></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">private</span> Texture2D _tileSheet;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">public</span> Texture2D <a class="code" href="class_tile_engine_1_1_tile_sheet.html#a6d1063b12cabd250a4f6a3a286e1e18e">tileSheet</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_tile_sheet.html#a6d1063b12cabd250a4f6a3a286e1e18e">   20</a></span>&#160;        {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _tileSheet; }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">set</span> { _tileSheet = value; }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_tile_sheet.html#a74fd1ec39c58a55b1494a6f5071c837d">   27</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_tile_engine_1_1_tile_sheet.html#a74fd1ec39c58a55b1494a6f5071c837d">TileSheet</a>(Texture2D texture)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        { </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> _tileSize;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">string</span> _name;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_tile_engine_1_1_tile_sheet.html#a8b7b813daa0aa62280ff50cb6ca95040">TileSize</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_tile_sheet.html#a8b7b813daa0aa62280ff50cb6ca95040">   22</a></span>&#160;        {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _tileSize; }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">set</span> { _tileSize = value; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">public</span> Texture2D <a class="code" href="class_tile_engine_1_1_tile_sheet.html#a6d1063b12cabd250a4f6a3a286e1e18e">tileSheet</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_tile_sheet.html#a6d1063b12cabd250a4f6a3a286e1e18e">   28</a></span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _tileSheet; }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keyword">set</span> { _tileSheet = value; }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_tile_sheet.html#a92af49ae2305b38a3bd38b278c430e61">   33</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_tile_engine_1_1_tile_sheet.html#a92af49ae2305b38a3bd38b278c430e61">TileSheet</a>(Texture2D texture, <span class="keywordtype">int</span> <a class="code" href="class_tile_engine_1_1_tile_sheet.html#a8b7b813daa0aa62280ff50cb6ca95040">TileSize</a>, <span class="keywordtype">string</span> name)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="class_tile_engine_1_1_tile_sheet.html#a6d1063b12cabd250a4f6a3a286e1e18e">tileSheet</a> = texture;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            _tileSize = <a class="code" href="class_tile_engine_1_1_tile_sheet.html#a8b7b813daa0aa62280ff50cb6ca95040">TileSize</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            _name = name;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_tile_sheet.html#a35974ad12a716c40b702df6991d5325d">   40</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_tile_engine_1_1_tile.html" title="Stores all information required to render a tile to the screen ">Tile</a> <a class="code" href="class_tile_engine_1_1_tile_sheet.html#a35974ad12a716c40b702df6991d5325d">getTileAt</a>(Vector2 Target)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="class_tile_engine_1_1_tile.html" title="Stores all information required to render a tile to the screen ">Tile</a> output;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordtype">int</span> x = (int)Target.X;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordtype">int</span> y = (<span class="keywordtype">int</span>)Target.Y;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            Rectangle sourceRect = Rectangle.Empty;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            Rectangle[,] sourceRectangles = <span class="keyword">new</span> Rectangle[((<a class="code" href="class_tile_engine_1_1_tile_sheet.html#a6d1063b12cabd250a4f6a3a286e1e18e">tileSheet</a>.Width) / _tileSize), ((<a class="code" href="class_tile_engine_1_1_tile_sheet.html#a6d1063b12cabd250a4f6a3a286e1e18e">tileSheet</a>.Height) / _tileSize)];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; (<a class="code" href="class_tile_engine_1_1_tile_sheet.html#a6d1063b12cabd250a4f6a3a286e1e18e">tileSheet</a>.Width) / _tileSize; i++)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> q = 0; q &lt; (<a class="code" href="class_tile_engine_1_1_tile_sheet.html#a6d1063b12cabd250a4f6a3a286e1e18e">tileSheet</a>.Height) / _tileSize; q++)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    sourceRectangles[i, q] = <span class="keyword">new</span> Rectangle(i * _tileSize, q * _tileSize, _tileSize, _tileSize);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            Rectangle selection = <span class="keyword">new</span> Rectangle(x, y, 1, 1);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; (<a class="code" href="class_tile_engine_1_1_tile_sheet.html#a6d1063b12cabd250a4f6a3a286e1e18e">tileSheet</a>.Width) / _tileSize; i++)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> q = 0; q &lt; (<a class="code" href="class_tile_engine_1_1_tile_sheet.html#a6d1063b12cabd250a4f6a3a286e1e18e">tileSheet</a>.Height) / _tileSize; q++)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <span class="keywordflow">if</span> (selection.Intersects(sourceRectangles[i, q]))</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        sourceRect = sourceRectangles[i, q];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            output = <span class="keyword">new</span> <a class="code" href="class_tile_engine_1_1_tile.html" title="Stores all information required to render a tile to the screen ">Tile</a>(sourceRect, Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            output.<a class="code" href="class_tile_engine_1_1_tile.html#aaf5725a5761dda6ed078ef8825167124">setTexture</a>(_tileSheet);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            output.<a class="code" href="class_tile_engine_1_1_tile.html#a9ae9e8e696081b0d07ae6bc9754ef00b">Name</a> = _name;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">return</span> output;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d0a77c1a97cf39b07408c9faab11faad.html">TileEngine</a></li><li class="navelem"><a class="el" href="_tile_sheet_8cs.html">TileSheet.cs</a></li>
-    <li class="footer">Generated on Fri Mar 22 2013 21:04:49 for Fat Joe's Nightmare by
+    <li class="footer">Generated on Fri Apr 19 2013 18:14:42 for Fat Joe's Nightmare by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

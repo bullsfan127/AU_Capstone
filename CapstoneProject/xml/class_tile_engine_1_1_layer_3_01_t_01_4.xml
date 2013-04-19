@@ -46,7 +46,20 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="23" bodyend="28"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="23" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_layer_3_01_t_01_4_1a8779994938c3c13b396fe1ca96487981" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.Layer&lt; T &gt;.Layer</definition>
+        <argsstring>()</argsstring>
+        <name>Layer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="29" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_layer_3_01_t_01_4_1ab7bb577b8cba3afa6615d5ce7e517bcb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T</type>
@@ -72,7 +85,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="35" bodyend="49"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="39" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="38" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_layer_3_01_t_01_4_1ae348117cda11530eb1bc3448a772ea03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -108,19 +121,46 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="57" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="56" bodyend="67"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="60" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="59" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_layer_3_01_t_01_4_1abcfe1d58fe394bd688ec617b589a505b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Layer&lt; T &gt;.setItemAt</definition>
+        <argsstring>(Vector2 location, T newItem, Avatar a)</argsstring>
+        <name>setItemAt</name>
+        <param>
+          <type>Vector2</type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>newItem</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tile_engine_1_1_avatar" kindref="compound">Avatar</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="72" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="71" bodyend="81"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="15" bodyend="70"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Layer.cs" bodystart="15" bodyend="82"/>
     <listofallmembers>
       <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1ab7bb577b8cba3afa6615d5ce7e517bcb" prot="public" virt="non-virtual"><scope>TileEngine::Layer&lt; T &gt;</scope><name>getItemAt</name></member>
       <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1ab2027713dabf92056a4679b2b011deb4" prot="public" virt="non-virtual"><scope>TileEngine::Layer&lt; T &gt;</scope><name>Layer</name></member>
+      <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1a8779994938c3c13b396fe1ca96487981" prot="public" virt="non-virtual"><scope>TileEngine::Layer&lt; T &gt;</scope><name>Layer</name></member>
       <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1a0330964c20aef27f056ce6fd6a956d28" prot="private" virt="non-virtual"><scope>TileEngine::Layer&lt; T &gt;</scope><name>layer</name></member>
       <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1ae348117cda11530eb1bc3448a772ea03" prot="public" virt="non-virtual"><scope>TileEngine::Layer&lt; T &gt;</scope><name>setItemAt</name></member>
+      <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1abcfe1d58fe394bd688ec617b589a505b" prot="public" virt="non-virtual"><scope>TileEngine::Layer&lt; T &gt;</scope><name>setItemAt</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

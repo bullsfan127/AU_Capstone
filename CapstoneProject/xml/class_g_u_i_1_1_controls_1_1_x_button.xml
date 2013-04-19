@@ -1,0 +1,534 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_g_u_i_1_1_controls_1_1_x_button" kind="class" prot="public">
+    <compoundname>GUI::Controls::XButton</compoundname>
+    <basecompoundref refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button" prot="public" virt="non-virtual">GUI.Interfaces.IXButton</basecompoundref>
+    <derivedcompoundref refid="class_capstone_project_1_1_image_button" prot="public" virt="non-virtual">CapstoneProject.ImageButton</derivedcompoundref>
+    <derivedcompoundref refid="class_capstone_project_1_1_main_button" prot="public" virt="non-virtual">CapstoneProject.MainButton</derivedcompoundref>
+    <derivedcompoundref refid="class_capstone_project_1_1_main_save_keys" prot="public" virt="non-virtual">CapstoneProject.MainSaveKeys</derivedcompoundref>
+    <derivedcompoundref refid="class_capstone_project_1_1_move_button" prot="public" virt="non-virtual">CapstoneProject.MoveButton</derivedcompoundref>
+    <derivedcompoundref refid="class_capstone_project_1_1_save_keys" prot="public" virt="non-virtual">CapstoneProject.SaveKeys</derivedcompoundref>
+    <derivedcompoundref refid="class_map_editor_1_1_g_u_i_1_1_reset_button" prot="public" virt="non-virtual">MapEditor.GUI.ResetButton</derivedcompoundref>
+    <derivedcompoundref refid="class_map_editor_1_1_g_u_i_1_1_save_button" prot="public" virt="non-virtual">MapEditor.GUI.SaveButton</derivedcompoundref>
+    <derivedcompoundref refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active" prot="public" virt="non-virtual">MapEditor.GUI.SetFringeActive</derivedcompoundref>
+    <derivedcompoundref refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button" prot="public" virt="non-virtual">MapEditor.GUI.SetGoundActiveButton</derivedcompoundref>
+    <derivedcompoundref refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active" prot="public" virt="non-virtual">MapEditor.GUI.SetMaskActive</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_button_1a285ed29c7d466eaa1f0ede8e097c2a05" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GUI.Controls.XButton._changeColor</definition>
+        <argsstring></argsstring>
+        <name>_changeColor</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_button_1a39e4cef15309ae35f14d841971c6a092" prot="private" static="no" mutable="no">
+        <type><ref refid="class_g_u_i_1_1_controls_1_1_x_button_1add70c891819e41bc30b3e06a481603bc" kindref="member">Color</ref></type>
+        <definition>Color GUI.Controls.XButton._color</definition>
+        <argsstring></argsstring>
+        <name>_color</name>
+        <initializer>= Color.White</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="32" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_button_1acaa391a15a1b23e16ae386a31ffd5523" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GUI.Controls.XButton._fireAgain</definition>
+        <argsstring></argsstring>
+        <name>_fireAgain</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_button_1a8751546f39cc1554e149942e8c864b67" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GUI.Controls.XButton.lastclicked</definition>
+        <argsstring></argsstring>
+        <name>lastclicked</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="48" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_button_1a44d3352cb0cefe3a96ad2a8c712284c5" prot="private" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D GUI.Controls.XButton._ButtonImage</definition>
+        <argsstring></argsstring>
+        <name>_ButtonImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="51" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_button_1a8e44b8683270df1bf558c671921dad8d" prot="private" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle GUI.Controls.XButton._ButtonRep</definition>
+        <argsstring></argsstring>
+        <name>_ButtonRep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="65" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_button_1a76a6ddc98b082f4584eb9ab9e8a77bf2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GUI.Controls.XButton._Clicked</definition>
+        <argsstring></argsstring>
+        <name>_Clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="79" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_button_1a20d190284591081fb64966efc4a540e1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GUI.Controls.XButton._WasClicked</definition>
+        <argsstring></argsstring>
+        <name>_WasClicked</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="93" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_button_1afdd1772f405a90aed649e70b91ab3aea" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GUI.Controls.XButton._Enabled</definition>
+        <argsstring></argsstring>
+        <name>_Enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="107" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_button_1aea3bee91aac01ded4cd07362d8f66f4c" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 GUI.Controls.XButton._Position</definition>
+        <argsstring></argsstring>
+        <name>_Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="121" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_button_1a4ed1dc21bd0ba765b03562ca3b79e288" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool GUI.Controls.XButton.ChangeColor</definition>
+        <argsstring></argsstring>
+        <name>ChangeColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_button_1add70c891819e41bc30b3e06a481603bc" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Color</type>
+        <definition>Microsoft.Xna.Framework.Color GUI.Controls.XButton.Color</definition>
+        <argsstring></argsstring>
+        <name>Color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="38" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_button_1a8beb21cded9bdecef62937719e7d8571" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool GUI.Controls.XButton.FireAgain</definition>
+        <argsstring></argsstring>
+        <name>FireAgain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="46" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_button_1aa1f6541223f0fb35db7b41e8c2803260" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Texture2D</type>
+        <definition>Texture2D GUI.Controls.XButton.ButtonImage</definition>
+        <argsstring></argsstring>
+        <name>ButtonImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="63" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_button_1a1fff2b82126e30b8b06b103a62bec06b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Rectangle</type>
+        <definition>Rectangle GUI.Controls.XButton.ButtonRep</definition>
+        <argsstring></argsstring>
+        <name>ButtonRep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="77" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_button_1a691dc660d0028dc03882dc009ac47bb2" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool GUI.Controls.XButton.Clicked</definition>
+        <argsstring></argsstring>
+        <name>Clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="91" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_button_1a4f5c8bcbe882e1bc2e70105d8cb40a75" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool GUI.Controls.XButton.WasClicked</definition>
+        <argsstring></argsstring>
+        <name>WasClicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="105" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_button_1ac2b46e285961684f91cc9d79f4fd0c44" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool GUI.Controls.XButton.Enabled</definition>
+        <argsstring></argsstring>
+        <name>Enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="119" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_button_1aed6404bed1698922f7dab913dd90af1d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Vector2</type>
+        <definition>Vector2 GUI.Controls.XButton.Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="135" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_button_1ab9f44f9d0519adb20d3b3476767698da" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int GUI.Controls.XButton.COOLDOWN</definition>
+        <argsstring></argsstring>
+        <name>COOLDOWN</name>
+        <initializer>= 300</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_g_u_i_1_1_controls_1_1_x_button_1a3cda83e9066b75c36b6ad9e4bc052bb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GUI.Controls.XButton.XButton</definition>
+        <argsstring>(Vector2 buttonPosition, Texture2D Texture)</argsstring>
+        <name>XButton</name>
+        <param>
+          <type>Vector2</type>
+          <declname>buttonPosition</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>Texture</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="138" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="137" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1_1_controls_1_1_x_button_1abb788f22518aa2bb6e4756c886e4893d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void GUI.Controls.XButton.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a7013ec4e4249ac8c8cd1736987c9eab2">Update</reimplements>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1a2ef2e1a3cf1d90ed677f73c1f26abedd">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_save_button_1ac713d895627befc5d0be8d95001d1ba2">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1abbf682b8f211c5fb6605ef93c70a2139">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1a2b992051938bfced70c0ad40af1bb9c8">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1aac2172d3c8a07d11285fbe90d3067b00">Update</reimplementedby>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Update method does all of the detection handling for the button. Whether it was clicked or if its on cooldown. It will remain the same accross all buttons the only method to be changed is the FireEvent Method. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="150" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="149" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1_1_controls_1_1_x_button_1ac5106591eb34dc1edc9b4d468d2bcae5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void GUI.Controls.XButton.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spriteBatch)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a7651357f1129294083713533861948bc">Draw</reimplements>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1a29083b46eec489374be52c03576da0d8">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1aad52d8c750a34b0d00083b4551e2dbb9">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1acca4d0cbe0521abe9227ebbda8856fc3">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a525bdeece9435acb94bdc6bd801df459">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1aa75b906694fbcae954e47fe5692bb567">Draw</reimplementedby>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <briefdescription>
+<para>Draw Method just draws the button into the target area. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spriteBatch</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="188" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="187" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1_1_controls_1_1_x_button_1ae474e242ee1c62dde757628d922f9065" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void GUI.Controls.XButton.FireEvent</definition>
+        <argsstring>()</argsstring>
+        <name>FireEvent</name>
+        <reimplements refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a66ee7251f63b706bb9051403bdb94b34">FireEvent</reimplements>
+        <reimplementedby refid="class_capstone_project_1_1_save_keys_1a658b25e6a85f816dba872ae68c7104d4">FireEvent</reimplementedby>
+        <reimplementedby refid="class_capstone_project_1_1_main_button_1a7e5e95263a23f86ae77db571e62a9f7b">FireEvent</reimplementedby>
+        <reimplementedby refid="class_capstone_project_1_1_main_save_keys_1a1fc1c479e93b6db17058ed36918754f5">FireEvent</reimplementedby>
+        <reimplementedby refid="class_capstone_project_1_1_image_button_1aac4d1d7b9bf87ff39984ffbfc78e815e">FireEvent</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1a6406e60dfa96d735d71e859ce69d5df8">FireEvent</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1a9955b8fc304648d39cc086ca7ae2e997">FireEvent</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1afb9c3580d7297e3986d3b82b605b8ed9">FireEvent</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a123fc02f59436ef09b8fe0cfee633a74">FireEvent</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1a311da0bcbf027e571254f32279ffbf22">FireEvent</reimplementedby>
+        <briefdescription>
+<para>Fire event is what the button actually does. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="198" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="197" bodyend="199"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="305">
+        <label>MapEditor.GUI.SetGoundActiveButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button"/>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="296">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="300">
+        <label>CapstoneProject.MoveButton</label>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="304">
+        <label>MapEditor.GUI.SetFringeActive</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active"/>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="302">
+        <label>MapEditor.GUI.ResetButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_reset_button"/>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>GUI.Controls.XButton</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_button"/>
+        <childnode refid="295" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="301">
+        <label>CapstoneProject.SaveKeys</label>
+        <link refid="class_capstone_project_1_1_save_keys"/>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="303">
+        <label>MapEditor.GUI.SaveButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_save_button"/>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="306">
+        <label>MapEditor.GUI.SetMaskActive</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active"/>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="297">
+        <label>CapstoneProject.ImageButton</label>
+        <link refid="class_capstone_project_1_1_image_button"/>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="298">
+        <label>CapstoneProject.MainButton</label>
+        <link refid="class_capstone_project_1_1_main_button"/>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="295">
+        <label>IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="296" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="299">
+        <label>CapstoneProject.MainSaveKeys</label>
+        <link refid="class_capstone_project_1_1_main_save_keys"/>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="309">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="307">
+        <label>GUI.Controls.XButton</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_button"/>
+        <childnode refid="308" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="308">
+        <label>IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="309" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" line="23" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XButton.cs" bodystart="22" bodyend="200"/>
+    <listofallmembers>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a44d3352cb0cefe3a96ad2a8c712284c5" prot="private" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>_ButtonImage</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a8e44b8683270df1bf558c671921dad8d" prot="private" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>_ButtonRep</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a285ed29c7d466eaa1f0ede8e097c2a05" prot="private" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>_changeColor</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a76a6ddc98b082f4584eb9ab9e8a77bf2" prot="private" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>_Clicked</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a39e4cef15309ae35f14d841971c6a092" prot="private" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>_color</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1afdd1772f405a90aed649e70b91ab3aea" prot="private" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>_Enabled</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1acaa391a15a1b23e16ae386a31ffd5523" prot="private" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>_fireAgain</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aea3bee91aac01ded4cd07362d8f66f4c" prot="private" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>_Position</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a20d190284591081fb64966efc4a540e1" prot="private" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>_WasClicked</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aa1f6541223f0fb35db7b41e8c2803260" prot="public" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>ButtonImage</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a1fff2b82126e30b8b06b103a62bec06b" prot="public" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>ButtonRep</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a4ed1dc21bd0ba765b03562ca3b79e288" prot="public" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>ChangeColor</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a691dc660d0028dc03882dc009ac47bb2" prot="public" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>Clicked</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1add70c891819e41bc30b3e06a481603bc" prot="public" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>Color</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ab9f44f9d0519adb20d3b3476767698da" prot="public" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>COOLDOWN</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ac5106591eb34dc1edc9b4d468d2bcae5" prot="public" virt="virtual"><scope>GUI::Controls::XButton</scope><name>Draw</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ac2b46e285961684f91cc9d79f4fd0c44" prot="public" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>Enabled</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a8beb21cded9bdecef62937719e7d8571" prot="public" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>FireAgain</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ae474e242ee1c62dde757628d922f9065" prot="public" virt="virtual"><scope>GUI::Controls::XButton</scope><name>FireEvent</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a8751546f39cc1554e149942e8c864b67" prot="private" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>lastclicked</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aed6404bed1698922f7dab913dd90af1d" prot="public" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>Position</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1abb788f22518aa2bb6e4756c886e4893d" prot="public" virt="virtual"><scope>GUI::Controls::XButton</scope><name>Update</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a4f5c8bcbe882e1bc2e70105d8cb40a75" prot="public" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>WasClicked</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a3cda83e9066b75c36b6ad9e4bc052bb0" prot="public" virt="non-virtual"><scope>GUI::Controls::XButton</scope><name>XButton</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

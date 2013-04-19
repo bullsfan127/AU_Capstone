@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('class_tile_engine_1_1_map.html','');})
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Events</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,6 +105,7 @@ $(document).ready(function(){initNavTree('class_tile_engine_1_1_map.html','');})
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_tile_engine_1_1_map-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -122,11 +123,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4eb00a552276ff41866e9ee93bab07b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4df62a4695b5db2cedfd64ddbc91db2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#aa4df62a4695b5db2cedfd64ddbc91db2">Map</a> (DrawableLayer&lt; <a class="el" href="class_tile_engine_1_1_tile.html">Tile</a> &gt; <a class="el" href="class_tile_engine_1_1_map.html#a93d6a67a5388e1ad95245cb459847270">Ground</a>, DrawableLayer&lt; <a class="el" href="class_tile_engine_1_1_tile.html">Tile</a> &gt; <a class="el" href="class_tile_engine_1_1_map.html#a298d145d16f3dc824a0c0875434ffa0b">Mask</a>, DrawableLayer&lt; <a class="el" href="class_tile_engine_1_1_tile.html">Tile</a> &gt; <a class="el" href="class_tile_engine_1_1_map.html#abe95706f37041feb1285be80522abbb3">Fringe</a>)</td></tr>
 <tr class="separator:aa4df62a4695b5db2cedfd64ddbc91db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2ee673668b9dd3a159c7390d58670e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#ab2ee673668b9dd3a159c7390d58670e3">Update</a> (GameTime gameTime, Vector2 offset)</td></tr>
+<tr class="memitem:a49a6b40f54c16ffffb843e6f5127c4db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a49a6b40f54c16ffffb843e6f5127c4db">SetCollisionLayer</a> (DrawableLayer&lt; <a class="el" href="class_tile_engine_1_1_tile.html">Tile</a> &gt; currentLayer1)</td></tr>
+<tr class="memdesc:a49a6b40f54c16ffffb843e6f5127c4db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the CollisionLayer size according to a layer.  <a href="#a49a6b40f54c16ffffb843e6f5127c4db">More...</a><br/></td></tr>
+<tr class="separator:a49a6b40f54c16ffffb843e6f5127c4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2ee673668b9dd3a159c7390d58670e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#ab2ee673668b9dd3a159c7390d58670e3">Update</a> (GameTime gameTime, Vector2 <a class="el" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a>)</td></tr>
 <tr class="memdesc:ab2ee673668b9dd3a159c7390d58670e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates all map specific components  <a href="#ab2ee673668b9dd3a159c7390d58670e3">More...</a><br/></td></tr>
 <tr class="separator:ab2ee673668b9dd3a159c7390d58670e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3a75d6adf05439945a1630e8dca078c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#ac3a75d6adf05439945a1630e8dca078c">Draw</a> (SpriteBatch spriteBatch, GameTime gameTime)</td></tr>
+<tr class="memdesc:ac3a75d6adf05439945a1630e8dca078c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the map in the entire screen  <a href="#ac3a75d6adf05439945a1630e8dca078c">More...</a><br/></td></tr>
 <tr class="separator:ac3a75d6adf05439945a1630e8dca078c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1490843a19273121b966d684c696dcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#ab1490843a19273121b966d684c696dcf">DrawInWindow</a> (SpriteBatch spriteBatch, GameTime gameTime, Rectangle Location)</td></tr>
+<tr class="memdesc:ab1490843a19273121b966d684c696dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the map in a specific region  <a href="#ab1490843a19273121b966d684c696dcf">More...</a><br/></td></tr>
+<tr class="separator:ab1490843a19273121b966d684c696dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a513c64dbda5b20aa08df5c74c4c93a90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a513c64dbda5b20aa08df5c74c4c93a90">SwapGoundLayer</a> (DrawableLayer&lt; <a class="el" href="class_tile_engine_1_1_tile.html">Tile</a> &gt; swapLayer)</td></tr>
 <tr class="memdesc:a513c64dbda5b20aa08df5c74c4c93a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps out the Ground Layer  <a href="#a513c64dbda5b20aa08df5c74c4c93a90">More...</a><br/></td></tr>
 <tr class="separator:a513c64dbda5b20aa08df5c74c4c93a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,20 +142,51 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae59f7b88d73a061a0b02587e63588b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7387df79a406ca23119ce40c2fa6f1d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a7387df79a406ca23119ce40c2fa6f1d9">SwapFringeLayer</a> (DrawableLayer&lt; <a class="el" href="class_tile_engine_1_1_tile.html">Tile</a> &gt; swapLayer)</td></tr>
 <tr class="separator:a7387df79a406ca23119ce40c2fa6f1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afee605561b80396694c1acbaae6d219d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#afee605561b80396694c1acbaae6d219d">saveMap</a> ()</td></tr>
-<tr class="separator:afee605561b80396694c1acbaae6d219d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ee45c38c5f3b51cdc59b5deb05a5bc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a1ee45c38c5f3b51cdc59b5deb05a5bc2">LoadMap</a> (string filename)</td></tr>
-<tr class="separator:a1ee45c38c5f3b51cdc59b5deb05a5bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c597eaebd99a4f98b3849b6aee6f48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a28c597eaebd99a4f98b3849b6aee6f48">saveMap</a> (string filename=&quot;SaveGame.xml&quot;)</td></tr>
+<tr class="memdesc:a28c597eaebd99a4f98b3849b6aee6f48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save map to disk  <a href="#a28c597eaebd99a4f98b3849b6aee6f48">More...</a><br/></td></tr>
+<tr class="separator:a28c597eaebd99a4f98b3849b6aee6f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9235a26a23cfcee925a2aca5f18fe321"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tile_engine_1_1_map.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a9235a26a23cfcee925a2aca5f18fe321">LoadMap</a> (string filename, ContentManager contentManager)</td></tr>
+<tr class="memdesc:a9235a26a23cfcee925a2aca5f18fe321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads map from disk  <a href="#a9235a26a23cfcee925a2aca5f18fe321">More...</a><br/></td></tr>
+<tr class="separator:a9235a26a23cfcee925a2aca5f18fe321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae914da19926387ce90d4a296d40028"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a1ae914da19926387ce90d4a296d40028">LoadExtraContent</a> (ContentManager contentManager)</td></tr>
+<tr class="memdesc:a1ae914da19926387ce90d4a296d40028"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads extra content, that Serialization doesn't pick up  <a href="#a1ae914da19926387ce90d4a296d40028">More...</a><br/></td></tr>
+<tr class="separator:a1ae914da19926387ce90d4a296d40028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaec3a8182705f88999ac9bd2afd900b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#adaec3a8182705f88999ac9bd2afd900b">LoadPlayer</a> (ContentManager contentManager)</td></tr>
+<tr class="memdesc:adaec3a8182705f88999ac9bd2afd900b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconstructs player after reconstruction, should only be called when loading a saved game  <a href="#adaec3a8182705f88999ac9bd2afd900b">More...</a><br/></td></tr>
+<tr class="separator:adaec3a8182705f88999ac9bd2afd900b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ae5c74ab1ccd99cb9800ec2e2ac8b7be6"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#ae5c74ab1ccd99cb9800ec2e2ac8b7be6">TILE_WIDTH</a> = 64</td></tr>
+<tr class="separator:ae5c74ab1ccd99cb9800ec2e2ac8b7be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1cce5021bd174e153b9c48dd4e50ed9"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a> = Vector2.Zero</td></tr>
+<tr class="separator:ab1cce5021bd174e153b9c48dd4e50ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
+<tr class="memitem:a2b327c7ac02c0cf770dd958b16d9e135"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a2b327c7ac02c0cf770dd958b16d9e135">MapID</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a2b327c7ac02c0cf770dd958b16d9e135"><td class="mdescLeft">&#160;</td><td class="mdescRight">MapID FIELD  <a href="#a2b327c7ac02c0cf770dd958b16d9e135">More...</a><br/></td></tr>
+<tr class="separator:a2b327c7ac02c0cf770dd958b16d9e135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1af5777417a78bbf5efb44aa04cc00c6"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_tile_engine_1_1_avatar.html">Avatar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a1af5777417a78bbf5efb44aa04cc00c6">NpcList</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a1af5777417a78bbf5efb44aa04cc00c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracking for NPC  <a href="#a1af5777417a78bbf5efb44aa04cc00c6">More...</a><br/></td></tr>
+<tr class="separator:a1af5777417a78bbf5efb44aa04cc00c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc520b8dca3f8b6b4b85e3a84b307ece"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_tile_engine_1_1_item.html">Item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#afc520b8dca3f8b6b4b85e3a84b307ece">MapItems</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:afc520b8dca3f8b6b4b85e3a84b307ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracking for MapItems  <a href="#afc520b8dca3f8b6b4b85e3a84b307ece">More...</a><br/></td></tr>
+<tr class="separator:afc520b8dca3f8b6b4b85e3a84b307ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93d6a67a5388e1ad95245cb459847270"><td class="memItemLeft" align="right" valign="top">DrawableLayer&lt; <a class="el" href="class_tile_engine_1_1_tile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a93d6a67a5388e1ad95245cb459847270">Ground</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a93d6a67a5388e1ad95245cb459847270"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Ground Layer  <a href="#a93d6a67a5388e1ad95245cb459847270">More...</a><br/></td></tr>
 <tr class="separator:a93d6a67a5388e1ad95245cb459847270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a298d145d16f3dc824a0c0875434ffa0b"><td class="memItemLeft" align="right" valign="top">DrawableLayer&lt; <a class="el" href="class_tile_engine_1_1_tile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a298d145d16f3dc824a0c0875434ffa0b">Mask</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a298d145d16f3dc824a0c0875434ffa0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Mask Layer  <a href="#a298d145d16f3dc824a0c0875434ffa0b">More...</a><br/></td></tr>
 <tr class="separator:a298d145d16f3dc824a0c0875434ffa0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe95706f37041feb1285be80522abbb3"><td class="memItemLeft" align="right" valign="top">DrawableLayer&lt; <a class="el" href="class_tile_engine_1_1_tile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#abe95706f37041feb1285be80522abbb3">Fringe</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:abe95706f37041feb1285be80522abbb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Fringe Layer  <a href="#abe95706f37041feb1285be80522abbb3">More...</a><br/></td></tr>
 <tr class="separator:abe95706f37041feb1285be80522abbb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9238b1f71f4a00a193779c644d1b3103"><td class="memItemLeft" align="right" valign="top">Layer&lt; Rectangle &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a9238b1f71f4a00a193779c644d1b3103">CollisionLayer</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a9238b1f71f4a00a193779c644d1b3103"><td class="mdescLeft">&#160;</td><td class="mdescRight">The CollisionLayer  <a href="#a9238b1f71f4a00a193779c644d1b3103">More...</a><br/></td></tr>
+<tr class="separator:a9238b1f71f4a00a193779c644d1b3103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cc2e7e3754056565eb5cb9250d62ceb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tile_engine_1_1_avatar.html">Avatar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_map.html#a8cc2e7e3754056565eb5cb9250d62ceb">Player</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a8cc2e7e3754056565eb5cb9250d62ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_tile_engine_1_1_player.html">Player</a>  <a href="#a8cc2e7e3754056565eb5cb9250d62ceb">More...</a><br/></td></tr>
 <tr class="separator:a8cc2e7e3754056565eb5cb9250d62ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -170,8 +209,8 @@ Properties</h2></td></tr>
 
 <p>Default Doesn't do anything. </p>
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00069">69</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{ }</div>
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00124">124</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{ }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -205,12 +244,12 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00072">72</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            _Ground = <a class="code" href="class_tile_engine_1_1_map.html#a93d6a67a5388e1ad95245cb459847270">Ground</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            _Mask = <a class="code" href="class_tile_engine_1_1_map.html#a298d145d16f3dc824a0c0875434ffa0b">Mask</a>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            _Fringe = <a class="code" href="class_tile_engine_1_1_map.html#abe95706f37041feb1285be80522abbb3">Fringe</a>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00126">126</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            _Ground = <a class="code" href="class_tile_engine_1_1_map.html#a93d6a67a5388e1ad95245cb459847270" title="The Ground Layer ">Ground</a>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            _Mask = <a class="code" href="class_tile_engine_1_1_map.html#a298d145d16f3dc824a0c0875434ffa0b" title="The Mask Layer ">Mask</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            _Fringe = <a class="code" href="class_tile_engine_1_1_map.html#abe95706f37041feb1285be80522abbb3" title="The Fringe Layer ">Fringe</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -239,55 +278,377 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00092">92</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">//TODO:  Add a way to calculate the where the center should be based on the player.</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            _Ground.Draw(spriteBatch, gameTime, offset);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            _Mask.Draw(spriteBatch, gameTime, offset);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            _Player.<a class="code" href="class_tile_engine_1_1_avatar.html#a7d6106cb2e838e335d7b285d51312183">Draw</a>(spriteBatch, gameTime);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            _Fringe.Draw(spriteBatch, gameTime, offset);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<p>Draw the map in the entire screen </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spriteBatch</td><td>spritebatch</td></tr>
+    <tr><td class="paramname">gameTime</td><td>gametime</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00171">171</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            _Ground.Draw(spriteBatch, gameTime, <a class="code" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            _Mask.Draw(spriteBatch, gameTime, <a class="code" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">foreach</span> (Item item <span class="keywordflow">in</span> _mapItems)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="comment">//TODO:  Add Logic for drawing based on player Proximity</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                item.Draw(spriteBatch, gameTime);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">foreach</span> (Monster ava <span class="keywordflow">in</span> _NpcList)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="comment">//TODO:  Add Logic for drawing based on player Proximity</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                ava.Draw(spriteBatch, gameTime);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            _Player.<a class="code" href="class_tile_engine_1_1_avatar.html#a7d6106cb2e838e335d7b285d51312183">Draw</a>(spriteBatch, gameTime);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            _Fringe.Draw(spriteBatch, gameTime, <a class="code" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a>);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a1ee45c38c5f3b51cdc59b5deb05a5bc2"></a>
+<a class="anchor" id="ab1490843a19273121b966d684c696dcf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void TileEngine.Map.LoadMap </td>
+          <td class="memname">void TileEngine.Map.DrawInWindow </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td class="paramtype">SpriteBatch&#160;</td>
+          <td class="paramname"><em>spriteBatch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameTime&#160;</td>
+          <td class="paramname"><em>gameTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>Location</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws the map in a specific region </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spriteBatch</td><td>Spritebatch</td></tr>
+    <tr><td class="paramname">gameTime</td><td>Gametime</td></tr>
+    <tr><td class="paramname">Location</td><td>Rectancle stating the region</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00198">198</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            _Ground.Draw(spriteBatch, gameTime, <a class="code" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a>, Location, _Player);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            _Mask.Draw(spriteBatch, gameTime, <a class="code" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a>, Location, _Player);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            _Player.<a class="code" href="class_tile_engine_1_1_avatar.html#a7d6106cb2e838e335d7b285d51312183">Draw</a>(spriteBatch, gameTime);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            _Fringe.Draw(spriteBatch, gameTime, <a class="code" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a>, Location, _Player);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a1ae914da19926387ce90d4a296d40028"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Map.LoadExtraContent </td>
+          <td>(</td>
+          <td class="paramtype">ContentManager&#160;</td>
+          <td class="paramname"><em>contentManager</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00134">134</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        {</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            serializer.Load(<span class="stringliteral">&quot;SaveGame.xml&quot;</span>);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
+<p>Loads extra content, that Serialization doesn't pick up </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contentManager</td><td>The content Manager to load textures</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00291">291</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            List&lt;Texture2D&gt; tiles = <span class="keyword">new</span> List&lt;Texture2D&gt;();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            Texture2D t = contentManager.Load&lt;Texture2D&gt;(<span class="stringliteral">&quot;Tiles//tile&quot;</span>);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            t.Name = <span class="stringliteral">&quot;Tiles//tile&quot;</span>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            Texture2D m = contentManager.Load&lt;Texture2D&gt;(<span class="stringliteral">&quot;Tiles//tileM&quot;</span>);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            m.Name = <span class="stringliteral">&quot;Tiles//tileM&quot;</span>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            Texture2D f = contentManager.Load&lt;Texture2D&gt;(<span class="stringliteral">&quot;Tiles//tileF&quot;</span>);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            f.Name = <span class="stringliteral">&quot;Tiles//tileF&quot;</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            Texture2D fg = contentManager.Load&lt;Texture2D&gt;(<span class="stringliteral">&quot;Tiles//FinalGrid&quot;</span>);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            fg.Name = <span class="stringliteral">&quot;Tiles//FinalGrid&quot;</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            tiles.Add(t);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            tiles.Add(m);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            tiles.Add(f);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            tiles.Add(fg);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="comment">//Load layers and tiles</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; 100; x++)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; 100; y++)</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                    <span class="keywordflow">if</span> (this._Fringe.Layer[x, y] != null)</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                    {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                        <span class="keywordflow">foreach</span> (Texture2D tile <span class="keywordflow">in</span> tiles)</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                            <span class="keywordflow">if</span> (this._Fringe.Layer[x, y].Name == tile.ToString())</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                            {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                                this._Fringe.Layer[x, y].setTexture(tile);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                                this._Fringe.Layer[x, y].setSourceRectangle(<span class="keyword">new</span> Rectangle(this._Fringe.Layer[x, y].SR[0], <span class="keyword">this</span>._Fringe.Layer[x, y].SR[1], 64, 64));</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                                this._Fringe.Layer[x, y].Scale = 320;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                            }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                    }</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    <span class="keywordflow">if</span> (this._Ground.Layer[x, y] != null)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                        <span class="keywordflow">foreach</span> (Texture2D tile <span class="keywordflow">in</span> tiles)</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                            <span class="keywordflow">if</span> (this._Ground.Layer[x, y].Name == tile.ToString())</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                            {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                                this._Ground.Layer[x, y].setTexture(tile);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                                this._Ground.Layer[x, y].setSourceRectangle(<span class="keyword">new</span> Rectangle(this._Ground.Layer[x, y].SR[0], <span class="keyword">this</span>._Ground.Layer[x, y].SR[1], 64, 64));</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                                this.<a class="code" href="class_tile_engine_1_1_map.html#a93d6a67a5388e1ad95245cb459847270" title="The Ground Layer ">Ground</a>.Layer[x, y].Scale = 320;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                            }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                    }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                    <span class="keywordflow">if</span> (this._Mask.Layer[x, y] != null)</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                    {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                        <span class="keywordflow">foreach</span> (Texture2D tile <span class="keywordflow">in</span> tiles)</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                            <span class="keywordflow">if</span> (this._Mask.Layer[x, y].Name == tile.ToString())</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                                this._Mask.Layer[x, y].setTexture(tile);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                        this._Mask.Layer[x, y].setSourceRectangle(<span class="keyword">new</span> Rectangle(this._Mask.Layer[x, y].SR[0], <span class="keyword">this</span>._Mask.Layer[x, y].SR[1], 64, 64));</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                        this.<a class="code" href="class_tile_engine_1_1_map.html#a298d145d16f3dc824a0c0875434ffa0b" title="The Mask Layer ">Mask</a>.Layer[x, y].Scale = 320;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                    }</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            }</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            List&lt;Texture2D&gt; monsters = <span class="keyword">new</span> List&lt;Texture2D&gt;();</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            Texture2D z = contentManager.Load&lt;Texture2D&gt;(<span class="stringliteral">&quot;Monsters/Zombies&quot;</span>);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            z.Name = <span class="stringliteral">&quot;Monsters/Zombies&quot;</span>;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            Texture2D b = contentManager.Load&lt;Texture2D&gt;(<span class="stringliteral">&quot;Monsters/Birds&quot;</span>);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            b.Name = <span class="stringliteral">&quot;Monsters/Birds&quot;</span>;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            Texture2D spriteStrip;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="comment">//load monsters</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            <span class="keywordflow">foreach</span> (Monster a <span class="keywordflow">in</span> _NpcList)</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                Type type = a.GetType();</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                spriteStrip = type == typeof(GroundMonster) ? z : b;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                a.Position = <span class="keyword">new</span> Vector2(a.X, a.Y);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                a.Initialize(spriteStrip, a.Position);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="comment">//load items</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            List&lt;Texture2D&gt; items = <span class="keyword">new</span> List&lt;Texture2D&gt;();</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            Texture2D c = contentManager.Load&lt;Texture2D&gt;(<span class="stringliteral">&quot;items/Coin&quot;</span>);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            c.Name = <span class="stringliteral">&quot;items/Coin&quot;</span>;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            Texture2D p = contentManager.Load&lt;Texture2D&gt;(<span class="stringliteral">&quot;items/Potion&quot;</span>);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            p.Name = <span class="stringliteral">&quot;items/Potion&quot;</span>;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            Texture2D spriteStrip2;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            <span class="keywordflow">foreach</span> (Item a <span class="keywordflow">in</span> _mapItems)</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                Type type = a.GetType();</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                spriteStrip2 = type == typeof(Coin) ? c : p;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                a.Initialize(spriteStrip2, <span class="keyword">new</span> Vector2(a.X, a.Y));</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            }</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="afee605561b80396694c1acbaae6d219d"></a>
+<a class="anchor" id="a9235a26a23cfcee925a2aca5f18fe321"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tile_engine_1_1_map.html">Map</a> TileEngine.Map.LoadMap </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ContentManager&#160;</td>
+          <td class="paramname"><em>contentManager</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads map from disk </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Name of map being loaded</td></tr>
+    <tr><td class="paramname">contentManager</td><td>The contentManager to load textures</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00250">250</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="keywordtype">int</span> HW = 600;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordtype">int</span> RC = 10;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordtype">int</span> MWH = 100;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordtype">int</span> s = 0;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <a class="code" href="class_tile_engine_1_1_map.html#a4eb00a552276ff41866e9ee93bab07b5" title="Default Doesn&#39;t do anything. ">Map</a> newMap = <span class="keyword">new</span> <a class="code" href="class_tile_engine_1_1_map.html#a4eb00a552276ff41866e9ee93bab07b5" title="Default Doesn&#39;t do anything. ">Map</a>();</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            newMap = serializer.Load(filename);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            newMap.LoadExtraContent(contentManager);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            newMap.Fringe.MaxViewPortHeight = HW;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            newMap.Fringe.MaxViewPortWidth = HW;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            newMap.Fringe.MaxRows = RC;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            newMap.Fringe.MaxColumns = RC;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            newMap.Fringe.MapWidth = MWH;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            newMap.Fringe.MapHeight = MWH;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            newMap.Fringe.Scale = s;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            newMap.Mask.MaxViewPortHeight = HW;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            newMap.Mask.MaxViewPortWidth = HW;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            newMap.Mask.MaxRows = RC;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            newMap.Mask.MaxColumns = RC;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            newMap.Mask.MapWidth = MWH;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            newMap.Mask.MapHeight = MWH;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            newMap.Mask.Scale = s;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            newMap.Ground.MaxViewPortHeight = HW;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            newMap.Ground.MaxViewPortWidth = HW;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            newMap.Ground.MaxRows = RC;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            newMap.Ground.MaxColumns = RC;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            newMap.Ground.MapWidth = MWH;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            newMap.Ground.MapHeight = MWH;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            newMap.Ground.Scale = s;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keywordflow">return</span> newMap;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="adaec3a8182705f88999ac9bd2afd900b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Map.LoadPlayer </td>
+          <td>(</td>
+          <td class="paramtype">ContentManager&#160;</td>
+          <td class="paramname"><em>contentManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reconstructs player after reconstruction, should only be called when loading a saved game </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contentManager</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00381">381</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            <span class="comment">//convert to player instead of Avatar</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            <a class="code" href="class_tile_engine_1_1_map.html#a8cc2e7e3754056565eb5cb9250d62ceb" title="The Player ">Player</a> temp = <span class="keyword">new</span> <a class="code" href="class_tile_engine_1_1_map.html#a8cc2e7e3754056565eb5cb9250d62ceb" title="The Player ">Player</a>(contentManager);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            temp = (<a class="code" href="class_tile_engine_1_1_map.html#a8cc2e7e3754056565eb5cb9250d62ceb" title="The Player ">Player</a>)this.<a class="code" href="class_tile_engine_1_1_map.html#a8cc2e7e3754056565eb5cb9250d62ceb" title="The Player ">Player</a>;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            <span class="comment">//load player</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            Texture2D playerTexture = contentManager.Load&lt;Texture2D&gt;(<span class="stringliteral">&quot;shitty/FatJoe&quot;</span>);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            Vector2 playerPosition = <span class="keyword">new</span> Vector2(this._Player.<a class="code" href="class_tile_engine_1_1_avatar.html#afb369b75dc84f09d4c98e6f02dcb1cbe">X</a>, <span class="keyword">this</span>._Player.Y);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            temp.Position = playerPosition;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            <span class="comment">//load playerAnimation</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            Rectangle srect = <span class="keyword">new</span> Rectangle();</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            srect = <span class="keyword">new</span> Rectangle(this._Player.<a class="code" href="class_tile_engine_1_1_avatar.html#a0eef17049780a5aa303977444d0b5e9d">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a4697e4f20fd8965aae32123a59ae8654">SRect</a>[0], <span class="keyword">this</span>._Player.PlayerAnimation.SRect[1], <span class="keyword">this</span>._Player.PlayerAnimation.SRect[2], <span class="keyword">this</span>._Player.PlayerAnimation.SRect[3]);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            temp.PlayerAnimation.sourceRect = srect;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            temp.PlayerAnimation.spriteStrip = playerTexture;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            temp.PlayerAnimation.destinationRect = <span class="keyword">new</span> Rectangle(this._Player.<a class="code" href="class_tile_engine_1_1_avatar.html#a0eef17049780a5aa303977444d0b5e9d">PlayerAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a74feefdf7bcdb6b456e87f9d4078fe42">DRect</a>[0], <span class="keyword">this</span>._Player.PlayerAnimation.DRect[1], <span class="keyword">this</span>._Player.PlayerAnimation.DRect[2], <span class="keyword">this</span>._Player.PlayerAnimation.DRect[3]);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            temp.PlayerAnimation.Position = this._Player.<a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            temp.Offset = <span class="keyword">new</span> Vector2(this._Player.<a class="code" href="class_tile_engine_1_1_avatar.html#ad57bccaabfea9a571f45e923c8f8fcea">OX</a>, <span class="keyword">this</span>.Player.OY);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            <span class="comment">//load weapons</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            temp._rangedTexture = contentManager.Load&lt;Texture2D&gt;(<span class="stringliteral">&quot;Items//sword&quot;</span>);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;            temp._swordTexture = contentManager.Load&lt;Texture2D&gt;(<span class="stringliteral">&quot;Items//boomerang&quot;</span>);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            temp.Weapon.Initialize(temp._rangedTexture, temp.Position);</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            this.<a class="code" href="class_tile_engine_1_1_map.html#a8cc2e7e3754056565eb5cb9250d62ceb" title="The Player ">Player</a> = temp;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a28c597eaebd99a4f98b3849b6aee6f48"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void TileEngine.Map.saveMap </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em> = <code>&quot;SaveGame.xml&quot;</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00129">129</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            serializer.Save(<span class="keyword">this</span>, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<p>Save map to disk </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>The name you want to give the xml file</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00238">238</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            serializer.FileName = filename;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            serializer.Save(<span class="keyword">this</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a49a6b40f54c16ffffb843e6f5127c4db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileEngine.Map.SetCollisionLayer </td>
+          <td>(</td>
+          <td class="paramtype">DrawableLayer&lt; <a class="el" href="class_tile_engine_1_1_tile.html">Tile</a> &gt;&#160;</td>
+          <td class="paramname"><em>currentLayer1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the CollisionLayer size according to a layer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentLayer1</td><td>the layer whose side you want to replicate</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00137">137</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            _CollisionLayer = <span class="keyword">new</span> Layer&lt;Rectangle&gt;(<span class="keyword">new</span> Vector2(currentLayer1.MapWidth, currentLayer1.MapHeight));</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -305,13 +666,13 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00121">121</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">if</span> (_Fringe == null)</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                _Fringe = swapLayer;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                _Fringe.swapLayer(swapLayer);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00226">226</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">if</span> (_Fringe == null)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                _Fringe = swapLayer;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                _Fringe.swapLayer(swapLayer);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -337,13 +698,13 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00105">105</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">if</span> (_Ground == null)</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                _Ground = swapLayer;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                _Ground.swapLayer(swapLayer);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00210">210</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordflow">if</span> (_Ground == null)</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                _Ground = swapLayer;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                _Ground.swapLayer(swapLayer);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -361,13 +722,13 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00113">113</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">if</span> (_Mask == null)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                _Mask = swapLayer;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                _Mask.swapLayer(swapLayer);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00218">218</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keywordflow">if</span> (_Mask == null)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                _Mask = swapLayer;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                _Mask.swapLayer(swapLayer);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -403,18 +764,79 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00083">83</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            this.offset = offset;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">if</span> (this.offset.X &lt; 0)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                this.offset.X = 0;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }            </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00148">148</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            this.<a class="code" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a> = <a class="code" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">if</span> (this.<a class="code" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a>.X &lt; 0)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                this.<a class="code" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a>.X = 0;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">foreach</span> (Item item <span class="keywordflow">in</span> _mapItems)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                item.Update(gameTime);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">foreach</span> (Monster a <span class="keywordflow">in</span> _NpcList)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            { a.Update(gameTime, this.<a class="code" href="class_tile_engine_1_1_map.html#a8cc2e7e3754056565eb5cb9250d62ceb" title="The Player ">Player</a>.<a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>, <a class="code" href="class_tile_engine_1_1_map.html#ab1cce5021bd174e153b9c48dd4e50ed9">offset</a>); }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ab1cce5021bd174e153b9c48dd4e50ed9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 TileEngine.Map.offset = Vector2.Zero</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00026">26</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5c74ab1ccd99cb9800ec2e2ac8b7be6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TileEngine.Map.TILE_WIDTH = 64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00023">23</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a9238b1f71f4a00a193779c644d1b3103"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Layer&lt;Rectangle&gt; TileEngine.Map.CollisionLayer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The CollisionLayer </p>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00105">105</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="abe95706f37041feb1285be80522abbb3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -433,7 +855,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00049">49</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<p>The Fringe Layer </p>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00096">96</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
 
 </div>
 </div>
@@ -455,7 +879,57 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00033">33</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<p>The Ground Layer </p>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00078">78</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2b327c7ac02c0cf770dd958b16d9e135"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileEngine.Map.MapID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>MapID FIELD </p>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00051">51</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afc520b8dca3f8b6b4b85e3a84b307ece"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_tile_engine_1_1_item.html">Item</a>&gt; TileEngine.Map.MapItems</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tracking for MapItems </p>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00069">69</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
 
 </div>
 </div>
@@ -477,7 +951,33 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00041">41</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<p>The Mask Layer </p>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00087">87</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1af5777417a78bbf5efb44aa04cc00c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_tile_engine_1_1_avatar.html">Avatar</a>&gt; TileEngine.Map.NpcList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tracking for NPC </p>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00060">60</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
 
 </div>
 </div>
@@ -499,7 +999,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_map_8cs_source.html#l00061">61</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+<p>The <a class="el" href="class_tile_engine_1_1_player.html">Player</a> </p>
+
+<p>Definition at line <a class="el" href="_map_8cs_source.html#l00114">114</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
 
 </div>
 </div>
@@ -512,7 +1014,7 @@ Properties</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_tile_engine.html">TileEngine</a></li><li class="navelem"><a class="el" href="class_tile_engine_1_1_map.html">Map</a></li>
-    <li class="footer">Generated on Fri Mar 22 2013 21:04:50 for Fat Joe's Nightmare by
+    <li class="footer">Generated on Fri Apr 19 2013 18:14:45 for Fat Joe's Nightmare by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

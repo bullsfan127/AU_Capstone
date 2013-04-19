@@ -4,7 +4,6 @@
     <compoundname>FPS_Counter.cs</compoundname>
     <innerclass refid="class_capstone_project_1_1_f_p_s___counter" prot="public">CapstoneProject::FPS_Counter</innerclass>
     <innernamespace refid="namespace_capstone_project">CapstoneProject</innernamespace>
-    <innernamespace refid="namespace_system_1_1_text">System::Text</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

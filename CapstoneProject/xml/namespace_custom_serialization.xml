@@ -2,13 +2,11 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="namespace_custom_serialization" kind="namespace">
     <compoundname>CustomSerialization</compoundname>
-    <innerclass refid="class_custom_serialization_1_1_serialization_test" prot="public">CustomSerialization::SerializationTest</innerclass>
     <innerclass refid="class_custom_serialization_1_1_serialize_3_01_t_01_4" prot="public">CustomSerialization::Serialize&lt; T &gt;</innerclass>
-    <innerclass refid="class_custom_serialization_1_1_test_class" prot="public">CustomSerialization::TestClass</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Program.cs" line="4"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" line="9"/>
   </compounddef>
 </doxygen>

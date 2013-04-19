@@ -3,7 +3,88 @@
   <compounddef id="class_capstone_project_1_1_game1" kind="class" prot="public">
     <compoundname>CapstoneProject::Game1</compoundname>
     <basecompoundref prot="public" virt="non-virtual">Game</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1afe053e6d39b647958d2ca3f28c2a1e2e" prot="public" static="yes" mutable="no">
+        <type><ref refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65a" kindref="member">GAMESTATE</ref></type>
+        <definition>GAMESTATE CapstoneProject.Game1.gameState</definition>
+        <argsstring></argsstring>
+        <name>gameState</name>
+        <initializer>= GAMESTATE.MAINMENU</initializer>
+        <briefdescription>
+<para>Keeps track of overall gamestate Sets initital sate, if you want to skip the main menu for testing, just set the state to GAMESTATE.PLAY instead </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a0a205c2df777702d8e866260964f4ad5" prot="private" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D CapstoneProject.Game1.backgroundTexture</definition>
+        <argsstring></argsstring>
+        <name>backgroundTexture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="38" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1ab0e1078650643f546fb5527aead72531" prot="private" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D CapstoneProject.Game1.story</definition>
+        <argsstring></argsstring>
+        <name>story</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="39" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1aec9a2166e5e843a547df2c4eddf9d8f8" prot="private" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D CapstoneProject.Game1.pauseBackground</definition>
+        <argsstring></argsstring>
+        <name>pauseBackground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1ad8dc0e5f84b242b6567669cd143efa7a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_main_menu_1_1_main_menu" kindref="compound">MainMenu.MainMenu</ref></type>
+        <definition>MainMenu.MainMenu CapstoneProject.Game1.menu</definition>
+        <argsstring></argsstring>
+        <name>menu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a2073db390c0d507696217e7e46e4f84c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_pause_menu_1_1_pause_menu" kindref="compound">PauseMenu.PauseMenu</ref></type>
+        <definition>PauseMenu.PauseMenu CapstoneProject.Game1.pauseMenu</definition>
+        <argsstring></argsstring>
+        <name>pauseMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="42" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a63d6d0354aaf17fcb3a836c105158004" prot="private" static="no" mutable="no">
         <type>GraphicsDeviceManager</type>
         <definition>GraphicsDeviceManager CapstoneProject.Game1.graphics</definition>
@@ -15,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="28" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="43" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_capstone_project_1_1_game1_1ae5be95693e03f9f2e2a0b833addd5a4b" prot="private" static="no" mutable="no">
         <type>SpriteBatch</type>
@@ -28,85 +109,128 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="29" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="29" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="44" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="44" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1acd6f60a4d642ffb14886d7ebafab6d21" prot="private" static="no" mutable="no">
-        <type><ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref></type>
-        <definition>Tile CapstoneProject.Game1.a</definition>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1ab87216dabe4f421d4f1f230ccabe9764" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_coin" kindref="compound">Coin</ref></type>
+        <definition>Coin CapstoneProject.Game1.coin</definition>
         <argsstring></argsstring>
-        <name>a</name>
+        <name>coin</name>
+        <initializer>= new <ref refid="class_tile_engine_1_1_coin" kindref="compound">Coin</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="30" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="45" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a58b2f088d3e7309061dd55688392ca7a" prot="private" static="no" mutable="no">
-        <type><ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref></type>
-        <definition>Tile CapstoneProject.Game1.b</definition>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a089cf38bc2959567369cda659afb5723" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_potion" kindref="compound">Potion</ref></type>
+        <definition>Potion CapstoneProject.Game1.potion</definition>
         <argsstring></argsstring>
-        <name>b</name>
+        <name>potion</name>
+        <initializer>= new <ref refid="class_tile_engine_1_1_potion" kindref="compound">Potion</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="31" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="31" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="46" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="46" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a6931d7baea7cff28c79470f61f3e8c6f" prot="private" static="no" mutable="no">
-        <type><ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref></type>
-        <definition>Tile CapstoneProject.Game1.c</definition>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1ae59f1cd18cc471c2f0c7e1301dfc924e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_ground_monster" kindref="compound">GroundMonster</ref></type>
+        <definition>GroundMonster CapstoneProject.Game1.groundMonster</definition>
         <argsstring></argsstring>
-        <name>c</name>
+        <name>groundMonster</name>
+        <initializer>= new <ref refid="class_tile_engine_1_1_ground_monster" kindref="compound">GroundMonster</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="32" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="32" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="47" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="47" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a840b2896a22dc746f6b7fe83893a44f2" prot="private" static="no" mutable="no">
-        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
-        <definition>DrawableLayer&lt;Tile&gt; CapstoneProject.Game1.currentLayer</definition>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a90cfbd5d5ee6a0da6cc124bf541cbab0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_flying_monster" kindref="compound">FlyingMonster</ref></type>
+        <definition>FlyingMonster CapstoneProject.Game1.flyingMonster</definition>
         <argsstring></argsstring>
-        <name>currentLayer</name>
+        <name>flyingMonster</name>
+        <initializer>= new <ref refid="class_tile_engine_1_1_flying_monster" kindref="compound">FlyingMonster</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="33" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="33" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="48" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="48" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a2ee25363ea9adff7c53530a0157af7e6" prot="private" static="no" mutable="no">
-        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
-        <definition>DrawableLayer&lt;Tile&gt; CapstoneProject.Game1.currentLayerA</definition>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1ade4cd4c18d5194310471583cfc92c2cb" prot="private" static="no" mutable="no">
+        <type><ref refid="class_capstone_project_1_1_settings" kindref="compound">Settings</ref></type>
+        <definition>Settings CapstoneProject.Game1.settings</definition>
         <argsstring></argsstring>
-        <name>currentLayerA</name>
+        <name>settings</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="34" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="34" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="49" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a09340193f6302f7e05bfb525f79ef01e" prot="private" static="no" mutable="no">
-        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
-        <definition>DrawableLayer&lt;Tile&gt; CapstoneProject.Game1.currentLayerB</definition>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a6e174020c46b164eb9e45ad3199882a0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_capstone_project_1_1_main_settings" kindref="compound">MainSettings</ref></type>
+        <definition>MainSettings CapstoneProject.Game1.msettings</definition>
         <argsstring></argsstring>
-        <name>currentLayerB</name>
+        <name>msettings</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="35" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="35" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="50" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a272dc83695e074cd3e1e28398eb1144f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_capstone_project_1_1_image_button" kindref="compound">ImageButton</ref></type>
+        <definition>ImageButton CapstoneProject.Game1.pauseButton</definition>
+        <argsstring></argsstring>
+        <name>pauseButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="52" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a2fce59aa4ebd02ee996baf2f13cf3528" prot="private" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D CapstoneProject.Game1.pauseTexture</definition>
+        <argsstring></argsstring>
+        <name>pauseTexture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="53" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1acb5bbedc58681a8c3cdcccf47e9705f0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_capstone_project_1_1_sound_manager" kindref="compound">SoundManager</ref></type>
+        <definition>SoundManager CapstoneProject.Game1.soundManager</definition>
+        <argsstring></argsstring>
+        <name>soundManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="55" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a0b5852e126019654abc0d861a9326332" prot="private" static="no" mutable="no">
         <type><ref refid="class_tile_engine_1_1_player" kindref="compound">Player</ref></type>
@@ -119,21 +243,72 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="38" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="38" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="58" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="58" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a1e1a439090de629102b29c5b2ba2bda2" prot="private" static="no" mutable="no">
-        <type>Serialize&lt; <ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref> &gt;</type>
-        <definition>Serialize&lt;Map&gt; CapstoneProject.Game1.serializer</definition>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1ad5aac6b79c20ee0b7932ab3368856dcc" prot="private" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle CapstoneProject.Game1.mainFrame</definition>
         <argsstring></argsstring>
-        <name>serializer</name>
-        <initializer>= new Serialize&lt;<ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref>&gt;()</initializer>
+        <name>mainFrame</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="40" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="60" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a76f21c90612ef0d4d03634dbcf7c638b" prot="private" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle CapstoneProject.Game1.pauseMainFrame</definition>
+        <argsstring></argsstring>
+        <name>pauseMainFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="61" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1aeab02159ea25535b6f0431d6e69614e5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_health_bar" kindref="compound">HealthBar</ref></type>
+        <definition>HealthBar CapstoneProject.Game1.healthBar</definition>
+        <argsstring></argsstring>
+        <name>healthBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="64" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1acd36906766412dc4e6d043c93164ad32" prot="private" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D CapstoneProject.Game1.playerTexture</definition>
+        <argsstring></argsstring>
+        <name>playerTexture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="66" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1a3276ed81f9d7fcf6d88de86c0535c37f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_score_display" kindref="compound">ScoreDisplay</ref></type>
+        <definition>ScoreDisplay CapstoneProject.Game1.scoreDisplay</definition>
+        <argsstring></argsstring>
+        <name>scoreDisplay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="67" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="67" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_capstone_project_1_1_game1_1ab47363e3c09ed8c407aa65d35ea28c74" prot="private" static="no" mutable="no">
         <type><ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref></type>
@@ -146,20 +321,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="41" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_capstone_project_1_1_game1_1ad1031625353f2464e8c96f967548e2e5" prot="private" static="no" mutable="no">
-        <type><ref refid="class_capstone_project_1_1_f_p_s___counter" kindref="compound">FPS_Counter</ref></type>
-        <definition>FPS_Counter CapstoneProject.Game1.counter</definition>
-        <argsstring></argsstring>
-        <name>counter</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="44" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="44" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="69" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="69" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -174,7 +336,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="50" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="49" bodyend="55"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="83" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="82" bodyend="97"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -189,7 +351,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="64" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="63" bodyend="99"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="106" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="105" bodyend="123"/>
       </memberdef>
       <memberdef kind="function" id="class_capstone_project_1_1_game1_1a37f67ad402448d603acfcb0f26fdfd4c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -202,7 +364,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="106" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="105" bodyend="121"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="130" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="129" bodyend="173"/>
       </memberdef>
       <memberdef kind="function" id="class_capstone_project_1_1_game1_1ac5211c6bd8219e31c91d1ad68ced674c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -215,7 +377,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="128" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="127" bodyend="130"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="180" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="179" bodyend="182"/>
       </memberdef>
       <memberdef kind="function" id="class_capstone_project_1_1_game1_1a531433f38f741ed11acb4750bf92d70d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -240,7 +402,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="138" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="137" bodyend="157"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="190" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="189" bodyend="284"/>
       </memberdef>
       <memberdef kind="function" id="class_capstone_project_1_1_game1_1a8f7e138af4e270d66e5a8ba1e8137205" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -265,7 +427,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="164" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="163" bodyend="177"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="291" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="290" bodyend="344"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -273,45 +435,57 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="15">
+      <node id="55">
         <label>Microsoft::Xna::Framework::Game</label>
       </node>
-      <node id="14">
+      <node id="54">
         <label>CapstoneProject.Game1</label>
         <link refid="class_capstone_project_1_1_game1"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="55" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="17">
+      <node id="57">
         <label>Microsoft::Xna::Framework::Game</label>
       </node>
-      <node id="16">
+      <node id="56">
         <label>CapstoneProject.Game1</label>
         <link refid="class_capstone_project_1_1_game1"/>
-        <childnode refid="17" relation="public-inheritance">
+        <childnode refid="57" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="26" bodyend="178"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="31" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="30" bodyend="345"/>
     <listofallmembers>
-      <member refid="class_capstone_project_1_1_game1_1acd6f60a4d642ffb14886d7ebafab6d21" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>a</name></member>
-      <member refid="class_capstone_project_1_1_game1_1a58b2f088d3e7309061dd55688392ca7a" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>b</name></member>
-      <member refid="class_capstone_project_1_1_game1_1a6931d7baea7cff28c79470f61f3e8c6f" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>c</name></member>
-      <member refid="class_capstone_project_1_1_game1_1ad1031625353f2464e8c96f967548e2e5" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>counter</name></member>
-      <member refid="class_capstone_project_1_1_game1_1a840b2896a22dc746f6b7fe83893a44f2" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>currentLayer</name></member>
-      <member refid="class_capstone_project_1_1_game1_1a2ee25363ea9adff7c53530a0157af7e6" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>currentLayerA</name></member>
-      <member refid="class_capstone_project_1_1_game1_1a09340193f6302f7e05bfb525f79ef01e" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>currentLayerB</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a0a205c2df777702d8e866260964f4ad5" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>backgroundTexture</name></member>
+      <member refid="class_capstone_project_1_1_game1_1ab87216dabe4f421d4f1f230ccabe9764" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>coin</name></member>
       <member refid="class_capstone_project_1_1_game1_1a8f7e138af4e270d66e5a8ba1e8137205" prot="protected" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>Draw</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a90cfbd5d5ee6a0da6cc124bf541cbab0" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>flyingMonster</name></member>
       <member refid="class_capstone_project_1_1_game1_1ae7b0491fe249f1a9678beaa428d91ea7" prot="public" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>Game1</name></member>
       <member refid="class_capstone_project_1_1_game1_1ab47363e3c09ed8c407aa65d35ea28c74" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>gameMap</name></member>
+      <member refid="class_capstone_project_1_1_game1_1afe053e6d39b647958d2ca3f28c2a1e2e" prot="public" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>gameState</name></member>
       <member refid="class_capstone_project_1_1_game1_1a63d6d0354aaf17fcb3a836c105158004" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>graphics</name></member>
+      <member refid="class_capstone_project_1_1_game1_1ae59f1cd18cc471c2f0c7e1301dfc924e" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>groundMonster</name></member>
+      <member refid="class_capstone_project_1_1_game1_1aeab02159ea25535b6f0431d6e69614e5" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>healthBar</name></member>
       <member refid="class_capstone_project_1_1_game1_1accbc48beedf472a28ce77034f16114b5" prot="protected" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>Initialize</name></member>
       <member refid="class_capstone_project_1_1_game1_1a37f67ad402448d603acfcb0f26fdfd4c" prot="protected" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>LoadContent</name></member>
+      <member refid="class_capstone_project_1_1_game1_1ad5aac6b79c20ee0b7932ab3368856dcc" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>mainFrame</name></member>
+      <member refid="class_capstone_project_1_1_game1_1ad8dc0e5f84b242b6567669cd143efa7a" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>menu</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a6e174020c46b164eb9e45ad3199882a0" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>msettings</name></member>
+      <member refid="class_capstone_project_1_1_game1_1aec9a2166e5e843a547df2c4eddf9d8f8" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>pauseBackground</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a272dc83695e074cd3e1e28398eb1144f" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>pauseButton</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a76f21c90612ef0d4d03634dbcf7c638b" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>pauseMainFrame</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a2073db390c0d507696217e7e46e4f84c" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>pauseMenu</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a2fce59aa4ebd02ee996baf2f13cf3528" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>pauseTexture</name></member>
       <member refid="class_capstone_project_1_1_game1_1a0b5852e126019654abc0d861a9326332" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>player</name></member>
-      <member refid="class_capstone_project_1_1_game1_1a1e1a439090de629102b29c5b2ba2bda2" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>serializer</name></member>
+      <member refid="class_capstone_project_1_1_game1_1acd36906766412dc4e6d043c93164ad32" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>playerTexture</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a089cf38bc2959567369cda659afb5723" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>potion</name></member>
+      <member refid="class_capstone_project_1_1_game1_1a3276ed81f9d7fcf6d88de86c0535c37f" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>scoreDisplay</name></member>
+      <member refid="class_capstone_project_1_1_game1_1ade4cd4c18d5194310471583cfc92c2cb" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>settings</name></member>
+      <member refid="class_capstone_project_1_1_game1_1acb5bbedc58681a8c3cdcccf47e9705f0" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>soundManager</name></member>
       <member refid="class_capstone_project_1_1_game1_1ae5be95693e03f9f2e2a0b833addd5a4b" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>spriteBatch</name></member>
+      <member refid="class_capstone_project_1_1_game1_1ab0e1078650643f546fb5527aead72531" prot="private" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>story</name></member>
       <member refid="class_capstone_project_1_1_game1_1ac5211c6bd8219e31c91d1ad68ced674c" prot="protected" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>UnloadContent</name></member>
       <member refid="class_capstone_project_1_1_game1_1a531433f38f741ed11acb4750bf92d70d" prot="protected" virt="non-virtual"><scope>CapstoneProject::Game1</scope><name>Update</name></member>
     </listofallmembers>

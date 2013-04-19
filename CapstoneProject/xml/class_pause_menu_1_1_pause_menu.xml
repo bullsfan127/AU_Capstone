@@ -1,0 +1,608 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_pause_menu_1_1_pause_menu" kind="class" prot="public">
+    <compoundname>PauseMenu::PauseMenu</compoundname>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_pause_menu_1_1_pause_menu_1a36aa1efceee457b80b677a7376f26da4" prot="private" static="no">
+        <name>BState</name>
+        <enumvalue id="class_pause_menu_1_1_pause_menu_1a36aa1efceee457b80b677a7376f26da4ada95feece334f0612031adf21d057ab9" prot="public">
+          <name>HOVER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_pause_menu_1_1_pause_menu_1a36aa1efceee457b80b677a7376f26da4afbaedde498cdead4f2780217646e9ba1" prot="public">
+          <name>UP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_pause_menu_1_1_pause_menu_1a36aa1efceee457b80b677a7376f26da4a7aebac60d8886879d0f930cfafc6bdfa" prot="public">
+          <name>JUST_RELEASED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_pause_menu_1_1_pause_menu_1a36aa1efceee457b80b677a7376f26da4ac4e0e4e3118472beeb2ae75827450f1f" prot="public">
+          <name>DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="23" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="22" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1a251d766c69e0fdc9e74079c5d5f354ee" prot="private" static="no" mutable="no">
+        <type>GraphicsDeviceManager</type>
+        <definition>GraphicsDeviceManager PauseMenu.PauseMenu.graphics</definition>
+        <argsstring></argsstring>
+        <name>graphics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1a3a985424df195c638cdbee16d7fc6d9c" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int PauseMenu.PauseMenu.NUMBER_OF_BUTTONS</definition>
+        <argsstring></argsstring>
+        <name>NUMBER_OF_BUTTONS</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1ae6573ae12fe0e491e98f7929cc7bd022" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int PauseMenu.PauseMenu.RESUME_BUTTON_INDEX</definition>
+        <argsstring></argsstring>
+        <name>RESUME_BUTTON_INDEX</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="32" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1ae5430cffcf481bb113e5ea726e04ed95" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int PauseMenu.PauseMenu.SETTINGS_BUTTON_INDEX</definition>
+        <argsstring></argsstring>
+        <name>SETTINGS_BUTTON_INDEX</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="33" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1a0b54e7edc7b298620464a2c15dedb8bf" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int PauseMenu.PauseMenu.SAVEGAME_BUTTON_INDEX</definition>
+        <argsstring></argsstring>
+        <name>SAVEGAME_BUTTON_INDEX</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="34" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1aa46785797050d09841092b1b3d77a628" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int PauseMenu.PauseMenu.MAINMENU_BUTTON_INDEX</definition>
+        <argsstring></argsstring>
+        <name>MAINMENU_BUTTON_INDEX</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="35" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1a78e0b5144db37312e9f58c08219fe609" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int PauseMenu.PauseMenu.EXIT_BUTTON_INDEX</definition>
+        <argsstring></argsstring>
+        <name>EXIT_BUTTON_INDEX</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1ac388eb2fb4d516a4ebf87650c3d6d1bd" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int PauseMenu.PauseMenu.BUTTON_HEIGHT</definition>
+        <argsstring></argsstring>
+        <name>BUTTON_HEIGHT</name>
+        <initializer>= 40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="38" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1abf52ae00b78ad9b2da0bce8f13c68bf9" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int PauseMenu.PauseMenu.BUTTON_WIDTH</definition>
+        <argsstring></argsstring>
+        <name>BUTTON_WIDTH</name>
+        <initializer>= 88</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="39" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1ad32a6204f381d4dd6e4f66f19a0a84b7" prot="private" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color PauseMenu.PauseMenu.background_color</definition>
+        <argsstring></argsstring>
+        <name>background_color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1a1d1070fbb61931a1afc5fda837919a8b" prot="private" static="no" mutable="no">
+        <type>Color[]</type>
+        <definition>Color [] PauseMenu.PauseMenu.button_color</definition>
+        <argsstring></argsstring>
+        <name>button_color</name>
+        <initializer>= new Color[NUMBER_OF_BUTTONS]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1aac90c92c98e3eed0850d862f1d815468" prot="private" static="no" mutable="no">
+        <type>Rectangle[]</type>
+        <definition>Rectangle [] PauseMenu.PauseMenu.button_rectangle</definition>
+        <argsstring></argsstring>
+        <name>button_rectangle</name>
+        <initializer>= new Rectangle[NUMBER_OF_BUTTONS]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="42" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1a2379d0a715bda0e8a49fb2e3ec18f5e6" prot="private" static="no" mutable="no">
+        <type>BState[]</type>
+        <definition>BState [] PauseMenu.PauseMenu.button_state</definition>
+        <argsstring></argsstring>
+        <name>button_state</name>
+        <initializer>= new BState[NUMBER_OF_BUTTONS]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="43" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1a966eb19ec61a30f65fdc7a6f0ba6f299" prot="private" static="no" mutable="no">
+        <type>Texture2D[]</type>
+        <definition>Texture2D [] PauseMenu.PauseMenu.button_texture</definition>
+        <argsstring></argsstring>
+        <name>button_texture</name>
+        <initializer>= new Texture2D[NUMBER_OF_BUTTONS]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="44" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1a4c217d5e3f8065a1d2d6942aca3af3db" prot="private" static="no" mutable="no">
+        <type>double[]</type>
+        <definition>double [] PauseMenu.PauseMenu.button_timer</definition>
+        <argsstring></argsstring>
+        <name>button_timer</name>
+        <initializer>= new double[NUMBER_OF_BUTTONS]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1aed717d9371572cf9ac5d3d66f61f8160" prot="private" static="no" mutable="no">
+        <type>ContentManager</type>
+        <definition>ContentManager PauseMenu.PauseMenu.Content</definition>
+        <argsstring></argsstring>
+        <name>Content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="46" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1aa554d0f7f3b9ecc5513c8133750403f9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PauseMenu.PauseMenu.mpressed</definition>
+        <argsstring></argsstring>
+        <name>mpressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1a806a8ee890739e7b7a52e392990e3ae4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PauseMenu.PauseMenu.prev_mpressed</definition>
+        <argsstring></argsstring>
+        <name>prev_mpressed</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1acd1fb6a7ef51106be96f040b6cce1c51" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PauseMenu.PauseMenu.mx</definition>
+        <argsstring></argsstring>
+        <name>mx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="52" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1a43925cfb89daa5ecb1414b97e65de236" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PauseMenu.PauseMenu.my</definition>
+        <argsstring></argsstring>
+        <name>my</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="52" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pause_menu_1_1_pause_menu_1a3f42d246d8292d6443a1b7a6828ce02c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PauseMenu.PauseMenu.frame_time</definition>
+        <argsstring></argsstring>
+        <name>frame_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="54" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pause_menu_1_1_pause_menu_1a16dba06b48981bdfc86f631114b483b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PauseMenu.PauseMenu.PauseMenu</definition>
+        <argsstring>(GraphicsDeviceManager _graphics, ContentManager content)</argsstring>
+        <name>PauseMenu</name>
+        <param>
+          <type>GraphicsDeviceManager</type>
+          <declname>_graphics</declname>
+        </param>
+        <param>
+          <type>ContentManager</type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="57" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1_1_pause_menu_1a3d84badc28f759cb2771c9b599f7cbea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu.PauseMenu.Initialize</definition>
+        <argsstring>(GameWindow Window)</argsstring>
+        <name>Initialize</name>
+        <param>
+          <type>GameWindow</type>
+          <declname>Window</declname>
+        </param>
+        <briefdescription>
+<para>Allows the game component to perform any initialization it needs to before starting to run. This is where it can query for any required services and load content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="67" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="66" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1_1_pause_menu_1afa07430527ca42e4c0caa6b6969c1e7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu.PauseMenu.LoadContent</definition>
+        <argsstring>()</argsstring>
+        <name>LoadContent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="89" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="88" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1_1_pause_menu_1a565e39aec21358e00b0012371ad18f98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu.PauseMenu.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Allows the game component to update itself. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provides a snapshot of timing values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="108" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="107" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1_1_pause_menu_1ad274b89cfdfd82dbc943661e765239ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu.PauseMenu.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spriteBatch, Texture2D pauseBackground, Rectangle pauseMainFrame)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>pauseBackground</declname>
+        </param>
+        <param>
+          <type>Rectangle</type>
+          <declname>pauseMainFrame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="128" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="127" bodyend="135"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_pause_menu_1_1_pause_menu_1a8bd90e9866dc2f49a12749944e9550e7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean PauseMenu.PauseMenu.hit_image_alpha</definition>
+        <argsstring>(Rectangle rect, Texture2D tex, int x, int y)</argsstring>
+        <name>hit_image_alpha</name>
+        <param>
+          <type>Rectangle</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>tex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="138" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="137" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1_1_pause_menu_1a497d9087c150e4d7807cfc2ae70f7604" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean PauseMenu.PauseMenu.hit_image_alpha</definition>
+        <argsstring>(float tx, float ty, Texture2D tex, int x, int y)</argsstring>
+        <name>hit_image_alpha</name>
+        <param>
+          <type>float</type>
+          <declname>tx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ty</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>tex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="145" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="144" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1_1_pause_menu_1aa5ea0141015e26ee876f28e5c2caaf2d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean PauseMenu.PauseMenu.hit_image</definition>
+        <argsstring>(float tx, float ty, Texture2D tex, int x, int y)</argsstring>
+        <name>hit_image</name>
+        <param>
+          <type>float</type>
+          <declname>tx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ty</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>tex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="164" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="163" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1_1_pause_menu_1a02060af05e6c1794d537c78a10b0b5c0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu.PauseMenu.update_buttons</definition>
+        <argsstring>()</argsstring>
+        <name>update_buttons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="173" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="172" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1_1_pause_menu_1ae6fe684f1eec72288006e762dcf27d65" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu.PauseMenu.take_action_on_button</definition>
+        <argsstring>(int i)</argsstring>
+        <name>take_action_on_button</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="223" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="222" bodyend="246"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is a game component that implements IUpdateable. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" bodystart="18" bodyend="247"/>
+    <listofallmembers>
+      <member refid="class_pause_menu_1_1_pause_menu_1ad32a6204f381d4dd6e4f66f19a0a84b7" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>background_color</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a36aa1efceee457b80b677a7376f26da4" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>BState</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a1d1070fbb61931a1afc5fda837919a8b" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>button_color</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1ac388eb2fb4d516a4ebf87650c3d6d1bd" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>BUTTON_HEIGHT</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1aac90c92c98e3eed0850d862f1d815468" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>button_rectangle</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a2379d0a715bda0e8a49fb2e3ec18f5e6" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>button_state</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a966eb19ec61a30f65fdc7a6f0ba6f299" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>button_texture</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a4c217d5e3f8065a1d2d6942aca3af3db" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>button_timer</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1abf52ae00b78ad9b2da0bce8f13c68bf9" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>BUTTON_WIDTH</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1aed717d9371572cf9ac5d3d66f61f8160" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>Content</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1ad274b89cfdfd82dbc943661e765239ce" prot="public" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>Draw</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a78e0b5144db37312e9f58c08219fe609" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>EXIT_BUTTON_INDEX</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a3f42d246d8292d6443a1b7a6828ce02c" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>frame_time</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a251d766c69e0fdc9e74079c5d5f354ee" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>graphics</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1aa5ea0141015e26ee876f28e5c2caaf2d" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>hit_image</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a8bd90e9866dc2f49a12749944e9550e7" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>hit_image_alpha</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a497d9087c150e4d7807cfc2ae70f7604" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>hit_image_alpha</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a3d84badc28f759cb2771c9b599f7cbea" prot="public" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>Initialize</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1afa07430527ca42e4c0caa6b6969c1e7a" prot="public" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>LoadContent</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1aa46785797050d09841092b1b3d77a628" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>MAINMENU_BUTTON_INDEX</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1aa554d0f7f3b9ecc5513c8133750403f9" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>mpressed</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1acd1fb6a7ef51106be96f040b6cce1c51" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>mx</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a43925cfb89daa5ecb1414b97e65de236" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>my</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a3a985424df195c638cdbee16d7fc6d9c" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>NUMBER_OF_BUTTONS</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a16dba06b48981bdfc86f631114b483b0" prot="public" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>PauseMenu</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a806a8ee890739e7b7a52e392990e3ae4" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>prev_mpressed</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1ae6573ae12fe0e491e98f7929cc7bd022" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>RESUME_BUTTON_INDEX</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a0b54e7edc7b298620464a2c15dedb8bf" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>SAVEGAME_BUTTON_INDEX</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1ae5430cffcf481bb113e5ea726e04ed95" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>SETTINGS_BUTTON_INDEX</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1ae6fe684f1eec72288006e762dcf27d65" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>take_action_on_button</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a565e39aec21358e00b0012371ad18f98" prot="public" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>Update</name></member>
+      <member refid="class_pause_menu_1_1_pause_menu_1a02060af05e6c1794d537c78a10b0b5c0" prot="private" virt="non-virtual"><scope>PauseMenu::PauseMenu</scope><name>update_buttons</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

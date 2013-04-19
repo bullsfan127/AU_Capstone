@@ -3,10 +3,7 @@
   <compounddef id="dir_085f9128ccb02eeb43ae259d33f067c7" kind="dir">
     <compoundname>Serialization/Serialization</compoundname>
     <innerdir refid="dir_f413dc279df827bb708d437b0828bf59">Serialization/Serialization/Properties</innerdir>
-    <innerfile refid="_serialization_2_serialization_2_program_8cs">Program.cs</innerfile>
-    <innerfile refid="_serialization_test_8cs">SerializationTest.cs</innerfile>
     <innerfile refid="_serialize_8cs">Serialize.cs</innerfile>
-    <innerfile refid="_test_class_8cs">TestClass.cs</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

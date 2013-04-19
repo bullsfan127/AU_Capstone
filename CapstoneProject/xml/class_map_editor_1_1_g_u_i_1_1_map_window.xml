@@ -1,0 +1,692 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_map_editor_1_1_g_u_i_1_1_map_window" kind="class" prot="public">
+    <compoundname>MapEditor::GUI::MapWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDrawable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IUpdateable</basecompoundref>
+    <basecompoundref refid="interface_g_u_i_1_1_g_component" prot="public" virt="non-virtual">GUI.GComponent</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a77bf104112c3e9c6b6e27490e9ce4316" prot="public" static="no">
+        <name>currentLayer</name>
+        <enumvalue id="class_map_editor_1_1_g_u_i_1_1_map_window_1a77bf104112c3e9c6b6e27490e9ce4316adedcb56e75fe1488e20865e0ea36d0b9" prot="public">
+          <name>GROUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_map_editor_1_1_g_u_i_1_1_map_window_1a77bf104112c3e9c6b6e27490e9ce4316a0a9501840acacfc8efe7522f5340000c" prot="public">
+          <name>MASK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_map_editor_1_1_g_u_i_1_1_map_window_1a77bf104112c3e9c6b6e27490e9ce4316a6d2ad7fb90505029139d178fb4789e21" prot="public">
+          <name>FRINGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="94" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="94" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a23443e6c0ec9feec69e2d3e4d23c9a98" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int MapEditor.GUI.MapWindow.DrawOrder</definition>
+        <argsstring></argsstring>
+        <name>DrawOrder</name>
+        <briefdescription>
+<para>I believe this is for priority rendering </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a13ff00c2efda7563db8ee509a7c49b8d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int MapEditor.GUI.MapWindow.UpdateOrder</definition>
+        <argsstring></argsstring>
+        <name>UpdateOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="35" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_map_window_1af66fb5757f8d5b730e7a4d9ee03ba7b8" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>bool</type>
+        <definition>bool MapEditor.GUI.MapWindow.Visible</definition>
+        <argsstring></argsstring>
+        <name>Visible</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="42" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_map_window_1ab6f20fdad0a3f9cb6a8d38b700de3de5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>bool</type>
+        <definition>bool MapEditor.GUI.MapWindow.Enabled</definition>
+        <argsstring></argsstring>
+        <name>Enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a0a55a0a9adbb4cfb291a6940807bb529" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Rectangle</type>
+        <definition>Rectangle MapEditor.GUI.MapWindow.Location</definition>
+        <argsstring></argsstring>
+        <name>Location</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="64" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a02c37644b381b93ae74b97d21b7cf8bc" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref></type>
+        <definition>Map MapEditor.GUI.MapWindow.Map</definition>
+        <argsstring></argsstring>
+        <name>Map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="74" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a1e182ae99223a825b97de2a2e3690364" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Vector2</type>
+        <definition>Vector2 MapEditor.GUI.MapWindow.Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="270" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_map_editor_1_1_g_u_i_1_1_map_window_1ac2bec0cb969d9fe00acd797bf75b4f4c" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; EventArgs &gt;</type>
+        <definition>EventHandler&lt;EventArgs&gt; MapEditor.GUI.MapWindow.DrawOrderChanged</definition>
+        <argsstring></argsstring>
+        <name>DrawOrderChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a7be7da25ad748f93f8a0fb9c236c339e" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; EventArgs &gt;</type>
+        <definition>EventHandler&lt;EventArgs&gt; MapEditor.GUI.MapWindow.UpdateOrderChanged</definition>
+        <argsstring></argsstring>
+        <name>UpdateOrderChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="37" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_map_editor_1_1_g_u_i_1_1_map_window_1ac2831f3caf13e46f0824440017f1d514" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; EventArgs &gt;</type>
+        <definition>EventHandler&lt;EventArgs&gt; MapEditor.GUI.MapWindow.VisibleChanged</definition>
+        <argsstring></argsstring>
+        <name>VisibleChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="44" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a11e83653ed1e6c66c51a3df61d750cda" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; EventArgs &gt;</type>
+        <definition>EventHandler&lt;EventArgs&gt; MapEditor.GUI.MapWindow.EnabledChanged</definition>
+        <argsstring></argsstring>
+        <name>EnabledChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="51" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a8a76be38d8e31295f6da14d82b90cfef" prot="private" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle MapEditor.GUI.MapWindow._location</definition>
+        <argsstring></argsstring>
+        <name>_location</name>
+        <briefdescription>
+<para>The location on the screen where we will be rendering the map. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="58" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a7877acb44d6739dc605013251f17a473" prot="private" static="no" mutable="no">
+        <type><ref refid="class_map_editor_1_1_g_u_i_1_1_tile_selector" kindref="compound">TileSelector</ref></type>
+        <definition>TileSelector MapEditor.GUI.MapWindow._selector</definition>
+        <argsstring></argsstring>
+        <name>_selector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="66" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1adf62d1bc83c28d123b0012abe67e2290" prot="private" static="no" mutable="no">
+        <type>SpriteBatch</type>
+        <definition>SpriteBatch MapEditor.GUI.MapWindow._spritebatch</definition>
+        <argsstring></argsstring>
+        <name>_spritebatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="67" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1ae02daa456bf85a1f35c05c810520f61c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref></type>
+        <definition>Map MapEditor.GUI.MapWindow._map</definition>
+        <argsstring></argsstring>
+        <name>_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="68" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1af5cd85603635c6ac0b7d51088daeecf6" prot="private" static="no" mutable="no">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; MapEditor.GUI.MapWindow._ground</definition>
+        <argsstring></argsstring>
+        <name>_ground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="77" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a316ec3281a710c83a443a10f06381dbf" prot="private" static="no" mutable="no">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; MapEditor.GUI.MapWindow._mask</definition>
+        <argsstring></argsstring>
+        <name>_mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="79" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1ae04bbb8098bc7e7530de46ecbc6fe37c" prot="private" static="no" mutable="no">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; MapEditor.GUI.MapWindow._Fringe</definition>
+        <argsstring></argsstring>
+        <name>_Fringe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="80" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1af94c2dc84d558a28b5f8f4650b76e81e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref></type>
+        <definition>Tile MapEditor.GUI.MapWindow.a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="82" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1aa58d5744e6f111a123b0378905121962" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref></type>
+        <definition>Tile MapEditor.GUI.MapWindow.b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="83" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1adb68826bcc358f041385754aab1db971" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref></type>
+        <definition>Tile MapEditor.GUI.MapWindow.c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="84" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a9730ed9729dfeafcc410ba10ce29e62a" prot="private" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D MapEditor.GUI.MapWindow.UnderPanel</definition>
+        <argsstring></argsstring>
+        <name>UnderPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="87" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a9f96833c8c79f30e0f95ac2b79219b16" prot="private" static="no" mutable="no">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; MapEditor.GUI.MapWindow.currentLayer1</definition>
+        <argsstring></argsstring>
+        <name>currentLayer1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="88" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a742430f4292f6785e80894635ff97acc" prot="private" static="no" mutable="no">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; MapEditor.GUI.MapWindow.currentLayerA</definition>
+        <argsstring></argsstring>
+        <name>currentLayerA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="89" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a5d331d50ca97a5cc0e77d2f42cc1bdb6" prot="private" static="no" mutable="no">
+        <type>DrawableLayer&lt; <ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>DrawableLayer&lt;Tile&gt; MapEditor.GUI.MapWindow.currentLayerB</definition>
+        <argsstring></argsstring>
+        <name>currentLayerB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="90" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a5054ede8b5039f2c4d7c8631334304e8" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_focal_point" kindref="compound">FocalPoint</ref></type>
+        <definition>FocalPoint MapEditor.GUI.MapWindow._center</definition>
+        <argsstring></argsstring>
+        <name>_center</name>
+        <initializer>= new <ref refid="class_tile_engine_1_1_focal_point" kindref="compound">FocalPoint</ref>(new Vector2(0, 0), 10, 100, 50, 50)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="92" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a4ff11be9f0b0c89df1f62e55213407d9" prot="public" static="no" mutable="no">
+        <type><ref refid="class_g_u_i_1_1_controls_1_1_label" kindref="compound">Label</ref></type>
+        <definition>Label MapEditor.GUI.MapWindow.layerLabel</definition>
+        <argsstring></argsstring>
+        <name>layerLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="86" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_map_window_1ad6076f642611f68b59d5d784bda99045" prot="public" static="no" mutable="no">
+        <type><ref refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a77bf104112c3e9c6b6e27490e9ce4316" kindref="member">currentLayer</ref></type>
+        <definition>currentLayer MapEditor.GUI.MapWindow._currentLayer</definition>
+        <argsstring></argsstring>
+        <name>_currentLayer</name>
+        <initializer>= currentLayer.FRINGE</initializer>
+        <briefdescription>
+<para>For determining what layer you are laying tiles in. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="99" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a206a4759f2083ba8bcf146b94f5b2cdd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MapEditor.GUI.MapWindow.MapWindow</definition>
+        <argsstring>(Rectangle Location, SpriteBatch batch, SpriteFont Font, Texture2D Underpanel)</argsstring>
+        <name>MapWindow</name>
+        <param>
+          <type>Rectangle</type>
+          <declname>Location</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>batch</declname>
+        </param>
+        <param>
+          <type>SpriteFont</type>
+          <declname>Font</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>Underpanel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="102" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="101" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a44ec9518a51869289dac88e4c2990895" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MapEditor.GUI.MapWindow.MapWindow</definition>
+        <argsstring>(SpriteBatch batch, GraphicsDeviceManager graphics, ContentManager Content, SpriteFont Font, TileSelector selector, Texture2D Underpanel)</argsstring>
+        <name>MapWindow</name>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>batch</declname>
+        </param>
+        <param>
+          <type>GraphicsDeviceManager</type>
+          <declname>graphics</declname>
+        </param>
+        <param>
+          <type>ContentManager</type>
+          <declname>Content</declname>
+        </param>
+        <param>
+          <type>SpriteFont</type>
+          <declname>Font</declname>
+        </param>
+        <param>
+          <type><ref refid="class_map_editor_1_1_g_u_i_1_1_tile_selector" kindref="compound">TileSelector</ref></type>
+          <declname>selector</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>Underpanel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="110" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="109" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_map_window_1ab6efc8f166f865177704c53f43e727be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapEditor.GUI.MapWindow.Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="148" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="147" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a31121883b3bd1eacf6df05796d8395ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapEditor.GUI.MapWindow.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_g_u_i_1_1_g_component_1a885a92b191148424d13210766f8b52fa">Update</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Mouse location on texture</para><para>Mouse location on texture </para>        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="155" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="154" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a19a07ab1384b0cde42fc394e213ec54b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapEditor.GUI.MapWindow.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spriteBatch)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="interface_g_u_i_1_1_g_component_1acf033aabe5063b034712f879b7908432">Draw</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="244" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="243" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a99194c2caa3ceefd4c1f21e6e2deacd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapEditor.GUI.MapWindow.Draw</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="252" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="251" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_map_window_1a03af6968037d336ddcb7559c096de314" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapEditor.GUI.MapWindow.reset</definition>
+        <argsstring>(GraphicsDeviceManager graphics, ContentManager Content)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>GraphicsDeviceManager</type>
+          <declname>graphics</declname>
+        </param>
+        <param>
+          <type>ContentManager</type>
+          <declname>Content</declname>
+        </param>
+        <briefdescription>
+<para>Resets the Map </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graphics</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Content</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="278" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="277" bodyend="311"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="165">
+        <label>IUpdateable</label>
+      </node>
+      <node id="166">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="164">
+        <label>IDrawable</label>
+      </node>
+      <node id="163">
+        <label>MapEditor.GUI.MapWindow</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_map_window"/>
+        <childnode refid="164" relation="public-inheritance">
+        </childnode>
+        <childnode refid="165" relation="public-inheritance">
+        </childnode>
+        <childnode refid="166" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="169">
+        <label>IUpdateable</label>
+      </node>
+      <node id="170">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="171">
+        <label>GUI.Controls.Label</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_label"/>
+        <childnode refid="172" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="168">
+        <label>IDrawable</label>
+      </node>
+      <node id="167">
+        <label>MapEditor.GUI.MapWindow</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_map_window"/>
+        <childnode refid="168" relation="public-inheritance">
+        </childnode>
+        <childnode refid="169" relation="public-inheritance">
+        </childnode>
+        <childnode refid="170" relation="public-inheritance">
+        </childnode>
+        <childnode refid="171" relation="usage">
+          <edgelabel>layerLabel</edgelabel>
+        </childnode>
+      </node>
+      <node id="172">
+        <label>IXTextField</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field"/>
+        <childnode refid="170" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" bodystart="18" bodyend="312"/>
+    <listofallmembers>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a5054ede8b5039f2c4d7c8631334304e8" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>_center</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ad6076f642611f68b59d5d784bda99045" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>_currentLayer</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ae04bbb8098bc7e7530de46ecbc6fe37c" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>_Fringe</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1af5cd85603635c6ac0b7d51088daeecf6" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>_ground</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a8a76be38d8e31295f6da14d82b90cfef" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>_location</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ae02daa456bf85a1f35c05c810520f61c" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>_map</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a316ec3281a710c83a443a10f06381dbf" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>_mask</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a7877acb44d6739dc605013251f17a473" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>_selector</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1adf62d1bc83c28d123b0012abe67e2290" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>_spritebatch</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1af94c2dc84d558a28b5f8f4650b76e81e" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>a</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1aa58d5744e6f111a123b0378905121962" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>b</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1adb68826bcc358f041385754aab1db971" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>c</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a77bf104112c3e9c6b6e27490e9ce4316" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>currentLayer</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a9f96833c8c79f30e0f95ac2b79219b16" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>currentLayer1</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a742430f4292f6785e80894635ff97acc" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>currentLayerA</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a5d331d50ca97a5cc0e77d2f42cc1bdb6" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>currentLayerB</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a19a07ab1384b0cde42fc394e213ec54b" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>Draw</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a99194c2caa3ceefd4c1f21e6e2deacd4" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>Draw</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a23443e6c0ec9feec69e2d3e4d23c9a98" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>DrawOrder</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ac2bec0cb969d9fe00acd797bf75b4f4c" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>DrawOrderChanged</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ab6f20fdad0a3f9cb6a8d38b700de3de5" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>Enabled</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a11e83653ed1e6c66c51a3df61d750cda" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>EnabledChanged</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ab6efc8f166f865177704c53f43e727be" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>Initialize</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a4ff11be9f0b0c89df1f62e55213407d9" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>layerLabel</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a0a55a0a9adbb4cfb291a6940807bb529" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>Location</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a02c37644b381b93ae74b97d21b7cf8bc" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>Map</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a206a4759f2083ba8bcf146b94f5b2cdd" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>MapWindow</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a44ec9518a51869289dac88e4c2990895" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>MapWindow</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a1e182ae99223a825b97de2a2e3690364" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>Position</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a03af6968037d336ddcb7559c096de314" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>reset</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a9730ed9729dfeafcc410ba10ce29e62a" prot="private" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>UnderPanel</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a31121883b3bd1eacf6df05796d8395ea" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>Update</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a13ff00c2efda7563db8ee509a7c49b8d" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>UpdateOrder</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a7be7da25ad748f93f8a0fb9c236c339e" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>UpdateOrderChanged</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1af66fb5757f8d5b730e7a4d9ee03ba7b8" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>Visible</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ac2831f3caf13e46f0824440017f1d514" prot="public" virt="non-virtual"><scope>MapEditor::GUI::MapWindow</scope><name>VisibleChanged</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

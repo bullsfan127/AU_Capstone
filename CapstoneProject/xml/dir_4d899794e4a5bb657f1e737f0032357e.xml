@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="dir_4d899794e4a5bb657f1e737f0032357e" kind="dir">
     <compoundname>TileEngine/Interfaces</compoundname>
+    <innerfile refid="_avatar_8cs">Avatar.cs</innerfile>
     <innerfile refid="_drawable_8cs">Drawable.cs</innerfile>
     <briefdescription>
     </briefdescription>

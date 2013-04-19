@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('class_tile_engine_1_1_avatar.html','')
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Events</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,6 +105,7 @@ $(document).ready(function(){initNavTree('class_tile_engine_1_1_avatar.html','')
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_tile_engine_1_1_avatar-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -117,8 +118,18 @@ Inheritance diagram for TileEngine.Avatar:</div>
  <div class="center">
   <img src="class_tile_engine_1_1_avatar.png" usemap="#TileEngine.Avatar_map" alt=""/>
   <map id="TileEngine.Avatar_map" name="TileEngine.Avatar_map">
-<area href="class_tile_engine_1_1_item.html" alt="TileEngine.Item" shape="rect" coords="0,56,113,80"/>
-<area href="class_tile_engine_1_1_player.html" alt="TileEngine.Player" shape="rect" coords="123,56,236,80"/>
+<area href="class_tile_engine_1_1_focal_point.html" alt="TileEngine.FocalPoint" shape="rect" coords="0,56,163,80"/>
+<area href="class_tile_engine_1_1_item.html" alt="TileEngine.Item" shape="rect" coords="173,56,336,80"/>
+<area href="class_tile_engine_1_1_monster.html" alt="TileEngine.Monster" shape="rect" coords="605,56,768,80"/>
+<area href="class_tile_engine_1_1_player.html" alt="TileEngine.Player" shape="rect" coords="778,56,941,80"/>
+<area href="class_tile_engine_1_1_weapon.html" alt="TileEngine.Weapon" shape="rect" coords="951,56,1114,80"/>
+<area href="class_tile_engine_1_1_armor.html" alt="TileEngine.Armor" shape="rect" coords="0,112,163,136"/>
+<area href="class_tile_engine_1_1_coin.html" alt="TileEngine.Coin" shape="rect" coords="173,112,336,136"/>
+<area href="class_tile_engine_1_1_potion.html" alt="TileEngine.Potion" shape="rect" coords="346,112,509,136"/>
+<area href="class_tile_engine_1_1_flying_monster.html" alt="TileEngine.FlyingMonster" shape="rect" coords="519,112,682,136"/>
+<area href="class_tile_engine_1_1_ground_monster.html" alt="TileEngine.GroundMonster" shape="rect" coords="692,112,855,136"/>
+<area href="class_tile_engine_1_1_boomerang.html" alt="TileEngine.Boomerang" shape="rect" coords="865,112,1028,136"/>
+<area href="class_tile_engine_1_1_sword.html" alt="TileEngine.Sword" shape="rect" coords="1038,112,1201,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -132,11 +143,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afa46c5a32ad8b677a0f2ce2ace163059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d6106cb2e838e335d7b285d51312183"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a7d6106cb2e838e335d7b285d51312183">Draw</a> (SpriteBatch spriteBatch, GameTime gameTime)</td></tr>
 <tr class="separator:a7d6106cb2e838e335d7b285d51312183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565a17aa3aae06ca72673956919ebb97"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a565a17aa3aae06ca72673956919ebb97">Initialize</a> (Texture2D spriteStrip, Vector2 position)</td></tr>
+<tr class="separator:a565a17aa3aae06ca72673956919ebb97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ac438acf71aa12a4ab41e4e473033b967"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#ac438acf71aa12a4ab41e4e473033b967">_offset</a></td></tr>
+<tr class="separator:ac438acf71aa12a4ab41e4e473033b967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
+<tr class="memitem:a88d7ebb026fba691d674379c3dd55b67"><td class="memItemLeft" align="right" valign="top">Microsoft.Xna.Framework.Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a88d7ebb026fba691d674379c3dd55b67">Offset</a><code> [get, set]</code></td></tr>
+<tr class="separator:a88d7ebb026fba691d674379c3dd55b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad57bccaabfea9a571f45e923c8f8fcea"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#ad57bccaabfea9a571f45e923c8f8fcea">OX</a><code> [get, set]</code></td></tr>
+<tr class="separator:ad57bccaabfea9a571f45e923c8f8fcea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae93d9e869211bd685e335aadf0dc5f77"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#ae93d9e869211bd685e335aadf0dc5f77">OY</a><code> [get, set]</code></td></tr>
+<tr class="separator:ae93d9e869211bd685e335aadf0dc5f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eef17049780a5aa303977444d0b5e9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tile_engine_1_1_animation.html">TileEngine.Animation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a0eef17049780a5aa303977444d0b5e9d">PlayerAnimation</a><code> [get, set]</code></td></tr>
+<tr class="separator:a0eef17049780a5aa303977444d0b5e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c6796fe77c217cfe59d8d1bf96397d1"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a><code> [get, set]</code></td></tr>
 <tr class="separator:a9c6796fe77c217cfe59d8d1bf96397d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb369b75dc84f09d4c98e6f02dcb1cbe"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#afb369b75dc84f09d4c98e6f02dcb1cbe">X</a><code> [get, set]</code></td></tr>
+<tr class="separator:afb369b75dc84f09d4c98e6f02dcb1cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5780c90b61ef36f0fce907fb8ec1c396"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_engine_1_1_avatar.html#a5780c90b61ef36f0fce907fb8ec1c396">Y</a><code> [get, set]</code></td></tr>
+<tr class="separator:a5780c90b61ef36f0fce907fb8ec1c396"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -155,8 +185,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00029">29</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{ }</div>
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00089">89</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{ }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -184,10 +214,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00031">31</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        { </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00091">91</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -224,13 +253,51 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_tile_engine_1_1_player.html#a3150892fc641203e9bfee6b21a202ce5">TileEngine.Player</a>, and <a class="el" href="class_tile_engine_1_1_item.html#a8371497aa849c48c146ffe16d10c8e61">TileEngine.Item</a>.</p>
+<p>Reimplemented in <a class="el" href="class_tile_engine_1_1_player.html#a3150892fc641203e9bfee6b21a202ce5">TileEngine.Player</a>, <a class="el" href="class_tile_engine_1_1_item.html#a8371497aa849c48c146ffe16d10c8e61">TileEngine.Item</a>, <a class="el" href="class_tile_engine_1_1_monster.html#a34a816dc4b4dc152f209ac3c882e41d9">TileEngine.Monster</a>, <a class="el" href="class_tile_engine_1_1_weapon.html#a43797e71ed10bb9f6f87b49373328b61">TileEngine.Weapon</a>, and <a class="el" href="class_tile_engine_1_1_focal_point.html#af837293a4d8023834a9cd8188377a480">TileEngine.FocalPoint</a>.</p>
 
-<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00038">38</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00097">97</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a565a17aa3aae06ca72673956919ebb97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void TileEngine.Avatar.Initialize </td>
+          <td>(</td>
+          <td class="paramtype">Texture2D&#160;</td>
+          <td class="paramname"><em>spriteStrip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_tile_engine_1_1_player.html#ae69cd25ae2416785bbdd7296b97eaf7b">TileEngine.Player</a>, <a class="el" href="class_tile_engine_1_1_item.html#afce5a6dff00666aa8fd425a431562403">TileEngine.Item</a>, <a class="el" href="class_tile_engine_1_1_monster.html#a667e1b992bc63e10adcf435039bfe38f">TileEngine.Monster</a>, <a class="el" href="class_tile_engine_1_1_weapon.html#a2c10ddf032fbfc2b42e06db57afc4314">TileEngine.Weapon</a>, and <a class="el" href="class_tile_engine_1_1_boomerang.html#a79dbb98047888493b6546d1903489386">TileEngine.Boomerang</a>.</p>
+
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00101">101</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -256,14 +323,117 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_tile_engine_1_1_item.html#a69ec70858dafdad165adb7cbcf55ceb7">TileEngine.Item</a>.</p>
+<p>Reimplemented in <a class="el" href="class_tile_engine_1_1_focal_point.html#ae4cbab2ec4f622ddfb2804f3e07cae4c">TileEngine.FocalPoint</a>.</p>
 
-<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00036">36</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{}</div>
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00095">95</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{ }</div>
 </div><!-- fragment -->
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ac438acf71aa12a4ab41e4e473033b967"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 TileEngine.Avatar._offset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00019">19</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a88d7ebb026fba691d674379c3dd55b67"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Microsoft.Xna.Framework.Vector2 TileEngine.Avatar.Offset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00022">22</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad57bccaabfea9a571f45e923c8f8fcea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TileEngine.Avatar.OX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00038">38</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae93d9e869211bd685e335aadf0dc5f77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TileEngine.Avatar.OY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00044">44</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0eef17049780a5aa303977444d0b5e9d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tile_engine_1_1_animation.html">TileEngine.Animation</a> TileEngine.Avatar.PlayerAnimation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00053">53</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a9c6796fe77c217cfe59d8d1bf96397d1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -282,12 +452,56 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00022">22</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00062">62</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afb369b75dc84f09d4c98e6f02dcb1cbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TileEngine.Avatar.X</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00078">78</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5780c90b61ef36f0fce907fb8ec1c396"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TileEngine.Avatar.Y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_avatar_8cs_source.html#l00084">84</a> of file <a class="el" href="_avatar_8cs_source.html">Avatar.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>TileEngine/<a class="el" href="_avatar_8cs_source.html">Avatar.cs</a></li>
+<li>TileEngine/Interfaces/<a class="el" href="_avatar_8cs_source.html">Avatar.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -295,7 +509,7 @@ Properties</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_tile_engine.html">TileEngine</a></li><li class="navelem"><a class="el" href="class_tile_engine_1_1_avatar.html">Avatar</a></li>
-    <li class="footer">Generated on Fri Mar 22 2013 21:04:50 for Fat Joe's Nightmare by
+    <li class="footer">Generated on Fri Apr 19 2013 18:14:45 for Fat Joe's Nightmare by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="interface_g_u_i_1_1_interfaces_1_1_i_x_button" kind="interface" prot="public">
+    <compoundname>GUI::Interfaces::IXButton</compoundname>
+    <basecompoundref refid="interface_g_u_i_1_1_g_component" prot="public" virt="non-virtual">GUI.GComponent</basecompoundref>
+    <derivedcompoundref refid="class_g_u_i_1_1_controls_1_1_x_button" prot="public" virt="non-virtual">GUI.Controls.XButton</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a9341e1f53960a8d123c14378b96055ad" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Texture2D</type>
+        <definition>Texture2D GUI.Interfaces.IXButton.ButtonImage</definition>
+        <argsstring></argsstring>
+        <name>ButtonImage</name>
+        <briefdescription>
+<para>The Button&apos;s Texture </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a00fb063e9aa55d1e1087aa29df07775a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Rectangle</type>
+        <definition>Rectangle GUI.Interfaces.IXButton.ButtonRep</definition>
+        <argsstring></argsstring>
+        <name>ButtonRep</name>
+        <briefdescription>
+<para>The Representation of the Button in the game world </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a94665763c633fefb38be8ebf7b7bac2a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool GUI.Interfaces.IXButton.Clicked</definition>
+        <argsstring></argsstring>
+        <name>Clicked</name>
+        <briefdescription>
+<para>Is the button Clicked </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" line="35" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1aaf7df32371e9de43a20df66c495882a6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool GUI.Interfaces.IXButton.WasClicked</definition>
+        <argsstring></argsstring>
+        <name>WasClicked</name>
+        <briefdescription>
+<para>Was the button recently Clicked. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a2b00149f4017837d6ec07701b84a2493" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool GUI.Interfaces.IXButton.Enabled</definition>
+        <argsstring></argsstring>
+        <name>Enabled</name>
+        <briefdescription>
+<para>Determines whether the Button is enabled </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a7013ec4e4249ac8c8cd1736987c9eab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>new void</type>
+        <definition>new void GUI.Interfaces.IXButton.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_g_u_i_1_1_g_component_1a885a92b191148424d13210766f8b52fa">Update</reimplements>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1a2ef2e1a3cf1d90ed677f73c1f26abedd">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_save_button_1ac713d895627befc5d0be8d95001d1ba2">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1abbf682b8f211c5fb6605ef93c70a2139">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1a2b992051938bfced70c0ad40af1bb9c8">Update</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1aac2172d3c8a07d11285fbe90d3067b00">Update</reimplementedby>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_button_1abb788f22518aa2bb6e4756c886e4893d">Update</reimplementedby>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Position of the Button on the Screen; </para>        </briefdescription>
+        <detaileddescription>
+<para>Update Method for a button should check to see if the button was clicked and if it was then fire the event which is the actual action of the Button. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>supplied for button cooldown.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a7651357f1129294083713533861948bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>new void</type>
+        <definition>new void GUI.Interfaces.IXButton.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spriteBatch)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="interface_g_u_i_1_1_g_component_1acf033aabe5063b034712f879b7908432">Draw</reimplements>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1a29083b46eec489374be52c03576da0d8">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1aad52d8c750a34b0d00083b4551e2dbb9">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1acca4d0cbe0521abe9227ebbda8856fc3">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a525bdeece9435acb94bdc6bd801df459">Draw</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1aa75b906694fbcae954e47fe5692bb567">Draw</reimplementedby>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_button_1ac5106591eb34dc1edc9b4d468d2bcae5">Draw</reimplementedby>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <briefdescription>
+<para>Draw Method for a Button </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Game Time</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spriteBatch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SpriteBatch</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a66ee7251f63b706bb9051403bdb94b34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI.Interfaces.IXButton.FireEvent</definition>
+        <argsstring>()</argsstring>
+        <name>FireEvent</name>
+        <reimplementedby refid="class_capstone_project_1_1_save_keys_1a658b25e6a85f816dba872ae68c7104d4">FireEvent</reimplementedby>
+        <reimplementedby refid="class_capstone_project_1_1_main_button_1a7e5e95263a23f86ae77db571e62a9f7b">FireEvent</reimplementedby>
+        <reimplementedby refid="class_capstone_project_1_1_main_save_keys_1a1fc1c479e93b6db17058ed36918754f5">FireEvent</reimplementedby>
+        <reimplementedby refid="class_capstone_project_1_1_image_button_1aac4d1d7b9bf87ff39984ffbfc78e815e">FireEvent</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1a6406e60dfa96d735d71e859ce69d5df8">FireEvent</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1a9955b8fc304648d39cc086ca7ae2e997">FireEvent</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1afb9c3580d7297e3986d3b82b605b8ed9">FireEvent</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a123fc02f59436ef09b8fe0cfee633a74">FireEvent</reimplementedby>
+        <reimplementedby refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1a311da0bcbf027e571254f32279ffbf22">FireEvent</reimplementedby>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_button_1ae474e242ee1c62dde757628d922f9065">FireEvent</reimplementedby>
+        <briefdescription>
+<para>Does the actual work. Performs the action that the button is supposed to. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" line="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface Defining Button </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="103">
+        <label>GUI.Interfaces.IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="104" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="114">
+        <label>MapEditor.GUI.SetGoundActiveButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="109">
+        <label>CapstoneProject.MoveButton</label>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>MapEditor.GUI.SetFringeActive</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="111">
+        <label>MapEditor.GUI.ResetButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_reset_button"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>GUI.Controls.XButton</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_button"/>
+        <childnode refid="103" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>CapstoneProject.SaveKeys</label>
+        <link refid="class_capstone_project_1_1_save_keys"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>MapEditor.GUI.SaveButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_save_button"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>MapEditor.GUI.SetMaskActive</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>CapstoneProject.ImageButton</label>
+        <link refid="class_capstone_project_1_1_image_button"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="107">
+        <label>CapstoneProject.MainButton</label>
+        <link refid="class_capstone_project_1_1_main_button"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>CapstoneProject.MainSaveKeys</label>
+        <link refid="class_capstone_project_1_1_main_save_keys"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="116">
+        <label>GUI.Interfaces.IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="117" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" bodystart="19" bodyend="71"/>
+    <listofallmembers>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a9341e1f53960a8d123c14378b96055ad" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXButton</scope><name>ButtonImage</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a00fb063e9aa55d1e1087aa29df07775a" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXButton</scope><name>ButtonRep</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a94665763c633fefb38be8ebf7b7bac2a" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXButton</scope><name>Clicked</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a7651357f1129294083713533861948bc" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXButton</scope><name>Draw</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a2b00149f4017837d6ec07701b84a2493" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXButton</scope><name>Enabled</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a66ee7251f63b706bb9051403bdb94b34" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXButton</scope><name>FireEvent</name></member>
+      <member refid="interface_g_u_i_1_1_g_component_1aef3f78634fe0e377be97f0504f708b54" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXButton</scope><name>Position</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a7013ec4e4249ac8c8cd1736987c9eab2" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXButton</scope><name>Update</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1aaf7df32371e9de43a20df66c495882a6" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXButton</scope><name>WasClicked</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

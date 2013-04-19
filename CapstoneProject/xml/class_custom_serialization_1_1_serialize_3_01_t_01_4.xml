@@ -122,7 +122,7 @@
         <definition>bool CustomSerialization.Serialize&lt; T &gt;._complex</definition>
         <argsstring></argsstring>
         <name>_complex</name>
-        <initializer>= false</initializer>
+        <initializer>= true</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -198,12 +198,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" line="88" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" bodystart="87" bodyend="117"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" line="88" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" bodystart="87" bodyend="125"/>
       </memberdef>
-      <memberdef kind="function" id="class_custom_serialization_1_1_serialize_3_01_t_01_4_1af5669ea71316b3920351b64193d47d79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a85beecf5763d3f24414d52608e165bf1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void CustomSerialization.Serialize&lt; T &gt;.Save</definition>
-        <argsstring>(T classType, bool complex=false)</argsstring>
+        <argsstring>(T classType, bool complex=true)</argsstring>
         <name>Save</name>
         <param>
           <type>T</type>
@@ -212,7 +212,7 @@
         <param>
           <type>bool</type>
           <declname>complex</declname>
-          <defval>false</defval>
+          <defval>true</defval>
         </param>
         <briefdescription>
 <para>Saves to an XML file from passed in class </para>        </briefdescription>
@@ -235,7 +235,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" line="127" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" bodystart="126" bodyend="164"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" line="135" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" bodystart="134" bodyend="180"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -250,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" line="170" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" bodystart="169" bodyend="194"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" line="186" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" bodystart="185" bodyend="210"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -266,7 +266,7 @@
 4. Get the Stream of the file we want to use from the container.
 5. Serialize / Deserialize.
 6. Cleanup.
-</verbatim></para><para>This is a generic class, so it should be able to take any class type and convert and load to and from an xml file</para><para>Examples:</para><para>Serialize&lt;TestClass&gt; serializer = new <ref refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a18418aaac4ebc3372de3410626a0ea55" kindref="member">Serialize&lt;TestClass&gt;()</ref>; <ref refid="class_custom_serialization_1_1_test_class" kindref="compound">TestClass</ref> test = new <ref refid="class_custom_serialization_1_1_test_class" kindref="compound">TestClass</ref>(&quot;jon&quot;, &quot;AU&quot;);</para><para>How to save: serializer.Save(test);</para><para>How to Load: test = serializer.Load(&quot;Savegame.xml&quot;);</para><para>NOTE: Only public class variables are serialized Also must have a defualt contructor, i.e one with no parameters</para><para>All saved files should be "My documents-N-Slash </para><para><parameterlist kind="templateparam"><parameteritem>
+</verbatim></para><para>This is a generic class, so it should be able to take any class type and convert and load to and from an xml file</para><para>Examples:</para><para>Serialize&lt;TestClass&gt; serializer = new <ref refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a18418aaac4ebc3372de3410626a0ea55" kindref="member">Serialize&lt;TestClass&gt;()</ref>; TestClass test = new TestClass(&quot;jon&quot;, &quot;AU&quot;);</para><para>How to save: serializer.Save(test);</para><para>How to Load: test = serializer.Load(&quot;Savegame.xml&quot;);</para><para>NOTE: Only public class variables are serialized Also must have a defualt contructor, i.e one with no parameters</para><para>All saved files should be "My documents-N-Slash </para><para><parameterlist kind="templateparam"><parameteritem>
 <parameternamelist>
 <parametername>T</parametername>
 </parameternamelist>
@@ -275,7 +275,7 @@
 </parameteritem>
 </parameterlist>
 </para>    </detaileddescription>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" bodystart="44" bodyend="195"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/Serialization/Serialization/Serialize.cs" bodystart="44" bodyend="211"/>
     <listofallmembers>
       <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a76d06bca7046098cd75a8ac24c393f9a" prot="private" virt="non-virtual"><scope>CustomSerialization::Serialize&lt; T &gt;</scope><name>_classType</name></member>
       <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a678586523b119be624fcc5b8ce8169d4" prot="private" virt="non-virtual"><scope>CustomSerialization::Serialize&lt; T &gt;</scope><name>_complex</name></member>
@@ -288,7 +288,7 @@
       <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1ac97ea1c257da237df262554ec94479cf" prot="public" virt="non-virtual"><scope>CustomSerialization::Serialize&lt; T &gt;</scope><name>FileName</name></member>
       <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a8e93c80cca07e34d0a30c4bc53ddfb17" prot="public" virt="non-virtual"><scope>CustomSerialization::Serialize&lt; T &gt;</scope><name>Load</name></member>
       <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1af61269fc8799338c6a61e3986cf106ba" prot="private" virt="non-virtual"><scope>CustomSerialization::Serialize&lt; T &gt;</scope><name>preLoadSave</name></member>
-      <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1af5669ea71316b3920351b64193d47d79" prot="public" virt="non-virtual"><scope>CustomSerialization::Serialize&lt; T &gt;</scope><name>Save</name></member>
+      <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a85beecf5763d3f24414d52608e165bf1" prot="public" virt="non-virtual"><scope>CustomSerialization::Serialize&lt; T &gt;</scope><name>Save</name></member>
       <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a18418aaac4ebc3372de3410626a0ea55" prot="public" virt="non-virtual"><scope>CustomSerialization::Serialize&lt; T &gt;</scope><name>Serialize</name></member>
       <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1ad0c13940f75772c704555c3456f68c7b" prot="private" virt="non-virtual"><scope>CustomSerialization::Serialize&lt; T &gt;</scope><name>serializer</name></member>
       <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a834e76b4d600f3b60f4bbab35a5fcaff" prot="private" virt="non-virtual"><scope>CustomSerialization::Serialize&lt; T &gt;</scope><name>stream</name></member>

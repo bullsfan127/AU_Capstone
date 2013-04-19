@@ -2,17 +2,17 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="dir_d0a77c1a97cf39b07408c9faab11faad" kind="dir">
     <compoundname>TileEngine</compoundname>
+    <innerdir refid="dir_e4b3135f824b3ada82f2c7ba7de44745">TileEngine/Animation</innerdir>
     <innerdir refid="dir_4d899794e4a5bb657f1e737f0032357e">TileEngine/Interfaces</innerdir>
+    <innerdir refid="dir_61dfaf1237b5107f564e81e656b885b4">TileEngine/Player</innerdir>
     <innerdir refid="dir_a60fd27bff144ae9c9cff1f1d8c77990">TileEngine/Properties</innerdir>
+    <innerdir refid="dir_db800c13b7c0e6e99ede83d5c9ddcb01">TileEngine/RolePlay</innerdir>
     <innerdir refid="dir_c6a1de31af74083aa6fd97242ab5568e">TileEngine/Utility</innerdir>
-    <innerfile refid="_animation_8cs">Animation.cs</innerfile>
-    <innerfile refid="_avatar_8cs">Avatar.cs</innerfile>
     <innerfile refid="_drawable_layer_8cs">DrawableLayer.cs</innerfile>
-    <innerfile refid="_item_8cs">Item.cs</innerfile>
+    <innerfile refid="_focal_point_8cs">FocalPoint.cs</innerfile>
     <innerfile refid="_layer_8cs">Layer.cs</innerfile>
     <innerfile refid="_map_8cs">Map.cs</innerfile>
-    <innerfile refid="_monster_8cs">Monster.cs</innerfile>
-    <innerfile refid="_player_8cs">Player.cs</innerfile>
+    <innerfile refid="_serialize_controls_8cs">SerializeControls.cs</innerfile>
     <innerfile refid="_tile_8cs">Tile.cs</innerfile>
     <innerfile refid="_tile_sheet_8cs">TileSheet.cs</innerfile>
     <briefdescription>

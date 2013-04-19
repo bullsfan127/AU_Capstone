@@ -16,8 +16,47 @@
         </inbodydescription>
         <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="17" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="17" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_tile_sheet_1a62dd2d8d0dd3947e1fda78ed6b489825" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.TileSheet._tileSize</definition>
+        <argsstring></argsstring>
+        <name>_tileSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_tile_sheet_1a2bbeec97d049ba12649f8d21bd6e1fe7" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string TileEngine.TileSheet._name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="property">
+      <memberdef kind="property" id="class_tile_engine_1_1_tile_sheet_1a8b7b813daa0aa62280ff50cb6ca95040" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.TileSheet.TileSize</definition>
+        <argsstring></argsstring>
+        <name>TileSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="property" id="class_tile_engine_1_1_tile_sheet_1a6d1063b12cabd250a4f6a3a286e1e18e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>Texture2D</type>
         <definition>Texture2D TileEngine.TileSheet.tileSheet</definition>
@@ -29,18 +68,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="23" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="20" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="31" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="28" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_tile_engine_1_1_tile_sheet_1a74fd1ec39c58a55b1494a6f5071c837d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_sheet_1a92af49ae2305b38a3bd38b278c430e61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>TileEngine.TileSheet.TileSheet</definition>
-        <argsstring>(Texture2D texture)</argsstring>
+        <argsstring>(Texture2D texture, int TileSize, string name)</argsstring>
         <name>TileSheet</name>
         <param>
           <type>Texture2D</type>
           <declname>texture</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>TileSize</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -48,18 +95,39 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="27" bodyend="30"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="34" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="33" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_tile_sheet_1a35974ad12a716c40b702df6991d5325d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_tile_engine_1_1_tile" kindref="compound">Tile</ref></type>
+        <definition>Tile TileEngine.TileSheet.getTileAt</definition>
+        <argsstring>(Vector2 Target)</argsstring>
+        <name>getTileAt</name>
+        <param>
+          <type>Vector2</type>
+          <declname>Target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="40" bodyend="63"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="15" bodyend="34"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/TileSheet.cs" bodystart="15" bodyend="64"/>
     <listofallmembers>
+      <member refid="class_tile_engine_1_1_tile_sheet_1a2bbeec97d049ba12649f8d21bd6e1fe7" prot="private" virt="non-virtual"><scope>TileEngine::TileSheet</scope><name>_name</name></member>
       <member refid="class_tile_engine_1_1_tile_sheet_1aab4747c551f93c3c5f1bcba43276ed5a" prot="private" virt="non-virtual"><scope>TileEngine::TileSheet</scope><name>_tileSheet</name></member>
-      <member refid="class_tile_engine_1_1_tile_sheet_1a74fd1ec39c58a55b1494a6f5071c837d" prot="public" virt="non-virtual"><scope>TileEngine::TileSheet</scope><name>TileSheet</name></member>
+      <member refid="class_tile_engine_1_1_tile_sheet_1a62dd2d8d0dd3947e1fda78ed6b489825" prot="private" virt="non-virtual"><scope>TileEngine::TileSheet</scope><name>_tileSize</name></member>
+      <member refid="class_tile_engine_1_1_tile_sheet_1a35974ad12a716c40b702df6991d5325d" prot="public" virt="non-virtual"><scope>TileEngine::TileSheet</scope><name>getTileAt</name></member>
+      <member refid="class_tile_engine_1_1_tile_sheet_1a92af49ae2305b38a3bd38b278c430e61" prot="public" virt="non-virtual"><scope>TileEngine::TileSheet</scope><name>TileSheet</name></member>
       <member refid="class_tile_engine_1_1_tile_sheet_1a6d1063b12cabd250a4f6a3a286e1e18e" prot="public" virt="non-virtual"><scope>TileEngine::TileSheet</scope><name>tileSheet</name></member>
+      <member refid="class_tile_engine_1_1_tile_sheet_1a8b7b813daa0aa62280ff50cb6ca95040" prot="public" virt="non-virtual"><scope>TileEngine::TileSheet</scope><name>TileSize</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

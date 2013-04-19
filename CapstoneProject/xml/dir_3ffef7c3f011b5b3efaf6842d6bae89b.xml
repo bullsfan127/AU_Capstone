@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dir_3ffef7c3f011b5b3efaf6842d6bae89b" kind="dir">
+    <compoundname>MapEditor/MapEditor/GUI</compoundname>
+    <innerfile refid="_map_window_8cs">MapWindow.cs</innerfile>
+    <innerfile refid="_reset_button_8cs">ResetButton.cs</innerfile>
+    <innerfile refid="_save_button_8cs">SaveButton.cs</innerfile>
+    <innerfile refid="_set_fringe_active_8cs">SetFringeActive.cs</innerfile>
+    <innerfile refid="_set_gound_active_8cs">SetGoundActive.cs</innerfile>
+    <innerfile refid="_set_mask_active_8cs">SetMaskActive.cs</innerfile>
+    <innerfile refid="_text_box_8cs">TextBox.cs</innerfile>
+    <innerfile refid="_tile_selector_8cs">TileSelector.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/"/>
+  </compounddef>
+</doxygen>

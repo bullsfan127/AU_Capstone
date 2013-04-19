@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_sound_manager_1_1_sound_manager" kind="class" prot="public">
+    <compoundname>SoundManager::SoundManager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sound_manager_1_1_sound_manager_1a97290161933a25596176216797f20ad0" prot="private" static="no" mutable="no">
+        <type>ContentManager</type>
+        <definition>ContentManager SoundManager.SoundManager._content</definition>
+        <argsstring></argsstring>
+        <name>_content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" line="23" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sound_manager_1_1_sound_manager_1aa84a0234e0f40eec62c2ff635faf8e93" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65a" kindref="member">GAMESTATE</ref></type>
+        <definition>GAMESTATE SoundManager.SoundManager.lastState</definition>
+        <argsstring></argsstring>
+        <name>lastState</name>
+        <initializer>= GAMESTATE.PAUSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" line="31" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sound_manager_1_1_sound_manager_1a50a073b81aff89df270dad5c69c1e23b" prot="private" static="no" mutable="no">
+        <type>KeyboardState</type>
+        <definition>KeyboardState SoundManager.SoundManager.keystate</definition>
+        <argsstring></argsstring>
+        <name>keystate</name>
+        <initializer>= Keyboard.GetState()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" line="32" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sound_manager_1_1_sound_manager_1ac2e26713820910026e621654ceb43361" prot="private" static="no" mutable="no">
+        <type>SoundEffect</type>
+        <definition>SoundEffect SoundManager.SoundManager.sound</definition>
+        <argsstring></argsstring>
+        <name>sound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" line="33" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sound_manager_1_1_sound_manager_1a1be88f244195e19df1bdffa80f83f28f" prot="private" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] SoundManager.SoundManager.songs</definition>
+        <argsstring></argsstring>
+        <name>songs</name>
+        <initializer>= Directory.GetFiles(@&quot;..\..\..\..\CapstoneProjectContent\Songs&quot;, &quot;*.wav&quot;)
+                                     .Select(path =&gt; Path.GetFileNameWithoutExtension(path))
+                                     .ToArray()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" line="38" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sound_manager_1_1_sound_manager_1ac9aff8ddf97670bde75509bc8b2e7ace" prot="private" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] SoundManager.SoundManager.sounds</definition>
+        <argsstring></argsstring>
+        <name>sounds</name>
+        <initializer>= Directory.GetFiles(@&quot;..\..\..\..\CapstoneProjectContent\Sounds&quot;, &quot;*.wav&quot;)
+                                     .Select(path =&gt; Path.GetFileNameWithoutExtension(path))
+                                     .ToArray()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_sound_manager_1_1_sound_manager_1af39860a5029e9971c04a4957d17a562c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>ContentManager</type>
+        <definition>ContentManager SoundManager.SoundManager.Content</definition>
+        <argsstring></argsstring>
+        <name>Content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" line="29" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sound_manager_1_1_sound_manager_1ab9e1fa8371834208770997b1f8f458b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SoundManager.SoundManager.SoundManager</definition>
+        <argsstring>(Game game, ContentManager content)</argsstring>
+        <name>SoundManager</name>
+        <param>
+          <type>Game</type>
+          <declname>game</declname>
+        </param>
+        <param>
+          <type>ContentManager</type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" bodystart="43" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sound_manager_1_1_sound_manager_1a4d0637e58b79a3a9105bab09ed25d9cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoundManager.SoundManager.PlaySong</definition>
+        <argsstring>()</argsstring>
+        <name>PlaySong</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" line="51" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" bodystart="50" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sound_manager_1_1_sound_manager_1a6875526dcf5691609028fac1b6073be6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoundManager.SoundManager.PlaySound</definition>
+        <argsstring>(int i)</argsstring>
+        <name>PlaySound</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" line="89" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sound_manager_1_1_sound_manager_1a2b63270ac719c40b4a76afcd41706506" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SoundManager.SoundManager.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Allows the game component to update itself. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provides a snapshot of timing values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" line="99" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" bodystart="98" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is a game component that implements IUpdateable. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" line="22" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/SoundManager/SoundManager.cs" bodystart="21" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_sound_manager_1_1_sound_manager_1a97290161933a25596176216797f20ad0" prot="private" virt="non-virtual"><scope>SoundManager::SoundManager</scope><name>_content</name></member>
+      <member refid="class_sound_manager_1_1_sound_manager_1af39860a5029e9971c04a4957d17a562c" prot="public" virt="non-virtual"><scope>SoundManager::SoundManager</scope><name>Content</name></member>
+      <member refid="class_sound_manager_1_1_sound_manager_1a50a073b81aff89df270dad5c69c1e23b" prot="private" virt="non-virtual"><scope>SoundManager::SoundManager</scope><name>keystate</name></member>
+      <member refid="class_sound_manager_1_1_sound_manager_1aa84a0234e0f40eec62c2ff635faf8e93" prot="private" virt="non-virtual"><scope>SoundManager::SoundManager</scope><name>lastState</name></member>
+      <member refid="class_sound_manager_1_1_sound_manager_1a4d0637e58b79a3a9105bab09ed25d9cd" prot="public" virt="non-virtual"><scope>SoundManager::SoundManager</scope><name>PlaySong</name></member>
+      <member refid="class_sound_manager_1_1_sound_manager_1a6875526dcf5691609028fac1b6073be6" prot="public" virt="non-virtual"><scope>SoundManager::SoundManager</scope><name>PlaySound</name></member>
+      <member refid="class_sound_manager_1_1_sound_manager_1a1be88f244195e19df1bdffa80f83f28f" prot="private" virt="non-virtual"><scope>SoundManager::SoundManager</scope><name>songs</name></member>
+      <member refid="class_sound_manager_1_1_sound_manager_1ac2e26713820910026e621654ceb43361" prot="private" virt="non-virtual"><scope>SoundManager::SoundManager</scope><name>sound</name></member>
+      <member refid="class_sound_manager_1_1_sound_manager_1ab9e1fa8371834208770997b1f8f458b3" prot="public" virt="non-virtual"><scope>SoundManager::SoundManager</scope><name>SoundManager</name></member>
+      <member refid="class_sound_manager_1_1_sound_manager_1ac9aff8ddf97670bde75509bc8b2e7ace" prot="private" virt="non-virtual"><scope>SoundManager::SoundManager</scope><name>sounds</name></member>
+      <member refid="class_sound_manager_1_1_sound_manager_1a2b63270ac719c40b4a76afcd41706506" prot="public" virt="non-virtual"><scope>SoundManager::SoundManager</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

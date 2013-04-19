@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="namespace_g_u_i_1_1_controls" kind="namespace">
+    <compoundname>GUI::Controls</compoundname>
+    <innerclass refid="class_g_u_i_1_1_controls_1_1_label" prot="public">GUI::Controls::Label</innerclass>
+    <innerclass refid="class_g_u_i_1_1_controls_1_1_x_button" prot="public">GUI::Controls::XButton</innerclass>
+    <innerclass refid="class_g_u_i_1_1_controls_1_1_x_panel" prot="public">GUI::Controls::XPanel</innerclass>
+    <innerclass refid="class_g_u_i_1_1_controls_1_1_x_text_box" prot="public">GUI::Controls::XTextBox</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/Label.cs" line="15"/>
+  </compounddef>
+</doxygen>

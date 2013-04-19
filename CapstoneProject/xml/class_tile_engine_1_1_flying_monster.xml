@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_flying_monster" kind="class" prot="public">
+    <compoundname>TileEngine::FlyingMonster</compoundname>
+    <basecompoundref refid="class_tile_engine_1_1_monster" prot="public" virt="non-virtual">TileEngine.Monster</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_flying_monster_1a4c54b4088c35b3633bdac360fad34769" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.FlyingMonster.relPosition</definition>
+        <argsstring></argsstring>
+        <name>relPosition</name>
+        <initializer>= new Vector2(0, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/FlyingMonster.cs" line="17" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/FlyingMonster.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_flying_monster_1a470a15b39a9f7022fa1816b156db0676" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.FlyingMonster.movement</definition>
+        <argsstring></argsstring>
+        <name>movement</name>
+        <initializer>= new Vector2(0, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/FlyingMonster.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/FlyingMonster.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_flying_monster_1a9ae11a69e5d54415a3ddc1d942c70891" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TileEngine.FlyingMonster.active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/FlyingMonster.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/FlyingMonster.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_flying_monster_1ae7b16552cbb110a480175bf5d4102563" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.FlyingMonster.FlyingMonster</definition>
+        <argsstring>()</argsstring>
+        <name>FlyingMonster</name>
+        <briefdescription>
+<para><ref refid="class_tile_engine_1_1_ground_monster" kindref="compound">GroundMonster</ref> class - The monster that cannot fly </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/FlyingMonster.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/FlyingMonster.cs" bodystart="24" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_flying_monster_1a4eeb8e112bda3a74843196a8f4590312" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TileEngine.FlyingMonster.Update</definition>
+        <argsstring>(GameTime gameTime, Vector2 player, Vector2 offset)</argsstring>
+        <name>Update</name>
+        <reimplements refid="class_tile_engine_1_1_monster_1afcbe41e10b1315c8c5c9ced2a939c9a4">Update</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/FlyingMonster.cs" line="35" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/FlyingMonster.cs" bodystart="34" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="41">
+        <label>TileEngine.FlyingMonster</label>
+        <link refid="class_tile_engine_1_1_flying_monster"/>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>Avatar</label>
+        <link refid="class_tile_engine_1_1_avatar"/>
+      </node>
+      <node id="42">
+        <label>Monster</label>
+        <link refid="class_tile_engine_1_1_monster"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="44">
+        <label>TileEngine.FlyingMonster</label>
+        <link refid="class_tile_engine_1_1_flying_monster"/>
+        <childnode refid="45" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>TileEngine.Animation</label>
+        <link refid="class_tile_engine_1_1_animation"/>
+      </node>
+      <node id="46">
+        <label>Avatar</label>
+        <link refid="class_tile_engine_1_1_avatar"/>
+      </node>
+      <node id="45">
+        <label>Monster</label>
+        <link refid="class_tile_engine_1_1_monster"/>
+        <childnode refid="46" relation="public-inheritance">
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>_monsterAnimation</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/FlyingMonster.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/FlyingMonster.cs" bodystart="15" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_monster_1a4320d7ffb62c92db4c92c0882e2dfbae" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>_monsterAnimation</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ac438acf71aa12a4ab41e4e473033b967" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>_offset</name></member>
+      <member refid="class_tile_engine_1_1_flying_monster_1a9ae11a69e5d54415a3ddc1d942c70891" prot="private" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>active</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a7c6118c83ba18eeb197f04412130f3b5" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>Avatar</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a9d97952e8a9e1b347c841cfbe614b60b" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>Avatar</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a19b601d087c090e399c502fef0cdbe3f" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>decreaseHealth</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a34a816dc4b4dc152f209ac3c882e41d9" prot="public" virt="virtual"><scope>TileEngine::FlyingMonster</scope><name>Draw</name></member>
+      <member refid="class_tile_engine_1_1_flying_monster_1ae7b16552cbb110a480175bf5d4102563" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>FlyingMonster</name></member>
+      <member refid="class_tile_engine_1_1_monster_1ae68b6e0b8425e7ebc5931316b5d17221" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>getHealth</name></member>
+      <member refid="class_tile_engine_1_1_monster_1aab1854412a7509be407e2487ae02eea5" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>Health</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a667e1b992bc63e10adcf435039bfe38f" prot="public" virt="virtual"><scope>TileEngine::FlyingMonster</scope><name>Initialize</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a0e97fcf6cf4a9c2602c51cd9620c7017" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>MaxDamage</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a64b59c3249ba8f0ae1b1284ea46e2123" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>MaxHealth</name></member>
+      <member refid="class_tile_engine_1_1_monster_1ae22353dd2c5483411b94ca2aaa63bdd1" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>Monster</name></member>
+      <member refid="class_tile_engine_1_1_flying_monster_1a470a15b39a9f7022fa1816b156db0676" prot="private" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>movement</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a88d7ebb026fba691d674379c3dd55b67" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>Offset</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ad57bccaabfea9a571f45e923c8f8fcea" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>OX</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ae93d9e869211bd685e335aadf0dc5f77" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>OY</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a0eef17049780a5aa303977444d0b5e9d" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>PlayerAnimation</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a9c6796fe77c217cfe59d8d1bf96397d1" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>Position</name></member>
+      <member refid="class_tile_engine_1_1_flying_monster_1a4c54b4088c35b3633bdac360fad34769" prot="private" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>relPosition</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a9442c1ee75dea7492ea9285d98a27afb" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>SpriteFrame</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a5f05c4a49816963d9bf2ee0258a37244" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>SpriteHeight</name></member>
+      <member refid="class_tile_engine_1_1_monster_1a4009a19bba4469153f9255cb3b8418e7" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>SpriteWidth</name></member>
+      <member refid="class_tile_engine_1_1_flying_monster_1a4eeb8e112bda3a74843196a8f4590312" prot="public" virt="virtual"><scope>TileEngine::FlyingMonster</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059" prot="public" virt="virtual" ambiguityscope="TileEngine::Avatar."><scope>TileEngine::FlyingMonster</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afb369b75dc84f09d4c98e6f02dcb1cbe" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>X</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a5780c90b61ef36f0fce907fb8ec1c396" prot="public" virt="non-virtual"><scope>TileEngine::FlyingMonster</scope><name>Y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

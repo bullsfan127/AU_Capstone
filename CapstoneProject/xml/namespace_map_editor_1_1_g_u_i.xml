@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="namespace_map_editor_1_1_g_u_i" kind="namespace">
+    <compoundname>MapEditor::GUI</compoundname>
+    <innerclass refid="class_map_editor_1_1_g_u_i_1_1_map_window" prot="public">MapEditor::GUI::MapWindow</innerclass>
+    <innerclass refid="class_map_editor_1_1_g_u_i_1_1_reset_button" prot="public">MapEditor::GUI::ResetButton</innerclass>
+    <innerclass refid="class_map_editor_1_1_g_u_i_1_1_save_button" prot="public">MapEditor::GUI::SaveButton</innerclass>
+    <innerclass refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active" prot="public">MapEditor::GUI::SetFringeActive</innerclass>
+    <innerclass refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button" prot="public">MapEditor::GUI::SetGoundActiveButton</innerclass>
+    <innerclass refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active" prot="public">MapEditor::GUI::SetMaskActive</innerclass>
+    <innerclass refid="class_map_editor_1_1_g_u_i_1_1_text_box" prot="public">MapEditor::GUI::TextBox</innerclass>
+    <innerclass refid="class_map_editor_1_1_g_u_i_1_1_tile_selector" prot="public">MapEditor::GUI::TileSelector</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/MapWindow.cs" line="17"/>
+  </compounddef>
+</doxygen>

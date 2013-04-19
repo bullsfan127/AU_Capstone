@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['looping',['Looping',['../class_tile_engine_1_1_animation.html#a22b62fda1e3fdb5cc1d20203b72362cb',1,'TileEngine::Animation']]]
+  ['layerlabel',['layerLabel',['../class_map_editor_1_1_g_u_i_1_1_map_window.html#a4ff11be9f0b0c89df1f62e55213407d9',1,'MapEditor::GUI::MapWindow']]]
 ];

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dir_db800c13b7c0e6e99ede83d5c9ddcb01" kind="dir">
+    <compoundname>TileEngine/RolePlay</compoundname>
+    <innerfile refid="_armor_8cs">Armor.cs</innerfile>
+    <innerfile refid="_boomerang_8cs">Boomerang.cs</innerfile>
+    <innerfile refid="_coin_8cs">Coin.cs</innerfile>
+    <innerfile refid="_flying_monster_8cs">FlyingMonster.cs</innerfile>
+    <innerfile refid="_ground_monster_8cs">GroundMonster.cs</innerfile>
+    <innerfile refid="_item_8cs">Item.cs</innerfile>
+    <innerfile refid="_monster_8cs">Monster.cs</innerfile>
+    <innerfile refid="_potion_8cs">Potion.cs</innerfile>
+    <innerfile refid="_sword_8cs">Sword.cs</innerfile>
+    <innerfile refid="_weapon_8cs">Weapon.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/"/>
+  </compounddef>
+</doxygen>

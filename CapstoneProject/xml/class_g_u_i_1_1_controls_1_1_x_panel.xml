@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_g_u_i_1_1_controls_1_1_x_panel" kind="class" prot="public">
+    <compoundname>GUI::Controls::XPanel</compoundname>
+    <basecompoundref refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel" prot="public" virt="non-virtual">GUI.Interfaces.IXPanel</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_panel_1a20711f0ab95478fd1160cb505be5a8b6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_g_u_i_1_1_controls_1_1_x_panel_1aaf741dcf8db9a850d5e6f8cc4b44c01f" kindref="member">Color</ref></type>
+        <definition>Color GUI.Controls.XPanel._color</definition>
+        <argsstring></argsstring>
+        <name>_color</name>
+        <initializer>= Color.White</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_panel_1a6cb1f1ba5689d0652d62bd8d98dd0a81" prot="private" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D GUI.Controls.XPanel._BackGroundImage</definition>
+        <argsstring></argsstring>
+        <name>_BackGroundImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="26" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_panel_1abccf600e8b89d89052e3801fcba17d06" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 GUI.Controls.XPanel._Position</definition>
+        <argsstring></argsstring>
+        <name>_Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_panel_1ae514b9d001f2d205ca51aa6f2d1d81f6" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="interface_g_u_i_1_1_g_component" kindref="compound">GComponent</ref> &gt;</type>
+        <definition>List&lt;GComponent&gt; GUI.Controls.XPanel._ChildComponents</definition>
+        <argsstring></argsstring>
+        <name>_ChildComponents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="54" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_panel_1a82abe7757455debc6bcf2876053f2167" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GUI.Controls.XPanel._Enabled</definition>
+        <argsstring></argsstring>
+        <name>_Enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="68" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_panel_1a78ca6316fa12eb528887de5160798b7c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GUI.Controls.XPanel._PanelWidth</definition>
+        <argsstring></argsstring>
+        <name>_PanelWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="82" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_u_i_1_1_controls_1_1_x_panel_1aa3dd3bf1686bf1bc84e963657be7ae03" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GUI.Controls.XPanel._PanelHeight</definition>
+        <argsstring></argsstring>
+        <name>_PanelHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="90" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_panel_1aaf741dcf8db9a850d5e6f8cc4b44c01f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Color</type>
+        <definition>Microsoft.Xna.Framework.Color GUI.Controls.XPanel.Color</definition>
+        <argsstring></argsstring>
+        <name>Color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_panel_1a9fa0bd8ba72e2d49e7311678d8f060b5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Texture2D</type>
+        <definition>Texture2D GUI.Controls.XPanel.BackGroundImage</definition>
+        <argsstring></argsstring>
+        <name>BackGroundImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="38" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_panel_1ad080557728050d5cb1eaa9a2c36bc248" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Vector2</type>
+        <definition>Vector2 GUI.Controls.XPanel.Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="52" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_panel_1af950da46f1684b05b1e2e5a20aae0bd6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; <ref refid="interface_g_u_i_1_1_g_component" kindref="compound">GComponent</ref> &gt;</type>
+        <definition>List&lt;GComponent&gt; GUI.Controls.XPanel.ChildComponents</definition>
+        <argsstring></argsstring>
+        <name>ChildComponents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="66" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_panel_1acf60a6dabd96eec6680c1465bf735bc2" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool GUI.Controls.XPanel.Enabled</definition>
+        <argsstring></argsstring>
+        <name>Enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="80" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_panel_1a8b088004a1cb21d291642c6b5554b609" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int GUI.Controls.XPanel.PanelWidth</definition>
+        <argsstring></argsstring>
+        <name>PanelWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="88" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_g_u_i_1_1_controls_1_1_x_panel_1a64ae1d26072086560845508a6e27c390" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int GUI.Controls.XPanel.PanelHeight</definition>
+        <argsstring></argsstring>
+        <name>PanelHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="96" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_g_u_i_1_1_controls_1_1_x_panel_1a16ede2589e88c5c385bc74a53d77ca14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GUI.Controls.XPanel.XPanel</definition>
+        <argsstring>(Texture2D background, Vector2 Position, int width, int height)</argsstring>
+        <name>XPanel</name>
+        <param>
+          <type>Texture2D</type>
+          <declname>background</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>Position</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="99" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="98" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1_1_controls_1_1_x_panel_1abb938ea054e3af118f35a7663e67f1ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI.Controls.XPanel.AddChild</definition>
+        <argsstring>(GComponent childComponent, Vector2 Position)</argsstring>
+        <name>AddChild</name>
+        <reimplements refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1aa43fa9c3e6f9004089caa70fb8f09007">AddChild</reimplements>
+        <param>
+          <type><ref refid="interface_g_u_i_1_1_g_component" kindref="compound">GComponent</ref></type>
+          <declname>childComponent</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>Position</declname>
+        </param>
+        <briefdescription>
+<para>Add A child to the Panel </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>childComponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Component you wish to add the Panel</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Position in relatation to the top-Left of the Panel</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="113" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="112" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1_1_controls_1_1_x_panel_1a77b78045ec592b8444b2bdcc8c0fd621" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI.Controls.XPanel.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1a79d9fc7b6b217678aca68d456f301b0a">Update</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Updates all Child Components and its self. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GameTime</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="119" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="118" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_u_i_1_1_controls_1_1_x_panel_1ade6a14d34431af3acc2825f39bd480a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI.Controls.XPanel.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spriteBatch)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1a82594f4f1250e07597e0dfe892d2532f">Draw</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <briefdescription>
+<para>Draws all its Children </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gameTime</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spriteBatch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SpriteBatch for Drawing.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="127" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="126" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="312">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="310">
+        <label>GUI.Controls.XPanel</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_panel"/>
+        <childnode refid="311" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="311">
+        <label>IXPanel</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel"/>
+        <childnode refid="312" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="315">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="313">
+        <label>GUI.Controls.XPanel</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_panel"/>
+        <childnode refid="314" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="314">
+        <label>IXPanel</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel"/>
+        <childnode refid="315" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" line="17" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Controls/XPanel.cs" bodystart="16" bodyend="138"/>
+    <listofallmembers>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a6cb1f1ba5689d0652d62bd8d98dd0a81" prot="private" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>_BackGroundImage</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1ae514b9d001f2d205ca51aa6f2d1d81f6" prot="private" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>_ChildComponents</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a20711f0ab95478fd1160cb505be5a8b6" prot="private" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>_color</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a82abe7757455debc6bcf2876053f2167" prot="private" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>_Enabled</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1aa3dd3bf1686bf1bc84e963657be7ae03" prot="private" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>_PanelHeight</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a78ca6316fa12eb528887de5160798b7c" prot="private" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>_PanelWidth</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1abccf600e8b89d89052e3801fcba17d06" prot="private" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>_Position</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1abb938ea054e3af118f35a7663e67f1ac" prot="public" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>AddChild</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a9fa0bd8ba72e2d49e7311678d8f060b5" prot="public" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>BackGroundImage</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1af950da46f1684b05b1e2e5a20aae0bd6" prot="public" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>ChildComponents</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1aaf741dcf8db9a850d5e6f8cc4b44c01f" prot="public" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>Color</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1ade6a14d34431af3acc2825f39bd480a3" prot="public" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>Draw</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1acf60a6dabd96eec6680c1465bf735bc2" prot="public" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>Enabled</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a64ae1d26072086560845508a6e27c390" prot="public" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>PanelHeight</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a8b088004a1cb21d291642c6b5554b609" prot="public" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>PanelWidth</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1ad080557728050d5cb1eaa9a2c36bc248" prot="public" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>Position</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a77b78045ec592b8444b2bdcc8c0fd621" prot="public" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>Update</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a16ede2589e88c5c385bc74a53d77ca14" prot="public" virt="non-virtual"><scope>GUI::Controls::XPanel</scope><name>XPanel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

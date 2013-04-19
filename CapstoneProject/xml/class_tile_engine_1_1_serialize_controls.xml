@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_serialize_controls" kind="class" prot="public">
+    <compoundname>TileEngine::SerializeControls</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_serialize_controls_1ad5549214d6765151653dfe758758942b" prot="private" static="no" mutable="no">
+        <type>Keys</type>
+        <definition>Keys TileEngine.SerializeControls._right</definition>
+        <argsstring></argsstring>
+        <name>_right</name>
+        <initializer>= Controls.Right</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_serialize_controls_1ae94e56fa78de82df0d75216e7c852d87" prot="private" static="no" mutable="no">
+        <type>Keys</type>
+        <definition>Keys TileEngine.SerializeControls._left</definition>
+        <argsstring></argsstring>
+        <name>_left</name>
+        <initializer>= Controls.Left</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_serialize_controls_1a5e31dd9429e907b095a7a2dc293194ce" prot="private" static="no" mutable="no">
+        <type>Keys</type>
+        <definition>Keys TileEngine.SerializeControls._up</definition>
+        <argsstring></argsstring>
+        <name>_up</name>
+        <initializer>= Controls.Up</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_serialize_controls_1a29b8291410889e1b90b652f03e95a8f4" prot="private" static="no" mutable="no">
+        <type>CustomSerialization.Serialize&lt; <ref refid="class_tile_engine_1_1_serialize_controls" kindref="compound">SerializeControls</ref> &gt;</type>
+        <definition>CustomSerialization.Serialize&lt;SerializeControls&gt; TileEngine.SerializeControls.serializer</definition>
+        <argsstring></argsstring>
+        <name>serializer</name>
+        <initializer>= new CustomSerialization.Serialize&lt;<ref refid="class_tile_engine_1_1_serialize_controls" kindref="compound">SerializeControls</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" line="22" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_tile_engine_1_1_serialize_controls_1a4918f41759f4d5004d164c4dc7591e48" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Input.Keys</type>
+        <definition>Microsoft.Xna.Framework.Input.Keys TileEngine.SerializeControls.Right</definition>
+        <argsstring></argsstring>
+        <name>Right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_serialize_controls_1a09b1aefbf84145b5ecd02b10ccc288cf" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Input.Keys</type>
+        <definition>Microsoft.Xna.Framework.Input.Keys TileEngine.SerializeControls.Left</definition>
+        <argsstring></argsstring>
+        <name>Left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" line="34" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_serialize_controls_1ab9e02520dd857cac256ecab1f24952fb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Input.Keys</type>
+        <definition>Microsoft.Xna.Framework.Input.Keys TileEngine.SerializeControls.Up</definition>
+        <argsstring></argsstring>
+        <name>Up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_serialize_controls_1a43a75b98ed48ec04ed45f8800f304b6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.SerializeControls.save</definition>
+        <argsstring>()</argsstring>
+        <name>save</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" line="43" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" bodystart="42" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_serialize_controls_1a192ff4948230e86934c3d2d0ab1fca2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.SerializeControls.Load</definition>
+        <argsstring>()</argsstring>
+        <name>Load</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" bodystart="48" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/SerializeControls.cs" bodystart="17" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_serialize_controls_1ae94e56fa78de82df0d75216e7c852d87" prot="private" virt="non-virtual"><scope>TileEngine::SerializeControls</scope><name>_left</name></member>
+      <member refid="class_tile_engine_1_1_serialize_controls_1ad5549214d6765151653dfe758758942b" prot="private" virt="non-virtual"><scope>TileEngine::SerializeControls</scope><name>_right</name></member>
+      <member refid="class_tile_engine_1_1_serialize_controls_1a5e31dd9429e907b095a7a2dc293194ce" prot="private" virt="non-virtual"><scope>TileEngine::SerializeControls</scope><name>_up</name></member>
+      <member refid="class_tile_engine_1_1_serialize_controls_1a09b1aefbf84145b5ecd02b10ccc288cf" prot="public" virt="non-virtual"><scope>TileEngine::SerializeControls</scope><name>Left</name></member>
+      <member refid="class_tile_engine_1_1_serialize_controls_1a192ff4948230e86934c3d2d0ab1fca2f" prot="public" virt="non-virtual"><scope>TileEngine::SerializeControls</scope><name>Load</name></member>
+      <member refid="class_tile_engine_1_1_serialize_controls_1a4918f41759f4d5004d164c4dc7591e48" prot="public" virt="non-virtual"><scope>TileEngine::SerializeControls</scope><name>Right</name></member>
+      <member refid="class_tile_engine_1_1_serialize_controls_1a43a75b98ed48ec04ed45f8800f304b6e" prot="public" virt="non-virtual"><scope>TileEngine::SerializeControls</scope><name>save</name></member>
+      <member refid="class_tile_engine_1_1_serialize_controls_1a29b8291410889e1b90b652f03e95a8f4" prot="private" virt="non-virtual"><scope>TileEngine::SerializeControls</scope><name>serializer</name></member>
+      <member refid="class_tile_engine_1_1_serialize_controls_1ab9e02520dd857cac256ecab1f24952fb" prot="public" virt="non-virtual"><scope>TileEngine::SerializeControls</scope><name>Up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

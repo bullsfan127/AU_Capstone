@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_map_editor_1_1_g_u_i_1_1_set_fringe_active" kind="class" prot="public">
+    <compoundname>MapEditor::GUI::SetFringeActive</compoundname>
+    <basecompoundref refid="class_g_u_i_1_1_controls_1_1_x_button" prot="public" virt="non-virtual">GUI.Controls.XButton</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1a505d791d758901c3b764d1358eec0af3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_map_editor_1_1_g_u_i_1_1_map_window" kindref="compound">MapWindow</ref></type>
+        <definition>MapWindow MapEditor.GUI.SetFringeActive.window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1a79ce87017e589ce15aaeacf81a8d928c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_g_u_i_1_1_controls_1_1_label" kindref="compound">Label</ref></type>
+        <definition>Label MapEditor.GUI.SetFringeActive.buttonLable</definition>
+        <argsstring></argsstring>
+        <name>buttonLable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1aee88fb7fea3b50d1bda3370a28f1114f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MapEditor.GUI.SetFringeActive.SetFringeActive</definition>
+        <argsstring>(Vector2 Position, Texture2D ButtonTexture, MapWindow window, SpriteFont font)</argsstring>
+        <name>SetFringeActive</name>
+        <param>
+          <type>Vector2</type>
+          <declname>Position</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>ButtonTexture</declname>
+        </param>
+        <param>
+          <type><ref refid="class_map_editor_1_1_g_u_i_1_1_map_window" kindref="compound">MapWindow</ref></type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>SpriteFont</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" bodystart="23" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1a2b992051938bfced70c0ad40af1bb9c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.GUI.SetFringeActive.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <reimplements refid="class_g_u_i_1_1_controls_1_1_x_button_1abb788f22518aa2bb6e4756c886e4893d">Update</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Update method does all of the detection handling for the button. Whether it was clicked or if its on cooldown. It will remain the same accross all buttons the only method to be changed is the FireEvent Method. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" line="32" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" bodystart="31" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1acca4d0cbe0521abe9227ebbda8856fc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.GUI.SetFringeActive.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spritebatch)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="class_g_u_i_1_1_controls_1_1_x_button_1ac5106591eb34dc1edc9b4d468d2bcae5">Draw</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <briefdescription>
+<para>Draw Method just draws the button into the target area. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spriteBatch</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1afb9c3580d7297e3986d3b82b605b8ed9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.GUI.SetFringeActive.FireEvent</definition>
+        <argsstring>()</argsstring>
+        <name>FireEvent</name>
+        <reimplements refid="class_g_u_i_1_1_controls_1_1_x_button_1ae474e242ee1c62dde757628d922f9065">FireEvent</reimplements>
+        <briefdescription>
+<para>Fire event is what the button actually does. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" line="47" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" bodystart="46" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="234">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="231">
+        <label>MapEditor.GUI.SetFringeActive</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active"/>
+        <childnode refid="232" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="232">
+        <label>XButton</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_button"/>
+        <childnode refid="233" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="233">
+        <label>IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="234" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="238">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="235">
+        <label>MapEditor.GUI.SetFringeActive</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active"/>
+        <childnode refid="236" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="236">
+        <label>XButton</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_button"/>
+        <childnode refid="237" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="237">
+        <label>IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="238" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SetFringeActive.cs" bodystart="18" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aa1f6541223f0fb35db7b41e8c2803260" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>ButtonImage</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1a79ce87017e589ce15aaeacf81a8d928c" prot="private" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>buttonLable</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a1fff2b82126e30b8b06b103a62bec06b" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>ButtonRep</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a4ed1dc21bd0ba765b03562ca3b79e288" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>ChangeColor</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a691dc660d0028dc03882dc009ac47bb2" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>Clicked</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1add70c891819e41bc30b3e06a481603bc" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>Color</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ab9f44f9d0519adb20d3b3476767698da" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>COOLDOWN</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1acca4d0cbe0521abe9227ebbda8856fc3" prot="public" virt="virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>Draw</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ac2b46e285961684f91cc9d79f4fd0c44" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>Enabled</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a8beb21cded9bdecef62937719e7d8571" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>FireAgain</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1afb9c3580d7297e3986d3b82b605b8ed9" prot="public" virt="virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>FireEvent</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aed6404bed1698922f7dab913dd90af1d" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>Position</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1aee88fb7fea3b50d1bda3370a28f1114f" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>SetFringeActive</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1a2b992051938bfced70c0ad40af1bb9c8" prot="public" virt="virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>Update</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a4f5c8bcbe882e1bc2e70105d8cb40a75" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>WasClicked</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1a505d791d758901c3b764d1358eec0af3" prot="private" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>window</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a3cda83e9066b75c36b6ad9e4bc052bb0" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SetFringeActive</scope><name>XButton</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

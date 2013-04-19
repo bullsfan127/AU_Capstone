@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field" kind="interface" prot="public">
+    <compoundname>GUI::Interfaces::IXTextField</compoundname>
+    <basecompoundref refid="interface_g_u_i_1_1_g_component" prot="public" virt="non-virtual">GUI.GComponent</basecompoundref>
+    <derivedcompoundref refid="class_g_u_i_1_1_controls_1_1_label" prot="public" virt="non-virtual">GUI.Controls.Label</derivedcompoundref>
+    <derivedcompoundref refid="class_g_u_i_1_1_controls_1_1_x_text_box" prot="public" virt="non-virtual">GUI.Controls.XTextBox</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a0db721b01d0375fcfb836dbf31518e63" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string GUI.Interfaces.IXTextField.Text</definition>
+        <argsstring></argsstring>
+        <name>Text</name>
+        <briefdescription>
+<para>String that you want to present </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1afa40a886cd2e0a948674c1c0fc3e2176" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>SpriteFont</type>
+        <definition>SpriteFont GUI.Interfaces.IXTextField.Font</definition>
+        <argsstring></argsstring>
+        <name>Font</name>
+        <briefdescription>
+<para>Font to be drawn on the Screen. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1ae6ffcdb46ad66847445640b0025f33fb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Vector2</type>
+        <definition>Vector2 GUI.Interfaces.IXTextField.Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <briefdescription>
+<para>Position on the Screen </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" line="37" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1aa60201cd3b58b69a82d466aa2c9ff7a1" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>float</type>
+        <definition>float GUI.Interfaces.IXTextField.Scale</definition>
+        <argsstring></argsstring>
+        <name>Scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String Scale </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" line="42" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a1c9707257911a3e6f96f6a3594efe19d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Color</type>
+        <definition>Color GUI.Interfaces.IXTextField.TextColor</definition>
+        <argsstring></argsstring>
+        <name>TextColor</name>
+        <briefdescription>
+<para>String Color </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a5353f79b20e74150e86e307d913ccab4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool GUI.Interfaces.IXTextField.Enabled</definition>
+        <argsstring></argsstring>
+        <name>Enabled</name>
+        <briefdescription>
+<para>TextField Visiblity </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" line="53" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a94684fe585448d89eaa285f31f30c29a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI.Interfaces.IXTextField.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spriteBatch)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="interface_g_u_i_1_1_g_component_1acf033aabe5063b034712f879b7908432">Draw</reimplements>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_label_1a4f262aa1bbfe0267b0ffa4a9e51a1c37">Draw</reimplementedby>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_text_box_1a16565a1a289a21e3e644d883eb2d4397">Draw</reimplementedby>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <briefdescription>
+<para>Draw Method </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spriteBatch</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" line="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines the Interface for a TextField in XNA. Which in this context is a string written on to the screen. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="126">
+        <label>GUI.Controls.XTextBox</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_text_box"/>
+        <childnode refid="123" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="123">
+        <label>GUI.Interfaces.IXTextField</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field"/>
+        <childnode refid="124" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="125">
+        <label>GUI.Controls.Label</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_label"/>
+        <childnode refid="123" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="128">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="127">
+        <label>GUI.Interfaces.IXTextField</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field"/>
+        <childnode refid="128" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXTextField.cs" bodystart="19" bodyend="64"/>
+    <listofallmembers>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a94684fe585448d89eaa285f31f30c29a" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXTextField</scope><name>Draw</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a5353f79b20e74150e86e307d913ccab4" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXTextField</scope><name>Enabled</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1afa40a886cd2e0a948674c1c0fc3e2176" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXTextField</scope><name>Font</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1ae6ffcdb46ad66847445640b0025f33fb" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXTextField</scope><name>Position</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1aa60201cd3b58b69a82d466aa2c9ff7a1" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXTextField</scope><name>Scale</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a0db721b01d0375fcfb836dbf31518e63" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXTextField</scope><name>Text</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a1c9707257911a3e6f96f6a3594efe19d" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXTextField</scope><name>TextColor</name></member>
+      <member refid="interface_g_u_i_1_1_g_component_1a885a92b191148424d13210766f8b52fa" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXTextField</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

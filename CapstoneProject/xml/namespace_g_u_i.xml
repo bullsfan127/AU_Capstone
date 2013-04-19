@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="namespace_g_u_i" kind="namespace">
+    <compoundname>GUI</compoundname>
+    <innerclass refid="interface_g_u_i_1_1_g_component" prot="public">GUI::GComponent</innerclass>
+    <innernamespace refid="namespace_g_u_i_1_1_controls">GUI::Controls</innernamespace>
+    <innernamespace refid="namespace_g_u_i_1_1_interfaces">GUI::Interfaces</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1"/>
+  </compounddef>
+</doxygen>

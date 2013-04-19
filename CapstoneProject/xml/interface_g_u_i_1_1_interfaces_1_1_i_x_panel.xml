@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="interface_g_u_i_1_1_interfaces_1_1_i_x_panel" kind="interface" prot="public">
+    <compoundname>GUI::Interfaces::IXPanel</compoundname>
+    <basecompoundref refid="interface_g_u_i_1_1_g_component" prot="public" virt="non-virtual">GUI.GComponent</basecompoundref>
+    <derivedcompoundref refid="class_g_u_i_1_1_controls_1_1_x_panel" prot="public" virt="non-virtual">GUI.Controls.XPanel</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1aee6429a44248fa5c3d800b310aad49fe" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Texture2D</type>
+        <definition>Texture2D GUI.Interfaces.IXPanel.BackGroundImage</definition>
+        <argsstring></argsstring>
+        <name>BackGroundImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Texture Drawn below the Child Components; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXPanel.cs" line="26" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXPanel.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1afd1b114c3fac2f35023b9c0219f5a56f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; <ref refid="interface_g_u_i_1_1_g_component" kindref="compound">GComponent</ref> &gt;</type>
+        <definition>List&lt;GComponent&gt; GUI.Interfaces.IXPanel.ChildComponents</definition>
+        <argsstring></argsstring>
+        <name>ChildComponents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Position on the ViewPort </para><para>List for child components. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXPanel.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXPanel.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1aff004c3cde7ba067dc73c150ee4b3dd9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool GUI.Interfaces.IXPanel.Enabled</definition>
+        <argsstring></argsstring>
+        <name>Enabled</name>
+        <briefdescription>
+<para>Is the Component Enabled? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXPanel.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXPanel.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1aa43fa9c3e6f9004089caa70fb8f09007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GUI.Interfaces.IXPanel.AddChild</definition>
+        <argsstring>(GComponent childComponent, Vector2 Position)</argsstring>
+        <name>AddChild</name>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_panel_1abb938ea054e3af118f35a7663e67f1ac">AddChild</reimplementedby>
+        <param>
+          <type><ref refid="interface_g_u_i_1_1_g_component" kindref="compound">GComponent</ref></type>
+          <declname>childComponent</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>Position</declname>
+        </param>
+        <briefdescription>
+<para>Add A child to the Panel </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>childComponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Component you wish to add the Panel</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Position in relatation to the top-Left of the Panel</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXPanel.cs" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1a79d9fc7b6b217678aca68d456f301b0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>new void</type>
+        <definition>new void GUI.Interfaces.IXPanel.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_g_u_i_1_1_g_component_1a885a92b191148424d13210766f8b52fa">Update</reimplements>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_panel_1a77b78045ec592b8444b2bdcc8c0fd621">Update</reimplementedby>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Updates all Child Components and its self. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GameTime</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXPanel.cs" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1a82594f4f1250e07597e0dfe892d2532f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>new void</type>
+        <definition>new void GUI.Interfaces.IXPanel.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spriteBatch)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="interface_g_u_i_1_1_g_component_1acf033aabe5063b034712f879b7908432">Draw</reimplements>
+        <reimplementedby refid="class_g_u_i_1_1_controls_1_1_x_panel_1ade6a14d34431af3acc2825f39bd480a3">Draw</reimplementedby>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <briefdescription>
+<para>Draws all its Children </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gameTime</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spriteBatch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SpriteBatch for Drawing.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXPanel.cs" line="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An Interface for Outlining the Behavior for a Panel in XNA </para>    </briefdescription>
+    <detaileddescription>
+<para>A Panel Tethers the Position of the child Components to itself so that all components move together. It also updates its child components. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="119">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="120">
+        <label>GUI.Controls.XPanel</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_panel"/>
+        <childnode refid="118" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="118">
+        <label>GUI.Interfaces.IXPanel</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="122">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="121">
+        <label>GUI.Interfaces.IXPanel</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel"/>
+        <childnode refid="122" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXPanel.cs" line="22" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXPanel.cs" bodystart="21" bodyend="64"/>
+    <listofallmembers>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1aa43fa9c3e6f9004089caa70fb8f09007" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXPanel</scope><name>AddChild</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1aee6429a44248fa5c3d800b310aad49fe" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXPanel</scope><name>BackGroundImage</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1afd1b114c3fac2f35023b9c0219f5a56f" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXPanel</scope><name>ChildComponents</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1a82594f4f1250e07597e0dfe892d2532f" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXPanel</scope><name>Draw</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1aff004c3cde7ba067dc73c150ee4b3dd9" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXPanel</scope><name>Enabled</name></member>
+      <member refid="interface_g_u_i_1_1_g_component_1aef3f78634fe0e377be97f0504f708b54" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXPanel</scope><name>Position</name></member>
+      <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1a79d9fc7b6b217678aca68d456f301b0a" prot="public" virt="non-virtual"><scope>GUI::Interfaces::IXPanel</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

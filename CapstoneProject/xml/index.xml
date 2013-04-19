@@ -2,36 +2,100 @@
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.3.1">
   <compound refid="class_tile_engine_1_1_animation" kind="class"><name>TileEngine::Animation</name>
     <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1e" kind="enum"><name>Animate</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eaa5daf7f2ebbba4975d61dab1c40188c7" kind="enumvalue"><name>IDLE</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eac316beb10749c9d5a513dc00c7648bd8" kind="enumvalue"><name>RIDLE</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eae54769e193f9903aa28e0065c554c74f" kind="enumvalue"><name>LIDLE</name></member>
     <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eabc15bc8f8fddb1a6e37681cd3b55f785" kind="enumvalue"><name>RMOVING</name></member>
     <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eae38549b4afe4b0e04bcac3d0dd33c1c6" kind="enumvalue"><name>LMOVING</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1ea6b49384656cb106f3ac67bf7077a319f" kind="enumvalue"><name>RATTACK</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eacd7253c0afb28f98c66cdef64020f9d3" kind="enumvalue"><name>LATTACK</name></member>
     <member refid="class_tile_engine_1_1_animation_1a2c0d7ff5887ea0684283d7187dd3f817" kind="variable"><name>state</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a4166f07632f8a495522be0bca0552acc" kind="variable"><name>currentFrame</name></member>
-    <member refid="class_tile_engine_1_1_animation_1ad15d57a585f106536a11ca45a4ef24c0" kind="variable"><name>sourceRect</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a5f6214ff26f488b0988d32964294981b" kind="variable"><name>destinationRect</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a6144d8d5c904bfd318a0f1891f68d31a" kind="variable"><name>FrameWidth</name></member>
-    <member refid="class_tile_engine_1_1_animation_1ad6d0570216f225b5965bdf25ae1ff92a" kind="variable"><name>FrameHeight</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a428519a2f385fb1eb29ffa3852c5a505" kind="variable"><name>Active</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a22b62fda1e3fdb5cc1d20203b72362cb" kind="variable"><name>Looping</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a75d52f1bc2b67d0bc012ad6569bfe006" kind="variable"><name>Position</name></member>
-    <member refid="class_tile_engine_1_1_animation_1abc2687680fb5017f74647e1361289e7b" kind="variable"><name>lastState</name></member>
     <member refid="class_tile_engine_1_1_animation_1a77ea919bcf737be01b4d9257515dd854" kind="variable"><name>spriteStrip</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a53779ea1f64986d5e5ccca5c4b47ad1e" kind="variable"><name>scale</name></member>
-    <member refid="class_tile_engine_1_1_animation_1ab7882c24dcf7c1b486cb344363d92ecf" kind="variable"><name>elapsedTime</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a32d97e4504028113317d6acc60f1a081" kind="variable"><name>frameTime</name></member>
-    <member refid="class_tile_engine_1_1_animation_1ad531add720bb986e67662aa05c1c849b" kind="variable"><name>frameCount</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a5e154eeb0eda32263f8cecb88984a76a" kind="variable"><name>color</name></member>
-    <member refid="class_tile_engine_1_1_animation_1a7a7907093bd3db85bce93c7f901e1426" kind="function"><name>Initialize</name></member>
+    <member refid="class_tile_engine_1_1_animation_1ac1b7b632a1b53bb61ca4839c368f66a9" kind="variable"><name>_sRect</name></member>
+    <member refid="class_tile_engine_1_1_animation_1af6caccf7522f5e14ee30b6eed1056524" kind="variable"><name>_dRect</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a65e64eb69f2c2a707a2224105e9b1a8d" kind="variable"><name>_lastState</name></member>
+    <member refid="class_tile_engine_1_1_animation_1ab69acaf44967e375c443e7e1b990c322" kind="variable"><name>_scale</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a41a43eee891eb9a5dd7dce2aa36d38d5" kind="variable"><name>_elapsedTime</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a9ca4dbf005de635b4b3ed9241c297a9d" kind="variable"><name>_frameTime</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a4a15a7b0977076cb3419a763a89da608" kind="variable"><name>_initialFrameTime</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a89326fb55f53a999bf592d74d7f2ce11" kind="variable"><name>_frameCount</name></member>
+    <member refid="class_tile_engine_1_1_animation_1ac99748b40965b66a151ec2a54ba5bb73" kind="variable"><name>_currentFrame</name></member>
+    <member refid="class_tile_engine_1_1_animation_1aed1d1be8dd9a522eae387430888e8dcb" kind="variable"><name>_color</name></member>
+    <member refid="class_tile_engine_1_1_animation_1afca9154fb85069e0f5486371229d8a18" kind="variable"><name>_sourceRect</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a907b6acb1cf881be6543ffd9dc93d702" kind="variable"><name>_destinationRect</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a78a6c90c61054d7bc4bbee581b765be0" kind="variable"><name>_FrameWidth</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a7fc52f78c70b0b948578a10b01254d17" kind="variable"><name>_FrameHeight</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a593b587c17009cfd3cfa6e346b4c8ad8" kind="variable"><name>_Active</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a85989cf4b7d77b3dd476e85269e78b31" kind="variable"><name>_Looping</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a4a8f68b828e90b126415bc1b05bfb370" kind="variable"><name>_Position</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a4697e4f20fd8965aae32123a59ae8654" kind="property"><name>SRect</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a74feefdf7bcdb6b456e87f9d4078fe42" kind="property"><name>DRect</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a99de7e38d5871e86bea32adab992d7a1" kind="property"><name>sourceRect</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a95f6bb1707a986404ddb09fd87178976" kind="property"><name>destinationRect</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a4e82c467338bbd20f08b2ee04fb77130" kind="property"><name>lastState</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a53779ea1f64986d5e5ccca5c4b47ad1e" kind="property"><name>scale</name></member>
+    <member refid="class_tile_engine_1_1_animation_1ab7882c24dcf7c1b486cb344363d92ecf" kind="property"><name>elapsedTime</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a32d97e4504028113317d6acc60f1a081" kind="property"><name>frameTime</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a5d8df04ae419f9d98db8ecfb3b48d0a0" kind="property"><name>initialFrameTime</name></member>
+    <member refid="class_tile_engine_1_1_animation_1ad531add720bb986e67662aa05c1c849b" kind="property"><name>frameCount</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a4166f07632f8a495522be0bca0552acc" kind="property"><name>currentFrame</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a661213c4c5a60559e3e3e4f5b5d53036" kind="property"><name>color</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a6144d8d5c904bfd318a0f1891f68d31a" kind="property"><name>FrameWidth</name></member>
+    <member refid="class_tile_engine_1_1_animation_1ad6d0570216f225b5965bdf25ae1ff92a" kind="property"><name>FrameHeight</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a428519a2f385fb1eb29ffa3852c5a505" kind="property"><name>Active</name></member>
+    <member refid="class_tile_engine_1_1_animation_1a22b62fda1e3fdb5cc1d20203b72362cb" kind="property"><name>Looping</name></member>
+    <member refid="class_tile_engine_1_1_animation_1ab3b6f9f9a930a9276c8b17f08085e0fa" kind="property"><name>Position</name></member>
+    <member refid="class_tile_engine_1_1_animation_1ab044968602d5dfa9d8bf83a8aed07ba3" kind="function"><name>Initialize</name></member>
     <member refid="class_tile_engine_1_1_animation_1a2614c6eff471aecefade8b906a489eeb" kind="function"><name>Update</name></member>
     <member refid="class_tile_engine_1_1_animation_1ab4dd3a8d57cc8de71f8863ff91238eea" kind="function"><name>Draw</name></member>
   </compound>
+  <compound refid="class_tile_engine_1_1_armor" kind="class"><name>TileEngine::Armor</name>
+    <member refid="class_tile_engine_1_1_armor_1a72b77f57580d50f50b1d52cca307cc85" kind="function"><name>Armor</name></member>
+  </compound>
   <compound refid="class_tile_engine_1_1_avatar" kind="class"><name>TileEngine::Avatar</name>
-    <member refid="class_tile_engine_1_1_avatar_1acaf90ade8532cc6e24a2ba769fd2ffec" kind="variable"><name>_Position</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1ac438acf71aa12a4ab41e4e473033b967" kind="variable"><name>_offset</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1a88d7ebb026fba691d674379c3dd55b67" kind="property"><name>Offset</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1ad57bccaabfea9a571f45e923c8f8fcea" kind="property"><name>OX</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1ae93d9e869211bd685e335aadf0dc5f77" kind="property"><name>OY</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1a0eef17049780a5aa303977444d0b5e9d" kind="property"><name>PlayerAnimation</name></member>
     <member refid="class_tile_engine_1_1_avatar_1a9c6796fe77c217cfe59d8d1bf96397d1" kind="property"><name>Position</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1afb369b75dc84f09d4c98e6f02dcb1cbe" kind="property"><name>X</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1a5780c90b61ef36f0fce907fb8ec1c396" kind="property"><name>Y</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1a1b2b414ca47289ac2d68eeea89b6cd20" kind="variable"><name>_oX</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1a8bb118d745aa282b3de62b226d9d8480" kind="variable"><name>_oY</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1a3fb04fc51ab9c83dee60980ac733dc93" kind="variable"><name>_PlayerAnimation</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1acaf90ade8532cc6e24a2ba769fd2ffec" kind="variable"><name>_Position</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1a85fbb75fcb512bdfe4cc00a639053353" kind="variable"><name>_x</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1a9d13e83cee505a44bb3d6a47f0870311" kind="variable"><name>_y</name></member>
     <member refid="class_tile_engine_1_1_avatar_1a7c6118c83ba18eeb197f04412130f3b5" kind="function"><name>Avatar</name></member>
     <member refid="class_tile_engine_1_1_avatar_1a9d97952e8a9e1b347c841cfbe614b60b" kind="function"><name>Avatar</name></member>
     <member refid="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059" kind="function"><name>Update</name></member>
     <member refid="class_tile_engine_1_1_avatar_1a7d6106cb2e838e335d7b285d51312183" kind="function"><name>Draw</name></member>
+    <member refid="class_tile_engine_1_1_avatar_1a565a17aa3aae06ca72673956919ebb97" kind="function"><name>Initialize</name></member>
+  </compound>
+  <compound refid="class_tile_engine_1_1_boomerang" kind="class"><name>TileEngine::Boomerang</name>
+    <member refid="class_tile_engine_1_1_boomerang_1ad0e225c32499d57e6a1d13670de47941" kind="variable"><name>_boomerangAnimation</name></member>
+    <member refid="class_tile_engine_1_1_boomerang_1a35d3adcfbce35e1af541b820e202935a" kind="variable"><name>position</name></member>
+    <member refid="class_tile_engine_1_1_boomerang_1a97a50ee7f084ef64116614b8de6ff993" kind="variable"><name>movemnet</name></member>
+    <member refid="class_tile_engine_1_1_boomerang_1a9144c7265225ddd2c4f4fcf9232f2aa1" kind="variable"><name>active</name></member>
+    <member refid="class_tile_engine_1_1_boomerang_1af0eafed16fdb212ef63ae3387fc198ca" kind="function"><name>Boomerang</name></member>
+    <member refid="class_tile_engine_1_1_boomerang_1a79dbb98047888493b6546d1903489386" kind="function"><name>Initialize</name></member>
+    <member refid="class_tile_engine_1_1_boomerang_1aab587ad270baf5e35987cd3b3ffe7a83" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_tile_engine_1_1_coin" kind="class"><name>TileEngine::Coin</name>
+    <member refid="class_tile_engine_1_1_coin_1a70c6e6e4bbdc6fc483866c055da8cade" kind="function"><name>Coin</name></member>
+  </compound>
+  <compound refid="class_tile_engine_1_1_controls" kind="class"><name>TileEngine::Controls</name>
+    <member refid="class_tile_engine_1_1_controls_1a2f3688e15a47de93febb139632cb942d" kind="variable"><name>_left</name></member>
+    <member refid="class_tile_engine_1_1_controls_1a158cfa91f67b96510a6a8cf5ca05677f" kind="variable"><name>_right</name></member>
+    <member refid="class_tile_engine_1_1_controls_1a8758e01303df1c70ff285b6ff984ee33" kind="variable"><name>_up</name></member>
+    <member refid="class_tile_engine_1_1_controls_1a025d6d798bc6c2049a0c1dcd3aa71a3d" kind="variable"><name>_attack</name></member>
+    <member refid="class_tile_engine_1_1_controls_1af4a48b4be1319257724d423cb482a6c4" kind="property"><name>Attack</name></member>
+    <member refid="class_tile_engine_1_1_controls_1acba265a967cfc16cca6852841b0b20f9" kind="property"><name>Left</name></member>
+    <member refid="class_tile_engine_1_1_controls_1a5beef8db2452445533345fc62e04238a" kind="property"><name>Right</name></member>
+    <member refid="class_tile_engine_1_1_controls_1ad26f3d398b5eb175425234dd4caa98de" kind="property"><name>Up</name></member>
+    <member refid="class_tile_engine_1_1_controls_1a59b5a4b169128f6db2f75cb8fba8bf87" kind="function"><name>Save</name></member>
+    <member refid="class_tile_engine_1_1_controls_1a3aec23505dbaf6004216d22efbbccd98" kind="function"><name>Load</name></member>
+    <member refid="class_tile_engine_1_1_controls_1aad1c41284b5cbdca35f0922bc3e52307" kind="function"><name>setDefault</name></member>
   </compound>
   <compound refid="interface_tile_engine_1_1_interfaces_1_1_drawable" kind="interface"><name>TileEngine::Interfaces::Drawable</name>
     <member refid="interface_tile_engine_1_1_interfaces_1_1_drawable_1a76cc277f0eb55cbb1a5c107a8320f47b" kind="function"><name>getScale</name></member>
@@ -63,12 +127,38 @@
     <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1aa04b0945dfae8242798a620ab7fb73ec" kind="property"><name>Layer</name></member>
     <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a61f8c541810f2a3d4e0adfb6ccab9045" kind="property"><name>MapWidth</name></member>
     <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1ac92a235c150d1dd69bff8154a4f4f12e" kind="property"><name>MapHeight</name></member>
+    <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a7d0fdc2aae39dada28c62d8f3fd0c7d5" kind="property"><name>MaxViewPortWidth</name></member>
+    <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a841b718fa38fd09b377ea29de53070cf" kind="property"><name>MaxViewPortHeight</name></member>
+    <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a4e5cc41aa0e4d23057a5283300a579de" kind="property"><name>Scale</name></member>
+    <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1ac48d8a0f8376d63f424516ded2583f62" kind="property"><name>MaxRows</name></member>
+    <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a0d81fc9d1e8cca2bbedb2048d3a12405" kind="property"><name>MaxColumns</name></member>
     <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a75c68a1120810d78da78deb7e1842d6d" kind="function"><name>DrawableLayer</name></member>
     <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1afc8431acf52a3ccf8f0ba47688a26249" kind="function"><name>DrawableLayer</name></member>
     <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1af6de54987654c082316ef350f02af005" kind="function"><name>getItemAt</name></member>
+    <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a8f46596a76dd8ff909d23a2502be5ee7" kind="function"><name>getItemAt</name></member>
     <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a9743f584942c1445ab21fe4ae131c94e" kind="function"><name>setItemAt</name></member>
+    <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a72395c623d7225528ad272426b7c2a00" kind="function"><name>setItemAt</name></member>
     <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a4c1c5d0a76e1b61955e13196efe28e30" kind="function"><name>Draw</name></member>
+    <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1acf8229012bcfc5b96ec3eef3015a92b0" kind="function"><name>Draw</name></member>
     <member refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4_1a6affc21c4de1bd7e35b7790a1ce7bfea" kind="function"><name>swapLayer</name></member>
+  </compound>
+  <compound refid="class_tile_engine_1_1_flying_monster" kind="class"><name>TileEngine::FlyingMonster</name>
+    <member refid="class_tile_engine_1_1_flying_monster_1a4c54b4088c35b3633bdac360fad34769" kind="variable"><name>relPosition</name></member>
+    <member refid="class_tile_engine_1_1_flying_monster_1a470a15b39a9f7022fa1816b156db0676" kind="variable"><name>movement</name></member>
+    <member refid="class_tile_engine_1_1_flying_monster_1a9ae11a69e5d54415a3ddc1d942c70891" kind="variable"><name>active</name></member>
+    <member refid="class_tile_engine_1_1_flying_monster_1ae7b16552cbb110a480175bf5d4102563" kind="function"><name>FlyingMonster</name></member>
+    <member refid="class_tile_engine_1_1_flying_monster_1a4eeb8e112bda3a74843196a8f4590312" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_tile_engine_1_1_focal_point" kind="class"><name>TileEngine::FocalPoint</name>
+    <member refid="class_tile_engine_1_1_focal_point_1af943b54080af4bb9ababb5bfba655f9d" kind="variable"><name>width</name></member>
+    <member refid="class_tile_engine_1_1_focal_point_1ab7e4cb6ce2967c009b9cf0133a8b05c4" kind="variable"><name>height</name></member>
+    <member refid="class_tile_engine_1_1_focal_point_1adafe13771154cbce6b59dd6aab258d1a" kind="variable"><name>MaxXTiles</name></member>
+    <member refid="class_tile_engine_1_1_focal_point_1a44cf7ae94c4fc415fc47f03c5b45cfb7" kind="variable"><name>MaxYTiles</name></member>
+    <member refid="class_tile_engine_1_1_focal_point_1a3da65ab61b944f5c7ee3d177a283d5a3" kind="variable"><name>lastmove</name></member>
+    <member refid="class_tile_engine_1_1_focal_point_1ac752a9d33b7501fcb6f41972dc122dcb" kind="function"><name>FocalPoint</name></member>
+    <member refid="class_tile_engine_1_1_focal_point_1a5383f757d39e6294e93fe9c3c97c7323" kind="function"><name>FocalPoint</name></member>
+    <member refid="class_tile_engine_1_1_focal_point_1ae4cbab2ec4f622ddfb2804f3e07cae4c" kind="function"><name>Update</name></member>
+    <member refid="class_tile_engine_1_1_focal_point_1af837293a4d8023834a9cd8188377a480" kind="function"><name>Draw</name></member>
   </compound>
   <compound refid="class_capstone_project_1_1_f_p_s___counter" kind="class"><name>CapstoneProject::FPS_Counter</name>
     <member refid="class_capstone_project_1_1_f_p_s___counter_1aa617867a943302c0f595536ef3efc5a0" kind="variable"><name>lastTime</name></member>
@@ -84,18 +174,30 @@
     <member refid="class_capstone_project_1_1_f_p_s___counter_1a2efed39113c7db14ed5b9a867b6412bd" kind="function"><name>setVisibility</name></member>
   </compound>
   <compound refid="class_capstone_project_1_1_game1" kind="class"><name>CapstoneProject::Game1</name>
+    <member refid="class_capstone_project_1_1_game1_1afe053e6d39b647958d2ca3f28c2a1e2e" kind="variable"><name>gameState</name></member>
+    <member refid="class_capstone_project_1_1_game1_1a0a205c2df777702d8e866260964f4ad5" kind="variable"><name>backgroundTexture</name></member>
+    <member refid="class_capstone_project_1_1_game1_1ab0e1078650643f546fb5527aead72531" kind="variable"><name>story</name></member>
+    <member refid="class_capstone_project_1_1_game1_1aec9a2166e5e843a547df2c4eddf9d8f8" kind="variable"><name>pauseBackground</name></member>
+    <member refid="class_capstone_project_1_1_game1_1ad8dc0e5f84b242b6567669cd143efa7a" kind="variable"><name>menu</name></member>
+    <member refid="class_capstone_project_1_1_game1_1a2073db390c0d507696217e7e46e4f84c" kind="variable"><name>pauseMenu</name></member>
     <member refid="class_capstone_project_1_1_game1_1a63d6d0354aaf17fcb3a836c105158004" kind="variable"><name>graphics</name></member>
     <member refid="class_capstone_project_1_1_game1_1ae5be95693e03f9f2e2a0b833addd5a4b" kind="variable"><name>spriteBatch</name></member>
-    <member refid="class_capstone_project_1_1_game1_1acd6f60a4d642ffb14886d7ebafab6d21" kind="variable"><name>a</name></member>
-    <member refid="class_capstone_project_1_1_game1_1a58b2f088d3e7309061dd55688392ca7a" kind="variable"><name>b</name></member>
-    <member refid="class_capstone_project_1_1_game1_1a6931d7baea7cff28c79470f61f3e8c6f" kind="variable"><name>c</name></member>
-    <member refid="class_capstone_project_1_1_game1_1a840b2896a22dc746f6b7fe83893a44f2" kind="variable"><name>currentLayer</name></member>
-    <member refid="class_capstone_project_1_1_game1_1a2ee25363ea9adff7c53530a0157af7e6" kind="variable"><name>currentLayerA</name></member>
-    <member refid="class_capstone_project_1_1_game1_1a09340193f6302f7e05bfb525f79ef01e" kind="variable"><name>currentLayerB</name></member>
+    <member refid="class_capstone_project_1_1_game1_1ab87216dabe4f421d4f1f230ccabe9764" kind="variable"><name>coin</name></member>
+    <member refid="class_capstone_project_1_1_game1_1a089cf38bc2959567369cda659afb5723" kind="variable"><name>potion</name></member>
+    <member refid="class_capstone_project_1_1_game1_1ae59f1cd18cc471c2f0c7e1301dfc924e" kind="variable"><name>groundMonster</name></member>
+    <member refid="class_capstone_project_1_1_game1_1a90cfbd5d5ee6a0da6cc124bf541cbab0" kind="variable"><name>flyingMonster</name></member>
+    <member refid="class_capstone_project_1_1_game1_1ade4cd4c18d5194310471583cfc92c2cb" kind="variable"><name>settings</name></member>
+    <member refid="class_capstone_project_1_1_game1_1a6e174020c46b164eb9e45ad3199882a0" kind="variable"><name>msettings</name></member>
+    <member refid="class_capstone_project_1_1_game1_1a272dc83695e074cd3e1e28398eb1144f" kind="variable"><name>pauseButton</name></member>
+    <member refid="class_capstone_project_1_1_game1_1a2fce59aa4ebd02ee996baf2f13cf3528" kind="variable"><name>pauseTexture</name></member>
+    <member refid="class_capstone_project_1_1_game1_1acb5bbedc58681a8c3cdcccf47e9705f0" kind="variable"><name>soundManager</name></member>
     <member refid="class_capstone_project_1_1_game1_1a0b5852e126019654abc0d861a9326332" kind="variable"><name>player</name></member>
-    <member refid="class_capstone_project_1_1_game1_1a1e1a439090de629102b29c5b2ba2bda2" kind="variable"><name>serializer</name></member>
+    <member refid="class_capstone_project_1_1_game1_1ad5aac6b79c20ee0b7932ab3368856dcc" kind="variable"><name>mainFrame</name></member>
+    <member refid="class_capstone_project_1_1_game1_1a76f21c90612ef0d4d03634dbcf7c638b" kind="variable"><name>pauseMainFrame</name></member>
+    <member refid="class_capstone_project_1_1_game1_1aeab02159ea25535b6f0431d6e69614e5" kind="variable"><name>healthBar</name></member>
+    <member refid="class_capstone_project_1_1_game1_1acd36906766412dc4e6d043c93164ad32" kind="variable"><name>playerTexture</name></member>
+    <member refid="class_capstone_project_1_1_game1_1a3276ed81f9d7fcf6d88de86c0535c37f" kind="variable"><name>scoreDisplay</name></member>
     <member refid="class_capstone_project_1_1_game1_1ab47363e3c09ed8c407aa65d35ea28c74" kind="variable"><name>gameMap</name></member>
-    <member refid="class_capstone_project_1_1_game1_1ad1031625353f2464e8c96f967548e2e5" kind="variable"><name>counter</name></member>
     <member refid="class_capstone_project_1_1_game1_1ae7b0491fe249f1a9678beaa428d91ea7" kind="function"><name>Game1</name></member>
     <member refid="class_capstone_project_1_1_game1_1accbc48beedf472a28ce77034f16114b5" kind="function"><name>Initialize</name></member>
     <member refid="class_capstone_project_1_1_game1_1a37f67ad402448d603acfcb0f26fdfd4c" kind="function"><name>LoadContent</name></member>
@@ -103,20 +205,120 @@
     <member refid="class_capstone_project_1_1_game1_1a531433f38f741ed11acb4750bf92d70d" kind="function"><name>Update</name></member>
     <member refid="class_capstone_project_1_1_game1_1a8f7e138af4e270d66e5a8ba1e8137205" kind="function"><name>Draw</name></member>
   </compound>
+  <compound refid="interface_g_u_i_1_1_g_component" kind="interface"><name>GUI::GComponent</name>
+    <member refid="interface_g_u_i_1_1_g_component_1aef3f78634fe0e377be97f0504f708b54" kind="property"><name>Position</name></member>
+    <member refid="interface_g_u_i_1_1_g_component_1a885a92b191148424d13210766f8b52fa" kind="function"><name>Update</name></member>
+    <member refid="interface_g_u_i_1_1_g_component_1acf033aabe5063b034712f879b7908432" kind="function"><name>Draw</name></member>
+  </compound>
+  <compound refid="class_tile_engine_1_1_ground_monster" kind="class"><name>TileEngine::GroundMonster</name>
+    <member refid="class_tile_engine_1_1_ground_monster_1a87f99090b4e7b600a22da4707e2e772c" kind="variable"><name>relPosition</name></member>
+    <member refid="class_tile_engine_1_1_ground_monster_1a5ddcede57e09650e90d1f84c76947831" kind="variable"><name>movement</name></member>
+    <member refid="class_tile_engine_1_1_ground_monster_1a317abefad0035d42ddf45b095d2b6e83" kind="variable"><name>active</name></member>
+    <member refid="class_tile_engine_1_1_ground_monster_1a77b94866531a125accd18364d0d902c8" kind="function"><name>GroundMonster</name></member>
+    <member refid="class_tile_engine_1_1_ground_monster_1a825af62a6ab94a36b93f2f1a8e1b8517" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_tile_engine_1_1_health_bar" kind="class"><name>TileEngine::HealthBar</name>
+    <member refid="class_tile_engine_1_1_health_bar_1ae43d1d1887904fbbdf076cdb7e511d98" kind="variable"><name>graphics</name></member>
+    <member refid="class_tile_engine_1_1_health_bar_1a576f39095dab553b96b1ccae8b9bc2b1" kind="variable"><name>texture</name></member>
+    <member refid="class_tile_engine_1_1_health_bar_1a76718f7be9c52a6f7461d52aa894aa16" kind="variable"><name>position</name></member>
+    <member refid="class_tile_engine_1_1_health_bar_1ae6c64478ab48d6260e744d72bf8d1194" kind="variable"><name>rectangle</name></member>
+    <member refid="class_tile_engine_1_1_health_bar_1a14ae0f24f1251940f7b10b12abb9a539" kind="variable"><name>Content</name></member>
+    <member refid="class_tile_engine_1_1_health_bar_1a81048769c9edf6e11d2e1bce69a02ced" kind="function"><name>HealthBar</name></member>
+    <member refid="class_tile_engine_1_1_health_bar_1af9b401821014b54f5edb71f8303b9780" kind="function"><name>Initialize</name></member>
+    <member refid="class_tile_engine_1_1_health_bar_1a2db74840eda227576a54ea6ae028ace0" kind="function"><name>LoadContent</name></member>
+    <member refid="class_tile_engine_1_1_health_bar_1aebdebca44224bfee94fa8dee33b0f2ac" kind="function"><name>Update</name></member>
+    <member refid="class_tile_engine_1_1_health_bar_1a24a1c13b935b3624f8047b105cab7f0c" kind="function"><name>Draw</name></member>
+  </compound>
+  <compound refid="class_capstone_project_1_1_image_button" kind="class"><name>CapstoneProject::ImageButton</name>
+    <member refid="class_capstone_project_1_1_image_button_1a8345cb778a7fae16b9cf88c2402689a3" kind="variable"><name>_button</name></member>
+    <member refid="class_capstone_project_1_1_image_button_1a479fe92f176d5b5c1198d84531977f4d" kind="variable"><name>IMAGEBUTTON</name></member>
+    <member refid="class_capstone_project_1_1_image_button_1a980ace27089de4ec8154836b95a01491" kind="function"><name>ImageButton</name></member>
+    <member refid="class_capstone_project_1_1_image_button_1aac4d1d7b9bf87ff39984ffbfc78e815e" kind="function"><name>FireEvent</name></member>
+  </compound>
   <compound refid="class_tile_engine_1_1_item" kind="class"><name>TileEngine::Item</name>
-    <member refid="class_tile_engine_1_1_item_1a327560f673cd2cd085f60d10dcee0a9e" kind="variable"><name>ItemAnimation</name></member>
-    <member refid="class_tile_engine_1_1_item_1ae34109abc7dbd43b5182bfc16208a844" kind="variable"><name>Active</name></member>
+    <member refid="class_tile_engine_1_1_item_1a6341230ee61583742e6222d76f05090e" kind="variable"><name>_spriteWidth</name></member>
+    <member refid="class_tile_engine_1_1_item_1aa3fa85fe0a8fde1f19d36b4a72da0d57" kind="variable"><name>_spriteHeight</name></member>
+    <member refid="class_tile_engine_1_1_item_1ae5c41cafac38a4158044522b7eef238a" kind="variable"><name>_spriteFrame</name></member>
+    <member refid="class_tile_engine_1_1_item_1aa6875d7ed75dd318c3108240f3febdb7" kind="variable"><name>_active</name></member>
+    <member refid="class_tile_engine_1_1_item_1aae6c57c0448fc77945ea5750d2fe4c68" kind="variable"><name>_weapon</name></member>
+    <member refid="class_tile_engine_1_1_item_1acd0e146badb168a2e0d45238a707540b" kind="variable"><name>_score</name></member>
+    <member refid="class_tile_engine_1_1_item_1a5815b964d54b00ffe306df2dc611c760" kind="variable"><name>_health</name></member>
+    <member refid="class_tile_engine_1_1_item_1a8447e4388e97e99330e3471a0a73a6b5" kind="variable"><name>_armor</name></member>
+    <member refid="class_tile_engine_1_1_item_1ad6d97185544cacbcf7a1cbc1d18d6f45" kind="variable"><name>_scale</name></member>
+    <member refid="class_tile_engine_1_1_item_1a3348e5744a09476b66739e8bc51b5baf" kind="variable"><name>SpriteStrip</name></member>
+    <member refid="class_tile_engine_1_1_item_1a1c339bc4ed79c704a632a12915953ea3" kind="property"><name>SpriteWidth</name></member>
+    <member refid="class_tile_engine_1_1_item_1a1b1424c2b05dec840618e3eec516be6c" kind="property"><name>SpriteHeight</name></member>
+    <member refid="class_tile_engine_1_1_item_1a5dba96ad4193fd83559566237ab88c9e" kind="property"><name>SpriteFrame</name></member>
+    <member refid="class_tile_engine_1_1_item_1ae34109abc7dbd43b5182bfc16208a844" kind="property"><name>Active</name></member>
+    <member refid="class_tile_engine_1_1_item_1a3823ba82a75de5a06bd1ccce7d59edbb" kind="property"><name>Weapon</name></member>
+    <member refid="class_tile_engine_1_1_item_1a03b8176fc292277aa82567d18d1aa4c9" kind="property"><name>Score</name></member>
+    <member refid="class_tile_engine_1_1_item_1ac7b51679c509cb597525fb158dbcbdbf" kind="property"><name>Health</name></member>
+    <member refid="class_tile_engine_1_1_item_1a319f4895769341dac9c70bbc4e8a60a6" kind="property"><name>Armor</name></member>
+    <member refid="class_tile_engine_1_1_item_1a11ab5036a094b10b0d8c279653b6819f" kind="property"><name>Scale</name></member>
     <member refid="class_tile_engine_1_1_item_1af758c77c4938c0aea63ad41397eac0e2" kind="function"><name>Item</name></member>
-    <member refid="class_tile_engine_1_1_item_1a16512fae01e1bfb589811d4f05e4f1ca" kind="function"><name>Initialize</name></member>
-    <member refid="class_tile_engine_1_1_item_1a69ec70858dafdad165adb7cbcf55ceb7" kind="function"><name>Update</name></member>
+    <member refid="class_tile_engine_1_1_item_1afce5a6dff00666aa8fd425a431562403" kind="function"><name>Initialize</name></member>
     <member refid="class_tile_engine_1_1_item_1a8371497aa849c48c146ffe16d10c8e61" kind="function"><name>Draw</name></member>
-    <member refid="class_tile_engine_1_1_item_1a15a97d0bc2d0733ed3ead1cc5dd6bc86" kind="function"><name>doAction</name></member>
+    <member refid="class_tile_engine_1_1_item_1aa8aafecc151b7ee3db4857855125eb87" kind="function"><name>getHealth</name></member>
+    <member refid="class_tile_engine_1_1_item_1a504b5c1e8302e1bedad84a0d5ad406b6" kind="function"><name>getScore</name></member>
+    <member refid="class_tile_engine_1_1_item_1ad4b45cf501d1b3eb0b5f35d6619b8ed4" kind="function"><name>getArmor</name></member>
+  </compound>
+  <compound refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button" kind="interface"><name>GUI::Interfaces::IXButton</name>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a9341e1f53960a8d123c14378b96055ad" kind="property"><name>ButtonImage</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a00fb063e9aa55d1e1087aa29df07775a" kind="property"><name>ButtonRep</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a94665763c633fefb38be8ebf7b7bac2a" kind="property"><name>Clicked</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1aaf7df32371e9de43a20df66c495882a6" kind="property"><name>WasClicked</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a2b00149f4017837d6ec07701b84a2493" kind="property"><name>Enabled</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a7013ec4e4249ac8c8cd1736987c9eab2" kind="function"><name>Update</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a7651357f1129294083713533861948bc" kind="function"><name>Draw</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button_1a66ee7251f63b706bb9051403bdb94b34" kind="function"><name>FireEvent</name></member>
+  </compound>
+  <compound refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel" kind="interface"><name>GUI::Interfaces::IXPanel</name>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1aee6429a44248fa5c3d800b310aad49fe" kind="property"><name>BackGroundImage</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1afd1b114c3fac2f35023b9c0219f5a56f" kind="property"><name>ChildComponents</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1aff004c3cde7ba067dc73c150ee4b3dd9" kind="property"><name>Enabled</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1aa43fa9c3e6f9004089caa70fb8f09007" kind="function"><name>AddChild</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1a79d9fc7b6b217678aca68d456f301b0a" kind="function"><name>Update</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel_1a82594f4f1250e07597e0dfe892d2532f" kind="function"><name>Draw</name></member>
+  </compound>
+  <compound refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field" kind="interface"><name>GUI::Interfaces::IXTextField</name>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a0db721b01d0375fcfb836dbf31518e63" kind="property"><name>Text</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1afa40a886cd2e0a948674c1c0fc3e2176" kind="property"><name>Font</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1ae6ffcdb46ad66847445640b0025f33fb" kind="property"><name>Position</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1aa60201cd3b58b69a82d466aa2c9ff7a1" kind="property"><name>Scale</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a1c9707257911a3e6f96f6a3594efe19d" kind="property"><name>TextColor</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a5353f79b20e74150e86e307d913ccab4" kind="property"><name>Enabled</name></member>
+    <member refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field_1a94684fe585448d89eaa285f31f30c29a" kind="function"><name>Draw</name></member>
+  </compound>
+  <compound refid="class_g_u_i_1_1_controls_1_1_label" kind="class"><name>GUI::Controls::Label</name>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1a4fccb34068a3c715d62bd37d8330bd61" kind="variable"><name>_Text</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1a55a10d91d7a4b214ca5e7fe2e45aa148" kind="variable"><name>_Font</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1a20bbcc887ceab6f4b21c7b037ee1fe7b" kind="variable"><name>_Position</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1a972bd92326ce1a641afb2cefb126f745" kind="variable"><name>_Scale</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1a15ef1e088ef2459b4afe1ffad44aa720" kind="variable"><name>_TextColor</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1a37f5e9c5d895d699ac9f7e3876c28296" kind="variable"><name>_Enabled</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1ab9b23cfef5759f0fbad2e5e234ea2ab8" kind="property"><name>Text</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1a693f1e0aba9401a5571489029a654e41" kind="property"><name>Font</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1af9e1a4fda41bc46765c2c7769e149695" kind="property"><name>Position</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1ac1e73629bc062a084e70530cfdfb082e" kind="property"><name>Scale</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1a690af5b88273139c80ab512dee9b9468" kind="property"><name>TextColor</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1aea93ff3c795d202872fc99a59b0347dc" kind="property"><name>Enabled</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1a879b37cfbfe813bd83f15e22bb351b0e" kind="function"><name>Label</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1a4f262aa1bbfe0267b0ffa4a9e51a1c37" kind="function"><name>Draw</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_label_1af3d4d654583c643690189b385acd1b0f" kind="function"><name>Update</name></member>
   </compound>
   <compound refid="class_tile_engine_1_1_layer_3_01_t_01_4" kind="class"><name>TileEngine::Layer&lt; T &gt;</name>
     <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1a0330964c20aef27f056ce6fd6a956d28" kind="variable"><name>layer</name></member>
     <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1ab2027713dabf92056a4679b2b011deb4" kind="function"><name>Layer</name></member>
+    <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1a8779994938c3c13b396fe1ca96487981" kind="function"><name>Layer</name></member>
     <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1ab7bb577b8cba3afa6615d5ce7e517bcb" kind="function"><name>getItemAt</name></member>
     <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1ae348117cda11530eb1bc3448a772ea03" kind="function"><name>setItemAt</name></member>
+    <member refid="class_tile_engine_1_1_layer_3_01_t_01_4_1abcfe1d58fe394bd688ec617b589a505b" kind="function"><name>setItemAt</name></member>
+  </compound>
+  <compound refid="class_capstone_project_1_1_main_button" kind="class"><name>CapstoneProject::MainButton</name>
+    <member refid="class_capstone_project_1_1_main_button_1af048d762153771e31741fe6a2118ca86" kind="variable"><name>_button</name></member>
+    <member refid="class_capstone_project_1_1_main_button_1a74796d05673875a6cd3c8db1c9aea3d7" kind="variable"><name>MAINBUTTON</name></member>
+    <member refid="class_capstone_project_1_1_main_button_1a8733dae965ae24d5e5805514c75220d7" kind="function"><name>MainButton</name></member>
+    <member refid="class_capstone_project_1_1_main_button_1a7e5e95263a23f86ae77db571e62a9f7b" kind="function"><name>FireEvent</name></member>
   </compound>
   <compound refid="class_main_menu_1_1_main_menu" kind="class"><name>MainMenu::MainMenu</name>
     <member refid="class_main_menu_1_1_main_menu_1abb6d87950b2b1629d10b8ac3f02516c6" kind="enum"><name>BState</name></member>
@@ -125,7 +327,6 @@
     <member refid="class_main_menu_1_1_main_menu_1abb6d87950b2b1629d10b8ac3f02516c6a7aebac60d8886879d0f930cfafc6bdfa" kind="enumvalue"><name>JUST_RELEASED</name></member>
     <member refid="class_main_menu_1_1_main_menu_1abb6d87950b2b1629d10b8ac3f02516c6ac4e0e4e3118472beeb2ae75827450f1f" kind="enumvalue"><name>DOWN</name></member>
     <member refid="class_main_menu_1_1_main_menu_1ad50e9658bd213fd07917fcc7bb813946" kind="variable"><name>graphics</name></member>
-    <member refid="class_main_menu_1_1_main_menu_1ad5f3abf274c9882ef76a8ad352c3594c" kind="variable"><name>spriteBatch</name></member>
     <member refid="class_main_menu_1_1_main_menu_1ac22b3b5807c07d893d83a1d0e31821e2" kind="variable"><name>NUMBER_OF_BUTTONS</name></member>
     <member refid="class_main_menu_1_1_main_menu_1a81c861070733d4c704f6f699edab07c7" kind="variable"><name>NEWGAME_BUTTON_INDEX</name></member>
     <member refid="class_main_menu_1_1_main_menu_1a0b6d6cee02191cfc2e7b881463482631" kind="variable"><name>CONTINUE_BUTTON_INDEX</name></member>
@@ -139,96 +340,303 @@
     <member refid="class_main_menu_1_1_main_menu_1ab8a94e2189b31ffb163a542054e0ecaa" kind="variable"><name>button_state</name></member>
     <member refid="class_main_menu_1_1_main_menu_1a8e81550c9c7e57782aa6a13084cb27e4" kind="variable"><name>button_texture</name></member>
     <member refid="class_main_menu_1_1_main_menu_1a112d33b909feeae2903358950e4a2e5c" kind="variable"><name>button_timer</name></member>
+    <member refid="class_main_menu_1_1_main_menu_1a5add63b08f5ba3c33f37c73634e1dd2c" kind="variable"><name>Content</name></member>
     <member refid="class_main_menu_1_1_main_menu_1aaeafd95b58ec6a240ec4fefa27024990" kind="variable"><name>mpressed</name></member>
     <member refid="class_main_menu_1_1_main_menu_1aa692ebe07630ff69a46c2840a0e88504" kind="variable"><name>prev_mpressed</name></member>
     <member refid="class_main_menu_1_1_main_menu_1a3562c9fe78e1655c46326ddf4f233996" kind="variable"><name>mx</name></member>
     <member refid="class_main_menu_1_1_main_menu_1a8343011f824ded452540f07693fa05b2" kind="variable"><name>my</name></member>
     <member refid="class_main_menu_1_1_main_menu_1affa4638276a43c890b0400bab052a5fd" kind="variable"><name>frame_time</name></member>
-    <member refid="class_main_menu_1_1_main_menu_1a471796ebf352ae7d965a532bbae387f9" kind="function"><name>MainMenu</name></member>
-    <member refid="class_main_menu_1_1_main_menu_1abd4cdaf409d28e550484658209d580d1" kind="function"><name>Initialize</name></member>
-    <member refid="class_main_menu_1_1_main_menu_1a5a8c3b1745c41a148093fb7d30ec6b34" kind="function"><name>LoadContent</name></member>
-    <member refid="class_main_menu_1_1_main_menu_1a37cffb5fd212e50df596e69d899f03cd" kind="function"><name>UnloadContent</name></member>
-    <member refid="class_main_menu_1_1_main_menu_1a4ba5e919def22db4f51fd0097ec93bb5" kind="function"><name>Update</name></member>
-    <member refid="class_main_menu_1_1_main_menu_1acceb39fa89ca31f245d1352254ba7a5d" kind="function"><name>Draw</name></member>
+    <member refid="class_main_menu_1_1_main_menu_1a84898c2ab2a391dbad8c822b0a06cd8a" kind="function"><name>MainMenu</name></member>
+    <member refid="class_main_menu_1_1_main_menu_1ace7bf82bb817d6308adf02fbbb8ef2f9" kind="function"><name>Initialize</name></member>
+    <member refid="class_main_menu_1_1_main_menu_1ac71e7f412103026404782bf201c3281e" kind="function"><name>LoadContent</name></member>
+    <member refid="class_main_menu_1_1_main_menu_1a1652f48a27549eeac4b72416abac36f0" kind="function"><name>Update</name></member>
+    <member refid="class_main_menu_1_1_main_menu_1a203e25ac8256bb110601bf03368adb5b" kind="function"><name>Draw</name></member>
+    <member refid="class_main_menu_1_1_main_menu_1a5c1eefd1a22d854dd8d22af4d31e1ea7" kind="function"><name>UnloadContent</name></member>
     <member refid="class_main_menu_1_1_main_menu_1ab534f33d37901b595cec76d364e0b003" kind="function"><name>hit_image_alpha</name></member>
     <member refid="class_main_menu_1_1_main_menu_1a62c82a3df67519c1017690bfbb4268a0" kind="function"><name>hit_image_alpha</name></member>
     <member refid="class_main_menu_1_1_main_menu_1a180f07b4967176593426fccd586dd1f2" kind="function"><name>hit_image</name></member>
     <member refid="class_main_menu_1_1_main_menu_1ac23750456e0a8c7ed73899b7a9f4e2cc" kind="function"><name>update_buttons</name></member>
     <member refid="class_main_menu_1_1_main_menu_1a8e802f6f81c13c549b3d703357edc53a" kind="function"><name>take_action_on_button</name></member>
   </compound>
+  <compound refid="class_capstone_project_1_1_main_save_keys" kind="class"><name>CapstoneProject::MainSaveKeys</name>
+    <member refid="class_capstone_project_1_1_main_save_keys_1ab9b9304c20772033d97c57e9401fc60a" kind="variable"><name>_button</name></member>
+    <member refid="class_capstone_project_1_1_main_save_keys_1a2cbb79f19f02ed6c3c9ce91cc403e007" kind="variable"><name>MSAVEBUTTON</name></member>
+    <member refid="class_capstone_project_1_1_main_save_keys_1aa99677a2e654253b88461c88add1ec62" kind="function"><name>MainSaveKeys</name></member>
+    <member refid="class_capstone_project_1_1_main_save_keys_1a1fc1c479e93b6db17058ed36918754f5" kind="function"><name>FireEvent</name></member>
+  </compound>
+  <compound refid="class_capstone_project_1_1_main_settings" kind="class"><name>CapstoneProject::MainSettings</name>
+    <member refid="class_capstone_project_1_1_main_settings_1a1e5de4cf54b361d083eb31bc65e95d02" kind="variable"><name>rightButton</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a47b8b9978c96281f187540472f376787" kind="variable"><name>leftButton</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1aa710b9c0f903be6d99018514dbc65738" kind="variable"><name>upButton</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a5112e077bb166f18ad6b164370558e43" kind="variable"><name>attackButton</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a1a27676b103cb2bb6a38426a80d63f6d" kind="variable"><name>mainButton</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1acb518429dd68e6dc02fed9547477f18b" kind="variable"><name>msaveKeys</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1acea847dcb35c8c8375631e07e3509e2a" kind="variable"><name>graphics</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1aa848f577af5eff8acb033010afd8c27a" kind="variable"><name>content</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a2ca3c93e01198ed65420c5a1643ab636" kind="variable"><name>rightLabel</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1ab0103bfa2b1bf96b5183bf280287819d" kind="variable"><name>leftLabel</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a9c4ab658df967625cde6c36eca6dc395" kind="variable"><name>upLabel</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1aa9b1189c8722ea0b61602f6dee9b500f" kind="variable"><name>attackLabel</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1ad5a37b751cecc00d87ea89b2f398c1ec" kind="variable"><name>wordLabel</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1aef29d64dd67ea01871e0abb4c8de41df" kind="variable"><name>wordLabel2</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a9a82a28441cd04608a8eec79867204fa" kind="variable"><name>wordLabel3</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1ac42ce7a4f9737b5ec7921b62032c6946" kind="variable"><name>rPanel</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a0d8eb3a81b980a9ad79bb111e683bd36" kind="variable"><name>lPanel</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1aeb12005fa21f96e61082cbd2b187748a" kind="variable"><name>upPanel</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a264203b11152e32fa4bf8b8bd5ccbcf5" kind="variable"><name>attackPanel</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a144f6b108ea07c30940bae29cfcefb96" kind="variable"><name>wordPanel</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1ad5d02a35e98df9e871a838335ec5790a" kind="variable"><name>text</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1abc509dd5629e560c4be22961410e59d9" kind="variable"><name>text2</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a3ebf8a942459fe771301706155ed9338" kind="variable"><name>text3</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a607a1b500df874d718687ab442a8c16a" kind="function"><name>MainSettings</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a56689338f8e33be837a835967f8e79d1" kind="function"><name>Initialize</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1ac9d7acb097125ad1932d1755a0a4297f" kind="function"><name>Update</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1aba63a9708d5ead5b223b69280832a29b" kind="function"><name>Draw</name></member>
+    <member refid="class_capstone_project_1_1_main_settings_1a6ac1476a67943e0ada6f4d8b9f88afbe" kind="function"><name>LoadContent</name></member>
+  </compound>
   <compound refid="class_tile_engine_1_1_map" kind="class"><name>TileEngine::Map</name>
+    <member refid="class_tile_engine_1_1_map_1ae5c74ab1ccd99cb9800ec2e2ac8b7be6" kind="variable"><name>TILE_WIDTH</name></member>
     <member refid="class_tile_engine_1_1_map_1ab1cce5021bd174e153b9c48dd4e50ed9" kind="variable"><name>offset</name></member>
-    <member refid="class_tile_engine_1_1_map_1ac89b385f353c85dedd77da2e22242c10" kind="variable"><name>_Ground</name></member>
     <member refid="class_tile_engine_1_1_map_1ac7e9b384293ba29601a50899006eae69" kind="variable"><name>serializer</name></member>
+    <member refid="class_tile_engine_1_1_map_1ac89b385f353c85dedd77da2e22242c10" kind="variable"><name>_Ground</name></member>
+    <member refid="class_tile_engine_1_1_map_1abfc6f4ef9d5808a4ef39203d1682d829" kind="variable"><name>_mapItems</name></member>
+    <member refid="class_tile_engine_1_1_map_1a48622c87cac1f9b27b3dd905162a540e" kind="variable"><name>_NpcList</name></member>
     <member refid="class_tile_engine_1_1_map_1a983590284bae057f4580eabc69844574" kind="variable"><name>_Mask</name></member>
-    <member refid="class_tile_engine_1_1_map_1a04f959e4ac9ff491b82cbda5e34d98af" kind="variable"><name>_Fringe</name></member>
     <member refid="class_tile_engine_1_1_map_1a7f78c485405c8e885f4701fc6ee2a25e" kind="variable"><name>_CollisionLayer</name></member>
+    <member refid="class_tile_engine_1_1_map_1a04f959e4ac9ff491b82cbda5e34d98af" kind="variable"><name>_Fringe</name></member>
     <member refid="class_tile_engine_1_1_map_1ad1ecd225a6544336ca58fe14e25c6185" kind="variable"><name>_Player</name></member>
+    <member refid="class_tile_engine_1_1_map_1abeeefc21755e78978968c84406892705" kind="variable"><name>_MapID</name></member>
+    <member refid="class_tile_engine_1_1_map_1a2b327c7ac02c0cf770dd958b16d9e135" kind="property"><name>MapID</name></member>
+    <member refid="class_tile_engine_1_1_map_1a1af5777417a78bbf5efb44aa04cc00c6" kind="property"><name>NpcList</name></member>
+    <member refid="class_tile_engine_1_1_map_1afc520b8dca3f8b6b4b85e3a84b307ece" kind="property"><name>MapItems</name></member>
     <member refid="class_tile_engine_1_1_map_1a93d6a67a5388e1ad95245cb459847270" kind="property"><name>Ground</name></member>
     <member refid="class_tile_engine_1_1_map_1a298d145d16f3dc824a0c0875434ffa0b" kind="property"><name>Mask</name></member>
     <member refid="class_tile_engine_1_1_map_1abe95706f37041feb1285be80522abbb3" kind="property"><name>Fringe</name></member>
+    <member refid="class_tile_engine_1_1_map_1a9238b1f71f4a00a193779c644d1b3103" kind="property"><name>CollisionLayer</name></member>
     <member refid="class_tile_engine_1_1_map_1a8cc2e7e3754056565eb5cb9250d62ceb" kind="property"><name>Player</name></member>
     <member refid="class_tile_engine_1_1_map_1a4eb00a552276ff41866e9ee93bab07b5" kind="function"><name>Map</name></member>
     <member refid="class_tile_engine_1_1_map_1aa4df62a4695b5db2cedfd64ddbc91db2" kind="function"><name>Map</name></member>
+    <member refid="class_tile_engine_1_1_map_1a49a6b40f54c16ffffb843e6f5127c4db" kind="function"><name>SetCollisionLayer</name></member>
     <member refid="class_tile_engine_1_1_map_1ab2ee673668b9dd3a159c7390d58670e3" kind="function"><name>Update</name></member>
     <member refid="class_tile_engine_1_1_map_1ac3a75d6adf05439945a1630e8dca078c" kind="function"><name>Draw</name></member>
+    <member refid="class_tile_engine_1_1_map_1ab1490843a19273121b966d684c696dcf" kind="function"><name>DrawInWindow</name></member>
     <member refid="class_tile_engine_1_1_map_1a513c64dbda5b20aa08df5c74c4c93a90" kind="function"><name>SwapGoundLayer</name></member>
     <member refid="class_tile_engine_1_1_map_1ae59f7b88d73a061a0b02587e63588b9d" kind="function"><name>SwapMaskLayer</name></member>
     <member refid="class_tile_engine_1_1_map_1a7387df79a406ca23119ce40c2fa6f1d9" kind="function"><name>SwapFringeLayer</name></member>
-    <member refid="class_tile_engine_1_1_map_1afee605561b80396694c1acbaae6d219d" kind="function"><name>saveMap</name></member>
-    <member refid="class_tile_engine_1_1_map_1a1ee45c38c5f3b51cdc59b5deb05a5bc2" kind="function"><name>LoadMap</name></member>
+    <member refid="class_tile_engine_1_1_map_1a28c597eaebd99a4f98b3849b6aee6f48" kind="function"><name>saveMap</name></member>
+    <member refid="class_tile_engine_1_1_map_1a9235a26a23cfcee925a2aca5f18fe321" kind="function"><name>LoadMap</name></member>
+    <member refid="class_tile_engine_1_1_map_1a1ae914da19926387ce90d4a296d40028" kind="function"><name>LoadExtraContent</name></member>
+    <member refid="class_tile_engine_1_1_map_1adaec3a8182705f88999ac9bd2afd900b" kind="function"><name>LoadPlayer</name></member>
+  </compound>
+  <compound refid="class_map_editor_1_1_map_editor_main" kind="class"><name>MapEditor::MapEditorMain</name>
+    <member refid="class_map_editor_1_1_map_editor_main_1a1912e42052c99335410baf28cfe1af5d" kind="variable"><name>graphics</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1af6aa3b7bcb7b94a482eedbabc418c799" kind="variable"><name>spriteBatch</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1a9558ad59396523333cdcd54aa676fb37" kind="variable"><name>window</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1a60c5c7cc37cf3b3437410539602d3693" kind="variable"><name>TileSelectorPanel</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1aa88a87269f39fe44ad8da5e969287e3e" kind="variable"><name>tileSelector</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1a6863a2e2411daf5183775bc0e79ca5f4" kind="variable"><name>sheets</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1a9a072fb0c47766630a7b001caeeb70c4" kind="variable"><name>LayerSelectionPanel</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1a773e59b0c8465668b6e926871e384dfb" kind="variable"><name>saveButton</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1a8464032fffb987da5ec0867e005ad077" kind="variable"><name>resetButton</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1acf7a44e800f0d06c6e4399ec472b5e66" kind="variable"><name>content</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1a3568621a9ee4121d9b31bbf3d52f4a4b" kind="function"><name>MapEditorMain</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1a8ff023f4b2a7af33033958bfa6a30076" kind="function"><name>Initialize</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1af4e520a78176b4f739101b32ec94f03f" kind="function"><name>LoadContent</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1a2c5dc71ff9bba9bc34952e45c1133fa8" kind="function"><name>UnloadContent</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1a0142b7f4760125bda14d3e0d2a910ccc" kind="function"><name>Update</name></member>
+    <member refid="class_map_editor_1_1_map_editor_main_1a0d2e77ea986a27233e8c7fd4c4e63a55" kind="function"><name>Draw</name></member>
+  </compound>
+  <compound refid="class_map_editor_1_1_g_u_i_1_1_map_window" kind="class"><name>MapEditor::GUI::MapWindow</name>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a77bf104112c3e9c6b6e27490e9ce4316" kind="enum"><name>currentLayer</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a77bf104112c3e9c6b6e27490e9ce4316adedcb56e75fe1488e20865e0ea36d0b9" kind="enumvalue"><name>GROUND</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a77bf104112c3e9c6b6e27490e9ce4316a0a9501840acacfc8efe7522f5340000c" kind="enumvalue"><name>MASK</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a77bf104112c3e9c6b6e27490e9ce4316a6d2ad7fb90505029139d178fb4789e21" kind="enumvalue"><name>FRINGE</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a23443e6c0ec9feec69e2d3e4d23c9a98" kind="property"><name>DrawOrder</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a13ff00c2efda7563db8ee509a7c49b8d" kind="property"><name>UpdateOrder</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1af66fb5757f8d5b730e7a4d9ee03ba7b8" kind="property"><name>Visible</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ab6f20fdad0a3f9cb6a8d38b700de3de5" kind="property"><name>Enabled</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a0a55a0a9adbb4cfb291a6940807bb529" kind="property"><name>Location</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a02c37644b381b93ae74b97d21b7cf8bc" kind="property"><name>Map</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a1e182ae99223a825b97de2a2e3690364" kind="property"><name>Position</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ac2bec0cb969d9fe00acd797bf75b4f4c" kind="event"><name>DrawOrderChanged</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a7be7da25ad748f93f8a0fb9c236c339e" kind="event"><name>UpdateOrderChanged</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ac2831f3caf13e46f0824440017f1d514" kind="event"><name>VisibleChanged</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a11e83653ed1e6c66c51a3df61d750cda" kind="event"><name>EnabledChanged</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a8a76be38d8e31295f6da14d82b90cfef" kind="variable"><name>_location</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a7877acb44d6739dc605013251f17a473" kind="variable"><name>_selector</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1adf62d1bc83c28d123b0012abe67e2290" kind="variable"><name>_spritebatch</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ae02daa456bf85a1f35c05c810520f61c" kind="variable"><name>_map</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1af5cd85603635c6ac0b7d51088daeecf6" kind="variable"><name>_ground</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a316ec3281a710c83a443a10f06381dbf" kind="variable"><name>_mask</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ae04bbb8098bc7e7530de46ecbc6fe37c" kind="variable"><name>_Fringe</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1af94c2dc84d558a28b5f8f4650b76e81e" kind="variable"><name>a</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1aa58d5744e6f111a123b0378905121962" kind="variable"><name>b</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1adb68826bcc358f041385754aab1db971" kind="variable"><name>c</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a9730ed9729dfeafcc410ba10ce29e62a" kind="variable"><name>UnderPanel</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a9f96833c8c79f30e0f95ac2b79219b16" kind="variable"><name>currentLayer1</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a742430f4292f6785e80894635ff97acc" kind="variable"><name>currentLayerA</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a5d331d50ca97a5cc0e77d2f42cc1bdb6" kind="variable"><name>currentLayerB</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a5054ede8b5039f2c4d7c8631334304e8" kind="variable"><name>_center</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a4ff11be9f0b0c89df1f62e55213407d9" kind="variable"><name>layerLabel</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ad6076f642611f68b59d5d784bda99045" kind="variable"><name>_currentLayer</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a206a4759f2083ba8bcf146b94f5b2cdd" kind="function"><name>MapWindow</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a44ec9518a51869289dac88e4c2990895" kind="function"><name>MapWindow</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1ab6efc8f166f865177704c53f43e727be" kind="function"><name>Initialize</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a31121883b3bd1eacf6df05796d8395ea" kind="function"><name>Update</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a19a07ab1384b0cde42fc394e213ec54b" kind="function"><name>Draw</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a99194c2caa3ceefd4c1f21e6e2deacd4" kind="function"><name>Draw</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_map_window_1a03af6968037d336ddcb7559c096de314" kind="function"><name>reset</name></member>
   </compound>
   <compound refid="class_tile_engine_1_1_monster" kind="class"><name>TileEngine::Monster</name>
-    <member refid="class_tile_engine_1_1_monster_1a4a7445ca8fcaebf69c34678716110eeb" kind="variable"><name>MonsterAnimation</name></member>
-    <member refid="class_tile_engine_1_1_monster_1a02284f88a72e281f261b544f744fdfab" kind="variable"><name>Active</name></member>
+    <member refid="class_tile_engine_1_1_monster_1a4320d7ffb62c92db4c92c0882e2dfbae" kind="variable"><name>_monsterAnimation</name></member>
     <member refid="class_tile_engine_1_1_monster_1aa86c5bb86f79d337f8fde8aa53125b89" kind="variable"><name>_health</name></member>
+    <member refid="class_tile_engine_1_1_monster_1a0826677cf10efc49855b51cfd5d4ef9c" kind="variable"><name>_maxHealth</name></member>
+    <member refid="class_tile_engine_1_1_monster_1afd5e24afdad7318033cb1d34c5cb3413" kind="variable"><name>_maxDamage</name></member>
+    <member refid="class_tile_engine_1_1_monster_1ab9c769eccb3cb80864e53c61ffcf1622" kind="variable"><name>_spriteWidth</name></member>
+    <member refid="class_tile_engine_1_1_monster_1afeceb1efb825b3cde1cde6d656475279" kind="variable"><name>_spriteHeight</name></member>
+    <member refid="class_tile_engine_1_1_monster_1a2b300a3890cb1fd4fbf2aa4ef70f01ce" kind="variable"><name>_spriteFrame</name></member>
     <member refid="class_tile_engine_1_1_monster_1aab1854412a7509be407e2487ae02eea5" kind="property"><name>Health</name></member>
-    <member refid="class_tile_engine_1_1_monster_1a3e708e301043038c39cb5a392f2a2a6c" kind="function"><name>Initialize</name></member>
-    <member refid="class_tile_engine_1_1_monster_1a40941506fd6b0161072946039311b9c7" kind="function"><name>Update</name></member>
+    <member refid="class_tile_engine_1_1_monster_1a64b59c3249ba8f0ae1b1284ea46e2123" kind="property"><name>MaxHealth</name></member>
+    <member refid="class_tile_engine_1_1_monster_1a0e97fcf6cf4a9c2602c51cd9620c7017" kind="property"><name>MaxDamage</name></member>
+    <member refid="class_tile_engine_1_1_monster_1a4009a19bba4469153f9255cb3b8418e7" kind="property"><name>SpriteWidth</name></member>
+    <member refid="class_tile_engine_1_1_monster_1a5f05c4a49816963d9bf2ee0258a37244" kind="property"><name>SpriteHeight</name></member>
+    <member refid="class_tile_engine_1_1_monster_1a9442c1ee75dea7492ea9285d98a27afb" kind="property"><name>SpriteFrame</name></member>
+    <member refid="class_tile_engine_1_1_monster_1ae22353dd2c5483411b94ca2aaa63bdd1" kind="function"><name>Monster</name></member>
+    <member refid="class_tile_engine_1_1_monster_1a667e1b992bc63e10adcf435039bfe38f" kind="function"><name>Initialize</name></member>
+    <member refid="class_tile_engine_1_1_monster_1afcbe41e10b1315c8c5c9ced2a939c9a4" kind="function"><name>Update</name></member>
     <member refid="class_tile_engine_1_1_monster_1a34a816dc4b4dc152f209ac3c882e41d9" kind="function"><name>Draw</name></member>
-    <member refid="class_tile_engine_1_1_monster_1aea7a59b9ba54ddb2571733381955274b" kind="function"><name>changeHealth</name></member>
+    <member refid="class_tile_engine_1_1_monster_1a19b601d087c090e399c502fef0cdbe3f" kind="function"><name>decreaseHealth</name></member>
     <member refid="class_tile_engine_1_1_monster_1ae68b6e0b8425e7ebc5931316b5d17221" kind="function"><name>getHealth</name></member>
   </compound>
+  <compound refid="class_capstone_project_1_1_move_button" kind="class"><name>CapstoneProject::MoveButton</name>
+    <member refid="class_capstone_project_1_1_move_button_1accfd2e21956a4dc22a5df9e6eedcb01c" kind="variable"><name>_button</name></member>
+    <member refid="class_capstone_project_1_1_move_button_1a54330b0efb50eb362d41ba485de76895" kind="variable"><name>_key</name></member>
+    <member refid="class_capstone_project_1_1_move_button_1af0800bcf66a13e71babcbeb004e7667a" kind="variable"><name>RIGHTBUTTON</name></member>
+    <member refid="class_capstone_project_1_1_move_button_1a6b8572d53182c286d21e3c08f4dc83fe" kind="variable"><name>LEFTBUTTON</name></member>
+    <member refid="class_capstone_project_1_1_move_button_1a6b8747122d7b2577a038fc9d42d8c947" kind="variable"><name>UPBUTTON</name></member>
+    <member refid="class_capstone_project_1_1_move_button_1af6dd18da3ed7cb6c744c336a9e01c6dd" kind="variable"><name>ATTACKBUTTON</name></member>
+    <member refid="class_capstone_project_1_1_move_button_1ade855063fd76ec8564b88662c3c36262" kind="function"><name>MoveButton</name></member>
+    <member refid="class_capstone_project_1_1_move_button_1a94dbb1232c38b98f62b28212ae61f9fb" kind="function"><name>FireEvent</name></member>
+  </compound>
+  <compound refid="class_pause_menu_1_1_pause_menu" kind="class"><name>PauseMenu::PauseMenu</name>
+    <member refid="class_pause_menu_1_1_pause_menu_1a36aa1efceee457b80b677a7376f26da4" kind="enum"><name>BState</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a36aa1efceee457b80b677a7376f26da4ada95feece334f0612031adf21d057ab9" kind="enumvalue"><name>HOVER</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a36aa1efceee457b80b677a7376f26da4afbaedde498cdead4f2780217646e9ba1" kind="enumvalue"><name>UP</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a36aa1efceee457b80b677a7376f26da4a7aebac60d8886879d0f930cfafc6bdfa" kind="enumvalue"><name>JUST_RELEASED</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a36aa1efceee457b80b677a7376f26da4ac4e0e4e3118472beeb2ae75827450f1f" kind="enumvalue"><name>DOWN</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a251d766c69e0fdc9e74079c5d5f354ee" kind="variable"><name>graphics</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a3a985424df195c638cdbee16d7fc6d9c" kind="variable"><name>NUMBER_OF_BUTTONS</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1ae6573ae12fe0e491e98f7929cc7bd022" kind="variable"><name>RESUME_BUTTON_INDEX</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1ae5430cffcf481bb113e5ea726e04ed95" kind="variable"><name>SETTINGS_BUTTON_INDEX</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a0b54e7edc7b298620464a2c15dedb8bf" kind="variable"><name>SAVEGAME_BUTTON_INDEX</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1aa46785797050d09841092b1b3d77a628" kind="variable"><name>MAINMENU_BUTTON_INDEX</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a78e0b5144db37312e9f58c08219fe609" kind="variable"><name>EXIT_BUTTON_INDEX</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1ac388eb2fb4d516a4ebf87650c3d6d1bd" kind="variable"><name>BUTTON_HEIGHT</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1abf52ae00b78ad9b2da0bce8f13c68bf9" kind="variable"><name>BUTTON_WIDTH</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1ad32a6204f381d4dd6e4f66f19a0a84b7" kind="variable"><name>background_color</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a1d1070fbb61931a1afc5fda837919a8b" kind="variable"><name>button_color</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1aac90c92c98e3eed0850d862f1d815468" kind="variable"><name>button_rectangle</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a2379d0a715bda0e8a49fb2e3ec18f5e6" kind="variable"><name>button_state</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a966eb19ec61a30f65fdc7a6f0ba6f299" kind="variable"><name>button_texture</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a4c217d5e3f8065a1d2d6942aca3af3db" kind="variable"><name>button_timer</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1aed717d9371572cf9ac5d3d66f61f8160" kind="variable"><name>Content</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1aa554d0f7f3b9ecc5513c8133750403f9" kind="variable"><name>mpressed</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a806a8ee890739e7b7a52e392990e3ae4" kind="variable"><name>prev_mpressed</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1acd1fb6a7ef51106be96f040b6cce1c51" kind="variable"><name>mx</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a43925cfb89daa5ecb1414b97e65de236" kind="variable"><name>my</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a3f42d246d8292d6443a1b7a6828ce02c" kind="variable"><name>frame_time</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a16dba06b48981bdfc86f631114b483b0" kind="function"><name>PauseMenu</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a3d84badc28f759cb2771c9b599f7cbea" kind="function"><name>Initialize</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1afa07430527ca42e4c0caa6b6969c1e7a" kind="function"><name>LoadContent</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a565e39aec21358e00b0012371ad18f98" kind="function"><name>Update</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1ad274b89cfdfd82dbc943661e765239ce" kind="function"><name>Draw</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a8bd90e9866dc2f49a12749944e9550e7" kind="function"><name>hit_image_alpha</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a497d9087c150e4d7807cfc2ae70f7604" kind="function"><name>hit_image_alpha</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1aa5ea0141015e26ee876f28e5c2caaf2d" kind="function"><name>hit_image</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1a02060af05e6c1794d537c78a10b0b5c0" kind="function"><name>update_buttons</name></member>
+    <member refid="class_pause_menu_1_1_pause_menu_1ae6fe684f1eec72288006e762dcf27d65" kind="function"><name>take_action_on_button</name></member>
+  </compound>
   <compound refid="class_tile_engine_1_1_player" kind="class"><name>TileEngine::Player</name>
-    <member refid="class_tile_engine_1_1_player_1a56c48786ea882059c7ae4b6b44cd50df" kind="variable"><name>Movement</name></member>
-    <member refid="class_tile_engine_1_1_player_1aafa10e2703dad7aec3884558b54ede6e" kind="variable"><name>offset</name></member>
-    <member refid="class_tile_engine_1_1_player_1af222a6eda4e9d90845bd2e6002cbcc90" kind="variable"><name>PlayerAnimation</name></member>
-    <member refid="class_tile_engine_1_1_player_1a6ddc39cda0fe327af82fa28defcbba29" kind="variable"><name>Active</name></member>
-    <member refid="class_tile_engine_1_1_player_1a5888c14557d1a11f6e69d83e3a420d0c" kind="variable"><name>_hasArmor</name></member>
+    <member refid="class_tile_engine_1_1_player_1a1175bf20d198f21cea0d7eb709d2cb25" kind="variable"><name>Content</name></member>
+    <member refid="class_tile_engine_1_1_player_1a4d3045cca652ba2f8276c997d77fef5b" kind="variable"><name>_movement</name></member>
+    <member refid="class_tile_engine_1_1_player_1a1056e7854b103ae2c2a475856b3192b7" kind="variable"><name>PlayerRect</name></member>
+    <member refid="class_tile_engine_1_1_player_1aba6dafa16cc92ab73da538e818f52f63" kind="variable"><name>Jump</name></member>
+    <member refid="class_tile_engine_1_1_player_1a9ecd463f45050582804289df9f9e8fb6" kind="variable"><name>_active</name></member>
+    <member refid="class_tile_engine_1_1_player_1af19f61a83ad0f62af1834ecfe8050648" kind="variable"><name>_armor</name></member>
     <member refid="class_tile_engine_1_1_player_1a53fce7d891ef346ab4b5a30b505906bf" kind="variable"><name>_health</name></member>
     <member refid="class_tile_engine_1_1_player_1a8977df790177606dddeddca7dddbb0c9" kind="variable"><name>_maxHealth</name></member>
-    <member refid="class_tile_engine_1_1_player_1a18c97a2f88aea6ea0c20290f52f1b093" kind="variable"><name>_weapon</name></member>
+    <member refid="class_tile_engine_1_1_player_1a4bf5523ac46537fd3f4d79ed4f129600" kind="variable"><name>_weapon</name></member>
     <member refid="class_tile_engine_1_1_player_1a7ea756c4c19aa367a8bde493641b82cd" kind="variable"><name>_levelScore</name></member>
+    <member refid="class_tile_engine_1_1_player_1af121dffa71961c363dee359646f4f236" kind="variable"><name>_justAttacked</name></member>
+    <member refid="class_tile_engine_1_1_player_1af5a6f1771a2b928c8cd06e0898df6ae4" kind="variable"><name>_attackReleased</name></member>
+    <member refid="class_tile_engine_1_1_player_1a81b1c586641a348d0ec77c1fb597ba9d" kind="variable"><name>_weaponDirection</name></member>
     <member refid="class_tile_engine_1_1_player_1a257b69029acccdeb28460fe8bc5bad54" kind="variable"><name>_totalScore</name></member>
-    <member refid="class_tile_engine_1_1_player_1a65bb23fbd546a7da8f0eb50d59427cd6" kind="property"><name>HasArmor</name></member>
+    <member refid="class_tile_engine_1_1_player_1a74b6e3f8b28eab47eb54ebdcd993f561" kind="variable"><name>_swordTexture</name></member>
+    <member refid="class_tile_engine_1_1_player_1ab7dd8e640e52784e13ee91810eb16c29" kind="variable"><name>_rangedTexture</name></member>
+    <member refid="class_tile_engine_1_1_player_1a325e01980893b2274a416595323b9e7d" kind="property"><name>JustAttacked</name></member>
+    <member refid="class_tile_engine_1_1_player_1a77a413ee905ca8c3fca6211e8995abb1" kind="property"><name>AttackReleased</name></member>
+    <member refid="class_tile_engine_1_1_player_1a9c98b83dd04b605b93aeaa4fde296cc0" kind="property"><name>WeaponDirection</name></member>
+    <member refid="class_tile_engine_1_1_player_1a35c6564fad7aaa5f67a5f3ecb5687847" kind="property"><name>Movement</name></member>
+    <member refid="class_tile_engine_1_1_player_1a6ddc39cda0fe327af82fa28defcbba29" kind="property"><name>Active</name></member>
+    <member refid="class_tile_engine_1_1_player_1a33053fa3ee66314f05dc448b683ac5f6" kind="property"><name>Armor</name></member>
     <member refid="class_tile_engine_1_1_player_1a5859a9b5810a5078477ca3a2ea47826c" kind="property"><name>Health</name></member>
     <member refid="class_tile_engine_1_1_player_1a1be81bcdf3e53278f55a6f643053ebc6" kind="property"><name>MaxHealth</name></member>
-    <member refid="class_tile_engine_1_1_player_1a15aa89534fb0c5c4d0632235f9f56a65" kind="property"><name>Weapon</name></member>
+    <member refid="class_tile_engine_1_1_player_1a94f062a71b0eced9a2a308ed67bf5384" kind="property"><name>Weapon</name></member>
     <member refid="class_tile_engine_1_1_player_1ab02f666ed3f5f6bfd3b05a719de41a31" kind="property"><name>LevelScore</name></member>
     <member refid="class_tile_engine_1_1_player_1a7382134b6b274ba1bd4992dbbad52a86" kind="property"><name>TotalScore</name></member>
+    <member refid="class_tile_engine_1_1_player_1a0dcc49908ff612fffb5a3a3848ef62dc" kind="function"><name>Player</name></member>
     <member refid="class_tile_engine_1_1_player_1ad3ab4da4b2d965b5c3cea300fe9304ae" kind="function"><name>Player</name></member>
-    <member refid="class_tile_engine_1_1_player_1a40932b9bf69a88c42467a2fb2a8e5255" kind="function"><name>Initialize</name></member>
+    <member refid="class_tile_engine_1_1_player_1ae69cd25ae2416785bbdd7296b97eaf7b" kind="function"><name>Initialize</name></member>
     <member refid="class_tile_engine_1_1_player_1a29b6d833f145f5ce9fb6e006bf170326" kind="function"><name>Update</name></member>
     <member refid="class_tile_engine_1_1_player_1a3150892fc641203e9bfee6b21a202ce5" kind="function"><name>Draw</name></member>
-    <member refid="class_tile_engine_1_1_player_1a1f2e40accd441a1bbd6e213af5fb5314" kind="function"><name>changeHealth</name></member>
+    <member refid="class_tile_engine_1_1_player_1ae446cbd87e9d83d6a4e6d0ec44fbaebe" kind="function"><name>increaseHealth</name></member>
+    <member refid="class_tile_engine_1_1_player_1a8109b8a158e922fd15ffea71eeedacb0" kind="function"><name>decreaseHealth</name></member>
     <member refid="class_tile_engine_1_1_player_1a59476973acb572f4e4e807eb394e094b" kind="function"><name>addArmor</name></member>
-    <member refid="class_tile_engine_1_1_player_1abf7f40e5c53bad024c041f21e0a754f2" kind="function"><name>changeWeapon</name></member>
     <member refid="class_tile_engine_1_1_player_1aec85e347f9cf381981efb1f9590741df" kind="function"><name>increaseScore</name></member>
     <member refid="class_tile_engine_1_1_player_1ae8bca588776c05e074fb753eeb7e86c9" kind="function"><name>NextLevelScore</name></member>
     <member refid="class_tile_engine_1_1_player_1a343a9468c20e6c140ef23653cd70b942" kind="function"><name>getLevelScore</name></member>
     <member refid="class_tile_engine_1_1_player_1a927b46fb75a886e2429ff853261e71a1" kind="function"><name>getTotalScore</name></member>
     <member refid="class_tile_engine_1_1_player_1a7adaf32e779eefa0bb592412c97e2f18" kind="function"><name>getHealth</name></member>
-    <member refid="class_tile_engine_1_1_player_1a1dad5c87be9ebe2864f0726eb2d65d21" kind="function"><name>getWeapon</name></member>
+    <member refid="class_tile_engine_1_1_player_1a92b4e67f3d148b9a5917b33db90e3a25" kind="function"><name>getWeapon</name></member>
+    <member refid="class_tile_engine_1_1_player_1a4ffa4f26f45bc8fbb2b1dab30e001fd5" kind="function"><name>setWeapon</name></member>
+    <member refid="class_tile_engine_1_1_player_1a14a732f8b0ffb25dcfb0497c39168050" kind="function"><name>hasArmor</name></member>
   </compound>
-  <compound refid="class_custom_serialization_1_1_serialization_test" kind="class"><name>CustomSerialization::SerializationTest</name>
-    <member refid="class_custom_serialization_1_1_serialization_test_1a36557e2547cfcf6cf2aa5a8186efd139" kind="variable"><name>graphics</name></member>
-    <member refid="class_custom_serialization_1_1_serialization_test_1a5ac1405c9f3b084accfe8547c7a103eb" kind="variable"><name>spriteBatch</name></member>
-    <member refid="class_custom_serialization_1_1_serialization_test_1a2ca48b24868b552f2f3a343fe0fb8ba6" kind="function"><name>SerializationTest</name></member>
-    <member refid="class_custom_serialization_1_1_serialization_test_1a1ffb1bad9530353ef97ccf72edc4a0ae" kind="function"><name>Draw</name></member>
-    <member refid="class_custom_serialization_1_1_serialization_test_1ae7f521341d72d43fc44910dd6c0ee770" kind="function"><name>Initialize</name></member>
-    <member refid="class_custom_serialization_1_1_serialization_test_1a59b3bda13e7ed59e2e2c5378e340a13b" kind="function"><name>LoadContent</name></member>
-    <member refid="class_custom_serialization_1_1_serialization_test_1af238d6bfea14626161c46aab9838ad30" kind="function"><name>UnloadContent</name></member>
-    <member refid="class_custom_serialization_1_1_serialization_test_1a280ebe9766e6cb88c14ae932e3847a1b" kind="function"><name>Update</name></member>
+  <compound refid="class_tile_engine_1_1_potion" kind="class"><name>TileEngine::Potion</name>
+    <member refid="class_tile_engine_1_1_potion_1a01d0f1ff77000f4c76eff3f0d4ac2241" kind="function"><name>Potion</name></member>
+  </compound>
+  <compound refid="class_map_editor_1_1_g_u_i_1_1_reset_button" kind="class"><name>MapEditor::GUI::ResetButton</name>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1a21869005acebf86418c98303cd351d9e" kind="variable"><name>_graphic</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1a142b9e4ddf0034a01ba90c1852cfda14" kind="variable"><name>_content</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1ae19f4424ca510d32b5105b5c86636e0d" kind="variable"><name>_mapWindow</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1ae13f5692545700674120a3c19b897134" kind="variable"><name>buttonLable</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1a4a02ea4cfeaa3a2103630e3183b197b4" kind="function"><name>ResetButton</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1aac2172d3c8a07d11285fbe90d3067b00" kind="function"><name>Update</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1aa75b906694fbcae954e47fe5692bb567" kind="function"><name>Draw</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1a311da0bcbf027e571254f32279ffbf22" kind="function"><name>FireEvent</name></member>
+  </compound>
+  <compound refid="class_map_editor_1_1_g_u_i_1_1_save_button" kind="class"><name>MapEditor::GUI::SaveButton</name>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a275a60e5eacbdc899b5ad52c25ec3fc9" kind="variable"><name>saveMap</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a09bc22a4c6acb17b5f8804a45eb4a8a8" kind="variable"><name>buttonLable</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a60d1dc6cf484fc4014d6bc8868f9d0dd" kind="function"><name>SaveButton</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1ac713d895627befc5d0be8d95001d1ba2" kind="function"><name>Update</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1abbe94ffc09eba518dc77dc5ad84184b5" kind="function"><name>UpdateM</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a525bdeece9435acb94bdc6bd801df459" kind="function"><name>Draw</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a123fc02f59436ef09b8fe0cfee633a74" kind="function"><name>FireEvent</name></member>
+  </compound>
+  <compound refid="class_capstone_project_1_1_save_keys" kind="class"><name>CapstoneProject::SaveKeys</name>
+    <member refid="class_capstone_project_1_1_save_keys_1a7d07008e90494a799be54bbc25ba4439" kind="variable"><name>_button</name></member>
+    <member refid="class_capstone_project_1_1_save_keys_1aa88fbbf6621945c276079f9eb116e9e1" kind="variable"><name>SAVEBUTTON</name></member>
+    <member refid="class_capstone_project_1_1_save_keys_1a617c48fc1be060145f644d00162134f0" kind="function"><name>SaveKeys</name></member>
+    <member refid="class_capstone_project_1_1_save_keys_1a658b25e6a85f816dba872ae68c7104d4" kind="function"><name>FireEvent</name></member>
+  </compound>
+  <compound refid="class_tile_engine_1_1_score_display" kind="class"><name>TileEngine::ScoreDisplay</name>
+    <member refid="class_tile_engine_1_1_score_display_1ae0cfa03ddbec4f4ada04e3e2fb33a403" kind="variable"><name>font</name></member>
+    <member refid="class_tile_engine_1_1_score_display_1a9a5e5e6e1fa4903689423b25f1ab7170" kind="variable"><name>graphics</name></member>
+    <member refid="class_tile_engine_1_1_score_display_1ac9d3c0d8636ecaa4422f661763211f99" kind="variable"><name>_score</name></member>
+    <member refid="class_tile_engine_1_1_score_display_1ad2c86a69fcebf84a0c82922a59178f8f" kind="function"><name>ScoreDisplay</name></member>
+    <member refid="class_tile_engine_1_1_score_display_1ab4678db21ab36c75579674e88a6836e9" kind="function"><name>Update</name></member>
+    <member refid="class_tile_engine_1_1_score_display_1a933f6cf1bf3f2b00617c85883f734f41" kind="function"><name>loadFont</name></member>
+    <member refid="class_tile_engine_1_1_score_display_1ae32c1eeaee657edbaac7a1bfbe0187f7" kind="function"><name>Draw</name></member>
   </compound>
   <compound refid="class_custom_serialization_1_1_serialize_3_01_t_01_4" kind="class"><name>CustomSerialization::Serialize&lt; T &gt;</name>
     <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a76d06bca7046098cd75a8ac24c393f9a" kind="variable"><name>_classType</name></member>
@@ -244,27 +652,127 @@
     <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1ac97ea1c257da237df262554ec94479cf" kind="property"><name>FileName</name></member>
     <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a18418aaac4ebc3372de3410626a0ea55" kind="function"><name>Serialize</name></member>
     <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a8e93c80cca07e34d0a30c4bc53ddfb17" kind="function"><name>Load</name></member>
-    <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1af5669ea71316b3920351b64193d47d79" kind="function"><name>Save</name></member>
+    <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1a85beecf5763d3f24414d52608e165bf1" kind="function"><name>Save</name></member>
     <member refid="class_custom_serialization_1_1_serialize_3_01_t_01_4_1af61269fc8799338c6a61e3986cf106ba" kind="function"><name>preLoadSave</name></member>
   </compound>
-  <compound refid="class_custom_serialization_1_1_test_class" kind="class"><name>CustomSerialization::TestClass</name>
-    <member refid="class_custom_serialization_1_1_test_class_1a620913fa34517288187a3f993a7f4002" kind="variable"><name>_name</name></member>
-    <member refid="class_custom_serialization_1_1_test_class_1aa2d507572857d89852dded978e608cbd" kind="variable"><name>_school</name></member>
-    <member refid="class_custom_serialization_1_1_test_class_1a9df1a172a41ddf741020e071dd02bc09" kind="variable"><name>test2</name></member>
-    <member refid="class_custom_serialization_1_1_test_class_1a98f783508a68e40b6a9734fa06443ba5" kind="variable"><name>test</name></member>
-    <member refid="class_custom_serialization_1_1_test_class_1a11515048e0b781252bd051abd88d501f" kind="property"><name>Test</name></member>
-    <member refid="class_custom_serialization_1_1_test_class_1a58705fe5e04307ae8c50d6128a88ecd0" kind="function"><name>TestClass</name></member>
-    <member refid="class_custom_serialization_1_1_test_class_1af5e849010093442821a37ef29444b761" kind="function"><name>TestClass</name></member>
+  <compound refid="class_tile_engine_1_1_serialize_controls" kind="class"><name>TileEngine::SerializeControls</name>
+    <member refid="class_tile_engine_1_1_serialize_controls_1ad5549214d6765151653dfe758758942b" kind="variable"><name>_right</name></member>
+    <member refid="class_tile_engine_1_1_serialize_controls_1ae94e56fa78de82df0d75216e7c852d87" kind="variable"><name>_left</name></member>
+    <member refid="class_tile_engine_1_1_serialize_controls_1a5e31dd9429e907b095a7a2dc293194ce" kind="variable"><name>_up</name></member>
+    <member refid="class_tile_engine_1_1_serialize_controls_1a29b8291410889e1b90b652f03e95a8f4" kind="variable"><name>serializer</name></member>
+    <member refid="class_tile_engine_1_1_serialize_controls_1a4918f41759f4d5004d164c4dc7591e48" kind="property"><name>Right</name></member>
+    <member refid="class_tile_engine_1_1_serialize_controls_1a09b1aefbf84145b5ecd02b10ccc288cf" kind="property"><name>Left</name></member>
+    <member refid="class_tile_engine_1_1_serialize_controls_1ab9e02520dd857cac256ecab1f24952fb" kind="property"><name>Up</name></member>
+    <member refid="class_tile_engine_1_1_serialize_controls_1a43a75b98ed48ec04ed45f8800f304b6e" kind="function"><name>save</name></member>
+    <member refid="class_tile_engine_1_1_serialize_controls_1a192ff4948230e86934c3d2d0ab1fca2f" kind="function"><name>Load</name></member>
+  </compound>
+  <compound refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active" kind="class"><name>MapEditor::GUI::SetFringeActive</name>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1a505d791d758901c3b764d1358eec0af3" kind="variable"><name>window</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1a79ce87017e589ce15aaeacf81a8d928c" kind="variable"><name>buttonLable</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1aee88fb7fea3b50d1bda3370a28f1114f" kind="function"><name>SetFringeActive</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1a2b992051938bfced70c0ad40af1bb9c8" kind="function"><name>Update</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1acca4d0cbe0521abe9227ebbda8856fc3" kind="function"><name>Draw</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_fringe_active_1afb9c3580d7297e3986d3b82b605b8ed9" kind="function"><name>FireEvent</name></member>
+  </compound>
+  <compound refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button" kind="class"><name>MapEditor::GUI::SetGoundActiveButton</name>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1aa8e5c73b8429c32a174e076d113cd81d" kind="variable"><name>window</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1aeba8ecf52a9378abc1addcf5b1669daa" kind="variable"><name>buttonLable</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1ae4b10fd75f38f400c8a05fc96d164875" kind="function"><name>SetGoundActiveButton</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1a2ef2e1a3cf1d90ed677f73c1f26abedd" kind="function"><name>Update</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1a29083b46eec489374be52c03576da0d8" kind="function"><name>Draw</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_gound_active_button_1a6406e60dfa96d735d71e859ce69d5df8" kind="function"><name>FireEvent</name></member>
+  </compound>
+  <compound refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active" kind="class"><name>MapEditor::GUI::SetMaskActive</name>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1a8f3d5ca7c912aa821a7ded933bfe5a8d" kind="variable"><name>window</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1a79261f7b6083b14109680b339e8ed8b4" kind="variable"><name>buttonLable</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1a3474ec7a35df5a6631cc0f5f77e532d4" kind="function"><name>SetMaskActive</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1abbf682b8f211c5fb6605ef93c70a2139" kind="function"><name>Update</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1aad52d8c750a34b0d00083b4551e2dbb9" kind="function"><name>Draw</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_set_mask_active_1a9955b8fc304648d39cc086ca7ae2e997" kind="function"><name>FireEvent</name></member>
+  </compound>
+  <compound refid="class_capstone_project_1_1_settings" kind="class"><name>CapstoneProject::Settings</name>
+    <member refid="class_capstone_project_1_1_settings_1aa317da0385ee01f77562518dc8f1bf65" kind="variable"><name>rightButton</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a3828621bcaafb08f6dbd16e4a938fd50" kind="variable"><name>leftButton</name></member>
+    <member refid="class_capstone_project_1_1_settings_1afc521b3f4af0bbe6322456464002b18d" kind="variable"><name>upButton</name></member>
+    <member refid="class_capstone_project_1_1_settings_1ac90f0edcd00cce5a483c982ba483bd2d" kind="variable"><name>attackButton</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a567737b523132f6ff1980cc032b1215e" kind="variable"><name>mainButton</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a61fbc07be91bda5ee19ccb6d482de934" kind="variable"><name>saveKeys</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a6b539796330d601b85540d4d602a8382" kind="variable"><name>graphics</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a15edd43df057a5abc9a5144bca371e4d" kind="variable"><name>content</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a2c1febc5ea7a04c24357edb177398451" kind="variable"><name>rightLabel</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a19b52351711fde2cc6d7e8fa6def9086" kind="variable"><name>leftLabel</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a454fdae20cfcca5100c79af3749b255d" kind="variable"><name>upLabel</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a617a95fe36a989fedfd4991c7ef1706f" kind="variable"><name>attackLabel</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a1f708134dd7472592dc938b13dd8a4e8" kind="variable"><name>wordLabel</name></member>
+    <member refid="class_capstone_project_1_1_settings_1acaeb719d9d57ca422019e1727bdd7882" kind="variable"><name>wordLabel2</name></member>
+    <member refid="class_capstone_project_1_1_settings_1aac0986e54c3d4312c0e66f97a32f4c19" kind="variable"><name>wordLabel3</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a79fbe5cf8fbfc3d34b6a5439c1cf8789" kind="variable"><name>rPanel</name></member>
+    <member refid="class_capstone_project_1_1_settings_1afa45d264173a1e65129a71fd8f6f1ad9" kind="variable"><name>lPanel</name></member>
+    <member refid="class_capstone_project_1_1_settings_1ae29e9d012b5f3c538ef5ad76667847d8" kind="variable"><name>upPanel</name></member>
+    <member refid="class_capstone_project_1_1_settings_1ab4f02798168524d258cfeac14d39d59f" kind="variable"><name>attackPanel</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a85cea7cca99f2080960a8f1314f43099" kind="variable"><name>wordPanel</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a08be9cf40ce56e5fccc144df7e30155d" kind="variable"><name>text</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a1b8d7d84d56198db64c8bd58ec4c5251" kind="variable"><name>text2</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a248a704de06dd031ea2a71ef40b2a061" kind="variable"><name>text3</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a06cfc2fbf7669b33d2d064f2e6534fd5" kind="function"><name>Settings</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a5390e6048294fe0ea6accc8fc4a15680" kind="function"><name>Initialize</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a6402921ec547c6095829fa336ecaabe1" kind="function"><name>Update</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a5558798c990031a23bba47bdf2bf051b" kind="function"><name>Draw</name></member>
+    <member refid="class_capstone_project_1_1_settings_1a0bdb92b9d6840322f4a6a84ac1ebfa8f" kind="function"><name>LoadContent</name></member>
+  </compound>
+  <compound refid="class_sound_manager_1_1_sound_manager" kind="class"><name>SoundManager::SoundManager</name>
+    <member refid="class_sound_manager_1_1_sound_manager_1a97290161933a25596176216797f20ad0" kind="variable"><name>_content</name></member>
+    <member refid="class_sound_manager_1_1_sound_manager_1aa84a0234e0f40eec62c2ff635faf8e93" kind="variable"><name>lastState</name></member>
+    <member refid="class_sound_manager_1_1_sound_manager_1a50a073b81aff89df270dad5c69c1e23b" kind="variable"><name>keystate</name></member>
+    <member refid="class_sound_manager_1_1_sound_manager_1ac2e26713820910026e621654ceb43361" kind="variable"><name>sound</name></member>
+    <member refid="class_sound_manager_1_1_sound_manager_1a1be88f244195e19df1bdffa80f83f28f" kind="variable"><name>songs</name></member>
+    <member refid="class_sound_manager_1_1_sound_manager_1ac9aff8ddf97670bde75509bc8b2e7ace" kind="variable"><name>sounds</name></member>
+    <member refid="class_sound_manager_1_1_sound_manager_1af39860a5029e9971c04a4957d17a562c" kind="property"><name>Content</name></member>
+    <member refid="class_sound_manager_1_1_sound_manager_1ab9e1fa8371834208770997b1f8f458b3" kind="function"><name>SoundManager</name></member>
+    <member refid="class_sound_manager_1_1_sound_manager_1a4d0637e58b79a3a9105bab09ed25d9cd" kind="function"><name>PlaySong</name></member>
+    <member refid="class_sound_manager_1_1_sound_manager_1a6875526dcf5691609028fac1b6073be6" kind="function"><name>PlaySound</name></member>
+    <member refid="class_sound_manager_1_1_sound_manager_1a2b63270ac719c40b4a76afcd41706506" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_capstone_project_1_1_sound_manager" kind="class"><name>CapstoneProject::SoundManager</name>
+    <member refid="class_capstone_project_1_1_sound_manager_1a6ff7bbb6240875d6a4c73835cd43a48f" kind="variable"><name>_content</name></member>
+    <member refid="class_capstone_project_1_1_sound_manager_1a7579607fdbaddc59d3194695c090cabf" kind="variable"><name>lastState</name></member>
+    <member refid="class_capstone_project_1_1_sound_manager_1a53fb1eec2855d6b83312041ba27ca133" kind="variable"><name>keystate</name></member>
+    <member refid="class_capstone_project_1_1_sound_manager_1ad3defab511c51470f5670c362dba7636" kind="variable"><name>sound</name></member>
+    <member refid="class_capstone_project_1_1_sound_manager_1afe49ae09b11a8d842536e5ffb2fd41d4" kind="variable"><name>songs</name></member>
+    <member refid="class_capstone_project_1_1_sound_manager_1af0ece20e04743587d140d8ed7ece8fe0" kind="variable"><name>sounds</name></member>
+    <member refid="class_capstone_project_1_1_sound_manager_1a33f6e050979b8f32aaadbb948efdb65a" kind="property"><name>Content</name></member>
+    <member refid="class_capstone_project_1_1_sound_manager_1ab7f0dc4b2073f9692ede9d41381c7df7" kind="function"><name>SoundManager</name></member>
+    <member refid="class_capstone_project_1_1_sound_manager_1a8c1fb76bffa3aff6a7a9ac3212efca30" kind="function"><name>PlaySong</name></member>
+    <member refid="class_capstone_project_1_1_sound_manager_1a81419fbdc95a1f75a1e1f223d05b7f57" kind="function"><name>PlaySound</name></member>
+  </compound>
+  <compound refid="class_tile_engine_1_1_sword" kind="class"><name>TileEngine::Sword</name>
+    <member refid="class_tile_engine_1_1_sword_1aa31a749417485c2a8a776c89a5cdce26" kind="function"><name>Sword</name></member>
+  </compound>
+  <compound refid="class_map_editor_1_1_g_u_i_1_1_text_box" kind="class"><name>MapEditor::GUI::TextBox</name>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_text_box_1a120e3ba6528828ff54903f0876afa7ab" kind="function"><name>TextBox</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_text_box_1a79f42e8fc61f850782dea33ee87b2b82" kind="function"><name>Initialize</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_text_box_1adbb8b13f8e0df7fe655d4b8e495f723c" kind="function"><name>Update</name></member>
   </compound>
   <compound refid="class_tile_engine_1_1_tile" kind="class"><name>TileEngine::Tile</name>
     <member refid="class_tile_engine_1_1_tile_1a3af1f4f1805b8b2bcd76ca550782ae55" kind="variable"><name>_Scale</name></member>
+    <member refid="class_tile_engine_1_1_tile_1a85f826dbbe7729811f2575d2997b7521" kind="variable"><name>name</name></member>
     <member refid="class_tile_engine_1_1_tile_1a0b1c2c935ededa1553ce38123605a62e" kind="variable"><name>_Texture</name></member>
+    <member refid="class_tile_engine_1_1_tile_1ae46c70dc7bfdf414e2bbb76d2c9fbb1b" kind="variable"><name>_sR</name></member>
     <member refid="class_tile_engine_1_1_tile_1a8f440ad4fabaa0d462678303a7db6899" kind="variable"><name>_SourceRectangle</name></member>
     <member refid="class_tile_engine_1_1_tile_1aadf2ea72c51446dbf3bac276d0f98de7" kind="variable"><name>_ColorTint</name></member>
     <member refid="class_tile_engine_1_1_tile_1a42d3f7d694c7a8422da6a9186a8e42a2" kind="variable"><name>_Rotation</name></member>
     <member refid="class_tile_engine_1_1_tile_1ade1613a00f6d458c497b8ddb3d3afffd" kind="variable"><name>_Origin</name></member>
     <member refid="class_tile_engine_1_1_tile_1a8b2ca996f09db53cefd26d7ec7ad83a3" kind="variable"><name>_Effect</name></member>
     <member refid="class_tile_engine_1_1_tile_1a0b460d5863d5b52b639d55a70b9ecb3e" kind="variable"><name>_Depth</name></member>
+    <member refid="class_tile_engine_1_1_tile_1a07ba3488d75faf6fb825a2096b7b8af7" kind="property"><name>Scale</name></member>
+    <member refid="class_tile_engine_1_1_tile_1a9ae9e8e696081b0d07ae6bc9754ef00b" kind="property"><name>Name</name></member>
+    <member refid="class_tile_engine_1_1_tile_1a2d706a656696740dd34a68ae3d097cf5" kind="property"><name>SR</name></member>
+    <member refid="class_tile_engine_1_1_tile_1ae3cf62ee3a7f3999b70d2637f89ff0c8" kind="property"><name>SourceRectangle</name></member>
+    <member refid="class_tile_engine_1_1_tile_1a7247f070547649fbbceb271bb16d8617" kind="property"><name>ColorTint</name></member>
+    <member refid="class_tile_engine_1_1_tile_1aca5a4b39a77780eae07a78bc4fe87428" kind="property"><name>Rotation</name></member>
+    <member refid="class_tile_engine_1_1_tile_1aac40f0b237b97dc3d534a8b0a2af8c8e" kind="property"><name>Origin</name></member>
+    <member refid="class_tile_engine_1_1_tile_1aee64d6ac97287e222b9afecd2c05f84e" kind="property"><name>Effect</name></member>
+    <member refid="class_tile_engine_1_1_tile_1a24e6d5372aba6eccbf1adf29fd615f96" kind="property"><name>Depth</name></member>
     <member refid="class_tile_engine_1_1_tile_1a5dd1f40f587e5af6f9358b3edcf5b3a7" kind="function"><name>Tile</name></member>
     <member refid="class_tile_engine_1_1_tile_1a51f908f77d3210fd3397a844d90dbdb2" kind="function"><name>Tile</name></member>
     <member refid="class_tile_engine_1_1_tile_1aaf5725a5761dda6ed078ef8825167124" kind="function"><name>setTexture</name></member>
@@ -287,18 +795,155 @@
   <compound refid="class_tile_engine_1_1_utility_1_1_tile_math" kind="class"><name>TileEngine::Utility::TileMath</name>
     <member refid="class_tile_engine_1_1_utility_1_1_tile_math_1a28bafc78c3291c8e65d6603af562410e" kind="function"><name>gcd</name></member>
   </compound>
+  <compound refid="class_map_editor_1_1_g_u_i_1_1_tile_selector" kind="class"><name>MapEditor::GUI::TileSelector</name>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a4b65676c5f6b914cb8c89880f0bbfe21" kind="property"><name>DrawOrder</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a37696b1e3c82842d669382f5e0cd7e0f" kind="property"><name>Visible</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a501f03705a1071f95c980cd08e55242b" kind="property"><name>Enabled</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a2dc391535fbcae03bc0317367ad62a98" kind="property"><name>UpdateOrder</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aaa197247d50deab9b6aef605b1a63296" kind="property"><name>SelectedTile</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a4f05ceb835f4b38d6ed74a3e5aa0b294" kind="property"><name>IsTileSelected</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aa90645bab966f1a19ff673dc8935f66b" kind="property"><name>Position</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a2c8ba9accc9c6d5f4d7983d6fe360968" kind="event"><name>DrawOrderChanged</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aff96dd6c7b42275a1793ba608c45e485" kind="event"><name>VisibleChanged</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a090a7315319d618219b5bdc9ade5749d" kind="event"><name>EnabledChanged</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1afb66c0d6fa97efc4c15ccb7769688a4e" kind="event"><name>UpdateOrderChanged</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1acd1a7ac71b3503411be09d1429bd8ba1" kind="variable"><name>_tileSheet</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a02dfddab459efac96c8f08319a7983fe" kind="variable"><name>_backGround</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a594cf3bf078d8ae1e0b671d1dc0e82e2" kind="variable"><name>_renderTarget</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1af28b9bf648c86f7dd1e1d64e65360668" kind="variable"><name>_spritebatch</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a7d6ea5328200291b7bf380e22596db8e" kind="variable"><name>sourceRectangle</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aa73f3552a8ee35f8b242f7748872383f" kind="variable"><name>_LayOver</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a8ea2ec2420277e6aa8b233e5c0927a66" kind="variable"><name>_LayOverText</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a43c04604a545772cc8a12fa3a363de7c" kind="variable"><name>_selectedTile</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a132df3dc404223bead6c3af9217bea44" kind="variable"><name>_isTileSelected</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a3c6a81c3e1a8b8e1adecdb0c3501288f" kind="function"><name>TileSelector</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1af50ea155fe017bdc1fc2dd0440164d9d" kind="function"><name>Update</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1a00cebbbdd78141026e2c87b2ff8d3778" kind="function"><name>Draw</name></member>
+    <member refid="class_map_editor_1_1_g_u_i_1_1_tile_selector_1aa54d664792eea0c34aaabda16894d3fe" kind="function"><name>Draw</name></member>
+  </compound>
   <compound refid="class_tile_engine_1_1_tile_sheet" kind="class"><name>TileEngine::TileSheet</name>
     <member refid="class_tile_engine_1_1_tile_sheet_1aab4747c551f93c3c5f1bcba43276ed5a" kind="variable"><name>_tileSheet</name></member>
+    <member refid="class_tile_engine_1_1_tile_sheet_1a62dd2d8d0dd3947e1fda78ed6b489825" kind="variable"><name>_tileSize</name></member>
+    <member refid="class_tile_engine_1_1_tile_sheet_1a2bbeec97d049ba12649f8d21bd6e1fe7" kind="variable"><name>_name</name></member>
+    <member refid="class_tile_engine_1_1_tile_sheet_1a8b7b813daa0aa62280ff50cb6ca95040" kind="property"><name>TileSize</name></member>
     <member refid="class_tile_engine_1_1_tile_sheet_1a6d1063b12cabd250a4f6a3a286e1e18e" kind="property"><name>tileSheet</name></member>
-    <member refid="class_tile_engine_1_1_tile_sheet_1a74fd1ec39c58a55b1494a6f5071c837d" kind="function"><name>TileSheet</name></member>
+    <member refid="class_tile_engine_1_1_tile_sheet_1a92af49ae2305b38a3bd38b278c430e61" kind="function"><name>TileSheet</name></member>
+    <member refid="class_tile_engine_1_1_tile_sheet_1a35974ad12a716c40b702df6991d5325d" kind="function"><name>getTileAt</name></member>
+  </compound>
+  <compound refid="class_tile_engine_1_1_weapon" kind="class"><name>TileEngine::Weapon</name>
+    <member refid="class_tile_engine_1_1_weapon_1adf2a6332bb00fff75df62a6b7bfec994" kind="variable"><name>_maxDamage</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a2dce2457cdfeaefd26ac8dc5c884dfb7" kind="variable"><name>_spriteWidth</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a1f3a2286f61a3d0bac6878638326108e" kind="variable"><name>_spriteHeight</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1aaee0cc659a89479bb7d121c024ffa82c" kind="variable"><name>_spriteFrame</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1ab485eaa8c4f20a0d0c7f49246dc44541" kind="variable"><name>_scale</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a09ed62559dbf11705a587862acf7f2f5" kind="variable"><name>SpriteStrip</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1af995f2592dc4b77aa6396bf7d75e2847" kind="variable"><name>_cropStart</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a1a03ec94ffd3752bcb4bfe21a5b2abba" kind="variable"><name>_cropPos</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a1877496771f54e4a6c42d1fc44ab34b8" kind="property"><name>MaxDamage</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1ab1b62a6983016f8db4447a3735bed5d3" kind="property"><name>SpriteWidth</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a402f84b28c75df593a4b9c0456603939" kind="property"><name>SpriteHeight</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a9a3ca65c7afde405eabade4e177e8c25" kind="property"><name>SpriteFrame</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a6c34e2806ac9208d6dacca5c88449047" kind="property"><name>Scale</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a2c10ddf032fbfc2b42e06db57afc4314" kind="function"><name>Initialize</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a35b6c2931907eecd63f36c9831afcf54" kind="function"><name>Update</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a43797e71ed10bb9f6f87b49373328b61" kind="function"><name>Draw</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a94c5de7a63f2bd222dbc0a0a2b5e5da7" kind="function"><name>getDamage</name></member>
+    <member refid="class_tile_engine_1_1_weapon_1a7c1fa58b379f176e57fdef26670d8cf3" kind="function"><name>setDirection</name></member>
+  </compound>
+  <compound refid="class_g_u_i_1_1_controls_1_1_x_button" kind="class"><name>GUI::Controls::XButton</name>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a285ed29c7d466eaa1f0ede8e097c2a05" kind="variable"><name>_changeColor</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a39e4cef15309ae35f14d841971c6a092" kind="variable"><name>_color</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1acaa391a15a1b23e16ae386a31ffd5523" kind="variable"><name>_fireAgain</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a8751546f39cc1554e149942e8c864b67" kind="variable"><name>lastclicked</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a44d3352cb0cefe3a96ad2a8c712284c5" kind="variable"><name>_ButtonImage</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a8e44b8683270df1bf558c671921dad8d" kind="variable"><name>_ButtonRep</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a76a6ddc98b082f4584eb9ab9e8a77bf2" kind="variable"><name>_Clicked</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a20d190284591081fb64966efc4a540e1" kind="variable"><name>_WasClicked</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1afdd1772f405a90aed649e70b91ab3aea" kind="variable"><name>_Enabled</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aea3bee91aac01ded4cd07362d8f66f4c" kind="variable"><name>_Position</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a4ed1dc21bd0ba765b03562ca3b79e288" kind="property"><name>ChangeColor</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1add70c891819e41bc30b3e06a481603bc" kind="property"><name>Color</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a8beb21cded9bdecef62937719e7d8571" kind="property"><name>FireAgain</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aa1f6541223f0fb35db7b41e8c2803260" kind="property"><name>ButtonImage</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a1fff2b82126e30b8b06b103a62bec06b" kind="property"><name>ButtonRep</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a691dc660d0028dc03882dc009ac47bb2" kind="property"><name>Clicked</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a4f5c8bcbe882e1bc2e70105d8cb40a75" kind="property"><name>WasClicked</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ac2b46e285961684f91cc9d79f4fd0c44" kind="property"><name>Enabled</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aed6404bed1698922f7dab913dd90af1d" kind="property"><name>Position</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ab9f44f9d0519adb20d3b3476767698da" kind="variable"><name>COOLDOWN</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a3cda83e9066b75c36b6ad9e4bc052bb0" kind="function"><name>XButton</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1abb788f22518aa2bb6e4756c886e4893d" kind="function"><name>Update</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ac5106591eb34dc1edc9b4d468d2bcae5" kind="function"><name>Draw</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ae474e242ee1c62dde757628d922f9065" kind="function"><name>FireEvent</name></member>
+  </compound>
+  <compound refid="class_g_u_i_1_1_controls_1_1_x_panel" kind="class"><name>GUI::Controls::XPanel</name>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a20711f0ab95478fd1160cb505be5a8b6" kind="variable"><name>_color</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a6cb1f1ba5689d0652d62bd8d98dd0a81" kind="variable"><name>_BackGroundImage</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1abccf600e8b89d89052e3801fcba17d06" kind="variable"><name>_Position</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1ae514b9d001f2d205ca51aa6f2d1d81f6" kind="variable"><name>_ChildComponents</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a82abe7757455debc6bcf2876053f2167" kind="variable"><name>_Enabled</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a78ca6316fa12eb528887de5160798b7c" kind="variable"><name>_PanelWidth</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1aa3dd3bf1686bf1bc84e963657be7ae03" kind="variable"><name>_PanelHeight</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1aaf741dcf8db9a850d5e6f8cc4b44c01f" kind="property"><name>Color</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a9fa0bd8ba72e2d49e7311678d8f060b5" kind="property"><name>BackGroundImage</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1ad080557728050d5cb1eaa9a2c36bc248" kind="property"><name>Position</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1af950da46f1684b05b1e2e5a20aae0bd6" kind="property"><name>ChildComponents</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1acf60a6dabd96eec6680c1465bf735bc2" kind="property"><name>Enabled</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a8b088004a1cb21d291642c6b5554b609" kind="property"><name>PanelWidth</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a64ae1d26072086560845508a6e27c390" kind="property"><name>PanelHeight</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a16ede2589e88c5c385bc74a53d77ca14" kind="function"><name>XPanel</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1abb938ea054e3af118f35a7663e67f1ac" kind="function"><name>AddChild</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1a77b78045ec592b8444b2bdcc8c0fd621" kind="function"><name>Update</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_panel_1ade6a14d34431af3acc2825f39bd480a3" kind="function"><name>Draw</name></member>
+  </compound>
+  <compound refid="class_g_u_i_1_1_controls_1_1_x_text_box" kind="class"><name>GUI::Controls::XTextBox</name>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1a5fbf208b081bb434807b4d3dba4c7d67" kind="variable"><name>_Text</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1a8177bd38c11c26db97b5edfc383900f4" kind="variable"><name>_Font</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1a82b2662d5dc466d958d43e3843751928" kind="variable"><name>_Position</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1af8d4114a63f5b19ef2b4bcdb9bcda942" kind="variable"><name>_Scale</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1aeef699d171bc2c4bc99cb3af3b76d6de" kind="variable"><name>_TextColor</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1aa99b3449e4b472ed72c5b4205f210c9d" kind="variable"><name>_Enabled</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1af909ee100936ffc87f3313ec6385b5aa" kind="property"><name>Text</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1abe45c6c7c5379170fa0023dfa910f80e" kind="property"><name>Font</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1a9d1bca818e269cbccf338c8d8e3cdc5c" kind="property"><name>Position</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1a16404527cf65d61a9a001eff97ab4270" kind="property"><name>Scale</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1a74543f61536dfb2be666699ca90aeba9" kind="property"><name>TextColor</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1a2513a7eda4e0bd5056ee6c62d0df3dc8" kind="property"><name>Enabled</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1ab482b5c01c0b239c1cb3a36e90bf2a0a" kind="property"><name>TextChanged</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1a2e440645d66c12b4f962aadff355bfd7" kind="property"><name>IsSelected</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1ab1a5f4274e7af3cbe5d6385073cf7ab4" kind="variable"><name>_TextChanged</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1a9ecfda7db25d68c0ae36a38382df534e" kind="variable"><name>_IsSelected</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1ad6137db1bdbf3c34bcb1a235e2cfcabc" kind="function"><name>Update</name></member>
+    <member refid="class_g_u_i_1_1_controls_1_1_x_text_box_1a16565a1a289a21e3e644d883eb2d4397" kind="function"><name>Draw</name></member>
   </compound>
   <compound refid="namespace_capstone_project" kind="namespace"><name>CapstoneProject</name>
+    <member refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65a" kind="enum"><name>GAMESTATE</name></member>
+    <member refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aa3287971e79b4dca11067ed287847c1e6" kind="enumvalue"><name>MAINMENU</name></member>
+    <member refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aa6a216efc529825c60a4a4c0bc99ad77f" kind="enumvalue"><name>PLAY</name></member>
+    <member refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aa291554596c183e837f0a6bec3767c891" kind="enumvalue"><name>PAUSE</name></member>
+    <member refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aaa42b2fb0e720a080e79a92f4ca97d927" kind="enumvalue"><name>EXIT</name></member>
+    <member refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aaed6f7aca7887a927b9ed3d62aa347a86" kind="enumvalue"><name>SETTINGS</name></member>
+    <member refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aa04cf4d1aa6ae890ca4e07c842bf98a8f" kind="enumvalue"><name>NEWGAME</name></member>
+    <member refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aa2f453cfe638e57e27bb0c9512436111e" kind="enumvalue"><name>CONTINUE</name></member>
+    <member refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aaff96886a2c7da8e97587f26c55da5391" kind="enumvalue"><name>MAINSETTINGS</name></member>
+    <member refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aa460a15550ea23319d2740089a5d66022" kind="enumvalue"><name>STORY</name></member>
+    <member refid="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aaf5cf47ab06d0d98b0d16d10c82d87953" kind="enumvalue"><name>SAVE</name></member>
   </compound>
   <compound refid="namespace_custom_serialization" kind="namespace"><name>CustomSerialization</name>
   </compound>
   <compound refid="namespace_debug_terminal" kind="namespace"><name>DebugTerminal</name>
   </compound>
+  <compound refid="namespace_g_u_i" kind="namespace"><name>GUI</name>
+  </compound>
+  <compound refid="namespace_g_u_i_1_1_controls" kind="namespace"><name>GUI::Controls</name>
+  </compound>
+  <compound refid="namespace_g_u_i_1_1_interfaces" kind="namespace"><name>GUI::Interfaces</name>
+  </compound>
   <compound refid="namespace_main_menu" kind="namespace"><name>MainMenu</name>
+  </compound>
+  <compound refid="namespace_map_editor" kind="namespace"><name>MapEditor</name>
+  </compound>
+  <compound refid="namespace_map_editor_1_1_g_u_i" kind="namespace"><name>MapEditor::GUI</name>
   </compound>
   <compound refid="namespace_microsoft_1_1_xna_1_1_framework" kind="namespace"><name>Microsoft::Xna::Framework</name>
   </compound>
@@ -316,13 +961,15 @@
   </compound>
   <compound refid="namespace_microsoft_1_1_xna_1_1_framework_1_1_storage" kind="namespace"><name>Microsoft::Xna::Framework::Storage</name>
   </compound>
+  <compound refid="namespace_pause_menu" kind="namespace"><name>PauseMenu</name>
+  </compound>
   <compound refid="namespace_polenter_1_1_serialization" kind="namespace"><name>Polenter::Serialization</name>
+  </compound>
+  <compound refid="namespace_sound_manager" kind="namespace"><name>SoundManager</name>
   </compound>
   <compound refid="namespace_system" kind="namespace"><name>System</name>
   </compound>
   <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
-  </compound>
-  <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
   </compound>
   <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
   </compound>
@@ -346,47 +993,125 @@
   </compound>
   <compound refid="_game1_8cs" kind="file"><name>Game1.cs</name>
   </compound>
-  <compound refid="_capstone_project_2_capstone_project_2_program_8cs" kind="file"><name>Program.cs</name>
+  <compound refid="_image_button_8cs" kind="file"><name>ImageButton.cs</name>
   </compound>
-  <compound refid="_main_menu_2_main_menu_2_program_8cs" kind="file"><name>Program.cs</name>
-  </compound>
-  <compound refid="_serialization_2_serialization_2_program_8cs" kind="file"><name>Program.cs</name>
-  </compound>
-  <compound refid="_capstone_project_2_capstone_project_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
-  </compound>
-  <compound refid="_main_menu_2_main_menu_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
-  </compound>
-  <compound refid="_serialization_2_serialization_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
-  </compound>
-  <compound refid="_tile_engine_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
-  </compound>
-  <compound refid="_f_p_s___counter_8cs" kind="file"><name>FPS_Counter.cs</name>
+  <compound refid="_main_button_8cs" kind="file"><name>MainButton.cs</name>
   </compound>
   <compound refid="_main_menu_8cs" kind="file"><name>MainMenu.cs</name>
   </compound>
-  <compound refid="_serialization_test_8cs" kind="file"><name>SerializationTest.cs</name>
+  <compound refid="_main_save_keys_8cs" kind="file"><name>MainSaveKeys.cs</name>
+  </compound>
+  <compound refid="_main_settings_8cs" kind="file"><name>MainSettings.cs</name>
+  </compound>
+  <compound refid="_move_button_8cs" kind="file"><name>MoveButton.cs</name>
+  </compound>
+  <compound refid="_pause_menu_8cs" kind="file"><name>PauseMenu.cs</name>
+  </compound>
+  <compound refid="_save_keys_8cs" kind="file"><name>SaveKeys.cs</name>
+  </compound>
+  <compound refid="_settings_8cs" kind="file"><name>Settings.cs</name>
+  </compound>
+  <compound refid="_capstone_project_2_capstone_project_2_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_map_editor_2_map_editor_2_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_capstone_project_2_capstone_project_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_g_u_i_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_map_editor_2_map_editor_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_serialization_2_serialization_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_sound_manager_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_tile_engine_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_capstone_project_2_capstone_project_2_sound_manager_8cs" kind="file"><name>SoundManager.cs</name>
+  </compound>
+  <compound refid="_sound_manager_2_sound_manager_8cs" kind="file"><name>SoundManager.cs</name>
+  </compound>
+  <compound refid="_f_p_s___counter_8cs" kind="file"><name>FPS_Counter.cs</name>
+  </compound>
+  <compound refid="_label_8cs" kind="file"><name>Label.cs</name>
+  </compound>
+  <compound refid="_x_button_8cs" kind="file"><name>XButton.cs</name>
+  </compound>
+  <compound refid="_x_panel_8cs" kind="file"><name>XPanel.cs</name>
+  </compound>
+  <compound refid="_x_text_box_8cs" kind="file"><name>XTextBox.cs</name>
+  </compound>
+  <compound refid="_g_component_8cs" kind="file"><name>GComponent.cs</name>
+  </compound>
+  <compound refid="_i_x_button_8cs" kind="file"><name>IXButton.cs</name>
+  </compound>
+  <compound refid="_i_x_panel_8cs" kind="file"><name>IXPanel.cs</name>
+  </compound>
+  <compound refid="_i_x_text_field_8cs" kind="file"><name>IXTextField.cs</name>
+  </compound>
+  <compound refid="_map_window_8cs" kind="file"><name>MapWindow.cs</name>
+  </compound>
+  <compound refid="_reset_button_8cs" kind="file"><name>ResetButton.cs</name>
+  </compound>
+  <compound refid="_save_button_8cs" kind="file"><name>SaveButton.cs</name>
+  </compound>
+  <compound refid="_set_fringe_active_8cs" kind="file"><name>SetFringeActive.cs</name>
+  </compound>
+  <compound refid="_set_gound_active_8cs" kind="file"><name>SetGoundActive.cs</name>
+  </compound>
+  <compound refid="_set_mask_active_8cs" kind="file"><name>SetMaskActive.cs</name>
+  </compound>
+  <compound refid="_text_box_8cs" kind="file"><name>TextBox.cs</name>
+  </compound>
+  <compound refid="_tile_selector_8cs" kind="file"><name>TileSelector.cs</name>
+  </compound>
+  <compound refid="_map_editor_8cs" kind="file"><name>MapEditor.cs</name>
   </compound>
   <compound refid="_serialize_8cs" kind="file"><name>Serialize.cs</name>
   </compound>
-  <compound refid="_test_class_8cs" kind="file"><name>TestClass.cs</name>
-  </compound>
   <compound refid="_animation_8cs" kind="file"><name>Animation.cs</name>
-  </compound>
-  <compound refid="_avatar_8cs" kind="file"><name>Avatar.cs</name>
   </compound>
   <compound refid="_drawable_layer_8cs" kind="file"><name>DrawableLayer.cs</name>
   </compound>
-  <compound refid="_drawable_8cs" kind="file"><name>Drawable.cs</name>
+  <compound refid="_focal_point_8cs" kind="file"><name>FocalPoint.cs</name>
   </compound>
-  <compound refid="_item_8cs" kind="file"><name>Item.cs</name>
+  <compound refid="_avatar_8cs" kind="file"><name>Avatar.cs</name>
+  </compound>
+  <compound refid="_drawable_8cs" kind="file"><name>Drawable.cs</name>
   </compound>
   <compound refid="_layer_8cs" kind="file"><name>Layer.cs</name>
   </compound>
   <compound refid="_map_8cs" kind="file"><name>Map.cs</name>
   </compound>
-  <compound refid="_monster_8cs" kind="file"><name>Monster.cs</name>
+  <compound refid="_controls_8cs" kind="file"><name>Controls.cs</name>
+  </compound>
+  <compound refid="_health_bar_8cs" kind="file"><name>HealthBar.cs</name>
   </compound>
   <compound refid="_player_8cs" kind="file"><name>Player.cs</name>
+  </compound>
+  <compound refid="_score_display_8cs" kind="file"><name>ScoreDisplay.cs</name>
+  </compound>
+  <compound refid="_armor_8cs" kind="file"><name>Armor.cs</name>
+  </compound>
+  <compound refid="_boomerang_8cs" kind="file"><name>Boomerang.cs</name>
+  </compound>
+  <compound refid="_coin_8cs" kind="file"><name>Coin.cs</name>
+  </compound>
+  <compound refid="_flying_monster_8cs" kind="file"><name>FlyingMonster.cs</name>
+  </compound>
+  <compound refid="_ground_monster_8cs" kind="file"><name>GroundMonster.cs</name>
+  </compound>
+  <compound refid="_item_8cs" kind="file"><name>Item.cs</name>
+  </compound>
+  <compound refid="_monster_8cs" kind="file"><name>Monster.cs</name>
+  </compound>
+  <compound refid="_potion_8cs" kind="file"><name>Potion.cs</name>
+  </compound>
+  <compound refid="_sword_8cs" kind="file"><name>Sword.cs</name>
+  </compound>
+  <compound refid="_weapon_8cs" kind="file"><name>Weapon.cs</name>
+  </compound>
+  <compound refid="_serialize_controls_8cs" kind="file"><name>SerializeControls.cs</name>
   </compound>
   <compound refid="_tile_8cs" kind="file"><name>Tile.cs</name>
   </compound>
@@ -396,27 +1121,49 @@
   </compound>
   <compound refid="readme_8md" kind="file"><name>readme.md</name>
   </compound>
+  <compound refid="dir_e4b3135f824b3ada82f2c7ba7de44745" kind="dir"><name>TileEngine/Animation</name>
+  </compound>
   <compound refid="dir_339590d414b9dc0af4433eb6b7b82807" kind="dir"><name>CapstoneProject/CapstoneProject</name>
   </compound>
   <compound refid="dir_caa43b1e4acec8bdf8609e0f2daaf99f" kind="dir"><name>CapstoneProject</name>
   </compound>
+  <compound refid="dir_73dd58913af9b97b56768b2e39d8a28a" kind="dir"><name>GUI/Controls</name>
+  </compound>
+  <compound refid="dir_3ffef7c3f011b5b3efaf6842d6bae89b" kind="dir"><name>MapEditor/MapEditor/GUI</name>
+  </compound>
+  <compound refid="dir_171b764decf33d63a7df2fab4f4bc6d8" kind="dir"><name>GUI</name>
+  </compound>
   <compound refid="dir_4d899794e4a5bb657f1e737f0032357e" kind="dir"><name>TileEngine/Interfaces</name>
   </compound>
-  <compound refid="dir_af78183ecf8c49d9065c4152db8bba1a" kind="dir"><name>MainMenu/MainMenu</name>
+  <compound refid="dir_bd7823176489305359ae3496ffdbb35b" kind="dir"><name>GUI/Interfaces</name>
   </compound>
-  <compound refid="dir_b62add12a4123d7687045602466e895a" kind="dir"><name>MainMenu</name>
+  <compound refid="dir_969013448fbe532d37cefeeba7d763c4" kind="dir"><name>MapEditor/MapEditor</name>
+  </compound>
+  <compound refid="dir_8e3b962b4c13e7a7482a4855b1c0c6b9" kind="dir"><name>MapEditor</name>
+  </compound>
+  <compound refid="dir_7511f6d6031f2e831457cdd69c807191" kind="dir"><name>CapstoneProject/CapstoneProject/Menus</name>
+  </compound>
+  <compound refid="dir_61dfaf1237b5107f564e81e656b885b4" kind="dir"><name>TileEngine/Player</name>
   </compound>
   <compound refid="dir_a60fd27bff144ae9c9cff1f1d8c77990" kind="dir"><name>TileEngine/Properties</name>
   </compound>
+  <compound refid="dir_538125e0624b9665d978bfe60c418535" kind="dir"><name>SoundManager/Properties</name>
+  </compound>
   <compound refid="dir_f413dc279df827bb708d437b0828bf59" kind="dir"><name>Serialization/Serialization/Properties</name>
   </compound>
-  <compound refid="dir_ba204cf62ec8087bd13ea90c9534e930" kind="dir"><name>MainMenu/MainMenu/Properties</name>
+  <compound refid="dir_bbbeb591d0f020ed8e1cd4cc6adc8e17" kind="dir"><name>MapEditor/MapEditor/Properties</name>
+  </compound>
+  <compound refid="dir_9c8cf6a51dc0e8a1681e0b901e3d4b7e" kind="dir"><name>GUI/Properties</name>
   </compound>
   <compound refid="dir_0bbbd7d2bc23b152edeec99f98948329" kind="dir"><name>CapstoneProject/CapstoneProject/Properties</name>
+  </compound>
+  <compound refid="dir_db800c13b7c0e6e99ede83d5c9ddcb01" kind="dir"><name>TileEngine/RolePlay</name>
   </compound>
   <compound refid="dir_085f9128ccb02eeb43ae259d33f067c7" kind="dir"><name>Serialization/Serialization</name>
   </compound>
   <compound refid="dir_d9660839e678bd763ca919a7b21175d8" kind="dir"><name>Serialization</name>
+  </compound>
+  <compound refid="dir_cd535af9ef4f359d5f40e9dfe1494eaa" kind="dir"><name>SoundManager</name>
   </compound>
   <compound refid="dir_d0a77c1a97cf39b07408c9faab11faad" kind="dir"><name>TileEngine</name>
   </compound>

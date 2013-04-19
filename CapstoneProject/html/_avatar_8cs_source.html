@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Fat Joe&#39;s Nightmare: TileEngine/Avatar.cs Source File</title>
+<title>Fat Joe&#39;s Nightmare: TileEngine/Interfaces/Avatar.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('_avatar_8cs_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Events</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -121,42 +121,101 @@ $(document).ready(function(){initNavTree('_avatar_8cs_source.html','');});
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html">   16</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="class_tile_engine_1_1_avatar.html">Avatar</a></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">private</span> Vector2 _Position;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">//Alows for the Postion</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">public</span> Vector2 <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">   22</a></span>&#160;        {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _Position; }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">set</span> { _Position = value; }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//current offset for centering map</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#ac438acf71aa12a4ab41e4e473033b967">   19</a></span>&#160;        <span class="keyword">public</span> Vector2 <a class="code" href="class_tile_engine_1_1_avatar.html#ac438acf71aa12a4ab41e4e473033b967">_offset</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">public</span> Microsoft.Xna.Framework.Vector2 <a class="code" href="class_tile_engine_1_1_avatar.html#a88d7ebb026fba691d674379c3dd55b67">Offset</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#a88d7ebb026fba691d674379c3dd55b67">   22</a></span>&#160;        {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_tile_engine_1_1_avatar.html#ac438acf71aa12a4ab41e4e473033b967">_offset</a>; }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">set</span> { <a class="code" href="class_tile_engine_1_1_avatar.html#ac438acf71aa12a4ab41e4e473033b967">_offset</a> = value; }</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;       <span class="comment">// private Texture2D _Sprite;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#a7c6118c83ba18eeb197f04412130f3b5">   29</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_tile_engine_1_1_avatar.html#a7c6118c83ba18eeb197f04412130f3b5">Avatar</a>() { }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#a9d97952e8a9e1b347c841cfbe614b60b">   31</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_tile_engine_1_1_avatar.html#a7c6118c83ba18eeb197f04412130f3b5">Avatar</a>(Vector2 position, Texture2D Texture)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        { </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#afa46c5a32ad8b677a0f2ce2ace163059">   36</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_tile_engine_1_1_avatar.html#afa46c5a32ad8b677a0f2ce2ace163059">Update</a>(GameTime gameTime){}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#a7d6106cb2e838e335d7b285d51312183">   38</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_tile_engine_1_1_avatar.html#a7d6106cb2e838e335d7b285d51312183">Draw</a>(SpriteBatch spriteBatch, GameTime gameTime)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">        /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">        /// Save offset values for serialization</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">        /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span>        <span class="keyword">private</span> <span class="keywordtype">float</span> _oX;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">        /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">        /// Save offset values for serialization</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">        /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span>        <span class="keyword">private</span> <span class="keywordtype">float</span> _oY;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_tile_engine_1_1_avatar.html#ad57bccaabfea9a571f45e923c8f8fcea">OX</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#ad57bccaabfea9a571f45e923c8f8fcea">   38</a></span>&#160;        {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _oX; }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">set</span> { _oX = value; }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_tile_engine_1_1_avatar.html#ae93d9e869211bd685e335aadf0dc5f77">OY</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#ae93d9e869211bd685e335aadf0dc5f77">   44</a></span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _oY; }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keyword">set</span> { _oY = value; }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">// Animation representing the player</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">private</span> <a class="code" href="class_tile_engine_1_1_animation.html">Animation</a> _PlayerAnimation;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">public</span> TileEngine.Animation <a class="code" href="class_tile_engine_1_1_avatar.html#a0eef17049780a5aa303977444d0b5e9d">PlayerAnimation</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#a0eef17049780a5aa303977444d0b5e9d">   53</a></span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _PlayerAnimation; }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">set</span> { _PlayerAnimation = value; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">//Alows for the Postion</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">private</span> Vector2 _Position;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">public</span> Vector2 <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">   62</a></span>&#160;        {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _Position; }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keyword">set</span> { _Position = value; }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">        /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">        /// save position values for serialization</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">        /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span>        <span class="keyword">private</span> <span class="keywordtype">float</span> _x;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">        /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">        /// save position values for serialization</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">        /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"></span>        <span class="keyword">private</span> <span class="keywordtype">float</span> _y;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_tile_engine_1_1_avatar.html#afb369b75dc84f09d4c98e6f02dcb1cbe">X</a></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#afb369b75dc84f09d4c98e6f02dcb1cbe">   78</a></span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _x; }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keyword">set</span> { _x = value; }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_tile_engine_1_1_avatar.html#a5780c90b61ef36f0fce907fb8ec1c396">Y</a></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#a5780c90b61ef36f0fce907fb8ec1c396">   84</a></span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _y; }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keyword">set</span> { _y = value; }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#a7c6118c83ba18eeb197f04412130f3b5">   89</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_tile_engine_1_1_avatar.html#a7c6118c83ba18eeb197f04412130f3b5">Avatar</a>() { }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#a9d97952e8a9e1b347c841cfbe614b60b">   91</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_tile_engine_1_1_avatar.html#a7c6118c83ba18eeb197f04412130f3b5">Avatar</a>(Vector2 position, Texture2D Texture)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#afa46c5a32ad8b677a0f2ce2ace163059">   95</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_tile_engine_1_1_avatar.html#afa46c5a32ad8b677a0f2ce2ace163059">Update</a>(GameTime gameTime) { }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#a7d6106cb2e838e335d7b285d51312183">   97</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_tile_engine_1_1_avatar.html#a7d6106cb2e838e335d7b285d51312183">Draw</a>(SpriteBatch spriteBatch, GameTime gameTime)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_avatar.html#a565a17aa3aae06ca72673956919ebb97">  101</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_tile_engine_1_1_avatar.html#a565a17aa3aae06ca72673956919ebb97">Initialize</a>(Texture2D spriteStrip, Vector2 position)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d0a77c1a97cf39b07408c9faab11faad.html">TileEngine</a></li><li class="navelem"><a class="el" href="_avatar_8cs.html">Avatar.cs</a></li>
-    <li class="footer">Generated on Fri Mar 22 2013 21:04:49 for Fat Joe's Nightmare by
+    <li class="navelem"><a class="el" href="dir_d0a77c1a97cf39b07408c9faab11faad.html">TileEngine</a></li><li class="navelem"><a class="el" href="dir_4d899794e4a5bb657f1e737f0032357e.html">Interfaces</a></li><li class="navelem"><a class="el" href="_avatar_8cs.html">Avatar.cs</a></li>
+    <li class="footer">Generated on Fri Apr 19 2013 18:14:42 for Fat Joe's Nightmare by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

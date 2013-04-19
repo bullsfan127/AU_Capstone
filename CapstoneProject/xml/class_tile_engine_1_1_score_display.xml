@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_score_display" kind="class" prot="public">
+    <compoundname>TileEngine::ScoreDisplay</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_score_display_1ae0cfa03ddbec4f4ada04e3e2fb33a403" prot="private" static="no" mutable="no">
+        <type>SpriteFont</type>
+        <definition>SpriteFont TileEngine.ScoreDisplay.font</definition>
+        <argsstring></argsstring>
+        <name>font</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_score_display_1a9a5e5e6e1fa4903689423b25f1ab7170" prot="private" static="no" mutable="no">
+        <type>GraphicsDeviceManager</type>
+        <definition>GraphicsDeviceManager TileEngine.ScoreDisplay.graphics</definition>
+        <argsstring></argsstring>
+        <name>graphics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" line="22" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_score_display_1ac9d3c0d8636ecaa4422f661763211f99" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.ScoreDisplay._score</definition>
+        <argsstring></argsstring>
+        <name>_score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" line="23" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_score_display_1ad2c86a69fcebf84a0c82922a59178f8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.ScoreDisplay.ScoreDisplay</definition>
+        <argsstring>(GraphicsDeviceManager graphic)</argsstring>
+        <name>ScoreDisplay</name>
+        <param>
+          <type>GraphicsDeviceManager</type>
+          <declname>graphic</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the FPS counter </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graphic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Graphics device</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_score_display_1ab4678db21ab36c75579674e88a6836e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.ScoreDisplay.Update</definition>
+        <argsstring>(int newScore)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>int</type>
+          <declname>newScore</declname>
+        </param>
+        <briefdescription>
+<para>Updates the FPS counter </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_score_display_1a933f6cf1bf3f2b00617c85883f734f41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.ScoreDisplay.loadFont</definition>
+        <argsstring>(SpriteFont a)</argsstring>
+        <name>loadFont</name>
+        <param>
+          <type>SpriteFont</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>loads the spriteFont </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SpriteFont</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_score_display_1ae32c1eeaee657edbaac7a1bfbe0187f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.ScoreDisplay.Draw</definition>
+        <argsstring>(SpriteBatch spriteBatch, GameTime gameTime)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Draws the FPS </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spriteBatch</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" line="59" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" bodystart="58" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Counts the frames per second </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/ScoreDisplay.cs" bodystart="19" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_score_display_1ac9d3c0d8636ecaa4422f661763211f99" prot="private" virt="non-virtual"><scope>TileEngine::ScoreDisplay</scope><name>_score</name></member>
+      <member refid="class_tile_engine_1_1_score_display_1ae32c1eeaee657edbaac7a1bfbe0187f7" prot="public" virt="non-virtual"><scope>TileEngine::ScoreDisplay</scope><name>Draw</name></member>
+      <member refid="class_tile_engine_1_1_score_display_1ae0cfa03ddbec4f4ada04e3e2fb33a403" prot="private" virt="non-virtual"><scope>TileEngine::ScoreDisplay</scope><name>font</name></member>
+      <member refid="class_tile_engine_1_1_score_display_1a9a5e5e6e1fa4903689423b25f1ab7170" prot="private" virt="non-virtual"><scope>TileEngine::ScoreDisplay</scope><name>graphics</name></member>
+      <member refid="class_tile_engine_1_1_score_display_1a933f6cf1bf3f2b00617c85883f734f41" prot="public" virt="non-virtual"><scope>TileEngine::ScoreDisplay</scope><name>loadFont</name></member>
+      <member refid="class_tile_engine_1_1_score_display_1ad2c86a69fcebf84a0c82922a59178f8f" prot="public" virt="non-virtual"><scope>TileEngine::ScoreDisplay</scope><name>ScoreDisplay</name></member>
+      <member refid="class_tile_engine_1_1_score_display_1ab4678db21ab36c75579674e88a6836e9" prot="public" virt="non-virtual"><scope>TileEngine::ScoreDisplay</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

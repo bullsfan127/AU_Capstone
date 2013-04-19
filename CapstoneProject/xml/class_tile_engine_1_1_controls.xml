@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_controls" kind="class" prot="public">
+    <compoundname>TileEngine::Controls</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_controls_1a2f3688e15a47de93febb139632cb942d" prot="private" static="yes" mutable="no">
+        <type>Keys</type>
+        <definition>Keys TileEngine.Controls._left</definition>
+        <argsstring></argsstring>
+        <name>_left</name>
+        <initializer>= Keys.Left</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_controls_1a158cfa91f67b96510a6a8cf5ca05677f" prot="private" static="yes" mutable="no">
+        <type>Keys</type>
+        <definition>Keys TileEngine.Controls._right</definition>
+        <argsstring></argsstring>
+        <name>_right</name>
+        <initializer>= Keys.Right</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_controls_1a8758e01303df1c70ff285b6ff984ee33" prot="private" static="yes" mutable="no">
+        <type>Keys</type>
+        <definition>Keys TileEngine.Controls._up</definition>
+        <argsstring></argsstring>
+        <name>_up</name>
+        <initializer>= Keys.Up</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_controls_1a025d6d798bc6c2049a0c1dcd3aa71a3d" prot="private" static="yes" mutable="no">
+        <type>Keys</type>
+        <definition>Keys TileEngine.Controls._attack</definition>
+        <argsstring></argsstring>
+        <name>_attack</name>
+        <initializer>= Keys.Space</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" line="22" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_tile_engine_1_1_controls_1af4a48b4be1319257724d423cb482a6c4" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Keys</type>
+        <definition>Keys TileEngine.Controls.Attack</definition>
+        <argsstring></argsstring>
+        <name>Attack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_controls_1acba265a967cfc16cca6852841b0b20f9" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Input.Keys</type>
+        <definition>Microsoft.Xna.Framework.Input.Keys TileEngine.Controls.Left</definition>
+        <argsstring></argsstring>
+        <name>Left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" line="34" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_controls_1a5beef8db2452445533345fc62e04238a" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Input.Keys</type>
+        <definition>Microsoft.Xna.Framework.Input.Keys TileEngine.Controls.Right</definition>
+        <argsstring></argsstring>
+        <name>Right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_controls_1ad26f3d398b5eb175425234dd4caa98de" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Input.Keys</type>
+        <definition>Microsoft.Xna.Framework.Input.Keys TileEngine.Controls.Up</definition>
+        <argsstring></argsstring>
+        <name>Up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" line="46" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_controls_1a59b5a4b169128f6db2f75cb8fba8bf87" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void TileEngine.Controls.Save</definition>
+        <argsstring>()</argsstring>
+        <name>Save</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" bodystart="48" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_controls_1a3aec23505dbaf6004216d22efbbccd98" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void TileEngine.Controls.Load</definition>
+        <argsstring>()</argsstring>
+        <name>Load</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" line="55" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" bodystart="54" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_controls_1aad1c41284b5cbdca35f0922bc3e52307" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void TileEngine.Controls.setDefault</definition>
+        <argsstring>()</argsstring>
+        <name>setDefault</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" line="61" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" bodystart="60" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/Controls.cs" bodystart="17" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_controls_1a025d6d798bc6c2049a0c1dcd3aa71a3d" prot="private" virt="non-virtual"><scope>TileEngine::Controls</scope><name>_attack</name></member>
+      <member refid="class_tile_engine_1_1_controls_1a2f3688e15a47de93febb139632cb942d" prot="private" virt="non-virtual"><scope>TileEngine::Controls</scope><name>_left</name></member>
+      <member refid="class_tile_engine_1_1_controls_1a158cfa91f67b96510a6a8cf5ca05677f" prot="private" virt="non-virtual"><scope>TileEngine::Controls</scope><name>_right</name></member>
+      <member refid="class_tile_engine_1_1_controls_1a8758e01303df1c70ff285b6ff984ee33" prot="private" virt="non-virtual"><scope>TileEngine::Controls</scope><name>_up</name></member>
+      <member refid="class_tile_engine_1_1_controls_1af4a48b4be1319257724d423cb482a6c4" prot="public" virt="non-virtual"><scope>TileEngine::Controls</scope><name>Attack</name></member>
+      <member refid="class_tile_engine_1_1_controls_1acba265a967cfc16cca6852841b0b20f9" prot="public" virt="non-virtual"><scope>TileEngine::Controls</scope><name>Left</name></member>
+      <member refid="class_tile_engine_1_1_controls_1a3aec23505dbaf6004216d22efbbccd98" prot="public" virt="non-virtual"><scope>TileEngine::Controls</scope><name>Load</name></member>
+      <member refid="class_tile_engine_1_1_controls_1a5beef8db2452445533345fc62e04238a" prot="public" virt="non-virtual"><scope>TileEngine::Controls</scope><name>Right</name></member>
+      <member refid="class_tile_engine_1_1_controls_1a59b5a4b169128f6db2f75cb8fba8bf87" prot="public" virt="non-virtual"><scope>TileEngine::Controls</scope><name>Save</name></member>
+      <member refid="class_tile_engine_1_1_controls_1aad1c41284b5cbdca35f0922bc3e52307" prot="public" virt="non-virtual"><scope>TileEngine::Controls</scope><name>setDefault</name></member>
+      <member refid="class_tile_engine_1_1_controls_1ad26f3d398b5eb175425234dd4caa98de" prot="public" virt="non-virtual"><scope>TileEngine::Controls</scope><name>Up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

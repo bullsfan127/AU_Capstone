@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_capstone_project_1_1_move_button" kind="class" prot="package">
+    <compoundname>CapstoneProject::MoveButton</compoundname>
+    <basecompoundref refid="class_g_u_i_1_1_controls_1_1_x_button" prot="public" virt="non-virtual">GUI.Controls.XButton</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_capstone_project_1_1_move_button_1accfd2e21956a4dc22a5df9e6eedcb01c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CapstoneProject.MoveButton._button</definition>
+        <argsstring></argsstring>
+        <name>_button</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_move_button_1a54330b0efb50eb362d41ba485de76895" prot="private" static="no" mutable="no">
+        <type>Keys[]</type>
+        <definition>Keys [] CapstoneProject.MoveButton._key</definition>
+        <argsstring></argsstring>
+        <name>_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_move_button_1af0800bcf66a13e71babcbeb004e7667a" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int CapstoneProject.MoveButton.RIGHTBUTTON</definition>
+        <argsstring></argsstring>
+        <name>RIGHTBUTTON</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" line="22" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_move_button_1a6b8572d53182c286d21e3c08f4dc83fe" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int CapstoneProject.MoveButton.LEFTBUTTON</definition>
+        <argsstring></argsstring>
+        <name>LEFTBUTTON</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" line="23" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_move_button_1a6b8747122d7b2577a038fc9d42d8c947" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int CapstoneProject.MoveButton.UPBUTTON</definition>
+        <argsstring></argsstring>
+        <name>UPBUTTON</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_capstone_project_1_1_move_button_1af6dd18da3ed7cb6c744c336a9e01c6dd" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int CapstoneProject.MoveButton.ATTACKBUTTON</definition>
+        <argsstring></argsstring>
+        <name>ATTACKBUTTON</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_capstone_project_1_1_move_button_1ade855063fd76ec8564b88662c3c36262" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CapstoneProject.MoveButton.MoveButton</definition>
+        <argsstring>(Vector2 buttonPosition, Texture2D Texture, int button)</argsstring>
+        <name>MoveButton</name>
+        <param>
+          <type>Vector2</type>
+          <declname>buttonPosition</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>Texture</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>button</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" line="31" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_capstone_project_1_1_move_button_1a94dbb1232c38b98f62b28212ae61f9fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CapstoneProject.MoveButton.FireEvent</definition>
+        <argsstring>()</argsstring>
+        <name>FireEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" bodystart="35" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="183">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="180">
+        <label>CapstoneProject.MoveButton</label>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="181">
+        <label>XButton</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_button"/>
+        <childnode refid="182" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="182">
+        <label>IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="183" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="187">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="184">
+        <label>CapstoneProject.MoveButton</label>
+        <childnode refid="185" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="185">
+        <label>XButton</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_button"/>
+        <childnode refid="186" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="187" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MoveButton.cs" bodystart="18" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_capstone_project_1_1_move_button_1accfd2e21956a4dc22a5df9e6eedcb01c" prot="private" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>_button</name></member>
+      <member refid="class_capstone_project_1_1_move_button_1a54330b0efb50eb362d41ba485de76895" prot="private" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>_key</name></member>
+      <member refid="class_capstone_project_1_1_move_button_1af6dd18da3ed7cb6c744c336a9e01c6dd" prot="private" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>ATTACKBUTTON</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aa1f6541223f0fb35db7b41e8c2803260" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>ButtonImage</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a1fff2b82126e30b8b06b103a62bec06b" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>ButtonRep</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a4ed1dc21bd0ba765b03562ca3b79e288" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>ChangeColor</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a691dc660d0028dc03882dc009ac47bb2" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>Clicked</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1add70c891819e41bc30b3e06a481603bc" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>Color</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ab9f44f9d0519adb20d3b3476767698da" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>COOLDOWN</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ac5106591eb34dc1edc9b4d468d2bcae5" prot="public" virt="virtual"><scope>CapstoneProject::MoveButton</scope><name>Draw</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ac2b46e285961684f91cc9d79f4fd0c44" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>Enabled</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a8beb21cded9bdecef62937719e7d8571" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>FireAgain</name></member>
+      <member refid="class_capstone_project_1_1_move_button_1a94dbb1232c38b98f62b28212ae61f9fb" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>FireEvent</name></member>
+      <member refid="class_capstone_project_1_1_move_button_1a6b8572d53182c286d21e3c08f4dc83fe" prot="private" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>LEFTBUTTON</name></member>
+      <member refid="class_capstone_project_1_1_move_button_1ade855063fd76ec8564b88662c3c36262" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>MoveButton</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aed6404bed1698922f7dab913dd90af1d" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>Position</name></member>
+      <member refid="class_capstone_project_1_1_move_button_1af0800bcf66a13e71babcbeb004e7667a" prot="private" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>RIGHTBUTTON</name></member>
+      <member refid="class_capstone_project_1_1_move_button_1a6b8747122d7b2577a038fc9d42d8c947" prot="private" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>UPBUTTON</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1abb788f22518aa2bb6e4756c886e4893d" prot="public" virt="virtual"><scope>CapstoneProject::MoveButton</scope><name>Update</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a4f5c8bcbe882e1bc2e70105d8cb40a75" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>WasClicked</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a3cda83e9066b75c36b6ad9e4bc052bb0" prot="public" virt="non-virtual"><scope>CapstoneProject::MoveButton</scope><name>XButton</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -3,13 +3,26 @@
   <compounddef id="namespace_tile_engine" kind="namespace">
     <compoundname>TileEngine</compoundname>
     <innerclass refid="class_tile_engine_1_1_animation" prot="public">TileEngine::Animation</innerclass>
-    <innerclass refid="class_tile_engine_1_1_avatar" prot="public">TileEngine::Avatar</innerclass>
     <innerclass refid="class_tile_engine_1_1_drawable_layer_3_01_t_01_4" prot="public">TileEngine::DrawableLayer&lt; T &gt;</innerclass>
-    <innerclass refid="class_tile_engine_1_1_item" prot="public">TileEngine::Item</innerclass>
+    <innerclass refid="class_tile_engine_1_1_focal_point" prot="public">TileEngine::FocalPoint</innerclass>
+    <innerclass refid="class_tile_engine_1_1_avatar" prot="public">TileEngine::Avatar</innerclass>
     <innerclass refid="class_tile_engine_1_1_layer_3_01_t_01_4" prot="public">TileEngine::Layer&lt; T &gt;</innerclass>
     <innerclass refid="class_tile_engine_1_1_map" prot="public">TileEngine::Map</innerclass>
-    <innerclass refid="class_tile_engine_1_1_monster" prot="package">TileEngine::Monster</innerclass>
+    <innerclass refid="class_tile_engine_1_1_controls" prot="public">TileEngine::Controls</innerclass>
+    <innerclass refid="class_tile_engine_1_1_health_bar" prot="public">TileEngine::HealthBar</innerclass>
     <innerclass refid="class_tile_engine_1_1_player" prot="public">TileEngine::Player</innerclass>
+    <innerclass refid="class_tile_engine_1_1_score_display" prot="public">TileEngine::ScoreDisplay</innerclass>
+    <innerclass refid="class_tile_engine_1_1_armor" prot="public">TileEngine::Armor</innerclass>
+    <innerclass refid="class_tile_engine_1_1_boomerang" prot="public">TileEngine::Boomerang</innerclass>
+    <innerclass refid="class_tile_engine_1_1_coin" prot="public">TileEngine::Coin</innerclass>
+    <innerclass refid="class_tile_engine_1_1_flying_monster" prot="public">TileEngine::FlyingMonster</innerclass>
+    <innerclass refid="class_tile_engine_1_1_ground_monster" prot="public">TileEngine::GroundMonster</innerclass>
+    <innerclass refid="class_tile_engine_1_1_item" prot="public">TileEngine::Item</innerclass>
+    <innerclass refid="class_tile_engine_1_1_monster" prot="public">TileEngine::Monster</innerclass>
+    <innerclass refid="class_tile_engine_1_1_potion" prot="public">TileEngine::Potion</innerclass>
+    <innerclass refid="class_tile_engine_1_1_sword" prot="public">TileEngine::Sword</innerclass>
+    <innerclass refid="class_tile_engine_1_1_weapon" prot="public">TileEngine::Weapon</innerclass>
+    <innerclass refid="class_tile_engine_1_1_serialize_controls" prot="public">TileEngine::SerializeControls</innerclass>
     <innerclass refid="class_tile_engine_1_1_tile" prot="public">TileEngine::Tile</innerclass>
     <innerclass refid="class_tile_engine_1_1_tile_sheet" prot="public">TileEngine::TileSheet</innerclass>
     <innernamespace refid="namespace_tile_engine_1_1_interfaces">TileEngine::Interfaces</innernamespace>
@@ -18,6 +31,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="14"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="14"/>
   </compounddef>
 </doxygen>

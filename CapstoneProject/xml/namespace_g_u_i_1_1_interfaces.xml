@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="namespace_g_u_i_1_1_interfaces" kind="namespace">
+    <compoundname>GUI::Interfaces</compoundname>
+    <innerclass refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button" prot="public">GUI::Interfaces::IXButton</innerclass>
+    <innerclass refid="interface_g_u_i_1_1_interfaces_1_1_i_x_panel" prot="public">GUI::Interfaces::IXPanel</innerclass>
+    <innerclass refid="interface_g_u_i_1_1_interfaces_1_1_i_x_text_field" prot="public">GUI::Interfaces::IXTextField</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/IXButton.cs" line="15"/>
+  </compounddef>
+</doxygen>

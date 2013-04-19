@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dir_969013448fbe532d37cefeeba7d763c4" kind="dir">
+    <compoundname>MapEditor/MapEditor</compoundname>
+    <innerdir refid="dir_3ffef7c3f011b5b3efaf6842d6bae89b">MapEditor/MapEditor/GUI</innerdir>
+    <innerdir refid="dir_bbbeb591d0f020ed8e1cd4cc6adc8e17">MapEditor/MapEditor/Properties</innerdir>
+    <innerfile refid="_map_editor_8cs">MapEditor.cs</innerfile>
+    <innerfile refid="_map_editor_2_map_editor_2_program_8cs">Program.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/"/>
+  </compounddef>
+</doxygen>

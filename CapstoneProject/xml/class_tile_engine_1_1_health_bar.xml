@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_health_bar" kind="class" prot="public">
+    <compoundname>TileEngine::HealthBar</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_health_bar_1ae43d1d1887904fbbdf076cdb7e511d98" prot="private" static="no" mutable="no">
+        <type>GraphicsDeviceManager</type>
+        <definition>GraphicsDeviceManager TileEngine.HealthBar.graphics</definition>
+        <argsstring></argsstring>
+        <name>graphics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_health_bar_1a576f39095dab553b96b1ccae8b9bc2b1" prot="private" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D TileEngine.HealthBar.texture</definition>
+        <argsstring></argsstring>
+        <name>texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_health_bar_1a76718f7be9c52a6f7461d52aa894aa16" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.HealthBar.position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_health_bar_1ae6c64478ab48d6260e744d72bf8d1194" prot="private" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle TileEngine.HealthBar.rectangle</definition>
+        <argsstring></argsstring>
+        <name>rectangle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" line="22" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_health_bar_1a14ae0f24f1251940f7b10b12abb9a539" prot="private" static="no" mutable="no">
+        <type>ContentManager</type>
+        <definition>ContentManager TileEngine.HealthBar.Content</definition>
+        <argsstring></argsstring>
+        <name>Content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" line="23" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_health_bar_1a81048769c9edf6e11d2e1bce69a02ced" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.HealthBar.HealthBar</definition>
+        <argsstring>(GraphicsDeviceManager _graphics, ContentManager content)</argsstring>
+        <name>HealthBar</name>
+        <param>
+          <type>GraphicsDeviceManager</type>
+          <declname>_graphics</declname>
+        </param>
+        <param>
+          <type>ContentManager</type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" line="26" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" bodystart="25" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_health_bar_1af9b401821014b54f5edb71f8303b9780" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.HealthBar.Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+<para>Allows the game component to perform any initialization it needs to before starting to run. This is where it can query for any required services and load content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_health_bar_1a2db74840eda227576a54ea6ae028ace0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.HealthBar.LoadContent</definition>
+        <argsstring>()</argsstring>
+        <name>LoadContent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" bodystart="40" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_health_bar_1aebdebca44224bfee94fa8dee33b0f2ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.HealthBar.Update</definition>
+        <argsstring>(GameTime gameTime, Player player)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tile_engine_1_1_player" kindref="compound">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+<para>Allows the game component to update itself. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provides a snapshot of timing values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" line="52" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_health_bar_1a24a1c13b935b3624f8047b105cab7f0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.HealthBar.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spriteBatch)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" line="64" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" bodystart="63" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is a game component that implements IUpdateable. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Player/HealthBar.cs" bodystart="17" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_health_bar_1a14ae0f24f1251940f7b10b12abb9a539" prot="private" virt="non-virtual"><scope>TileEngine::HealthBar</scope><name>Content</name></member>
+      <member refid="class_tile_engine_1_1_health_bar_1a24a1c13b935b3624f8047b105cab7f0c" prot="public" virt="non-virtual"><scope>TileEngine::HealthBar</scope><name>Draw</name></member>
+      <member refid="class_tile_engine_1_1_health_bar_1ae43d1d1887904fbbdf076cdb7e511d98" prot="private" virt="non-virtual"><scope>TileEngine::HealthBar</scope><name>graphics</name></member>
+      <member refid="class_tile_engine_1_1_health_bar_1a81048769c9edf6e11d2e1bce69a02ced" prot="public" virt="non-virtual"><scope>TileEngine::HealthBar</scope><name>HealthBar</name></member>
+      <member refid="class_tile_engine_1_1_health_bar_1af9b401821014b54f5edb71f8303b9780" prot="public" virt="non-virtual"><scope>TileEngine::HealthBar</scope><name>Initialize</name></member>
+      <member refid="class_tile_engine_1_1_health_bar_1a2db74840eda227576a54ea6ae028ace0" prot="public" virt="non-virtual"><scope>TileEngine::HealthBar</scope><name>LoadContent</name></member>
+      <member refid="class_tile_engine_1_1_health_bar_1a76718f7be9c52a6f7461d52aa894aa16" prot="private" virt="non-virtual"><scope>TileEngine::HealthBar</scope><name>position</name></member>
+      <member refid="class_tile_engine_1_1_health_bar_1ae6c64478ab48d6260e744d72bf8d1194" prot="private" virt="non-virtual"><scope>TileEngine::HealthBar</scope><name>rectangle</name></member>
+      <member refid="class_tile_engine_1_1_health_bar_1a576f39095dab553b96b1ccae8b9bc2b1" prot="private" virt="non-virtual"><scope>TileEngine::HealthBar</scope><name>texture</name></member>
+      <member refid="class_tile_engine_1_1_health_bar_1aebdebca44224bfee94fa8dee33b0f2ac" prot="public" virt="non-virtual"><scope>TileEngine::HealthBar</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

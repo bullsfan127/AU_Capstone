@@ -266,14 +266,14 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7">
+      <node id="36">
         <label>TileEngine.Interfaces.Drawable</label>
         <link refid="interface_tile_engine_1_1_interfaces_1_1_drawable"/>
       </node>
-      <node id="8">
+      <node id="37">
         <label>TileEngine.Tile</label>
         <link refid="class_tile_engine_1_1_tile"/>
-        <childnode refid="7" relation="public-inheritance">
+        <childnode refid="36" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

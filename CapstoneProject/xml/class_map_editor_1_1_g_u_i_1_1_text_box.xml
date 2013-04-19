@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_map_editor_1_1_g_u_i_1_1_text_box" kind="class" prot="public">
+    <compoundname>MapEditor::GUI::TextBox</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">GameComponent</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_text_box_1a120e3ba6528828ff54903f0876afa7ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MapEditor.GUI.TextBox.TextBox</definition>
+        <argsstring>(Game game)</argsstring>
+        <name>TextBox</name>
+        <param>
+          <type>Game</type>
+          <declname>game</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TextBox.cs" line="22" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TextBox.cs" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_text_box_1a79f42e8fc61f850782dea33ee87b2b82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.GUI.TextBox.Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+<para>Allows the game component to perform any initialization it needs to before starting to run. This is where it can query for any required services and load content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TextBox.cs" line="31" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TextBox.cs" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_text_box_1adbb8b13f8e0df7fe655d4b8e495f723c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.GUI.TextBox.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Allows the game component to update itself. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provides a snapshot of timing values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TextBox.cs" line="42" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TextBox.cs" bodystart="41" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is a game component that implements IUpdateable. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="267">
+        <label>MapEditor.GUI.TextBox</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_text_box"/>
+        <childnode refid="268" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="268">
+        <label>Microsoft::Xna::Framework::GameComponent</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="269">
+        <label>MapEditor.GUI.TextBox</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_text_box"/>
+        <childnode refid="270" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="270">
+        <label>Microsoft::Xna::Framework::GameComponent</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TextBox.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/TextBox.cs" bodystart="18" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_text_box_1a79f42e8fc61f850782dea33ee87b2b82" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TextBox</scope><name>Initialize</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_text_box_1a120e3ba6528828ff54903f0876afa7ab" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TextBox</scope><name>TextBox</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_text_box_1adbb8b13f8e0df7fe655d4b8e495f723c" prot="public" virt="non-virtual"><scope>MapEditor::GUI::TextBox</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

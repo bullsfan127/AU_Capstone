@@ -3,11 +3,111 @@
   <compounddef id="namespace_capstone_project" kind="namespace">
     <compoundname>CapstoneProject</compoundname>
     <innerclass refid="class_capstone_project_1_1_game1" prot="public">CapstoneProject::Game1</innerclass>
+    <innerclass refid="class_capstone_project_1_1_image_button" prot="public">CapstoneProject::ImageButton</innerclass>
+    <innerclass refid="class_capstone_project_1_1_main_button" prot="public">CapstoneProject::MainButton</innerclass>
+    <innerclass refid="class_capstone_project_1_1_main_save_keys" prot="public">CapstoneProject::MainSaveKeys</innerclass>
+    <innerclass refid="class_capstone_project_1_1_main_settings" prot="public">CapstoneProject::MainSettings</innerclass>
+    <innerclass refid="class_capstone_project_1_1_move_button" prot="package">CapstoneProject::MoveButton</innerclass>
+    <innerclass refid="class_capstone_project_1_1_save_keys" prot="public">CapstoneProject::SaveKeys</innerclass>
+    <innerclass refid="class_capstone_project_1_1_settings" prot="public">CapstoneProject::Settings</innerclass>
+    <innerclass refid="class_capstone_project_1_1_sound_manager" prot="public">CapstoneProject::SoundManager</innerclass>
     <innerclass refid="class_capstone_project_1_1_f_p_s___counter" prot="public">CapstoneProject::FPS_Counter</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65a" prot="public" static="no">
+        <name>GAMESTATE</name>
+        <enumvalue id="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aa3287971e79b4dca11067ed287847c1e6" prot="public">
+          <name>MAINMENU</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aa6a216efc529825c60a4a4c0bc99ad77f" prot="public">
+          <name>PLAY</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aa291554596c183e837f0a6bec3767c891" prot="public">
+          <name>PAUSE</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aaa42b2fb0e720a080e79a92f4ca97d927" prot="public">
+          <name>EXIT</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aaed6f7aca7887a927b9ed3d62aa347a86" prot="public">
+          <name>SETTINGS</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aa04cf4d1aa6ae890ca4e07c842bf98a8f" prot="public">
+          <name>NEWGAME</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aa2f453cfe638e57e27bb0c9512436111e" prot="public">
+          <name>CONTINUE</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aaff96886a2c7da8e97587f26c55da5391" prot="public">
+          <name>MAINSETTINGS</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aa460a15550ea23319d2740089a5d66022" prot="public">
+          <name>STORY</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_capstone_project_1ae42475e6639d064f190719fec5cba65aaf5cf47ab06d0d98b0d16d10c82d87953" prot="public">
+          <name>SAVE</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="22"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Game1.cs" line="24"/>
   </compounddef>
 </doxygen>

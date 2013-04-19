@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dir_bd7823176489305359ae3496ffdbb35b" kind="dir">
+    <compoundname>GUI/Interfaces</compoundname>
+    <innerfile refid="_g_component_8cs">GComponent.cs</innerfile>
+    <innerfile refid="_i_x_button_8cs">IXButton.cs</innerfile>
+    <innerfile refid="_i_x_panel_8cs">IXPanel.cs</innerfile>
+    <innerfile refid="_i_x_text_field_8cs">IXTextField.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/Interfaces/"/>
+  </compounddef>
+</doxygen>

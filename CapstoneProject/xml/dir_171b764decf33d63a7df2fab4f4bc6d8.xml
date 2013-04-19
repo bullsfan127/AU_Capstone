@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dir_171b764decf33d63a7df2fab4f4bc6d8" kind="dir">
+    <compoundname>GUI</compoundname>
+    <innerdir refid="dir_73dd58913af9b97b56768b2e39d8a28a">GUI/Controls</innerdir>
+    <innerdir refid="dir_bd7823176489305359ae3496ffdbb35b">GUI/Interfaces</innerdir>
+    <innerdir refid="dir_9c8cf6a51dc0e8a1681e0b901e3d4b7e">GUI/Properties</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/GUI/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_map_editor_1_1_map_editor_main" kind="class" prot="public">
+    <compoundname>MapEditor::MapEditorMain</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Game</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_map_editor_1_1_map_editor_main_1a1912e42052c99335410baf28cfe1af5d" prot="private" static="no" mutable="no">
+        <type>GraphicsDeviceManager</type>
+        <definition>GraphicsDeviceManager MapEditor.MapEditorMain.graphics</definition>
+        <argsstring></argsstring>
+        <name>graphics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="23" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_map_editor_main_1af6aa3b7bcb7b94a482eedbabc418c799" prot="private" static="no" mutable="no">
+        <type>SpriteBatch</type>
+        <definition>SpriteBatch MapEditor.MapEditorMain.spriteBatch</definition>
+        <argsstring></argsstring>
+        <name>spriteBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_map_editor_main_1a9558ad59396523333cdcd54aa676fb37" prot="private" static="no" mutable="no">
+        <type><ref refid="class_map_editor_1_1_g_u_i_1_1_map_window" kindref="compound">MapWindow</ref></type>
+        <definition>MapWindow MapEditor.MapEditorMain.window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+<para>The window the map is contained in. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_map_editor_main_1a60c5c7cc37cf3b3437410539602d3693" prot="private" static="no" mutable="no">
+        <type><ref refid="class_g_u_i_1_1_controls_1_1_x_panel" kindref="compound">XPanel</ref></type>
+        <definition>XPanel MapEditor.MapEditorMain.TileSelectorPanel</definition>
+        <argsstring></argsstring>
+        <name>TileSelectorPanel</name>
+        <briefdescription>
+<para>Tile Selector panel </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_map_editor_main_1aa88a87269f39fe44ad8da5e969287e3e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_map_editor_1_1_g_u_i_1_1_tile_selector" kindref="compound">TileSelector</ref></type>
+        <definition>TileSelector MapEditor.MapEditorMain.tileSelector</definition>
+        <argsstring></argsstring>
+        <name>tileSelector</name>
+        <briefdescription>
+<para>Object that handles all the tile management </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_map_editor_main_1a6863a2e2411daf5183775bc0e79ca5f4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_tile_sheet" kindref="compound">TileSheet</ref></type>
+        <definition>TileSheet MapEditor.MapEditorMain.sheets</definition>
+        <argsstring></argsstring>
+        <name>sheets</name>
+        <briefdescription>
+<para>Tilesheet the tiles are pulled off of. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="46" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_map_editor_main_1a9a072fb0c47766630a7b001caeeb70c4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_g_u_i_1_1_controls_1_1_x_panel" kindref="compound">XPanel</ref></type>
+        <definition>XPanel MapEditor.MapEditorMain.LayerSelectionPanel</definition>
+        <argsstring></argsstring>
+        <name>LayerSelectionPanel</name>
+        <briefdescription>
+<para>Layer selection </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="51" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_map_editor_main_1a773e59b0c8465668b6e926871e384dfb" prot="private" static="no" mutable="no">
+        <type><ref refid="class_map_editor_1_1_g_u_i_1_1_save_button" kindref="compound">SaveButton</ref></type>
+        <definition>SaveButton MapEditor.MapEditorMain.saveButton</definition>
+        <argsstring></argsstring>
+        <name>saveButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="53" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_map_editor_main_1a8464032fffb987da5ec0867e005ad077" prot="private" static="no" mutable="no">
+        <type><ref refid="class_map_editor_1_1_g_u_i_1_1_reset_button" kindref="compound">ResetButton</ref></type>
+        <definition>ResetButton MapEditor.MapEditorMain.resetButton</definition>
+        <argsstring></argsstring>
+        <name>resetButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="54" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_map_editor_1_1_map_editor_main_1acf7a44e800f0d06c6e4399ec472b5e66" prot="public" static="yes" mutable="no">
+        <type>ContentManager</type>
+        <definition>ContentManager MapEditor.MapEditorMain.content</definition>
+        <argsstring></argsstring>
+        <name>content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_map_editor_1_1_map_editor_main_1a3568621a9ee4121d9b31bbf3d52f4a4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MapEditor.MapEditorMain.MapEditorMain</definition>
+        <argsstring>()</argsstring>
+        <name>MapEditorMain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="57" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="56" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_map_editor_1_1_map_editor_main_1a8ff023f4b2a7af33033958bfa6a30076" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.MapEditorMain.Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+<para>Allows the game to perform any initialization it needs to before starting to run. This is where it can query for any required services and load any non-graphic related content. Calling base.Initialize will enumerate through any components and initialize them as well. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="74" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="73" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_map_editor_main_1af4e520a78176b4f739101b32ec94f03f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.MapEditorMain.LoadContent</definition>
+        <argsstring>()</argsstring>
+        <name>LoadContent</name>
+        <briefdescription>
+<para>LoadContent will be called once per game and is the place to load all of your content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="86" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="85" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_map_editor_main_1a2c5dc71ff9bba9bc34952e45c1133fa8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.MapEditorMain.UnloadContent</definition>
+        <argsstring>()</argsstring>
+        <name>UnloadContent</name>
+        <briefdescription>
+<para>UnloadContent will be called once per game and is the place to unload all content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="122" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_map_editor_main_1a0142b7f4760125bda14d3e0d2a910ccc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.MapEditorMain.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Allows the game to run logic such as updating the world, checking for collisions, gathering input, and playing audio. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provides a snapshot of timing values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="132" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="131" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_map_editor_main_1a0d2e77ea986a27233e8c7fd4c4e63a55" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.MapEditorMain.Draw</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>This is called when the game should draw itself. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provides a snapshot of timing values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="153" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="152" bodyend="164"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the main type for your game </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="160">
+        <label>Microsoft::Xna::Framework::Game</label>
+      </node>
+      <node id="159">
+        <label>MapEditor.MapEditorMain</label>
+        <link refid="class_map_editor_1_1_map_editor_main"/>
+        <childnode refid="160" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="162">
+        <label>Microsoft::Xna::Framework::Game</label>
+      </node>
+      <node id="161">
+        <label>MapEditor.MapEditorMain</label>
+        <link refid="class_map_editor_1_1_map_editor_main"/>
+        <childnode refid="162" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" line="22" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/MapEditor.cs" bodystart="21" bodyend="165"/>
+    <listofallmembers>
+      <member refid="class_map_editor_1_1_map_editor_main_1acf7a44e800f0d06c6e4399ec472b5e66" prot="public" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>content</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1a0d2e77ea986a27233e8c7fd4c4e63a55" prot="protected" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>Draw</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1a1912e42052c99335410baf28cfe1af5d" prot="private" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>graphics</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1a8ff023f4b2a7af33033958bfa6a30076" prot="protected" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>Initialize</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1a9a072fb0c47766630a7b001caeeb70c4" prot="private" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>LayerSelectionPanel</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1af4e520a78176b4f739101b32ec94f03f" prot="protected" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>LoadContent</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1a3568621a9ee4121d9b31bbf3d52f4a4b" prot="public" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>MapEditorMain</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1a8464032fffb987da5ec0867e005ad077" prot="private" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>resetButton</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1a773e59b0c8465668b6e926871e384dfb" prot="private" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>saveButton</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1a6863a2e2411daf5183775bc0e79ca5f4" prot="private" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>sheets</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1af6aa3b7bcb7b94a482eedbabc418c799" prot="private" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>spriteBatch</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1aa88a87269f39fe44ad8da5e969287e3e" prot="private" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>tileSelector</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1a60c5c7cc37cf3b3437410539602d3693" prot="private" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>TileSelectorPanel</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1a2c5dc71ff9bba9bc34952e45c1133fa8" prot="protected" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>UnloadContent</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1a0142b7f4760125bda14d3e0d2a910ccc" prot="protected" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>Update</name></member>
+      <member refid="class_map_editor_1_1_map_editor_main_1a9558ad59396523333cdcd54aa676fb37" prot="private" virt="non-virtual"><scope>MapEditor::MapEditorMain</scope><name>window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

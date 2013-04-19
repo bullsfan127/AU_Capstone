@@ -3,21 +3,186 @@
   <compounddef id="class_tile_engine_1_1_item" kind="class" prot="public">
     <compoundname>TileEngine::Item</compoundname>
     <basecompoundref refid="class_tile_engine_1_1_avatar" prot="public" virt="non-virtual">TileEngine.Avatar</basecompoundref>
-      <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="class_tile_engine_1_1_item_1a327560f673cd2cd085f60d10dcee0a9e" prot="public" static="no" mutable="no">
-        <type><ref refid="class_tile_engine_1_1_animation" kindref="compound">Animation</ref></type>
-        <definition>Animation TileEngine.Item.ItemAnimation</definition>
+    <derivedcompoundref refid="class_tile_engine_1_1_armor" prot="public" virt="non-virtual">TileEngine.Armor</derivedcompoundref>
+    <derivedcompoundref refid="class_tile_engine_1_1_coin" prot="public" virt="non-virtual">TileEngine.Coin</derivedcompoundref>
+    <derivedcompoundref refid="class_tile_engine_1_1_potion" prot="public" virt="non-virtual">TileEngine.Potion</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_item_1a6341230ee61583742e6222d76f05090e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Item._spriteWidth</definition>
         <argsstring></argsstring>
-        <name>ItemAnimation</name>
+        <name>_spriteWidth</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" bodystart="18" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="18" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_item_1ae34109abc7dbd43b5182bfc16208a844" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="class_tile_engine_1_1_item_1aa3fa85fe0a8fde1f19d36b4a72da0d57" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Item._spriteHeight</definition>
+        <argsstring></argsstring>
+        <name>_spriteHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_item_1ae5c41cafac38a4158044522b7eef238a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Item._spriteFrame</definition>
+        <argsstring></argsstring>
+        <name>_spriteFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_item_1aa6875d7ed75dd318c3108240f3febdb7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TileEngine.Item._active</definition>
+        <argsstring></argsstring>
+        <name>_active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_item_1aae6c57c0448fc77945ea5750d2fe4c68" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Item._weapon</definition>
+        <argsstring></argsstring>
+        <name>_weapon</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="53" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_item_1acd0e146badb168a2e0d45238a707540b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Item._score</definition>
+        <argsstring></argsstring>
+        <name>_score</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="62" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_item_1a5815b964d54b00ffe306df2dc611c760" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Item._health</definition>
+        <argsstring></argsstring>
+        <name>_health</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="71" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_item_1a8447e4388e97e99330e3471a0a73a6b5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TileEngine.Item._armor</definition>
+        <argsstring></argsstring>
+        <name>_armor</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="80" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_item_1ad6d97185544cacbcf7a1cbc1d18d6f45" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TileEngine.Item._scale</definition>
+        <argsstring></argsstring>
+        <name>_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="88" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_item_1a3348e5744a09476b66739e8bc51b5baf" prot="private" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D TileEngine.Item.SpriteStrip</definition>
+        <argsstring></argsstring>
+        <name>SpriteStrip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="97" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_tile_engine_1_1_item_1a1c339bc4ed79c704a632a12915953ea3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Item.SpriteWidth</definition>
+        <argsstring></argsstring>
+        <name>SpriteWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_item_1a1b1424c2b05dec840618e3eec516be6c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Item.SpriteHeight</definition>
+        <argsstring></argsstring>
+        <name>SpriteHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="33" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_item_1a5dba96ad4193fd83559566237ab88c9e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Item.SpriteFrame</definition>
+        <argsstring></argsstring>
+        <name>SpriteFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="42" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_item_1ae34109abc7dbd43b5182bfc16208a844" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>bool</type>
         <definition>bool TileEngine.Item.Active</definition>
         <argsstring></argsstring>
@@ -28,7 +193,72 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" bodystart="21" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="51" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_item_1a3823ba82a75de5a06bd1ccce7d59edbb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Item.Weapon</definition>
+        <argsstring></argsstring>
+        <name>Weapon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="59" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_item_1a03b8176fc292277aa82567d18d1aa4c9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Item.Score</definition>
+        <argsstring></argsstring>
+        <name>Score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="68" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_item_1ac7b51679c509cb597525fb158dbcbdbf" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Item.Health</definition>
+        <argsstring></argsstring>
+        <name>Health</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="77" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_item_1a319f4895769341dac9c70bbc4e8a60a6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool TileEngine.Item.Armor</definition>
+        <argsstring></argsstring>
+        <name>Armor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="86" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_item_1a11ab5036a094b10b0d8c279653b6819f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>float</type>
+        <definition>float TileEngine.Item.Scale</definition>
+        <argsstring></argsstring>
+        <name>Scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="94" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="91" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -43,13 +273,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" bodystart="23" bodyend="25"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="99" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="99" bodyend="99"/>
       </memberdef>
-      <memberdef kind="function" id="class_tile_engine_1_1_item_1a16512fae01e1bfb589811d4f05e4f1ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void TileEngine.Item.Initialize</definition>
+      <memberdef kind="function" id="class_tile_engine_1_1_item_1afce5a6dff00666aa8fd425a431562403" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TileEngine.Item.Initialize</definition>
         <argsstring>(Texture2D spriteStrip, Vector2 position)</argsstring>
         <name>Initialize</name>
+        <reimplements refid="class_tile_engine_1_1_avatar_1a565a17aa3aae06ca72673956919ebb97">Initialize</reimplements>
         <param>
           <type>Texture2D</type>
           <declname>spriteStrip</declname>
@@ -64,25 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" bodystart="27" bodyend="36"/>
-      </memberdef>
-      <memberdef kind="function" id="class_tile_engine_1_1_item_1a69ec70858dafdad165adb7cbcf55ceb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
-        <type>override void</type>
-        <definition>override void TileEngine.Item.Update</definition>
-        <argsstring>(GameTime gameTime)</argsstring>
-        <name>Update</name>
-        <reimplements refid="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059">Update</reimplements>
-        <param>
-          <type>GameTime</type>
-          <declname>gameTime</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" line="39" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" bodystart="38" bodyend="44"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="102" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="101" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_item_1a8371497aa849c48c146ffe16d10c8e61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -104,20 +317,49 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" line="47" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" bodystart="46" bodyend="52"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="111" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="110" bodyend="118"/>
       </memberdef>
-      <memberdef kind="function" id="class_tile_engine_1_1_item_1a15a97d0bc2d0733ed3ead1cc5dd6bc86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
-        <type>void</type>
-        <definition>virtual void TileEngine.Item.doAction</definition>
+      <memberdef kind="function" id="class_tile_engine_1_1_item_1aa8aafecc151b7ee3db4857855125eb87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int TileEngine.Item.getHealth</definition>
         <argsstring>()</argsstring>
-        <name>doAction</name>
+        <name>getHealth</name>
         <briefdescription>
-        </briefdescription>
+<para>Get the amount of health this item restores </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para>Health increased</para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" line="55" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" bodystart="54" bodyend="57"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="125" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_item_1a504b5c1e8302e1bedad84a0d5ad406b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int TileEngine.Item.getScore</definition>
+        <argsstring>()</argsstring>
+        <name>getScore</name>
+        <briefdescription>
+<para>Get the amount of score this item increases </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Score increased</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="134" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_item_1ad4b45cf501d1b3eb0b5f35d6619b8ed4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TileEngine.Item.getArmor</definition>
+        <argsstring>()</argsstring>
+        <name>getArmor</name>
+        <briefdescription>
+<para>Get whether this item is armor </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True for armor</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="143" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="142" bodyend="145"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -125,48 +367,85 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="18">
-        <label>TileEngine.Item</label>
-        <link refid="class_tile_engine_1_1_item"/>
-        <childnode refid="19" relation="public-inheritance">
+      <node id="98">
+        <label>TileEngine.Armor</label>
+        <link refid="class_tile_engine_1_1_armor"/>
+        <childnode refid="96" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="19">
+      <node id="99">
+        <label>TileEngine.Coin</label>
+        <link refid="class_tile_engine_1_1_coin"/>
+        <childnode refid="96" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>TileEngine.Potion</label>
+        <link refid="class_tile_engine_1_1_potion"/>
+        <childnode refid="96" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>TileEngine.Item</label>
+        <link refid="class_tile_engine_1_1_item"/>
+        <childnode refid="97" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="97">
         <label>Avatar</label>
         <link refid="class_tile_engine_1_1_avatar"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="22">
-        <label>TileEngine.Animation</label>
-        <link refid="class_tile_engine_1_1_animation"/>
-      </node>
-      <node id="20">
+      <node id="101">
         <label>TileEngine.Item</label>
         <link refid="class_tile_engine_1_1_item"/>
-        <childnode refid="21" relation="public-inheritance">
-        </childnode>
-        <childnode refid="22" relation="usage">
-          <edgelabel>ItemAnimation</edgelabel>
+        <childnode refid="102" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="21">
+      <node id="102">
         <label>Avatar</label>
         <link refid="class_tile_engine_1_1_avatar"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Item.cs" bodystart="15" bodyend="58"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Item.cs" bodystart="15" bodyend="146"/>
     <listofallmembers>
+      <member refid="class_tile_engine_1_1_item_1aa6875d7ed75dd318c3108240f3febdb7" prot="private" virt="non-virtual"><scope>TileEngine::Item</scope><name>_active</name></member>
+      <member refid="class_tile_engine_1_1_item_1a8447e4388e97e99330e3471a0a73a6b5" prot="private" virt="non-virtual"><scope>TileEngine::Item</scope><name>_armor</name></member>
+      <member refid="class_tile_engine_1_1_item_1a5815b964d54b00ffe306df2dc611c760" prot="private" virt="non-virtual"><scope>TileEngine::Item</scope><name>_health</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ac438acf71aa12a4ab41e4e473033b967" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>_offset</name></member>
+      <member refid="class_tile_engine_1_1_item_1ad6d97185544cacbcf7a1cbc1d18d6f45" prot="private" virt="non-virtual"><scope>TileEngine::Item</scope><name>_scale</name></member>
+      <member refid="class_tile_engine_1_1_item_1acd0e146badb168a2e0d45238a707540b" prot="private" virt="non-virtual"><scope>TileEngine::Item</scope><name>_score</name></member>
+      <member refid="class_tile_engine_1_1_item_1ae5c41cafac38a4158044522b7eef238a" prot="private" virt="non-virtual"><scope>TileEngine::Item</scope><name>_spriteFrame</name></member>
+      <member refid="class_tile_engine_1_1_item_1aa3fa85fe0a8fde1f19d36b4a72da0d57" prot="private" virt="non-virtual"><scope>TileEngine::Item</scope><name>_spriteHeight</name></member>
+      <member refid="class_tile_engine_1_1_item_1a6341230ee61583742e6222d76f05090e" prot="private" virt="non-virtual"><scope>TileEngine::Item</scope><name>_spriteWidth</name></member>
+      <member refid="class_tile_engine_1_1_item_1aae6c57c0448fc77945ea5750d2fe4c68" prot="private" virt="non-virtual"><scope>TileEngine::Item</scope><name>_weapon</name></member>
       <member refid="class_tile_engine_1_1_item_1ae34109abc7dbd43b5182bfc16208a844" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Active</name></member>
+      <member refid="class_tile_engine_1_1_item_1a319f4895769341dac9c70bbc4e8a60a6" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Armor</name></member>
       <member refid="class_tile_engine_1_1_avatar_1a7c6118c83ba18eeb197f04412130f3b5" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Avatar</name></member>
       <member refid="class_tile_engine_1_1_avatar_1a9d97952e8a9e1b347c841cfbe614b60b" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Avatar</name></member>
-      <member refid="class_tile_engine_1_1_item_1a15a97d0bc2d0733ed3ead1cc5dd6bc86" prot="public" virt="virtual"><scope>TileEngine::Item</scope><name>doAction</name></member>
       <member refid="class_tile_engine_1_1_item_1a8371497aa849c48c146ffe16d10c8e61" prot="public" virt="virtual"><scope>TileEngine::Item</scope><name>Draw</name></member>
-      <member refid="class_tile_engine_1_1_item_1a16512fae01e1bfb589811d4f05e4f1ca" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Initialize</name></member>
+      <member refid="class_tile_engine_1_1_item_1ad4b45cf501d1b3eb0b5f35d6619b8ed4" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>getArmor</name></member>
+      <member refid="class_tile_engine_1_1_item_1aa8aafecc151b7ee3db4857855125eb87" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>getHealth</name></member>
+      <member refid="class_tile_engine_1_1_item_1a504b5c1e8302e1bedad84a0d5ad406b6" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>getScore</name></member>
+      <member refid="class_tile_engine_1_1_item_1ac7b51679c509cb597525fb158dbcbdbf" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Health</name></member>
+      <member refid="class_tile_engine_1_1_item_1afce5a6dff00666aa8fd425a431562403" prot="public" virt="virtual"><scope>TileEngine::Item</scope><name>Initialize</name></member>
       <member refid="class_tile_engine_1_1_item_1af758c77c4938c0aea63ad41397eac0e2" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Item</name></member>
-      <member refid="class_tile_engine_1_1_item_1a327560f673cd2cd085f60d10dcee0a9e" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>ItemAnimation</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a88d7ebb026fba691d674379c3dd55b67" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Offset</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ad57bccaabfea9a571f45e923c8f8fcea" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>OX</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ae93d9e869211bd685e335aadf0dc5f77" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>OY</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a0eef17049780a5aa303977444d0b5e9d" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>PlayerAnimation</name></member>
       <member refid="class_tile_engine_1_1_avatar_1a9c6796fe77c217cfe59d8d1bf96397d1" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Position</name></member>
-      <member refid="class_tile_engine_1_1_item_1a69ec70858dafdad165adb7cbcf55ceb7" prot="public" virt="virtual"><scope>TileEngine::Item</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_item_1a11ab5036a094b10b0d8c279653b6819f" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Scale</name></member>
+      <member refid="class_tile_engine_1_1_item_1a03b8176fc292277aa82567d18d1aa4c9" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Score</name></member>
+      <member refid="class_tile_engine_1_1_item_1a5dba96ad4193fd83559566237ab88c9e" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>SpriteFrame</name></member>
+      <member refid="class_tile_engine_1_1_item_1a1b1424c2b05dec840618e3eec516be6c" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>SpriteHeight</name></member>
+      <member refid="class_tile_engine_1_1_item_1a3348e5744a09476b66739e8bc51b5baf" prot="private" virt="non-virtual"><scope>TileEngine::Item</scope><name>SpriteStrip</name></member>
+      <member refid="class_tile_engine_1_1_item_1a1c339bc4ed79c704a632a12915953ea3" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>SpriteWidth</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059" prot="public" virt="virtual"><scope>TileEngine::Item</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_item_1a3823ba82a75de5a06bd1ccce7d59edbb" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Weapon</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afb369b75dc84f09d4c98e6f02dcb1cbe" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>X</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a5780c90b61ef36f0fce907fb8ec1c396" prot="public" virt="non-virtual"><scope>TileEngine::Item</scope><name>Y</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_armor" kind="class" prot="public">
+    <compoundname>TileEngine::Armor</compoundname>
+    <basecompoundref refid="class_tile_engine_1_1_item" prot="public" virt="non-virtual">TileEngine.Item</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_armor_1a72b77f57580d50f50b1d52cca307cc85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.Armor.Armor</definition>
+        <argsstring>()</argsstring>
+        <name>Armor</name>
+        <briefdescription>
+<para><ref refid="class_tile_engine_1_1_armor" kindref="compound">Armor</ref> class - Adds armor to the player (which increases health by 1 indirectly) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Armor.cs" line="14" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Armor.cs" bodystart="13" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>TileEngine.Armor</label>
+        <link refid="class_tile_engine_1_1_armor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Item</label>
+        <link refid="class_tile_engine_1_1_item"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Avatar</label>
+        <link refid="class_tile_engine_1_1_avatar"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>TileEngine.Armor</label>
+        <link refid="class_tile_engine_1_1_armor"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Item</label>
+        <link refid="class_tile_engine_1_1_item"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Avatar</label>
+        <link refid="class_tile_engine_1_1_avatar"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Armor.cs" line="9" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Armor.cs" bodystart="8" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_avatar_1ac438acf71aa12a4ab41e4e473033b967" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>_offset</name></member>
+      <member refid="class_tile_engine_1_1_item_1ae34109abc7dbd43b5182bfc16208a844" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>Active</name></member>
+      <member refid="class_tile_engine_1_1_armor_1a72b77f57580d50f50b1d52cca307cc85" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>Armor</name></member>
+      <member refid="class_tile_engine_1_1_item_1a319f4895769341dac9c70bbc4e8a60a6" prot="public" virt="non-virtual" ambiguityscope="TileEngine::Item."><scope>TileEngine::Armor</scope><name>Armor</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a7c6118c83ba18eeb197f04412130f3b5" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>Avatar</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a9d97952e8a9e1b347c841cfbe614b60b" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>Avatar</name></member>
+      <member refid="class_tile_engine_1_1_item_1a8371497aa849c48c146ffe16d10c8e61" prot="public" virt="virtual"><scope>TileEngine::Armor</scope><name>Draw</name></member>
+      <member refid="class_tile_engine_1_1_item_1ad4b45cf501d1b3eb0b5f35d6619b8ed4" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>getArmor</name></member>
+      <member refid="class_tile_engine_1_1_item_1aa8aafecc151b7ee3db4857855125eb87" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>getHealth</name></member>
+      <member refid="class_tile_engine_1_1_item_1a504b5c1e8302e1bedad84a0d5ad406b6" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>getScore</name></member>
+      <member refid="class_tile_engine_1_1_item_1ac7b51679c509cb597525fb158dbcbdbf" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>Health</name></member>
+      <member refid="class_tile_engine_1_1_item_1afce5a6dff00666aa8fd425a431562403" prot="public" virt="virtual"><scope>TileEngine::Armor</scope><name>Initialize</name></member>
+      <member refid="class_tile_engine_1_1_item_1af758c77c4938c0aea63ad41397eac0e2" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>Item</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a88d7ebb026fba691d674379c3dd55b67" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>Offset</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ad57bccaabfea9a571f45e923c8f8fcea" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>OX</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ae93d9e869211bd685e335aadf0dc5f77" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>OY</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a0eef17049780a5aa303977444d0b5e9d" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>PlayerAnimation</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a9c6796fe77c217cfe59d8d1bf96397d1" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>Position</name></member>
+      <member refid="class_tile_engine_1_1_item_1a11ab5036a094b10b0d8c279653b6819f" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>Scale</name></member>
+      <member refid="class_tile_engine_1_1_item_1a03b8176fc292277aa82567d18d1aa4c9" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>Score</name></member>
+      <member refid="class_tile_engine_1_1_item_1a5dba96ad4193fd83559566237ab88c9e" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>SpriteFrame</name></member>
+      <member refid="class_tile_engine_1_1_item_1a1b1424c2b05dec840618e3eec516be6c" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>SpriteHeight</name></member>
+      <member refid="class_tile_engine_1_1_item_1a1c339bc4ed79c704a632a12915953ea3" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>SpriteWidth</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059" prot="public" virt="virtual"><scope>TileEngine::Armor</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_item_1a3823ba82a75de5a06bd1ccce7d59edbb" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>Weapon</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afb369b75dc84f09d4c98e6f02dcb1cbe" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>X</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a5780c90b61ef36f0fce907fb8ec1c396" prot="public" virt="non-virtual"><scope>TileEngine::Armor</scope><name>Y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

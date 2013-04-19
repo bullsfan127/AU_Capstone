@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_weapon" kind="class" prot="public">
+    <compoundname>TileEngine::Weapon</compoundname>
+    <basecompoundref refid="class_tile_engine_1_1_avatar" prot="public" virt="non-virtual">TileEngine.Avatar</basecompoundref>
+    <derivedcompoundref refid="class_tile_engine_1_1_boomerang" prot="public" virt="non-virtual">TileEngine.Boomerang</derivedcompoundref>
+    <derivedcompoundref refid="class_tile_engine_1_1_sword" prot="public" virt="non-virtual">TileEngine.Sword</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_weapon_1adf2a6332bb00fff75df62a6b7bfec994" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Weapon._maxDamage</definition>
+        <argsstring></argsstring>
+        <name>_maxDamage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_weapon_1a2dce2457cdfeaefd26ac8dc5c884dfb7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Weapon._spriteWidth</definition>
+        <argsstring></argsstring>
+        <name>_spriteWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_weapon_1a1f3a2286f61a3d0bac6878638326108e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Weapon._spriteHeight</definition>
+        <argsstring></argsstring>
+        <name>_spriteHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="39" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_weapon_1aaee0cc659a89479bb7d121c024ffa82c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Weapon._spriteFrame</definition>
+        <argsstring></argsstring>
+        <name>_spriteFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="48" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_weapon_1ab485eaa8c4f20a0d0c7f49246dc44541" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TileEngine.Weapon._scale</definition>
+        <argsstring></argsstring>
+        <name>_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="56" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_weapon_1a09ed62559dbf11705a587862acf7f2f5" prot="private" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D TileEngine.Weapon.SpriteStrip</definition>
+        <argsstring></argsstring>
+        <name>SpriteStrip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="65" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_weapon_1af995f2592dc4b77aa6396bf7d75e2847" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Weapon._cropStart</definition>
+        <argsstring></argsstring>
+        <name>_cropStart</name>
+        <initializer>= 64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="67" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_weapon_1a1a03ec94ffd3752bcb4bfe21a5b2abba" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Weapon._cropPos</definition>
+        <argsstring></argsstring>
+        <name>_cropPos</name>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="68" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_tile_engine_1_1_weapon_1a1877496771f54e4a6c42d1fc44ab34b8" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Weapon.MaxDamage</definition>
+        <argsstring></argsstring>
+        <name>MaxDamage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_weapon_1ab1b62a6983016f8db4447a3735bed5d3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Weapon.SpriteWidth</definition>
+        <argsstring></argsstring>
+        <name>SpriteWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_weapon_1a402f84b28c75df593a4b9c0456603939" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Weapon.SpriteHeight</definition>
+        <argsstring></argsstring>
+        <name>SpriteHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_weapon_1a9a3ca65c7afde405eabade4e177e8c25" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Weapon.SpriteFrame</definition>
+        <argsstring></argsstring>
+        <name>SpriteFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="54" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_weapon_1a6c34e2806ac9208d6dacca5c88449047" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>float</type>
+        <definition>float TileEngine.Weapon.Scale</definition>
+        <argsstring></argsstring>
+        <name>Scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="62" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_weapon_1a2c10ddf032fbfc2b42e06db57afc4314" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TileEngine.Weapon.Initialize</definition>
+        <argsstring>(Texture2D spriteStrip, Vector2 position)</argsstring>
+        <name>Initialize</name>
+        <reimplements refid="class_tile_engine_1_1_avatar_1a565a17aa3aae06ca72673956919ebb97">Initialize</reimplements>
+        <param>
+          <type>Texture2D</type>
+          <declname>spriteStrip</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="71" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="70" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_weapon_1a35b6c2931907eecd63f36c9831afcf54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Weapon.Update</definition>
+        <argsstring>(GameTime gameTime, Vector2 Position)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>Position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="83" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="82" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_weapon_1a43797e71ed10bb9f6f87b49373328b61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TileEngine.Weapon.Draw</definition>
+        <argsstring>(SpriteBatch spriteBatch, GameTime gameTime)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="class_tile_engine_1_1_avatar_1a7d6106cb2e838e335d7b285d51312183">Draw</reimplements>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="94" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="93" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_weapon_1a94c5de7a63f2bd222dbc0a0a2b5e5da7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int TileEngine.Weapon.getDamage</definition>
+        <argsstring>()</argsstring>
+        <name>getDamage</name>
+        <briefdescription>
+<para>Get the damage of the weapon </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The damage the weapon can do</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="114" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_weapon_1a7c1fa58b379f176e57fdef26670d8cf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Weapon.setDirection</definition>
+        <argsstring>(int d)</argsstring>
+        <name>setDirection</name>
+        <param>
+          <type>int</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="119" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="118" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="290">
+        <label>TileEngine.Boomerang</label>
+        <link refid="class_tile_engine_1_1_boomerang"/>
+        <childnode refid="288" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="288">
+        <label>TileEngine.Weapon</label>
+        <link refid="class_tile_engine_1_1_weapon"/>
+        <childnode refid="289" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="289">
+        <label>Avatar</label>
+        <link refid="class_tile_engine_1_1_avatar"/>
+      </node>
+      <node id="291">
+        <label>TileEngine.Sword</label>
+        <link refid="class_tile_engine_1_1_sword"/>
+        <childnode refid="288" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="292">
+        <label>TileEngine.Weapon</label>
+        <link refid="class_tile_engine_1_1_weapon"/>
+        <childnode refid="293" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="293">
+        <label>Avatar</label>
+        <link refid="class_tile_engine_1_1_avatar"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Weapon.cs" bodystart="15" bodyend="131"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_weapon_1a1a03ec94ffd3752bcb4bfe21a5b2abba" prot="private" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>_cropPos</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1af995f2592dc4b77aa6396bf7d75e2847" prot="private" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>_cropStart</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1adf2a6332bb00fff75df62a6b7bfec994" prot="private" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>_maxDamage</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ac438acf71aa12a4ab41e4e473033b967" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>_offset</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1ab485eaa8c4f20a0d0c7f49246dc44541" prot="private" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>_scale</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1aaee0cc659a89479bb7d121c024ffa82c" prot="private" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>_spriteFrame</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a1f3a2286f61a3d0bac6878638326108e" prot="private" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>_spriteHeight</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a2dce2457cdfeaefd26ac8dc5c884dfb7" prot="private" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>_spriteWidth</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a7c6118c83ba18eeb197f04412130f3b5" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>Avatar</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a9d97952e8a9e1b347c841cfbe614b60b" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>Avatar</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a43797e71ed10bb9f6f87b49373328b61" prot="public" virt="virtual"><scope>TileEngine::Weapon</scope><name>Draw</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a94c5de7a63f2bd222dbc0a0a2b5e5da7" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>getDamage</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a2c10ddf032fbfc2b42e06db57afc4314" prot="public" virt="virtual"><scope>TileEngine::Weapon</scope><name>Initialize</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a1877496771f54e4a6c42d1fc44ab34b8" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>MaxDamage</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a88d7ebb026fba691d674379c3dd55b67" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>Offset</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ad57bccaabfea9a571f45e923c8f8fcea" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>OX</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ae93d9e869211bd685e335aadf0dc5f77" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>OY</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a0eef17049780a5aa303977444d0b5e9d" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>PlayerAnimation</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a9c6796fe77c217cfe59d8d1bf96397d1" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>Position</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a6c34e2806ac9208d6dacca5c88449047" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>Scale</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a7c1fa58b379f176e57fdef26670d8cf3" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>setDirection</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a9a3ca65c7afde405eabade4e177e8c25" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>SpriteFrame</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a402f84b28c75df593a4b9c0456603939" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>SpriteHeight</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a09ed62559dbf11705a587862acf7f2f5" prot="private" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>SpriteStrip</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1ab1b62a6983016f8db4447a3735bed5d3" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>SpriteWidth</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a35b6c2931907eecd63f36c9831afcf54" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059" prot="public" virt="virtual" ambiguityscope="TileEngine::Avatar."><scope>TileEngine::Weapon</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afb369b75dc84f09d4c98e6f02dcb1cbe" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>X</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a5780c90b61ef36f0fce907fb8ec1c396" prot="public" virt="non-virtual"><scope>TileEngine::Weapon</scope><name>Y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

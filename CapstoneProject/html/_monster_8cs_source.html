@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Fat Joe&#39;s Nightmare: TileEngine/Monster.cs Source File</title>
+<title>Fat Joe&#39;s Nightmare: TileEngine/RolePlay/Monster.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('_monster_8cs_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Events</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -118,69 +118,119 @@ $(document).ready(function(){initNavTree('_monster_8cs_source.html','');});
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>TileEngine</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">internal</span> <span class="keyword">class </span>Monster : Avatar</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html">   15</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_tile_engine_1_1_monster.html">Monster</a> : <a class="code" href="class_tile_engine_1_1_avatar.html">Avatar</a></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">// Animation representing the monster</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">public</span> Animation MonsterAnimation;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#a4320d7ffb62c92db4c92c0882e2dfbae">   18</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_tile_engine_1_1_animation.html">Animation</a> <a class="code" href="class_tile_engine_1_1_monster.html#a4320d7ffb62c92db4c92c0882e2dfbae">_monsterAnimation</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">// State of the monster</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> Active;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">// Current health</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> _health;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">// Current health of the monster</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> _health;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> Health</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _health; }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">set</span> { _health = value; }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_tile_engine_1_1_monster.html#aab1854412a7509be407e2487ae02eea5">Health</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#aab1854412a7509be407e2487ae02eea5">   24</a></span>&#160;        {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _health; }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">set</span> { _health = value; }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">// Maximum health</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> _maxHealth;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize(Animation animation, Vector2 position)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            MonsterAnimation = animation;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="comment">// Set starting position of the player</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a> = position;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="comment">// Set the player to be active</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            Active = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Update(GameTime gameTime)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            MonsterAnimation.Position = <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            MonsterAnimation.Update(gameTime);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Draw(SpriteBatch spriteBatch, GameTime gameTime)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            MonsterAnimation.Draw(spriteBatch);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> changeHealth(<span class="keywordtype">int</span> change)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="comment">// Add/subtract the change to the current health</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            this._health += change;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_tile_engine_1_1_monster.html#a64b59c3249ba8f0ae1b1284ea46e2123">MaxHealth</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#a64b59c3249ba8f0ae1b1284ea46e2123">   33</a></span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _maxHealth; }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">set</span> { _maxHealth = value; }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">// Maximum damage</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> _maxDamage;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_tile_engine_1_1_monster.html#a0e97fcf6cf4a9c2602c51cd9620c7017">MaxDamage</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#a0e97fcf6cf4a9c2602c51cd9620c7017">   42</a></span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _maxDamage; }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">set</span> { _maxDamage = value; }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// Total width of the image</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> _spriteWidth;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_tile_engine_1_1_monster.html#a4009a19bba4469153f9255cb3b8418e7">SpriteWidth</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#a4009a19bba4469153f9255cb3b8418e7">   51</a></span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _spriteWidth; }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keyword">set</span> { _spriteWidth = value; }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">// Total height of the image</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> _spriteHeight;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">if</span> (this._health &lt; 0)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                this._health = 0;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_tile_engine_1_1_monster.html#a5f05c4a49816963d9bf2ee0258a37244">SpriteHeight</a></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#a5f05c4a49816963d9bf2ee0258a37244">   60</a></span>&#160;        {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _spriteHeight; }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keyword">set</span> { _spriteHeight = value; }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> getHealth()</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> this._health;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// Number of frames of the image</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> _spriteFrame;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_tile_engine_1_1_monster.html#a9442c1ee75dea7492ea9285d98a27afb">SpriteFrame</a></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#a9442c1ee75dea7492ea9285d98a27afb">   69</a></span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> _spriteFrame; }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keyword">set</span> { _spriteFrame = value; }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#ae22353dd2c5483411b94ca2aaa63bdd1">   74</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_tile_engine_1_1_monster.html#ae22353dd2c5483411b94ca2aaa63bdd1">Monster</a>() { }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#a667e1b992bc63e10adcf435039bfe38f">   76</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_tile_engine_1_1_monster.html#a667e1b992bc63e10adcf435039bfe38f">Initialize</a>(Texture2D spriteStrip, Vector2 position)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="class_tile_engine_1_1_monster.html#a4320d7ffb62c92db4c92c0882e2dfbae">_monsterAnimation</a> = <span class="keyword">new</span> <a class="code" href="class_tile_engine_1_1_animation.html">Animation</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="comment">// Set starting position of the monster</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a> = position;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">// TODO: Need to set correct image/location</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="class_tile_engine_1_1_monster.html#a4320d7ffb62c92db4c92c0882e2dfbae">_monsterAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#ab044968602d5dfa9d8bf83a8aed07ba3" title="Initializes the Animation code ">Initialize</a>(spriteStrip, position, _spriteWidth, _spriteHeight, _spriteFrame, 250, Color.White, 1.0f, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="comment">// Set the monster to be active</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="class_tile_engine_1_1_monster.html#a4320d7ffb62c92db4c92c0882e2dfbae">_monsterAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a428519a2f385fb1eb29ffa3852c5a505">Active</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#afcbe41e10b1315c8c5c9ced2a939c9a4">   90</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_tile_engine_1_1_monster.html#afcbe41e10b1315c8c5c9ced2a939c9a4">Update</a>(GameTime gameTime, Vector2 player, Vector2 offset)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="class_tile_engine_1_1_monster.html#a4320d7ffb62c92db4c92c0882e2dfbae">_monsterAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#ab3b6f9f9a930a9276c8b17f08085e0fa">Position</a> = <a class="code" href="class_tile_engine_1_1_avatar.html#a9c6796fe77c217cfe59d8d1bf96397d1">Position</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="class_tile_engine_1_1_monster.html#a4320d7ffb62c92db4c92c0882e2dfbae">_monsterAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#a2614c6eff471aecefade8b906a489eeb">Update</a>(gameTime);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#a34a816dc4b4dc152f209ac3c882e41d9">   96</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_tile_engine_1_1_monster.html#a34a816dc4b4dc152f209ac3c882e41d9">Draw</a>(SpriteBatch spriteBatch, GameTime gameTime)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="class_tile_engine_1_1_monster.html#a4320d7ffb62c92db4c92c0882e2dfbae">_monsterAnimation</a>.<a class="code" href="class_tile_engine_1_1_animation.html#ab4dd3a8d57cc8de71f8863ff91238eea">Draw</a>(spriteBatch);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            base.Draw(spriteBatch, gameTime);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">        /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">        /// Decrease the health of the monster</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">        /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">        /// &lt;param name=&quot;change&quot;&gt;The number of health to remove&lt;/param&gt;</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#a19b601d087c090e399c502fef0cdbe3f">  106</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_tile_engine_1_1_monster.html#a19b601d087c090e399c502fef0cdbe3f" title="Decrease the health of the monster ">decreaseHealth</a>(<span class="keywordtype">int</span> change)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            this._health -= change;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">        /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">        /// Get the health of the monster</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">        /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">        /// &lt;returns&gt;The current health of the monster&lt;/returns&gt;</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="code" href="class_tile_engine_1_1_monster.html#ae68b6e0b8425e7ebc5931316b5d17221">  115</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_tile_engine_1_1_monster.html#ae68b6e0b8425e7ebc5931316b5d17221" title="Get the health of the monster ">getHealth</a>()</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">return</span> this._health;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d0a77c1a97cf39b07408c9faab11faad.html">TileEngine</a></li><li class="navelem"><a class="el" href="_monster_8cs.html">Monster.cs</a></li>
-    <li class="footer">Generated on Fri Mar 22 2013 21:04:49 for Fat Joe's Nightmare by
+    <li class="navelem"><a class="el" href="dir_d0a77c1a97cf39b07408c9faab11faad.html">TileEngine</a></li><li class="navelem"><a class="el" href="dir_db800c13b7c0e6e99ede83d5c9ddcb01.html">RolePlay</a></li><li class="navelem"><a class="el" href="_monster_8cs.html">Monster.cs</a></li>
+    <li class="footer">Generated on Fri Apr 19 2013 18:14:42 for Fat Joe's Nightmare by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

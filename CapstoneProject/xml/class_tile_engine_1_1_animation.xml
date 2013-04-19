@@ -5,8 +5,15 @@
       <sectiondef kind="public-type">
       <memberdef kind="enum" id="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1e" prot="public" static="no">
         <name>Animate</name>
-        <enumvalue id="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eaa5daf7f2ebbba4975d61dab1c40188c7" prot="public">
-          <name>IDLE</name>
+        <enumvalue id="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eac316beb10749c9d5a513dc00c7648bd8" prot="public">
+          <name>RIDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eae54769e193f9903aa28e0065c554c74f" prot="public">
+          <name>LIDLE</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -26,13 +33,27 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
+        <enumvalue id="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1ea6b49384656cb106f3ac67bf7077a319f" prot="public">
+          <name>RATTACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1eacd7253c0afb28f98c66cdef64020f9d3" prot="public">
+          <name>LATTACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="18" bodyend="18"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="18" bodyend="18"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -47,130 +68,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="18" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="18" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a4166f07632f8a495522be0bca0552acc" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int TileEngine.Animation.currentFrame</definition>
-        <argsstring></argsstring>
-        <name>currentFrame</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="42" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="42" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1ad15d57a585f106536a11ca45a4ef24c0" prot="public" static="no" mutable="no">
-        <type>Rectangle</type>
-        <definition>Rectangle TileEngine.Animation.sourceRect</definition>
-        <argsstring></argsstring>
-        <name>sourceRect</name>
-        <initializer>= new Rectangle()</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="48" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="48" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a5f6214ff26f488b0988d32964294981b" prot="public" static="no" mutable="no">
-        <type>Rectangle</type>
-        <definition>Rectangle TileEngine.Animation.destinationRect</definition>
-        <argsstring></argsstring>
-        <name>destinationRect</name>
-        <initializer>= new Rectangle()</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="51" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="51" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a6144d8d5c904bfd318a0f1891f68d31a" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int TileEngine.Animation.FrameWidth</definition>
-        <argsstring></argsstring>
-        <name>FrameWidth</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="54" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="54" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1ad6d0570216f225b5965bdf25ae1ff92a" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int TileEngine.Animation.FrameHeight</definition>
-        <argsstring></argsstring>
-        <name>FrameHeight</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="57" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="57" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a428519a2f385fb1eb29ffa3852c5a505" prot="public" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool TileEngine.Animation.Active</definition>
-        <argsstring></argsstring>
-        <name>Active</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="60" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="60" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a22b62fda1e3fdb5cc1d20203b72362cb" prot="public" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool TileEngine.Animation.Looping</definition>
-        <argsstring></argsstring>
-        <name>Looping</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="63" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="63" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a75d52f1bc2b67d0bc012ad6569bfe006" prot="public" static="no" mutable="no">
-        <type>Vector2</type>
-        <definition>Vector2 TileEngine.Animation.Position</definition>
-        <argsstring></argsstring>
-        <name>Position</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="66" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="66" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1abc2687680fb5017f74647e1361289e7b" prot="private" static="no" mutable="no">
-        <type><ref refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1e" kindref="member">Animate</ref></type>
-        <definition>Animate TileEngine.Animation.lastState</definition>
-        <argsstring></argsstring>
-        <name>lastState</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="24" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a77ea919bcf737be01b4d9257515dd854" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a77ea919bcf737be01b4d9257515dd854" prot="public" static="no" mutable="no">
         <type>Texture2D</type>
         <definition>Texture2D TileEngine.Animation.spriteStrip</definition>
         <argsstring></argsstring>
@@ -181,9 +81,303 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="27" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="45" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a53779ea1f64986d5e5ccca5c4b47ad1e" prot="private" static="no" mutable="no">
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1ac1b7b632a1b53bb61ca4839c368f66a9" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] TileEngine.Animation._sRect</definition>
+        <argsstring></argsstring>
+        <name>_sRect</name>
+        <initializer>= new int[4]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1af6caccf7522f5e14ee30b6eed1056524" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] TileEngine.Animation._dRect</definition>
+        <argsstring></argsstring>
+        <name>_dRect</name>
+        <initializer>= new int[4]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="33" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a65e64eb69f2c2a707a2224105e9b1a8d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1e" kindref="member">Animate</ref></type>
+        <definition>Animate TileEngine.Animation._lastState</definition>
+        <argsstring></argsstring>
+        <name>_lastState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="42" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1ab69acaf44967e375c443e7e1b990c322" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TileEngine.Animation._scale</definition>
+        <argsstring></argsstring>
+        <name>_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="48" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a41a43eee891eb9a5dd7dce2aa36d38d5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Animation._elapsedTime</definition>
+        <argsstring></argsstring>
+        <name>_elapsedTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="51" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a9ca4dbf005de635b4b3ed9241c297a9d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Animation._frameTime</definition>
+        <argsstring></argsstring>
+        <name>_frameTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="54" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a4a15a7b0977076cb3419a763a89da608" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Animation._initialFrameTime</definition>
+        <argsstring></argsstring>
+        <name>_initialFrameTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="57" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a89326fb55f53a999bf592d74d7f2ce11" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Animation._frameCount</definition>
+        <argsstring></argsstring>
+        <name>_frameCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="60" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1ac99748b40965b66a151ec2a54ba5bb73" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Animation._currentFrame</definition>
+        <argsstring></argsstring>
+        <name>_currentFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="63" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1aed1d1be8dd9a522eae387430888e8dcb" prot="private" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color TileEngine.Animation._color</definition>
+        <argsstring></argsstring>
+        <name>_color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="66" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1afca9154fb85069e0f5486371229d8a18" prot="private" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle TileEngine.Animation._sourceRect</definition>
+        <argsstring></argsstring>
+        <name>_sourceRect</name>
+        <initializer>= new Rectangle()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="69" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a907b6acb1cf881be6543ffd9dc93d702" prot="private" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle TileEngine.Animation._destinationRect</definition>
+        <argsstring></argsstring>
+        <name>_destinationRect</name>
+        <initializer>= new Rectangle()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="72" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a78a6c90c61054d7bc4bbee581b765be0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Animation._FrameWidth</definition>
+        <argsstring></argsstring>
+        <name>_FrameWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="87" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a7fc52f78c70b0b948578a10b01254d17" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TileEngine.Animation._FrameHeight</definition>
+        <argsstring></argsstring>
+        <name>_FrameHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="90" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a593b587c17009cfd3cfa6e346b4c8ad8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TileEngine.Animation._Active</definition>
+        <argsstring></argsstring>
+        <name>_Active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="93" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a85989cf4b7d77b3dd476e85269e78b31" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TileEngine.Animation._Looping</definition>
+        <argsstring></argsstring>
+        <name>_Looping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="96" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a4a8f68b828e90b126415bc1b05bfb370" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.Animation._Position</definition>
+        <argsstring></argsstring>
+        <name>_Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="99" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a4697e4f20fd8965aae32123a59ae8654" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int[]</type>
+        <definition>int [] TileEngine.Animation.SRect</definition>
+        <argsstring></argsstring>
+        <name>SRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a74feefdf7bcdb6b456e87f9d4078fe42" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int[]</type>
+        <definition>int [] TileEngine.Animation.DRect</definition>
+        <argsstring></argsstring>
+        <name>DRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="39" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a99de7e38d5871e86bea32adab992d7a1" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Rectangle</type>
+        <definition>Microsoft.Xna.Framework.Rectangle TileEngine.Animation.sourceRect</definition>
+        <argsstring></argsstring>
+        <name>sourceRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="78" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a95f6bb1707a986404ddb09fd87178976" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Rectangle</type>
+        <definition>Microsoft.Xna.Framework.Rectangle TileEngine.Animation.destinationRect</definition>
+        <argsstring></argsstring>
+        <name>destinationRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="84" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a4e82c467338bbd20f08b2ee04fb77130" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1e" kindref="member">TileEngine.Animation.Animate</ref></type>
+        <definition>TileEngine.Animation.Animate TileEngine.Animation.lastState</definition>
+        <argsstring></argsstring>
+        <name>lastState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="105" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a53779ea1f64986d5e5ccca5c4b47ad1e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>float</type>
         <definition>float TileEngine.Animation.scale</definition>
         <argsstring></argsstring>
@@ -194,9 +388,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="30" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="111" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="108" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1ab7882c24dcf7c1b486cb344363d92ecf" prot="private" static="no" mutable="no">
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1ab7882c24dcf7c1b486cb344363d92ecf" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>int</type>
         <definition>int TileEngine.Animation.elapsedTime</definition>
         <argsstring></argsstring>
@@ -207,9 +401,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="33" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="33" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="117" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="114" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a32d97e4504028113317d6acc60f1a081" prot="private" static="no" mutable="no">
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a32d97e4504028113317d6acc60f1a081" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>int</type>
         <definition>int TileEngine.Animation.frameTime</definition>
         <argsstring></argsstring>
@@ -220,9 +414,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="36" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="123" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="120" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1ad531add720bb986e67662aa05c1c849b" prot="private" static="no" mutable="no">
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a5d8df04ae419f9d98db8ecfb3b48d0a0" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Animation.initialFrameTime</definition>
+        <argsstring></argsstring>
+        <name>initialFrameTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="129" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1ad531add720bb986e67662aa05c1c849b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>int</type>
         <definition>int TileEngine.Animation.frameCount</definition>
         <argsstring></argsstring>
@@ -233,11 +440,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="39" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="39" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="135" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="132" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_tile_engine_1_1_animation_1a5e154eeb0eda32263f8cecb88984a76a" prot="private" static="no" mutable="no">
-        <type>Color</type>
-        <definition>Color TileEngine.Animation.color</definition>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a4166f07632f8a495522be0bca0552acc" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Animation.currentFrame</definition>
+        <argsstring></argsstring>
+        <name>currentFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="141" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a661213c4c5a60559e3e3e4f5b5d53036" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Color</type>
+        <definition>Microsoft.Xna.Framework.Color TileEngine.Animation.color</definition>
         <argsstring></argsstring>
         <name>color</name>
         <briefdescription>
@@ -246,14 +466,79 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="45" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="45" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="147" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a6144d8d5c904bfd318a0f1891f68d31a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Animation.FrameWidth</definition>
+        <argsstring></argsstring>
+        <name>FrameWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="153" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1ad6d0570216f225b5965bdf25ae1ff92a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int TileEngine.Animation.FrameHeight</definition>
+        <argsstring></argsstring>
+        <name>FrameHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="159" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a428519a2f385fb1eb29ffa3852c5a505" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool TileEngine.Animation.Active</definition>
+        <argsstring></argsstring>
+        <name>Active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="165" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1a22b62fda1e3fdb5cc1d20203b72362cb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool TileEngine.Animation.Looping</definition>
+        <argsstring></argsstring>
+        <name>Looping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="171" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_tile_engine_1_1_animation_1ab3b6f9f9a930a9276c8b17f08085e0fa" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Microsoft.Xna.Framework.Vector2</type>
+        <definition>Microsoft.Xna.Framework.Vector2 TileEngine.Animation.Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="177" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="174" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_tile_engine_1_1_animation_1a7a7907093bd3db85bce93c7f901e1426" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_tile_engine_1_1_animation_1ab044968602d5dfa9d8bf83a8aed07ba3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void TileEngine.Animation.Initialize</definition>
-        <argsstring>(Texture2D texture, Vector2 position, int frameWidth, int frameHeight, int frameCount, int frametime, Color color, float scale, bool looping, Animate animation=Animate.IDLE)</argsstring>
+        <argsstring>(Texture2D texture, Vector2 position, int frameWidth, int frameHeight, int frameCount, int frametime, Color color, float scale, bool looping, Animate animation=Animate.RIDLE)</argsstring>
         <name>Initialize</name>
         <param>
           <type>Texture2D</type>
@@ -294,7 +579,7 @@
         <param>
           <type><ref refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1e" kindref="member">Animate</ref></type>
           <declname>animation</declname>
-          <defval>Animate.IDLE</defval>
+          <defval>Animate.RIDLE</defval>
         </param>
         <briefdescription>
 <para>Initializes the <ref refid="class_tile_engine_1_1_animation" kindref="compound">Animation</ref> code </para>        </briefdescription>
@@ -373,7 +658,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="84" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="81" bodyend="121"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="195" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="192" bodyend="245"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_animation_1a2614c6eff471aecefade8b906a489eeb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -390,7 +675,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="124" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="123" bodyend="209"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="248" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="247" bodyend="374"/>
       </memberdef>
       <memberdef kind="function" id="class_tile_engine_1_1_animation_1ab4dd3a8d57cc8de71f8863ff91238eea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -407,33 +692,53 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="213" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="212" bodyend="221"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="378" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="377" bodyend="386"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation.cs" bodystart="15" bodyend="222"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/Animation/Animation.cs" bodystart="15" bodyend="387"/>
     <listofallmembers>
+      <member refid="class_tile_engine_1_1_animation_1a593b587c17009cfd3cfa6e346b4c8ad8" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_Active</name></member>
+      <member refid="class_tile_engine_1_1_animation_1aed1d1be8dd9a522eae387430888e8dcb" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_color</name></member>
+      <member refid="class_tile_engine_1_1_animation_1ac99748b40965b66a151ec2a54ba5bb73" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_currentFrame</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a907b6acb1cf881be6543ffd9dc93d702" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_destinationRect</name></member>
+      <member refid="class_tile_engine_1_1_animation_1af6caccf7522f5e14ee30b6eed1056524" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_dRect</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a41a43eee891eb9a5dd7dce2aa36d38d5" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_elapsedTime</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a89326fb55f53a999bf592d74d7f2ce11" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_frameCount</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a7fc52f78c70b0b948578a10b01254d17" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_FrameHeight</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a9ca4dbf005de635b4b3ed9241c297a9d" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_frameTime</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a78a6c90c61054d7bc4bbee581b765be0" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_FrameWidth</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a4a15a7b0977076cb3419a763a89da608" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_initialFrameTime</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a65e64eb69f2c2a707a2224105e9b1a8d" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_lastState</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a85989cf4b7d77b3dd476e85269e78b31" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_Looping</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a4a8f68b828e90b126415bc1b05bfb370" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_Position</name></member>
+      <member refid="class_tile_engine_1_1_animation_1ab69acaf44967e375c443e7e1b990c322" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_scale</name></member>
+      <member refid="class_tile_engine_1_1_animation_1afca9154fb85069e0f5486371229d8a18" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_sourceRect</name></member>
+      <member refid="class_tile_engine_1_1_animation_1ac1b7b632a1b53bb61ca4839c368f66a9" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>_sRect</name></member>
       <member refid="class_tile_engine_1_1_animation_1a428519a2f385fb1eb29ffa3852c5a505" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>Active</name></member>
       <member refid="class_tile_engine_1_1_animation_1a0d36946dfbcde89c1f0d4bc071a5fc1e" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>Animate</name></member>
-      <member refid="class_tile_engine_1_1_animation_1a5e154eeb0eda32263f8cecb88984a76a" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>color</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a661213c4c5a60559e3e3e4f5b5d53036" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>color</name></member>
       <member refid="class_tile_engine_1_1_animation_1a4166f07632f8a495522be0bca0552acc" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>currentFrame</name></member>
-      <member refid="class_tile_engine_1_1_animation_1a5f6214ff26f488b0988d32964294981b" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>destinationRect</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a95f6bb1707a986404ddb09fd87178976" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>destinationRect</name></member>
       <member refid="class_tile_engine_1_1_animation_1ab4dd3a8d57cc8de71f8863ff91238eea" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>Draw</name></member>
-      <member refid="class_tile_engine_1_1_animation_1ab7882c24dcf7c1b486cb344363d92ecf" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>elapsedTime</name></member>
-      <member refid="class_tile_engine_1_1_animation_1ad531add720bb986e67662aa05c1c849b" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>frameCount</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a74feefdf7bcdb6b456e87f9d4078fe42" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>DRect</name></member>
+      <member refid="class_tile_engine_1_1_animation_1ab7882c24dcf7c1b486cb344363d92ecf" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>elapsedTime</name></member>
+      <member refid="class_tile_engine_1_1_animation_1ad531add720bb986e67662aa05c1c849b" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>frameCount</name></member>
       <member refid="class_tile_engine_1_1_animation_1ad6d0570216f225b5965bdf25ae1ff92a" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>FrameHeight</name></member>
-      <member refid="class_tile_engine_1_1_animation_1a32d97e4504028113317d6acc60f1a081" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>frameTime</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a32d97e4504028113317d6acc60f1a081" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>frameTime</name></member>
       <member refid="class_tile_engine_1_1_animation_1a6144d8d5c904bfd318a0f1891f68d31a" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>FrameWidth</name></member>
-      <member refid="class_tile_engine_1_1_animation_1a7a7907093bd3db85bce93c7f901e1426" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>Initialize</name></member>
-      <member refid="class_tile_engine_1_1_animation_1abc2687680fb5017f74647e1361289e7b" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>lastState</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a5d8df04ae419f9d98db8ecfb3b48d0a0" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>initialFrameTime</name></member>
+      <member refid="class_tile_engine_1_1_animation_1ab044968602d5dfa9d8bf83a8aed07ba3" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>Initialize</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a4e82c467338bbd20f08b2ee04fb77130" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>lastState</name></member>
       <member refid="class_tile_engine_1_1_animation_1a22b62fda1e3fdb5cc1d20203b72362cb" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>Looping</name></member>
-      <member refid="class_tile_engine_1_1_animation_1a75d52f1bc2b67d0bc012ad6569bfe006" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>Position</name></member>
-      <member refid="class_tile_engine_1_1_animation_1a53779ea1f64986d5e5ccca5c4b47ad1e" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>scale</name></member>
-      <member refid="class_tile_engine_1_1_animation_1ad15d57a585f106536a11ca45a4ef24c0" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>sourceRect</name></member>
-      <member refid="class_tile_engine_1_1_animation_1a77ea919bcf737be01b4d9257515dd854" prot="private" virt="non-virtual"><scope>TileEngine::Animation</scope><name>spriteStrip</name></member>
+      <member refid="class_tile_engine_1_1_animation_1ab3b6f9f9a930a9276c8b17f08085e0fa" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>Position</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a53779ea1f64986d5e5ccca5c4b47ad1e" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>scale</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a99de7e38d5871e86bea32adab992d7a1" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>sourceRect</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a77ea919bcf737be01b4d9257515dd854" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>spriteStrip</name></member>
+      <member refid="class_tile_engine_1_1_animation_1a4697e4f20fd8965aae32123a59ae8654" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>SRect</name></member>
       <member refid="class_tile_engine_1_1_animation_1a2c0d7ff5887ea0684283d7187dd3f817" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>state</name></member>
       <member refid="class_tile_engine_1_1_animation_1a2614c6eff471aecefade8b906a489eeb" prot="public" virt="non-virtual"><scope>TileEngine::Animation</scope><name>Update</name></member>
     </listofallmembers>

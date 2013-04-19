@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_map_editor_1_1_g_u_i_1_1_reset_button" kind="class" prot="public">
+    <compoundname>MapEditor::GUI::ResetButton</compoundname>
+    <basecompoundref refid="class_g_u_i_1_1_controls_1_1_x_button" prot="public" virt="non-virtual">GUI.Controls.XButton</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_reset_button_1a21869005acebf86418c98303cd351d9e" prot="private" static="no" mutable="no">
+        <type>GraphicsDeviceManager</type>
+        <definition>GraphicsDeviceManager MapEditor.GUI.ResetButton._graphic</definition>
+        <argsstring></argsstring>
+        <name>_graphic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" line="24" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_reset_button_1a142b9e4ddf0034a01ba90c1852cfda14" prot="private" static="no" mutable="no">
+        <type>ContentManager</type>
+        <definition>ContentManager MapEditor.GUI.ResetButton._content</definition>
+        <argsstring></argsstring>
+        <name>_content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_reset_button_1ae19f4424ca510d32b5105b5c86636e0d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_map_editor_1_1_g_u_i_1_1_map_window" kindref="compound">MapWindow</ref></type>
+        <definition>MapWindow MapEditor.GUI.ResetButton._mapWindow</definition>
+        <argsstring></argsstring>
+        <name>_mapWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" line="26" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_reset_button_1ae13f5692545700674120a3c19b897134" prot="private" static="no" mutable="no">
+        <type><ref refid="class_g_u_i_1_1_controls_1_1_label" kindref="compound">Label</ref></type>
+        <definition>Label MapEditor.GUI.ResetButton.buttonLable</definition>
+        <argsstring></argsstring>
+        <name>buttonLable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" line="27" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_reset_button_1a4a02ea4cfeaa3a2103630e3183b197b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MapEditor.GUI.ResetButton.ResetButton</definition>
+        <argsstring>(Vector2 Position, Texture2D ButtonTexture, SpriteFont font, GraphicsDeviceManager graphics, ContentManager manager, MapWindow mapWindow)</argsstring>
+        <name>ResetButton</name>
+        <param>
+          <type>Vector2</type>
+          <declname>Position</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>ButtonTexture</declname>
+        </param>
+        <param>
+          <type>SpriteFont</type>
+          <declname>font</declname>
+        </param>
+        <param>
+          <type>GraphicsDeviceManager</type>
+          <declname>graphics</declname>
+        </param>
+        <param>
+          <type>ContentManager</type>
+          <declname>manager</declname>
+        </param>
+        <param>
+          <type><ref refid="class_map_editor_1_1_g_u_i_1_1_map_window" kindref="compound">MapWindow</ref></type>
+          <declname>mapWindow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" line="31" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" bodystart="29" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_reset_button_1aac2172d3c8a07d11285fbe90d3067b00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.GUI.ResetButton.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <reimplements refid="class_g_u_i_1_1_controls_1_1_x_button_1abb788f22518aa2bb6e4756c886e4893d">Update</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Update method does all of the detection handling for the button. Whether it was clicked or if its on cooldown. It will remain the same accross all buttons the only method to be changed is the FireEvent Method. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" bodystart="39" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_reset_button_1aa75b906694fbcae954e47fe5692bb567" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.GUI.ResetButton.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spritebatch)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="class_g_u_i_1_1_controls_1_1_x_button_1ac5106591eb34dc1edc9b4d468d2bcae5">Draw</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <briefdescription>
+<para>Draw Method just draws the button into the target area. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spriteBatch</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" line="46" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" bodystart="45" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_reset_button_1a311da0bcbf027e571254f32279ffbf22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.GUI.ResetButton.FireEvent</definition>
+        <argsstring>()</argsstring>
+        <name>FireEvent</name>
+        <reimplements refid="class_g_u_i_1_1_controls_1_1_x_button_1ae474e242ee1c62dde757628d922f9065">FireEvent</reimplements>
+        <briefdescription>
+<para>Fire event is what the button actually does. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" line="52" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" bodystart="51" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="203">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="200">
+        <label>MapEditor.GUI.ResetButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_reset_button"/>
+        <childnode refid="201" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="201">
+        <label>XButton</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_button"/>
+        <childnode refid="202" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="202">
+        <label>IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="203" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="207">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="204">
+        <label>MapEditor.GUI.ResetButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_reset_button"/>
+        <childnode refid="205" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="205">
+        <label>XButton</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_button"/>
+        <childnode refid="206" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="206">
+        <label>IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="207" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" line="23" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/ResetButton.cs" bodystart="22" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1a142b9e4ddf0034a01ba90c1852cfda14" prot="private" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>_content</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1a21869005acebf86418c98303cd351d9e" prot="private" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>_graphic</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1ae19f4424ca510d32b5105b5c86636e0d" prot="private" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>_mapWindow</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aa1f6541223f0fb35db7b41e8c2803260" prot="public" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>ButtonImage</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1ae13f5692545700674120a3c19b897134" prot="private" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>buttonLable</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a1fff2b82126e30b8b06b103a62bec06b" prot="public" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>ButtonRep</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a4ed1dc21bd0ba765b03562ca3b79e288" prot="public" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>ChangeColor</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a691dc660d0028dc03882dc009ac47bb2" prot="public" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>Clicked</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1add70c891819e41bc30b3e06a481603bc" prot="public" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>Color</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ab9f44f9d0519adb20d3b3476767698da" prot="public" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>COOLDOWN</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1aa75b906694fbcae954e47fe5692bb567" prot="public" virt="virtual"><scope>MapEditor::GUI::ResetButton</scope><name>Draw</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ac2b46e285961684f91cc9d79f4fd0c44" prot="public" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>Enabled</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a8beb21cded9bdecef62937719e7d8571" prot="public" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>FireAgain</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1a311da0bcbf027e571254f32279ffbf22" prot="public" virt="virtual"><scope>MapEditor::GUI::ResetButton</scope><name>FireEvent</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aed6404bed1698922f7dab913dd90af1d" prot="public" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>Position</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1a4a02ea4cfeaa3a2103630e3183b197b4" prot="public" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>ResetButton</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_reset_button_1aac2172d3c8a07d11285fbe90d3067b00" prot="public" virt="virtual"><scope>MapEditor::GUI::ResetButton</scope><name>Update</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a4f5c8bcbe882e1bc2e70105d8cb40a75" prot="public" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>WasClicked</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a3cda83e9066b75c36b6ad9e4bc052bb0" prot="public" virt="non-virtual"><scope>MapEditor::GUI::ResetButton</scope><name>XButton</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

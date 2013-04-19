@@ -18,12 +18,13 @@ var class_tile_engine_1_1_tile =
     [ "setSpriteEffect", "class_tile_engine_1_1_tile.html#a4e99f01cfc6d9d48a588891bd0fd1eaa", null ],
     [ "setTexture", "class_tile_engine_1_1_tile.html#aaf5725a5761dda6ed078ef8825167124", null ],
     [ "setTint", "class_tile_engine_1_1_tile.html#acd94a9cd2f8641284afd91c8ccd60119", null ],
-    [ "_ColorTint", "class_tile_engine_1_1_tile.html#aadf2ea72c51446dbf3bac276d0f98de7", null ],
-    [ "_Depth", "class_tile_engine_1_1_tile.html#a0b460d5863d5b52b639d55a70b9ecb3e", null ],
-    [ "_Effect", "class_tile_engine_1_1_tile.html#a8b2ca996f09db53cefd26d7ec7ad83a3", null ],
-    [ "_Origin", "class_tile_engine_1_1_tile.html#ade1613a00f6d458c497b8ddb3d3afffd", null ],
-    [ "_Rotation", "class_tile_engine_1_1_tile.html#a42d3f7d694c7a8422da6a9186a8e42a2", null ],
-    [ "_Scale", "class_tile_engine_1_1_tile.html#a3af1f4f1805b8b2bcd76ca550782ae55", null ],
-    [ "_SourceRectangle", "class_tile_engine_1_1_tile.html#a8f440ad4fabaa0d462678303a7db6899", null ],
-    [ "_Texture", "class_tile_engine_1_1_tile.html#a0b1c2c935ededa1553ce38123605a62e", null ]
+    [ "ColorTint", "class_tile_engine_1_1_tile.html#a7247f070547649fbbceb271bb16d8617", null ],
+    [ "Depth", "class_tile_engine_1_1_tile.html#a24e6d5372aba6eccbf1adf29fd615f96", null ],
+    [ "Effect", "class_tile_engine_1_1_tile.html#aee64d6ac97287e222b9afecd2c05f84e", null ],
+    [ "Name", "class_tile_engine_1_1_tile.html#a9ae9e8e696081b0d07ae6bc9754ef00b", null ],
+    [ "Origin", "class_tile_engine_1_1_tile.html#aac40f0b237b97dc3d534a8b0a2af8c8e", null ],
+    [ "Rotation", "class_tile_engine_1_1_tile.html#aca5a4b39a77780eae07a78bc4fe87428", null ],
+    [ "Scale", "class_tile_engine_1_1_tile.html#a07ba3488d75faf6fb825a2096b7b8af7", null ],
+    [ "SourceRectangle", "class_tile_engine_1_1_tile.html#ae3cf62ee3a7f3999b70d2637f89ff0c8", null ],
+    [ "SR", "class_tile_engine_1_1_tile.html#a2d706a656696740dd34a68ae3d097cf5", null ]
 ];

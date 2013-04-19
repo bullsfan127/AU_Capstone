@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_map_editor_1_1_g_u_i_1_1_save_button" kind="class" prot="public">
+    <compoundname>MapEditor::GUI::SaveButton</compoundname>
+    <basecompoundref refid="class_g_u_i_1_1_controls_1_1_x_button" prot="public" virt="non-virtual">GUI.Controls.XButton</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_save_button_1a275a60e5eacbdc899b5ad52c25ec3fc9" prot="public" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref></type>
+        <definition>Map MapEditor.GUI.SaveButton.saveMap</definition>
+        <argsstring></argsstring>
+        <name>saveMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_map_editor_1_1_g_u_i_1_1_save_button_1a09bc22a4c6acb17b5f8804a45eb4a8a8" prot="private" static="no" mutable="no">
+        <type><ref refid="class_g_u_i_1_1_controls_1_1_label" kindref="compound">Label</ref></type>
+        <definition>Label MapEditor.GUI.SaveButton.buttonLable</definition>
+        <argsstring></argsstring>
+        <name>buttonLable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_save_button_1a60d1dc6cf484fc4014d6bc8868f9d0dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MapEditor.GUI.SaveButton.SaveButton</definition>
+        <argsstring>(Vector2 Position, Texture2D ButtonTexture, Map map, SpriteFont font)</argsstring>
+        <name>SaveButton</name>
+        <param>
+          <type>Vector2</type>
+          <declname>Position</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>ButtonTexture</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>SpriteFont</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" line="25" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" bodystart="23" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_save_button_1ac713d895627befc5d0be8d95001d1ba2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.GUI.SaveButton.Update</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>Update</name>
+        <reimplements refid="class_g_u_i_1_1_controls_1_1_x_button_1abb788f22518aa2bb6e4756c886e4893d">Update</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+<para>Update method does all of the detection handling for the button. Whether it was clicked or if its on cooldown. It will remain the same accross all buttons the only method to be changed is the FireEvent Method. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" line="31" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_save_button_1abbe94ffc09eba518dc77dc5ad84184b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapEditor.GUI.SaveButton.UpdateM</definition>
+        <argsstring>(GameTime gameTime, Map map)</argsstring>
+        <name>UpdateM</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tile_engine_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" bodystart="35" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_save_button_1a525bdeece9435acb94bdc6bd801df459" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.GUI.SaveButton.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spritebatch)</argsstring>
+        <name>Draw</name>
+        <reimplements refid="class_g_u_i_1_1_controls_1_1_x_button_1ac5106591eb34dc1edc9b4d468d2bcae5">Draw</reimplements>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <briefdescription>
+<para>Draw Method just draws the button into the target area. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameTime</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spriteBatch</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" line="42" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_editor_1_1_g_u_i_1_1_save_button_1a123fc02f59436ef09b8fe0cfee633a74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void MapEditor.GUI.SaveButton.FireEvent</definition>
+        <argsstring>()</argsstring>
+        <name>FireEvent</name>
+        <reimplements refid="class_g_u_i_1_1_controls_1_1_x_button_1ae474e242ee1c62dde757628d922f9065">FireEvent</reimplements>
+        <briefdescription>
+<para>Fire event is what the button actually does. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" line="48" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" bodystart="47" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="211">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="209">
+        <label>XButton</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_button"/>
+        <childnode refid="210" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="208">
+        <label>MapEditor.GUI.SaveButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_save_button"/>
+        <childnode refid="209" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="210">
+        <label>IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="211" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="215">
+        <label>GComponent</label>
+        <link refid="interface_g_u_i_1_1_g_component"/>
+      </node>
+      <node id="216">
+        <label>TileEngine.Map</label>
+        <link refid="class_tile_engine_1_1_map"/>
+      </node>
+      <node id="213">
+        <label>XButton</label>
+        <link refid="class_g_u_i_1_1_controls_1_1_x_button"/>
+        <childnode refid="214" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="212">
+        <label>MapEditor.GUI.SaveButton</label>
+        <link refid="class_map_editor_1_1_g_u_i_1_1_save_button"/>
+        <childnode refid="213" relation="public-inheritance">
+        </childnode>
+        <childnode refid="216" relation="usage">
+          <edgelabel>saveMap</edgelabel>
+        </childnode>
+      </node>
+      <node id="214">
+        <label>IXButton</label>
+        <link refid="interface_g_u_i_1_1_interfaces_1_1_i_x_button"/>
+        <childnode refid="215" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MapEditor/MapEditor/GUI/SaveButton.cs" bodystart="18" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aa1f6541223f0fb35db7b41e8c2803260" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>ButtonImage</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a09bc22a4c6acb17b5f8804a45eb4a8a8" prot="private" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>buttonLable</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a1fff2b82126e30b8b06b103a62bec06b" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>ButtonRep</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a4ed1dc21bd0ba765b03562ca3b79e288" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>ChangeColor</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a691dc660d0028dc03882dc009ac47bb2" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>Clicked</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1add70c891819e41bc30b3e06a481603bc" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>Color</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ab9f44f9d0519adb20d3b3476767698da" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>COOLDOWN</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a525bdeece9435acb94bdc6bd801df459" prot="public" virt="virtual"><scope>MapEditor::GUI::SaveButton</scope><name>Draw</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1ac2b46e285961684f91cc9d79f4fd0c44" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>Enabled</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a8beb21cded9bdecef62937719e7d8571" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>FireAgain</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a123fc02f59436ef09b8fe0cfee633a74" prot="public" virt="virtual"><scope>MapEditor::GUI::SaveButton</scope><name>FireEvent</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1aed6404bed1698922f7dab913dd90af1d" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>Position</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a60d1dc6cf484fc4014d6bc8868f9d0dd" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>SaveButton</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1a275a60e5eacbdc899b5ad52c25ec3fc9" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>saveMap</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1ac713d895627befc5d0be8d95001d1ba2" prot="public" virt="virtual"><scope>MapEditor::GUI::SaveButton</scope><name>Update</name></member>
+      <member refid="class_map_editor_1_1_g_u_i_1_1_save_button_1abbe94ffc09eba518dc77dc5ad84184b5" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>UpdateM</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a4f5c8bcbe882e1bc2e70105d8cb40a75" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>WasClicked</name></member>
+      <member refid="class_g_u_i_1_1_controls_1_1_x_button_1a3cda83e9066b75c36b6ad9e4bc052bb0" prot="public" virt="non-virtual"><scope>MapEditor::GUI::SaveButton</scope><name>XButton</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

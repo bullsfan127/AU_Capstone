@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dir_7511f6d6031f2e831457cdd69c807191" kind="dir">
+    <compoundname>CapstoneProject/CapstoneProject/Menus</compoundname>
+    <innerfile refid="_image_button_8cs">ImageButton.cs</innerfile>
+    <innerfile refid="_main_button_8cs">MainButton.cs</innerfile>
+    <innerfile refid="_main_menu_8cs">MainMenu.cs</innerfile>
+    <innerfile refid="_main_save_keys_8cs">MainSaveKeys.cs</innerfile>
+    <innerfile refid="_main_settings_8cs">MainSettings.cs</innerfile>
+    <innerfile refid="_move_button_8cs">MoveButton.cs</innerfile>
+    <innerfile refid="_pause_menu_8cs">PauseMenu.cs</innerfile>
+    <innerfile refid="_save_keys_8cs">SaveKeys.cs</innerfile>
+    <innerfile refid="_settings_8cs">Settings.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/"/>
+  </compounddef>
+</doxygen>

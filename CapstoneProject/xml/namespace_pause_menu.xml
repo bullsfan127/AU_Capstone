@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="namespace_pause_menu" kind="namespace">
+    <compoundname>PauseMenu</compoundname>
+    <innerclass refid="class_pause_menu_1_1_pause_menu" prot="public">PauseMenu::PauseMenu</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/PauseMenu.cs" line="14"/>
+  </compounddef>
+</doxygen>

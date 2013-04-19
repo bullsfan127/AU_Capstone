@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="class_tile_engine_1_1_boomerang" kind="class" prot="public">
+    <compoundname>TileEngine::Boomerang</compoundname>
+    <basecompoundref refid="class_tile_engine_1_1_weapon" prot="public" virt="non-virtual">TileEngine.Weapon</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tile_engine_1_1_boomerang_1ad0e225c32499d57e6a1d13670de47941" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tile_engine_1_1_animation" kindref="compound">Animation</ref></type>
+        <definition>Animation TileEngine.Boomerang._boomerangAnimation</definition>
+        <argsstring></argsstring>
+        <name>_boomerangAnimation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" line="17" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_boomerang_1a35d3adcfbce35e1af541b820e202935a" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.Boomerang.position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" line="18" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_boomerang_1a97a50ee7f084ef64116614b8de6ff993" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 TileEngine.Boomerang.movemnet</definition>
+        <argsstring></argsstring>
+        <name>movemnet</name>
+        <initializer>= new Vector2(0, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" line="19" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_engine_1_1_boomerang_1a9144c7265225ddd2c4f4fcf9232f2aa1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TileEngine.Boomerang.active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" line="20" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_engine_1_1_boomerang_1af0eafed16fdb212ef63ae3387fc198ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TileEngine.Boomerang.Boomerang</definition>
+        <argsstring>()</argsstring>
+        <name>Boomerang</name>
+        <briefdescription>
+<para><ref refid="class_tile_engine_1_1_boomerang" kindref="compound">Boomerang</ref> class - Sets damage amount </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" line="26" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" bodystart="25" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_boomerang_1a79dbb98047888493b6546d1903489386" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void TileEngine.Boomerang.Initialize</definition>
+        <argsstring>(Texture2D spriteStrip, Vector2 position)</argsstring>
+        <name>Initialize</name>
+        <reimplements refid="class_tile_engine_1_1_avatar_1a565a17aa3aae06ca72673956919ebb97">Initialize</reimplements>
+        <param>
+          <type>Texture2D</type>
+          <declname>spriteStrip</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" bodystart="35" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tile_engine_1_1_boomerang_1aab587ad270baf5e35987cd3b3ffe7a83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TileEngine.Boomerang.Update</definition>
+        <argsstring>(Vector2 player)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>Vector2</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" line="53" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" bodystart="52" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="22">
+        <label>TileEngine.Boomerang</label>
+        <link refid="class_tile_engine_1_1_boomerang"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Weapon</label>
+        <link refid="class_tile_engine_1_1_weapon"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Avatar</label>
+        <link refid="class_tile_engine_1_1_avatar"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="25">
+        <label>TileEngine.Boomerang</label>
+        <link refid="class_tile_engine_1_1_boomerang"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Weapon</label>
+        <link refid="class_tile_engine_1_1_weapon"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Avatar</label>
+        <link refid="class_tile_engine_1_1_avatar"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/TileEngine/RolePlay/Boomerang.cs" bodystart="15" bodyend="75"/>
+    <listofallmembers>
+      <member refid="class_tile_engine_1_1_boomerang_1ad0e225c32499d57e6a1d13670de47941" prot="private" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>_boomerangAnimation</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ac438acf71aa12a4ab41e4e473033b967" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>_offset</name></member>
+      <member refid="class_tile_engine_1_1_boomerang_1a9144c7265225ddd2c4f4fcf9232f2aa1" prot="private" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>active</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a7c6118c83ba18eeb197f04412130f3b5" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>Avatar</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a9d97952e8a9e1b347c841cfbe614b60b" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>Avatar</name></member>
+      <member refid="class_tile_engine_1_1_boomerang_1af0eafed16fdb212ef63ae3387fc198ca" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>Boomerang</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a43797e71ed10bb9f6f87b49373328b61" prot="public" virt="virtual"><scope>TileEngine::Boomerang</scope><name>Draw</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a94c5de7a63f2bd222dbc0a0a2b5e5da7" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>getDamage</name></member>
+      <member refid="class_tile_engine_1_1_boomerang_1a79dbb98047888493b6546d1903489386" prot="public" virt="virtual"><scope>TileEngine::Boomerang</scope><name>Initialize</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a1877496771f54e4a6c42d1fc44ab34b8" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>MaxDamage</name></member>
+      <member refid="class_tile_engine_1_1_boomerang_1a97a50ee7f084ef64116614b8de6ff993" prot="private" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>movemnet</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a88d7ebb026fba691d674379c3dd55b67" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>Offset</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ad57bccaabfea9a571f45e923c8f8fcea" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>OX</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1ae93d9e869211bd685e335aadf0dc5f77" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>OY</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a0eef17049780a5aa303977444d0b5e9d" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>PlayerAnimation</name></member>
+      <member refid="class_tile_engine_1_1_boomerang_1a35d3adcfbce35e1af541b820e202935a" prot="private" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>position</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a9c6796fe77c217cfe59d8d1bf96397d1" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>Position</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a6c34e2806ac9208d6dacca5c88449047" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>Scale</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a7c1fa58b379f176e57fdef26670d8cf3" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>setDirection</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a9a3ca65c7afde405eabade4e177e8c25" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>SpriteFrame</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a402f84b28c75df593a4b9c0456603939" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>SpriteHeight</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1ab1b62a6983016f8db4447a3735bed5d3" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>SpriteWidth</name></member>
+      <member refid="class_tile_engine_1_1_boomerang_1aab587ad270baf5e35987cd3b3ffe7a83" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_weapon_1a35b6c2931907eecd63f36c9831afcf54" prot="public" virt="non-virtual" ambiguityscope="TileEngine::Weapon."><scope>TileEngine::Boomerang</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afa46c5a32ad8b677a0f2ce2ace163059" prot="public" virt="virtual" ambiguityscope="TileEngine::Avatar."><scope>TileEngine::Boomerang</scope><name>Update</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1afb369b75dc84f09d4c98e6f02dcb1cbe" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>X</name></member>
+      <member refid="class_tile_engine_1_1_avatar_1a5780c90b61ef36f0fce907fb8ec1c396" prot="public" virt="non-virtual"><scope>TileEngine::Boomerang</scope><name>Y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
   <compounddef id="class_main_menu_1_1_main_menu" kind="class" prot="public">
     <compoundname>MainMenu::MainMenu</compoundname>
-    <basecompoundref prot="public" virt="non-virtual">Game</basecompoundref>
       <sectiondef kind="private-type">
       <memberdef kind="enum" id="class_main_menu_1_1_main_menu_1abb6d87950b2b1629d10b8ac3f02516c6" prot="private" static="no">
         <name>BState</name>
@@ -40,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="20" bodyend="26"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="21" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="20" bodyend="26"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -55,20 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="16" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1ad5f3abf274c9882ef76a8ad352c3594c" prot="private" static="no" mutable="no">
-        <type>SpriteBatch</type>
-        <definition>SpriteBatch MainMenu.MainMenu.spriteBatch</definition>
-        <argsstring></argsstring>
-        <name>spriteBatch</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="17" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="17" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="16" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1ac22b3b5807c07d893d83a1d0e31821e2" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -82,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="28" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="28" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1a81c861070733d4c704f6f699edab07c7" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -96,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="30" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="30" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1a0b6d6cee02191cfc2e7b881463482631" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -110,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="31" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="31" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="31" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1ac5419e6c361965e7553a9583da8ee060" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -124,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="32" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="32" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="32" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1a3a4e1eacd82453ba68754d47052046ff" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -138,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="33" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="33" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="33" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1a6fada8fbc9dd564a972429768d3f9fc3" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -152,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="34" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="34" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="34" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1ae586a6b90bb1a94127848b8ab00f8923" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -166,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="35" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="35" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="35" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1af3a51e02b34c4d42c6a8007cbc1d001a" prot="private" static="no" mutable="no">
         <type>Color</type>
@@ -179,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="36" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="36" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1ad662f2a04c14ebd41c707ba645dd2efd" prot="private" static="no" mutable="no">
         <type>Color[]</type>
@@ -193,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="37" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="37" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="37" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1ae3c6aa93fda24ce7edc31211c92ac61c" prot="private" static="no" mutable="no">
         <type>Rectangle[]</type>
@@ -207,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="38" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="38" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="38" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1ab8a94e2189b31ffb163a542054e0ecaa" prot="private" static="no" mutable="no">
         <type>BState[]</type>
@@ -221,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="39" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="39" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="39" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1a8e81550c9c7e57782aa6a13084cb27e4" prot="private" static="no" mutable="no">
         <type>Texture2D[]</type>
@@ -235,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="40" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="40" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1a112d33b909feeae2903358950e4a2e5c" prot="private" static="no" mutable="no">
         <type>double[]</type>
@@ -249,7 +235,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="41" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="41" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1a5add63b08f5ba3c33f37c73634e1dd2c" prot="private" static="no" mutable="no">
+        <type>ContentManager</type>
+        <definition>ContentManager MainMenu.MainMenu.Content</definition>
+        <argsstring></argsstring>
+        <name>Content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="42" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1aaeafd95b58ec6a240ec4fefa27024990" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -262,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="44" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="44" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="46" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1aa692ebe07630ff69a46c2840a0e88504" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -276,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="44" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="44" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="46" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1a3562c9fe78e1655c46326ddf4f233996" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -289,7 +288,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="47" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="47" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1a8343011f824ded452540f07693fa05b2" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -302,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="47" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="47" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_menu_1_1_main_menu_1affa4638276a43c890b0400bab052a5fd" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -315,41 +314,51 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="49" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="49" bodyend="-1"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="51" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="51" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_main_menu_1_1_main_menu_1a471796ebf352ae7d965a532bbae387f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_main_menu_1_1_main_menu_1a84898c2ab2a391dbad8c822b0a06cd8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>MainMenu.MainMenu.MainMenu</definition>
-        <argsstring>()</argsstring>
+        <argsstring>(GraphicsDeviceManager _graphics, ContentManager content)</argsstring>
         <name>MainMenu</name>
+        <param>
+          <type>GraphicsDeviceManager</type>
+          <declname>_graphics</declname>
+        </param>
+        <param>
+          <type>ContentManager</type>
+          <declname>content</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="52" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="51" bodyend="55"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="54" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="53" bodyend="58"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="protected-func">
-      <memberdef kind="function" id="class_main_menu_1_1_main_menu_1abd4cdaf409d28e550484658209d580d1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>override void</type>
-        <definition>override void MainMenu.MainMenu.Initialize</definition>
-        <argsstring>()</argsstring>
+      <memberdef kind="function" id="class_main_menu_1_1_main_menu_1ace7bf82bb817d6308adf02fbbb8ef2f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu.MainMenu.Initialize</definition>
+        <argsstring>(GameWindow Window)</argsstring>
         <name>Initialize</name>
+        <param>
+          <type>GameWindow</type>
+          <declname>Window</declname>
+        </param>
         <briefdescription>
 <para>Allows the game to perform any initialization it needs to before starting to run. This is where it can query for any required services and load any non-graphic related content. Calling base.Initialize will enumerate through any components and initialize them as well. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="64" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="63" bodyend="84"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="67" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="66" bodyend="86"/>
       </memberdef>
-      <memberdef kind="function" id="class_main_menu_1_1_main_menu_1a5a8c3b1745c41a148093fb7d30ec6b34" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>override void</type>
-        <definition>override void MainMenu.MainMenu.LoadContent</definition>
+      <memberdef kind="function" id="class_main_menu_1_1_main_menu_1ac71e7f412103026404782bf201c3281e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu.MainMenu.LoadContent</definition>
         <argsstring>()</argsstring>
         <name>LoadContent</name>
         <briefdescription>
@@ -358,24 +367,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="91" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="90" bodyend="104"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="93" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="92" bodyend="103"/>
       </memberdef>
-      <memberdef kind="function" id="class_main_menu_1_1_main_menu_1a37cffb5fd212e50df596e69d899f03cd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>override void</type>
-        <definition>override void MainMenu.MainMenu.UnloadContent</definition>
-        <argsstring>()</argsstring>
-        <name>UnloadContent</name>
-        <briefdescription>
-<para>UnloadContent will be called once per game and is the place to unload all content. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="111" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="110" bodyend="113"/>
-      </memberdef>
-      <memberdef kind="function" id="class_main_menu_1_1_main_menu_1a4ba5e919def22db4f51fd0097ec93bb5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>override void</type>
-        <definition>override void MainMenu.MainMenu.Update</definition>
+      <memberdef kind="function" id="class_main_menu_1_1_main_menu_1a1652f48a27549eeac4b72416abac36f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu.MainMenu.Update</definition>
         <argsstring>(GameTime gameTime)</argsstring>
         <name>Update</name>
         <param>
@@ -396,16 +392,28 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="121" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="120" bodyend="139"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="120" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="119" bodyend="137"/>
       </memberdef>
-      <memberdef kind="function" id="class_main_menu_1_1_main_menu_1acceb39fa89ca31f245d1352254ba7a5d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>override void</type>
-        <definition>override void MainMenu.MainMenu.Draw</definition>
-        <argsstring>(GameTime gameTime)</argsstring>
+      <memberdef kind="function" id="class_main_menu_1_1_main_menu_1a203e25ac8256bb110601bf03368adb5b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu.MainMenu.Draw</definition>
+        <argsstring>(GameTime gameTime, SpriteBatch spriteBatch, Texture2D background, Rectangle mainFrame)</argsstring>
         <name>Draw</name>
         <param>
           <type>GameTime</type>
           <declname>gameTime</declname>
+        </param>
+        <param>
+          <type>SpriteBatch</type>
+          <declname>spriteBatch</declname>
+        </param>
+        <param>
+          <type>Texture2D</type>
+          <declname>background</declname>
+        </param>
+        <param>
+          <type>Rectangle</type>
+          <declname>mainFrame</declname>
         </param>
         <briefdescription>
 <para>This is called when the game should draw itself. </para>        </briefdescription>
@@ -421,7 +429,22 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="146" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="145" bodyend="159"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="144" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="143" bodyend="154"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_main_menu_1_1_main_menu_1a5c1eefd1a22d854dd8d22af4d31e1ea7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu.MainMenu.UnloadContent</definition>
+        <argsstring>()</argsstring>
+        <name>UnloadContent</name>
+        <briefdescription>
+<para>UnloadContent will be called once per game and is the place to unload all content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="110" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="109" bodyend="112"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -452,7 +475,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="162" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="161" bodyend="165"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="157" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="156" bodyend="160"/>
       </memberdef>
       <memberdef kind="function" id="class_main_menu_1_1_main_menu_1a62c82a3df67519c1017690bfbb4268a0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Boolean</type>
@@ -485,7 +508,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="169" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="168" bodyend="184"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="164" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="163" bodyend="179"/>
       </memberdef>
       <memberdef kind="function" id="class_main_menu_1_1_main_menu_1a180f07b4967176593426fccd586dd1f2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Boolean</type>
@@ -518,7 +541,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="188" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="187" bodyend="193"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="183" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="182" bodyend="188"/>
       </memberdef>
       <memberdef kind="function" id="class_main_menu_1_1_main_menu_1ac23750456e0a8c7ed73899b7a9f4e2cc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -531,7 +554,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="197" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="196" bodyend="243"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="192" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="191" bodyend="238"/>
       </memberdef>
       <memberdef kind="function" id="class_main_menu_1_1_main_menu_1a8e802f6f81c13c549b3d703357edc53a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -548,36 +571,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="247" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="246" bodyend="266"/>
+        <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="242" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="241" bodyend="261"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="26">
-        <label>Microsoft::Xna::Framework::Game</label>
-      </node>
-      <node id="25">
-        <label>MainMenu.MainMenu</label>
-        <link refid="class_main_menu_1_1_main_menu"/>
-        <childnode refid="26" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="28">
-        <label>Microsoft::Xna::Framework::Game</label>
-      </node>
-      <node id="27">
-        <label>MainMenu.MainMenu</label>
-        <link refid="class_main_menu_1_1_main_menu"/>
-        <childnode refid="28" relation="public-inheritance">
-        </childnode>
-      </node>
-    </collaborationgraph>
-    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" line="15" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/MainMenu/MainMenu/MainMenu.cs" bodystart="14" bodyend="267"/>
+    <location file="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" line="15" bodyfile="C:/Users/Jonathan/Documents/GitHub/AU_Capstone/CapstoneProject/CapstoneProject/CapstoneProject/Menus/MainMenu.cs" bodystart="14" bodyend="262"/>
     <listofallmembers>
       <member refid="class_main_menu_1_1_main_menu_1af3a51e02b34c4d42c6a8007cbc1d001a" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>background_color</name></member>
       <member refid="class_main_menu_1_1_main_menu_1abb6d87950b2b1629d10b8ac3f02516c6" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>BState</name></member>
@@ -588,17 +589,18 @@
       <member refid="class_main_menu_1_1_main_menu_1a8e81550c9c7e57782aa6a13084cb27e4" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>button_texture</name></member>
       <member refid="class_main_menu_1_1_main_menu_1a112d33b909feeae2903358950e4a2e5c" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>button_timer</name></member>
       <member refid="class_main_menu_1_1_main_menu_1ae586a6b90bb1a94127848b8ab00f8923" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>BUTTON_WIDTH</name></member>
+      <member refid="class_main_menu_1_1_main_menu_1a5add63b08f5ba3c33f37c73634e1dd2c" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>Content</name></member>
       <member refid="class_main_menu_1_1_main_menu_1a0b6d6cee02191cfc2e7b881463482631" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>CONTINUE_BUTTON_INDEX</name></member>
-      <member refid="class_main_menu_1_1_main_menu_1acceb39fa89ca31f245d1352254ba7a5d" prot="protected" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>Draw</name></member>
+      <member refid="class_main_menu_1_1_main_menu_1a203e25ac8256bb110601bf03368adb5b" prot="public" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>Draw</name></member>
       <member refid="class_main_menu_1_1_main_menu_1a3a4e1eacd82453ba68754d47052046ff" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>EXIT_BUTTON_INDEX</name></member>
       <member refid="class_main_menu_1_1_main_menu_1affa4638276a43c890b0400bab052a5fd" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>frame_time</name></member>
       <member refid="class_main_menu_1_1_main_menu_1ad50e9658bd213fd07917fcc7bb813946" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>graphics</name></member>
       <member refid="class_main_menu_1_1_main_menu_1a180f07b4967176593426fccd586dd1f2" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>hit_image</name></member>
       <member refid="class_main_menu_1_1_main_menu_1ab534f33d37901b595cec76d364e0b003" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>hit_image_alpha</name></member>
       <member refid="class_main_menu_1_1_main_menu_1a62c82a3df67519c1017690bfbb4268a0" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>hit_image_alpha</name></member>
-      <member refid="class_main_menu_1_1_main_menu_1abd4cdaf409d28e550484658209d580d1" prot="protected" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>Initialize</name></member>
-      <member refid="class_main_menu_1_1_main_menu_1a5a8c3b1745c41a148093fb7d30ec6b34" prot="protected" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>LoadContent</name></member>
-      <member refid="class_main_menu_1_1_main_menu_1a471796ebf352ae7d965a532bbae387f9" prot="public" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>MainMenu</name></member>
+      <member refid="class_main_menu_1_1_main_menu_1ace7bf82bb817d6308adf02fbbb8ef2f9" prot="public" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>Initialize</name></member>
+      <member refid="class_main_menu_1_1_main_menu_1ac71e7f412103026404782bf201c3281e" prot="public" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>LoadContent</name></member>
+      <member refid="class_main_menu_1_1_main_menu_1a84898c2ab2a391dbad8c822b0a06cd8a" prot="public" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>MainMenu</name></member>
       <member refid="class_main_menu_1_1_main_menu_1aaeafd95b58ec6a240ec4fefa27024990" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>mpressed</name></member>
       <member refid="class_main_menu_1_1_main_menu_1a3562c9fe78e1655c46326ddf4f233996" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>mx</name></member>
       <member refid="class_main_menu_1_1_main_menu_1a8343011f824ded452540f07693fa05b2" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>my</name></member>
@@ -606,10 +608,9 @@
       <member refid="class_main_menu_1_1_main_menu_1ac22b3b5807c07d893d83a1d0e31821e2" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>NUMBER_OF_BUTTONS</name></member>
       <member refid="class_main_menu_1_1_main_menu_1aa692ebe07630ff69a46c2840a0e88504" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>prev_mpressed</name></member>
       <member refid="class_main_menu_1_1_main_menu_1ac5419e6c361965e7553a9583da8ee060" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>SETTINGS_BUTTON_INDEX</name></member>
-      <member refid="class_main_menu_1_1_main_menu_1ad5f3abf274c9882ef76a8ad352c3594c" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>spriteBatch</name></member>
       <member refid="class_main_menu_1_1_main_menu_1a8e802f6f81c13c549b3d703357edc53a" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>take_action_on_button</name></member>
-      <member refid="class_main_menu_1_1_main_menu_1a37cffb5fd212e50df596e69d899f03cd" prot="protected" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>UnloadContent</name></member>
-      <member refid="class_main_menu_1_1_main_menu_1a4ba5e919def22db4f51fd0097ec93bb5" prot="protected" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>Update</name></member>
+      <member refid="class_main_menu_1_1_main_menu_1a5c1eefd1a22d854dd8d22af4d31e1ea7" prot="protected" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>UnloadContent</name></member>
+      <member refid="class_main_menu_1_1_main_menu_1a1652f48a27549eeac4b72416abac36f0" prot="public" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>Update</name></member>
       <member refid="class_main_menu_1_1_main_menu_1ac23750456e0a8c7ed73899b7a9f4e2cc" prot="private" virt="non-virtual"><scope>MainMenu::MainMenu</scope><name>update_buttons</name></member>
     </listofallmembers>
   </compounddef>
