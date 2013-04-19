@@ -290,6 +290,21 @@ namespace TileEngine
         /// <param name="contentManager">The content Manager to load textures</param>
         public void LoadExtraContent(ContentManager contentManager)
         {
+            List<Texture2D> tiles = new List<Texture2D>();
+            Texture2D t = contentManager.Load<Texture2D>("Tiles//tile");
+            t.Name = "Tiles//tile";
+            Texture2D m = contentManager.Load<Texture2D>("Tiles//tileM");
+            m.Name = "Tiles//tileM";
+            Texture2D f = contentManager.Load<Texture2D>("Tiles//tileF");
+            f.Name = "Tiles//tileF";
+            Texture2D fg = contentManager.Load<Texture2D>("Tiles//FinalGrid");
+            fg.Name = "Tiles//FinalGrid";
+
+            tiles.Add(t);
+            tiles.Add(m);
+            tiles.Add(f);
+            tiles.Add(fg);
+
             //Load layers and tiles
             for (int x = 0; x < 100; x++)
             {
@@ -297,21 +312,31 @@ namespace TileEngine
                 {
                     if (this._Fringe.Layer[x, y] != null)
                     {
-                        this._Fringe.Layer[x, y].setTexture(contentManager.Load<Texture2D>(this._Fringe.Layer[x, y].Name));
-                        this._Fringe.Layer[x, y].setSourceRectangle(new Rectangle(this._Fringe.Layer[x, y].SR[0], this._Fringe.Layer[x, y].SR[1], 64, 64));
-                        this._Fringe.Layer[x, y].Scale = 320;
+                        foreach (Texture2D tile in tiles)
+                            if (this._Fringe.Layer[x, y].Name == tile.ToString())
+                            {
+                                this._Fringe.Layer[x, y].setTexture(tile);
+                                this._Fringe.Layer[x, y].setSourceRectangle(new Rectangle(this._Fringe.Layer[x, y].SR[0], this._Fringe.Layer[x, y].SR[1], 64, 64));
+                                this._Fringe.Layer[x, y].Scale = 320;
+                            }
                     }
 
                     if (this._Ground.Layer[x, y] != null)
                     {
-                        this._Ground.Layer[x, y].setTexture(contentManager.Load<Texture2D>(this._Ground.Layer[x, y].Name));
-                        this._Ground.Layer[x, y].setSourceRectangle(new Rectangle(this._Ground.Layer[x, y].SR[0], this._Ground.Layer[x, y].SR[1], 64, 64));
-                        this.Ground.Layer[x, y].Scale = 320;
+                        foreach (Texture2D tile in tiles)
+                            if (this._Ground.Layer[x, y].Name == tile.ToString())
+                            {
+                                this._Ground.Layer[x, y].setTexture(tile);
+                                this._Ground.Layer[x, y].setSourceRectangle(new Rectangle(this._Ground.Layer[x, y].SR[0], this._Ground.Layer[x, y].SR[1], 64, 64));
+                                this.Ground.Layer[x, y].Scale = 320;
+                            }
                     }
 
                     if (this._Mask.Layer[x, y] != null)
                     {
-                        this._Mask.Layer[x, y].setTexture(contentManager.Load<Texture2D>(this._Mask.Layer[x, y].Name));
+                        foreach (Texture2D tile in tiles)
+                            if (this._Mask.Layer[x, y].Name == tile.ToString())
+                                this._Mask.Layer[x, y].setTexture(tile);
                         this._Mask.Layer[x, y].setSourceRectangle(new Rectangle(this._Mask.Layer[x, y].SR[0], this._Mask.Layer[x, y].SR[1], 64, 64));
                         this.Mask.Layer[x, y].Scale = 320;
                     }
@@ -326,7 +351,7 @@ namespace TileEngine
         public void LoadPlayer(ContentManager contentManager)
         {
             //load player
-            Texture2D playerTexture = contentManager.Load<Texture2D>("shitty/shitty3.0");
+            Texture2D playerTexture = contentManager.Load<Texture2D>("shitty/FatJoe");
             Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);
             this._Player.Position = playerPosition;
 

@@ -193,7 +193,6 @@ namespace CapstoneProject
 #endif
 #if !LOAD_FROM_FILE
             a.setTexture(this.Content.Load<Texture2D>("Tiles//tile"));
-            a.Name = "Tiles//tile";
             b.setTexture(this.Content.Load<Texture2D>("Tiles//tileM"));
             b.Name = "Tiles//tileM";
             c.setTexture(this.Content.Load<Texture2D>("Tiles//tileF"));
