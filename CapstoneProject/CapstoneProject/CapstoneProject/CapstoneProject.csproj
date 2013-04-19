@@ -131,6 +131,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImageButton.cs" />
     <Compile Include="Menus\MainMenu.cs" />
     <Compile Include="Menus\MainSaveKeys.cs" />
     <Compile Include="MainSettings.cs" />
