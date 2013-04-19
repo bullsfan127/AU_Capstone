@@ -23,7 +23,7 @@ namespace TileEngine
         public const int TILE_WIDTH = 64;
 
         //offset to determine center of screen.
-        Vector2 offset = Vector2.Zero;
+        public Vector2 offset = Vector2.Zero;
 
         CustomSerialization.Serialize<Map> serializer = new CustomSerialization.Serialize<Map>();
 
@@ -158,7 +158,7 @@ namespace TileEngine
                 item.Update(gameTime);
             }
 
-            foreach (Avatar a in _NpcList)
+            foreach (Monster a in _NpcList)
             { a.Update(gameTime); }
         }
 
