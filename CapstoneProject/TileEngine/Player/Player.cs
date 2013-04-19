@@ -92,6 +92,8 @@ namespace TileEngine
         private Texture2D _rangedTexture;
 
         private int _weaponDirection = 1;
+        private int _justAttacked = 0;
+        private bool _attackReleased = true;
 
         /// <summary>
         /// Default constructor for player
@@ -137,16 +139,45 @@ namespace TileEngine
             // Vector2 Position = Vector2.Zero;
             PlayerAnimation.Position = Position;
 
+            if (_justAttacked <= 20)
+            {
+                _weapon.Update(gameTime, new Vector2(-500, -500));
+                if (_justAttacked >= 0)
+                {
+                    _justAttacked--;
+                }
+                else if (Keyboard.GetState().IsKeyUp(Keys.Space))
+                {
+                    _attackReleased = true;
+                }
+            }
+            else
+            {
+                _weapon.setDirection(_weaponDirection);
+                _weapon.Update(gameTime, Position);
+                _justAttacked--;
+                _attackReleased = false;
+            }
+
             //PlayerAnimation.Update(gameTime);
 
             base.Update(gameTime);
 
             //Reset movement to still
+            if (_justAttacked <= 0)
+            {
+                if (_weaponDirection == 1)
+                {
+                    PlayerAnimation.state = Animation.Animate.RIDLE;
+                }
+                else
+                {
+                    PlayerAnimation.state = Animation.Animate.LIDLE;
+                }
+            }
 
             _movement.X = 0;
 
-            PlayerAnimation.state = Animation.Animate.IDLE;
-            _weaponDirection = 1;
 
             // Trying to move Left or Right
             if (Keyboard.GetState().IsKeyDown(Controls.Left) || (GamePad.GetState(PlayerIndex.One).DPad.Left == ButtonState.Pressed))
@@ -162,12 +193,27 @@ namespace TileEngine
                 PlayerAnimation.state = Animation.Animate.RMOVING;
 
                 _movement.X = 5;
+                _weaponDirection = 1;
             }
 
             //Keeping track of jumping/falling speed
             if (( Keyboard.GetState().IsKeyDown(Controls.Up) || (GamePad.GetState(PlayerIndex.One).DPad.Left == ButtonState.Pressed) ) && Position.Y == 372)
             {
                 _movement.Y += -20;
+            }
+
+            // Attack
+            if ((Keyboard.GetState().IsKeyDown(Keys.Space) || (GamePad.GetState(PlayerIndex.One).Buttons.A == ButtonState.Pressed)) && _attackReleased)
+            {
+                _justAttacked = 40;
+                if (_weaponDirection == 1)
+                {
+                    PlayerAnimation.state = Animation.Animate.RATTACK;
+                }
+                else
+                {
+                    PlayerAnimation.state = Animation.Animate.LATTACK;
+                }
             }
 
             _movement.Y += 1;
@@ -212,8 +258,6 @@ namespace TileEngine
             OY = _offset.Y;
 
             map.Update(gameTime, _offset);
-            _weapon.setDirection(_weaponDirection);
-            _weapon.Update(gameTime, Position);
         }
 
         /// <summary>

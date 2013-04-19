@@ -79,7 +79,7 @@ namespace TileEngine
         {
             float x = Position.X;
             float y = Position.Y;
-            Vector2 weaponPosition = new Vector2(x+_cropPos, y+45);
+            Vector2 weaponPosition = new Vector2(x+_cropPos, y+25);
             this.Position = weaponPosition;
             //_weaponAnimation.Position = weaponPosition;
             base.Update(gameTime);
@@ -117,12 +117,12 @@ namespace TileEngine
             if (d == 1)
             {
                 _cropStart = 64;
-                _cropPos = 50;
+                _cropPos = 47;
             }
             else
             {
                 _cropStart = 0;
-                _cropPos = -50;
+                _cropPos = -47;
             }
         }
 
