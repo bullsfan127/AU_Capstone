@@ -76,7 +76,7 @@ namespace TileEngine
             }
             catch (IndexOutOfRangeException e)
             {
-                //throw e;
+                e.ToString();
             }
         }
     }

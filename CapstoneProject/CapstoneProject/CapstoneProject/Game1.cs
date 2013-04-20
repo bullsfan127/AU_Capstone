@@ -22,7 +22,7 @@ using TileEngine;
 
 namespace CapstoneProject
 {
-    public enum GAMESTATE { MAINMENU = 0, PLAY = 1, PAUSE = 2, EXIT = 3, SETTINGS = 4, NEWGAME = 5, CONTINUE = 6, MAINSETTINGS = 7, STORY = 8, SAVE = 9 };
+    public enum GAMESTATE { MAINMENU, PLAY, PAUSE, EXIT, SETTINGS, NEWGAME, CONTINUE, MAINSETTINGS, STORY, SAVE };
 
     /// <summary>
     /// This is the main type for your game
@@ -35,37 +35,54 @@ namespace CapstoneProject
         /// </summary>
         public static GAMESTATE gameState = GAMESTATE.MAINMENU;
 
+        //XNA
+        SpriteBatch spriteBatch;
+
+        GraphicsDeviceManager graphics;
+
+        //Textures
         Texture2D backgroundTexture;
+
         Texture2D story;
         Texture2D pauseBackground;
+        Texture2D playerTexture;
+        Texture2D pauseTexture;
+
+        //Menus
         MainMenu.MainMenu menu;
+
         PauseMenu.PauseMenu pauseMenu;
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
-        Coin coin = new Coin();
-        Potion potion = new Potion();
-        GroundMonster groundMonster = new GroundMonster();
-        FlyingMonster flyingMonster = new FlyingMonster();
         Settings settings;
         MainSettings msettings;
 
-        ImageButton pauseButton;
-        Texture2D pauseTexture;
+        //items
+        Coin coin = new Coin();
 
+        Potion potion = new Potion();
+
+        //Monsters
+        GroundMonster groundMonster = new GroundMonster();
+
+        FlyingMonster flyingMonster = new FlyingMonster();
+
+        //Pause Button
+        ImageButton pauseButton;
+
+        //Sound Mgr
         SoundManager soundManager;
 
-        // Represents the player
-        Player player;
-
+        //used to draw menus
         Rectangle mainFrame;
-        Rectangle pauseMainFrame;
 
-        //Health Bar
+        //Player things
         HealthBar healthBar;
 
-        Texture2D playerTexture;
         ScoreDisplay scoreDisplay;
 
+        //Player
+        Player player;
+
+        //map
         Map gameMap;
 
 #if DEBUG
@@ -82,18 +99,19 @@ namespace CapstoneProject
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferredBackBufferWidth = 600;
-            menu = new MainMenu.MainMenu(graphics, this.Content);
 
+            menu = new MainMenu.MainMenu(graphics, this.Content);
             pauseMenu = new PauseMenu.PauseMenu(graphics, this.Content);
             healthBar = new HealthBar(graphics, this.Content);
             settings = new Settings(graphics, this.Content);
             msettings = new MainSettings(graphics, this.Content);
-
             soundManager = new SoundManager(this, this.Content);
+            scoreDisplay = new ScoreDisplay(graphics);
+
+            gameMap = new Map();
         }
 
         /// <summary>
@@ -106,19 +124,16 @@ namespace CapstoneProject
         {
             menu.Initialize(this.Window);
             pauseMenu.Initialize(this.Window);
-            scoreDisplay = new ScoreDisplay(graphics);
-
-            IsMouseVisible = true;
 
             player = new Player(this.Content);
-            gameMap = new Map();
+
+            IsMouseVisible = true;
 
 #if DEBUG
             //#FPS_COUNTER
             counter = new FPS_Counter(graphics);
             counter.setVisibility(true);
 #endif
-
             base.Initialize();
         }
 
@@ -133,13 +148,13 @@ namespace CapstoneProject
             healthBar.LoadContent();
             settings.LoadContent();
             msettings.LoadContent();
-
             Controls.Load();
 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            //Crrate rectangle of screen
             mainFrame = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
-            pauseMainFrame = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
 #if DEBUG
             //#FPS_COUNTER
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
@@ -148,11 +163,9 @@ namespace CapstoneProject
             Terminal.SetSkin(TerminalThemeType.FIRE);
 
 #endif
-
+            //Load textures
             playerTexture = Content.Load<Texture2D>("shitty/FatJoe");
-            player.Initialize(playerTexture, new Vector2(0, 0));
             pauseTexture = Content.Load<Texture2D>("PauseButton");
-            pauseButton = new ImageButton(new Vector2(60, 19), pauseTexture, 0);
             backgroundTexture = Content.Load<Texture2D>("background");
             pauseBackground = Content.Load<Texture2D>("PauseBackground");
             Texture2D coinTexture = Content.Load<Texture2D>("items/Coin");
@@ -163,9 +176,14 @@ namespace CapstoneProject
             groundMonsterTexture.Name = "Monsters/Zombies";
             Texture2D flyingMonsterTexture = Content.Load<Texture2D>("Monsters/Birds");
             flyingMonsterTexture.Name = "Monsters/Birds";
-
             story = this.Content.Load<Texture2D>("story");
-            coin.Initialize(coinTexture, new Vector2(19, 19));
+
+            //create pause button
+            pauseButton = new ImageButton(new Vector2(19, 19), pauseTexture, 0);
+
+            //initialize things
+            player.Initialize(playerTexture, new Vector2(0, 0));
+            coin.Initialize(coinTexture, new Vector2(19, 250));
             potion.Initialize(potionTexture, new Vector2(83, 83));
             groundMonster.Initialize(groundMonsterTexture, new Vector2(250, 250));
             flyingMonster.Initialize(flyingMonsterTexture, new Vector2(150, 150));
@@ -193,18 +211,24 @@ namespace CapstoneProject
                 case GAMESTATE.MAINMENU:
                     menu.Update(gameTime);
                     break;
+
                 case GAMESTATE.PAUSE:
                     pauseMenu.Update(gameTime);
                     break;
+
                 case GAMESTATE.SAVE:
                     gameMap.saveMap("SavedGame.xml");
                     gameState = GAMESTATE.PAUSE;
                     break;
+
                 case GAMESTATE.SETTINGS:
                     settings.Update(gameTime);
                     break;
+
                 case GAMESTATE.NEWGAME:
                     gameMap = gameMap.LoadMap("map.xml", this.Content);
+
+                    //Add items/Mosnters to map
                     gameMap.NpcList.Add(flyingMonster);
                     gameMap.NpcList.Add(groundMonster);
                     gameMap.MapItems.Add(coin);
@@ -216,7 +240,9 @@ namespace CapstoneProject
                     gameMap.Player = player;
                     gameState = GAMESTATE.PLAY;
                     break;
+
                 case GAMESTATE.CONTINUE:
+                    //Load from savedGame file
                     try
                     {
                         gameMap = gameMap.LoadMap("SavedGame.xml", this.Content);
@@ -225,14 +251,18 @@ namespace CapstoneProject
                     }
                     catch (Exception e)
                     {
+                        e.ToString();
+                        //if fails, just load default map
                         gameMap = gameMap = gameMap.LoadMap("map.xml", this.Content);
                         gameMap.Player = player;
                     }
                     gameState = GAMESTATE.PLAY;
                     break;
+
                 case GAMESTATE.MAINSETTINGS:
                     msettings.Update(gameTime);
                     break;
+
                 case GAMESTATE.PLAY:
 
                     // Allows the game to exit
@@ -250,11 +280,7 @@ namespace CapstoneProject
                         graphics.ToggleFullScreen();
                     }
 
-                    if (keystate.IsKeyDown(Keys.S))
-                    {
-                        gameMap.saveMap("SavedGame.xml");
-                    }
-
+                    //Update things
                     player.Update(gameTime, gameMap);
                     pauseButton.Update(gameTime);
                     healthBar.Update(gameTime, player);
@@ -293,42 +319,43 @@ namespace CapstoneProject
             {
                 case GAMESTATE.MAINMENU:
                     GraphicsDevice.Clear(Color.Black);
-
                     menu.Draw(gameTime, spriteBatch, this.backgroundTexture, mainFrame);
                     break;
 
                 case GAMESTATE.SAVE:
-                    pauseMenu.Draw(gameTime, spriteBatch, this.pauseBackground, pauseMainFrame);
+                    pauseMenu.Draw(gameTime, spriteBatch, this.pauseBackground, mainFrame);
                     break;
+
                 case GAMESTATE.STORY:
                     spriteBatch.Begin();
                     spriteBatch.Draw(story, mainFrame, Color.White);
-                    if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                    if (Keyboard.GetState().IsKeyDown(Keys.Enter) || GamePad.GetState(PlayerIndex.One).IsButtonDown(Buttons.A))
                         gameState = GAMESTATE.NEWGAME;
                     spriteBatch.End();
                     break;
+
                 case GAMESTATE.PLAY:
                     GraphicsDevice.Clear(Color.CornflowerBlue);
                     gameMap.Draw(spriteBatch, gameTime);
                     healthBar.Draw(gameTime, spriteBatch);
-                    // TODO: Loop through all items instead of calling each one individually
-                    //  coin.Draw(spriteBatch, gameTime);
-                    //   potion.Draw(spriteBatch, gameTime);
                     scoreDisplay.Draw(spriteBatch, gameTime);
                     pauseButton.Draw(gameTime, spriteBatch);
                     break;
+
                 case GAMESTATE.PAUSE:
-                    // GraphicsDevice.Clear(Color.Gray);
-                    pauseMenu.Draw(gameTime, spriteBatch, this.pauseBackground, pauseMainFrame);
+                    pauseMenu.Draw(gameTime, spriteBatch, this.pauseBackground, mainFrame);
                     break;
+
                 case GAMESTATE.SETTINGS:
                     GraphicsDevice.Clear(Color.Black);
                     settings.Draw(gameTime, spriteBatch);
                     break;
+
                 case GAMESTATE.MAINSETTINGS:
                     GraphicsDevice.Clear(Color.Black);
                     msettings.Draw(gameTime, spriteBatch);
                     break;
+
                 case GAMESTATE.EXIT:
                     this.Exit();
                     break;
