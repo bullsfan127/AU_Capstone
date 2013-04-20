@@ -213,7 +213,12 @@ namespace TileEngine
             // Trying to move Left or Right
             if (Keyboard.GetState().IsKeyDown(Controls.Left))
             {
-                PlayerAnimation.state = Animation.Animate.LMOVING;
+                // Prevent attack animation from being cut short
+                if (PlayerAnimation.lastState != Animation.Animate.LATTACK && PlayerAnimation.lastState != Animation.Animate.RATTACK)
+                {
+                    // Left moving animation
+                    PlayerAnimation.state = Animation.Animate.LMOVING;
+                }
 
                 _movement.X = -5;
                 _weaponDirection = -1;
@@ -221,7 +226,12 @@ namespace TileEngine
 
             else if (Keyboard.GetState().IsKeyDown(Controls.Right))
             {
-                PlayerAnimation.state = Animation.Animate.RMOVING;
+                // Prevent attack animation from being cut short
+                if (PlayerAnimation.lastState != Animation.Animate.LATTACK && PlayerAnimation.lastState != Animation.Animate.RATTACK)
+                {
+                    // Right moving animation
+                    PlayerAnimation.state = Animation.Animate.RMOVING;
+                }
 
                 _movement.X = 5;
                 _weaponDirection = 1;
@@ -235,7 +245,7 @@ namespace TileEngine
             }
 
             // Attack
-            if ((Keyboard.GetState().IsKeyDown(Keys.Space) || (GamePad.GetState(PlayerIndex.One).Buttons.A == ButtonState.Pressed)) && _attackReleased)
+            if ((Keyboard.GetState().IsKeyDown(Controls.Attack) || (GamePad.GetState(PlayerIndex.One).Buttons.A == ButtonState.Pressed)) && _attackReleased)
             {
                 _justAttacked = 40;
                 if (_weaponDirection == 1)
@@ -300,12 +310,12 @@ namespace TileEngine
             if (Position.X + _movement.X > 500)
             {
                 _offset.X += Position.X + _movement.X - 500;
-                Position = new Vector2(500, Position.Y + _movement.Y);
+                Position = new Vector2(500, Position.Y);
             }
             else if (Position.X + _movement.X < 100 && _offset.X > 0)
             {
                 _offset.X += Position.X + _movement.X - 100;
-                Position = new Vector2(100, Position.Y + _movement.Y);
+                Position = new Vector2(100, Position.Y);
             }
             else
                 Position = new Vector2(Position.X + _movement.X, Position.Y);

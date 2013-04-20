@@ -69,6 +69,17 @@ namespace TileEngine
                     movement.Y = 0;
                     relPosition.Y = 372;
                 }
+
+
+                if (movement.X < 0)
+                {
+                    _monsterAnimation.state = Animation.Animate.LMOVING;
+                }
+                else
+                {
+                    _monsterAnimation.state = Animation.Animate.RMOVING;
+                }
+
                 //actually move
                 Position += movement;
             }

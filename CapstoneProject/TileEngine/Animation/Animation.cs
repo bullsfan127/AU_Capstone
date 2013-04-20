@@ -280,13 +280,13 @@ namespace TileEngine
                         currentFrame = 4;
                         frameCount = 5;
                         this.state = Animate.RATTACK;
-                        this.frameTime = this.initialFrameTime + 75;
+                        this.frameTime = 325;
                         break;
                     case Animate.LATTACK:
                         currentFrame = 7;
                         frameCount = 8;
                         this.state = Animate.LATTACK;
-                        this.frameTime = this.initialFrameTime + 75;
+                        this.frameTime = 325;
                         break;
                     default:
                         currentFrame = 0;
