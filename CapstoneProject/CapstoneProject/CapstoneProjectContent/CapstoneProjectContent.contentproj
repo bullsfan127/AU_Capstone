@@ -345,7 +345,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PauseButton.jpg">
+    <Compile Include="PauseButton.png">
       <Name>PauseButton</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
