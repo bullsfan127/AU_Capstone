@@ -46,6 +46,7 @@ namespace MapEditor.GUI
         {
             System.Windows.Forms.OpenFileDialog openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             openFileDialog1.InitialDirectory = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath));
+            openFileDialog1.Filter = "XML Files (.xml)|*.xml|All Files (*.*)|*.*";
             System.Windows.Forms.DialogResult result = openFileDialog1.ShowDialog();
 
             if (result == System.Windows.Forms.DialogResult.OK) // Test result.

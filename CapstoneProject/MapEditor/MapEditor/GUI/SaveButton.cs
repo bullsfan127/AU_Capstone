@@ -49,6 +49,7 @@ namespace MapEditor.GUI
         {
             System.Windows.Forms.SaveFileDialog saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             saveFileDialog1.InitialDirectory = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath));
+            saveFileDialog1.Filter = "XML Files (.xml)|*.xml|All Files (*.*)|*.*";
 
             System.Windows.Forms.DialogResult result = saveFileDialog1.ShowDialog();
 
