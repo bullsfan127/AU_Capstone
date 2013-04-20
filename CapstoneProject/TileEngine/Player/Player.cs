@@ -74,6 +74,10 @@ namespace TileEngine
         // The score for the entire game
         private int _totalScore = 0;
 
+        private bool _invulnerable = false;
+
+        private int _invulnerableTimer = 0;
+
         public Microsoft.Xna.Framework.Vector2 Movement
         {
             get { return _movement; }
@@ -120,6 +124,18 @@ namespace TileEngine
         {
             get { return _totalScore; }
             set { _totalScore = value; }
+        }
+
+        public bool Invulnerable
+        {
+            get { return _invulnerable; }
+            set { _invulnerable = value; }
+        }
+
+        public int InvulnerableTimer
+        {
+            get { return _invulnerableTimer; }
+            set { _invulnerableTimer = value; }
         }
 
         /// <summary>
@@ -170,6 +186,19 @@ namespace TileEngine
             // Vector2 Position = Vector2.Zero;
             PlayerAnimation.Position = Position;
 
+            // Reset Invulnerability
+            if (_invulnerableTimer > 0)
+            {
+                _invulnerableTimer--;
+            }
+            else if (_invulnerableTimer == 0)
+            {
+                _invulnerableTimer--;
+                setInvulnerable(false);
+            }
+
+
+            // Prevent repeated quick attacks
             if (_justAttacked <= 20)
             {
                 _weapon.Update(gameTime, new Vector2(-500, -500));
@@ -189,6 +218,7 @@ namespace TileEngine
                 _justAttacked--;
                 _attackReleased = false;
             }
+
             //PlayerAnimation.Update(gameTime);
 
             base.Update(gameTime);
@@ -197,7 +227,7 @@ namespace TileEngine
 
             _movement.X = 0;
 
-            //Reset movement to still
+            // Reset movement to still
             if (_justAttacked <= 0)
             {
                 if (_weaponDirection == 1)
@@ -404,6 +434,21 @@ namespace TileEngine
                 // Has no armor
                 this._health -= change;
             }
+            this.setInvulnerable(true);
+        }
+
+        private void setInvulnerable(bool v)
+        {
+            _invulnerable = v;
+            if (_invulnerable)
+            {
+                _invulnerableTimer = 50;
+            }
+        }
+
+        public bool getInvulnerable()
+        {
+            return _invulnerable;
         }
 
         /// <summary>

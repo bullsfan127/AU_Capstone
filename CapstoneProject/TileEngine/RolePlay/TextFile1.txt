@@ -1,0 +1,58 @@
+﻿// The code to use once collisions are introduced.
+// Note that the timing of the invulnerability and
+// of the attackable have not been tested and may
+// need to be adjusted.  Monster attackable is so 
+// that the sword can not take out all life with
+// just one single attack.
+
+
+
+// Player -> Any Item
+
+if (item.getHealth() > 0)
+{
+    player.increaseHealth(item.getHealth());
+} 
+else if (item.getScore() > 0)
+{
+    player.increaseScore(item.getScore());
+}
+else if (item.getArmor() > 0)
+{
+    player.addArmor();
+}
+
+// Remove item from map
+
+
+
+//=======================
+//=======================
+
+// Player -> Any Monster
+
+if (!player.getInvulnerable())
+{
+    player.decreaseHealth(monster.MaxDamage)
+}
+
+// Do we check for 0 health here or is that done in the game1 class or elsewhere?
+// How do we get to the death end condition?
+
+
+
+//=======================
+//=======================
+
+// Monster -> Any Weapon
+
+if (monster.isAttackable())
+{
+    monster.decreaseHealth(player.getWeapon().getDamage());
+}
+
+if (monster.getHealth() <= 0)
+{
+    // Add coin to map at monster's location
+    // Remove monster from map
+}
