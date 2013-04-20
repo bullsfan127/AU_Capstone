@@ -235,10 +235,10 @@ namespace TileEngine
         /// Save map to disk
         /// </summary>
         /// <param name="filename">The name you want to give the xml file</param>
-        public void saveMap(string filename = "SaveGame.xml")
+        public void saveMap(string filename = "SaveGame.xml", bool path = true)
         {
             serializer.FileName = filename;
-            serializer.Save(this, true);
+            serializer.Save(this, true, path);
         }
 
         /// <summary>
@@ -247,14 +247,14 @@ namespace TileEngine
         /// <param name="filename">Name of map being loaded</param>
         /// <param name="contentManager">The contentManager to load textures</param>
         /// <returns></returns>
-        public Map LoadMap(string filename, ContentManager contentManager)
+        public Map LoadMap(string filename, ContentManager contentManager, bool path = true)
         {
             int HW = 600;
             int RC = 10;
             int MWH = 100;
             int s = 0;
             Map newMap = new Map();
-            newMap = serializer.Load(filename);
+            newMap = serializer.Load(filename, path);
             newMap.LoadExtraContent(contentManager);
 
             newMap.Fringe.MaxViewPortHeight = HW;
@@ -342,36 +342,6 @@ namespace TileEngine
                     }
                 }
             }
-
-            List<Texture2D> monsters = new List<Texture2D>();
-            Texture2D z = contentManager.Load<Texture2D>("Monsters/Zombies");
-            z.Name = "Monsters/Zombies";
-            Texture2D b = contentManager.Load<Texture2D>("Monsters/Birds");
-            b.Name = "Monsters/Birds";
-            Texture2D spriteStrip;
-            //load monsters
-            foreach (Monster a in _NpcList)
-            {
-                Type type = a.GetType();
-                spriteStrip = type == typeof(GroundMonster) ? z : b;
-                a.Position = new Vector2(a.X, a.Y);
-                a.Initialize(spriteStrip, a.Position);
-            }
-
-            //load items
-            List<Texture2D> items = new List<Texture2D>();
-            Texture2D c = contentManager.Load<Texture2D>("items/Coin");
-            c.Name = "items/Coin";
-            Texture2D p = contentManager.Load<Texture2D>("items/Potion");
-            p.Name = "items/Potion";
-            Texture2D spriteStrip2;
-
-            foreach (Item a in _mapItems)
-            {
-                Type type = a.GetType();
-                spriteStrip2 = type == typeof(Coin) ? c : p;
-                a.Initialize(spriteStrip2, new Vector2(a.X, a.Y));
-            }
         }
 
         /// <summary>
@@ -403,6 +373,36 @@ namespace TileEngine
             temp._swordTexture = contentManager.Load<Texture2D>("Items//boomerang");
             temp.Weapon.Initialize(temp._rangedTexture, temp.Position);
             this.Player = temp;
+
+            List<Texture2D> monsters = new List<Texture2D>();
+            Texture2D z = contentManager.Load<Texture2D>("Monsters/Zombies");
+            z.Name = "Monsters/Zombies";
+            Texture2D b = contentManager.Load<Texture2D>("Monsters/Birds");
+            b.Name = "Monsters/Birds";
+            Texture2D spriteStrip;
+            //load monsters
+            foreach (Monster a in _NpcList)
+            {
+                Type type = a.GetType();
+                spriteStrip = type == typeof(GroundMonster) ? z : b;
+                a.Position = new Vector2(a.X, a.Y);
+                a.Initialize(spriteStrip, a.Position);
+            }
+
+            //load items
+            List<Texture2D> items = new List<Texture2D>();
+            Texture2D c = contentManager.Load<Texture2D>("items/Coin");
+            c.Name = "items/Coin";
+            Texture2D p = contentManager.Load<Texture2D>("items/Potion");
+            p.Name = "items/Potion";
+            Texture2D spriteStrip2;
+
+            foreach (Item a in _mapItems)
+            {
+                Type type = a.GetType();
+                spriteStrip2 = type == typeof(Coin) ? c : p;
+                a.Initialize(spriteStrip2, new Vector2(a.X, a.Y));
+            }
         }
     }
 }

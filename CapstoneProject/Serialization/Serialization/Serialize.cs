@@ -84,14 +84,17 @@ namespace CustomSerialization
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns></returns>
-        public T Load(string fileName)
+        public T Load(string fileName, bool _path = true)
         {
             if (_complex)
             {
                 complexSerializer = new SharpSerializer();
                 try
                 {
-                    _classType = (T)complexSerializer.Deserialize("XMLfiles/" + fileName);
+                    if (_path)
+                        _classType = (T)complexSerializer.Deserialize("XMLfiles/" + fileName);
+                    else
+                        _classType = (T)complexSerializer.Deserialize(fileName);
                 }
                 catch (Exception e)
                 {
@@ -131,14 +134,17 @@ namespace CustomSerialization
         /// </summary>
         /// <param name="classType"></param>
         /// <param name="complex"></param>
-        public void Save(T classType, bool complex = true)
+        public void Save(T classType, bool complex = true, bool path = true)
         {
             _complex = complex;
 
             if (_complex)
             {
                 complexSerializer = new SharpSerializer();
-                complexSerializer.Serialize(classType, "XMLfiles/" + this._fileName);
+                if (path)
+                    complexSerializer.Serialize(classType, "XMLfiles/" + this._fileName);
+                else
+                    complexSerializer.Serialize(classType, this._fileName);
                 _classType = classType;
                 //try
                 //{

@@ -3,12 +3,15 @@ using System;
 namespace MapEditor
 {
 #if WINDOWS || XBOX
-    static class Program
+
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        static void Main(string[] args)
+        ///
+        [STAThread]
+        private static void Main(string[] args)
         {
             using (MapEditorMain game = new MapEditorMain())
             {
@@ -16,6 +19,6 @@ namespace MapEditor
             }
         }
     }
+
 #endif
 }
-

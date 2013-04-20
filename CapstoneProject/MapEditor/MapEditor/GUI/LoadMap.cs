@@ -16,27 +16,24 @@ using TileEngine;
 
 namespace MapEditor.GUI
 {
-    public class SaveButton : XButton
+    public class LoadMap : XButton
     {
-        public Map saveMap;
+        public Map loadMap;
         Label buttonLable;
+        ContentManager content;
+        public bool newMap = false;
 
-        public SaveButton(Vector2 Position, Texture2D ButtonTexture, Map map, SpriteFont font)
+        public LoadMap(Vector2 Position, Texture2D ButtonTexture, Map map, SpriteFont font, ContentManager _content)
             : base(Position, ButtonTexture)
         {
-            saveMap = map;
-            buttonLable = new Label(font, "Save Map", new Vector2(Position.X + 20, Position.Y + 20), Color.Black, 1.0f);
+            loadMap = map;
+            buttonLable = new Label(font, "Load Map", new Vector2(Position.X + 20, Position.Y + 20), Color.Black, 1.0f);
+            content = _content;
         }
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-        }
-
-        public void UpdateM(GameTime gameTime, Map map)
-        {
-            saveMap = map;
-            this.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spritebatch)
@@ -47,17 +44,17 @@ namespace MapEditor.GUI
 
         public override void FireEvent()
         {
-            System.Windows.Forms.SaveFileDialog saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            saveFileDialog1.InitialDirectory = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath));
-
-            System.Windows.Forms.DialogResult result = saveFileDialog1.ShowDialog();
+            System.Windows.Forms.OpenFileDialog openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            openFileDialog1.InitialDirectory = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath));
+            System.Windows.Forms.DialogResult result = openFileDialog1.ShowDialog();
 
             if (result == System.Windows.Forms.DialogResult.OK) // Test result.
             {
-                string file = saveFileDialog1.FileName;
-                saveMap.saveMap(file, false);
-            }
+                newMap = true;
+                string file = openFileDialog1.FileName;
 
+                loadMap = loadMap.LoadMap(file, content, false);
+            }
             base.FireEvent();
         }
     }

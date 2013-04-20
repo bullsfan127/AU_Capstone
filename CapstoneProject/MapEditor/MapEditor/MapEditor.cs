@@ -52,6 +52,7 @@ namespace MapEditor
 
         SaveButton saveButton;
         ResetButton resetButton;
+        LoadMap loadButton;
 
         public MapEditorMain()
         {
@@ -82,6 +83,8 @@ namespace MapEditor
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
+        ///
+
         protected override void LoadContent()
         {
             Texture2D panelTexture = this.Content.Load<Texture2D>("Panel540X540");
@@ -111,6 +114,7 @@ namespace MapEditor
             LayerSelectionPanel.AddChild(window.layerLabel, new Vector2(buttonTexture.Width + 30, 30));
 
             saveButton = new SaveButton(Vector2.Zero, buttonTexture, window.Map, this.Content.Load<SpriteFont>("FPS"));
+            loadButton = new LoadMap(new Vector2(0, 300), buttonTexture, window.Map, this.Content.Load<SpriteFont>("FPS"), this.Content);
             resetButton = new ResetButton(new Vector2(0, 100), buttonTexture, this.Content.Load<SpriteFont>("FPS"), graphics, Content, window);
         }
 
@@ -139,8 +143,13 @@ namespace MapEditor
             TileSelectorPanel.Update(gameTime);
             LayerSelectionPanel.Update(gameTime);
             saveButton.UpdateM(gameTime, window.Map);
-            window.Map = null;
-            window.Map = saveButton.saveMap;
+            loadButton.Update(gameTime);
+            if (loadButton.newMap)
+            {
+                window.Map = null;
+                window.Map = loadButton.loadMap;
+                loadButton.newMap = false;
+            }
             resetButton.Update(gameTime);
             base.Update(gameTime);
         }
@@ -160,6 +169,7 @@ namespace MapEditor
             LayerSelectionPanel.Draw(gameTime, spriteBatch);
             saveButton.Draw(gameTime, spriteBatch);
             resetButton.Draw(gameTime, spriteBatch);
+            loadButton.Draw(gameTime, spriteBatch);
             base.Draw(gameTime);
         }
     }
