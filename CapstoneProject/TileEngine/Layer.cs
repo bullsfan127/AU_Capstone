@@ -14,7 +14,14 @@ namespace TileEngine
 {
     public class Layer<T>
     {
-        private T[,] layer;
+        private T[,] _layer;
+
+
+        public T[,] layer
+        {
+            get { return _layer; }
+            set { _layer = value; }
+        }
 
         /// <summary>
         /// The Constuctor for a generic Layer
@@ -23,7 +30,9 @@ namespace TileEngine
         public Layer(Vector2 size)
         {
             //Probably going to need to populate the Array
-            layer = new T[(int)size.X, (int)size.Y];
+            _layer = new T[(int)size.X, (int)size.Y];
+            
+           
         }
 
         public Layer()
@@ -41,7 +50,7 @@ namespace TileEngine
 
             try
             {
-                output = layer[(int)location.X, (int)location.Y];
+                output = _layer[(int)location.X, (int)location.Y];
             }
             catch (IndexOutOfRangeException e)
             {
@@ -60,7 +69,7 @@ namespace TileEngine
         {
             try
             {
-                layer[(int)location.X, (int)location.Y] = newItem;
+                _layer[(int)location.X, (int)location.Y] = newItem;
             }
             catch (IndexOutOfRangeException e)
             {
@@ -72,7 +81,7 @@ namespace TileEngine
         {
             try
             {
-                layer[(int)(location.X + a.Position.X), (int)(location.Y + a.Position.Y)] = newItem;
+                _layer[(int)(location.X + a.Position.X), (int)(location.Y + a.Position.Y)] = newItem;
             }
             catch (IndexOutOfRangeException e)
             {

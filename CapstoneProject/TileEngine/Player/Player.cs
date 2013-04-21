@@ -251,18 +251,18 @@ namespace TileEngine
             _movement.Y += 1;
 
             //establish ceiling and floor
-            if (Position.Y + _movement.Y < 0)//ceiling
-            {
-                Position = new Vector2(Position.X, 0);
-            }
-            else if (Position.Y + _movement.Y > 372)//floor
-            {
-                Position = new Vector2(Position.X, 372);
-                _movement.Y = 0;
-                Jump = true;
-            }
+            //if (Position.Y + _movement.Y < 0)//ceiling
+            //{
+            //    Position = new Vector2(Position.X, 0);
+            //}
+            //else if (Position.Y + _movement.Y > 372)//floor
+            //{
+            //    Position = new Vector2(Position.X, 372);
+            //    _movement.Y = 0;
+            //    Jump = true;
+            //}
 
-            /*           for (int i = 0; i < 2; i++)
+                      for (int i = 0; i < 2; i++)
                        {
                            for (int j = 0; j < 3; j++)
                            {
@@ -295,7 +295,7 @@ namespace TileEngine
                                    }
                            }
                        }
-             */
+             
             //establish left and right bound for "dead zone"
             if (Position.X + _movement.X > 500)
             {

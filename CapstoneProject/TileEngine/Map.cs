@@ -281,6 +281,7 @@ namespace TileEngine
             newMap.Ground.MapHeight = MWH;
             newMap.Ground.Scale = s;
 
+           
             return newMap;
         }
 
@@ -304,7 +305,7 @@ namespace TileEngine
             tiles.Add(m);
             tiles.Add(f);
             tiles.Add(fg);
-
+            _CollisionLayer = new Layer<Rectangle>(new Vector2(Ground.MapWidth, Ground.MapHeight));
             //Load layers and tiles
             for (int x = 0; x < 100; x++)
             {
@@ -329,8 +330,15 @@ namespace TileEngine
                                 this._Ground.Layer[x, y].setTexture(tile);
                                 this._Ground.Layer[x, y].setSourceRectangle(new Rectangle(this._Ground.Layer[x, y].SR[0], this._Ground.Layer[x, y].SR[1], 64, 64));
                                 this.Ground.Layer[x, y].Scale = 320;
+                                _CollisionLayer.layer[x, y] = new Rectangle(this._Ground.Layer[x, y].SR[0], this._Ground.Layer[x, y].SR[1], 64, 64);
                             }
                     }
+                    else 
+                    if (this._Ground.Layer[x, y] == null)
+                    {
+                        _CollisionLayer.layer[x, y] = Rectangle.Empty;
+                    }
+
 
                     if (this._Mask.Layer[x, y] != null)
                     {

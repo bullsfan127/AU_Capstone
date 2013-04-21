@@ -226,7 +226,7 @@ namespace CapstoneProject
                     break;
 
                 case GAMESTATE.NEWGAME:
-                    gameMap = gameMap.LoadMap("map.xml", this.Content);
+                    gameMap = gameMap.LoadMap("TestMap.xml", this.Content, false);
 
                     //Add items/Mosnters to map
                     gameMap.NpcList.Add(flyingMonster);
@@ -245,7 +245,7 @@ namespace CapstoneProject
                     //Load from savedGame file
                     try
                     {
-                        gameMap = gameMap.LoadMap("SavedGame.xml", this.Content);
+                        gameMap = gameMap.LoadMap("TestMap.xml", this.Content);
                         gameMap.LoadPlayer(this.Content);
                         player = (Player)gameMap.Player;
                     }

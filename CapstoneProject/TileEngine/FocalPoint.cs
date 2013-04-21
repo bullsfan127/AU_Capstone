@@ -45,16 +45,16 @@ namespace TileEngine
         {
             KeyboardState keyboard = Keyboard.GetState();
 
-            if (lastmove - gameTime.TotalGameTime.Milliseconds > 300)
+            if (lastmove - gameTime.TotalGameTime.Milliseconds > 30)
                 if (keyboard.IsKeyDown(Keys.Up))
                 {
-                    if (Position.X > 0)
+                    if (Position.Y > 0)
                         Position = new Vector2(Position.X, Position.Y - 10);
                     lastmove = gameTime.TotalGameTime.Milliseconds;
                 }
                 else if (keyboard.IsKeyDown(Keys.Down))
                 {
-                    if (Position.Y < MaxYTiles - 10)
+                    if (Position.Y < MaxYTiles)
                         Position = new Vector2(Position.X, Position.Y + 10);
                     lastmove = gameTime.TotalGameTime.Milliseconds;
                 }
@@ -66,7 +66,7 @@ namespace TileEngine
                 }
                 else if (keyboard.IsKeyDown(Keys.Right))
                 {
-                    if (Position.X < MaxXTiles - 10)
+                    if (Position.X < MaxXTiles)
                         Position = new Vector2(Position.X + 10, Position.Y);
                     lastmove = gameTime.TotalGameTime.Milliseconds;
                 }
