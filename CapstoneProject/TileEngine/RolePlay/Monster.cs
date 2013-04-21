@@ -71,6 +71,20 @@ namespace TileEngine
             set { _spriteFrame = value; }
         }
 
+        private int _attackableTimer = 0;
+        public int AttackableTimer
+        {
+            get { return _attackableTimer; }
+            set { _attackableTimer = value; }
+        }
+
+        private bool _attackable = true;
+        public bool Attackable
+        {
+            get { return _attackable; }
+            set { _attackable = value; }
+        }
+
         public Monster() { }
 
         public override void Initialize(Texture2D spriteStrip, Vector2 position)
@@ -89,6 +103,17 @@ namespace TileEngine
 
         public virtual void Update(GameTime gameTime, Vector2 player, Vector2 offset)
         {
+            // Reset Attackable
+            if (_attackableTimer > 0)
+            {
+                _attackableTimer--;
+            }
+            else if (_attackableTimer == 0)
+            {
+                _attackableTimer--;
+                setAttackable(true);
+            }
+
             _monsterAnimation.Position = Position;
             _monsterAnimation.Update(gameTime);
         }
@@ -115,6 +140,20 @@ namespace TileEngine
         public int getHealth()
         {
             return this._health;
+        }
+
+        public void setAttackable(bool v)
+        {
+            _attackable = v;
+            if (!_attackable)
+            {
+                _attackableTimer = 10;
+            }
+        }
+
+        public bool isAttackable()
+        {
+            return _attackable;
         }
     }
 }

@@ -280,6 +280,16 @@ namespace CapstoneProject
                         graphics.ToggleFullScreen();
                     }
 
+                    if (keystate.IsKeyDown(Keys.S))
+                    {
+                        gameMap.saveMap("SavedGame.xml");
+                    }
+
+                    if (Keyboard.GetState().IsKeyDown(Controls.Up) && player.Jump)
+                    {
+                        soundManager.PlaySound(5);
+                    }
+
                     //Update things
                     player.Update(gameTime, gameMap);
                     pauseButton.Update(gameTime);

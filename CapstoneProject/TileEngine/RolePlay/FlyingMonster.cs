@@ -57,6 +57,15 @@ namespace TileEngine
                 else
                     movement.Y = -2;
 
+                if (movement.X < 0)
+                {
+                    _monsterAnimation.state = Animation.Animate.BLEFT;
+                }
+                else
+                {
+                    _monsterAnimation.state = Animation.Animate.BRIGHT;
+                }
+
                 Position += movement;
             }
 

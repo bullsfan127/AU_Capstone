@@ -24,7 +24,13 @@ namespace TileEngine
         private Rectangle PlayerRect;
 
         //Player is on the ground and can jump
-        private bool Jump;
+        private bool jump;
+
+        public bool Jump
+        {
+            get { return jump; }
+            set { jump = value; }
+        }
 
         // State of the player
         private bool _active;
@@ -74,6 +80,10 @@ namespace TileEngine
         // The score for the entire game
         private int _totalScore = 0;
 
+        private bool _invulnerable = false;
+
+        private int _invulnerableTimer = 0;
+
         public Microsoft.Xna.Framework.Vector2 Movement
         {
             get { return _movement; }
@@ -120,6 +130,18 @@ namespace TileEngine
         {
             get { return _totalScore; }
             set { _totalScore = value; }
+        }
+
+        public bool Invulnerable
+        {
+            get { return _invulnerable; }
+            set { _invulnerable = value; }
+        }
+
+        public int InvulnerableTimer
+        {
+            get { return _invulnerableTimer; }
+            set { _invulnerableTimer = value; }
         }
 
         /// <summary>
@@ -170,6 +192,19 @@ namespace TileEngine
             // Vector2 Position = Vector2.Zero;
             PlayerAnimation.Position = Position;
 
+            // Reset Invulnerability
+            if (_invulnerableTimer > 0)
+            {
+                _invulnerableTimer--;
+            }
+            else if (_invulnerableTimer == 0)
+            {
+                _invulnerableTimer--;
+                setInvulnerable(false);
+            }
+
+
+            // Prevent repeated quick attacks
             if (_justAttacked <= 20)
             {
                 _weapon.Update(gameTime, new Vector2(-500, -500));
@@ -189,6 +224,7 @@ namespace TileEngine
                 _justAttacked--;
                 _attackReleased = false;
             }
+
             //PlayerAnimation.Update(gameTime);
 
             base.Update(gameTime);
@@ -197,7 +233,7 @@ namespace TileEngine
 
             _movement.X = 0;
 
-            //Reset movement to still
+            // Reset movement to still
             if (_justAttacked <= 0)
             {
                 if (_weaponDirection == 1)
@@ -213,7 +249,12 @@ namespace TileEngine
             // Trying to move Left or Right
             if (Keyboard.GetState().IsKeyDown(Controls.Left))
             {
-                PlayerAnimation.state = Animation.Animate.LMOVING;
+                // Prevent attack animation from being cut short
+                if (PlayerAnimation.lastState != Animation.Animate.LATTACK && PlayerAnimation.lastState != Animation.Animate.RATTACK)
+                {
+                    // Left moving animation
+                    PlayerAnimation.state = Animation.Animate.LMOVING;
+                }
 
                 _movement.X = -5;
                 _weaponDirection = -1;
@@ -221,21 +262,26 @@ namespace TileEngine
 
             else if (Keyboard.GetState().IsKeyDown(Controls.Right))
             {
-                PlayerAnimation.state = Animation.Animate.RMOVING;
+                // Prevent attack animation from being cut short
+                if (PlayerAnimation.lastState != Animation.Animate.LATTACK && PlayerAnimation.lastState != Animation.Animate.RATTACK)
+                {
+                    // Right moving animation
+                    PlayerAnimation.state = Animation.Animate.RMOVING;
+                }
 
                 _movement.X = 5;
                 _weaponDirection = 1;
             }
 
             //Keeping track of jumping/falling speed
-            if (Keyboard.GetState().IsKeyDown(Controls.Up) && Jump)
+            if (Keyboard.GetState().IsKeyDown(Controls.Up) && jump)
             {
                 _movement.Y += -20;
-                Jump = false;
+                jump = false;
             }
 
             // Attack
-            if ((Keyboard.GetState().IsKeyDown(Keys.Space) || (GamePad.GetState(PlayerIndex.One).Buttons.A == ButtonState.Pressed)) && _attackReleased)
+            if ((Keyboard.GetState().IsKeyDown(Controls.Attack) || (GamePad.GetState(PlayerIndex.One).Buttons.A == ButtonState.Pressed)) && _attackReleased)
             {
                 _justAttacked = 40;
                 if (_weaponDirection == 1)
@@ -259,7 +305,7 @@ namespace TileEngine
             {
                 Position = new Vector2(Position.X, 372);
                 _movement.Y = 0;
-                Jump = true;
+                jump = true;
             }
 
             /*           for (int i = 0; i < 2; i++)
@@ -300,12 +346,12 @@ namespace TileEngine
             if (Position.X + _movement.X > 500)
             {
                 _offset.X += Position.X + _movement.X - 500;
-                Position = new Vector2(500, Position.Y + _movement.Y);
+                Position = new Vector2(500, Position.Y);
             }
             else if (Position.X + _movement.X < 100 && _offset.X > 0)
             {
                 _offset.X += Position.X + _movement.X - 100;
-                Position = new Vector2(100, Position.Y + _movement.Y);
+                Position = new Vector2(100, Position.Y);
             }
             else
                 Position = new Vector2(Position.X + _movement.X, Position.Y);
@@ -394,6 +440,21 @@ namespace TileEngine
                 // Has no armor
                 this._health -= change;
             }
+            this.setInvulnerable(true);
+        }
+
+        private void setInvulnerable(bool v)
+        {
+            _invulnerable = v;
+            if (_invulnerable)
+            {
+                _invulnerableTimer = 50;
+            }
+        }
+
+        public bool getInvulnerable()
+        {
+            return _invulnerable;
         }
 
         /// <summary>

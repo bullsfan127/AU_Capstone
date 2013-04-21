@@ -92,6 +92,7 @@ namespace TileEngine
             get { return _scale; }
             set { _scale = value; }
         }
+    
 
         // The image of the item
         private Texture2D SpriteStrip;
@@ -100,11 +101,16 @@ namespace TileEngine
 
         public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
-            // Set starting position of the player
+            // Set starting position of the item
             Position = position;
             X = Position.X;
             Y = Position.Y;
             SpriteStrip = spriteStrip;
+        }
+
+        public virtual void Update(GameTime gameTime, Vector2 player, Vector2 offset)
+        {
+           
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)

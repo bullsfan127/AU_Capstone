@@ -32,7 +32,7 @@ namespace TileEngine
             Scale = 1.0f;
         }
 
-        public void Initialize(Texture2D spriteStrip, Vector2 position)
+        public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             _boomerangAnimation = new Animation();
 
