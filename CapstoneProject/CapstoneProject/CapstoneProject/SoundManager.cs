@@ -77,7 +77,7 @@ namespace CapstoneProject
                         i = 2;
                         break;
                     default:
-                        i = 1;
+                        i = 3;
                         break;
                 }
 
