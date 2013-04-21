@@ -24,7 +24,13 @@ namespace TileEngine
         private Rectangle PlayerRect;
 
         //Player is on the ground and can jump
-        private bool Jump;
+        private bool jump;
+
+        public bool Jump
+        {
+            get { return jump; }
+            set { jump = value; }
+        }
 
         // State of the player
         private bool _active;
@@ -268,10 +274,10 @@ namespace TileEngine
             }
 
             //Keeping track of jumping/falling speed
-            if (Keyboard.GetState().IsKeyDown(Controls.Up) && Jump)
+            if (Keyboard.GetState().IsKeyDown(Controls.Up) && jump)
             {
                 _movement.Y += -20;
-                Jump = false;
+                jump = false;
             }
 
             // Attack
@@ -299,7 +305,7 @@ namespace TileEngine
             {
                 Position = new Vector2(Position.X, 372);
                 _movement.Y = 0;
-                Jump = true;
+                jump = true;
             }
 
             /*           for (int i = 0; i < 2; i++)

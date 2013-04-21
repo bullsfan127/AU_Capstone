@@ -15,7 +15,7 @@ namespace TileEngine
     public class Animation
     {
         // Enum for Animation states
-        public enum Animate { RIDLE, LIDLE, RMOVING, LMOVING, RATTACK, LATTACK };
+        public enum Animate { RIDLE, LIDLE, RMOVING, LMOVING, RATTACK, LATTACK, ZRIGHT, ZLEFT, BRIGHT, BLEFT };
 
         // Hold the current state of the Animation
         public Animate state;
@@ -235,6 +235,22 @@ namespace TileEngine
                     currentFrame = 7;
                     this.state = Animate.LATTACK;
                     break;
+                case Animate.ZRIGHT:
+                    currentFrame = 1;
+                    this.state = Animate.ZRIGHT;
+                    break;
+                case Animate.ZLEFT:
+                    currentFrame = 3;
+                    this.state = Animate.ZLEFT;
+                    break;
+                case Animate.BRIGHT:
+                    currentFrame = 0;
+                    this.state = Animate.BRIGHT;
+                    break;
+                case Animate.BLEFT:
+                    currentFrame = 2;
+                    this.state = Animate.BLEFT;
+                    break;
                 default:
                     currentFrame = 0;
                     break;
@@ -287,6 +303,26 @@ namespace TileEngine
                         frameCount = 8;
                         this.state = Animate.LATTACK;
                         this.frameTime = 325;
+                        break;
+                    case Animate.ZRIGHT:
+                        currentFrame = 1;
+                        frameCount = 2;
+                        this.state = Animate.ZRIGHT;
+                        break;
+                    case Animate.ZLEFT:
+                        currentFrame = 3;
+                        frameCount = 5;
+                        this.state = Animate.ZLEFT;
+                        break;
+                    case Animate.BRIGHT:
+                        currentFrame = 0;
+                        frameCount = 1;
+                        this.state = Animate.BRIGHT;
+                        break;
+                    case Animate.BLEFT:
+                        currentFrame = 2;
+                        frameCount = 3;
+                        this.state = Animate.BLEFT;
                         break;
                     default:
                         currentFrame = 0;
@@ -341,6 +377,26 @@ namespace TileEngine
                             frameCount = 10;
                             this.state = Animate.LIDLE;
                             this.frameTime = this.initialFrameTime;
+                            break;
+                        case Animate.ZRIGHT:
+                            currentFrame = 1;
+                            frameCount = 3;
+                            this.state = Animate.ZRIGHT;
+                            break;
+                        case Animate.ZLEFT:
+                            currentFrame = 3;
+                            frameCount = 5;
+                            this.state = Animate.ZLEFT;
+                            break;
+                        case Animate.BRIGHT:
+                            currentFrame = 0;
+                            frameCount = 2;
+                            this.state = Animate.BRIGHT;
+                            break;
+                        case Animate.BLEFT:
+                            currentFrame = 2;
+                            frameCount = 4;
+                            this.state = Animate.BLEFT;
                             break;
                         default:
                             currentFrame = 0;

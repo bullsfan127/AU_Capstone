@@ -73,11 +73,11 @@ namespace TileEngine
 
                 if (movement.X < 0)
                 {
-                    _monsterAnimation.state = Animation.Animate.LMOVING;
+                    _monsterAnimation.state = Animation.Animate.ZLEFT;
                 }
                 else
                 {
-                    _monsterAnimation.state = Animation.Animate.RMOVING;
+                    _monsterAnimation.state = Animation.Animate.ZRIGHT;
                 }
 
                 //actually move

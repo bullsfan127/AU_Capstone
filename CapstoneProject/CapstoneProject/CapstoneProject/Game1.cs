@@ -255,6 +255,11 @@ namespace CapstoneProject
                         gameMap.saveMap("SavedGame.xml");
                     }
 
+                    if (Keyboard.GetState().IsKeyDown(Controls.Up) && player.Jump)
+                    {
+                        soundManager.PlaySound(5);
+                    }
+
                     player.Update(gameTime, gameMap);
                     pauseButton.Update(gameTime);
                     healthBar.Update(gameTime, player);
