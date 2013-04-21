@@ -50,6 +50,7 @@ namespace MapEditor
         /// </summary>
         XPanel LayerSelectionPanel;
 
+        Label ViewportPosition;
         SaveButton saveButton;
         ResetButton resetButton;
         LoadMap loadButton;
@@ -89,7 +90,7 @@ namespace MapEditor
         {
             Texture2D panelTexture = this.Content.Load<Texture2D>("Panel540X540");
             Texture2D buttonTexture = this.Content.Load<Texture2D>("Tiles//Node");
-
+            SpriteFont Text = this.Content.Load<SpriteFont>("FPS");
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
@@ -106,7 +107,7 @@ namespace MapEditor
             LayerSelectionPanel = new XPanel(panelTexture, new Vector2(1280 - 360, 360), 360, 360);
             //Button adds
             LayerSelectionPanel.AddChild(new SetGoundActiveButton(Vector2.Zero, buttonTexture,
-                window, this.Content.Load<SpriteFont>("FPS")), new Vector2(30, 30));
+                window,Text), new Vector2(30, 30));
             LayerSelectionPanel.AddChild(new SetMaskActive(Vector2.Zero, buttonTexture,
                     window, this.Content.Load<SpriteFont>("FPS")), new Vector2(30, 30 + buttonTexture.Height));
             LayerSelectionPanel.AddChild(new SetFringeActive(Vector2.Zero, buttonTexture,
@@ -116,6 +117,9 @@ namespace MapEditor
             saveButton = new SaveButton(Vector2.Zero, buttonTexture, window.Map, this.Content.Load<SpriteFont>("FPS"));
             loadButton = new LoadMap(new Vector2(0, 300), buttonTexture, window.Map, this.Content.Load<SpriteFont>("FPS"), this.Content);
             resetButton = new ResetButton(new Vector2(0, 100), buttonTexture, this.Content.Load<SpriteFont>("FPS"), graphics, Content, window);
+
+            ViewportPosition = new Label(Text, "The Position of the Viewport is:  " + window.Center.Position.ToString(), new Vector2(200, 0), Color.Red, 1.5f);
+            
         }
 
         /// <summary>
@@ -151,6 +155,7 @@ namespace MapEditor
                 loadButton.newMap = false;
             }
             resetButton.Update(gameTime);
+            ViewportPosition._Text = "The Position of the Viewport is:  " + window.Center.Position.ToString();
             base.Update(gameTime);
         }
 
@@ -162,7 +167,7 @@ namespace MapEditor
         {
             GraphicsDevice.Clear(Color.RoyalBlue);
 
-            // TODO: Add your drawing code here
+       
             window.Draw(gameTime, spriteBatch);
 
             TileSelectorPanel.Draw(gameTime, spriteBatch);
@@ -170,6 +175,7 @@ namespace MapEditor
             saveButton.Draw(gameTime, spriteBatch);
             resetButton.Draw(gameTime, spriteBatch);
             loadButton.Draw(gameTime, spriteBatch);
+            ViewportPosition.Draw(gameTime, spriteBatch);
             base.Draw(gameTime);
         }
     }

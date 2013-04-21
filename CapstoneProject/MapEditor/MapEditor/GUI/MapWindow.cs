@@ -91,6 +91,12 @@ namespace MapEditor.GUI
 
         FocalPoint _center = new FocalPoint(new Vector2(0, 0), 10, 100, 50, 50);
 
+        public FocalPoint Center
+        {
+            get { return _center; }
+            set { _center = value; }
+        }
+
         public enum currentLayer { GROUND, MASK, FRINGE };
 
         /// <summary>
