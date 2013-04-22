@@ -265,7 +265,7 @@ namespace TileEngine
                 
                 _offset.Y -= 5;
 
-                if(-60 % _offset.Y == 0)
+                if( _offset.Y % -60 == 0)
                 Position = new Vector2(Position.X, Position.Y - 1);
             }
             else if (viewPortPostion.Y + _movement.Y > 372)//floor
@@ -278,27 +278,29 @@ namespace TileEngine
             
              
             //establish left and right bound for "dead zone"
+            //Right
             if (viewPortPostion.X + _movement.X > 500)
             {
                 _offset.X += viewPortPostion.X + _movement.X - 500;
                 viewPortPostion = new Vector2(500, viewPortPostion.Y + _movement.Y);
 
                 //if the Position less than the max scroll range and the offset is on a whole tile
-                if ((Position.X < map.Ground.MapWidth - 10) && (60 % _offset.X == 0))
+                if ((Position.X < map.Ground.MapWidth) && (_offset.X % 60== 0))
                 {
-                    Position = new Vector2(Position.X + 1, Position.Y);
-                    viewPortPostion = new Vector2(viewPortPostion.X - _movement.X, viewPortPostion.Y);
+                    Position = new Vector2(Position.X + 1, Position.Y);                   
                 }
+            
             }
+                //Left
             else if (viewPortPostion.X + _movement.X < 100 && _offset.X > 0)
             {
                 _offset.X += viewPortPostion.X + _movement.X - 100;
                 viewPortPostion = new Vector2(100, viewPortPostion.Y + _movement.Y);
 
-                if ((Position.X > 0) && (60 % _offset.X == 0))
+                if ((Position.X > 0) && ( _offset.X % 60 == 0))
                 {
                     Position = new Vector2(Position.X - 1, Position.Y);
-                    viewPortPostion = new Vector2(viewPortPostion.X + _movement.X, viewPortPostion.Y);
+                    
                 }
             }
             else
@@ -340,10 +342,11 @@ namespace TileEngine
             //Save offset values
             OX = _offset.X;
             OY = _offset.Y;
-            if ((60 % _offset.X == 0) || (-60 % _offset.X == 0))
+
+            if ((_offset.X % 60 == 0) || ( _offset.X % -60 == 0))
                 _offset.X = 0;
 
-            if ((60 % _offset.Y == 0) || (-60 % _offset.X == 0))
+            if (( _offset.Y % 60 == 0) || ( _offset.X % -60 == 0))
                 _offset.Y = 0;
 
             map.Update(gameTime, _offset);
