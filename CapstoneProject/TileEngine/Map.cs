@@ -155,7 +155,7 @@ namespace TileEngine
 
             foreach (Item item in _mapItems)
             {
-                item.Update(gameTime);
+                item.Update(gameTime, this.Player.Position, offset);
             }
 
             foreach (Monster a in _NpcList)
