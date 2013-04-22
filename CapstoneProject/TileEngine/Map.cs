@@ -144,24 +144,13 @@ namespace TileEngine
         /// Updates all map specific components
         /// </summary>
         /// <param name="gameTime">The gameTime snapshot</param>
-       public void Update(GameTime gameTime, Vector2 offset)
+        //@Offset Why do you need this here?  Just add it to the avatar class this is linked to the player class
+        public void Update(GameTime gameTime, Vector2 offset)
         {
             this.offset = offset;
             if (this.offset.X < 0)
             {
                 this.offset.X = 0;
-            }
-            else if (((int)(this.offset.X) % TILE_WIDTH) == 0)
-            {
-                this.offset.X = 0;
-            }
-            if (this.offset.X < 0)
-            {
-                this.offset.X = 0;
-            }
-            else if (((int)(this.offset.Y) % TILE_WIDTH) == 0)
-            {
-                this.offset.Y = 0;
             }
 
             foreach (Item item in _mapItems)
@@ -208,13 +197,10 @@ namespace TileEngine
 
         public void DrawInWindow(SpriteBatch spriteBatch, GameTime gameTime, Rectangle Location)
         {
-           // _Ground.Draw(spriteBatch, gameTime, offset, Location, _Player);
-            _Ground.Draw(spriteBatch, gameTime, Player.Position, Rectangle.Empty, Player);
-           // _Mask.Draw(spriteBatch, gameTime, offset, Location, _Player);
-            _Mask.Draw(spriteBatch, gameTime, Player.Position, Rectangle.Empty, Player);
+            _Ground.Draw(spriteBatch, gameTime, offset, Location, _Player);
+            _Mask.Draw(spriteBatch, gameTime, offset, Location, _Player);
             _Player.Draw(spriteBatch, gameTime);
-            //_Fringe.Draw(spriteBatch, gameTime, offset, Location, _Player);
-            _Fringe.Draw(spriteBatch, gameTime, Player.Position, Rectangle.Empty, Player);
+            _Fringe.Draw(spriteBatch, gameTime, offset, Location, _Player);
         }
 
         /// <summary>
