@@ -251,50 +251,50 @@ namespace TileEngine
             _movement.Y += 1;
 
             //establish ceiling and floor
-            //if (Position.Y + _movement.Y < 0)//ceiling
+            if (Position.Y + _movement.Y < 0)//ceiling
+            {
+                Position = new Vector2(Position.X, 0);
+            }
+            else if (Position.Y + _movement.Y > 372)//floor
+            {
+                Position = new Vector2(Position.X, 372);
+                _movement.Y = 0;
+                Jump = true;
+            }
+
+            //for (int i = 0; i < 2; i++)
             //{
-            //    Position = new Vector2(Position.X, 0);
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        Vector2 temp = new Vector2((Position.X + Offset.X + Movement.X) / 64 + i, (Position.Y + Offset.Y + Movement.X) / 64 + j);
+            //        Rectangle ground = new Rectangle(0, 0, 0, 0);
+
+            //        ground = map.CollisionLayer.getItemAt(temp);
+
+            //        if (ground != default(Rectangle))
+            //        {
+            //            if (PlayerRect.Left < ground.Right && PlayerRect.Top - ground.Top < PlayerRect.Height)
+            //            {
+            //                _movement.X = 0;
+            //            }
+            //            else if (PlayerRect.Right > ground.Left && PlayerRect.Top - ground.Top < PlayerRect.Height)
+            //            {
+            //                _movement.X = 0;
+            //            }
+            //            if (PlayerRect.Top > ground.Bottom && _movement.Y < 0 &&
+            //                (PlayerRect.Left - ground.Right < PlayerRect.Width || PlayerRect.Right - ground.Left < PlayerRect.Width))
+            //            {
+            //                _movement.Y = 0;
+            //            }
+            //            else if (PlayerRect.Bottom < ground.Top &&
+            //                (PlayerRect.Left - ground.Right < PlayerRect.Width || PlayerRect.Right - ground.Left < PlayerRect.Width))
+            //            {
+            //                _movement.Y = 0;
+            //                Jump = true;
+            //            }
+            //        }
+            //    }
             //}
-            //else if (Position.Y + _movement.Y > 372)//floor
-            //{
-            //    Position = new Vector2(Position.X, 372);
-            //    _movement.Y = 0;
-            //    Jump = true;
-            //}
-
-                      for (int i = 0; i < 2; i++)
-                       {
-                           for (int j = 0; j < 3; j++)
-                           {
-                               Vector2 temp = new Vector2((Position.X + Offset.X + Movement.X) / 64 + i, (Position.Y + Offset.Y + Movement.X) / 64 + j);
-                               Rectangle ground=new Rectangle(0,0,0,0);
-
-                                   ground = map.CollisionLayer.getItemAt(temp);
-
-                                   if (ground!=default(Rectangle))
-                                   {
-                                       if (PlayerRect.Left < ground.Right  && PlayerRect.Top - ground.Top < PlayerRect.Height)
-                                       {
-                                           _movement.X = 0;
-                                       }
-                                       else if (PlayerRect.Right > ground.Left  && PlayerRect.Top - ground.Top < PlayerRect.Height)
-                                       {
-                                           _movement.X = 0;
-                                       }
-                                       if (PlayerRect.Top > ground.Bottom && _movement.Y < 0 &&
-                                           (PlayerRect.Left - ground.Right < PlayerRect.Width || PlayerRect.Right - ground.Left < PlayerRect.Width))
-                                       {
-                                           _movement.Y = 0;
-                                       }
-                                       else if (PlayerRect.Bottom < ground.Top &&
-                                           (PlayerRect.Left - ground.Right < PlayerRect.Width || PlayerRect.Right - ground.Left < PlayerRect.Width))
-                                       {
-                                           _movement.Y = 0;
-                                           Jump = true;
-                                       }
-                                   }
-                           }
-                       }
              
             //establish left and right bound for "dead zone"
             if (Position.X + _movement.X > 500)
