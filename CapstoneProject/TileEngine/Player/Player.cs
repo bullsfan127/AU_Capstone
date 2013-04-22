@@ -23,6 +23,15 @@ namespace TileEngine
         //Players collision Rectangle
         private Rectangle PlayerRect;
 
+        //Players position on the viewPort
+        private Vector2 viewPortPostion;
+
+        public Vector2 ViewPortPostion
+        {
+            get { return viewPortPostion; }
+            set { viewPortPostion = value; }
+        }
+
         //Player is on the ground and can jump
         private bool Jump;
 
@@ -150,12 +159,12 @@ namespace TileEngine
             _health = this._maxHealth;
 
             // Set starting position of the player
-            Position = position;
+            viewPortPostion = position;
             //make player rectangle
-            PlayerRect = new Rectangle((int)position.X, (int)position.Y, 64, 128);
+            PlayerRect = new Rectangle((int)viewPortPostion.X, (int)viewPortPostion.Y, 64, 128);
             //player Animation initialize
-            PlayerAnimation.Initialize(spriteStrip, position, 64, 128, 2, 250, Color.White, 1.0f, true);
-            _weapon.Initialize(_swordTexture, position);
+            PlayerAnimation.Initialize(spriteStrip, viewPortPostion, 64, 128, 2, 250, Color.White, 1.0f, true);
+            _weapon.Initialize(_swordTexture, viewPortPostion);
             // Set the player to be active
             PlayerAnimation.Active = true;
         }
@@ -168,8 +177,8 @@ namespace TileEngine
         public void Update(GameTime gameTime, Map map)
         {
             // Vector2 Position = Vector2.Zero;
-            PlayerAnimation.Position = Position;
-
+            PlayerAnimation.Position = viewPortPostion;
+           
             if (_justAttacked <= 20)
             {
                 _weapon.Update(gameTime, new Vector2(-500, -500));
@@ -251,98 +260,91 @@ namespace TileEngine
             _movement.Y += 1;
 
             //establish ceiling and floor
-            if (Position.Y + _movement.Y < 0)//ceiling
+            if ((viewPortPostion.Y + _movement.Y < 0) && (Position.X > 0))//ceiling
             {
-                Position = new Vector2(Position.X, 0);
+                
+                _offset.Y -= 5;
+
+                if(-60 % _offset.Y == 0)
+                Position = new Vector2(Position.X, Position.Y - 1);
             }
-            else if (Position.Y + _movement.Y > 372)//floor
+            else if (viewPortPostion.Y + _movement.Y > 372)//floor
             {
-                Position = new Vector2(Position.X, 372);
+                viewPortPostion = new Vector2(viewPortPostion.X, 372);
                 _movement.Y = 0;
                 Jump = true;
             }
 
-            //for (int i = 0; i < 2; i++)
-            //{
-            //    for (int j = 0; j < 3; j++)
-            //    {
-            //        Vector2 temp = new Vector2((Position.X + Offset.X + Movement.X) / 64 + i, (Position.Y + Offset.Y + Movement.X) / 64 + j);
-            //        Rectangle ground = new Rectangle(0, 0, 0, 0);
-
-            //        ground = map.CollisionLayer.getItemAt(temp);
-
-            //        if (ground != default(Rectangle))
-            //        {
-            //            if (PlayerRect.Left < ground.Right && PlayerRect.Top - ground.Top < PlayerRect.Height)
-            //            {
-            //                _movement.X = 0;
-            //            }
-            //            else if (PlayerRect.Right > ground.Left && PlayerRect.Top - ground.Top < PlayerRect.Height)
-            //            {
-            //                _movement.X = 0;
-            //            }
-            //            if (PlayerRect.Top > ground.Bottom && _movement.Y < 0 &&
-            //                (PlayerRect.Left - ground.Right < PlayerRect.Width || PlayerRect.Right - ground.Left < PlayerRect.Width))
-            //            {
-            //                _movement.Y = 0;
-            //            }
-            //            else if (PlayerRect.Bottom < ground.Top &&
-            //                (PlayerRect.Left - ground.Right < PlayerRect.Width || PlayerRect.Right - ground.Left < PlayerRect.Width))
-            //            {
-            //                _movement.Y = 0;
-            //                Jump = true;
-            //            }
-            //        }
-            //    }
-            //}
+            
              
             //establish left and right bound for "dead zone"
-            if (Position.X + _movement.X > 500)
+            if (viewPortPostion.X + _movement.X > 500)
             {
-                _offset.X += Position.X + _movement.X - 500;
-                Position = new Vector2(500, Position.Y + _movement.Y);
+                _offset.X += viewPortPostion.X + _movement.X - 500;
+                viewPortPostion = new Vector2(500, viewPortPostion.Y + _movement.Y);
+
+                //if the Position less than the max scroll range and the offset is on a whole tile
+                if ((Position.X < map.Ground.MapWidth - 10) && (60 % _offset.X == 0))
+                {
+                    Position = new Vector2(Position.X + 1, Position.Y);
+                    viewPortPostion = new Vector2(viewPortPostion.X - _movement.X, viewPortPostion.Y);
+                }
             }
-            else if (Position.X + _movement.X < 100 && _offset.X > 0)
+            else if (viewPortPostion.X + _movement.X < 100 && _offset.X > 0)
             {
-                _offset.X += Position.X + _movement.X - 100;
-                Position = new Vector2(100, Position.Y + _movement.Y);
+                _offset.X += viewPortPostion.X + _movement.X - 100;
+                viewPortPostion = new Vector2(100, viewPortPostion.Y + _movement.Y);
+
+                if ((Position.X > 0) && (60 % _offset.X == 0))
+                {
+                    Position = new Vector2(Position.X - 1, Position.Y);
+                    viewPortPostion = new Vector2(viewPortPostion.X + _movement.X, viewPortPostion.Y);
+                }
             }
             else
-                Position = new Vector2(Position.X + _movement.X, Position.Y);
+                viewPortPostion = new Vector2(viewPortPostion.X + _movement.X, viewPortPostion.Y);
 
             //establish upper and lower bound for dead zone
-            if (Position.Y + _movement.Y < 100 && _offset.Y > 0)
+            if (viewPortPostion.Y + _movement.Y < 100 && _offset.Y > 0)
             {
-                _offset.Y += Position.Y + _movement.Y - 100;
-                Position = new Vector2(Position.X, 100);
+                _offset.Y += viewPortPostion.Y + _movement.Y - 100;
+                viewPortPostion = new Vector2(viewPortPostion.X, 100);
+                
             }
-            else if (Position.Y + _movement.Y > 400)
+            else if (viewPortPostion.Y + _movement.Y > 400)
             {
-                _offset.Y += Position.Y + _movement.Y - 400;
-                Position = new Vector2(Position.X, 400);
+                _offset.Y += viewPortPostion.Y + _movement.Y - 400;
+                viewPortPostion = new Vector2(viewPortPostion.X, 400);
             }
             else
-                Position = new Vector2(Position.X, Position.Y + _movement.Y);
+                viewPortPostion = new Vector2(viewPortPostion.X, viewPortPostion.Y + _movement.Y);
 
             //update rectangle position based on player position
-            PlayerRect.X = (int)Position.X;
-            PlayerRect.Y = (int)Position.Y;
+            PlayerRect.X = (int)viewPortPostion.X;
+            PlayerRect.Y = (int)viewPortPostion.Y;
 
-            if (Position.X < 0)
+            //prevent the player from moving off the side
+            if (viewPortPostion.X < 0)
             {
-                Position = new Vector2(0, Position.Y);
+                viewPortPostion = new Vector2(0, viewPortPostion.Y);
             }
+
             if (Keyboard.GetState().IsKeyDown(Controls.Attack))
             {
             }
             //save position values
-            X = Position.X;
-            Y = Position.Y;
+            X = viewPortPostion.X;
+            Y = viewPortPostion.Y;
             PlayerAnimation.Update(gameTime);
 
             //Save offset values
             OX = _offset.X;
             OY = _offset.Y;
+            if ((60 % _offset.X == 0) || (-60 % _offset.X == 0))
+                _offset.X = 0;
+
+            if ((60 % _offset.Y == 0) || (-60 % _offset.X == 0))
+                _offset.Y = 0;
 
             map.Update(gameTime, _offset);
         }

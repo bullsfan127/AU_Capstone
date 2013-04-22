@@ -292,6 +292,60 @@ namespace TileEngine
 
             spriteBatch.End();
         }
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``
+        /// <summary>
+        /// The Draw Method for a Drawable Layer
+        /// </summary>
+        /// <param name="spriteBatch">The spriteBatch that you are drawing with</param>
+        /// <param name="gameTime">GameTime</param>
+        /// <param name="centerLocation">Where the tile map should be centered.</param>
+        public void Draw(SpriteBatch spriteBatch, GameTime gameTime, Vector2 centerLocation, Avatar player)
+        {
+            Rectangle containedWithin = new Rectangle(0, 0, MaxViewPortWidth, MaxViewPortHeight);
+            
+            //If there there is an offset we need to draw an extra tile
+            int offsetIncrease = 0;
+
+            //If there is a deminsion to the offset
+            if ((player.Offset.X > 0) || (player.Offset.X < 0) || (player.Offset.X > 0) || (player.Offset.X < 0))
+                offsetIncrease = 1;
+
+            //begin the SpriteBatch
+            spriteBatch.Begin();
+
+            _scale = containedWithin.Width / _maxColumns;
+
+            int startPosX = (int)centerLocation.X / 64;//Where are we starting horizontally
+
+            //~~~~~~~~~~~~~~~~~DRAW LOGIC~~~~~~~~~~~~~~~~~~~~~
+            for (int x = 0; x < _maxColumns + offsetIncrease; x++)
+            {
+                int startPosY = 0;
+                //(int)centerLocation.Y;//Where are we starting vertically in the map layer
+
+                for (int y = 0; y < _maxRows + offsetIncrease; y++)
+                {
+                    T currentItem = _layer[startPosX + (int)player.Position.X, startPosY + (int)player.Position.Y];//The current drawable item we are working with.
+                    int renderTargetX = x;
+
+                    //TODO:  Space this out so the draw code is easier to understand.  #TODO
+                    if (currentItem != null)
+                        spriteBatch.Draw(currentItem.getTexture(), new Rectangle((int)(renderTargetX * (containedWithin.Width / 10) + containedWithin.X + player.Offset.X),
+                                                                                 (int)(y * (containedWithin.Height / 10) + containedWithin.Y + player.Offset.Y),
+                                                                                 containedWithin.Width / 10,
+                                                                                 containedWithin.Height / 10)
+                                                                                 , currentItem.getSourceRectangle(),
+                            currentItem.getTint(), currentItem.getRotation(), currentItem.getOrigin(), currentItem.getSpriteEffect(), currentItem.getDepth());
+
+                    startPosY++;
+                }//inner for
+
+                startPosX++;
+            }//outer for
+
+            spriteBatch.End();
+        }
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         /// <summary>
         /// Swaps the layer for another layer through shallow copying

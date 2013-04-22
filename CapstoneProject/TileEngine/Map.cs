@@ -148,10 +148,7 @@ namespace TileEngine
         public void Update(GameTime gameTime, Vector2 offset)
         {
             this.offset = offset;
-            if (this.offset.X < 0)
-            {
-                this.offset.X = 0;
-            }
+           
 
             foreach (Item item in _mapItems)
             {
@@ -170,8 +167,8 @@ namespace TileEngine
         /// <param name="gameTime">gametime</param>
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            _Ground.Draw(spriteBatch, gameTime, offset);
-            _Mask.Draw(spriteBatch, gameTime, offset);
+            _Ground.Draw(spriteBatch, gameTime, _Player.Position, _Player);
+            _Mask.Draw(spriteBatch, gameTime, _Player.Position, _Player);
 
             foreach (Item item in _mapItems)
             {
