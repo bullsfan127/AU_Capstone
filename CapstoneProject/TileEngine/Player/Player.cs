@@ -169,7 +169,7 @@ namespace TileEngine
         {
             // Vector2 Position = Vector2.Zero;
             PlayerAnimation.Position = Position;
-
+            
             if (_justAttacked <= 20)
             {
                 _weapon.Update(gameTime, new Vector2(-500, -500));
@@ -191,7 +191,7 @@ namespace TileEngine
             }
             //PlayerAnimation.Update(gameTime);
 
-            base.Update(gameTime);
+            
 
             //Reset movement to still
 
@@ -251,10 +251,10 @@ namespace TileEngine
             _movement.Y += 1;
 
             //establish ceiling and floor
-            //if (Position.Y + _movement.Y < 0)//ceiling
-            //{
-            //    Position = new Vector2(Position.X, 0);
-            //}
+            if (Position.Y + _movement.Y < 0)//ceiling
+            {
+                Position = new Vector2(Position.X, 0);
+            }
             //else if (Position.Y + _movement.Y > 372)//floor
             //{
             //    Position = new Vector2(Position.X, 372);
@@ -262,40 +262,7 @@ namespace TileEngine
             //    Jump = true;
             //}
 
-                      for (int i = 0; i < 2; i++)
-                       {
-                           for (int j = 0; j < 3; j++)
-                           {
-                               Vector2 temp = new Vector2((Position.X + Offset.X + Movement.X) / 64 + i, (Position.Y + Offset.Y + Movement.X) / 64 + j);
-                               Rectangle ground=new Rectangle(0,0,0,0);
-
-                                   ground = map.CollisionLayer.getItemAt(temp);
-
-                                   if (ground!=default(Rectangle))
-                                   {
-                                       if (PlayerRect.Left < ground.Right  && PlayerRect.Top - ground.Top < PlayerRect.Height)
-                                       {
-                                           _movement.X = 0;
-                                       }
-                                       else if (PlayerRect.Right > ground.Left  && PlayerRect.Top - ground.Top < PlayerRect.Height)
-                                       {
-                                           _movement.X = 0;
-                                       }
-                                       if (PlayerRect.Top > ground.Bottom && _movement.Y < 0 &&
-                                           (PlayerRect.Left - ground.Right < PlayerRect.Width || PlayerRect.Right - ground.Left < PlayerRect.Width))
-                                       {
-                                           _movement.Y = 0;
-                                       }
-                                       else if (PlayerRect.Bottom < ground.Top &&
-                                           (PlayerRect.Left - ground.Right < PlayerRect.Width || PlayerRect.Right - ground.Left < PlayerRect.Width))
-                                       {
-                                           _movement.Y = 0;
-                                           Jump = true;
-                                       }
-                                   }
-                           }
-                       }
-             
+        //    Jump = true;
             //establish left and right bound for "dead zone"
             if (Position.X + _movement.X > 500)
             {
@@ -310,7 +277,7 @@ namespace TileEngine
             else
                 Position = new Vector2(Position.X + _movement.X, Position.Y);
 
-            //establish upper and lower bound for dead zone
+           // establish upper and lower bound for dead zone
             if (Position.Y + _movement.Y < 100 && _offset.Y > 0)
             {
                 _offset.Y += Position.Y + _movement.Y - 100;
@@ -322,7 +289,7 @@ namespace TileEngine
                 Position = new Vector2(Position.X, 400);
             }
             else
-                Position = new Vector2(Position.X, Position.Y + _movement.Y);
+               Position = new Vector2(Position.X, Position.Y + _movement.Y);
 
             //update rectangle position based on player position
             PlayerRect.X = (int)Position.X;
@@ -335,6 +302,7 @@ namespace TileEngine
             if (Keyboard.GetState().IsKeyDown(Controls.Attack))
             {
             }
+            
             //save position values
             X = Position.X;
             Y = Position.Y;
@@ -345,6 +313,7 @@ namespace TileEngine
             OY = _offset.Y;
 
             map.Update(gameTime, _offset);
+            base.Update(gameTime);
         }
 
         /// <summary>

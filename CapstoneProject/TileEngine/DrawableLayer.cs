@@ -201,7 +201,7 @@ namespace TileEngine
             //~~~~~~~~~~~~~~~~~DRAW LOGIC~~~~~~~~~~~~~~~~~~~~~
             for (int x = 0; x < _maxColumns + 1; x++)
             {
-                int startPosY = 0;
+                int startPosY = (int)centerLocation.Y / 64;
                 //(int)centerLocation.Y;//Where are we starting vertically in the map layer
 
                 for (int y = 0; y < _maxRows; y++)
@@ -229,7 +229,57 @@ namespace TileEngine
 
             spriteBatch.End();
         }
+        /// <summary>
+        /// The Draw Method for a Drawable Layer
+        /// </summary>
+        /// <param name="spriteBatch">The spriteBatch that you are drawing with</param>
+        /// <param name="gameTime">GameTime</param>
+        /// <param name="centerLocation">Where the tile map should be centered.</param>
+        public void Draw(SpriteBatch spriteBatch, GameTime gameTime, Vector2 centerLocation, Rectangle containedWithin, Avatar player, Vector2 offset)
+        {
+            containedWithin = new Rectangle(0, 0, MaxViewPortWidth, MaxViewPortHeight);
+            //TODO:  Use the Decimal point of the centerLocation to move the tiles to the right by
+            //a percentage of the tile width allowing for smooth scrolling.  #TODO
 
+            //TODO: Allow the use of jagged screen sizes IE:  9,10  #TODO
+
+            //TODO: Possibly remove GameTime because its not being used yet.  Mostly used if we wanted to cap he FPS.
+
+            //begin the SpriteBatch
+            spriteBatch.Begin();
+
+            _scale = containedWithin.Width / _maxColumns;
+
+            int startPosX = (int)centerLocation.X / 64;//Where are we starting horizontally
+
+            //~~~~~~~~~~~~~~~~~DRAW LOGIC~~~~~~~~~~~~~~~~~~~~~
+            for (int x = 0; x < _maxColumns; x++)
+            {
+                int startPosY = 0;
+                //(int)centerLocation.Y;//Where are we starting vertically in the map layer
+
+                for (int y = 0; y < _maxRows; y++)
+                {
+                    T currentItem = _layer[startPosX + (int)player.Position.X, startPosY + (int)player.Position.Y];//The current drawable item we are working with.
+                    int renderTargetX = x;
+
+                    //TODO:  Space this out so the draw code is easier to understand.  #TODO
+                    if (currentItem != null)
+                       spriteBatch.Draw(currentItem.getTexture(), new Rectangle((int)(renderTargetX * (containedWithin.Width / 10) + containedWithin.X -offset.X),
+                                                                                 (int)(y * (containedWithin.Height / 10) + containedWithin.Y - offset.Y),
+                                                                                 containedWithin.Width / 10,
+                                                                                 containedWithin.Height / 10)
+                                                                                 , currentItem.getSourceRectangle(),
+                            currentItem.getTint(), currentItem.getRotation(), currentItem.getOrigin(), currentItem.getSpriteEffect(), currentItem.getDepth());
+
+                    startPosY++;
+                }//inner for
+
+                startPosX++;
+            }//outer for
+
+            spriteBatch.End();
+        }
         /// <summary>
         /// The Draw Method for a Drawable Layer
         /// </summary>
