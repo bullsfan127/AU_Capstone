@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,8 +14,6 @@ namespace TileEngine
 {
     public class Item : Avatar
     {
-        public Animation _itemAnimation;
-
         // Width of the full image
         private int _spriteWidth;
 
@@ -94,12 +92,6 @@ namespace TileEngine
             get { return _scale; }
             set { _scale = value; }
         }
-
-        //position relative to player
-        Vector2 relPosition = new Vector2(0, 0);
-
-        //whether item is on screen;
-        bool active = false;
     
 
         // The image of the item
@@ -109,44 +101,26 @@ namespace TileEngine
 
         public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
-            _itemAnimation = new Animation();
-
-            // Set starting position of the monster
+            // Set starting position of the item
             Position = position;
-
-            // TODO: Need to set correct image/location
-            _itemAnimation.Initialize(spriteStrip, position, _spriteWidth, _spriteHeight, _spriteFrame, 250, Color.White, _scale, true, Animation.Animate.ITEM);
-
-            // Set the monster to be active
-            _itemAnimation.Active = true;
+            X = Position.X;
+            Y = Position.Y;
+            SpriteStrip = spriteStrip;
         }
 
         public virtual void Update(GameTime gameTime, Vector2 player, Vector2 offset)
         {
-            //is item on screen check
-            if (Position.X - offset.X < 600 && Position.X - offset.X > -70 && Position.Y - offset.Y < 600 && Position.Y - offset.Y > 0)
-            {
-                active = true;
-            }
-            else
-                active = false;
-            //if item on screen
-            if (active)
-            {
-                //define relative position
-                relPosition = Position - offset;
-                _itemAnimation.Position = relPosition;
-                _itemAnimation.Update(gameTime);
-            }
-            X = Position.X;
-            Y = Position.Y;
-            base.Update(gameTime);
+           
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            _itemAnimation.Draw(spriteBatch);
-            base.Draw(spriteBatch, gameTime);
+            spriteBatch.Begin();
+            // SpriteStip is image
+            // Position is x,y vector of image location
+            // 0.4f is scaling of image
+            spriteBatch.Draw(SpriteStrip, Position, null, Color.White, 0.0f, Vector2.Zero, _scale, SpriteEffects.None, 0.0f);
+            spriteBatch.End();
         }
 
         /// <summary>
@@ -176,4 +150,4 @@ namespace TileEngine
             return _armor;
         }
     }
-}
+}*/

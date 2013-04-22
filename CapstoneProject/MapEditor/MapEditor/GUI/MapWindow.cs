@@ -192,7 +192,7 @@ namespace MapEditor.GUI
                             if (_selector.IsTileSelected)
                             {
                                 _map.Ground.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile, _map.Player);
-                                _map.CollisionLayer.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile.SourceRectangle, _map.Player);
+                              //  _map.CollisionLayer.setItemAt(new Vector2(mouseX, mouseY), _selector.SelectedTile.SourceRectangle, _map.Player);
                             }
                             break;
                         case (currentLayer.MASK):
@@ -221,7 +221,7 @@ namespace MapEditor.GUI
                             {
                                 layerLabel.Text = "GROUND";
                                 _map.Ground.setItemAt(new Vector2(mouseX, mouseY), null, _map.Player);
-                                _map.CollisionLayer.setItemAt(new Vector2(mouseX, mouseY), Rectangle.Empty, _map.Player);
+                              //  _map.CollisionLayer.setItemAt(new Vector2(mouseX, mouseY), Rectangle.Empty, _map.Player);
                             }
                             break;
                         case (currentLayer.MASK):

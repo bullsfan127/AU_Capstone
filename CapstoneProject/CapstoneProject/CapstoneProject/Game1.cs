@@ -184,7 +184,7 @@ namespace CapstoneProject
             //initialize things
             player.Initialize(playerTexture, new Vector2(0, 0));
             coin.Initialize(coinTexture, new Vector2(19, 250));
-            potion.Initialize(potionTexture, new Vector2(83, 83));
+            potion.Initialize(potionTexture, new Vector2(500, 83));
             groundMonster.Initialize(groundMonsterTexture, new Vector2(250, 250));
             flyingMonster.Initialize(flyingMonsterTexture, new Vector2(150, 150));
             scoreDisplay.loadFont(this.Content.Load<SpriteFont>("FPS"));

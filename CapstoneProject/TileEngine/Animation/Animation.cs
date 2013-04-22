@@ -15,7 +15,7 @@ namespace TileEngine
     public class Animation
     {
         // Enum for Animation states
-        public enum Animate { RIDLE, LIDLE, RMOVING, LMOVING, RATTACK, LATTACK, ZRIGHT, ZLEFT, BRIGHT, BLEFT };
+        public enum Animate { RIDLE, LIDLE, RMOVING, LMOVING, RATTACK, LATTACK, ZRIGHT, ZLEFT, BRIGHT, BLEFT, ITEM };
 
         // Hold the current state of the Animation
         public Animate state;
@@ -251,6 +251,10 @@ namespace TileEngine
                     currentFrame = 2;
                     this.state = Animate.BLEFT;
                     break;
+                case Animate.ITEM:
+                    currentFrame = 0;
+                    this.state = Animate.ITEM;
+                    break;
                 default:
                     currentFrame = 0;
                     break;
@@ -323,6 +327,11 @@ namespace TileEngine
                         currentFrame = 2;
                         frameCount = 3;
                         this.state = Animate.BLEFT;
+                        break;
+                    case Animate.ITEM:
+                        currentFrame = 0;
+                        frameCount = 1;
+                        this.state = Animate.ITEM;
                         break;
                     default:
                         currentFrame = 0;
@@ -397,6 +406,11 @@ namespace TileEngine
                             currentFrame = 2;
                             frameCount = 4;
                             this.state = Animate.BLEFT;
+                            break;
+                        case Animate.ITEM:
+                            currentFrame = 0;
+                            frameCount = 1;
+                            this.state = Animate.ITEM;
                             break;
                         default:
                             currentFrame = 0;
