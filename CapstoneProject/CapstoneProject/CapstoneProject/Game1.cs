@@ -183,10 +183,10 @@ namespace CapstoneProject
 
             //initialize things
             player.Initialize(playerTexture, new Vector2(0, 0));
-            coin.Initialize(coinTexture, new Vector2(19, 250));
-            potion.Initialize(potionTexture, new Vector2(500, 83));
+            coin.Initialize(coinTexture, new Vector2(150, 250));
+            potion.Initialize(potionTexture, new Vector2(500, 200));
             groundMonster.Initialize(groundMonsterTexture, new Vector2(250, 250));
-            flyingMonster.Initialize(flyingMonsterTexture, new Vector2(150, 150));
+            flyingMonster.Initialize(flyingMonsterTexture, new Vector2(300, 150));
             scoreDisplay.loadFont(this.Content.Load<SpriteFont>("FPS"));
         }
 
@@ -226,7 +226,7 @@ namespace CapstoneProject
                     break;
 
                 case GAMESTATE.NEWGAME:
-                    gameMap = gameMap.LoadMap("map.xml", this.Content);
+                    gameMap = gameMap.LoadMap("ground.xml", this.Content);
 
                     //Add items/Mosnters to map
                     gameMap.NpcList.Add(flyingMonster);

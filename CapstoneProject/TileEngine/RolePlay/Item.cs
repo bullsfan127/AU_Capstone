@@ -16,6 +16,8 @@ namespace TileEngine
     {
         public Animation _itemAnimation;
 
+        public bool draw = true;
+
         // Width of the full image
         private int _spriteWidth;
 
@@ -100,17 +102,16 @@ namespace TileEngine
 
         //whether item is on screen;
         bool active = false;
-    
 
         // The image of the item
-        private Texture2D SpriteStrip;
+        public Texture2D SpriteStrip;
 
         public Item() { }
 
         public override void Initialize(Texture2D spriteStrip, Vector2 position)
         {
             _itemAnimation = new Animation();
-
+            SpriteStrip = spriteStrip;
             // Set starting position of the monster
             Position = position;
 

@@ -155,11 +155,34 @@ namespace TileEngine
 
             foreach (Item item in _mapItems)
             {
+                if (new Rectangle((int)item.Position.X, (int)item.Position.Y, 30, 30).Intersects(new Rectangle((int)Player.X, (int)Player.Y, 64, 64)))
+                {
+                    item.draw = false;
+                    Type type = item.GetType();
+                    Player temp = (Player)_Player;
+                    if (type == typeof(Potion))
+                    {
+                        temp.increaseHealth(1);
+                        Player = temp;
+                    }
+                    else if (type == typeof(Coin))
+                    {
+                        temp.increaseScore(10);
+                        Player = temp;
+                    }
+                }
                 item.Update(gameTime, this.Player.Position, offset);
             }
 
             foreach (Monster a in _NpcList)
-            { a.Update(gameTime, this.Player.Position, offset); }
+            {
+                if (new Rectangle((int)a.Position.X, (int)a.Position.Y, 64, 64).Intersects(new Rectangle((int)Player.X, (int)Player.Y, 64, 64)))
+                {
+                    Player temp = (Player)_Player;
+                    temp.decreaseHealth(1);
+                }
+                a.Update(gameTime, this.Player.Position, offset);
+            }
         }
 
         //#DRAW
@@ -176,7 +199,8 @@ namespace TileEngine
             foreach (Item item in _mapItems)
             {
                 //TODO:  Add Logic for drawing based on player Proximity
-                item.Draw(spriteBatch, gameTime);
+                if (item.draw)
+                    item.Draw(spriteBatch, gameTime);
             }
 
             foreach (Monster ava in _NpcList)
@@ -184,6 +208,7 @@ namespace TileEngine
                 //TODO:  Add Logic for drawing based on player Proximity
                 ava.Draw(spriteBatch, gameTime);
             }
+
             _Player.Draw(spriteBatch, gameTime);
             _Fringe.Draw(spriteBatch, gameTime, offset);
         }
