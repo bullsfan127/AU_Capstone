@@ -330,8 +330,8 @@ namespace TileEngine
 
                     //TODO:  Space this out so the draw code is easier to understand.  #TODO
                     if (currentItem != null)
-                        spriteBatch.Draw(currentItem.getTexture(), new Rectangle((int)(renderTargetX * (containedWithin.Width / 10) + containedWithin.X + player.Offset.X),
-                                                                                 (int)(y * (containedWithin.Height / 10) + containedWithin.Y + player.Offset.Y),
+                        spriteBatch.Draw(currentItem.getTexture(), new Rectangle((int)(renderTargetX * (containedWithin.Width / 10) + containedWithin.X - player.Offset.X),
+                                                                                 (int)(y * (containedWithin.Height / 10) + containedWithin.Y - player.Offset.Y),
                                                                                  containedWithin.Width / 10,
                                                                                  containedWithin.Height / 10)
                                                                                  , currentItem.getSourceRectangle(),

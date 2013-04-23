@@ -182,7 +182,7 @@ namespace TileEngine
                 ava.Draw(spriteBatch, gameTime);
             }
             _Player.Draw(spriteBatch, gameTime);
-            _Fringe.Draw(spriteBatch, gameTime, offset);
+            _Fringe.Draw(spriteBatch, gameTime, _Player.Position, _Player);
         }
 
         /// <summary>

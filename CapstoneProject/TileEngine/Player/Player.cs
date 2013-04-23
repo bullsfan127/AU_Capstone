@@ -268,40 +268,44 @@ namespace TileEngine
                 if( _offset.Y % -60 == 0)
                 Position = new Vector2(Position.X, Position.Y - 1);
             }
-            else if (viewPortPostion.Y + _movement.Y > 372)//floor
+            else if (viewPortPostion.Y + _movement.Y > 400)//floor
             {
-                viewPortPostion = new Vector2(viewPortPostion.X, 372);
+               // viewPortPostion = new Vector2(viewPortPostion.X, 372);
                 _movement.Y = 0;
                 Jump = true;
             }
 
-            
+            _movement.Y++;
              
             //establish left and right bound for "dead zone"
             //Right
             if (viewPortPostion.X + _movement.X > 500)
             {
-                _offset.X += viewPortPostion.X + _movement.X - 500;
+                
                 viewPortPostion = new Vector2(500, viewPortPostion.Y + _movement.Y);
 
                 //if the Position less than the max scroll range and the offset is on a whole tile
-                if ((Position.X < map.Ground.MapWidth) && (_offset.X % 60== 0))
+                if ((Position.X < map.Ground.MapWidth) && _offset.X >= 60)
                 {
-                    Position = new Vector2(Position.X + 1, Position.Y);                   
+                    Position = new Vector2(Position.X + 1, Position.Y);
+                    _offset.X = 0;
                 }
-            
+                else
+                _offset.X += _movement.X;
             }
                 //Left
-            else if (viewPortPostion.X + _movement.X < 100 && _offset.X > 0)
+            else if (viewPortPostion.X + _movement.X < 100 )
             {
-                _offset.X += viewPortPostion.X + _movement.X - 100;
+                
                 viewPortPostion = new Vector2(100, viewPortPostion.Y + _movement.Y);
 
-                if ((Position.X > 0) && ( _offset.X % 60 == 0))
+                if ((Position.X > 0) && ( _offset.X <= -60 ))
                 {
                     Position = new Vector2(Position.X - 1, Position.Y);
-                    
+                    _offset.X = 0;   
                 }
+                else
+                _offset.X += _movement.X;
             }
             else
                 viewPortPostion = new Vector2(viewPortPostion.X + _movement.X, viewPortPostion.Y);
@@ -313,10 +317,19 @@ namespace TileEngine
                 viewPortPostion = new Vector2(viewPortPostion.X, 100);
                 
             }
+                //down
             else if (viewPortPostion.Y + _movement.Y > 400)
             {
-                _offset.Y += viewPortPostion.Y + _movement.Y - 400;
+                
                 viewPortPostion = new Vector2(viewPortPostion.X, 400);
+
+                if ((Position.Y < map.Ground.MapHeight - 10) && (_offset.Y >= 60))
+                {
+                    Position = new Vector2(Position.X, Position.Y + 1);
+                    _offset.Y = 0;
+                }
+                else
+                    _offset.Y += _movement.Y;
             }
             else
                 viewPortPostion = new Vector2(viewPortPostion.X, viewPortPostion.Y + _movement.Y);
@@ -343,11 +356,11 @@ namespace TileEngine
             OX = _offset.X;
             OY = _offset.Y;
 
-            if ((_offset.X % 60 == 0) || ( _offset.X % -60 == 0))
-                _offset.X = 0;
+            //if ((_offset.X % 60 == 0) || ( _offset.X % -60 == 0))
+            //    _offset.X = 0;
 
-            if (( _offset.Y % 60 == 0) || ( _offset.X % -60 == 0))
-                _offset.Y = 0;
+            //if (( _offset.Y % 60 == 0) || ( _offset.X % -60 == 0))
+            //    _offset.Y = 0;
 
             map.Update(gameTime, _offset);
         }
