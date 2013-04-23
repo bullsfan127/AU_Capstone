@@ -194,7 +194,7 @@ namespace TileEngine
             else
             {
                 _weapon.setDirection(_weaponDirection);
-                _weapon.Update(gameTime, Position);
+                _weapon.Update(gameTime, viewPortPostion);
                 _justAttacked--;
                 _attackReleased = false;
             }
@@ -257,7 +257,7 @@ namespace TileEngine
                 }
             }
 
-            _movement.Y += 1;
+            
 
             //establish ceiling and floor
             if ((viewPortPostion.Y + _movement.Y < 0) && (Position.X > 0))//ceiling
