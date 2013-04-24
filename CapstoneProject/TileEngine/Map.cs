@@ -181,14 +181,12 @@ namespace TileEngine
             {
                 if (a._monsterAnimation.Active)
                 {
-                    if (new Rectangle((int)a.Position.X, (int)a.Position.Y, 40, 40).Intersects(new Rectangle((int)Player.X, (int)Player.Y, 40, 40)))
+                    Player temp = (Player)_Player;
+                    if (new Rectangle((int)a.Position.X, (int)a.Position.Y, 64,64).Intersects(new Rectangle((int)temp.X, (int)temp.Y, 40, 20)))
                     {
-                        Player temp = (Player)_Player;
-                        if (!temp.getInvulnerable()  && a.iActive)
-                        {
-                            temp.decreaseHealth(a.MaxDamage);
-                        }
-                        if (a.isAttackable() && new Rectangle((int)a.Position.X, (int)a.Position.Y, 40, 40).Intersects(new Rectangle((int)temp.getWeapon().Position.X, (int)temp.getWeapon().Position.Y, 90,128)))
+                        
+                     
+                        if (a.isAttackable() && new Rectangle((int)a.Position.X, (int)a.Position.Y, 64, 64).Intersects(new Rectangle((int)temp.getWeapon().Position.X, (int)temp.getWeapon().Position.Y, 90,128)))
                         {
                             a.decreaseHealth(temp.getWeapon().getDamage());
                             if (a.getHealth() <= 0 && a.iActive)
@@ -197,7 +195,11 @@ namespace TileEngine
                                 temp.increaseScore(10);
                             }
                         }
-
+   
+                        if (!temp.getInvulnerable()  && a.iActive)
+                        {
+                            temp.decreaseHealth(a.MaxDamage);
+                        }
 
                         Player = temp;
                     }
