@@ -72,6 +72,8 @@ namespace CapstoneProject
         SoundManager soundManager;
         Texture2D groundMonsterTexture;
         Texture2D flyingMonsterTexture;
+        Texture2D potionTexture;
+        Texture2D coinTexture;
         //used to draw menus
         Rectangle mainFrame;
 
@@ -169,9 +171,9 @@ namespace CapstoneProject
             pauseTexture = Content.Load<Texture2D>("PauseButton");
             backgroundTexture = Content.Load<Texture2D>("background");
             pauseBackground = Content.Load<Texture2D>("PauseBackground");
-            Texture2D coinTexture = Content.Load<Texture2D>("items/Coin");
+             coinTexture = Content.Load<Texture2D>("items/Coin");
             coinTexture.Name = "items/Coin";
-            Texture2D potionTexture = Content.Load<Texture2D>("items/Potion");
+             potionTexture = Content.Load<Texture2D>("items/Potion");
             potionTexture.Name = "items/Potion";
              groundMonsterTexture = Content.Load<Texture2D>("Monsters/Zombies");
             groundMonsterTexture.Name = "Monsters/Zombies";
@@ -280,7 +282,7 @@ namespace CapstoneProject
                             {
                                 r = new Random();
                                  x = r.Next(300, width);
-                                 y = r.Next(250, 320);
+                                 y = r.Next(10, 320);
                             }
                         f.Initialize(flyingMonsterTexture, new Vector2(x, y));
                         this.gameMap.NpcList.Add(f);
@@ -291,6 +293,48 @@ namespace CapstoneProject
 
                     }
 
+                    for (int i = 0; i < 200; i++)
+                    {
+                        int width = (graphics.PreferredBackBufferWidth * 10) * (gameMap.Ground.MapWidth / 10);
+                        
+
+                        Random r = new Random();
+                        int x = r.Next(200, 600);
+                        int y = r.Next(10, 500);
+
+                        while (lastnumX == x || lastnumY == y)
+                        {
+                            r = new Random();
+                            x = r.Next(200, 600);
+                            y = r.Next(10, 500);
+                        }
+                        Coin c = new Coin();
+                        c.Initialize(coinTexture, new Vector2(x, y));
+                        gameMap.MapItems.Add(c);
+                        c = null;
+                       
+                    }
+
+                    for (int i = 0; i < 10; i++)
+                    {
+                        int width = (graphics.PreferredBackBufferWidth * 10) * (gameMap.Ground.MapWidth / 10);
+                        int height = (graphics.PreferredBackBufferHeight * 10) * (20 / 10);
+
+                        Random r = new Random();
+                        int x = r.Next(200, width);
+                        int y = r.Next(10,500);
+
+                        while (lastnumX == x || lastnumY == y)
+                        {
+                            r = new Random();
+                            x = r.Next(200, width);
+                            y = r.Next(10, 500);
+                        }
+                        Potion p = new Potion();
+                        p.Initialize(potionTexture, new Vector2(x, y));
+                        gameMap.MapItems.Add(p);
+                        p = null;
+                    }
 
                     player = null;
                     player = new Player(this.Content);
@@ -315,7 +359,7 @@ namespace CapstoneProject
                     {
                         e.ToString();
                         //if fails, just load default map
-                        gameMap = gameMap = gameMap.LoadMap("map1.xml", this.Content);
+                        gameMap = gameMap = gameMap.LoadMap("map.xml", this.Content);
                         gameMap.Player = player;
                     }
                     gameState = GAMESTATE.PLAY;
@@ -341,11 +385,6 @@ namespace CapstoneProject
                     if (keystate.IsKeyDown(Keys.F))
                     {
                         graphics.ToggleFullScreen();
-                    }
-
-                    if (keystate.IsKeyDown(Keys.S))
-                    {
-                        gameMap.saveMap("SavedGame.xml");
                     }
 
                     if (Keyboard.GetState().IsKeyDown(Controls.Up) && player.Jump)
