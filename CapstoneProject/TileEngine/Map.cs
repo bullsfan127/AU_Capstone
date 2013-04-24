@@ -160,15 +160,18 @@ namespace TileEngine
                     item.draw = false;
                     Type type = item.GetType();
                     Player temp = (Player)_Player;
-                    if (type == typeof(Potion))
+                    if (type == typeof(Potion) && item.iActive)
                     {
                         temp.increaseHealth(1);
                         Player = temp;
+                        item.iActive = false;
+                        
                     }
-                    else if (type == typeof(Coin))
+                    else if (type == typeof(Coin) && item.iActive)
                     {
                         temp.increaseScore(10);
                         Player = temp;
+                        item.iActive = false;
                     }
                 }
                 item.Update(gameTime, this.Player.Position, offset);
@@ -176,10 +179,28 @@ namespace TileEngine
 
             foreach (Monster a in _NpcList)
             {
-                if (new Rectangle((int)a.Position.X, (int)a.Position.Y, 64, 64).Intersects(new Rectangle((int)Player.X, (int)Player.Y, 64, 64)))
+                if (a._monsterAnimation.Active)
                 {
-                    Player temp = (Player)_Player;
-                    temp.decreaseHealth(1);
+                    if (new Rectangle((int)a.Position.X, (int)a.Position.Y, 40, 40).Intersects(new Rectangle((int)Player.X, (int)Player.Y, 40, 40)))
+                    {
+                        Player temp = (Player)_Player;
+                        if (!temp.getInvulnerable()  && a.iActive)
+                        {
+                            temp.decreaseHealth(a.MaxDamage);
+                        }
+                        if (a.isAttackable() && new Rectangle((int)a.Position.X, (int)a.Position.Y, 40, 40).Intersects(new Rectangle((int)temp.getWeapon().Position.X, (int)temp.getWeapon().Position.Y, 90,128)))
+                        {
+                            a.decreaseHealth(temp.getWeapon().getDamage());
+                            if (a.getHealth() <= 0 && a.iActive)
+                            {
+                                a.iActive = false;
+                                temp.increaseScore(10);
+                            }
+                        }
+
+
+                        Player = temp;
+                    }
                 }
                 a.Update(gameTime, this.Player.Position, offset);
             }
@@ -206,6 +227,7 @@ namespace TileEngine
             foreach (Monster ava in _NpcList)
             {
                 //TODO:  Add Logic for drawing based on player Proximity
+                if(ava.iActive)
                 ava.Draw(spriteBatch, gameTime);
             }
 

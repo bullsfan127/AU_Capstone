@@ -16,6 +16,7 @@ namespace TileEngine
     {
         public Animation _itemAnimation;
 
+        public bool iActive = true;
         public bool draw = true;
 
         // Width of the full image

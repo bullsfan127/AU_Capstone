@@ -226,10 +226,10 @@ namespace CapstoneProject
                     break;
 
                 case GAMESTATE.NEWGAME:
-                    gameMap = gameMap.LoadMap("ground.xml", this.Content);
+                    gameMap = gameMap.LoadMap("map.xml", this.Content);
 
                     //Add items/Mosnters to map
-                    gameMap.NpcList.Add(flyingMonster);
+                   // gameMap.NpcList.Add(flyingMonster);
                     gameMap.NpcList.Add(groundMonster);
                     gameMap.MapItems.Add(coin);
                     gameMap.MapItems.Add(potion);
