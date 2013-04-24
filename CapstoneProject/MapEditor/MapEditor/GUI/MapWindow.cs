@@ -89,7 +89,7 @@ namespace MapEditor.GUI
         DrawableLayer<Tile> currentLayerA;
         DrawableLayer<Tile> currentLayerB;
 
-        FocalPoint _center = new FocalPoint(new Vector2(0, 0), 10, 100, 50, 50);
+        FocalPoint _center = new FocalPoint(new Vector2(0, 0), 10, 10, 100, 20);
 
         public FocalPoint Center
         {

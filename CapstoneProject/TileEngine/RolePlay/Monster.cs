@@ -19,7 +19,7 @@ namespace TileEngine
 
         // Current health
         private int _health;
-
+        public bool iActive= true;
         public int Health
         {
             get { return _health; }

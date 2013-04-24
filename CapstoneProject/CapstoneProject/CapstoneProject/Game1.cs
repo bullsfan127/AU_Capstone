@@ -22,7 +22,7 @@ using TileEngine;
 
 namespace CapstoneProject
 {
-    public enum GAMESTATE { MAINMENU, PLAY, PAUSE, EXIT, SETTINGS, NEWGAME, CONTINUE, MAINSETTINGS, STORY, SAVE };
+    public enum GAMESTATE { MAINMENU, PLAY, PAUSE, EXIT, SETTINGS, NEWGAME, CONTINUE, MAINSETTINGS, STORY, SAVE, GAMEOVER, BEATLEVEL };
 
     /// <summary>
     /// This is the main type for your game
@@ -33,7 +33,7 @@ namespace CapstoneProject
         /// Keeps track of overall gamestate
         /// Sets initital sate, if you want to skip the main menu for testing, just set the state to GAMESTATE.PLAY instead
         /// </summary>
-        public static GAMESTATE gameState = GAMESTATE.MAINMENU;
+        public static GAMESTATE gameState = GAMESTATE.NEWGAME;
 
         //XNA
         SpriteBatch spriteBatch;
@@ -70,7 +70,8 @@ namespace CapstoneProject
 
         //Sound Mgr
         SoundManager soundManager;
-
+        Texture2D groundMonsterTexture;
+        Texture2D flyingMonsterTexture;
         //used to draw menus
         Rectangle mainFrame;
 
@@ -172,9 +173,9 @@ namespace CapstoneProject
             coinTexture.Name = "items/Coin";
             Texture2D potionTexture = Content.Load<Texture2D>("items/Potion");
             potionTexture.Name = "items/Potion";
-            Texture2D groundMonsterTexture = Content.Load<Texture2D>("Monsters/Zombies");
+             groundMonsterTexture = Content.Load<Texture2D>("Monsters/Zombies");
             groundMonsterTexture.Name = "Monsters/Zombies";
-            Texture2D flyingMonsterTexture = Content.Load<Texture2D>("Monsters/Birds");
+             flyingMonsterTexture = Content.Load<Texture2D>("Monsters/Birds");
             flyingMonsterTexture.Name = "Monsters/Birds";
             story = this.Content.Load<Texture2D>("story");
 
@@ -183,10 +184,13 @@ namespace CapstoneProject
 
             //initialize things
             player.Initialize(playerTexture, new Vector2(0, 0));
-            coin.Initialize(coinTexture, new Vector2(19, 250));
-            potion.Initialize(potionTexture, new Vector2(500, 83));
+            coin.Initialize(coinTexture, new Vector2(150, 250));
+            potion.Initialize(potionTexture, new Vector2(500, 200));
+
             groundMonster.Initialize(groundMonsterTexture, new Vector2(250, 250));
-            flyingMonster.Initialize(flyingMonsterTexture, new Vector2(150, 150));
+            flyingMonster.Initialize(flyingMonsterTexture, new Vector2(700, 150));
+
+
             scoreDisplay.loadFont(this.Content.Load<SpriteFont>("FPS"));
         }
 
@@ -208,6 +212,7 @@ namespace CapstoneProject
         {
             switch (gameState)
             {
+
                 case GAMESTATE.MAINMENU:
                     menu.Update(gameTime);
                     break;
@@ -226,7 +231,7 @@ namespace CapstoneProject
                     break;
 
                 case GAMESTATE.NEWGAME:
-                    gameMap = gameMap.LoadMap("map.xml", this.Content);
+                    gameMap = gameMap.LoadMap("map1.xml", this.Content);
 
                     //Add items/Mosnters to map
                     gameMap.NpcList.Add(flyingMonster);
@@ -234,13 +239,70 @@ namespace CapstoneProject
                     gameMap.MapItems.Add(coin);
                     gameMap.MapItems.Add(potion);
 
+                    int lastnumX=0;
+                    int lastnumY=0;
+                    for (int i = 0; i < 100; i++)
+                    {   
+                        int width = (graphics.PreferredBackBufferWidth*10)*(gameMap.Ground.MapWidth/10);
+                        Random r = new Random();
+                        int x =r.Next(300, width);
+                            int y =  r.Next(250, 320);
+                     
+                         GroundMonster g = new GroundMonster();
+                         while (lastnumX == x || lastnumY == y)
+                         {
+                             r = new Random();
+                             x = r.Next(300, width);
+                             y = r.Next(250, 320);
+                         }
+                           
+
+                         g.Initialize(groundMonsterTexture, new Vector2(x, y));
+                        this.gameMap.NpcList.Add(g);
+                        lastnumY = y;
+                        lastnumX = x;
+                        g = null;
+   
+
+                    }
+                    for (int i = 0; i < 100; i++)
+                    {
+                        Random r = new Random();
+
+                        int width = (graphics.PreferredBackBufferWidth * 10) * (gameMap.Ground.MapWidth / 10);
+  
+                        FlyingMonster f = new FlyingMonster();
+
+                           int x =r.Next(300, width);
+                            int y =  r.Next(250, 320);
+
+                            while (lastnumX == x || lastnumY == y)
+                            {
+                                r = new Random();
+                                 x = r.Next(300, width);
+                                 y = r.Next(250, 320);
+                            }
+                        f.Initialize(flyingMonsterTexture, new Vector2(x, y));
+                        this.gameMap.NpcList.Add(f);
+
+                        lastnumY = y;
+                        lastnumX = x;
+                        f = null;
+
+                    }
+
+
                     player = null;
                     player = new Player(this.Content);
                     player.Initialize(playerTexture, new Vector2(0, 0));
                     gameMap.Player = player;
+                    
                     gameState = GAMESTATE.PLAY;
                     break;
-
+                case GAMESTATE.BEATLEVEL:
+                case GAMESTATE.GAMEOVER:
+                    gameState=GAMESTATE.MAINMENU;
+                    break;
                 case GAMESTATE.CONTINUE:
                     //Load from savedGame file
                     try
@@ -253,7 +315,7 @@ namespace CapstoneProject
                     {
                         e.ToString();
                         //if fails, just load default map
-                        gameMap = gameMap = gameMap.LoadMap("map.xml", this.Content);
+                        gameMap = gameMap = gameMap.LoadMap("map1.xml", this.Content);
                         gameMap.Player = player;
                     }
                     gameState = GAMESTATE.PLAY;
@@ -265,6 +327,7 @@ namespace CapstoneProject
 
                 case GAMESTATE.PLAY:
 
+ 
                     // Allows the game to exit
                     if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                         this.Exit();
@@ -295,6 +358,8 @@ namespace CapstoneProject
                     pauseButton.Update(gameTime);
                     healthBar.Update(gameTime, player);
                     scoreDisplay.Update(player.getLevelScore());
+                    if (gameMap.gameOver)
+                        gameState = GAMESTATE.GAMEOVER;
 
                     #region
 
@@ -346,10 +411,24 @@ namespace CapstoneProject
 
                 case GAMESTATE.PLAY:
                     GraphicsDevice.Clear(Color.CornflowerBlue);
-                    gameMap.Draw(spriteBatch, gameTime);
-                    healthBar.Draw(gameTime, spriteBatch);
+                    try
+                    {
+                        gameMap.Draw(spriteBatch, gameTime);  
+                        healthBar.Draw(gameTime, spriteBatch);
                     scoreDisplay.Draw(spriteBatch, gameTime);
                     pauseButton.Draw(gameTime, spriteBatch);
+#if DEBUG
+                    //#FPS_COUNTER
+                    counter.Draw(spriteBatch, gameTime);
+                    Terminal.CheckDraw(false);
+#endif
+                    }
+                    catch (Exception e)
+                    {
+                        spriteBatch.End();
+                        gameState = GAMESTATE.BEATLEVEL;
+                    }
+
                     break;
 
                 case GAMESTATE.PAUSE:
@@ -371,11 +450,7 @@ namespace CapstoneProject
                     break;
             }
 
-#if DEBUG
-            //#FPS_COUNTER
-            counter.Draw(spriteBatch, gameTime);
-            Terminal.CheckDraw(false);
-#endif
+
 
             base.Draw(gameTime);
         }

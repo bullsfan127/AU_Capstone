@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Polenter.Serialization;
 
+
 namespace TileEngine
 {
     /// <summary>
@@ -22,6 +23,8 @@ namespace TileEngine
     {
         public const int TILE_WIDTH = 64;
 
+        public bool gameOver = false;
+        public bool levelOver;
         //offset to determine center of screen.
         public Vector2 offset = Vector2.Zero;
 
@@ -155,11 +158,66 @@ namespace TileEngine
 
             foreach (Item item in _mapItems)
             {
+                if (_Player.PlayerAnimation.destinationRect.Intersects(item._itemAnimation.destinationRect))
+                {
+                    item.draw = false;
+                    Type type = item.GetType();
+                    Player temp = (Player)_Player;
+                    if (type == typeof(Potion) && item.iActive)
+                    {
+                        temp.increaseHealth(1);
+                        Player = temp;
+                        item.iActive = false;
+                        
+                    }
+                    else if (type == typeof(Coin) && item.iActive)
+                    {
+                        temp.increaseScore(10);
+                        Player = temp;
+                        item.iActive = false;
+                    }
+                }
                 item.Update(gameTime, this.Player.Position, offset);
             }
 
             foreach (Monster a in _NpcList)
-            { a.Update(gameTime, this.Player.Position, offset); }
+            {
+                Player temp = (Player)_Player;
+                if (a._monsterAnimation.Active)
+                {
+                    
+                    if(temp.attacking)
+                    {
+                            if ( a._monsterAnimation.destinationRect.Intersects(temp.Weapon.wepRect) )
+                            {
+                                a.decreaseHealth(1);
+                                if (a.getHealth() <= 0 && a.iActive)
+                                {
+                                    a.iActive = false;
+                                    temp.increaseScore(20);
+                                }
+                            }
+
+
+                        
+                    }
+
+                    if(temp.PlayerAnimation.destinationRect.Intersects(a._monsterAnimation.destinationRect))
+                    {
+                            if (!temp.getInvulnerable() && a.iActive)
+                            {
+                                temp.decreaseHealth(a.MaxDamage);
+                            }
+                    }
+                }
+                if (temp.Health <= 0)
+                    gameOver = true;
+                Player = temp;
+
+                
+                
+                a.Update(gameTime, this.Player.Position, offset);
+            }
         }
 
         //#DRAW
@@ -176,14 +234,17 @@ namespace TileEngine
             foreach (Item item in _mapItems)
             {
                 //TODO:  Add Logic for drawing based on player Proximity
-                item.Draw(spriteBatch, gameTime);
+                if (item.draw)
+                    item.Draw(spriteBatch, gameTime);
             }
 
             foreach (Monster ava in _NpcList)
             {
                 //TODO:  Add Logic for drawing based on player Proximity
+                if(ava.iActive)
                 ava.Draw(spriteBatch, gameTime);
             }
+
             _Player.Draw(spriteBatch, gameTime);
             _Fringe.Draw(spriteBatch, gameTime, offset);
         }
@@ -342,6 +403,8 @@ namespace TileEngine
                     }
                 }
             }
+
+
         }
 
         /// <summary>

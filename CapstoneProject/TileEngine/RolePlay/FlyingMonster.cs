@@ -46,10 +46,10 @@ namespace TileEngine
                 _monsterAnimation.Update(gameTime);
                 if (relPosition.X - player.X < 0)
                 {
-                    movement.X = 4;
+                    movement.X = 2;
                 }
                 else
-                    movement.X = -4;
+                    movement.X = -2;
                 if (relPosition.Y - player.Y < 0)
                 {
                     movement.Y = 2;

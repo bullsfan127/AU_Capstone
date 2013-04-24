@@ -36,6 +36,7 @@ namespace TileEngine
             MaxHealth = 1;
         }
 
+
         public override void Update(GameTime gameTime, Vector2 player, Vector2 offset)
         {
             //is monster on screen check
