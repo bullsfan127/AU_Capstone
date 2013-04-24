@@ -179,31 +179,37 @@ namespace TileEngine
 
             foreach (Monster a in _NpcList)
             {
+                Player temp = (Player)_Player;
                 if (a._monsterAnimation.Active)
                 {
-                    Player temp = (Player)_Player;
-                    if (new Rectangle((int)a.Position.X, (int)a.Position.Y, 64,64).Intersects(new Rectangle((int)temp.X, (int)temp.Y, 40, 20)))
+                    
+                    if(temp.attacking)
                     {
-                        
-                     
-                        if (a.isAttackable() && new Rectangle((int)a.Position.X, (int)a.Position.Y, 64, 64).Intersects(new Rectangle((int)temp.getWeapon().Position.X, (int)temp.getWeapon().Position.Y, 90,128)))
-                        {
-                            a.decreaseHealth(temp.getWeapon().getDamage());
-                            if (a.getHealth() <= 0 && a.iActive)
+                            if ( a._monsterAnimation.destinationRect.Intersects(temp.Weapon.wepRect) )
                             {
-                                a.iActive = false;
-                                temp.increaseScore(10);
+                                a.decreaseHealth(1);
+                                if (a.getHealth() <= 0 && a.iActive)
+                                {
+                                    a.iActive = false;
+                                    temp.increaseScore(10);
+                                }
                             }
-                        }
-   
-                        if (!temp.getInvulnerable()  && a.iActive)
-                        {
-                            temp.decreaseHealth(a.MaxDamage);
-                        }
 
-                        Player = temp;
+
+                        
+                    }
+
+                    if(temp.PlayerAnimation.destinationRect.Intersects(a._monsterAnimation.destinationRect))
+                    {
+                            if (!temp.getInvulnerable() && a.iActive)
+                            {
+                                temp.decreaseHealth(a.MaxDamage);
+                            }
                     }
                 }
+                Player = temp;
+
+                
                 a.Update(gameTime, this.Player.Position, offset);
             }
         }
@@ -391,6 +397,8 @@ namespace TileEngine
                     }
                 }
             }
+
+
         }
 
         /// <summary>

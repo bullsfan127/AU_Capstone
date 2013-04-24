@@ -17,12 +17,14 @@ namespace TileEngine
         //unknown
         private ContentManager Content;
 
+        public bool attacking;
         //Current movement speeds for player
         private Vector2 _movement;
 
         //Players collision Rectangle
         private Rectangle PlayerRect;
 
+        
         //Player is on the ground and can jump
         private bool jump;
 
@@ -239,10 +241,15 @@ namespace TileEngine
                 if (_weaponDirection == 1)
                 {
                     PlayerAnimation.state = Animation.Animate.RIDLE;
+                    attacking = false;
+                    _weapon.wepRect = Rectangle.Empty;
+                    
                 }
                 else
                 {
                     PlayerAnimation.state = Animation.Animate.LIDLE;
+                    attacking = false;
+                    _weapon.wepRect = Rectangle.Empty;
                 }
             }
 
@@ -287,10 +294,14 @@ namespace TileEngine
                 if (_weaponDirection == 1)
                 {
                     PlayerAnimation.state = Animation.Animate.RATTACK;
+                    attacking = true;
+                    _weapon.wepRect = new Rectangle((int)Position.X + (int)this.PlayerRect.Width, (int)Position.Y, 128, 64);
                 }
                 else
                 {
                     PlayerAnimation.state = Animation.Animate.LATTACK;
+                    attacking=true;
+                    _weapon.wepRect = new Rectangle((int)Position.X - 128, (int)Position.Y, 128, 64);
                 }
             }
 

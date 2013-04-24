@@ -70,7 +70,8 @@ namespace CapstoneProject
 
         //Sound Mgr
         SoundManager soundManager;
-
+        Texture2D groundMonsterTexture;
+        Texture2D flyingMonsterTexture;
         //used to draw menus
         Rectangle mainFrame;
 
@@ -172,9 +173,9 @@ namespace CapstoneProject
             coinTexture.Name = "items/Coin";
             Texture2D potionTexture = Content.Load<Texture2D>("items/Potion");
             potionTexture.Name = "items/Potion";
-            Texture2D groundMonsterTexture = Content.Load<Texture2D>("Monsters/Zombies");
+             groundMonsterTexture = Content.Load<Texture2D>("Monsters/Zombies");
             groundMonsterTexture.Name = "Monsters/Zombies";
-            Texture2D flyingMonsterTexture = Content.Load<Texture2D>("Monsters/Birds");
+             flyingMonsterTexture = Content.Load<Texture2D>("Monsters/Birds");
             flyingMonsterTexture.Name = "Monsters/Birds";
             story = this.Content.Load<Texture2D>("story");
 
@@ -185,8 +186,11 @@ namespace CapstoneProject
             player.Initialize(playerTexture, new Vector2(0, 0));
             coin.Initialize(coinTexture, new Vector2(150, 250));
             potion.Initialize(potionTexture, new Vector2(500, 200));
+
             groundMonster.Initialize(groundMonsterTexture, new Vector2(250, 250));
-            flyingMonster.Initialize(flyingMonsterTexture, new Vector2(300, 150));
+            flyingMonster.Initialize(flyingMonsterTexture, new Vector2(700, 150));
+
+
             scoreDisplay.loadFont(this.Content.Load<SpriteFont>("FPS"));
         }
 
@@ -229,10 +233,30 @@ namespace CapstoneProject
                     gameMap = gameMap.LoadMap("map.xml", this.Content);
 
                     //Add items/Mosnters to map
-                   // gameMap.NpcList.Add(flyingMonster);
+                    gameMap.NpcList.Add(flyingMonster);
                     gameMap.NpcList.Add(groundMonster);
                     gameMap.MapItems.Add(coin);
                     gameMap.MapItems.Add(potion);
+
+                    for (int i = 0; i < 20; i++)
+                    {
+                        Random r = new Random();
+
+                        int c = r.Next(300, 600);
+                        int d=r.Next(10, 320);
+                        System.Diagnostics.Debug.WriteLine("C:, " + c +" D: " + d);
+                         GroundMonster g = new GroundMonster();
+                         g.Initialize(groundMonsterTexture, new Vector2(r.Next(300, 600), r.Next(10, 320)));
+                        FlyingMonster f = new FlyingMonster();
+                        f.Initialize(flyingMonsterTexture, new Vector2(r.Next(300, 600), r.Next(10, 320)));
+                        this.gameMap.NpcList.Add(g);
+                        this.gameMap.NpcList.Add(f);
+                        g = null;
+                        f = null;
+
+                    }
+
+
 
                     player = null;
                     player = new Player(this.Content);

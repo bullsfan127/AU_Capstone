@@ -26,6 +26,7 @@ namespace TileEngine
             set { _maxDamage = value; }
         }
 
+        public Rectangle wepRect= Rectangle.Empty;
         // Width of the full image
         private int _spriteWidth;
 
@@ -37,7 +38,7 @@ namespace TileEngine
 
         // Height of the full image
         private int _spriteHeight;
-
+        
         public int SpriteHeight
         {
             get { return _spriteHeight; }
