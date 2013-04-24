@@ -281,11 +281,12 @@ namespace CapstoneProject
                     }
 
                     //Update things
+                    gameMap.Update(gameTime, player.Offset);
                     player.Update(gameTime, gameMap);
                     pauseButton.Update(gameTime);
                     healthBar.Update(gameTime, player);
                     scoreDisplay.Update(player.getLevelScore());
-
+                   
                     #region
 
                     if (keystate.IsKeyDown(Keys.S) && keystate.IsKeyDown(Keys.H) && keystate.IsKeyDown(Keys.I) && keystate.IsKeyDown(Keys.T))

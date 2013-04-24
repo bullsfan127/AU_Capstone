@@ -23,6 +23,7 @@ namespace TileEngine
         //Players collision Rectangle
         private Rectangle PlayerRect;
 
+        private bool platformColisionBot = false;
         //Players position on the viewPort
         private Vector2 viewPortPostion;
 
@@ -176,6 +177,9 @@ namespace TileEngine
         /// <param name="map"></param>
         public void Update(GameTime gameTime, Map map)
         {
+            if (_movement.Y > 5)
+                _movement.Y = 0;
+
             // Vector2 Position = Vector2.Zero;
             PlayerAnimation.Position = viewPortPostion;
            
@@ -205,7 +209,10 @@ namespace TileEngine
             //Reset movement to still
 
             _movement.X = 0;
-
+            //update rectangle position based on player position
+            PlayerRect.X = (int)viewPortPostion.X;
+            PlayerRect.Y = (int)viewPortPostion.Y;
+           
             //Reset movement to still
             if (_justAttacked <= 0)
             {
@@ -230,6 +237,7 @@ namespace TileEngine
 
             else if (Keyboard.GetState().IsKeyDown(Controls.Right))
             {
+
                 PlayerAnimation.state = Animation.Animate.RMOVING;
 
                 _movement.X = 5;
@@ -239,6 +247,7 @@ namespace TileEngine
             //Keeping track of jumping/falling speed
             if (Keyboard.GetState().IsKeyDown(Controls.Up) && Jump)
             {
+                platformColisionBot = false;
                 _movement.Y += -20;
                 Jump = false;
             }
@@ -257,7 +266,9 @@ namespace TileEngine
                 }
             }
 
-            
+            //gravity
+            if(!platformColisionBot)
+             _movement.Y++;
 
             //establish ceiling and floor
             if ((viewPortPostion.Y + _movement.Y < 0) && (Position.X > 0))//ceiling
@@ -270,19 +281,37 @@ namespace TileEngine
             }
             else if (viewPortPostion.Y + _movement.Y > 400)//floor
             {
-               // viewPortPostion = new Vector2(viewPortPostion.X, 372);
-                _movement.Y = 0;
-                Jump = true;
+                // viewPortPostion = new Vector2(viewPortPostion.X, 372);
+                Rectangle[,] fieldOfMovement = getInteractionLocation(map);
+                if (PlayerRect.Intersects(fieldOfMovement[1, 3]))
+                {
+                    platformColisionBot = true;
+                    _movement.Y = 0;
+                    Jump = true;
+                }
+                else
+                    platformColisionBot = false;
             }
-
-            _movement.Y++;
+            else
+            { // viewPortPostion = new Vector2(viewPortPostion.X, 372);
+                Rectangle[,] fieldOfMovement = getInteractionLocation(map);
+                if (PlayerRect.Intersects(fieldOfMovement[1, 3]))
+                {
+                    platformColisionBot = true;
+                    _movement.Y = 0;
+                    Jump = true;
+                }
+                else
+                    platformColisionBot = false;
+            }
+           
              
             //establish left and right bound for "dead zone"
             //Right
             if (viewPortPostion.X + _movement.X > 500)
             {
                 
-                viewPortPostion = new Vector2(500, viewPortPostion.Y + _movement.Y);
+                viewPortPostion = new Vector2(500, viewPortPostion.Y);
 
                 //if the Position less than the max scroll range and the offset is on a whole tile
                 if ((Position.X < map.Ground.MapWidth) && _offset.X >= 60)
@@ -297,7 +326,7 @@ namespace TileEngine
             else if (viewPortPostion.X + _movement.X < 100 )
             {
                 
-                viewPortPostion = new Vector2(100, viewPortPostion.Y + _movement.Y);
+                viewPortPostion = new Vector2(100, viewPortPostion.Y);
 
                 if ((Position.X > 0) && ( _offset.X <= -60 ))
                 {
@@ -318,30 +347,29 @@ namespace TileEngine
                 
             }
                 //down
-            else if (viewPortPostion.Y + _movement.Y > 400)
+            else if (viewPortPostion.Y + _movement.Y > 540 - 128)
             {
-                
-                viewPortPostion = new Vector2(viewPortPostion.X, 400);
+
+                viewPortPostion = new Vector2(viewPortPostion.X, 540 - 128);
 
                 if ((Position.Y < map.Ground.MapHeight - 10) && (_offset.Y >= 60))
                 {
                     Position = new Vector2(Position.X, Position.Y + 1);
                     _offset.Y = 0;
                 }
-                else
+                else if(!platformColisionBot)
                     _offset.Y += _movement.Y;
             }
             else
                 viewPortPostion = new Vector2(viewPortPostion.X, viewPortPostion.Y + _movement.Y);
 
-            //update rectangle position based on player position
-            PlayerRect.X = (int)viewPortPostion.X;
-            PlayerRect.Y = (int)viewPortPostion.Y;
+            
 
             //prevent the player from moving off the side
-            if (viewPortPostion.X < 0)
+            if (_offset.X < 0 && (Position.X == 0))
             {
                 viewPortPostion = new Vector2(0, viewPortPostion.Y);
+                _offset.X = 0;
             }
 
             if (Keyboard.GetState().IsKeyDown(Controls.Attack))
@@ -362,7 +390,7 @@ namespace TileEngine
             //if (( _offset.Y % 60 == 0) || ( _offset.X % -60 == 0))
             //    _offset.Y = 0;
 
-            map.Update(gameTime, _offset);
+           
         }
 
         /// <summary>
@@ -503,6 +531,26 @@ namespace TileEngine
         public bool hasArmor()
         {
             return this._armor;
+        }
+
+        public Rectangle[,] getInteractionLocation(Map map)
+        {
+            Rectangle[,] fieldOfMovement;
+
+            Point playerGameWorldPosition;
+            float Rx = Position.X + ((viewPortPostion.X - _offset.X) / (map.Ground.MaxViewPortWidth / 10));
+            float Ry = Position.Y +((viewPortPostion.Y - _offset.Y) / (map.Ground.MaxViewPortWidth / 10));
+            playerGameWorldPosition = new Point((int)(Position.X + Math.Round(Rx) -1), (int)(Position.Y + Math.Round(Ry))-1);
+
+            fieldOfMovement = new Rectangle[3, 4];
+
+            fieldOfMovement[1, 0] = map.CollisionLayer.getItemAt(new Vector2(playerGameWorldPosition.X, playerGameWorldPosition.Y -1));
+            fieldOfMovement[0, 1] = map.CollisionLayer.getItemAt(new Vector2(playerGameWorldPosition.X -1, playerGameWorldPosition.Y + 1));
+            fieldOfMovement[0, 2] = map.CollisionLayer.getItemAt(new Vector2(playerGameWorldPosition.X - 1, playerGameWorldPosition.Y + 2));
+            fieldOfMovement[1, 3] = map.CollisionLayer.getItemAt(new Vector2(playerGameWorldPosition.X, playerGameWorldPosition.Y +2));
+            fieldOfMovement[2, 1] = map.CollisionLayer.getItemAt(new Vector2(playerGameWorldPosition.X + 1, playerGameWorldPosition.Y + 1));
+            fieldOfMovement[2, 2] = map.CollisionLayer.getItemAt(new Vector2(playerGameWorldPosition.X + 1, playerGameWorldPosition.Y + 2));
+            return fieldOfMovement;
         }
     }
 }

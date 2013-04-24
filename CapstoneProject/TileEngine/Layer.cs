@@ -54,7 +54,7 @@ namespace TileEngine
             }
             catch (IndexOutOfRangeException e)
             {
-                throw e;
+                return default(T);
             }
 
             return (output);
