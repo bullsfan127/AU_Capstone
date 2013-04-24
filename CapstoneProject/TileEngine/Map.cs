@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Polenter.Serialization;
 
+
 namespace TileEngine
 {
     /// <summary>
@@ -22,6 +23,8 @@ namespace TileEngine
     {
         public const int TILE_WIDTH = 64;
 
+        public bool gameOver = false;
+        public bool levelOver;
         //offset to determine center of screen.
         public Vector2 offset = Vector2.Zero;
 
@@ -155,7 +158,7 @@ namespace TileEngine
 
             foreach (Item item in _mapItems)
             {
-                if (new Rectangle((int)item.Position.X, (int)item.Position.Y, 30, 30).Intersects(new Rectangle((int)Player.X, (int)Player.Y, 64, 64)))
+                if (_Player.PlayerAnimation.destinationRect.Intersects(item._itemAnimation.destinationRect))
                 {
                     item.draw = false;
                     Type type = item.GetType();
@@ -191,7 +194,7 @@ namespace TileEngine
                                 if (a.getHealth() <= 0 && a.iActive)
                                 {
                                     a.iActive = false;
-                                    temp.increaseScore(10);
+                                    temp.increaseScore(20);
                                 }
                             }
 
@@ -207,8 +210,11 @@ namespace TileEngine
                             }
                     }
                 }
+                if (temp.Health <= 0)
+                    gameOver = true;
                 Player = temp;
 
+                
                 
                 a.Update(gameTime, this.Player.Position, offset);
             }

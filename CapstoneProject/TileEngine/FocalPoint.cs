@@ -45,7 +45,7 @@ namespace TileEngine
         {
             KeyboardState keyboard = Keyboard.GetState();
 
-            if (lastmove - gameTime.TotalGameTime.Milliseconds > 300)
+            if (lastmove - gameTime.TotalGameTime.Milliseconds > 100)
                 if (keyboard.IsKeyDown(Keys.Up))
                 {
                     if (Position.X > 0)

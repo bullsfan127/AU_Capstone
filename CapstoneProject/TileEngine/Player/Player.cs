@@ -295,13 +295,13 @@ namespace TileEngine
                 {
                     PlayerAnimation.state = Animation.Animate.RATTACK;
                     attacking = true;
-                    _weapon.wepRect = new Rectangle((int)Position.X + (int)this.PlayerRect.Width, (int)Position.Y, 128, 64);
+                    _weapon.wepRect = new Rectangle((int)Position.X + (int)this.PlayerRect.Width, (int)Position.Y, 64, 64);
                 }
                 else
                 {
                     PlayerAnimation.state = Animation.Animate.LATTACK;
                     attacking=true;
-                    _weapon.wepRect = new Rectangle((int)Position.X - 128, (int)Position.Y, 128, 64);
+                    _weapon.wepRect = new Rectangle((int)Position.X - 128, (int)Position.Y, 64, 64);
                 }
             }
 
@@ -354,10 +354,10 @@ namespace TileEngine
                        }
              */
             //establish left and right bound for "dead zone"
-            if (Position.X + _movement.X > 500)
+            if (Position.X + _movement.X > 300)
             {
-                _offset.X += Position.X + _movement.X - 500;
-                Position = new Vector2(500, Position.Y);
+                _offset.X += Position.X + _movement.X - 300;
+                Position = new Vector2(300, Position.Y);
             }
             else if (Position.X + _movement.X < 100 && _offset.X > 0)
             {
