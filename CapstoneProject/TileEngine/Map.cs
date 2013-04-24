@@ -443,5 +443,45 @@ namespace TileEngine
                 a.Initialize(spriteStrip2, new Vector2(a.X, a.Y));
             }
         }
+
+        internal void UpdateRectangles()
+        {
+            Rectangle containedWithin = new Rectangle(0, 0, Ground.MaxViewPortWidth, Ground.MaxViewPortHeight);
+
+            //If there there is an offset we need to draw an extra tile
+            int offsetIncrease = 0;
+
+            //If there is a deminsion to the offset
+            if (Player != null)
+            {
+                if ((_Player.Offset.X > 0) || (_Player.Offset.X < 0) || (_Player.Offset.X > 0) || (_Player.Offset.X < 0))
+                    offsetIncrease = 1;
+
+                int startPosX = (int)_Player.Position.X / 64;//Where are we starting horizontally
+                //~~~~~~~~~~~~~~~~~DRAW LOGIC~~~~~~~~~~~~~~~~~~~~~
+                for (int x = 0; x < Ground.MaxColumns + offsetIncrease; x++)
+                {
+                    int startPosY = 0;
+                    //(int)centerLocation.Y;//Where are we starting vertically in the map layer
+
+                    for (int y = 0; y < Ground.MaxRows + offsetIncrease; y++)
+                    {
+                        Rectangle currentItem = CollisionLayer.layer[startPosX + (int)_Player.Position.X, startPosY + (int)_Player.Position.Y];
+                        int renderTargetX = x;
+                        //TODO:  Space this out so the draw code is easier to understand.  #TODO
+                        if (currentItem != Rectangle.Empty)
+                            CollisionLayer.layer[startPosX + (int)_Player.Position.X, startPosY + (int)_Player.Position.Y] = new Rectangle((int)(renderTargetX * (containedWithin.Width / 10) + containedWithin.X - _Player.Offset.X),
+                                                                                      (int)(y * (containedWithin.Height / 10) + containedWithin.Y - _Player.Offset.Y),
+                                                                                      containedWithin.Width / 10,
+                                                                                      containedWithin.Height / 10);
+
+                        startPosY++;
+                    }//inner for
+
+                    startPosX++;
+                }//outer for
+
+            }
+        }
     }
 }

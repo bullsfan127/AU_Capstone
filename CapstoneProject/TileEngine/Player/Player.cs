@@ -360,10 +360,21 @@ namespace TileEngine
                 else if(!platformColisionBot)
                     _offset.Y += _movement.Y;
             }
-            else
+           else
                 viewPortPostion = new Vector2(viewPortPostion.X, viewPortPostion.Y + _movement.Y);
 
-            
+            if (!platformColisionBot && Movement.Y > 0)
+            {
+                Rectangle[,] fieldOfMovement = getInteractionLocation(map);
+                if (PlayerRect.Intersects(fieldOfMovement[1, 3]))
+                {
+                    platformColisionBot = true;
+                    _movement.Y = 0;
+                    Jump = true;
+                }
+                else
+                    platformColisionBot = false;
+            }
 
             //prevent the player from moving off the side
             if (_offset.X < 0 && (Position.X == 0))
@@ -535,12 +546,13 @@ namespace TileEngine
 
         public Rectangle[,] getInteractionLocation(Map map)
         {
+            map.UpdateRectangles();
             Rectangle[,] fieldOfMovement;
 
             Point playerGameWorldPosition;
             float Rx = Position.X + ((viewPortPostion.X - _offset.X) / (map.Ground.MaxViewPortWidth / 10));
             float Ry = Position.Y +((viewPortPostion.Y - _offset.Y) / (map.Ground.MaxViewPortWidth / 10));
-            playerGameWorldPosition = new Point((int)(Position.X + Math.Round(Rx) -1), (int)(Position.Y + Math.Round(Ry))-1);
+            playerGameWorldPosition = new Point((int)(Position.X + Math.Round(Rx) ), (int)(Position.Y + Math.Round(Ry)));
 
             fieldOfMovement = new Rectangle[3, 4];
 
