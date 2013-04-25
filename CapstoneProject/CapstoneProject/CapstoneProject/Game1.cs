@@ -70,10 +70,12 @@ namespace CapstoneProject
 
         //Sound Mgr
         SoundManager soundManager;
+
         Texture2D groundMonsterTexture;
         Texture2D flyingMonsterTexture;
         Texture2D potionTexture;
         Texture2D coinTexture;
+
         //used to draw menus
         Rectangle mainFrame;
 
@@ -171,13 +173,13 @@ namespace CapstoneProject
             pauseTexture = Content.Load<Texture2D>("PauseButton");
             backgroundTexture = Content.Load<Texture2D>("background");
             pauseBackground = Content.Load<Texture2D>("PauseBackground");
-             coinTexture = Content.Load<Texture2D>("items/Coin");
+            coinTexture = Content.Load<Texture2D>("items/Coin");
             coinTexture.Name = "items/Coin";
-             potionTexture = Content.Load<Texture2D>("items/Potion");
+            potionTexture = Content.Load<Texture2D>("items/Potion");
             potionTexture.Name = "items/Potion";
-             groundMonsterTexture = Content.Load<Texture2D>("Monsters/Zombies");
+            groundMonsterTexture = Content.Load<Texture2D>("Monsters/Zombies");
             groundMonsterTexture.Name = "Monsters/Zombies";
-             flyingMonsterTexture = Content.Load<Texture2D>("Monsters/Birds");
+            flyingMonsterTexture = Content.Load<Texture2D>("Monsters/Birds");
             flyingMonsterTexture.Name = "Monsters/Birds";
             story = this.Content.Load<Texture2D>("story");
 
@@ -191,7 +193,6 @@ namespace CapstoneProject
 
             groundMonster.Initialize(groundMonsterTexture, new Vector2(250, 250));
             flyingMonster.Initialize(flyingMonsterTexture, new Vector2(700, 150));
-
 
             scoreDisplay.loadFont(this.Content.Load<SpriteFont>("FPS"));
         }
@@ -214,7 +215,6 @@ namespace CapstoneProject
         {
             switch (gameState)
             {
-
                 case GAMESTATE.MAINMENU:
                     menu.Update(gameTime);
                     break;
@@ -235,117 +235,117 @@ namespace CapstoneProject
                 case GAMESTATE.NEWGAME:
                     gameMap = gameMap.LoadMap("map1.xml", this.Content);
 
+                    //******************************************************
+                    //          Use this code to add items/monsnters to a created map
+                    //           Then just Save the Map and, rename the file
+                    //           To what you want to call the map
+
+                    //*****************************************************/
                     //Add items/Mosnters to map
-                    gameMap.NpcList.Add(flyingMonster);
-                    gameMap.NpcList.Add(groundMonster);
-                    gameMap.MapItems.Add(coin);
-                    gameMap.MapItems.Add(potion);
 
-                    int lastnumX=0;
-                    int lastnumY=0;
-                    for (int i = 0; i < 100; i++)
-                    {   
-                        int width = (graphics.PreferredBackBufferWidth*10)*(gameMap.Ground.MapWidth/10);
-                        Random r = new Random();
-                        int x =r.Next(300, width);
-                            int y =  r.Next(250, 320);
-                     
-                         GroundMonster g = new GroundMonster();
-                         while (lastnumX == x || lastnumY == y)
-                         {
-                             r = new Random();
-                             x = r.Next(300, width);
-                             y = r.Next(250, 320);
-                         }
-                           
+                    //int lastnumX = 0;
+                    //int lastnumY = 0;
+                    //for (int i = 0; i < 100; i++)
+                    //{
+                    //    int width = (graphics.PreferredBackBufferWidth * 10) * (gameMap.Ground.MapWidth / 10);
+                    //    Random r = new Random();
+                    //    int x = r.Next(600, width);
+                    //    int y = r.Next(250, 320);
 
-                         g.Initialize(groundMonsterTexture, new Vector2(x, y));
-                        this.gameMap.NpcList.Add(g);
-                        lastnumY = y;
-                        lastnumX = x;
-                        g = null;
-   
+                    //    GroundMonster g = new GroundMonster();
+                    //    while (lastnumX == x || lastnumY == y)
+                    //    {
+                    //        r = new Random();
+                    //        x = r.Next(600, width);
+                    //        y = r.Next(250, 320);
+                    //    }
 
-                    }
-                    for (int i = 0; i < 100; i++)
-                    {
-                        Random r = new Random();
+                    //    g.Initialize(groundMonsterTexture, new Vector2(x, y));
+                    //    this.gameMap.NpcList.Add(g);
+                    //    lastnumY = y;
+                    //    lastnumX = x;
+                    //    g = null;
+                    //}
+                    //for (int i = 0; i < 100; i++)
+                    //{
+                    //    Random r = new Random();
 
-                        int width = (graphics.PreferredBackBufferWidth * 10) * (gameMap.Ground.MapWidth / 10);
-  
-                        FlyingMonster f = new FlyingMonster();
+                    //    int width = (graphics.PreferredBackBufferWidth * 10) * (gameMap.Ground.MapWidth / 10);
 
-                           int x =r.Next(300, width);
-                            int y =  r.Next(250, 320);
+                    //    FlyingMonster f = new FlyingMonster();
 
-                            while (lastnumX == x || lastnumY == y)
-                            {
-                                r = new Random();
-                                 x = r.Next(300, width);
-                                 y = r.Next(10, 320);
-                            }
-                        f.Initialize(flyingMonsterTexture, new Vector2(x, y));
-                        this.gameMap.NpcList.Add(f);
+                    //    int x = r.Next(600, width);
+                    //    int y = r.Next(250, 320);
 
-                        lastnumY = y;
-                        lastnumX = x;
-                        f = null;
+                    //    while (lastnumX == x || lastnumY == y)
+                    //    {
+                    //        r = new Random();
+                    //        x = r.Next(600, width);
+                    //        y = r.Next(10, 320);
+                    //    }
+                    //    f.Initialize(flyingMonsterTexture, new Vector2(x, y));
+                    //    this.gameMap.NpcList.Add(f);
 
-                    }
+                    //    lastnumY = y;
+                    //    lastnumX = x;
+                    //    f = null;
+                    //}
 
-                    for (int i = 0; i < 200; i++)
-                    {
-                        int width = (graphics.PreferredBackBufferWidth * 10) * (gameMap.Ground.MapWidth / 10);
-                        
+                    //for (int i = 0; i < 200; i++)
+                    //{
+                    //    int width = (graphics.PreferredBackBufferWidth * 10) * (gameMap.Ground.MapWidth / 10);
 
-                        Random r = new Random();
-                        int x = r.Next(200, 600);
-                        int y = r.Next(10, 500);
+                    //    Random r = new Random();
+                    //    int x = r.Next(200, width);
+                    //    int y = r.Next(250, 500);
 
-                        while (lastnumX == x || lastnumY == y)
-                        {
-                            r = new Random();
-                            x = r.Next(200, 600);
-                            y = r.Next(10, 500);
-                        }
-                        Coin c = new Coin();
-                        c.Initialize(coinTexture, new Vector2(x, y));
-                        gameMap.MapItems.Add(c);
-                        c = null;
-                       
-                    }
+                    //    while (lastnumX == x || lastnumY == y)
+                    //    {
+                    //        r = new Random();
+                    //        x = r.Next(200, width);
+                    //        y = r.Next(250, 500);
+                    //    }
+                    //    Coin c = new Coin();
+                    //    c.Initialize(coinTexture, new Vector2(x, y));
+                    //    gameMap.MapItems.Add(c);
+                    //    lastnumX = x;
+                    //    lastnumY = y;
+                    //    c = null;
+                    //}
 
-                    for (int i = 0; i < 10; i++)
-                    {
-                        int width = (graphics.PreferredBackBufferWidth * 10) * (gameMap.Ground.MapWidth / 10);
-                        int height = (graphics.PreferredBackBufferHeight * 10) * (20 / 10);
+                    //for (int i = 0; i < 10; i++)
+                    //{
+                    //    int width = (graphics.PreferredBackBufferWidth * 10) * (gameMap.Ground.MapWidth / 10);
+                    //    int height = (graphics.PreferredBackBufferHeight * 10) * (20 / 10);
 
-                        Random r = new Random();
-                        int x = r.Next(200, width);
-                        int y = r.Next(10,500);
+                    //    Random r = new Random();
+                    //    int x = r.Next(200, width);
+                    //    int y = r.Next(250, 500);
 
-                        while (lastnumX == x || lastnumY == y)
-                        {
-                            r = new Random();
-                            x = r.Next(200, width);
-                            y = r.Next(10, 500);
-                        }
-                        Potion p = new Potion();
-                        p.Initialize(potionTexture, new Vector2(x, y));
-                        gameMap.MapItems.Add(p);
-                        p = null;
-                    }
+                    //    while (lastnumX == x || lastnumY == y)
+                    //    {
+                    //        r = new Random();
+                    //        x = r.Next(200, width);
+                    //        y = r.Next(250, 500);
+                    //    }
+                    //    Potion p = new Potion();
+                    //    p.Initialize(potionTexture, new Vector2(x, y));
+                    //    gameMap.MapItems.Add(p);
+                    //    lastnumX = x;
+                    //    lastnumY = y;
+                    //    p = null;
+                    //}
 
                     player = null;
                     player = new Player(this.Content);
                     player.Initialize(playerTexture, new Vector2(0, 0));
                     gameMap.Player = player;
-                    
+
                     gameState = GAMESTATE.PLAY;
                     break;
                 case GAMESTATE.BEATLEVEL:
                 case GAMESTATE.GAMEOVER:
-                    gameState=GAMESTATE.MAINMENU;
+                    gameState = GAMESTATE.MAINMENU;
                     break;
                 case GAMESTATE.CONTINUE:
                     //Load from savedGame file
@@ -371,7 +371,6 @@ namespace CapstoneProject
 
                 case GAMESTATE.PLAY:
 
- 
                     // Allows the game to exit
                     if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                         this.Exit();
@@ -406,6 +405,7 @@ namespace CapstoneProject
                     {
                         playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
                         player.Initialize(playerTexture, player.Position);
+                        player.Health = 1000;
                     }
 
                     #endregion
@@ -452,14 +452,14 @@ namespace CapstoneProject
                     GraphicsDevice.Clear(Color.CornflowerBlue);
                     try
                     {
-                        gameMap.Draw(spriteBatch, gameTime);  
+                        gameMap.Draw(spriteBatch, gameTime);
                         healthBar.Draw(gameTime, spriteBatch);
-                    scoreDisplay.Draw(spriteBatch, gameTime);
-                    pauseButton.Draw(gameTime, spriteBatch);
+                        scoreDisplay.Draw(spriteBatch, gameTime);
+                        pauseButton.Draw(gameTime, spriteBatch);
 #if DEBUG
-                    //#FPS_COUNTER
-                    counter.Draw(spriteBatch, gameTime);
-                    Terminal.CheckDraw(false);
+                        //#FPS_COUNTER
+                        counter.Draw(spriteBatch, gameTime);
+                        Terminal.CheckDraw(false);
 #endif
                     }
                     catch (Exception e)
@@ -488,8 +488,6 @@ namespace CapstoneProject
                     this.Exit();
                     break;
             }
-
-
 
             base.Draw(gameTime);
         }

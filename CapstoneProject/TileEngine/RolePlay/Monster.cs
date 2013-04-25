@@ -19,7 +19,15 @@ namespace TileEngine
 
         // Current health
         private int _health;
-        public bool iActive= true;
+
+        private bool iActive = true;
+
+        public bool IActive
+        {
+            get { return iActive; }
+            set { iActive = value; }
+        }
+
         public int Health
         {
             get { return _health; }
@@ -72,6 +80,7 @@ namespace TileEngine
         }
 
         private int _attackableTimer = 0;
+
         public int AttackableTimer
         {
             get { return _attackableTimer; }
@@ -79,6 +88,7 @@ namespace TileEngine
         }
 
         private bool _attackable = true;
+
         public bool Attackable
         {
             get { return _attackable; }

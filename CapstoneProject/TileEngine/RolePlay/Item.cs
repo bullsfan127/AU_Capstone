@@ -17,7 +17,13 @@ namespace TileEngine
         public Animation _itemAnimation;
 
         public bool iActive = true;
-        public bool draw = true;
+        private bool draw = true;
+
+        public bool _Draw
+        {
+            get { return draw; }
+            set { draw = value; }
+        }
 
         // Width of the full image
         private int _spriteWidth;

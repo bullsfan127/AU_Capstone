@@ -11,7 +11,6 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Polenter.Serialization;
 
-
 namespace TileEngine
 {
     /// <summary>
@@ -25,6 +24,7 @@ namespace TileEngine
 
         public bool gameOver = false;
         public bool levelOver;
+
         //offset to determine center of screen.
         public Vector2 offset = Vector2.Zero;
 
@@ -32,7 +32,7 @@ namespace TileEngine
 
         DrawableLayer<Tile> _Ground;
         List<Item> _mapItems = new List<Item>();
-        List<Avatar> _NpcList = new List<Avatar>();
+        List<Monster> _NpcList = new List<Monster>();
         DrawableLayer<Tile> _Mask;
 
         //Layers for collision detection
@@ -59,7 +59,7 @@ namespace TileEngine
         /// <summary>
         /// Tracking for NPC
         /// </summary>
-        public List<Avatar> NpcList
+        public List<Monster> NpcList
         {
             get { return _NpcList; }
             set { _NpcList = value; }
@@ -160,7 +160,7 @@ namespace TileEngine
             {
                 if (_Player.PlayerAnimation.destinationRect.Intersects(item._itemAnimation.destinationRect))
                 {
-                    item.draw = false;
+                    item._Draw = false;
                     Type type = item.GetType();
                     Player temp = (Player)_Player;
                     if (type == typeof(Potion) && item.iActive)
@@ -168,7 +168,6 @@ namespace TileEngine
                         temp.increaseHealth(1);
                         Player = temp;
                         item.iActive = false;
-                        
                     }
                     else if (type == typeof(Coin) && item.iActive)
                     {
@@ -185,37 +184,31 @@ namespace TileEngine
                 Player temp = (Player)_Player;
                 if (a._monsterAnimation.Active)
                 {
-                    
-                    if(temp.attacking)
+                    if (temp.attacking)
                     {
-                            if ( a._monsterAnimation.destinationRect.Intersects(temp.Weapon.wepRect) )
+                        if (a._monsterAnimation.destinationRect.Intersects(temp.Weapon.wepRect))
+                        {
+                            a.decreaseHealth(1);
+                            if (a.getHealth() <= 0 && a.IActive)
                             {
-                                a.decreaseHealth(1);
-                                if (a.getHealth() <= 0 && a.iActive)
-                                {
-                                    a.iActive = false;
-                                    temp.increaseScore(20);
-                                }
+                                a.IActive = false;
+                                temp.increaseScore(20);
                             }
-
-
-                        
+                        }
                     }
 
-                    if(temp.PlayerAnimation.destinationRect.Intersects(a._monsterAnimation.destinationRect))
+                    if (temp.PlayerAnimation.destinationRect.Intersects(a._monsterAnimation.destinationRect))
                     {
-                            if (!temp.getInvulnerable() && a.iActive)
-                            {
-                                temp.decreaseHealth(a.MaxDamage);
-                            }
+                        if (!temp.getInvulnerable() && a.IActive)
+                        {
+                            temp.decreaseHealth(a.MaxDamage);
+                        }
                     }
                 }
                 if (temp.Health <= 0)
                     gameOver = true;
                 Player = temp;
 
-                
-                
                 a.Update(gameTime, this.Player.Position, offset);
             }
         }
@@ -234,15 +227,15 @@ namespace TileEngine
             foreach (Item item in _mapItems)
             {
                 //TODO:  Add Logic for drawing based on player Proximity
-                if (item.draw)
+                if (item._Draw)
                     item.Draw(spriteBatch, gameTime);
             }
 
             foreach (Monster ava in _NpcList)
             {
                 //TODO:  Add Logic for drawing based on player Proximity
-                if(ava.iActive)
-                ava.Draw(spriteBatch, gameTime);
+                if (ava.IActive)
+                    ava.Draw(spriteBatch, gameTime);
             }
 
             _Player.Draw(spriteBatch, gameTime);
@@ -403,34 +396,7 @@ namespace TileEngine
                     }
                 }
             }
-
-
-        }
-
-        /// <summary>
-        /// Reconstructs player after reconstruction, should only be called when loading a saved game
-        /// </summary>
-        /// <param name="contentManager"></param>
-        public void LoadPlayer(ContentManager contentManager)
-        {
-            //convert to player instead of Avatar
-            Player temp = new Player(contentManager);
-            temp = (Player)this.Player;
-
-            //load player
-            Texture2D playerTexture = contentManager.Load<Texture2D>("shitty/FatJoe");
-            Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);
-            temp.Position = playerPosition;
-
-            //load playerAnimation
-            Rectangle srect = new Rectangle();
-            srect = new Rectangle(this._Player.PlayerAnimation.SRect[0], this._Player.PlayerAnimation.SRect[1], this._Player.PlayerAnimation.SRect[2], this._Player.PlayerAnimation.SRect[3]);
-            temp.PlayerAnimation.sourceRect = srect;
-            temp.PlayerAnimation.spriteStrip = playerTexture;
-            temp.PlayerAnimation.destinationRect = new Rectangle(this._Player.PlayerAnimation.DRect[0], this._Player.PlayerAnimation.DRect[1], this._Player.PlayerAnimation.DRect[2], this._Player.PlayerAnimation.DRect[3]);
-            temp.PlayerAnimation.Position = this._Player.Position;
-            temp.Offset = new Vector2(this._Player.OX, this.Player.OY);
-
+            Player temp = (Player)this._Player;
             //load weapons
             temp._rangedTexture = contentManager.Load<Texture2D>("Items//sword");
             temp._swordTexture = contentManager.Load<Texture2D>("Items//boomerang");
@@ -466,6 +432,31 @@ namespace TileEngine
                 spriteStrip2 = type == typeof(Coin) ? c : p;
                 a.Initialize(spriteStrip2, new Vector2(a.X, a.Y));
             }
+        }
+
+        /// <summary>
+        /// Reconstructs player after reconstruction, should only be called when loading a saved game
+        /// </summary>
+        /// <param name="contentManager"></param>
+        public void LoadPlayer(ContentManager contentManager)
+        {
+            //convert to player instead of Avatar
+            Player temp = new Player(contentManager);
+            temp = (Player)this.Player;
+
+            //load player
+            Texture2D playerTexture = contentManager.Load<Texture2D>("shitty/FatJoe");
+            Vector2 playerPosition = new Vector2(this._Player.X, this._Player.Y);
+            temp.Position = playerPosition;
+
+            //load playerAnimation
+            Rectangle srect = new Rectangle();
+            srect = new Rectangle(this._Player.PlayerAnimation.SRect[0], this._Player.PlayerAnimation.SRect[1], this._Player.PlayerAnimation.SRect[2], this._Player.PlayerAnimation.SRect[3]);
+            temp.PlayerAnimation.sourceRect = srect;
+            temp.PlayerAnimation.spriteStrip = playerTexture;
+            temp.PlayerAnimation.destinationRect = new Rectangle(this._Player.PlayerAnimation.DRect[0], this._Player.PlayerAnimation.DRect[1], this._Player.PlayerAnimation.DRect[2], this._Player.PlayerAnimation.DRect[3]);
+            temp.PlayerAnimation.Position = this._Player.Position;
+            temp.Offset = new Vector2(this._Player.OX, this.Player.OY);
         }
     }
 }

@@ -2,14 +2,13 @@ Content\FPS.xnb
 Content\Tiles\tile.xnb
 Content\Tiles\tileM.xnb
 Content\Tiles\tileF.xnb
-Content\Tiles\FinalGrid.xnb
-Content\AdvHealth.xnb
 Content\shitty\shitty.xnb
 Content\shitty\shitty2.0.xnb
 Content\shitty\shitty2.0test.xnb
 Content\shitty\shitty3.0.xnb
 Content\Items\Boomerang.xnb
 Content\Items\Coin.xnb
+Content\Tiles\FinalGrid.xnb
 Content\Items\Potion.xnb
 Content\menuButtons\Continue.xnb
 Content\menuButtons\Settings.xnb
@@ -17,6 +16,7 @@ Content\menuButtons\Exit.xnb
 Content\menuButtons\NewGame.xnb
 Content\menuButtons\Resume.xnb
 Content\menuButtons\MainMenu.xnb
+Content\AdvHealth.xnb
 Content\menuButtons\MoveRight.xnb
 Content\menuButtons\MoveLeft.xnb
 Content\menuButtons\JumpUp.xnb
@@ -27,6 +27,9 @@ Content\Monsters\Zombies.xnb
 Content\Monsters\Birds.xnb
 Content\Items\Sword.xnb
 Content\shitty\FatJoe.xnb
+Content\PauseBackground.xnb
+Content\menuButtons\SaveGame.xnb
+Content\menuButtons\Attack.xnb
 Content\Songs\DST-DarkestKnight.xnb
 Content\Songs\DST-TimeToDream.xnb
 Content\Sounds\Jump.xnb
@@ -40,11 +43,8 @@ Content\Sounds\Kill.xnb
 Content\Songs\DST-Aurora.xnb
 Content\Songs\DST-Glory.xnb
 Content\Songs\DST-Serade.xnb
-Content\PauseBackground.xnb
-Content\menuButtons\SaveGame.xnb
-Content\menuButtons\Attack.xnb
-Content\PauseButton.xnb
 Content\Story.xnb
+Content\PauseButton.xnb
 Content\Songs\DST-DarkestKnight.wma
 Content\Songs\DST-TimeToDream.wma
 Content\Songs\DST-Aurora.wma

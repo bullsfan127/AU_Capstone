@@ -176,6 +176,8 @@ namespace TileEngine
             set { _Position = value; }
         }
 
+        public Animation() { }
+
         /// <summary>
         /// Initializes the Animation code
         /// </summary>
