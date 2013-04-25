@@ -33,7 +33,7 @@ namespace CapstoneProject
         /// Keeps track of overall gamestate
         /// Sets initital sate, if you want to skip the main menu for testing, just set the state to GAMESTATE.PLAY instead
         /// </summary>
-        public static GAMESTATE gameState = GAMESTATE.NEWGAME;
+        public static GAMESTATE gameState = GAMESTATE.MAINMENU;
 
         //XNA
         SpriteBatch spriteBatch;
@@ -47,7 +47,7 @@ namespace CapstoneProject
         Texture2D pauseBackground;
         Texture2D playerTexture;
         Texture2D pauseTexture;
-
+        Texture2D gameOver;
         //Menus
         MainMenu.MainMenu menu;
 
@@ -160,6 +160,7 @@ namespace CapstoneProject
 
             //Crrate rectangle of screen
             mainFrame = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+           
 #if DEBUG
             //#FPS_COUNTER
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
@@ -173,6 +174,7 @@ namespace CapstoneProject
             pauseTexture = Content.Load<Texture2D>("PauseButton");
             backgroundTexture = Content.Load<Texture2D>("background");
             pauseBackground = Content.Load<Texture2D>("PauseBackground");
+            gameOver = Content.Load<Texture2D>("gameOver");
             coinTexture = Content.Load<Texture2D>("items/Coin");
             coinTexture.Name = "items/Coin";
             potionTexture = Content.Load<Texture2D>("items/Potion");
@@ -345,7 +347,7 @@ namespace CapstoneProject
                     break;
                 case GAMESTATE.BEATLEVEL:
                 case GAMESTATE.GAMEOVER:
-                    gameState = GAMESTATE.MAINMENU;
+                    
                     break;
                 case GAMESTATE.CONTINUE:
                     //Load from savedGame file
@@ -484,6 +486,11 @@ namespace CapstoneProject
                     msettings.Draw(gameTime, spriteBatch);
                     break;
 
+                case GAMESTATE.GAMEOVER:
+                    spriteBatch.Begin();
+                    spriteBatch.Draw(gameOver, mainFrame, Color.White);
+                    spriteBatch.End();
+                    break;
                 case GAMESTATE.EXIT:
                     this.Exit();
                     break;
