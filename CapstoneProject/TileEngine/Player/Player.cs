@@ -252,7 +252,7 @@ namespace TileEngine
             }
 
             // Trying to move Left or Right
-            if (Keyboard.GetState().IsKeyDown(Controls.Left))
+            if (Keyboard.GetState().IsKeyDown(Controls.Left) || (GamePad.GetState(PlayerIndex.One).DPad.Left == ButtonState.Pressed))
             {
                 // Prevent attack animation from being cut short
                 if (PlayerAnimation.lastState != Animation.Animate.LATTACK && PlayerAnimation.lastState != Animation.Animate.RATTACK)
@@ -265,7 +265,7 @@ namespace TileEngine
                 _weaponDirection = -1;
             }
 
-            else if (Keyboard.GetState().IsKeyDown(Controls.Right))
+            else if (Keyboard.GetState().IsKeyDown(Controls.Right) || (GamePad.GetState(PlayerIndex.One).DPad.Right == ButtonState.Pressed))
             {
                 // Prevent attack animation from being cut short
                 if (PlayerAnimation.lastState != Animation.Animate.LATTACK && PlayerAnimation.lastState != Animation.Animate.RATTACK)
@@ -279,7 +279,7 @@ namespace TileEngine
             }
 
             //Keeping track of jumping/falling speed
-            if (Keyboard.GetState().IsKeyDown(Controls.Up) && jump)
+            if ((Keyboard.GetState().IsKeyDown(Controls.Up) || (GamePad.GetState(PlayerIndex.One).DPad.Up == ButtonState.Pressed)) && jump)
             {
                 _movement.Y += -20;
                 jump = false;
@@ -299,7 +299,7 @@ namespace TileEngine
                 {
                     PlayerAnimation.state = Animation.Animate.LATTACK;
                     attacking = true;
-                    _weapon.wepRect = new Rectangle((int)Position.X - 128, (int)Position.Y, 32, 32);
+                    _weapon.wepRect = new Rectangle((int)Position.X - 32, (int)Position.Y, 32, 32);
                 }
             }
 

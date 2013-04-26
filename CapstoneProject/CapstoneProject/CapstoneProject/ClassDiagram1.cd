@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CapstoneProject.Game1" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwSEEBCABAIC4BIAGCgAAgwAATAAHkBAAAgAABQAAQ=</HashCode>
+      <FileName>Game1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CapstoneProject.gameOverMenu" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAwAAAABAAAAAAAAAAAgAAAAAAAAAAAQ=</HashCode>
+      <FileName>gameOverMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CapstoneProject.ImageButton" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAEAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menus\ImageButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CapstoneProject.MainButton" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAEAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menus\MainButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CapstoneProject.MainSaveKeys" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAECAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menus\MainSaveKeys.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CapstoneProject.MainSettings" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwCAgAIkQAAgygAOABAAAASIBAAAAgIAAAAAAAACIQ=</HashCode>
+      <FileName>Menus\MainSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CapstoneProject.MoveButton" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAAAAAAAgAAAAAACAAEAAAIAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menus\MoveButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CapstoneProject.SaveKeys" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Menus\SaveKeys.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CapstoneProject.Settings" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwCAgAIkQAAgyAAOABAAAASIBAAAEgIAAAAAAAACIQ=</HashCode>
+      <FileName>Menus\Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CapstoneProject.Program" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CapstoneProject.SoundManager" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAQAAgAAAAQBAAAAAAgAAAAEAAAAAAAAAAAACAA=</HashCode>
+      <FileName>SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CapstoneProject.FPS_Counter" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAgAAABAAAgAAAAAAAAgAABAACUAAAAA=</HashCode>
+      <FileName>Utility\FPS_Counter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu.MainMenu" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>agQEEQAAAhAAIwAAQBEAAQAAAADABAgAAAAAAADAEIY=</HashCode>
+      <FileName>Menus\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseMenu.PauseMenu" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>agQEAQAAAhAAIwAAQBGAAQAAAACABAgAAAACAADAEIY=</HashCode>
+      <FileName>Menus\PauseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="CapstoneProject.GAMESTATE" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAoAAMACAQAAAAAAACAAAAIAAABAIAAABAABAAAA=</HashCode>
+      <FileName>Game1.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

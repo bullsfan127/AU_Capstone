@@ -210,6 +210,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CapstoneProject_TemporaryKey.pfx" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -397,7 +397,7 @@ namespace CapstoneProject
                         graphics.ToggleFullScreen();
                     }
 
-                    if (Keyboard.GetState().IsKeyDown(Controls.Up) && player.Jump)
+                    if ((Keyboard.GetState().IsKeyDown(Controls.Up)|| (GamePad.GetState(PlayerIndex.One).DPad.Up == ButtonState.Pressed)) && player.Jump)
                     {
                         soundManager.PlaySound(5);
                     }
@@ -425,9 +425,10 @@ namespace CapstoneProject
                         {
                             if (temp.attacking)
                             {
-                                if (a._monsterAnimation.destinationRect.Intersects(temp.Weapon.wepRect) && keystate.IsKeyDown(Keys.Space))
+                                if (a._monsterAnimation.destinationRect.Intersects(temp.Weapon.wepRect) && (keystate.IsKeyDown(Keys.Space) || GamePad.GetState(PlayerIndex.One).Buttons.A == ButtonState.Pressed))
+                                    
                                 {
-                                    soundManager.PlaySound(6);
+                                    soundManager.PlaySound(3);
                                 }
                             }
 
@@ -459,6 +460,7 @@ namespace CapstoneProject
                         playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
                         player.Initialize(playerTexture, player.Position);
                         player.Health = 1000;
+                        soundManager.PlaySound(2);
                     }
 
                     #endregion

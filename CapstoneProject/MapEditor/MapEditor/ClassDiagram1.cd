@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MapEditor.GUI.LoadMap" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQiAAAAAAAAAgAAAAAAAEAAAAQBAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\LoadMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapEditor.GUI.MapWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AVQAAACEIBAAA4BgAAMAEAAAgAAAACCoIWAMEwEIAAA=</HashCode>
+      <FileName>GUI\MapWindow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MapEditor.GUI.ResetButton" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgABAAAAAEAAAAQAAAAGAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\ResetButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapEditor.GUI.SaveButton" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgEAAAAAAEAAAIQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\SaveButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapEditor.GUI.SetFringeActive" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAEAAAAQAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\SetFringeActive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapEditor.GUI.SetGoundActiveButton" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAEAAAAQAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\SetGoundActive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapEditor.GUI.SetMaskActive" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAEAAAAQAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\SetMaskActive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapEditor.GUI.TextBox" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\TextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapEditor.GUI.TileSelector" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAgACAAAAAAoBgAAAAAAFEAAAAACAoAAQIgQBAAAA=</HashCode>
+      <FileName>GUI\TileSelector.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MapEditor.MapEditorMain" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQGEEAAASAAAwAAAAAgAAAAAAAIAAwIAAAAAACAAAQ=</HashCode>
+      <FileName>MapEditor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapEditor.Program" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
