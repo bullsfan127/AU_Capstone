@@ -1,4 +1,4 @@
-//#define INSTALL
+#define INSTALL
 
 using System;
 using System.Collections.Generic;

@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_000F0E6B5D244BCEBDECB297AAEFB7FC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_012001BB3C9B5A0F11967F22AF523481"
         "OwnerKey" = "8:_79B6BF3C92B6427CB7ED97DBE1530116"
         "MsmSig" = "8:_UNDEFINED"
@@ -27,14 +33,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_02ABFA60855A39F6EBCA7C6C78717591"
-        "OwnerKey" = "8:_79B6BF3C92B6427CB7ED97DBE1530116"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_02ABFA60855A39F6EBCA7C6C78717591"
-        "OwnerKey" = "8:_59F24B42190BE936D79C15B14DCA4E0A"
+        "MsmKey" = "8:_06E28843C517472FA6612F7BD4D7D4E5"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -45,19 +45,31 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_14FC7DDB28F66F2B6123ABDF75845115"
-        "OwnerKey" = "8:_79B6BF3C92B6427CB7ED97DBE1530116"
+        "MsmKey" = "8:_17112353755346A2A1BFD12206D07288"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1E1A8AA4868D4AF1AFD5946F8475814D"
+        "MsmKey" = "8:_183273A8908941DFAD338EF621DE2B68"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_19C568CEB4FA4382A752C025B337CE59"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_1EA8D3A515EE4AF5A162F583514BF333"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_239FD9553A974F11BDFF6360F35D6428"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -81,12 +93,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_2BB45EB4518F41BDA4A4B25E578237AA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_303FEA7F481C4722B340908E939D8A25"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -105,13 +111,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_3BFD5501DFB74547A86F610438EA98BA"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_37B735D7C3A77AC8F72CEBEC94C51FDD"
+        "OwnerKey" = "8:_79B6BF3C92B6427CB7ED97DBE1530116"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3D305CDEFFEE449E8B9E958A66D5C1B0"
+        "MsmKey" = "8:_452F081CDB4E4D329013F20F1530E752"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -135,7 +141,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4E0063C0DF2342269F8E41AF8A4DFD7A"
+        "MsmKey" = "8:_4DF06CA8351744ED8F6BB8813DA6188D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4F8652B90C1147A4A2FB653100F6E81B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -153,31 +165,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_59F24B42190BE936D79C15B14DCA4E0A"
-        "OwnerKey" = "8:_79B6BF3C92B6427CB7ED97DBE1530116"
+        "MsmKey" = "8:_559AEF55F5A846938069341DC0E7F6F7"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_68AAA57D756C4A41B3481C370879C489"
+        "MsmKey" = "8:_5FD6048FB4B74BEEB138626A5159EFC5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_60063B39F4274D378D8DDF4E7F82145F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_6BFFB01463034F6994AED5F31D787EF5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6E0C290ADBC447A59D0E2EAE92354D9A"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_71B0BF2062DD4AB88AAD867822507C97"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -195,13 +201,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_75440AB6993E4586B67BF6B1DAADD1E7"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_73DBFE6A54EAE7E0360EFDDBB7D38F65"
+        "OwnerKey" = "8:_79B6BF3C92B6427CB7ED97DBE1530116"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_76D1DC68D1634302A17EF1C6C51FDBC0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7918D2EDF2034BAAB3C6684065382EF8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -213,37 +225,31 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7A11C41797104787BD4FE1C8CAE9B2E4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7B1F8881145E4145914D5BD800C9FDF5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7E41FF411E2A4DEDA8CF112ABA7CAFC0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8C47FA284C5645129BCD616FC47B2F59"
+        "MsmKey" = "8:_8FF0900EFF03400BB10DCE2948A28385"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8CDF4A30C776444E89CFEA8CB8E04BB5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8E9A42EADD9EAFF141E84D25760D3CE0"
-        "OwnerKey" = "8:_79B6BF3C92B6427CB7ED97DBE1530116"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8E9A42EADD9EAFF141E84D25760D3CE0"
-        "OwnerKey" = "8:_02ABFA60855A39F6EBCA7C6C78717591"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A0B558504F454DDABF7BB4FEE5E7D96F"
+        "MsmKey" = "8:_951632CF34AF4DC8A0E8E1BF24ED6E4F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -261,13 +267,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A7522E3E37AD4CB09111F60E242A0A0E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_AA0C4C278C6448BEB6AABC85B530EC85"
+        "MsmKey" = "8:_AA8B9F084DEF4F2AB9241A6318E2FF75"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -309,12 +309,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_BAFAAA7DA170406398AFADEF15BF4E7E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_BE13D5915F7B4991AABA813749B6A4F2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -327,19 +321,49 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_C55D156A44BD4C57B0691F52ABB7EE60"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D1B0E9D667404B30ADE2724689E9E2A8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D46CC6F793CC453B9EA1E0E422F42B75"
+        "MsmKey" = "8:_D359D6D286DC43BB930C2CC49EF65072"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D541E88A10094647AE85F26D6D87728D"
+        "MsmKey" = "8:_D46549AB5AF540AD87BE9D66B74BB159"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D72934D7CC8C4196B3D3999F00AE3019"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D8E0BFB3E3112A065139D92F35A6D1EC"
+        "OwnerKey" = "8:_79B6BF3C92B6427CB7ED97DBE1530116"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D8E0BFB3E3112A065139D92F35A6D1EC"
+        "OwnerKey" = "8:_37B735D7C3A77AC8F72CEBEC94C51FDD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DA4237A4F3DB40539E3A34B8DEF398FB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -357,7 +381,25 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E69B31CF2FEFAED97CC94FFFEA2BF9CB"
+        "OwnerKey" = "8:_79B6BF3C92B6427CB7ED97DBE1530116"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E69B31CF2FEFAED97CC94FFFEA2BF9CB"
+        "OwnerKey" = "8:_D8E0BFB3E3112A065139D92F35A6D1EC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E7C84D4DD3434F9F9DC4A09C286F4676"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E887845615544A65908A587F9CEC80D5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -369,7 +411,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F1CB27F1C0B8403389863443BC344B78"
+        "MsmKey" = "8:_ED23CE5576784CBB92982D5E9F88314E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -381,13 +423,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FA4A528E805E46ABA9D42588A1A25F0D"
+        "MsmKey" = "8:_F931797CB23C49B58E8D483FDA404492"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_FEBD21A196E2411FA3D149EA9D202534"
+        "MsmKey" = "8:_FD6B90132AA44138951685F3893D6BAE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -412,25 +454,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_59F24B42190BE936D79C15B14DCA4E0A"
+        "OwnerKey" = "8:_37B735D7C3A77AC8F72CEBEC94C51FDD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_02ABFA60855A39F6EBCA7C6C78717591"
+        "OwnerKey" = "8:_D8E0BFB3E3112A065139D92F35A6D1EC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8E9A42EADD9EAFF141E84D25760D3CE0"
+        "OwnerKey" = "8:_E69B31CF2FEFAED97CC94FFFEA2BF9CB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_14FC7DDB28F66F2B6123ABDF75845115"
+        "OwnerKey" = "8:_73DBFE6A54EAE7E0360EFDDBB7D38F65"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -548,6 +590,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_000F0E6B5D244BCEBDECB297AAEFB7FC"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\XMLfiles\\SavedGame.xml"
+            "TargetName" = "8:SavedGame.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_6D7615CB41E0487880637AB1E0FFF8BB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_012001BB3C9B5A0F11967F22AF523481"
             {
             "AssemblyRegister" = "3:1"
@@ -555,6 +617,11 @@
             "AssemblyAsmDisplayName" = "8:Antlr3.Runtime, Version=3.1.3.42154, Culture=neutral, PublicKeyToken=3a9cab8f8d22bfb7, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_012001BB3C9B5A0F11967F22AF523481"
+                    {
+                    "Name" = "8:Antlr3.Runtime.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Antlr3.Runtime.dll"
             "TargetName" = "8:"
@@ -574,18 +641,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_02ABFA60855A39F6EBCA7C6C78717591"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_06E28843C517472FA6612F7BD4D7D4E5"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:Serialization.exe"
-            "TargetName" = "8:"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\MoveRight.xnb"
+            "TargetName" = "8:MoveRight.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_FCB5F490315A482B8DDB3A777630FE29"
+            "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -597,7 +658,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0716D1F4214B465597DDE5BA5DB338B8"
@@ -620,18 +681,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_14FC7DDB28F66F2B6123ABDF75845115"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_17112353755346A2A1BFD12206D07288"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:GUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:GUI.dll"
-            "TargetName" = "8:"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\Exit.xnb"
+            "TargetName" = "8:Exit.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_FCB5F490315A482B8DDB3A777630FE29"
+            "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -643,15 +698,35 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1E1A8AA4868D4AF1AFD5946F8475814D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_183273A8908941DFAD338EF621DE2B68"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\Continue.xnb"
-            "TargetName" = "8:Continue.xnb"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\PauseButton.xnb"
+            "TargetName" = "8:PauseButton.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
+            "Folder" = "8:_D8EAA9046C9342F9A4E35E685FD0338C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_19C568CEB4FA4382A752C025B337CE59"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\AdvHealth.xnb"
+            "TargetName" = "8:AdvHealth.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_D8EAA9046C9342F9A4E35E685FD0338C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -672,6 +747,26 @@
             "TargetName" = "8:Potion.xnb"
             "Tag" = "8:"
             "Folder" = "8:_2AB00C80FBF4465296139443E2441777"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_239FD9553A974F11BDFF6360F35D6428"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\SaveGame.xnb"
+            "TargetName" = "8:SaveGame.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -746,26 +841,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2BB45EB4518F41BDA4A4B25E578237AA"
-            {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\XMLfiles\\map.xml"
-            "TargetName" = "8:map.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_6D7615CB41E0487880637AB1E0FFF8BB"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_303FEA7F481C4722B340908E939D8A25"
             {
             "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\Songs\\DST-TimeToDream.xnb"
@@ -826,12 +901,23 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3BFD5501DFB74547A86F610438EA98BA"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_37B735D7C3A77AC8F72CEBEC94C51FDD"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\MainMenu.xnb"
-            "TargetName" = "8:MainMenu.xnb"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:TileEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_37B735D7C3A77AC8F72CEBEC94C51FDD"
+                    {
+                    "Name" = "8:TileEngine.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:TileEngine.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
+            "Folder" = "8:_FCB5F490315A482B8DDB3A777630FE29"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -843,15 +929,15 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3D305CDEFFEE449E8B9E958A66D5C1B0"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_452F081CDB4E4D329013F20F1530E752"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\MoveLeft.xnb"
-            "TargetName" = "8:MoveLeft.xnb"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\gameOver.xnb"
+            "TargetName" = "8:gameOver.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
+            "Folder" = "8:_D8EAA9046C9342F9A4E35E685FD0338C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -913,6 +999,11 @@
             "AssemblyAsmDisplayName" = "8:DebugTerminal, Version=2.1.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
+                    "_4C413B7131A5BEE17DBE316CAAC8EE43"
+                    {
+                    "Name" = "8:DebugTerminal.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:DebugTerminal.dll"
             "TargetName" = "8:"
@@ -932,12 +1023,32 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4E0063C0DF2342269F8E41AF8A4DFD7A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4DF06CA8351744ED8F6BB8813DA6188D"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\Resume.xnb"
-            "TargetName" = "8:Resume.xnb"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\MainMenu.xnb"
+            "TargetName" = "8:MainMenu.xnb"
             "Tag" = "8:"
             "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4F8652B90C1147A4A2FB653100F6E81B"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\Story.xnb"
+            "TargetName" = "8:Story.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_D8EAA9046C9342F9A4E35E685FD0338C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -992,18 +1103,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_59F24B42190BE936D79C15B14DCA4E0A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_559AEF55F5A846938069341DC0E7F6F7"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:TileEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:TileEngine.dll"
-            "TargetName" = "8:"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\JumpUp.xnb"
+            "TargetName" = "8:JumpUp.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_FCB5F490315A482B8DDB3A777630FE29"
+            "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1015,13 +1120,33 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_68AAA57D756C4A41B3481C370879C489"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5FD6048FB4B74BEEB138626A5159EFC5"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\Panel540X540.xnb"
-            "TargetName" = "8:Panel540X540.xnb"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\PauseBackground.xnb"
+            "TargetName" = "8:PauseBackground.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_D8EAA9046C9342F9A4E35E685FD0338C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_60063B39F4274D378D8DDF4E7F82145F"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\end.xnb"
+            "TargetName" = "8:end.xnb"
             "Tag" = "8:"
             "Folder" = "8:_D8EAA9046C9342F9A4E35E685FD0338C"
             "Condition" = "8:"
@@ -1044,46 +1169,6 @@
             "TargetName" = "8:Birds.xnb"
             "Tag" = "8:"
             "Folder" = "8:_3BF5013A8A9A4813881497A1C8AB68F4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6E0C290ADBC447A59D0E2EAE92354D9A"
-            {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\Settings.xnb"
-            "TargetName" = "8:Settings.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_71B0BF2062DD4AB88AAD867822507C97"
-            {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\SaveKeys.xnb"
-            "TargetName" = "8:SaveKeys.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1138,12 +1223,43 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_75440AB6993E4586B67BF6B1DAADD1E7"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_73DBFE6A54EAE7E0360EFDDBB7D38F65"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\AdvHealth.xnb"
-            "TargetName" = "8:AdvHealth.xnb"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:GUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_73DBFE6A54EAE7E0360EFDDBB7D38F65"
+                    {
+                    "Name" = "8:GUI.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:GUI.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_D8EAA9046C9342F9A4E35E685FD0338C"
+            "Folder" = "8:_FCB5F490315A482B8DDB3A777630FE29"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_76D1DC68D1634302A17EF1C6C51FDBC0"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\Tiles\\tileM.xnb"
+            "TargetName" = "8:tileM.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_25E8F7C84957498A820DC6453129294F"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1158,12 +1274,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_76D1DC68D1634302A17EF1C6C51FDBC0"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7918D2EDF2034BAAB3C6684065382EF8"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\Tiles\\tileM.xnb"
-            "TargetName" = "8:tileM.xnb"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\MoveLeft.xnb"
+            "TargetName" = "8:MoveLeft.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_25E8F7C84957498A820DC6453129294F"
+            "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7A11C41797104787BD4FE1C8CAE9B2E4"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\SaveKeys.xnb"
+            "TargetName" = "8:SaveKeys.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7B1F8881145E4145914D5BD800C9FDF5"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\XMLfiles\\map.xml"
+            "TargetName" = "8:map.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_6D7615CB41E0487880637AB1E0FFF8BB"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1198,29 +1354,9 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8C47FA284C5645129BCD616FC47B2F59"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8FF0900EFF03400BB10DCE2948A28385"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\XMLfiles\\SavedGame.xml"
-            "TargetName" = "8:SavedGame.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_6D7615CB41E0487880637AB1E0FFF8BB"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8CDF4A30C776444E89CFEA8CB8E04BB5"
-            {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\XMLfiles\\controls.xml"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\XMLfiles\\controls.xml"
             "TargetName" = "8:controls.xml"
             "Tag" = "8:"
             "Folder" = "8:_6D7615CB41E0487880637AB1E0FFF8BB"
@@ -1238,33 +1374,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8E9A42EADD9EAFF141E84D25760D3CE0"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Polenter.SharpSerializer, Version=2.18.0.0, Culture=neutral, PublicKeyToken=8f4f20011571ee5f, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:Polenter.SharpSerializer.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_FCB5F490315A482B8DDB3A777630FE29"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A0B558504F454DDABF7BB4FEE5E7D96F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_951632CF34AF4DC8A0E8E1BF24ED6E4F"
             {
             "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\Game.ico"
             "TargetName" = "8:Game.ico"
@@ -1324,27 +1434,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A7522E3E37AD4CB09111F60E242A0A0E"
-            {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\background.xnb"
-            "TargetName" = "8:background.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_D8EAA9046C9342F9A4E35E685FD0338C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AA0C4C278C6448BEB6AABC85B530EC85"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AA8B9F084DEF4F2AB9241A6318E2FF75"
             {
             "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\NewGame.xnb"
             "TargetName" = "8:NewGame.xnb"
@@ -1484,26 +1574,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BAFAAA7DA170406398AFADEF15BF4E7E"
-            {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\XMLfiles\\test.xml"
-            "TargetName" = "8:test.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_6D7615CB41E0487880637AB1E0FFF8BB"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BE13D5915F7B4991AABA813749B6A4F2"
             {
             "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\Sounds\\Jump.xnb"
@@ -1544,6 +1614,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C55D156A44BD4C57B0691F52ABB7EE60"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\FPS.xnb"
+            "TargetName" = "8:FPS.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_D8EAA9046C9342F9A4E35E685FD0338C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D1B0E9D667404B30ADE2724689E9E2A8"
             {
             "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\Tiles\\tileF.xnb"
@@ -1564,10 +1654,30 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D46CC6F793CC453B9EA1E0E422F42B75"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D359D6D286DC43BB930C2CC49EF65072"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\FPS.xnb"
-            "TargetName" = "8:FPS.xnb"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\XMLfiles\\ToTheCastle.xml"
+            "TargetName" = "8:ToTheCastle.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_6D7615CB41E0487880637AB1E0FFF8BB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D46549AB5AF540AD87BE9D66B74BB159"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\Panel540X540.xnb"
+            "TargetName" = "8:Panel540X540.xnb"
             "Tag" = "8:"
             "Folder" = "8:_D8EAA9046C9342F9A4E35E685FD0338C"
             "Condition" = "8:"
@@ -1584,10 +1694,61 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D541E88A10094647AE85F26D6D87728D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D72934D7CC8C4196B3D3999F00AE3019"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\MoveRight.xnb"
-            "TargetName" = "8:MoveRight.xnb"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\Continue.xnb"
+            "TargetName" = "8:Continue.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D8E0BFB3E3112A065139D92F35A6D1EC"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_D8E0BFB3E3112A065139D92F35A6D1EC"
+                    {
+                    "Name" = "8:Serialization.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Serialization.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_FCB5F490315A482B8DDB3A777630FE29"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DA4237A4F3DB40539E3A34B8DEF398FB"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\Resume.xnb"
+            "TargetName" = "8:Resume.xnb"
             "Tag" = "8:"
             "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
             "Condition" = "8:"
@@ -1644,12 +1805,63 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E69B31CF2FEFAED97CC94FFFEA2BF9CB"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Polenter.SharpSerializer, Version=2.18.0.0, Culture=neutral, PublicKeyToken=8f4f20011571ee5f, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_E69B31CF2FEFAED97CC94FFFEA2BF9CB"
+                    {
+                    "Name" = "8:Polenter.SharpSerializer.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Polenter.SharpSerializer.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_FCB5F490315A482B8DDB3A777630FE29"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E7C84D4DD3434F9F9DC4A09C286F4676"
             {
             "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\Songs\\DST-Glory.wma"
             "TargetName" = "8:DST-Glory.wma"
             "Tag" = "8:"
             "Folder" = "8:_1FD259726366459DB590076001622303"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E887845615544A65908A587F9CEC80D5"
+            {
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProjectContent\\ReadMe.txt"
+            "TargetName" = "8:ReadMe.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_FCB5F490315A482B8DDB3A777630FE29"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1684,12 +1896,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F1CB27F1C0B8403389863443BC344B78"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ED23CE5576784CBB92982D5E9F88314E"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\XMLfiles\\Savegame.xml"
-            "TargetName" = "8:Savegame.xml"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\background.xnb"
+            "TargetName" = "8:background.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_6D7615CB41E0487880637AB1E0FFF8BB"
+            "Folder" = "8:_D8EAA9046C9342F9A4E35E685FD0338C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1724,10 +1936,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FA4A528E805E46ABA9D42588A1A25F0D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F931797CB23C49B58E8D483FDA404492"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\JumpUp.xnb"
-            "TargetName" = "8:JumpUp.xnb"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\Settings.xnb"
+            "TargetName" = "8:Settings.xnb"
             "Tag" = "8:"
             "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
             "Condition" = "8:"
@@ -1744,10 +1956,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FEBD21A196E2411FA3D149EA9D202534"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD6B90132AA44138951685F3893D6BAE"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\Exit.xnb"
-            "TargetName" = "8:Exit.xnb"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\bin\\x86\\Release\\Content\\menuButtons\\Attack.xnb"
+            "TargetName" = "8:Attack.xnb"
             "Tag" = "8:"
             "Folder" = "8:_A005CA6E2A5046DA803BEA6A77102C9B"
             "Condition" = "8:"
@@ -1918,9 +2130,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Fat Joes Nightmare"
+        "ProductName" = "8:Fat Joe's Nightmare"
         "ProductCode" = "8:{17C8ED78-9189-49D8-9B98-89359EA31EFE}"
-        "PackageCode" = "8:{35D3DA2F-10DE-4BCC-9A34-6E3C9449C0A6}"
+        "PackageCode" = "8:{77ADFECE-5C74-402E-8B7D-8408EDC1EEBE}"
         "UpgradeCode" = "8:{2E1C17E4-7176-4C64-BD63-96893DDA0C14}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -2051,7 +2263,7 @@
             "Target" = "8:_FCB5F490315A482B8DDB3A777630FE29"
             "Folder" = "8:_5C9C8EDDC29B4D5AAA484B2E1F55C248"
             "WorkingFolder" = "8:_FCB5F490315A482B8DDB3A777630FE29"
-            "Icon" = "8:_A0B558504F454DDABF7BB4FEE5E7D96F"
+            "Icon" = "8:_951632CF34AF4DC8A0E8E1BF24ED6E4F"
             "Feature" = "8:"
             }
         }
@@ -2455,7 +2667,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_79B6BF3C92B6427CB7ED97DBE1530116"
             {
-            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\obj\\x86\\Release\\CapstoneProject.exe"
+            "SourcePath" = "8:..\\CapstoneProject\\CapstoneProject\\obj\\x86\\Release\\Fat Joe's Nightmare.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_FCB5F490315A482B8DDB3A777630FE29"
