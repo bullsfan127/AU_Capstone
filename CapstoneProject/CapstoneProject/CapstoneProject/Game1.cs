@@ -402,13 +402,55 @@ namespace CapstoneProject
                         soundManager.PlaySound(5);
                     }
 
+                    foreach (Item item in gameMap._mapItems)
+                    {
+                        if (player.PlayerAnimation.destinationRect.Intersects(item._itemAnimation.destinationRect))
+                        {
+                            Type type = item.GetType();
+                            if (type == typeof(Potion) && item.iActive)
+                            {
+                                soundManager.PlaySound(0);
+                            }
+                            else if (type == typeof(Coin) && item.iActive)
+                            {
+                                soundManager.PlaySound(7);
+                            }
+                        }
+                    }
+
+                    foreach (Monster a in gameMap._NpcList)
+                    {
+                        Player temp = (Player)player;
+                        if (a._monsterAnimation.Active)
+                        {
+                            if (temp.attacking)
+                            {
+                                if (a._monsterAnimation.destinationRect.Intersects(temp.Weapon.wepRect) && keystate.IsKeyDown(Keys.Space))
+                                {
+                                    soundManager.PlaySound(6);
+                                }
+                            }
+
+                            if (temp.PlayerAnimation.destinationRect.Intersects(a._monsterAnimation.destinationRect))
+                            {
+                                if (!temp.getInvulnerable() && a.IActive)
+                                {
+                                    soundManager.PlaySound(4);
+                                }
+                            }
+                        }
+                    }
+
                     //Update things
                     player.Update(gameTime, gameMap);
                     pauseButton.Update(gameTime);
                     healthBar.Update(gameTime, player);
                     scoreDisplay.Update(player.getLevelScore());
                     if (gameMap.gameOver)
+                    {
+                        soundManager.PlaySound(1);
                         gameState = GAMESTATE.GAMEOVER;
+                    }
 
                     #region
 

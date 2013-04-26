@@ -31,8 +31,8 @@ namespace TileEngine
         CustomSerialization.Serialize<Map> serializer = new CustomSerialization.Serialize<Map>();
 
         DrawableLayer<Tile> _Ground;
-        List<Item> _mapItems = new List<Item>();
-        List<Monster> _NpcList = new List<Monster>();
+        public List<Item> _mapItems = new List<Item>();
+        public List<Monster> _NpcList = new List<Monster>();
         DrawableLayer<Tile> _Mask;
 
         //Layers for collision detection
