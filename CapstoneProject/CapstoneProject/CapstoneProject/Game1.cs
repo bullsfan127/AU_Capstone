@@ -347,7 +347,7 @@ namespace CapstoneProject
                     break;
                 case GAMESTATE.BEATLEVEL:
                 case GAMESTATE.GAMEOVER:
-                    
+
                     break;
                 case GAMESTATE.CONTINUE:
                     //Load from savedGame file
@@ -393,37 +393,80 @@ namespace CapstoneProject
                         soundManager.PlaySound(5);
                     }
 
-                    //Update things
-                    player.Update(gameTime, gameMap);
-                    pauseButton.Update(gameTime);
-                    healthBar.Update(gameTime, player);
-                    scoreDisplay.Update(player.getLevelScore());
-                    if (gameMap.gameOver)
-                        gameState = GAMESTATE.GAMEOVER;
-
-                    #region
-
-                    if (keystate.IsKeyDown(Keys.S) && keystate.IsKeyDown(Keys.H) && keystate.IsKeyDown(Keys.I) && keystate.IsKeyDown(Keys.T))
+                    foreach (Item item in gameMap._mapItems)
                     {
-                        playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
-                        player.Initialize(playerTexture, player.Position);
-                        player.Health = 1000;
+
+                        if (player.PlayerAnimation.destinationRect.Intersects(item._itemAnimation.destinationRect))
+                        {
+                            Type type = item.GetType();
+                            if (type == typeof(Potion) && item.iActive)
+                            {
+                                soundManager.PlaySound(0);
+                            }
+                            else if (type == typeof(Coin) && item.iActive)
+                            {
+                                soundManager.PlaySound(7);
+                            }
+                        }
                     }
 
-                    #endregion
+                    foreach (Monster a in gameMap._NpcList)
+                    {
+                        Player temp = (Player)player;
+                        if (a._monsterAnimation.Active)
+                        {
+                            if (temp.attacking)
+                            {
+                                if (a._monsterAnimation.destinationRect.Intersects(temp.Weapon.wepRect) && keystate.IsKeyDown(Keys.Space))
+                                {
+                                    soundManager.PlaySound(6);
+                                }
+                            }
 
-                    break;
-            }
+                            if (temp.PlayerAnimation.destinationRect.Intersects(a._monsterAnimation.destinationRect))
+                            {
+                                if (!temp.getInvulnerable() && a.IActive)
+                                {
+                                    soundManager.PlaySound(4);
+                                }
+                            }
+                        }
+                    }
+
+                        //Update things
+                        player.Update(gameTime, gameMap);
+                        pauseButton.Update(gameTime);
+                        healthBar.Update(gameTime, player);
+                        scoreDisplay.Update(player.getLevelScore());
+                        if (gameMap.gameOver)
+                        {
+                            soundManager.PlaySound(1);
+                            gameState = GAMESTATE.GAMEOVER;
+                        }
+
+                        #region
+
+                        if (keystate.IsKeyDown(Keys.S) && keystate.IsKeyDown(Keys.H) && keystate.IsKeyDown(Keys.I) && keystate.IsKeyDown(Keys.T))
+                        {
+                            playerTexture = Content.Load<Texture2D>("shitty/shitty3.0");
+                            player.Initialize(playerTexture, player.Position);
+                            player.Health = 1000;
+                        }
+
+                        #endregion
+
+                        break;
+                    }
 
 #if DEBUG
 
-            //#FPS_COUNTER
-            counter.Update(gameTime);
-            Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
+                    //#FPS_COUNTER
+                    counter.Update(gameTime);
+                    Terminal.CheckOpen(Keys.Tab, Keyboard.GetState());
 #endif
-            soundManager.PlaySong();
-            base.Update(gameTime);
-        }
+                    soundManager.PlaySong();
+                    base.Update(gameTime);
+            }
 
         /// <summary>
         /// This is called when the game should draw itself.
