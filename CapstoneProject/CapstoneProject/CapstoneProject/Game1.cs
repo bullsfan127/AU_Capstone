@@ -47,13 +47,14 @@ namespace CapstoneProject
         Texture2D pauseBackground;
         Texture2D playerTexture;
         Texture2D pauseTexture;
-        Texture2D gameOver;
+
         //Menus
         MainMenu.MainMenu menu;
 
         PauseMenu.PauseMenu pauseMenu;
         Settings settings;
         MainSettings msettings;
+        gameOverMenu gameOverMenu;
 
         //items
         Coin coin = new Coin();
@@ -87,6 +88,10 @@ namespace CapstoneProject
         //Player
         Player player;
 
+        Texture2D gameOverTexture;
+        Texture2D endTeture;
+        gameOverMenu end;
+
         //map
         Map gameMap;
 
@@ -115,7 +120,8 @@ namespace CapstoneProject
             msettings = new MainSettings(graphics, this.Content);
             soundManager = new SoundManager(this, this.Content);
             scoreDisplay = new ScoreDisplay(graphics);
-
+            gameOverMenu = new gameOverMenu(graphics, this.Content);
+            end = new gameOverMenu(graphics, this.Content);
             gameMap = new Map();
         }
 
@@ -153,6 +159,8 @@ namespace CapstoneProject
             healthBar.LoadContent();
             settings.LoadContent();
             msettings.LoadContent();
+            gameOverMenu.LoadContent();
+            end.LoadContent();
             Controls.Load();
 
             // Create a new SpriteBatch, which can be used to draw textures.
@@ -160,7 +168,6 @@ namespace CapstoneProject
 
             //Crrate rectangle of screen
             mainFrame = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
-           
 #if DEBUG
             //#FPS_COUNTER
             counter.loadFont(this.Content.Load<SpriteFont>("FPS"));
@@ -174,7 +181,6 @@ namespace CapstoneProject
             pauseTexture = Content.Load<Texture2D>("PauseButton");
             backgroundTexture = Content.Load<Texture2D>("background");
             pauseBackground = Content.Load<Texture2D>("PauseBackground");
-            gameOver = Content.Load<Texture2D>("gameOver");
             coinTexture = Content.Load<Texture2D>("items/Coin");
             coinTexture.Name = "items/Coin";
             potionTexture = Content.Load<Texture2D>("items/Potion");
@@ -184,7 +190,8 @@ namespace CapstoneProject
             flyingMonsterTexture = Content.Load<Texture2D>("Monsters/Birds");
             flyingMonsterTexture.Name = "Monsters/Birds";
             story = this.Content.Load<Texture2D>("story");
-
+            gameOverTexture = this.Content.Load<Texture2D>("gameOver");
+            endTeture = this.Content.Load<Texture2D>("end");
             //create pause button
             pauseButton = new ImageButton(new Vector2(19, 19), pauseTexture, 0);
 
@@ -235,7 +242,7 @@ namespace CapstoneProject
                     break;
 
                 case GAMESTATE.NEWGAME:
-                    gameMap = gameMap.LoadMap("map1.xml", this.Content);
+                    gameMap = gameMap.LoadMap("ToTheCastle.xml", this.Content);
 
                     //******************************************************
                     //          Use this code to add items/monsnters to a created map
@@ -268,7 +275,7 @@ namespace CapstoneProject
                     //    lastnumX = x;
                     //    g = null;
                     //}
-                    //for (int i = 0; i < 100; i++)
+                    //for (int i = 0; i < 60; i++)
                     //{
                     //    Random r = new Random();
 
@@ -315,7 +322,7 @@ namespace CapstoneProject
                     //    c = null;
                     //}
 
-                    //for (int i = 0; i < 10; i++)
+                    //for (int i = 0; i < 50; i++)
                     //{
                     //    int width = (graphics.PreferredBackBufferWidth * 10) * (gameMap.Ground.MapWidth / 10);
                     //    int height = (graphics.PreferredBackBufferHeight * 10) * (20 / 10);
@@ -346,8 +353,10 @@ namespace CapstoneProject
                     gameState = GAMESTATE.PLAY;
                     break;
                 case GAMESTATE.BEATLEVEL:
+                    end.Update(gameTime);
+                    break;
                 case GAMESTATE.GAMEOVER:
-                    
+                    gameOverMenu.Update(gameTime);
                     break;
                 case GAMESTATE.CONTINUE:
                     //Load from savedGame file
@@ -480,16 +489,18 @@ namespace CapstoneProject
                     GraphicsDevice.Clear(Color.Black);
                     settings.Draw(gameTime, spriteBatch);
                     break;
+                case GAMESTATE.GAMEOVER:
+                    GraphicsDevice.Clear(Color.Black);
+                    gameOverMenu.Draw(gameTime, spriteBatch, gameOverTexture, mainFrame);
+                    break;
 
                 case GAMESTATE.MAINSETTINGS:
                     GraphicsDevice.Clear(Color.Black);
                     msettings.Draw(gameTime, spriteBatch);
                     break;
 
-                case GAMESTATE.GAMEOVER:
-                    spriteBatch.Begin();
-                    spriteBatch.Draw(gameOver, mainFrame, Color.White);
-                    spriteBatch.End();
+                case GAMESTATE.BEATLEVEL:
+                    end.Draw(gameTime, spriteBatch, endTeture, mainFrame);
                     break;
                 case GAMESTATE.EXIT:
                     this.Exit();

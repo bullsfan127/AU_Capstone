@@ -53,10 +53,14 @@ namespace TileEngine
             if (player.getHealth() == 0)
                 rectangle.Width = 0;
             else if (player.getHealth() == 1)
-                rectangle.Width = (texture.Width / 3);
+                rectangle.Width = (texture.Width / 5);
             else if (player.getHealth() == 2)
-                rectangle.Width = (texture.Width / 3) * 2;
+                rectangle.Width = (texture.Width / 5) * 2;
             else if (player.getHealth() == 3)
+                rectangle.Width = (texture.Width / 5) * 3;
+            else if (player.getHealth() == 4)
+                rectangle.Width = (texture.Width / 5) * 4;
+            else if (player.getHealth() == 5)
                 rectangle.Width = texture.Width;
         }
 

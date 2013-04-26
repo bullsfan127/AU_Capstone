@@ -18,13 +18,13 @@ namespace TileEngine
         private ContentManager Content;
 
         public bool attacking;
+
         //Current movement speeds for player
         private Vector2 _movement;
 
         //Players collision Rectangle
         private Rectangle PlayerRect;
 
-        
         //Player is on the ground and can jump
         private bool jump;
 
@@ -44,7 +44,7 @@ namespace TileEngine
         private int _health;
 
         // Maximum health of the player
-        private int _maxHealth = 3;
+        private int _maxHealth = 5;
 
         // the weapon the player is holding
         private Weapon _weapon;
@@ -205,7 +205,6 @@ namespace TileEngine
                 setInvulnerable(false);
             }
 
-
             // Prevent repeated quick attacks
             if (_justAttacked <= 20)
             {
@@ -243,7 +242,6 @@ namespace TileEngine
                     PlayerAnimation.state = Animation.Animate.RIDLE;
                     attacking = false;
                     _weapon.wepRect = Rectangle.Empty;
-                    
                 }
                 else
                 {
@@ -295,13 +293,13 @@ namespace TileEngine
                 {
                     PlayerAnimation.state = Animation.Animate.RATTACK;
                     attacking = true;
-                    _weapon.wepRect = new Rectangle((int)Position.X + (int)this.PlayerRect.Width, (int)Position.Y, 64, 64);
+                    _weapon.wepRect = new Rectangle((int)Position.X + (int)this.PlayerRect.Width, (int)Position.Y, 32, 32);
                 }
                 else
                 {
                     PlayerAnimation.state = Animation.Animate.LATTACK;
-                    attacking=true;
-                    _weapon.wepRect = new Rectangle((int)Position.X - 128, (int)Position.Y, 64, 64);
+                    attacking = true;
+                    _weapon.wepRect = new Rectangle((int)Position.X - 128, (int)Position.Y, 32, 32);
                 }
             }
 
